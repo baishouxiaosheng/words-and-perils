@@ -1,0 +1,11 @@
+CC0 1.0 Universal
+
+The original procedural generator, generated texture images and manifest in
+this directory are dedicated to the public domain under the Creative Commons
+CC0 1.0 Universal Public Domain Dedication.
+
+To the extent possible under law, the authors waive all copyright and related
+or neighboring rights to these original assets. They are provided without any
+warranty. No third-party texture imagery was used.
+
+Full legal text: https://creativecommons.org/publicdomain/zero/1.0/legalcode

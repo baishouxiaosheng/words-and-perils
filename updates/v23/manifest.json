@@ -1,0 +1,108 @@
+{
+  "schema": "words-and-perils-source-delta/v1",
+  "version": "v23-packed-topology",
+  "base_source_bundle_sha256": "8e88ac0ade3b12f314e3e3076a05efce2a9da335925e1859b6e9543deebeab81",
+  "previous_manifest_sha256": "2cf556e046152158bce8c1a65fe989e15d521d5b478d9ed838a1c42fa0ddc868",
+  "base_git_commit": "affb0a741adbe6d06bc3f1ab371d68000012c6d7",
+  "files": [
+    {
+      "path": "docs/resource_lifecycle_memory_20261005.md",
+      "size": 10667,
+      "sha256": "fe15962ecceca1ac0e7c2a7c9e73337108862a394b908c101bdb05fc4e11daf1",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/resource_lifecycle/profile_lifecycle.gd",
+      "size": 1738,
+      "sha256": "91c28e866ea9306d3ef525627a23ce50a17959fd38c7118a09434227ad6d07a1",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/resource_lifecycle/profile_native1080.gd",
+      "size": 8202,
+      "sha256": "7546710b82cb4ac91dabb45c5335d926e54bb495d1d82457764baf90d55ca36d",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/resource_lifecycle/test_main_lifecycle.gd",
+      "size": 3841,
+      "sha256": "eaa147aae31551361a67acd086582133de6206f42878339515192d3cc602cd05",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/resource_lifecycle/test_packed_topology.gd",
+      "size": 6224,
+      "sha256": "ca63be05cf03e4ccd9ed94cce87c9dd3f098aa93d6063fc6d25a26e5c24f2824",
+      "before_sha256": null
+    },
+    {
+      "path": "tools/restore_repository.py",
+      "size": 217,
+      "sha256": "dca8229f4242bd701b98cdf4d3fae05d83679b2148791aa0323f1ac1c864b107",
+      "before_sha256": "5621527c9d2c20213a05920947a0878e2ad4c17a54c5edb3f03a860177310de0"
+    },
+    {
+      "path": "tools/restore_v23.py",
+      "size": 8168,
+      "sha256": "f0905035159388df1505daa6e27cc983b98e29e343d549059a6cc35eb69cca6c",
+      "before_sha256": null
+    },
+    {
+      "path": "tools/verify_publication.py",
+      "size": 9993,
+      "sha256": "1e183e360cd2cc9cb26f7050e56433ec4d503fe42485383c7c743eba324cef82",
+      "before_sha256": "73ac6a23bb70479787fd07420a4ccacf53d0b5e171513187c12303e336d11d40"
+    },
+    {
+      "path": "view/integrated_ecology_world/natural_shorelines/packed_topology.gd",
+      "size": 3372,
+      "sha256": "04d178dda01fc24153a22f83f83738b943afb674555755849dc9201928f28842",
+      "before_sha256": null
+    },
+    {
+      "path": "view/integrated_ecology_world/natural_shorelines/shore_layer.gd",
+      "size": 8412,
+      "sha256": "ee6e1d32c7b09a71e445f6a0d08494140ecc8f84373d1d4ac239184bbb005e0e",
+      "before_sha256": "f9db6171b26566c2aecb04b34947bc76cb9b086873d904b16dcabbe2aa7f2c17"
+    }
+  ],
+  "production_pins": {
+    "view/integrated_ecology_world/natural_shorelines/shore_layer.gd": "ee6e1d32c7b09a71e445f6a0d08494140ecc8f84373d1d4ac239184bbb005e0e",
+    "view/integrated_ecology_world/natural_shorelines/packed_topology.gd": "04d178dda01fc24153a22f83f83738b943afb674555755849dc9201928f28842"
+  },
+  "required_existing_tests": {
+    "tests/loading_performance/trace.gd": "822ee30b8505f5070cca54d523ce991937c24828a19050ccb0350253cfe4cfbd",
+    "tests/loading_performance/run_owned_guard.py": "e0a5e40a27d643a2eef35ac1d043924e5c3c965cb7db486deeb0ab12051e9ff8"
+  },
+  "archive": {
+    "encoded_path": "updates/v23/source_delta.tar.xz.b64",
+    "encoded": {
+      "size": 26444,
+      "sha256": "c61918879980071b7d23bf17a8e72069c422aaeeb7ee369cc2a799fca4d8ebb3"
+    },
+    "size": 19832,
+    "sha256": "c619a9106e3e71c8dee1e074225145e4fd5506ef9e5d9dd6a55d856c9081c026"
+  },
+  "scope": "Accepted lossless packed-topology memory change only. No UI, river, mesh, texture or binary-resource changes.",
+  "previous_validation": {
+    "component": {
+      "checks": 14,
+      "exit": 0,
+      "strict_errors_or_objectdb_warning": [],
+      "guard_triggered": false
+    },
+    "profile": {
+      "checks": 5,
+      "exit": 0,
+      "strict_errors_or_objectdb_warning": [],
+      "guard_triggered": false
+    },
+    "main": {
+      "checks": 18,
+      "exit": 0,
+      "strict_errors_or_objectdb_warning": [],
+      "guard_triggered": false
+    }
+  },
+  "publication_validation": "offline source-chain restoration and exact pins; no new Godot run"
+}

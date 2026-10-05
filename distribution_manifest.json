@@ -5833,7 +5833,7 @@
       }
     }
   ],
-  "active_version": "v24-fieldbook-ui",
+  "active_version": "v26-vegetation-lifecycle",
   "update_manifest": {
     "path": "updates/v22/manifest.json",
     "size": 8781,
@@ -5854,6 +5854,11 @@
       "path": "updates/v24/manifest.json",
       "size": 46558,
       "sha256": "69afd2e53d848428928845ad5d184dc0b387884651eda85fc6ede4fbd4800f1d"
+    },
+    {
+      "path": "updates/v26/manifest.json",
+      "size": 20412,
+      "sha256": "3fe797925e8cdc15cf4df62fc13d6eb78ea77068851260da8b4ed9fe7d82a946"
     }
   ]
 }

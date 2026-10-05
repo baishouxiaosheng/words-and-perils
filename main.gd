@@ -38,6 +38,9 @@ const V3InventoryAdventure = preload("res://view/generated_v3_inventory/adapter.
 const V3InventoryBoard = preload("res://view/generated_v3_inventory/board.gd")
 const V3InventoryPanel = preload("res://view/generated_v3_inventory/panel.gd")
 const V3RenderResidency=preload("res://view/generated_v3_npc/render_residency.gd")
+const V3EquipmentAdventure=preload("res://view/generated_v3_equipment/adapter.gd")
+const V3EquipmentBoard=preload("res://view/generated_v3_equipment/board.gd")
+const V3EquipmentPanel=preload("res://view/generated_v3_equipment/panel.gd")
 const V3EnemyAdventure=preload("res://view/generated_v3_enemy/adapter.gd")
 const V3EnemyBoard=preload("res://view/generated_v3_enemy/board.gd")
 const V3EnemyPanel=preload("res://view/generated_v3_enemy/panel.gd")
@@ -159,6 +162,9 @@ var generated_v3_inventory_mode := false
 var generated_v3_inventory_adventure: RefCounted
 var generated_v3_inventory_panel: VBoxContainer
 var v3_inventory_choice: CheckButton
+var generated_v3_equipment_mode:=false
+var generated_v3_equipment_adventure:RefCounted
+var generated_v3_equipment_panel:VBoxContainer
 var generated_v3_enemy_mode:=false
 var generated_v3_enemy_adventure:RefCounted
 var generated_v3_enemy_panel:VBoxContainer
@@ -458,7 +464,7 @@ func build_ui() -> void:
 	adventure_menu.id_pressed.connect(on_tool_selected)
 	advanced_menu=PopupMenu.new(); advanced_menu.name="Advanced"; menu.add_child(advanced_menu)
 	advanced_menu.add_item("离线 · 手动 JSON",20); advanced_menu.add_item("高级工具与调试",21); advanced_menu.add_item("AI接口设置（可选）",24)
-	advanced_menu.add_separator("旧进度与测试"); advanced_menu.add_item("继续探索（无行囊）",17); advanced_menu.add_item("继续行囊探索",18); advanced_menu.add_item("继续旧村落行囊探索",19); advanced_menu.add_item("继续原村庄冒险",29)
+	advanced_menu.add_separator("旧进度与测试"); advanced_menu.add_item("继续探索（无行囊）",17); advanced_menu.add_item("继续行囊探索",18); advanced_menu.add_item("继续旧村落行囊探索",19); advanced_menu.add_item("继续原村庄冒险",29); advanced_menu.add_item("继续原近战村庄冒险",30)
 	advanced_menu.add_item("海岸冒险",10); advanced_menu.add_item("旧版测试场",8); advanced_menu.add_item("地图预览（只读）",9)
 	advanced_menu.add_item("新场景往返测试（会重置）",25); advanced_menu.add_item("演出测试",4); advanced_menu.add_item("已记录回合",5); advanced_menu.id_pressed.connect(on_tool_selected)
 	display_menu=PopupMenu.new(); display_menu.name="Display"; menu.add_child(display_menu)
@@ -587,6 +593,8 @@ func build_ui() -> void:
 	generated_v3_npc_panel.notes_requested.connect(show_npc_notes)
 	generated_v3_enemy_panel=V3EnemyPanel.new();advanced_col.add_child(generated_v3_enemy_panel);generated_v3_enemy_panel.hide()
 	generated_v3_enemy_panel.fixture_pressed.connect(playtest_fixture);generated_v3_enemy_panel.reset_pressed.connect(ask_reset_playtest);generated_v3_enemy_panel.sample_requested.connect(fill_generated_sample);generated_v3_enemy_panel.notes_requested.connect(show_npc_notes)
+	generated_v3_equipment_panel=V3EquipmentPanel.new();advanced_col.add_child(generated_v3_equipment_panel);generated_v3_equipment_panel.hide()
+	generated_v3_equipment_panel.fixture_pressed.connect(playtest_fixture);generated_v3_equipment_panel.reset_pressed.connect(ask_reset_playtest);generated_v3_equipment_panel.sample_requested.connect(fill_generated_sample);generated_v3_equipment_panel.notes_requested.connect(show_npc_notes)
 	npc_notes_dialog=AcceptDialog.new();npc_notes_dialog.title="旅途笔记";npc_notes_dialog.ok_button_text="关闭";add_child(npc_notes_dialog);npc_notes_dialog.get_label().autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
 	build_v3_setup_dialog()
 	playtest_panel.fixture_pressed.connect(playtest_fixture); playtest_panel.reset_pressed.connect(ask_reset_playtest)
@@ -715,7 +723,8 @@ func on_tool_selected(id: int) -> void:
 		17: continue_v3_adventure()
 		18: continue_v3_inventory_adventure()
 		19: continue_v3_village_adventure()
-		27: continue_v3_enemy_adventure()
+		27: continue_v3_equipment_adventure()
+		30: continue_v3_enemy_adventure()
 		29: continue_v3_npc_adventure()
 		28: show_npc_notes()
 		20,21: show_advanced()
@@ -907,6 +916,10 @@ func show_effects() -> void:
 	if coast_mode:set_status("海岸演出只来自已提交的行动；可通过高级行动样例验证。");return
 	effects_dialog.popup_centered()
 func show_help() -> void:
+	if generated_v3_equipment_mode:
+		append_journal("取走与换装","敌人倒下后，可从真实干地连通的相邻格取走现有苦叶短刃，原格仍被占据。拾取与装备是两个分别评估的行动，点击示例只填入意图；换装后原武器仍在行囊里。两种操作不扣体力，但都提交一个行动，已有中毒会结算一次。不能从活着的敌人手里取走武器，也不能丢弃、转交或复制武器。当前只有这一个敌人，取走之后没有新的攻击目标；短刃的中毒能力会作为登记属性保留。")
+		if not journal_open:toggle_journal()
+		return
 	if generated_v3_enemy_mode:
 		append_journal("村庄遭遇指南","双方所有行动都必须取得各自的有效评估。近战只限真实干地通路连通的相邻格，每次耗费1体力。敌方固定守在原格，倒下后仍占格。苦叶短刃完整命中会施毒，后续每次已提交行动都会结算一次，敌方行动也计入。生命为零后不能行动，可读取存档或重新开始。高级示例是离线预设裁定，没有真实供应商调用。")
 		if not journal_open:toggle_journal()
@@ -936,6 +949,7 @@ func show_help() -> void:
 func show_inventory() -> void:
 	var with_inventory: bool=generated_mode and playtest.state_copy().get("generated_world",{}).get("inventory_profile") in ["generated_inventory/v1","generated_v3_inventory/v1"]
 	inventory_note.text="写下放下或拾回，经有效评估后由固定程序执行。" if with_inventory else ("这段探索尚未开放物品互动。" if generated_v3_mode else "把想使用的物品写进行动里，具体效果交由 GM 裁定。")
+	if generated_v3_equipment_mode:inventory_note.text="行礼包可经评估放下或拾回；木杖与短刃只能经评估换装，不能丢弃或转交。换下的武器仍在行囊里。"
 	inventory_dialog.reset_size()
 	inventory_dialog.popup_centered(Vector2i(560,510))
 func ask_restart_game() -> void:
@@ -1194,6 +1208,11 @@ func _focus_details_description() -> String:
 	if resolved_focus.get("catalog_version")=="source-vegetation-focus/v1":
 		var d:Dictionary=resolved_focus.facts.descriptor
 		return V3NPCBoard.PLANT_NAMES.get(d.asset_id,"植被")+"\n生态："+v3_biome_name(d.biome)+"\n根部地格：（%d，%d）\n可选择查看，或提交观察意图；尚无砍伐、采集和物品产出。\n点击不消耗回合。"%resolved_focus.hex
+	if generated_v3_equipment_mode and resolved_focus.get("kind")=="actor":
+		var current:Dictionary=playtest.state_copy()
+		if resolved_focus.id==playtest.source.enemy_id:
+			return PlayerDetails.description(resolved_focus)+("\n短刃仍由他持有；倒下后可从干地连通邻格经评估取走。" if current.items.item_raider_blade.owner_actor_id==playtest.source.enemy_id else "\n短刃已由旅人取走；倒下人物仍占据原格。")
+		if resolved_focus.id=="actor_player":return PlayerDetails.description(resolved_focus)+"\n当前装备："+str(current.items[current.actors.actor_player.equipment.weapon].name)+"。可在行囊查看登记能力，换装需单独评估。"
 	if generated_v3_npc_mode and resolved_focus.get("kind")=="tile":return PlayerDetails.description(resolved_focus)+"\n房屋会阻挡通路，请以移动预览为准。可沿路靠近守路村民，再提出交谈。"
 	if generated_v3_village_mode and resolved_focus.get("kind")=="tile":
 		return PlayerDetails.description(resolved_focus)+"\n村落房屋会阻挡部分通路；实际可走路线以移动预览为准。道路不减体力消耗，暂无人物、进屋与河流互动。"
@@ -1735,19 +1754,19 @@ func _switch_mode(mode: String) -> void:
 	_switch_mode_to(mode)
 
 func _switch_mode_to(mode: String, replacement_v3:RefCounted=null) -> void:
-	if mode not in ["coast","laboratory","legacy","generated","generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy"]: return
-	if replacement_v3!=null and mode not in ["generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy"]:return
+	if mode not in ["coast","laboratory","legacy","generated","generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]: return
+	if replacement_v3!=null and mode not in ["generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]:return
 	if world_build_busy:
 		if is_map_preview() and mode != "legacy": cancel_world_build()
 		else: return
 	var previous_v3_source:RefCounted=playtest.source if generated_v3_mode and playtest!=null else null
-	var current := "generated_v3_enemy" if generated_v3_enemy_mode else ("generated_v3_npc" if generated_v3_npc_mode else ("generated_v3_village" if generated_v3_village_mode else ("generated_v3_inventory" if generated_v3_inventory_mode else ("generated_v3" if generated_v3_mode else ("generated" if generated_mode else ("coast" if coast_mode else ("laboratory" if playtest_mode else "legacy")))))))
+	var current := "generated_v3_equipment" if generated_v3_equipment_mode else ("generated_v3_enemy" if generated_v3_enemy_mode else ("generated_v3_npc" if generated_v3_npc_mode else ("generated_v3_village" if generated_v3_village_mode else ("generated_v3_inventory" if generated_v3_inventory_mode else ("generated_v3" if generated_v3_mode else ("generated" if generated_mode else ("coast" if coast_mode else ("laboratory" if playtest_mode else "legacy"))))))))
 	if mode == current and replacement_v3==null: return
 	if not _can_leave_current_adventure(): return
 	if mode=="generated" and (generated_adventure==null or not generated_adventure.ready().ok): return
-	var next_v3:RefCounted=replacement_v3 if replacement_v3!=null else (generated_v3_enemy_adventure if mode=="generated_v3_enemy" else (generated_v3_npc_adventure if mode=="generated_v3_npc" else (generated_v3_village_adventure if mode=="generated_v3_village" else (generated_v3_inventory_adventure if mode=="generated_v3_inventory" else generated_v3_adventure))))
-	if mode in ["generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy"] and (next_v3==null or not next_v3.ready().ok):return
-	if mode in ["generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy"]:
+	var next_v3:RefCounted=replacement_v3 if replacement_v3!=null else (generated_v3_equipment_adventure if mode=="generated_v3_equipment" else (generated_v3_enemy_adventure if mode=="generated_v3_enemy" else (generated_v3_npc_adventure if mode=="generated_v3_npc" else (generated_v3_village_adventure if mode=="generated_v3_village" else (generated_v3_inventory_adventure if mode=="generated_v3_inventory" else generated_v3_adventure)))))
+	if mode in ["generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"] and (next_v3==null or not next_v3.ready().ok):return
+	if mode in ["generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]:
 		V3RenderResidency.reuse(previous_v3_source,next_v3.source)
 		var resident:Dictionary=V3RenderResidency.ensure(next_v3.source)
 		if not resident.ok:show_world_load_error(str(resident));return
@@ -1761,11 +1780,11 @@ func _switch_mode_to(mode: String, replacement_v3:RefCounted=null) -> void:
 			coast_adventure=candidate
 	# Prepare the new renderer before removing the current valid scene. A missing
 	# or corrupt bundle must never publish an empty world or clear current history.
-	var next_board=V3EnemyBoard.new(next_v3.source) if mode=="generated_v3_enemy" else (V3NPCBoard.new(next_v3.source) if mode=="generated_v3_npc" else (V3VillageBoard.new(next_v3.source) if mode=="generated_v3_village" else (V3InventoryBoard.new(next_v3.source) if mode=="generated_v3_inventory" else (V3Board.new(next_v3.source) if mode=="generated_v3" else (GeneratedBoard.new(generated_adventure.source) if mode=="generated" else (_create_scene_board(coast_adventure.state_copy()) if mode=="coast" else Board.new()))))))
+	var next_board=V3EquipmentBoard.new(next_v3.source) if mode=="generated_v3_equipment" else (V3EnemyBoard.new(next_v3.source) if mode=="generated_v3_enemy" else (V3NPCBoard.new(next_v3.source) if mode=="generated_v3_npc" else (V3VillageBoard.new(next_v3.source) if mode=="generated_v3_village" else (V3InventoryBoard.new(next_v3.source) if mode=="generated_v3_inventory" else (V3Board.new(next_v3.source) if mode=="generated_v3" else (GeneratedBoard.new(generated_adventure.source) if mode=="generated" else (_create_scene_board(coast_adventure.state_copy()) if mode=="coast" else Board.new())))))))
 	if next_board==null: return
 	next_board.attention_ui_mode=true
 	viewport.add_child(next_board)
-	if mode in ["coast","generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy"] and not next_board.load_error.is_empty():
+	if mode in ["coast","generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"] and not next_board.load_error.is_empty():
 		var render_error:String=next_board.load_error
 		viewport.remove_child(next_board);next_board.free()
 		show_world_load_error(render_error);return
@@ -1774,7 +1793,8 @@ func _switch_mode_to(mode: String, replacement_v3:RefCounted=null) -> void:
 	_invalidate_mode_dialogs()
 	reset_world_controls()
 	if playtest_mode:
-		if generated_v3_enemy_mode: generated_v3_enemy_adventure=playtest
+		if generated_v3_equipment_mode: generated_v3_equipment_adventure=playtest
+		elif generated_v3_enemy_mode: generated_v3_enemy_adventure=playtest
 		elif generated_v3_npc_mode: generated_v3_npc_adventure=playtest
 		elif generated_v3_village_mode: generated_v3_village_adventure=playtest
 		elif generated_v3_inventory_mode: generated_v3_inventory_adventure=playtest
@@ -1783,17 +1803,19 @@ func _switch_mode_to(mode: String, replacement_v3:RefCounted=null) -> void:
 		elif coast_mode: coast_adventure = playtest
 		else: laboratory = playtest
 	if replacement_v3!=null:
-		if mode=="generated_v3_enemy":generated_v3_enemy_adventure=replacement_v3
+		if mode=="generated_v3_equipment":generated_v3_equipment_adventure=replacement_v3
+		elif mode=="generated_v3_enemy":generated_v3_enemy_adventure=replacement_v3
 		elif mode=="generated_v3_npc":generated_v3_npc_adventure=replacement_v3
 		elif mode=="generated_v3_village":generated_v3_village_adventure=replacement_v3
 		elif mode=="generated_v3_inventory":generated_v3_inventory_adventure=replacement_v3
 		else:generated_v3_adventure=replacement_v3
 		_mode_ui_snapshots.erase(mode)
-	coast_mode = mode == "coast"; generated_v3_enemy_mode=mode=="generated_v3_enemy"; generated_v3_npc_mode=mode in ["generated_v3_npc","generated_v3_enemy"]; generated_v3_village_mode=mode in ["generated_v3_village","generated_v3_npc","generated_v3_enemy"]; generated_v3_inventory_mode=mode in ["generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy"]; generated_v3_mode=mode in ["generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy"]; generated_mode=mode in ["generated","generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy"]; playtest_mode = mode != "legacy"
+	coast_mode = mode == "coast"; generated_v3_equipment_mode=mode=="generated_v3_equipment"; generated_v3_enemy_mode=mode in ["generated_v3_enemy","generated_v3_equipment"]; generated_v3_npc_mode=mode in ["generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]; generated_v3_village_mode=mode in ["generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]; generated_v3_inventory_mode=mode in ["generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]; generated_v3_mode=mode in ["generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]; generated_mode=mode in ["generated","generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]; playtest_mode = mode != "legacy"
 	mode_legend.text = "文字决定意图 · 点击只关注 · 离线评估，固定程序结算" if playtest_mode else MAP_PREVIEW_NOTICE
 	action_base.visible=playtest_mode
 	demo_button.disabled=not playtest_mode
-	if generated_v3_enemy_mode: playtest=generated_v3_enemy_adventure
+	if generated_v3_equipment_mode: playtest=generated_v3_equipment_adventure
+	elif generated_v3_enemy_mode: playtest=generated_v3_enemy_adventure
 	elif generated_v3_npc_mode: playtest=generated_v3_npc_adventure
 	elif generated_v3_village_mode: playtest=generated_v3_village_adventure
 	elif generated_v3_inventory_mode: playtest=generated_v3_inventory_adventure
@@ -1803,10 +1825,10 @@ func _switch_mode_to(mode: String, replacement_v3:RefCounted=null) -> void:
 	elif playtest_mode:
 		if laboratory == null: laboratory = Playtest.new()
 		playtest = laboratory
-	laboratory_panel.visible = mode == "laboratory"; coast_panel.visible = coast_mode; generated_panel.visible=generated_mode and not generated_v3_mode; generated_v3_panel.visible=generated_v3_mode and not generated_v3_inventory_mode; generated_v3_inventory_panel.visible=generated_v3_inventory_mode and not generated_v3_npc_mode; generated_v3_npc_panel.visible=generated_v3_npc_mode and not generated_v3_enemy_mode; generated_v3_enemy_panel.visible=generated_v3_enemy_mode
+	laboratory_panel.visible = mode == "laboratory"; coast_panel.visible = coast_mode; generated_panel.visible=generated_mode and not generated_v3_mode; generated_v3_panel.visible=generated_v3_mode and not generated_v3_inventory_mode; generated_v3_inventory_panel.visible=generated_v3_inventory_mode and not generated_v3_npc_mode; generated_v3_npc_panel.visible=generated_v3_npc_mode and not generated_v3_enemy_mode; generated_v3_enemy_panel.visible=generated_v3_enemy_mode and not generated_v3_equipment_mode; generated_v3_equipment_panel.visible=generated_v3_equipment_mode
 	runtime_connection_panel.visible=_runtime_supported()
 	# Binding emits synchronous UI refreshes; publish the matching panel first.
-	playtest_panel = generated_v3_enemy_panel if generated_v3_enemy_mode else (generated_v3_npc_panel if generated_v3_npc_mode else (generated_v3_inventory_panel if generated_v3_inventory_mode else (generated_v3_panel if generated_v3_mode else (generated_panel if generated_mode else (coast_panel if coast_mode else laboratory_panel)))))
+	playtest_panel = generated_v3_equipment_panel if generated_v3_equipment_mode else (generated_v3_enemy_panel if generated_v3_enemy_mode else (generated_v3_npc_panel if generated_v3_npc_mode else (generated_v3_inventory_panel if generated_v3_inventory_mode else (generated_v3_panel if generated_v3_mode else (generated_panel if generated_mode else (coast_panel if coast_mode else laboratory_panel))))))
 	runtime_ai.bind_adapter(_runtime_adapter())
 	# Separate rendering parents prevent duplicate worlds, lights and input handlers.
 	viewport.remove_child(board); board.free()
@@ -1891,6 +1913,9 @@ func _switch_mode_to(mode: String, replacement_v3:RefCounted=null) -> void:
 		append_journal("持刃拦路者","村中有个持刃拦路者。你已有木杖；先靠近到干地连通的邻格，才可提交近战意图。敌方也会单独等待评估，倒下后仍占格。中毒按每次已提交行动结算。")
 		import_text.placeholder_text="探索、行囊、交谈与木杖近战；敌方近战须单独评估。具体字段见当前请求。"
 		set_status("村庄冒险 · 双方行动分别评估 · 默认离线")
+	if generated_v3_equipment_mode:
+		append_journal("武器归属与装备","击倒后可取走原来的苦叶短刃，再另行评估换装。原武器仍在行囊中，归属与装备会保存；两件武器不能丢弃或转交。当前没有新的攻击目标。")
+		set_status("村庄冒险 · 取走和换装分别评估 · 旧进度保留")
 	refresh_world(); board.focus_player()
 	if playtest_mode and _mode_ui_snapshots.has(mode): _restore_mode_ui(_mode_ui_snapshots[mode])
 	if coast_mode and not board.load_error.is_empty(): set_status("地理呈现异常："+board.load_error)
@@ -1997,7 +2022,8 @@ func reset_playtest() -> void:
 	playtest=candidate
 	if previous_renderer_source!=null and previous_renderer_source!=playtest.source:V3RenderResidency.suspend(previous_renderer_source)
 	runtime_ai.bind_adapter(_runtime_adapter())
-	if generated_v3_enemy_mode: generated_v3_enemy_adventure=playtest; board.admitted_source=playtest.source
+	if generated_v3_equipment_mode: generated_v3_equipment_adventure=playtest; board.admitted_source=playtest.source
+	elif generated_v3_enemy_mode: generated_v3_enemy_adventure=playtest; board.admitted_source=playtest.source
 	elif generated_v3_npc_mode: generated_v3_npc_adventure=playtest; board.admitted_source=playtest.source
 	elif generated_v3_village_mode: generated_v3_village_adventure=playtest; board.admitted_source=playtest.source
 	elif generated_v3_inventory_mode: generated_v3_inventory_adventure=playtest; board.admitted_source=playtest.source
@@ -2132,7 +2158,7 @@ func _runtime_adapter()->RefCounted:
 	if not generated_v3_npc_mode or playtest==null:return null
 	# Each preserved profile owns its unsaved optional prose as well as its
 	# adapter/draft. Replacing that profile's adapter starts a fresh facade.
-	var profile_key:String="encounter" if generated_v3_enemy_mode else "original_village"
+	var profile_key:String=str(playtest.source.identity.profile)
 	var cached:RefCounted=_village_runtime_sessions.get(profile_key)
 	if cached==null or cached.adapter!=playtest:
 		cached=VillageRuntimeSession.new(playtest);_village_runtime_sessions[profile_key]=cached
@@ -2173,6 +2199,7 @@ func _on_runtime_changed() -> void:
 			if runtime_ai.client.configured() and runtime_ai.connection_enabled:connection_text="API已配置" if runtime_ai.client.provider_info().live else "离线测试通道"
 			caption.text="村庄冒险 · "+connection_text
 			if generated_v3_enemy_mode:generated_v3_enemy_panel.get_child(0).get_child(0).text=caption.text
+			if generated_v3_equipment_mode:generated_v3_equipment_panel.get_child(0).get_child(0).text=caption.text
 	update_turn_controls()
 
 func readable_turn_feedback() -> String:
@@ -2468,12 +2495,12 @@ func start_v3_from_dialog() -> void:
 	if not built.get("ok",false):generated_start_busy=false;set_status("生成失败，原进度保留："+str(built));return
 	var candidate:RefCounted
 	if with_npc:
-		candidate=V3EnemyAdventure.new();candidate.feature_options={"vegetation":v3_vegetation_choice.button_pressed};candidate.start_source(built.source)
+		candidate=V3EquipmentAdventure.new();candidate.feature_options={"vegetation":v3_vegetation_choice.button_pressed};candidate.start_source(built.source)
 	else:candidate=V3VillageAdventure.new(built.source) if with_village else (V3InventoryAdventure.new(built.source) if with_inventory else V3Adventure.new(built.source))
 	generated_start_busy=false
 	if epoch!=_mode_epoch:return
 	if not candidate.ready().ok:set_status("地图未通过探索校验，原进度保留："+str(candidate.ready()));return
-	_switch_mode_to("generated_v3_enemy" if with_npc else ("generated_v3_village" if with_village else ("generated_v3_inventory" if with_inventory else "generated_v3")),candidate)
+	_switch_mode_to("generated_v3_equipment" if with_npc else ("generated_v3_village" if with_village else ("generated_v3_inventory" if with_inventory else "generated_v3")),candidate)
 
 func continue_v3_adventure() -> void:
 	if world_build_busy or generated_start_busy or not _can_leave_current_adventure():return
@@ -2541,3 +2568,16 @@ func _reveal_enemy_runtime_actions(epoch:int)->void:
 	await get_tree().process_frame
 	if epoch!=_mode_epoch or not generated_v3_enemy_mode or not is_instance_valid(runtime_ai) or not runtime_ai.busy() or not advanced_dialog.visible:return
 	if is_instance_valid(advanced_scroll) and is_instance_valid(runtime_connection_panel.cancel_button):advanced_scroll.ensure_control_visible(runtime_connection_panel.cancel_button)
+
+func continue_v3_equipment_adventure()->void:
+	if world_build_busy or generated_start_busy or not _can_leave_current_adventure():return
+	if generated_v3_equipment_adventure==null:
+		var candidate:RefCounted=V3EquipmentAdventure.new()
+		var loaded:Dictionary=candidate.load_file()
+		if not loaded.ok:set_status("尚未读取到当前村庄冒险；原近战进度可从高级菜单继续："+str(loaded));return
+		_switch_mode_to("generated_v3_equipment",candidate)
+		if generated_v3_equipment_mode and playtest==candidate:
+			var prose:Dictionary=_runtime_adapter().load_sidecar(candidate.default_save_path())
+			for entry in _runtime_adapter().narration_entries():append_journal("叙事记录 · 第%d回合"%int(entry.turn),str(entry.narration))
+			if not str(prose.get("warning","")).is_empty():append_journal("部分文字未恢复",str(prose.warning))
+	else:_switch_mode("generated_v3_equipment")

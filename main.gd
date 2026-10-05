@@ -4,7 +4,7 @@ const Materials = preload("res://view/miniature_materials.gd")
 const Icons = preload("res://view/strategy_icons.gd")
 const Craft = preload("res://view/ui_craft.gd")
 const Straw = preload("res://view/fullscreen_hud/straw_theme.gd")
-const Ornament=preload("res://view/fullscreen_hud/ornament.gd")
+const Ornament=preload("res://view/adventure_fieldbook/skin.gd")
 const StrategyFrame = preload("res://view/strategy_frame.gd")
 const Board = preload("res://view/hex_board.gd")
 const Generator = preload("res://core/world_generator.gd")
@@ -448,9 +448,9 @@ func build_ui() -> void:
 	minimap=preload("res://view/fullscreen_hud/minimap.gd").new()
 	minimap.name="Minimap"; map_cluster.add_child(minimap)
 	minimap.activated.connect(toggle_overview)
-	var focus=icon_button("focus","聚焦旅人",focus_player_view); focus.position=Vector2(3,177); map_cluster.add_child(focus)
-	var overview=icon_button("world","查看全图",toggle_overview); overview.position=Vector2(52,207); map_cluster.add_child(overview)
-	var inventory=icon_button("satchel","打开行囊",show_inventory); inventory.position=Vector2(109,207); map_cluster.add_child(inventory)
+	var focus=icon_button("focus","聚焦旅人",focus_player_view); focus.position=Vector2(23,194); map_cluster.add_child(focus)
+	var overview=icon_button("world","查看全图",toggle_overview); overview.position=Vector2(83,215); map_cluster.add_child(overview)
+	var inventory=icon_button("satchel","打开行囊",show_inventory); inventory.position=Vector2(143,194); map_cluster.add_child(inventory)
 	tools_menu=MenuButton.new(); tools_menu.flat=false; tools_menu.name="AdventureMenu"; tools_menu.icon=Icons.small_texture("menu","344740",23)
 	tools_menu.tooltip_text="菜单 · 冒险 / 主持手记 / 连接与高级 / 显示"
 	tools_menu.custom_minimum_size=Vector2(42,42); tools_menu.position=Vector2(179,0); style_round_button(tools_menu)
@@ -505,7 +505,7 @@ func build_ui() -> void:
 	var dialogue_head:=HBoxContainer.new(); dialogue_head.add_theme_constant_override("separation",8); speech_col.add_child(dialogue_head)
 	var dialogue_mark:=TextureRect.new(); dialogue_mark.texture=Icons.small_texture("chat","87613f",18); dialogue_mark.custom_minimum_size=Vector2(18,18); dialogue_mark.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED; dialogue_mark.size_flags_vertical=Control.SIZE_SHRINK_CENTER; dialogue_mark.mouse_filter=Control.MOUSE_FILTER_IGNORE; dialogue_head.add_child(dialogue_mark)
 	dialogue_speaker=label("主持人",18,Color("754c37")); dialogue_speaker.size_flags_horizontal=Control.SIZE_EXPAND_FILL; dialogue_head.add_child(dialogue_speaker)
-	journal_toggle=button("对话记录  ↑",toggle_journal); journal_toggle.name="HistoryToggle"; journal_toggle.custom_minimum_size.y=30; journal_toggle.add_theme_font_size_override("font_size",14); compact_hud_control(journal_toggle); dialogue_head.add_child(journal_toggle)
+	journal_toggle=button("对话记录",toggle_journal); journal_toggle.name="HistoryToggle"; journal_toggle.custom_minimum_size.y=30; journal_toggle.add_theme_font_size_override("font_size",14); compact_hud_control(journal_toggle); dialogue_head.add_child(journal_toggle)
 	latest_dialogue=label("晨雾尚未散去，海岸上的旧灯已经熄了三夜。",17,INK)
 	latest_dialogue.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART; latest_dialogue.custom_minimum_size.y=27; latest_dialogue.max_lines_visible=2; latest_dialogue.text_overrun_behavior=TextServer.OVERRUN_TRIM_ELLIPSIS
 	speech_col.add_child(latest_dialogue)
@@ -1095,7 +1095,7 @@ func set_status(text: String) -> void:
 func append_journal(speaker: String, text: String) -> void:
 	if speaker.begins_with("你"): text=DisplayText.player_intent(text)
 	var paragraph_gap := "\n\n" if not journal.get_parsed_text().is_empty() else ""
-	journal.append_text(paragraph_gap+"[bgcolor=#f8edccb8][color=#77543c][b]"+speaker+"[/b][/color][/bgcolor]\n[bgcolor=#f8edccb8]"+text.replace("[","［").replace("]","］")+"[/bgcolor]")
+	journal.append_text(paragraph_gap+"[color=#77543c][b]"+speaker+"[/b][/color]\n"+text.replace("[","［").replace("]","］")+"")
 	if speaker.contains("夹具") or speaker.contains("评估"): return
 	dialogue_speaker.text = speaker
 	latest_dialogue.text = text

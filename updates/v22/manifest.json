@@ -1,0 +1,215 @@
+{
+  "schema": "words-and-perils-source-delta/v1",
+  "version": "v22-equipment",
+  "base_source_bundle_sha256": "8e88ac0ade3b12f314e3e3076a05efce2a9da335925e1859b6e9543deebeab81",
+  "base_git_commit": "87b92ad6c80c3ef9f906e02b5e34ddab12aa2a04",
+  "files": [
+    {
+      "path": "core/ai_gm_rebuilt/model_view.gd",
+      "size": 11956,
+      "sha256": "c32a43b8c5d5baced6d288f2ee76ce4e477d5996bc04d65e5273ef403c87e97a",
+      "before_sha256": "f1011ccfcb4e136bd0db51c43e04109d1c73a7b7eaadf29516e4c3af179ecc66"
+    },
+    {
+      "path": "core/source_equipment/catalog.gd",
+      "size": 8511,
+      "sha256": "867f95880a4dabeebf06e08bfee107de922e65979fc3f486cc581741d24c9fdd",
+      "before_sha256": null
+    },
+    {
+      "path": "docs/generated_v3_equipment_20261005.md",
+      "size": 4466,
+      "sha256": "a8892d89e47f95dbdc61aeca98b61013798a88d544723d759f7ebe1045cb8baa",
+      "before_sha256": null
+    },
+    {
+      "path": "main.gd",
+      "size": 177871,
+      "sha256": "bc98ce645b9b81315c39262f33d7545ead8fd80b29b6e78f10d5020d95805bfd",
+      "before_sha256": "393250675ceec9c1c35da59d77b5d181e8de77c2ce2cb2644f7b335d13f095f6"
+    },
+    {
+      "path": "tests/generated_v3_equipment/core_flow.gd",
+      "size": 9940,
+      "sha256": "e84512794ed7396515b977d02fab7a2891138bb67f907fc3147ec9733111a699",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/generated_v3_equipment/independent_contract.gd",
+      "size": 13733,
+      "sha256": "189e87ab6a9091dae596c845ca1746f5538a61962cac65a238ea9122a726113f",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/generated_v3_equipment/manual_native_mouse.gd",
+      "size": 15166,
+      "sha256": "8b0600bdc68473313ce360c1c949ac0eecb7db6199e9bc01a5d74e51c46f349d",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/generated_v3_equipment/max_budget.gd",
+      "size": 9585,
+      "sha256": "04bc77350f15c7a702a9a2dfeaec9b6b86ddd7385105a034df3d456aae0babe1",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/generated_v3_equipment/test_adopted_copy.gd",
+      "size": 6754,
+      "sha256": "3661d0f9f091d6c46e9dadcd46891670f3df3b7db4f95d19cb72a112a27d267b",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/generated_v3_equipment/test_inventory_render.gd",
+      "size": 4915,
+      "sha256": "c253fb7185ce3ad094e7e6dfded0dbef9a00abb2005fdc6f4019b695cac42257",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/generated_v3_equipment/test_poisoned_history.gd",
+      "size": 7837,
+      "sha256": "62a99118ef6b2cf17e80211922f6be895a063cb2de9e973895d552deea824f37",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/generated_v3_equipment/test_preserved_v21_files.gd",
+      "size": 2393,
+      "sha256": "f513215cc72eee5d1bb19b3bc87f4e183aa2a946c4e3c0aad1994ff8342198b1",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/generated_v3_equipment/test_schema_roundtrip.gd",
+      "size": 2924,
+      "sha256": "841799533f874ffcf10f7a1b28630b1258c843f7c33892e661ad0692641662c0",
+      "before_sha256": null
+    },
+    {
+      "path": "tools/check_equipment_rollback.py",
+      "size": 2830,
+      "sha256": "ce282ab1f8f0edf8840c57fc7fbd84bf4af8b4b64f99faf7279fb7f068b79764",
+      "before_sha256": null
+    },
+    {
+      "path": "tools/restore_repository.py",
+      "size": 217,
+      "sha256": "5621527c9d2c20213a05920947a0878e2ad4c17a54c5edb3f03a860177310de0",
+      "before_sha256": "ffb6efb01c0034966f0866c5f7c15596f4a97bf83329e4b52f93e62a12431875"
+    },
+    {
+      "path": "tools/restore_v22.py",
+      "size": 7625,
+      "sha256": "06fea5b6433f74e3ab92f98983321c6f62e7fa39424759526eb5bcf4e0e6fab7",
+      "before_sha256": null
+    },
+    {
+      "path": "tools/verify_publication.py",
+      "size": 9993,
+      "sha256": "73ac6a23bb70479787fd07420a4ccacf53d0b5e171513187c12303e336d11d40",
+      "before_sha256": "dc7bee137767ca6e73b08b242ba5dfa31021e58957524b54c40b599d9afa1480"
+    },
+    {
+      "path": "view/generated_v3_equipment/adapter.gd",
+      "size": 16776,
+      "sha256": "af8ee5c80dbe137a0a985167dd2f79035c10e7125803017eaf8ce4436e6cb9a4",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_equipment/assessments.gd",
+      "size": 5851,
+      "sha256": "602aa12df5fe1e2832d1997da3968ce8fbd131578b34e8a6f30ecf126aaa253a",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_equipment/board.gd",
+      "size": 3325,
+      "sha256": "7c68d26b52d2d797c329e0ef40ae217d363b856f5ad8ed48b783a36f229c56f9",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_equipment/history.gd",
+      "size": 7257,
+      "sha256": "34be5390a26e86339e4090f88dd8239418028339dedcc65ef25ee5369e52a1c7",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_equipment/panel.gd",
+      "size": 1911,
+      "sha256": "8feb07a1125a6e676324a31d7680b5198b4caf8bbf6b27d3f825375054a7b1ed",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_equipment/projection.gd",
+      "size": 9879,
+      "sha256": "7d275fb55536f8c8e1e741323464a3aa4c0e3c5701d6eaac572401abc6b4ba47",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_equipment/resolver.gd",
+      "size": 5815,
+      "sha256": "66875cbbbf8c35d232e72c47d45e480a5a0bfb8eb123650729d2abe1ae5e93d2",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_equipment/response_budget.gd",
+      "size": 2530,
+      "sha256": "f2573fa91bdde2e81f5efa823f3e441f3902a1b64fbe3e208597a31d37b09a17",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_equipment/rule.gd",
+      "size": 751,
+      "sha256": "186e7ab457f2f4a8e8e28b0a5d2b8ff197c2c37f47cd83d722323c6db33c00ea",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_equipment/runtime_engine.gd",
+      "size": 4716,
+      "sha256": "5fc227b36035cd960b862d936cb66faf6c729610123e541a2eea024c13bd8883",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_equipment/source.gd",
+      "size": 9005,
+      "sha256": "80f5ecee97f671c91938e0394f596d8d4d349d9902fe57ec57679bf6691a1030",
+      "before_sha256": null
+    },
+    {
+      "path": "view/runtime_ai/controller.gd",
+      "size": 13558,
+      "sha256": "6a54eec5cc7f0cfba540678fb906cecf701a73d1fd696700349e30a97296dbbf",
+      "before_sha256": "dd65fcc53bf0532458c22f8b438bfde5e10b64d46aaefac063394cefb60f83ba"
+    }
+  ],
+  "production_pins": {
+    "core/ai_gm_rebuilt/model_view.gd": "c32a43b8c5d5baced6d288f2ee76ce4e477d5996bc04d65e5273ef403c87e97a",
+    "core/source_equipment/catalog.gd": "867f95880a4dabeebf06e08bfee107de922e65979fc3f486cc581741d24c9fdd",
+    "main.gd": "bc98ce645b9b81315c39262f33d7545ead8fd80b29b6e78f10d5020d95805bfd",
+    "view/generated_v3_equipment/adapter.gd": "af8ee5c80dbe137a0a985167dd2f79035c10e7125803017eaf8ce4436e6cb9a4",
+    "view/generated_v3_equipment/assessments.gd": "602aa12df5fe1e2832d1997da3968ce8fbd131578b34e8a6f30ecf126aaa253a",
+    "view/generated_v3_equipment/board.gd": "7c68d26b52d2d797c329e0ef40ae217d363b856f5ad8ed48b783a36f229c56f9",
+    "view/generated_v3_equipment/history.gd": "34be5390a26e86339e4090f88dd8239418028339dedcc65ef25ee5369e52a1c7",
+    "view/generated_v3_equipment/panel.gd": "8feb07a1125a6e676324a31d7680b5198b4caf8bbf6b27d3f825375054a7b1ed",
+    "view/generated_v3_equipment/projection.gd": "7d275fb55536f8c8e1e741323464a3aa4c0e3c5701d6eaac572401abc6b4ba47",
+    "view/generated_v3_equipment/resolver.gd": "66875cbbbf8c35d232e72c47d45e480a5a0bfb8eb123650729d2abe1ae5e93d2",
+    "view/generated_v3_equipment/response_budget.gd": "f2573fa91bdde2e81f5efa823f3e441f3902a1b64fbe3e208597a31d37b09a17",
+    "view/generated_v3_equipment/rule.gd": "186e7ab457f2f4a8e8e28b0a5d2b8ff197c2c37f47cd83d722323c6db33c00ea",
+    "view/generated_v3_equipment/runtime_engine.gd": "5fc227b36035cd960b862d936cb66faf6c729610123e541a2eea024c13bd8883",
+    "view/generated_v3_equipment/source.gd": "80f5ecee97f671c91938e0394f596d8d4d349d9902fe57ec57679bf6691a1030",
+    "view/runtime_ai/controller.gd": "6a54eec5cc7f0cfba540678fb906cecf701a73d1fd696700349e30a97296dbbf"
+  },
+  "archive": {
+    "encoded_path": "updates/v22/source_delta.tar.xz.b64",
+    "encoded": {
+      "size": 124280,
+      "sha256": "c36c6b8c14ede87bb7cf99e21cb85e3689f131a52c49cdc7026ae3ad24602b6c"
+    },
+    "size": 93208,
+    "sha256": "69be6438c22f7bcd8b83683eb077a537a8a92a8a865765284a6a929f56307c4f"
+  },
+  "scope": "Accepted bounded equipment update only. No rejected UI or new river candidate. No binary resource changes.",
+  "previous_validation": {
+    "adopted_copy_checks": 47,
+    "adopted_copy_ok": true,
+    "live_provider_calls": 0
+  },
+  "publication_validation": "offline restoration and exact source pins; no new Godot test claim"
+}

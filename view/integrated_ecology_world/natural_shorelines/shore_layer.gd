@@ -24,7 +24,7 @@ func install(view:Node3D)->bool:
 	for key in manifest.files:
 		if FileAccess.get_sha256(ROOT+key)!=manifest.files[key].sha256:last_error="New shoreline cache hash mismatch: "+str(key);return false
 	_load_source_topology()
-	_load_canopy_bindings()
+	if not _load_canopy_bindings():return false
 	var atlas:=Image.new();atlas.load_png_from_buffer(FileAccess.get_file_as_bytes(ROOT+"visual_weights_v03.png"));var atlas_texture:=ImageTexture.create_from_image(atlas)
 	for row in manifest.chunks:
 		var values:=_bytes(row.vertices).to_float32_array();var count:int=row.vertex_count
@@ -53,9 +53,10 @@ func set_active(value:bool)->void:
 	if is_instance_valid(source_view.river_overlay):
 		for mi in source_view.river_overlay.mesh_views:
 			if mi.get_meta("river_surface_kind")=="ground":mi.visible=not value
-	for row in canopy_adjustments:row.mi.multimesh.set_instance_transform(row.index,row.current if value else row.original)
-	for row in canopy_group_counts:row.group.active_count=row.current if value else row.original
+	_apply_canopy_bindings(value)
+	source_view._update_budget()
 	if is_instance_valid(source_view.natural_shorelines):source_view.apply_faceted_mountains()
+	source_view.canopy_support_changed.emit()
 func report()->Dictionary:
 	return {"enabled":visible,"triangles":triangles,"build_ms":build_ms,"source_mesh_sha256":manifest.get("source_mesh_sha256",""),"source_drainage_sha256":manifest.get("source_drainage_sha256",""),"old_science_acceptance_inherited":false,"scope":"NEW_SHARED_SOURCE_NATIVE_REVIEW","error":last_error}
 var topology := preload("res://view/integrated_ecology_world/natural_shorelines/packed_topology.gd").new()
@@ -92,16 +93,44 @@ func source_context_at_xz(p:Vector2)->Dictionary:
 				for j in range(3):h+=topology.vertex_height(topology.vertex_index(fi,j))*b[j]
 				return {"ok":true,"face_index":fi,"new_source_face_index":fi,"legacy_face_index":f.legacy_parent_face_index,"position":[p.x,h,p.y],"height":h,"barycentric":[b.x,b.y,b.z],"source_barycentric":[b.x,b.y,b.z],"source_face":f,"canonical_hex":source_view.canonical_hex(Vector3(p.x,h,p.y)),"source_mesh_sha256":manifest.source_mesh_sha256,"height_provenance":"V03_NEW_TERRAIN_PLANE"}
 	return {"ok":false}
-func _load_canopy_bindings()->void:
-	if not is_instance_valid(source_view.whole_canopies) or not manifest.files.has("canopy_support_v03.json.gz"):return
-	var parser:=JSON.new();parser.parse(_bytes("canopy_support_v03.json.gz").get_string_from_utf8());var updates:Array=parser.data.updates
-	for group in source_view.whole_canopies.groups:
+func _load_canopy_bindings()->bool:
+	if not is_instance_valid(source_view.whole_canopies):return true
+	var bindings:=prepare_canopy_bindings(source_view.whole_canopies)
+	if not bindings.get("ok",false):last_error=str(bindings.error);return false
+	commit_canopy_bindings(bindings,false)
+	return true
+func prepare_canopy_bindings(crowns:Node3D)->Dictionary:
+	# Build a replacement index without publishing it or mutating live transforms.
+	# Support rows belong to one exact anchor manifest, not arbitrary row numbers.
+	var file:="canopy_support_v03.json.gz"
+	if not manifest.files.has(file):return {"ok":false,"error":"Shoreline canopy support missing"}
+	if FileAccess.get_sha256(ROOT+file)!=manifest.files[file].sha256:return {"ok":false,"error":"Shoreline canopy support changed"}
+	var parser:=JSON.new()
+	if parser.parse(_bytes(file).get_string_from_utf8())!=OK or not parser.data is Dictionary:return {"ok":false,"error":"Invalid shoreline canopy support"}
+	var data:Dictionary=parser.data
+	if data.get("source_mesh_sha256")!=manifest.source_mesh_sha256 or data.get("legacy_anchor_manifest_sha256")!=crowns.manifest_sha256 or int(data.get("original_anchor_count",-1))!=crowns.total_count:
+		return {"ok":false,"error":"Whole-world canopy replacement does not match active shoreline source"}
+	var updates:Variant=data.get("updates")
+	if not updates is Array or updates.size()!=crowns.total_count:return {"ok":false,"error":"Shoreline canopy support count mismatch"}
+	var adjustments:Array=[];var counts:Array=[]
+	for group in crowns.groups:
 		var removed:=0
 		for k in range(group.rows.size()):
-			var index:int=group.rows[k];var change:Dictionary=updates[index]
-			if change.hide and not source_view.whole_canopies.river_excluded.has(index):removed+=1
+			var index:int=group.rows[k]
+			if index<0 or index>=updates.size() or not updates[index] is Dictionary:return {"ok":false,"error":"Shoreline canopy support row mismatch"}
+			var change:Dictionary=updates[index]
+			if change.get("row")!=index or not change.get("hide") is bool or not (change.get("height") is float or change.get("height") is int):return {"ok":false,"error":"Invalid shoreline canopy support row"}
+			if not is_finite(float(change.height)):return {"ok":false,"error":"Invalid shoreline canopy support height"}
+			if change.hide and not crowns.river_excluded.has(index):removed+=1
 			for mi in [group.near,group.far]:
 				var original:Transform3D=mi.multimesh.get_instance_transform(k);var current:=original;current.origin.y=change.height
 				if change.hide:current.basis=Basis().scaled(Vector3.ZERO)
-				canopy_adjustments.append({"mi":mi,"index":k,"original":original,"current":current})
-		canopy_group_counts.append({"group":group,"original":group.active_count,"current":maxi(0,group.active_count-removed)})
+				adjustments.append({"mi":mi,"index":k,"original":original,"current":current})
+		counts.append({"group":group,"original":group.active_count,"current":maxi(0,group.active_count-removed)})
+	return {"ok":true,"adjustments":adjustments,"counts":counts}
+func commit_canopy_bindings(bindings:Dictionary,apply_now:bool=true)->void:
+	canopy_adjustments=bindings.adjustments;canopy_group_counts=bindings.counts
+	if apply_now:_apply_canopy_bindings(visible)
+func _apply_canopy_bindings(active:bool)->void:
+	for row in canopy_adjustments:row.mi.multimesh.set_instance_transform(row.index,row.current if active else row.original)
+	for row in canopy_group_counts:row.group.active_count=row.current if active else row.original

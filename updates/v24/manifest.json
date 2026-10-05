@@ -1,0 +1,852 @@
+{
+  "schema": "words-and-perils-source-delta/v1",
+  "version": "v24-fieldbook-ui",
+  "base_source_bundle_sha256": "8e88ac0ade3b12f314e3e3076a05efce2a9da335925e1859b6e9543deebeab81",
+  "previous_manifest_sha256": "824467d1aa14f6cea617d702cc765442b157a573558831ce1e21d117578787db",
+  "base_git_commit": "7fac27a1b04367a61445ce16b0c098bd90dc977a",
+  "files": [
+    {
+      "path": "assets/adventure_fieldbook/LICENSE.txt",
+      "size": 929,
+      "sha256": "5cfb0126c6623054a6424a756d75492419fef8c639f2eb5cf094ca8f5f011c30",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/bookmark.png",
+      "size": 3327,
+      "sha256": "c942e8a38a25b80eac248555074fadde3e333ed32ec3599fb592037a8cf5b863",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/bookmark.png.import",
+      "size": 956,
+      "sha256": "353c1154d1cd517b351901586f1c8c09d5e055e80c21b845bcea4fa1b9ec9c6a",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/bookmark.svg",
+      "size": 20952,
+      "sha256": "294fae685add9b8b354c523d2d85b22afa68e1ddf4fcea389455894b296ccc64",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/bookmark.svg.import",
+      "size": 1052,
+      "sha256": "253d59dd7e076bf1222b3be5fdbb21cacf0e5985d26a74d963874414e7831dfc",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/button_base.png",
+      "size": 5114,
+      "sha256": "b1cd4aa425012f87d75ba8b68f1068b433c364d1fe4554840f86761b3c944a03",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/button_base.png.import",
+      "size": 965,
+      "sha256": "177e97f73fb8fb3a21325338f84e5fa4f39b7a9cd1894ff25e66078b652595d2",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/button_base.svg",
+      "size": 19253,
+      "sha256": "29b421d6bb704b7111d8dade0459d7fc067c700a4f9adc0283528c58b63ae87a",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/button_base.svg.import",
+      "size": 1061,
+      "sha256": "eae31ef33c2e8d76e70ff473289b871e99f2733371d28108761c15ae996d7e49",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/button_primary.png",
+      "size": 7360,
+      "sha256": "f559a5bb23f6562caa5095e1bb31d1f7ce9445514add15bb36fb401d6c3b8ee9",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/button_primary.png.import",
+      "size": 974,
+      "sha256": "eb57ba05f3ff3b387625cb92c33ed4a0c6fde42b350cec240dc137d8cf674927",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/button_primary.svg",
+      "size": 19252,
+      "sha256": "a71165be0239aafa363831735d24c3d699524b17f5f6b1b0702ada349cdd3a1c",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/button_primary.svg.import",
+      "size": 1070,
+      "sha256": "a79311b471f92ea43ff3fd72555c7f9efa0a1bfe6a19efb47750d6f9dfe2689d",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/compass_stamp.png",
+      "size": 9822,
+      "sha256": "6c1003b3855fab3b99eff682e1a9ed990ab83f41bfe8977008fc3199b25c57ff",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/compass_stamp.png.import",
+      "size": 970,
+      "sha256": "c9fb1461086da8493da5537674e7ec166ad21b2bda5424dd19a1129a338726a5",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/compass_stamp.svg",
+      "size": 20706,
+      "sha256": "ad6600f1b9eec5b4a4aea0c94da2c0d9da56d02c6ae8346e21724afd54059f6d",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/compass_stamp.svg.import",
+      "size": 1067,
+      "sha256": "0a16375f389cf499d2b9c2fb7e74d6af36d01ca902c88c02c38c551be8e32d9a",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/dialogue_base.png",
+      "size": 28738,
+      "sha256": "2ad1f6c9f84c84fa939bbec03f4c3fd53f8f9166c5cb54b1552a425d61428974",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/dialogue_base.png.import",
+      "size": 971,
+      "sha256": "5a0a6933f6dde3bd3035685eb564feb83c56371975ff80e5f3b135b151a5abf7",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/dialogue_base.svg",
+      "size": 22099,
+      "sha256": "b6464970ec846f02dad1872bd4bf84d758f7169fa5754e3591f5a4e2cdc83577",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/dialogue_base.svg.import",
+      "size": 1067,
+      "sha256": "32340d5dad39d9ad7c3ee7060ab80f68c5f76f008dbede1800ccb430b0fb5b9e",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/history_base.png",
+      "size": 41037,
+      "sha256": "e22bfd28985e8fbf220729e4f408b9951947a7f67edf8c62918df09ad3a49a77",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/history_base.png.import",
+      "size": 968,
+      "sha256": "12a702cd5e0d3817988d61c513962b39395879a0dd7bfaa77a24c1a0e8414c3c",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/history_base.svg",
+      "size": 21592,
+      "sha256": "db2e0c315edc3ae4d35a496077f9ef514cd8384635e14511ca0eb4ca78afd766",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/history_base.svg.import",
+      "size": 1064,
+      "sha256": "62affa22a641409da4d127b5d7b7835a0d3b4533fb452c564d37b1aa851d6579",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/icon_focus.png",
+      "size": 1650,
+      "sha256": "765d6b411fdcbb5d8d12052b334911c628dbb44718085c8123eb0a01e492c7b0",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/icon_focus.png.import",
+      "size": 962,
+      "sha256": "9aa05f86844e4876c923aa24eb2f8847d2368229981e9991415fb5300aabc09f",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/icon_focus.svg",
+      "size": 19243,
+      "sha256": "59b50079052b26bc40bda5071111cd0e98d07c2384bbded6e3fe54ed4dbfeddf",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/icon_focus.svg.import",
+      "size": 1057,
+      "sha256": "e95574705e9906e2cb220848092b1e03663015a0d2c6a3f1240e7783b708deda",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/icon_satchel.png",
+      "size": 1943,
+      "sha256": "0730ab9165a5cb37f67f1668b14cae8b477ad927677fd7c145f90a30fdea9c2d",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/icon_satchel.png.import",
+      "size": 967,
+      "sha256": "cea09757a88aada08bb66af99f5466169e769a649c79fe3b315ac0c88b036b7f",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/icon_satchel.svg",
+      "size": 19182,
+      "sha256": "a1c629669d003206a4dd23b87691ab6701e14aee5c717d8a82cab6b142e9f5ec",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/icon_satchel.svg.import",
+      "size": 1064,
+      "sha256": "cb307e424be3b2ea702ca4375fcb604ab4c51591074813fe4c8be24ac38bf7ad",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/icon_world.png",
+      "size": 1719,
+      "sha256": "e5e8b5a8eb41152dde48d9c93e59ebfd460461ea49b07d8fb99a70f49fe43c1c",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/icon_world.png.import",
+      "size": 962,
+      "sha256": "01b450454d34565b969a74c49dd3434b3bd72f1c9ef3f2488ad2cee7f589474f",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/icon_world.svg",
+      "size": 19194,
+      "sha256": "8a49b396f409ab6f993f71cde7d4b02d0d4204e87ca4b5d208c2c49f9815bba0",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/icon_world.svg.import",
+      "size": 1058,
+      "sha256": "f1d750df0146e9af031044c8f8d5350ddd9071b83b3a615f9c5250309aab9c30",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/intent_base.png",
+      "size": 37044,
+      "sha256": "3389e427af8f6e6875864fd2cd381622f06283ee98d4c7af2eba489310ac23cb",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/intent_base.png.import",
+      "size": 965,
+      "sha256": "81739ec147d9eb9f895f3beb4c394756e984d06cb800e2d2caf8414c1b6e17a5",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/intent_base.svg",
+      "size": 22163,
+      "sha256": "d51895320027acd53c2ec697b22d30986beb008910db281ad43e77c99dead42e",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/intent_base.svg.import",
+      "size": 1061,
+      "sha256": "c65c5edc3dd8bb9c15828e4ed065fe1f55ca18db6498ea95c84663fb73d15ff2",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/minimap_frame.png",
+      "size": 104684,
+      "sha256": "067c20782c69a753e21e4341ec1f52e1808fefdab9f872f740331531b239347f",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/minimap_frame.png.import",
+      "size": 971,
+      "sha256": "15503a0a260617fa8d4ef11a81192df77fb0b4867c0225675ae45d0beeb6f74b",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/minimap_frame.svg",
+      "size": 31782,
+      "sha256": "c714dd4a038fe6d376069085bd365d26cc7ce7a4d07634c23aed1843b8741771",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/minimap_frame.svg.import",
+      "size": 1066,
+      "sha256": "39ea18247b97bf1e7d4d606e42b4c74a48b52da82fe8141b1d6a30dcc472fdc9",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/paper_focus.png",
+      "size": 9300,
+      "sha256": "b38ece4ebb29a3db3a819d95627feaf3d02527d93b4149b72dfb8867df35c1a6",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/paper_focus.png.import",
+      "size": 964,
+      "sha256": "eac72ba40727a9c2609a085a6204f2ba92296444c26a225f436a887ec586c8f8",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/paper_focus.svg",
+      "size": 19460,
+      "sha256": "83a501f791de37d6ac18645165f4a4f2e98cf1f61c6d07b482f91a9688c16852",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/paper_focus.svg.import",
+      "size": 1060,
+      "sha256": "363807caae11ad47eae52e68e719681737ceaa6f8aae2b965bb4dd0858a3bf70",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/paper_input.png",
+      "size": 9256,
+      "sha256": "a0c4fcb461d416d93fc1c410e2f7b2901dd0896cb206e3c3b297a4bc75e9461f",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/paper_input.png.import",
+      "size": 965,
+      "sha256": "0f459079927b1db5938a08835ca0d636c5e99b05574aecd7d19db8145bef431e",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/paper_input.svg",
+      "size": 19458,
+      "sha256": "9eb7297a9c00b52f3b1537dfe6facf572c8d333f4723daa63796937fce77d28d",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/paper_input.svg.import",
+      "size": 1061,
+      "sha256": "4412679f9156124387d1a4e8136fe8dd32928cdbd9de6f391103a9d58f2a4410",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/portrait_composite.png",
+      "size": 43527,
+      "sha256": "2570ecccd7da63957eb8fd6809c7095727b87a880d386e84d990d44fbdee15b0",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/portrait_composite.png.import",
+      "size": 985,
+      "sha256": "a34d79894d627d0c023ea345903b0c7952a2f35b8edfcf8ac10e2582e3e6c60c",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/portrait_composite.svg",
+      "size": 32231,
+      "sha256": "209075817938503ae5bcfeee69053d7ea7a218fd493728e4f39dd31705f9470f",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/portrait_composite.svg.import",
+      "size": 1082,
+      "sha256": "3817048663d0c6bdc014c26b1c8e4033d7ec60e051f5270b4bce5253c411b87a",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/portrait_frame.png",
+      "size": 36781,
+      "sha256": "1a25382c529623112d838ad9a0cb41b1b84598f0c1f392ac23b373cb04fa8aff",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/portrait_frame.png.import",
+      "size": 974,
+      "sha256": "bd06b91969c51b5a21082dc071bf1a26f2bf1ae06f3c42515ce02049b54bcd89",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/portrait_frame.svg",
+      "size": 23748,
+      "sha256": "2d33901a42cc03aee0386882fc5d7f571b467d0955dc826a568f73169b281df0",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/portrait_frame.svg.import",
+      "size": 1070,
+      "sha256": "a925356add9c882cba1bf1f72104835b07e8ae27aa23c42e5b485a7f1d67f061",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/quill.png",
+      "size": 12184,
+      "sha256": "2222fbc61dbcb61658ffe5f7b7b0b2325ddcdb3c1485ec787e9f8edbddcb7360",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/quill.png.import",
+      "size": 947,
+      "sha256": "a708f8baca5d3a2ea6a626bac4afc18fb503c73deee89dc43eaa7cd44b9f8ea5",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/quill.svg",
+      "size": 20343,
+      "sha256": "c215d3cc6372ca8dfb9ed264718ccd64a5bec7baabfd7654ef1a1c3dc5e7874d",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/quill.svg.import",
+      "size": 1042,
+      "sha256": "63f5fe97b3beac4a8948958ca1efe216604edfaf263c19719d9b5d25dfdf5361",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/status_base.png",
+      "size": 20500,
+      "sha256": "1275d4bb9e603a6ea34c7809a91cef65e52eb25d5b85b214537dafdeb8bfd4d6",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/status_base.png.import",
+      "size": 965,
+      "sha256": "842987105584f95b3630071cf91c588428d6385ad73544a2f7aee481bd83a9de",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/status_base.svg",
+      "size": 20931,
+      "sha256": "146135343a765f03b5d916e9e26ac0d98e29e4509b479267bfc84e224ff0d11a",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/status_base.svg.import",
+      "size": 1061,
+      "sha256": "d2d856a22815a7b21ed88f17a242025300acd89dff7ae7518493d02525390a22",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/tool_button.png",
+      "size": 10637,
+      "sha256": "389ed8948d1d05a867820a5bc0566001e0dc39be97e848a3c61ea70fbd353bb2",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/tool_button.png.import",
+      "size": 965,
+      "sha256": "4308c9b64ebd0f29aa10d4f1ed33c8f7323816969b39cfa55da15830a8505998",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/tool_button.svg",
+      "size": 19311,
+      "sha256": "91f9066be94c3a80396ed0edf511df7b3963b4c823cea95a6320d5dfb07f0986",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/tool_button.svg.import",
+      "size": 1061,
+      "sha256": "68ea90cd04df2b83def79e3e315b2d49200a3401c25e5cf3c2951c746f164edd",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/traveller_portrait.png",
+      "size": 8893,
+      "sha256": "0add5269bbff2bfbe343f19e2dbfcc549d53be66cb6711bb6da02f9abc452410",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/traveller_portrait.png.import",
+      "size": 986,
+      "sha256": "6f34443e3b0520b64452e13119f3d09d8f5d7e669e1b79415ed81efad1e385db",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/traveller_portrait.svg",
+      "size": 8316,
+      "sha256": "251f56f52b4a61b9f66f33f742b3edc1509ea7a378722b03e85c88089217d752",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/traveller_portrait.svg.import",
+      "size": 1082,
+      "sha256": "4d08c98c7e8d889aa350420872231245238c181ea02d2b2d0a3d0dc86254ac51",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/turn_button.png",
+      "size": 58171,
+      "sha256": "6043ca8293cc99b8e99e28637906ea37fedc3c5558811bcf4c8dd15e020c21ed",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/turn_button.png.import",
+      "size": 965,
+      "sha256": "1d2badaff78c4d6d14260bf36b1d2c8fd2e94ac3fe8df7bfa219d3b6424c8716",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/turn_button.svg",
+      "size": 26767,
+      "sha256": "88b41ccdd0a5fa643f5a1293a2c4edb35c1094bf1dd04264e218d8bcb9a5010c",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/turn_button.svg.import",
+      "size": 1061,
+      "sha256": "a26dcfd436e6cf5433c984bc3917cc3c3e8c3a97e53f9c46bf4593e1a6b13300",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/turn_connection.png",
+      "size": 12076,
+      "sha256": "cb9c0ff9fe78af45fb398dea3ca79854652b9f2032f5e39a7d95155d2b299c03",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/turn_connection.png.import",
+      "size": 976,
+      "sha256": "29596511415879732f0a78d4b3f40415b7143a77fe470751eb897ae3b564e972",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/turn_connection.svg",
+      "size": 20065,
+      "sha256": "dd2ab5f4b126327689c317ada90c73f8c9d368ca628c1740f41c4f8b750467d7",
+      "before_sha256": null
+    },
+    {
+      "path": "assets/adventure_fieldbook/turn_connection.svg.import",
+      "size": 1073,
+      "sha256": "8444c0121f4f899f62327f8d4b6c2f477e539cca8c080812de09f2a0e1b3a647",
+      "before_sha256": null
+    },
+    {
+      "path": "main.gd",
+      "size": 177810,
+      "sha256": "e346071dd0149805f96ed53d18fda4f28223354b121fb6831f66c1c7b862eec4",
+      "before_sha256": "bc98ce645b9b81315c39262f33d7545ead8fd80b29b6e78f10d5020d95805bfd"
+    },
+    {
+      "path": "tests/capture_fieldbook_c.gd",
+      "size": 1685,
+      "sha256": "87be257069c11e69d75077232ae7c09fb50be6a96f879c86b8644dc6c0e63c0b",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/test_fieldbook_art.gd",
+      "size": 614,
+      "sha256": "8900f5e223ed99a628f6e5ef4f99226560c4d25e0cff7e473cee0bcc12034563",
+      "before_sha256": null
+    },
+    {
+      "path": "tools/restore_repository.py",
+      "size": 217,
+      "sha256": "65b70c7c1e4651cb1b598af3127612a14ae3faeb4e5dbabd070a1612e96ecc0c",
+      "before_sha256": "dca8229f4242bd701b98cdf4d3fae05d83679b2148791aa0323f1ac1c864b107"
+    },
+    {
+      "path": "tools/restore_v24.py",
+      "size": 8462,
+      "sha256": "af4a4ae1774341c2c4733f597e4f8824b7434795dc5d8afa7783c8c42dfb456d",
+      "before_sha256": null
+    },
+    {
+      "path": "tools/verify_publication.py",
+      "size": 10747,
+      "sha256": "32bf576c5748a84449f4454186eb4f2e9f6d11f3b78f366c7b4292d3f58ef924",
+      "before_sha256": "1e183e360cd2cc9cb26f7050e56433ec4d503fe42485383c7c743eba324cef82"
+    },
+    {
+      "path": "view/adventure_fieldbook/components.gd",
+      "size": 4887,
+      "sha256": "12469340706652faf4000cfd63a6a4ae9d6816cdab7a0a444f008e96af25ccb7",
+      "before_sha256": null
+    },
+    {
+      "path": "view/adventure_fieldbook/decor.gd",
+      "size": 1545,
+      "sha256": "b985f1b53ba90b9f17bab3a69f6f938dba8f95fa732d3a2b6767c791589fe906",
+      "before_sha256": null
+    },
+    {
+      "path": "view/adventure_fieldbook/layout.gd",
+      "size": 3824,
+      "sha256": "1dbcbd97f0e7569de2b507b3844d1b9bc281cd6af2eb94d7d82da743215be154",
+      "before_sha256": null
+    },
+    {
+      "path": "view/adventure_fieldbook/skin.gd",
+      "size": 5376,
+      "sha256": "da6886107ba326fb5a0d976a074268a698634855d8af70e74350522573746c68",
+      "before_sha256": null
+    },
+    {
+      "path": "view/adventure_fieldbook/tokens.gd",
+      "size": 4737,
+      "sha256": "83d588eb6bad86a05e5f9422e5738f9425a4647af670c8f79480e1c827dbb37f",
+      "before_sha256": null
+    },
+    {
+      "path": "view/fullscreen_hud/button_theme.gd",
+      "size": 3399,
+      "sha256": "ca5cf39c6c2910ec03e7d6cfc766c23e2c0f97dfd157733703ce9cd6741d0c5f",
+      "before_sha256": "c5292e65cb2b9e3205d624cdf2812c989f25e0134c66494b435ced30a874dc13"
+    },
+    {
+      "path": "view/fullscreen_hud/minimap.gd",
+      "size": 4766,
+      "sha256": "758b9bbf4196347831883166fb5de05f919aebc0ba71cbf048ab23b0718dcb63",
+      "before_sha256": "b84cffdd38e573a4d6fe9d11c15399ef842344122796a6777946a4f6cd3eee1f"
+    },
+    {
+      "path": "view/fullscreen_hud/portrait.gd",
+      "size": 500,
+      "sha256": "a9bffa04d3a3e0868cf458b18a53f36e67b493b89fda0c0fb8c7c5f3b976fcbf",
+      "before_sha256": "3b6b80cf487c171caf79e75cf76549eca20a8eccbe970c72bc6d05e7f39147e6"
+    },
+    {
+      "path": "view/fullscreen_hud/readability.gd",
+      "size": 5620,
+      "sha256": "bfa7083ace3bd5b5b51b195af69961cd61493441301514360f1dba23f4262ef7",
+      "before_sha256": "e2aa19e9061457307b50a11219656a266fbb006987ecb4dd84ec82c387b03701"
+    },
+    {
+      "path": "view/fullscreen_hud/straw_theme.gd",
+      "size": 433,
+      "sha256": "d8935d694c7c1ac90827845a4946364fc2aaac5423a934f3a163cdc5284ae94e",
+      "before_sha256": "4571b91909281085b73b9fdce84c5178d0f06a46fe9b4fe6b73f6f312fda9961"
+    }
+  ],
+  "canonical_pins": {
+    "main.gd": "e346071dd0149805f96ed53d18fda4f28223354b121fb6831f66c1c7b862eec4",
+    "view/fullscreen_hud/button_theme.gd": "ca5cf39c6c2910ec03e7d6cfc766c23e2c0f97dfd157733703ce9cd6741d0c5f",
+    "view/fullscreen_hud/straw_theme.gd": "d8935d694c7c1ac90827845a4946364fc2aaac5423a934f3a163cdc5284ae94e",
+    "view/fullscreen_hud/portrait.gd": "a9bffa04d3a3e0868cf458b18a53f36e67b493b89fda0c0fb8c7c5f3b976fcbf",
+    "view/fullscreen_hud/minimap.gd": "758b9bbf4196347831883166fb5de05f919aebc0ba71cbf048ab23b0718dcb63",
+    "view/fullscreen_hud/readability.gd": "bfa7083ace3bd5b5b51b195af69961cd61493441301514360f1dba23f4262ef7",
+    "assets/adventure_fieldbook/LICENSE.txt": "5cfb0126c6623054a6424a756d75492419fef8c639f2eb5cf094ca8f5f011c30",
+    "assets/adventure_fieldbook/bookmark.png": "c942e8a38a25b80eac248555074fadde3e333ed32ec3599fb592037a8cf5b863",
+    "assets/adventure_fieldbook/bookmark.svg": "294fae685add9b8b354c523d2d85b22afa68e1ddf4fcea389455894b296ccc64",
+    "assets/adventure_fieldbook/button_base.png": "b1cd4aa425012f87d75ba8b68f1068b433c364d1fe4554840f86761b3c944a03",
+    "assets/adventure_fieldbook/button_base.svg": "29b421d6bb704b7111d8dade0459d7fc067c700a4f9adc0283528c58b63ae87a",
+    "assets/adventure_fieldbook/button_primary.png": "f559a5bb23f6562caa5095e1bb31d1f7ce9445514add15bb36fb401d6c3b8ee9",
+    "assets/adventure_fieldbook/button_primary.svg": "a71165be0239aafa363831735d24c3d699524b17f5f6b1b0702ada349cdd3a1c",
+    "assets/adventure_fieldbook/compass_stamp.png": "6c1003b3855fab3b99eff682e1a9ed990ab83f41bfe8977008fc3199b25c57ff",
+    "assets/adventure_fieldbook/compass_stamp.svg": "ad6600f1b9eec5b4a4aea0c94da2c0d9da56d02c6ae8346e21724afd54059f6d",
+    "assets/adventure_fieldbook/dialogue_base.png": "2ad1f6c9f84c84fa939bbec03f4c3fd53f8f9166c5cb54b1552a425d61428974",
+    "assets/adventure_fieldbook/dialogue_base.svg": "b6464970ec846f02dad1872bd4bf84d758f7169fa5754e3591f5a4e2cdc83577",
+    "assets/adventure_fieldbook/history_base.png": "e22bfd28985e8fbf220729e4f408b9951947a7f67edf8c62918df09ad3a49a77",
+    "assets/adventure_fieldbook/history_base.svg": "db2e0c315edc3ae4d35a496077f9ef514cd8384635e14511ca0eb4ca78afd766",
+    "assets/adventure_fieldbook/icon_focus.png": "765d6b411fdcbb5d8d12052b334911c628dbb44718085c8123eb0a01e492c7b0",
+    "assets/adventure_fieldbook/icon_focus.svg": "59b50079052b26bc40bda5071111cd0e98d07c2384bbded6e3fe54ed4dbfeddf",
+    "assets/adventure_fieldbook/icon_satchel.png": "0730ab9165a5cb37f67f1668b14cae8b477ad927677fd7c145f90a30fdea9c2d",
+    "assets/adventure_fieldbook/icon_satchel.svg": "a1c629669d003206a4dd23b87691ab6701e14aee5c717d8a82cab6b142e9f5ec",
+    "assets/adventure_fieldbook/icon_world.png": "e5e8b5a8eb41152dde48d9c93e59ebfd460461ea49b07d8fb99a70f49fe43c1c",
+    "assets/adventure_fieldbook/icon_world.svg": "8a49b396f409ab6f993f71cde7d4b02d0d4204e87ca4b5d208c2c49f9815bba0",
+    "assets/adventure_fieldbook/intent_base.png": "3389e427af8f6e6875864fd2cd381622f06283ee98d4c7af2eba489310ac23cb",
+    "assets/adventure_fieldbook/intent_base.svg": "d51895320027acd53c2ec697b22d30986beb008910db281ad43e77c99dead42e",
+    "assets/adventure_fieldbook/minimap_frame.png": "067c20782c69a753e21e4341ec1f52e1808fefdab9f872f740331531b239347f",
+    "assets/adventure_fieldbook/minimap_frame.svg": "c714dd4a038fe6d376069085bd365d26cc7ce7a4d07634c23aed1843b8741771",
+    "assets/adventure_fieldbook/paper_focus.png": "b38ece4ebb29a3db3a819d95627feaf3d02527d93b4149b72dfb8867df35c1a6",
+    "assets/adventure_fieldbook/paper_focus.svg": "83a501f791de37d6ac18645165f4a4f2e98cf1f61c6d07b482f91a9688c16852",
+    "assets/adventure_fieldbook/paper_input.png": "a0c4fcb461d416d93fc1c410e2f7b2901dd0896cb206e3c3b297a4bc75e9461f",
+    "assets/adventure_fieldbook/paper_input.svg": "9eb7297a9c00b52f3b1537dfe6facf572c8d333f4723daa63796937fce77d28d",
+    "assets/adventure_fieldbook/portrait_composite.png": "2570ecccd7da63957eb8fd6809c7095727b87a880d386e84d990d44fbdee15b0",
+    "assets/adventure_fieldbook/portrait_composite.svg": "209075817938503ae5bcfeee69053d7ea7a218fd493728e4f39dd31705f9470f",
+    "assets/adventure_fieldbook/portrait_frame.png": "1a25382c529623112d838ad9a0cb41b1b84598f0c1f392ac23b373cb04fa8aff",
+    "assets/adventure_fieldbook/portrait_frame.svg": "2d33901a42cc03aee0386882fc5d7f571b467d0955dc826a568f73169b281df0",
+    "assets/adventure_fieldbook/quill.png": "2222fbc61dbcb61658ffe5f7b7b0b2325ddcdb3c1485ec787e9f8edbddcb7360",
+    "assets/adventure_fieldbook/quill.svg": "c215d3cc6372ca8dfb9ed264718ccd64a5bec7baabfd7654ef1a1c3dc5e7874d",
+    "assets/adventure_fieldbook/status_base.png": "1275d4bb9e603a6ea34c7809a91cef65e52eb25d5b85b214537dafdeb8bfd4d6",
+    "assets/adventure_fieldbook/status_base.svg": "146135343a765f03b5d916e9e26ac0d98e29e4509b479267bfc84e224ff0d11a",
+    "assets/adventure_fieldbook/tool_button.png": "389ed8948d1d05a867820a5bc0566001e0dc39be97e848a3c61ea70fbd353bb2",
+    "assets/adventure_fieldbook/tool_button.svg": "91f9066be94c3a80396ed0edf511df7b3963b4c823cea95a6320d5dfb07f0986",
+    "assets/adventure_fieldbook/traveller_portrait.png": "0add5269bbff2bfbe343f19e2dbfcc549d53be66cb6711bb6da02f9abc452410",
+    "assets/adventure_fieldbook/traveller_portrait.svg": "251f56f52b4a61b9f66f33f742b3edc1509ea7a378722b03e85c88089217d752",
+    "assets/adventure_fieldbook/turn_button.png": "6043ca8293cc99b8e99e28637906ea37fedc3c5558811bcf4c8dd15e020c21ed",
+    "assets/adventure_fieldbook/turn_button.svg": "88b41ccdd0a5fa643f5a1293a2c4edb35c1094bf1dd04264e218d8bcb9a5010c",
+    "assets/adventure_fieldbook/turn_connection.png": "cb9c0ff9fe78af45fb398dea3ca79854652b9f2032f5e39a7d95155d2b299c03",
+    "assets/adventure_fieldbook/turn_connection.svg": "dd2ab5f4b126327689c317ada90c73f8c9d368ca628c1740f41c4f8b750467d7",
+    "view/adventure_fieldbook/components.gd": "12469340706652faf4000cfd63a6a4ae9d6816cdab7a0a444f008e96af25ccb7",
+    "view/adventure_fieldbook/decor.gd": "b985f1b53ba90b9f17bab3a69f6f938dba8f95fa732d3a2b6767c791589fe906",
+    "view/adventure_fieldbook/layout.gd": "1dbcbd97f0e7569de2b507b3844d1b9bc281cd6af2eb94d7d82da743215be154",
+    "view/adventure_fieldbook/skin.gd": "da6886107ba326fb5a0d976a074268a698634855d8af70e74350522573746c68",
+    "view/adventure_fieldbook/tokens.gd": "83d588eb6bad86a05e5f9422e5738f9425a4647af670c8f79480e1c827dbb37f",
+    "assets/adventure_fieldbook/bookmark.png.import": "353c1154d1cd517b351901586f1c8c09d5e055e80c21b845bcea4fa1b9ec9c6a",
+    "assets/adventure_fieldbook/bookmark.svg.import": "253d59dd7e076bf1222b3be5fdbb21cacf0e5985d26a74d963874414e7831dfc",
+    "assets/adventure_fieldbook/button_base.png.import": "177e97f73fb8fb3a21325338f84e5fa4f39b7a9cd1894ff25e66078b652595d2",
+    "assets/adventure_fieldbook/button_base.svg.import": "eae31ef33c2e8d76e70ff473289b871e99f2733371d28108761c15ae996d7e49",
+    "assets/adventure_fieldbook/button_primary.png.import": "eb57ba05f3ff3b387625cb92c33ed4a0c6fde42b350cec240dc137d8cf674927",
+    "assets/adventure_fieldbook/button_primary.svg.import": "a79311b471f92ea43ff3fd72555c7f9efa0a1bfe6a19efb47750d6f9dfe2689d",
+    "assets/adventure_fieldbook/compass_stamp.png.import": "c9fb1461086da8493da5537674e7ec166ad21b2bda5424dd19a1129a338726a5",
+    "assets/adventure_fieldbook/compass_stamp.svg.import": "0a16375f389cf499d2b9c2fb7e74d6af36d01ca902c88c02c38c551be8e32d9a",
+    "assets/adventure_fieldbook/dialogue_base.png.import": "5a0a6933f6dde3bd3035685eb564feb83c56371975ff80e5f3b135b151a5abf7",
+    "assets/adventure_fieldbook/dialogue_base.svg.import": "32340d5dad39d9ad7c3ee7060ab80f68c5f76f008dbede1800ccb430b0fb5b9e",
+    "assets/adventure_fieldbook/history_base.png.import": "12a702cd5e0d3817988d61c513962b39395879a0dd7bfaa77a24c1a0e8414c3c",
+    "assets/adventure_fieldbook/history_base.svg.import": "62affa22a641409da4d127b5d7b7835a0d3b4533fb452c564d37b1aa851d6579",
+    "assets/adventure_fieldbook/icon_focus.png.import": "9aa05f86844e4876c923aa24eb2f8847d2368229981e9991415fb5300aabc09f",
+    "assets/adventure_fieldbook/icon_focus.svg.import": "e95574705e9906e2cb220848092b1e03663015a0d2c6a3f1240e7783b708deda",
+    "assets/adventure_fieldbook/icon_satchel.png.import": "cea09757a88aada08bb66af99f5466169e769a649c79fe3b315ac0c88b036b7f",
+    "assets/adventure_fieldbook/icon_satchel.svg.import": "cb307e424be3b2ea702ca4375fcb604ab4c51591074813fe4c8be24ac38bf7ad",
+    "assets/adventure_fieldbook/icon_world.png.import": "01b450454d34565b969a74c49dd3434b3bd72f1c9ef3f2488ad2cee7f589474f",
+    "assets/adventure_fieldbook/icon_world.svg.import": "f1d750df0146e9af031044c8f8d5350ddd9071b83b3a615f9c5250309aab9c30",
+    "assets/adventure_fieldbook/intent_base.png.import": "81739ec147d9eb9f895f3beb4c394756e984d06cb800e2d2caf8414c1b6e17a5",
+    "assets/adventure_fieldbook/intent_base.svg.import": "c65c5edc3dd8bb9c15828e4ed065fe1f55ca18db6498ea95c84663fb73d15ff2",
+    "assets/adventure_fieldbook/minimap_frame.png.import": "15503a0a260617fa8d4ef11a81192df77fb0b4867c0225675ae45d0beeb6f74b",
+    "assets/adventure_fieldbook/minimap_frame.svg.import": "39ea18247b97bf1e7d4d606e42b4c74a48b52da82fe8141b1d6a30dcc472fdc9",
+    "assets/adventure_fieldbook/paper_focus.png.import": "eac72ba40727a9c2609a085a6204f2ba92296444c26a225f436a887ec586c8f8",
+    "assets/adventure_fieldbook/paper_focus.svg.import": "363807caae11ad47eae52e68e719681737ceaa6f8aae2b965bb4dd0858a3bf70",
+    "assets/adventure_fieldbook/paper_input.png.import": "0f459079927b1db5938a08835ca0d636c5e99b05574aecd7d19db8145bef431e",
+    "assets/adventure_fieldbook/paper_input.svg.import": "4412679f9156124387d1a4e8136fe8dd32928cdbd9de6f391103a9d58f2a4410",
+    "assets/adventure_fieldbook/portrait_composite.png.import": "a34d79894d627d0c023ea345903b0c7952a2f35b8edfcf8ac10e2582e3e6c60c",
+    "assets/adventure_fieldbook/portrait_composite.svg.import": "3817048663d0c6bdc014c26b1c8e4033d7ec60e051f5270b4bce5253c411b87a",
+    "assets/adventure_fieldbook/portrait_frame.png.import": "bd06b91969c51b5a21082dc071bf1a26f2bf1ae06f3c42515ce02049b54bcd89",
+    "assets/adventure_fieldbook/portrait_frame.svg.import": "a925356add9c882cba1bf1f72104835b07e8ae27aa23c42e5b485a7f1d67f061",
+    "assets/adventure_fieldbook/quill.png.import": "a708f8baca5d3a2ea6a626bac4afc18fb503c73deee89dc43eaa7cd44b9f8ea5",
+    "assets/adventure_fieldbook/quill.svg.import": "63f5fe97b3beac4a8948958ca1efe216604edfaf263c19719d9b5d25dfdf5361",
+    "assets/adventure_fieldbook/status_base.png.import": "842987105584f95b3630071cf91c588428d6385ad73544a2f7aee481bd83a9de",
+    "assets/adventure_fieldbook/status_base.svg.import": "d2d856a22815a7b21ed88f17a242025300acd89dff7ae7518493d02525390a22",
+    "assets/adventure_fieldbook/tool_button.png.import": "4308c9b64ebd0f29aa10d4f1ed33c8f7323816969b39cfa55da15830a8505998",
+    "assets/adventure_fieldbook/tool_button.svg.import": "68ea90cd04df2b83def79e3e315b2d49200a3401c25e5cf3c2951c746f164edd",
+    "assets/adventure_fieldbook/traveller_portrait.png.import": "6f34443e3b0520b64452e13119f3d09d8f5d7e669e1b79415ed81efad1e385db",
+    "assets/adventure_fieldbook/traveller_portrait.svg.import": "4d08c98c7e8d889aa350420872231245238c181ea02d2b2d0a3d0dc86254ac51",
+    "assets/adventure_fieldbook/turn_button.png.import": "1d2badaff78c4d6d14260bf36b1d2c8fd2e94ac3fe8df7bfa219d3b6424c8716",
+    "assets/adventure_fieldbook/turn_button.svg.import": "a26dcfd436e6cf5433c984bc3917cc3c3e8c3a97e53f9c46bf4593e1a6b13300",
+    "assets/adventure_fieldbook/turn_connection.png.import": "29596511415879732f0a78d4b3f40415b7143a77fe470751eb897ae3b564e972",
+    "assets/adventure_fieldbook/turn_connection.svg.import": "8444c0121f4f899f62327f8d4b6c2f477e539cca8c080812de09f2a0e1b3a647",
+    "tests/capture_fieldbook_c.gd": "87be257069c11e69d75077232ae7c09fb50be6a96f879c86b8644dc6c0e63c0b",
+    "tests/test_fieldbook_art.gd": "8900f5e223ed99a628f6e5ef4f99226560c4d25e0cff7e473cee0bcc12034563"
+  },
+  "production_pins": {
+    "main.gd": "e346071dd0149805f96ed53d18fda4f28223354b121fb6831f66c1c7b862eec4",
+    "view/fullscreen_hud/button_theme.gd": "ca5cf39c6c2910ec03e7d6cfc766c23e2c0f97dfd157733703ce9cd6741d0c5f",
+    "view/fullscreen_hud/straw_theme.gd": "d8935d694c7c1ac90827845a4946364fc2aaac5423a934f3a163cdc5284ae94e",
+    "view/fullscreen_hud/portrait.gd": "a9bffa04d3a3e0868cf458b18a53f36e67b493b89fda0c0fb8c7c5f3b976fcbf",
+    "view/fullscreen_hud/minimap.gd": "758b9bbf4196347831883166fb5de05f919aebc0ba71cbf048ab23b0718dcb63",
+    "view/fullscreen_hud/readability.gd": "bfa7083ace3bd5b5b51b195af69961cd61493441301514360f1dba23f4262ef7",
+    "assets/adventure_fieldbook/LICENSE.txt": "5cfb0126c6623054a6424a756d75492419fef8c639f2eb5cf094ca8f5f011c30",
+    "assets/adventure_fieldbook/bookmark.png": "c942e8a38a25b80eac248555074fadde3e333ed32ec3599fb592037a8cf5b863",
+    "assets/adventure_fieldbook/bookmark.svg": "294fae685add9b8b354c523d2d85b22afa68e1ddf4fcea389455894b296ccc64",
+    "assets/adventure_fieldbook/button_base.png": "b1cd4aa425012f87d75ba8b68f1068b433c364d1fe4554840f86761b3c944a03",
+    "assets/adventure_fieldbook/button_base.svg": "29b421d6bb704b7111d8dade0459d7fc067c700a4f9adc0283528c58b63ae87a",
+    "assets/adventure_fieldbook/button_primary.png": "f559a5bb23f6562caa5095e1bb31d1f7ce9445514add15bb36fb401d6c3b8ee9",
+    "assets/adventure_fieldbook/button_primary.svg": "a71165be0239aafa363831735d24c3d699524b17f5f6b1b0702ada349cdd3a1c",
+    "assets/adventure_fieldbook/compass_stamp.png": "6c1003b3855fab3b99eff682e1a9ed990ab83f41bfe8977008fc3199b25c57ff",
+    "assets/adventure_fieldbook/compass_stamp.svg": "ad6600f1b9eec5b4a4aea0c94da2c0d9da56d02c6ae8346e21724afd54059f6d",
+    "assets/adventure_fieldbook/dialogue_base.png": "2ad1f6c9f84c84fa939bbec03f4c3fd53f8f9166c5cb54b1552a425d61428974",
+    "assets/adventure_fieldbook/dialogue_base.svg": "b6464970ec846f02dad1872bd4bf84d758f7169fa5754e3591f5a4e2cdc83577",
+    "assets/adventure_fieldbook/history_base.png": "e22bfd28985e8fbf220729e4f408b9951947a7f67edf8c62918df09ad3a49a77",
+    "assets/adventure_fieldbook/history_base.svg": "db2e0c315edc3ae4d35a496077f9ef514cd8384635e14511ca0eb4ca78afd766",
+    "assets/adventure_fieldbook/icon_focus.png": "765d6b411fdcbb5d8d12052b334911c628dbb44718085c8123eb0a01e492c7b0",
+    "assets/adventure_fieldbook/icon_focus.svg": "59b50079052b26bc40bda5071111cd0e98d07c2384bbded6e3fe54ed4dbfeddf",
+    "assets/adventure_fieldbook/icon_satchel.png": "0730ab9165a5cb37f67f1668b14cae8b477ad927677fd7c145f90a30fdea9c2d",
+    "assets/adventure_fieldbook/icon_satchel.svg": "a1c629669d003206a4dd23b87691ab6701e14aee5c717d8a82cab6b142e9f5ec",
+    "assets/adventure_fieldbook/icon_world.png": "e5e8b5a8eb41152dde48d9c93e59ebfd460461ea49b07d8fb99a70f49fe43c1c",
+    "assets/adventure_fieldbook/icon_world.svg": "8a49b396f409ab6f993f71cde7d4b02d0d4204e87ca4b5d208c2c49f9815bba0",
+    "assets/adventure_fieldbook/intent_base.png": "3389e427af8f6e6875864fd2cd381622f06283ee98d4c7af2eba489310ac23cb",
+    "assets/adventure_fieldbook/intent_base.svg": "d51895320027acd53c2ec697b22d30986beb008910db281ad43e77c99dead42e",
+    "assets/adventure_fieldbook/minimap_frame.png": "067c20782c69a753e21e4341ec1f52e1808fefdab9f872f740331531b239347f",
+    "assets/adventure_fieldbook/minimap_frame.svg": "c714dd4a038fe6d376069085bd365d26cc7ce7a4d07634c23aed1843b8741771",
+    "assets/adventure_fieldbook/paper_focus.png": "b38ece4ebb29a3db3a819d95627feaf3d02527d93b4149b72dfb8867df35c1a6",
+    "assets/adventure_fieldbook/paper_focus.svg": "83a501f791de37d6ac18645165f4a4f2e98cf1f61c6d07b482f91a9688c16852",
+    "assets/adventure_fieldbook/paper_input.png": "a0c4fcb461d416d93fc1c410e2f7b2901dd0896cb206e3c3b297a4bc75e9461f",
+    "assets/adventure_fieldbook/paper_input.svg": "9eb7297a9c00b52f3b1537dfe6facf572c8d333f4723daa63796937fce77d28d",
+    "assets/adventure_fieldbook/portrait_composite.png": "2570ecccd7da63957eb8fd6809c7095727b87a880d386e84d990d44fbdee15b0",
+    "assets/adventure_fieldbook/portrait_composite.svg": "209075817938503ae5bcfeee69053d7ea7a218fd493728e4f39dd31705f9470f",
+    "assets/adventure_fieldbook/portrait_frame.png": "1a25382c529623112d838ad9a0cb41b1b84598f0c1f392ac23b373cb04fa8aff",
+    "assets/adventure_fieldbook/portrait_frame.svg": "2d33901a42cc03aee0386882fc5d7f571b467d0955dc826a568f73169b281df0",
+    "assets/adventure_fieldbook/quill.png": "2222fbc61dbcb61658ffe5f7b7b0b2325ddcdb3c1485ec787e9f8edbddcb7360",
+    "assets/adventure_fieldbook/quill.svg": "c215d3cc6372ca8dfb9ed264718ccd64a5bec7baabfd7654ef1a1c3dc5e7874d",
+    "assets/adventure_fieldbook/status_base.png": "1275d4bb9e603a6ea34c7809a91cef65e52eb25d5b85b214537dafdeb8bfd4d6",
+    "assets/adventure_fieldbook/status_base.svg": "146135343a765f03b5d916e9e26ac0d98e29e4509b479267bfc84e224ff0d11a",
+    "assets/adventure_fieldbook/tool_button.png": "389ed8948d1d05a867820a5bc0566001e0dc39be97e848a3c61ea70fbd353bb2",
+    "assets/adventure_fieldbook/tool_button.svg": "91f9066be94c3a80396ed0edf511df7b3963b4c823cea95a6320d5dfb07f0986",
+    "assets/adventure_fieldbook/traveller_portrait.png": "0add5269bbff2bfbe343f19e2dbfcc549d53be66cb6711bb6da02f9abc452410",
+    "assets/adventure_fieldbook/traveller_portrait.svg": "251f56f52b4a61b9f66f33f742b3edc1509ea7a378722b03e85c88089217d752",
+    "assets/adventure_fieldbook/turn_button.png": "6043ca8293cc99b8e99e28637906ea37fedc3c5558811bcf4c8dd15e020c21ed",
+    "assets/adventure_fieldbook/turn_button.svg": "88b41ccdd0a5fa643f5a1293a2c4edb35c1094bf1dd04264e218d8bcb9a5010c",
+    "assets/adventure_fieldbook/turn_connection.png": "cb9c0ff9fe78af45fb398dea3ca79854652b9f2032f5e39a7d95155d2b299c03",
+    "assets/adventure_fieldbook/turn_connection.svg": "dd2ab5f4b126327689c317ada90c73f8c9d368ca628c1740f41c4f8b750467d7",
+    "view/adventure_fieldbook/components.gd": "12469340706652faf4000cfd63a6a4ae9d6816cdab7a0a444f008e96af25ccb7",
+    "view/adventure_fieldbook/decor.gd": "b985f1b53ba90b9f17bab3a69f6f938dba8f95fa732d3a2b6767c791589fe906",
+    "view/adventure_fieldbook/layout.gd": "1dbcbd97f0e7569de2b507b3844d1b9bc281cd6af2eb94d7d82da743215be154",
+    "view/adventure_fieldbook/skin.gd": "da6886107ba326fb5a0d976a074268a698634855d8af70e74350522573746c68",
+    "view/adventure_fieldbook/tokens.gd": "83d588eb6bad86a05e5f9422e5738f9425a4647af670c8f79480e1c827dbb37f",
+    "assets/adventure_fieldbook/bookmark.png.import": "353c1154d1cd517b351901586f1c8c09d5e055e80c21b845bcea4fa1b9ec9c6a",
+    "assets/adventure_fieldbook/bookmark.svg.import": "253d59dd7e076bf1222b3be5fdbb21cacf0e5985d26a74d963874414e7831dfc",
+    "assets/adventure_fieldbook/button_base.png.import": "177e97f73fb8fb3a21325338f84e5fa4f39b7a9cd1894ff25e66078b652595d2",
+    "assets/adventure_fieldbook/button_base.svg.import": "eae31ef33c2e8d76e70ff473289b871e99f2733371d28108761c15ae996d7e49",
+    "assets/adventure_fieldbook/button_primary.png.import": "eb57ba05f3ff3b387625cb92c33ed4a0c6fde42b350cec240dc137d8cf674927",
+    "assets/adventure_fieldbook/button_primary.svg.import": "a79311b471f92ea43ff3fd72555c7f9efa0a1bfe6a19efb47750d6f9dfe2689d",
+    "assets/adventure_fieldbook/compass_stamp.png.import": "c9fb1461086da8493da5537674e7ec166ad21b2bda5424dd19a1129a338726a5",
+    "assets/adventure_fieldbook/compass_stamp.svg.import": "0a16375f389cf499d2b9c2fb7e74d6af36d01ca902c88c02c38c551be8e32d9a",
+    "assets/adventure_fieldbook/dialogue_base.png.import": "5a0a6933f6dde3bd3035685eb564feb83c56371975ff80e5f3b135b151a5abf7",
+    "assets/adventure_fieldbook/dialogue_base.svg.import": "32340d5dad39d9ad7c3ee7060ab80f68c5f76f008dbede1800ccb430b0fb5b9e",
+    "assets/adventure_fieldbook/history_base.png.import": "12a702cd5e0d3817988d61c513962b39395879a0dd7bfaa77a24c1a0e8414c3c",
+    "assets/adventure_fieldbook/history_base.svg.import": "62affa22a641409da4d127b5d7b7835a0d3b4533fb452c564d37b1aa851d6579",
+    "assets/adventure_fieldbook/icon_focus.png.import": "9aa05f86844e4876c923aa24eb2f8847d2368229981e9991415fb5300aabc09f",
+    "assets/adventure_fieldbook/icon_focus.svg.import": "e95574705e9906e2cb220848092b1e03663015a0d2c6a3f1240e7783b708deda",
+    "assets/adventure_fieldbook/icon_satchel.png.import": "cea09757a88aada08bb66af99f5466169e769a649c79fe3b315ac0c88b036b7f",
+    "assets/adventure_fieldbook/icon_satchel.svg.import": "cb307e424be3b2ea702ca4375fcb604ab4c51591074813fe4c8be24ac38bf7ad",
+    "assets/adventure_fieldbook/icon_world.png.import": "01b450454d34565b969a74c49dd3434b3bd72f1c9ef3f2488ad2cee7f589474f",
+    "assets/adventure_fieldbook/icon_world.svg.import": "f1d750df0146e9af031044c8f8d5350ddd9071b83b3a615f9c5250309aab9c30",
+    "assets/adventure_fieldbook/intent_base.png.import": "81739ec147d9eb9f895f3beb4c394756e984d06cb800e2d2caf8414c1b6e17a5",
+    "assets/adventure_fieldbook/intent_base.svg.import": "c65c5edc3dd8bb9c15828e4ed065fe1f55ca18db6498ea95c84663fb73d15ff2",
+    "assets/adventure_fieldbook/minimap_frame.png.import": "15503a0a260617fa8d4ef11a81192df77fb0b4867c0225675ae45d0beeb6f74b",
+    "assets/adventure_fieldbook/minimap_frame.svg.import": "39ea18247b97bf1e7d4d606e42b4c74a48b52da82fe8141b1d6a30dcc472fdc9",
+    "assets/adventure_fieldbook/paper_focus.png.import": "eac72ba40727a9c2609a085a6204f2ba92296444c26a225f436a887ec586c8f8",
+    "assets/adventure_fieldbook/paper_focus.svg.import": "363807caae11ad47eae52e68e719681737ceaa6f8aae2b965bb4dd0858a3bf70",
+    "assets/adventure_fieldbook/paper_input.png.import": "0f459079927b1db5938a08835ca0d636c5e99b05574aecd7d19db8145bef431e",
+    "assets/adventure_fieldbook/paper_input.svg.import": "4412679f9156124387d1a4e8136fe8dd32928cdbd9de6f391103a9d58f2a4410",
+    "assets/adventure_fieldbook/portrait_composite.png.import": "a34d79894d627d0c023ea345903b0c7952a2f35b8edfcf8ac10e2582e3e6c60c",
+    "assets/adventure_fieldbook/portrait_composite.svg.import": "3817048663d0c6bdc014c26b1c8e4033d7ec60e051f5270b4bce5253c411b87a",
+    "assets/adventure_fieldbook/portrait_frame.png.import": "bd06b91969c51b5a21082dc071bf1a26f2bf1ae06f3c42515ce02049b54bcd89",
+    "assets/adventure_fieldbook/portrait_frame.svg.import": "a925356add9c882cba1bf1f72104835b07e8ae27aa23c42e5b485a7f1d67f061",
+    "assets/adventure_fieldbook/quill.png.import": "a708f8baca5d3a2ea6a626bac4afc18fb503c73deee89dc43eaa7cd44b9f8ea5",
+    "assets/adventure_fieldbook/quill.svg.import": "63f5fe97b3beac4a8948958ca1efe216604edfaf263c19719d9b5d25dfdf5361",
+    "assets/adventure_fieldbook/status_base.png.import": "842987105584f95b3630071cf91c588428d6385ad73544a2f7aee481bd83a9de",
+    "assets/adventure_fieldbook/status_base.svg.import": "d2d856a22815a7b21ed88f17a242025300acd89dff7ae7518493d02525390a22",
+    "assets/adventure_fieldbook/tool_button.png.import": "4308c9b64ebd0f29aa10d4f1ed33c8f7323816969b39cfa55da15830a8505998",
+    "assets/adventure_fieldbook/tool_button.svg.import": "68ea90cd04df2b83def79e3e315b2d49200a3401c25e5cf3c2951c746f164edd",
+    "assets/adventure_fieldbook/traveller_portrait.png.import": "6f34443e3b0520b64452e13119f3d09d8f5d7e669e1b79415ed81efad1e385db",
+    "assets/adventure_fieldbook/traveller_portrait.svg.import": "4d08c98c7e8d889aa350420872231245238c181ea02d2b2d0a3d0dc86254ac51",
+    "assets/adventure_fieldbook/turn_button.png.import": "1d2badaff78c4d6d14260bf36b1d2c8fd2e94ac3fe8df7bfa219d3b6424c8716",
+    "assets/adventure_fieldbook/turn_button.svg.import": "a26dcfd436e6cf5433c984bc3917cc3c3e8c3a97e53f9c46bf4593e1a6b13300",
+    "assets/adventure_fieldbook/turn_connection.png.import": "29596511415879732f0a78d4b3f40415b7143a77fe470751eb897ae3b564e972",
+    "assets/adventure_fieldbook/turn_connection.svg.import": "8444c0121f4f899f62327f8d4b6c2f477e539cca8c080812de09f2a0e1b3a647"
+  },
+  "archive": {
+    "encoded_path": "updates/v24/source_delta.tar.xz.b64",
+    "encoded": {
+      "size": 779616,
+      "sha256": "42b89e94a195eb516ab3dc501f47d07b671c407c04711609da795c5426b7f276"
+    },
+    "size": 584712,
+    "sha256": "59e730f1214be5174e55016d0ca63fabc6b48b05f6b9650744f97a41fe0945db"
+  },
+  "adoption_receipt_sha256": "9efdb2db5b5139056000d3bb28a0782bf2ccb26b261651e9320b62c042c4de2a",
+  "scope": "Accepted C fieldbook UI, imported-resource loader and alpha-border import corrections; no second memory optimization or river candidate.",
+  "previous_validation": {
+    "native_capture": {
+      "checks": 98,
+      "exit": 0,
+      "strict_errors": [],
+      "warnings": [
+        "WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver."
+      ]
+    },
+    "hud": {
+      "checks": 48,
+      "exit": 0,
+      "strict_errors": [],
+      "warnings": []
+    },
+    "packed_resources": {
+      "checks": 63,
+      "exit": 0,
+      "strict_errors": [],
+      "warnings": []
+    }
+  },
+  "limits": [
+    "Driver V-Sync warning remains in the native capture",
+    "Windows executable was not tested",
+    "The packed-resource check used Godot 4.6.3 on Linux from an empty directory with raw PNG sources omitted"
+  ],
+  "publication_validation": "offline source-chain restoration and exact source/import hashes; no new Godot run"
+}

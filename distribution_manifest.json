@@ -5833,7 +5833,7 @@
       }
     }
   ],
-  "active_version": "v23-packed-topology",
+  "active_version": "v24-fieldbook-ui",
   "update_manifest": {
     "path": "updates/v22/manifest.json",
     "size": 8781,
@@ -5849,6 +5849,11 @@
       "path": "updates/v23/manifest.json",
       "size": 4162,
       "sha256": "824467d1aa14f6cea617d702cc765442b157a573558831ce1e21d117578787db"
+    },
+    {
+      "path": "updates/v24/manifest.json",
+      "size": 46558,
+      "sha256": "69afd2e53d848428928845ad5d184dc0b387884651eda85fc6ede4fbd4800f1d"
     }
   ]
 }

@@ -1,0 +1,766 @@
+{
+  "schema": "words-and-perils-source-delta/v1",
+  "version": "v27-status-river",
+  "base_source_bundle_sha256": "8e88ac0ade3b12f314e3e3076a05efce2a9da335925e1859b6e9543deebeab81",
+  "previous_manifest_sha256": "3fe797925e8cdc15cf4df62fc13d6eb78ea77068851260da8b4ed9fe7d82a946",
+  "base_git_commit": "2ba8de52876d334908ddd692685b9e76172416cd",
+  "files": [
+    {
+      "path": "artifacts/generated_v3_river_entry/main_roundtrip_report.json",
+      "size": 3775,
+      "sha256": "05b257eb158d74c228e61c0e99f0e95aec6bb1959e57e1f42e8ddbd7757f6699",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/public_witness.json",
+      "size": 70952,
+      "sha256": "847462d0375289ed0a0bf7e6c4bd161303a611759a1d52dccf61ace1c37d31f2",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/status_river_v27/FINAL_INDEPENDENT_ACCEPTANCE.md",
+      "size": 11620,
+      "sha256": "ff1d35009a07bc33ab6edef9f515fbfad1d7a35d14214d495860ad1ee980b3f6",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/status_river_v27/FINAL_SOURCE_FREEZE.json",
+      "size": 16574,
+      "sha256": "5116f6fbf0a56829e4af36c8ffe74b692c0717b6bbe03b3ad2a38ac7e40f502a",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/status_river_v27/FINAL_VERIFICATION.json",
+      "size": 22581,
+      "sha256": "32cd0c7ecfac99b38244cda85e9c3dafc65efd672797fb4a93fe125fa536f932",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/status_river_v27/FOCUS_PRESENTATION_SOURCE_AB.json",
+      "size": 530,
+      "sha256": "3a62a25cb9ea4fb38dac0f0c7c70911c0f88129d27eabaa1ea2fd3119ef1885f",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/status_river_v27/INDEPENDENT_V27_MAPPING_REVIEW.md",
+      "size": 4693,
+      "sha256": "c791a4980bdc8c5e0f020099b9b21f4dc6c320f7744f11fa2ae902ca3e2d5edd",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/status_river_v27/PRODUCTION_MANIFEST.json",
+      "size": 10822,
+      "sha256": "ffa8a1a35ef6430267b5f45e02347d1058dfa03b39b083085a482a191185952a",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/status_river_v27/adopted_equipment.guard.jsonl",
+      "size": 18562,
+      "sha256": "e0e4762a9abad78fc7a82341aaa7963c6d0f74eb1a43d8ea2d61373da92622f6",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/status_river_v27/adopted_equipment.log",
+      "size": 566,
+      "sha256": "c604b185c09830631e08dd7fbc6c85b0de8ae60d82e7d65779060eaf661b2443",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/status_river_v27/adopted_main_poison.guard.jsonl",
+      "size": 20998,
+      "sha256": "a0de103c796de4de78296a23cc1079c6fa5e125edcedf9aa05dcde735d4135d7",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/status_river_v27/adopted_main_poison.log",
+      "size": 578,
+      "sha256": "9720e2fc5e03dfb26d67cf34e83b2b7586bd29cb02423253235fd102afbe4b22",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/status_river_v27/adopted_main_poison_reopen.guard.jsonl",
+      "size": 17994,
+      "sha256": "5c2ef75c5b3cf6ffeda565e0b043f9269f97b7c8b2fd5549c1845ed26358b83a",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/status_river_v27/adopted_main_poison_reopen.log",
+      "size": 587,
+      "sha256": "5591bdb72062b97b9eacf11f82815d94d5f4c39b8f553cd16b4f66efbf9bc9fe",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/status_river_v27/adoption_receipt.json",
+      "size": 13036,
+      "sha256": "dd908c8b052b64c5cb49ef9ef3f120d951c29730535f9438d63ccbb3804c0ec9",
+      "before_sha256": null
+    },
+    {
+      "path": "core/ai_gm_http/openai_chat_codec.gd",
+      "size": 6137,
+      "sha256": "12a078df16f9a8be0de7639284692ad9936de40f10a245b75a978ef1bf972514",
+      "before_sha256": "e209d086f561a20101090d3a2ceaa3e8e5e780af891be5e335afafb0ac42ab7e"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/engine.gd",
+      "size": 50887,
+      "sha256": "3d41f2fc4e52459d5df01732fbacc9e849f0e4a9260094220426001ef236002d",
+      "before_sha256": "c74e7a70d24e3f411fd2905f86a994d4903fc7603ae8e9cffce4007d28d5fef0"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/hooks.gd",
+      "size": 3111,
+      "sha256": "2afc8ba22cc4cb9a4df81ce8f8779193a652f8cd5ff49b2156f6899674ee84ec",
+      "before_sha256": "1250f63ca7e0dc92ba3ce12078647f303f811b8abc13b305c261303cf16d703f"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/model_view.gd",
+      "size": 12807,
+      "sha256": "971508f8ccc88179a78c390323eae7b814572e4115b63254aabe2294a92a9f4c",
+      "before_sha256": "c32a43b8c5d5baced6d288f2ee76ce4e477d5996bc04d65e5273ef403c87e97a"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/traversal.gd",
+      "size": 4050,
+      "sha256": "0e0230dd61250941291ae313f54842cf6ff94470310ab20b28febd177db99b41",
+      "before_sha256": "e31b4020a0e4a90ca11c8318809dd52f7668de14a39f6f44eb24c62b1bf0478e"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/traversal_policy.gd",
+      "size": 8729,
+      "sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+      "before_sha256": "377bbeaab5a441100e11757df4bfba835e81eae064fec84a70ad3fbe9d21c592"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/world.gd",
+      "size": 17873,
+      "sha256": "5eb1bb8008c6b3dc6b0954d8789e9712eaedddecd9dba2cbbbe947a74bf77523",
+      "before_sha256": "ac6517786ac129699632af82c1a7a21160022c2785d2cf549a119321bdbc15c0"
+    },
+    {
+      "path": "core/focus_contract.gd",
+      "size": 31447,
+      "sha256": "b8daf8124f80b8f474937caf25a3e446277636b28d08626d419d4da4336e9cd1",
+      "before_sha256": "93e621593d6fdc476f8294f061b3806832e2e9863ba57ccafd761f9be5a7c779"
+    },
+    {
+      "path": "core/generated_v3_rivers/layout.gd",
+      "size": 7159,
+      "sha256": "a75190e4f2dc0e8d40aea0cfeb7f66a3b836e5e8284df334b5258d931e25031b",
+      "before_sha256": null
+    },
+    {
+      "path": "core/status_foundation/canonical.gd",
+      "size": 2814,
+      "sha256": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c",
+      "before_sha256": null
+    },
+    {
+      "path": "core/status_foundation/catalog.gd",
+      "size": 10981,
+      "sha256": "8effb5d5e6094cdb0f5413a697ae3adb4e7d86429c31a7b93d751e71f6b62681",
+      "before_sha256": null
+    },
+    {
+      "path": "core/status_foundation/engine_bridge.gd",
+      "size": 10674,
+      "sha256": "06cce47760058a49e2dd994c91031ac93db7277d0b08f5c252af8d2ec8fafbc6",
+      "before_sha256": null
+    },
+    {
+      "path": "core/status_foundation/runtime.gd",
+      "size": 23309,
+      "sha256": "ee79b110e35b5141334daf55e7a2f80f6f4d3060a56d408bf0a08094260bb059",
+      "before_sha256": null
+    },
+    {
+      "path": "core/status_gameplay/action.gd",
+      "size": 9596,
+      "sha256": "5da4a78055a70b832cee399f64cc1bd46582a1f47585007249dd9b14c5c5d813",
+      "before_sha256": null
+    },
+    {
+      "path": "core/status_gameplay/basic_actions.gd",
+      "size": 448,
+      "sha256": "dbbdf69d9694f02f67f20e15f523b3e4e3bd223d5f095b3f00a4743e4e0927d9",
+      "before_sha256": null
+    },
+    {
+      "path": "core/status_gameplay/composite_actions.gd",
+      "size": 450,
+      "sha256": "69260a976da56c299cfe8e3ca2ff6dc5b1ba01b8eec4b6534e49e0ae04c632d4",
+      "before_sha256": null
+    },
+    {
+      "path": "core/status_gameplay/content.gd",
+      "size": 6978,
+      "sha256": "3c31d687682994658bf8504cf96bb28cb58e8662046039c58e103e11e6f00d6e",
+      "before_sha256": null
+    },
+    {
+      "path": "core/status_gameplay/movement.gd",
+      "size": 5869,
+      "sha256": "6c3a5225d9c39dd9ae6a3ae705998aab26d4a4eaec8c4fc4d6e2e04cfaea8855",
+      "before_sha256": null
+    },
+    {
+      "path": "core/status_gameplay/public_dictionary.gd",
+      "size": 11163,
+      "sha256": "13ca209ce6f83ee78d113ed648c47f36dd30bd1959c4470eca487104ae727404",
+      "before_sha256": null
+    },
+    {
+      "path": "core/status_gameplay/source_profiles.gd",
+      "size": 2571,
+      "sha256": "53e1ca59b24fb0e020b2dc4a5200868fe927264e787234873484d077d8057483",
+      "before_sha256": null
+    },
+    {
+      "path": "core/status_gameplay/weapon_poison_plan.gd",
+      "size": 1916,
+      "sha256": "5c1261055166595e95b74c49c534535323dd8b9f14eaed3554356513036aa77b",
+      "before_sha256": null
+    },
+    {
+      "path": "data/catalog.json",
+      "size": 218084,
+      "sha256": "81712567dda2bb000b7cacefc9380c91bc271ea461c21758b1d2fa8074de4fde",
+      "before_sha256": null
+    },
+    {
+      "path": "docs/PUBLIC_DICTIONARY_V2.md",
+      "size": 4396,
+      "sha256": "b35843a49ccacf80b18a5e7fd583c79deb6b92cabe10e5fce814ea3d2da86c70",
+      "before_sha256": null
+    },
+    {
+      "path": "docs/release_v27.md",
+      "size": 2204,
+      "sha256": "9a13cd909b79a1757783894e1bb61276ea8050fe5d2d442f084ace11e6c771b3",
+      "before_sha256": null
+    },
+    {
+      "path": "docs/status_river_v27.md",
+      "size": 4057,
+      "sha256": "6dbce0dde56d6a1e85ff37952d257b50ec79f50700b70cd716706f356cc6e74d",
+      "before_sha256": null
+    },
+    {
+      "path": "main.gd",
+      "size": 180536,
+      "sha256": "1db6386f9c53f7f0946f84dae0b81a61b35420447b3b1035896678d86e367c4c",
+      "before_sha256": "e346071dd0149805f96ed53d18fda4f28223354b121fb6831f66c1c7b862eec4"
+    },
+    {
+      "path": "tests/generated_v3_river_entry/expected_default_world.json",
+      "size": 441,
+      "sha256": "6c9e73c448a566c8080049e453720fbafb4b18bff479ec37e331374c27ef510c",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/generated_v3_river_entry/test_identity.gd",
+      "size": 1621,
+      "sha256": "d5455957e753de1f0b998178c825af02bbf48cb106daac9673506536ea8c1b3a",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/generated_v3_river_entry/test_main_roundtrip.gd",
+      "size": 12192,
+      "sha256": "566e6fc5af84ceab08a50bcbe6feb42b34f9408ab040fc2b6985fb3aa76f30da",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/generated_v3_river_entry/test_pointer.gd",
+      "size": 8829,
+      "sha256": "3a0c37262250275ea38961bfecb6f50dce202a13120fc6df0645f080ca5bf3d7",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/generated_v3_river_entry/test_residency.gd",
+      "size": 5163,
+      "sha256": "237dd8fb00a002eb51bff64d6e35b0b4abbe1a56c1547ac24f87c6a5c681ad25",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/generated_v3_river_entry/test_session.gd",
+      "size": 5774,
+      "sha256": "9b7275bc19dbfa83b0c03d7819e6c191fe1a65877095515bfb38ad081e6d48bb",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_compatibility/pre_fix_basic.gd",
+      "size": 15765,
+      "sha256": "6a46e24cb1dbfde6e22340f79733a48359c48ae6dfa322d7029c486ce67bc36a",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_compatibility/pre_fix_composite.gd",
+      "size": 6614,
+      "sha256": "457106da42b5e7f82726e41d495ee84e1701561132d41047e8f351822ccc5437",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_compatibility/test_weapon_plan_compatibility.gd",
+      "size": 6650,
+      "sha256": "b9629aa2106e216f30272bb393e23767fd3ac830b346f56231df97cd5c5538e5",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_dictionary/test_public_dictionary.gd",
+      "size": 35598,
+      "sha256": "2c54d39b4f7bbfe403ab9ff21df793d5c76523deba135c40fcc69f9e5a7dde73",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_gameplay/fixture.gd",
+      "size": 7023,
+      "sha256": "b56d35891e52caed04344ba8853ef2d49fcba22c337426497038cecd8dfac20d",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_gameplay/test_closed_loop.gd",
+      "size": 15385,
+      "sha256": "758e7efc0a86d305f826d36f607a5dfca8dde04a8c7ee0ee53604750af47325c",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_gameplay/test_details.gd",
+      "size": 17057,
+      "sha256": "e645879651f0cef607ea297ab5aaf50a166608c96c83b41cb4b309b097b7966a",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_gameplay/test_historical_focus.gd",
+      "size": 6181,
+      "sha256": "08d8b8b78dd00b7db081fec45b3e6cce481ad99996b424b20a4c0d1e90a525c7",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_gameplay/tiny_adapter.gd",
+      "size": 563,
+      "sha256": "2c455f028a1709cbaf5176133f5128e3489fc4c45c337481ca23c48ca497a199",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_river_gate_b/expected_default_world.json",
+      "size": 441,
+      "sha256": "6c9e73c448a566c8080049e453720fbafb4b18bff479ec37e331374c27ef510c",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_river_gate_b/fixture.gd",
+      "size": 9199,
+      "sha256": "5f56d9561b1f457cb397b5d0ee90316284000e9edeb6a6dfaa04d6e08e8199c2",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_river_gate_b/harness.gd",
+      "size": 5730,
+      "sha256": "5ac9e9b670c0a7ed74e1c618c6ce63446542ad7a279d5afc97a672d5c7b07780",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_river_gate_b/request_budget_probe.gd",
+      "size": 15630,
+      "sha256": "e5052ec0788d5b40d6d25e374c6811bcd073a0df68794d6a0ea6f6122d73c673",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_river_gate_b/test_adapter.gd",
+      "size": 14574,
+      "sha256": "1387e2723ae9b5b2cc07c7691a19f90d272cdd2e0fe9bbaf7ce669502327e665",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_river_gate_b/test_budget_full_history.gd",
+      "size": 23141,
+      "sha256": "ce3317d6ef20d792e54c9e50c1fd365016917c16f53186c556ce5dce6f5c27cd",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_river_gate_b/test_budget_matrix.gd",
+      "size": 28481,
+      "sha256": "310fd6c131ec9ea84c5c1c28f25ddad324c18d720a23b853b3e9c3108d33499a",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_river_gate_b/test_effect_events.gd",
+      "size": 6130,
+      "sha256": "c35f1d7959ab83ce877b9de1d8ac2d33dcb3dcb6aba7620d763d9e496d18b2a4",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_river_gate_b/test_main.gd",
+      "size": 27126,
+      "sha256": "3605e635c21cecb7d4a87d02c113e56e8455de1688048533fc8e06958ac48e5b",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/status_river_gate_b/test_weapon_commit.gd",
+      "size": 21170,
+      "sha256": "0f459c6fee0e0d720095827f7706ac45c34f11f5e91a4e87909ececd7f19a45d",
+      "before_sha256": null
+    },
+    {
+      "path": "tools/restore_repository.py",
+      "size": 217,
+      "sha256": "9833e1f7a4976776b87ea9d66f243563fa28945bfcb67673b3d27be5372dd5bb",
+      "before_sha256": "ab12fdb104d0d87159174eddd4e2655a94a3d19827537790f2f706f5ff93402f"
+    },
+    {
+      "path": "tools/restore_v27.py",
+      "size": 9578,
+      "sha256": "6c321873aa8d8bc9d3a4ea0c00ec365fc3f40e51ec13df00e2e3a9c727bda64a",
+      "before_sha256": null
+    },
+    {
+      "path": "tools/verify_publication.py",
+      "size": 11977,
+      "sha256": "a1265cabeb28871cbb057096a4e5978a6021742fece7c594f4b6fb0aa716c5b5",
+      "before_sha256": "9fe03f21faaaf9ab14d8be36443ae9a63e64819697d925605ca60bc786778b9c"
+    },
+    {
+      "path": "view/generated_v3_river_entry/adapter.gd",
+      "size": 779,
+      "sha256": "6a01ad5bc4da1b0187b7325c1204df3bd199f4b0af00a7b072ab51f325bcfc4c",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_river_entry/controller.gd",
+      "size": 7103,
+      "sha256": "f5a449518d7285fcfb78fa761b689e22847e85898ad2f30ab9ff88f29bedc2c0",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_river_entry/host_custody.gd",
+      "size": 2764,
+      "sha256": "edebbb365c581b29e0e1d51355c36f9fd702f2f466e7ca5306acae0812124851",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_river_entry/session.gd",
+      "size": 5353,
+      "sha256": "9951b63d6bcc4ea8e766f045166dbed705c7f0d3550e4a276b0f3b6b40dea192",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_river_entry/view.gd",
+      "size": 6125,
+      "sha256": "d91b4ef3c0253992e8daa6d06b4714bf27fd6d46ad2281fd72c09058779b2895",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_rivers/adapter.gd",
+      "size": 19609,
+      "sha256": "4f4a9d436a4a4b4c4bf202e9cae171c90710731383a0cd640d6d7e1ca30d3015",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_rivers/assessments.gd",
+      "size": 3064,
+      "sha256": "06c9c4f42410b3def733bbee168ab4236c41abbcb48211ab02df64d8a402c9c8",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_rivers/board.gd",
+      "size": 10829,
+      "sha256": "776b26f079362fbec94dff11586341b84bf6e426e9dfad2743bd88780c680c80",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_rivers/geometry.gd",
+      "size": 6537,
+      "sha256": "c754f4aaf5becfa5a964a6d84ea56baf57a2b976e163e0f9ce3019fabee9afff",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_rivers/ground.gdshader",
+      "size": 2682,
+      "sha256": "67b4dea1d5f38cf3cf1fa71a80ea8434a61a42c5792cd1d60e0c9f3a4e6de92e",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_rivers/main.gd",
+      "size": 15227,
+      "sha256": "1449d8fd71a688164aef4b4c62567ca46881822f788a96d90b905861d8ece2eb",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_rivers/navigation.gd",
+      "size": 5907,
+      "sha256": "5c0dadaf9f060bea9cc57f02c2edccd9c1ee6a108ad6938e910196313cfbcc5c",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_rivers/projection.gd",
+      "size": 4828,
+      "sha256": "ac9dc65df45e63781827accc531a22afb958b6cf85c11e582c79b65606284ba0",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_rivers/resolver.gd",
+      "size": 4883,
+      "sha256": "d79fcb1d13bafb833f7986a0919f4b1f34012b5cbfa759cf78fc364f56c1923b",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_rivers/rule.gd",
+      "size": 836,
+      "sha256": "d1c6860cf087b0f879e0c4bdb7d86d649921b1c5af229baa1decf797873f6b41",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_rivers/source.gd",
+      "size": 15967,
+      "sha256": "8aab61a4c002d394eaec46ee65528b7967c1d9e6eafc261ed01acd659ddc1379",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_rivers/structured_builder.gd",
+      "size": 30218,
+      "sha256": "1fb780aa17ea423fa8ac897b1b6db13fd6b2f6b8912f4ed60794947dfd5b8af7",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_rivers/water_queries.gd",
+      "size": 8190,
+      "sha256": "8f28c4bf55ca1f239a3ed31dc1764eeda6480e401d1b856020f25da421498b45",
+      "before_sha256": null
+    },
+    {
+      "path": "view/playable_build/adapter.gd",
+      "size": 29988,
+      "sha256": "d7a49926e11846735492c24d790e9c1b6c677b2df841231510667ae79387ad5e",
+      "before_sha256": "00e02172948fbe6068f8b60fac38ed43e0ec5af3ceb7bfbebbe3bf2420ea6437"
+    },
+    {
+      "path": "view/playable_build/committed_effect_router.gd",
+      "size": 12705,
+      "sha256": "a1a3e4760c878f75af5c43b48b0b3851060039cbe3130552d4aa194419b0719a",
+      "before_sha256": "ea6dfc0998d5ae7b36d1e7035b7ecff9bfc117bf0ac6a05380bbab2a6270f0e1"
+    },
+    {
+      "path": "view/playable_build/navigation.gd",
+      "size": 9813,
+      "sha256": "1b9390fd14d93b278d3441b928a5e36163bee00c5d8cdd64a4911f69e7d05add",
+      "before_sha256": "333a8921a677828230f5f886900ef07ef1ddeb0521e45bbc2a9d2d88d8f8e512"
+    },
+    {
+      "path": "view/playable_build/player_details.gd",
+      "size": 8199,
+      "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+      "before_sha256": "e859f18174fa74720c90c224876fe4373f700beebb7363fc1614ac28ab3cc387"
+    },
+    {
+      "path": "view/playable_build/story.gd",
+      "size": 10611,
+      "sha256": "4452bb43cf279b55380664cd1a3a5233e6e96c3b3ab349eacb0c61a8f82ef0c5",
+      "before_sha256": "2c2918428f68a60e4f4b15a8c9cdad5aa9d48673a62d0e857086fcda95862ffc"
+    },
+    {
+      "path": "view/playable_build/weighted_movement_resolver.gd",
+      "size": 3591,
+      "sha256": "36dfe94a7f3bac072c2469dd11cb366f7c9ebe702dd4797efb80b07a6cbd8e7e",
+      "before_sha256": "5aea2ea1bd8b7be27436029426439b877e546a9d174b1e8f1eed9cafd87e3532"
+    },
+    {
+      "path": "view/runtime_ai/scoped_engine.gd",
+      "size": 14355,
+      "sha256": "08eca5ccc7d8377ed8bea7b7929db4b11903e776e4ae7477f314f83a4621d44a",
+      "before_sha256": "63a4055080337d797d8c28351738fc2fb138c6f17b8a44c71c7f7756148af108"
+    },
+    {
+      "path": "view/status_gameplay/details.gd",
+      "size": 13184,
+      "sha256": "2b1d377813660aa419ca4f2cb9026d591b9edadce853ef0fec57a1b3e98841b1",
+      "before_sha256": null
+    },
+    {
+      "path": "view/status_gameplay/save.gd",
+      "size": 3252,
+      "sha256": "812381620ab5a405442b9f6ac1a0d2248378c229f2aa9124ffc06e11f87f0957",
+      "before_sha256": null
+    }
+  ],
+  "production_pins": {
+    "core/ai_gm_http/openai_chat_codec.gd": "12a078df16f9a8be0de7639284692ad9936de40f10a245b75a978ef1bf972514",
+    "core/ai_gm_rebuilt/engine.gd": "3d41f2fc4e52459d5df01732fbacc9e849f0e4a9260094220426001ef236002d",
+    "core/ai_gm_rebuilt/hooks.gd": "2afc8ba22cc4cb9a4df81ce8f8779193a652f8cd5ff49b2156f6899674ee84ec",
+    "core/ai_gm_rebuilt/model_view.gd": "971508f8ccc88179a78c390323eae7b814572e4115b63254aabe2294a92a9f4c",
+    "core/ai_gm_rebuilt/traversal.gd": "0e0230dd61250941291ae313f54842cf6ff94470310ab20b28febd177db99b41",
+    "core/ai_gm_rebuilt/traversal_policy.gd": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+    "core/ai_gm_rebuilt/world.gd": "5eb1bb8008c6b3dc6b0954d8789e9712eaedddecd9dba2cbbbe947a74bf77523",
+    "core/focus_contract.gd": "b8daf8124f80b8f474937caf25a3e446277636b28d08626d419d4da4336e9cd1",
+    "core/generated_v3_rivers/layout.gd": "a75190e4f2dc0e8d40aea0cfeb7f66a3b836e5e8284df334b5258d931e25031b",
+    "core/status_foundation/canonical.gd": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c",
+    "core/status_foundation/catalog.gd": "8effb5d5e6094cdb0f5413a697ae3adb4e7d86429c31a7b93d751e71f6b62681",
+    "core/status_foundation/engine_bridge.gd": "06cce47760058a49e2dd994c91031ac93db7277d0b08f5c252af8d2ec8fafbc6",
+    "core/status_foundation/runtime.gd": "ee79b110e35b5141334daf55e7a2f80f6f4d3060a56d408bf0a08094260bb059",
+    "core/status_gameplay/action.gd": "5da4a78055a70b832cee399f64cc1bd46582a1f47585007249dd9b14c5c5d813",
+    "core/status_gameplay/basic_actions.gd": "dbbdf69d9694f02f67f20e15f523b3e4e3bd223d5f095b3f00a4743e4e0927d9",
+    "core/status_gameplay/composite_actions.gd": "69260a976da56c299cfe8e3ca2ff6dc5b1ba01b8eec4b6534e49e0ae04c632d4",
+    "core/status_gameplay/content.gd": "3c31d687682994658bf8504cf96bb28cb58e8662046039c58e103e11e6f00d6e",
+    "core/status_gameplay/movement.gd": "6c3a5225d9c39dd9ae6a3ae705998aab26d4a4eaec8c4fc4d6e2e04cfaea8855",
+    "core/status_gameplay/public_dictionary.gd": "13ca209ce6f83ee78d113ed648c47f36dd30bd1959c4470eca487104ae727404",
+    "core/status_gameplay/source_profiles.gd": "53e1ca59b24fb0e020b2dc4a5200868fe927264e787234873484d077d8057483",
+    "core/status_gameplay/weapon_poison_plan.gd": "5c1261055166595e95b74c49c534535323dd8b9f14eaed3554356513036aa77b",
+    "data/catalog.json": "81712567dda2bb000b7cacefc9380c91bc271ea461c21758b1d2fa8074de4fde",
+    "main.gd": "1db6386f9c53f7f0946f84dae0b81a61b35420447b3b1035896678d86e367c4c",
+    "view/generated_v3_river_entry/adapter.gd": "6a01ad5bc4da1b0187b7325c1204df3bd199f4b0af00a7b072ab51f325bcfc4c",
+    "view/generated_v3_river_entry/controller.gd": "f5a449518d7285fcfb78fa761b689e22847e85898ad2f30ab9ff88f29bedc2c0",
+    "view/generated_v3_river_entry/host_custody.gd": "edebbb365c581b29e0e1d51355c36f9fd702f2f466e7ca5306acae0812124851",
+    "view/generated_v3_river_entry/session.gd": "9951b63d6bcc4ea8e766f045166dbed705c7f0d3550e4a276b0f3b6b40dea192",
+    "view/generated_v3_river_entry/view.gd": "d91b4ef3c0253992e8daa6d06b4714bf27fd6d46ad2281fd72c09058779b2895",
+    "view/generated_v3_rivers/adapter.gd": "4f4a9d436a4a4b4c4bf202e9cae171c90710731383a0cd640d6d7e1ca30d3015",
+    "view/generated_v3_rivers/assessments.gd": "06c9c4f42410b3def733bbee168ab4236c41abbcb48211ab02df64d8a402c9c8",
+    "view/generated_v3_rivers/board.gd": "776b26f079362fbec94dff11586341b84bf6e426e9dfad2743bd88780c680c80",
+    "view/generated_v3_rivers/geometry.gd": "c754f4aaf5becfa5a964a6d84ea56baf57a2b976e163e0f9ce3019fabee9afff",
+    "view/generated_v3_rivers/ground.gdshader": "67b4dea1d5f38cf3cf1fa71a80ea8434a61a42c5792cd1d60e0c9f3a4e6de92e",
+    "view/generated_v3_rivers/main.gd": "1449d8fd71a688164aef4b4c62567ca46881822f788a96d90b905861d8ece2eb",
+    "view/generated_v3_rivers/navigation.gd": "5c0dadaf9f060bea9cc57f02c2edccd9c1ee6a108ad6938e910196313cfbcc5c",
+    "view/generated_v3_rivers/projection.gd": "ac9dc65df45e63781827accc531a22afb958b6cf85c11e582c79b65606284ba0",
+    "view/generated_v3_rivers/resolver.gd": "d79fcb1d13bafb833f7986a0919f4b1f34012b5cbfa759cf78fc364f56c1923b",
+    "view/generated_v3_rivers/rule.gd": "d1c6860cf087b0f879e0c4bdb7d86d649921b1c5af229baa1decf797873f6b41",
+    "view/generated_v3_rivers/source.gd": "8aab61a4c002d394eaec46ee65528b7967c1d9e6eafc261ed01acd659ddc1379",
+    "view/generated_v3_rivers/structured_builder.gd": "1fb780aa17ea423fa8ac897b1b6db13fd6b2f6b8912f4ed60794947dfd5b8af7",
+    "view/generated_v3_rivers/water_queries.gd": "8f28c4bf55ca1f239a3ed31dc1764eeda6480e401d1b856020f25da421498b45",
+    "view/playable_build/adapter.gd": "d7a49926e11846735492c24d790e9c1b6c677b2df841231510667ae79387ad5e",
+    "view/playable_build/committed_effect_router.gd": "a1a3e4760c878f75af5c43b48b0b3851060039cbe3130552d4aa194419b0719a",
+    "view/playable_build/navigation.gd": "1b9390fd14d93b278d3441b928a5e36163bee00c5d8cdd64a4911f69e7d05add",
+    "view/playable_build/player_details.gd": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+    "view/playable_build/story.gd": "4452bb43cf279b55380664cd1a3a5233e6e96c3b3ab349eacb0c61a8f82ef0c5",
+    "view/playable_build/weighted_movement_resolver.gd": "36dfe94a7f3bac072c2469dd11cb366f7c9ebe702dd4797efb80b07a6cbd8e7e",
+    "view/runtime_ai/scoped_engine.gd": "08eca5ccc7d8377ed8bea7b7929db4b11903e776e4ae7477f314f83a4621d44a",
+    "view/status_gameplay/details.gd": "2b1d377813660aa419ca4f2cb9026d591b9edadce853ef0fec57a1b3e98841b1",
+    "view/status_gameplay/save.gd": "812381620ab5a405442b9f6ac1a0d2248378c229f2aa9124ffc06e11f87f0957"
+  },
+  "archive": {
+    "encoded_path": "updates/v27/source_delta.tar.xz.b64",
+    "encoded": {
+      "size": 401792,
+      "sha256": "22ec6823b14d50d7118d46cdcc4402f53537b9c7b85861b7437029a53c136a56"
+    },
+    "size": 301344,
+    "sha256": "90ea24f570d0fe2608b599405b23146a7e874d20950a6745877847b989c76964"
+  },
+  "original_delivery_entries": 92,
+  "evidence_sanitization": [
+    {
+      "path": "artifacts/generated_v3_river_entry/main_roundtrip_report.json",
+      "original_sha256": "b1a9bc70098f6e743e1c331a7e22917fe8ba9dfc3602a56f064f4ce449c5f14d",
+      "public_sha256": "05b257eb158d74c228e61c0e99f0e95aec6bb1959e57e1f42e8ddbd7757f6699",
+      "kind": "local-path/process metadata redaction; measured results retained"
+    },
+    {
+      "path": "artifacts/status_river_v27/FINAL_INDEPENDENT_ACCEPTANCE.md",
+      "original_sha256": "80b28b8e778eaef52c763af9afdb3e2d8e8c9b709b3ab53904c6fe5c2dded424",
+      "public_sha256": "ff1d35009a07bc33ab6edef9f515fbfad1d7a35d14214d495860ad1ee980b3f6",
+      "kind": "local-path/process metadata redaction; measured results retained"
+    },
+    {
+      "path": "artifacts/status_river_v27/FINAL_SOURCE_FREEZE.json",
+      "original_sha256": "c27cb5d203d1a350a46a5f6de64a4a4bf30a09fcb2073166f8b94c30977ae716",
+      "public_sha256": "5116f6fbf0a56829e4af36c8ffe74b692c0717b6bbe03b3ad2a38ac7e40f502a",
+      "kind": "local-path/process metadata redaction; measured results retained"
+    },
+    {
+      "path": "artifacts/status_river_v27/FINAL_VERIFICATION.json",
+      "original_sha256": "3cddc6af0705d54f8c8ea19058795dac91d804dfdabc0ac406e46d912b63705a",
+      "public_sha256": "32cd0c7ecfac99b38244cda85e9c3dafc65efd672797fb4a93fe125fa536f932",
+      "kind": "local-path/process metadata redaction; measured results retained"
+    },
+    {
+      "path": "artifacts/status_river_v27/FOCUS_PRESENTATION_SOURCE_AB.json",
+      "original_sha256": "bece96396801a17ffba79f76f9ed7720723a5d91cec77ab1e51cbca93ec2dce2",
+      "public_sha256": "3a62a25cb9ea4fb38dac0f0c7c70911c0f88129d27eabaa1ea2fd3119ef1885f",
+      "kind": "local-path/process metadata redaction; measured results retained"
+    },
+    {
+      "path": "artifacts/status_river_v27/PRODUCTION_MANIFEST.json",
+      "original_sha256": "20a0f20212a59e580f2a96df1e97e8de108f67e7f7689a169f8dba5de8c9031a",
+      "public_sha256": "ffa8a1a35ef6430267b5f45e02347d1058dfa03b39b083085a482a191185952a",
+      "kind": "local-path/process metadata redaction; measured results retained"
+    },
+    {
+      "path": "artifacts/status_river_v27/adopted_equipment.guard.jsonl",
+      "original_sha256": "ae334aac090e05e2f8a470539417f881cb7c2cf143a37eb85dcf061e59606367",
+      "public_sha256": "e0e4762a9abad78fc7a82341aaa7963c6d0f74eb1a43d8ea2d61373da92622f6",
+      "kind": "local-path/process metadata redaction; measured results retained"
+    },
+    {
+      "path": "artifacts/status_river_v27/adopted_equipment.log",
+      "original_sha256": "74e5e93288398ada4d782fe4feab8335916a18fc584926a9acc2429668b85605",
+      "public_sha256": "c604b185c09830631e08dd7fbc6c85b0de8ae60d82e7d65779060eaf661b2443",
+      "kind": "local-path/process metadata redaction; measured results retained"
+    },
+    {
+      "path": "artifacts/status_river_v27/adopted_main_poison.guard.jsonl",
+      "original_sha256": "a27d17d166aec74f06ccc976f40aa6bea9af0eb15df6b5bd9c3915a3826ee1b9",
+      "public_sha256": "a0de103c796de4de78296a23cc1079c6fa5e125edcedf9aa05dcde735d4135d7",
+      "kind": "local-path/process metadata redaction; measured results retained"
+    },
+    {
+      "path": "artifacts/status_river_v27/adopted_main_poison.log",
+      "original_sha256": "0ea017018a458ec801909696cd0577f2027a333b7258241848069675ffd7c9ce",
+      "public_sha256": "9720e2fc5e03dfb26d67cf34e83b2b7586bd29cb02423253235fd102afbe4b22",
+      "kind": "local-path/process metadata redaction; measured results retained"
+    },
+    {
+      "path": "artifacts/status_river_v27/adopted_main_poison_reopen.guard.jsonl",
+      "original_sha256": "c2f6892fdc0fc0a7782b84cb94b5a3f060c705b690ea2713e6bf8b88e4d7ba19",
+      "public_sha256": "5c2ef75c5b3cf6ffeda565e0b043f9269f97b7c8b2fd5549c1845ed26358b83a",
+      "kind": "local-path/process metadata redaction; measured results retained"
+    },
+    {
+      "path": "artifacts/status_river_v27/adopted_main_poison_reopen.log",
+      "original_sha256": "00e04d63ed5caabd2feab09bd5d6ccda6c23a62789e6641fe549c0d7747d4ff1",
+      "public_sha256": "5591bdb72062b97b9eacf11f82815d94d5f4c39b8f553cd16b4f66efbf9bc9fe",
+      "kind": "local-path/process metadata redaction; measured results retained"
+    },
+    {
+      "path": "artifacts/status_river_v27/adoption_receipt.json",
+      "original_sha256": "84e4629bc513ea9a44c7684ba4546a251bfdd368f36fcad8e5074863c220b2f6",
+      "public_sha256": "dd908c8b052b64c5cb49ef9ef3f120d951c29730535f9438d63ccbb3804c0ec9",
+      "kind": "local-path/process metadata redaction; measured results retained"
+    },
+    {
+      "path": "docs/PUBLIC_DICTIONARY_V2.md",
+      "original_sha256": "48570058f8cc5d5f2e9fa941996fbb98dc52d2d8bd7078e0fb1e33afac208a5c",
+      "public_sha256": "b35843a49ccacf80b18a5e7fd583c79deb6b92cabe10e5fce814ea3d2da86c70",
+      "kind": "local-path/process metadata redaction; measured results retained"
+    }
+  ],
+  "original_adoption_receipt_sha256": "84e4629bc513ea9a44c7684ba4546a251bfdd368f36fcad8e5074863c220b2f6",
+  "scope": "Explicit new status gameplay mode and offline river entry from v26. Legacy saves are not reinterpreted. Public dictionary v2 preserves original public request data and existing limits. V25 remains withdrawn.",
+  "previous_validation": {
+    "actual_adopted_project_smoke": {
+      "main_poison": {
+        "assertions": 87,
+        "exit": 0,
+        "warnings": []
+      },
+      "main_poison_reopen": {
+        "assertions": 73,
+        "exit": 0,
+        "warnings": []
+      },
+      "equipment": {
+        "assertions": 44,
+        "exit": 0,
+        "warnings": []
+      }
+    },
+    "prior_candidate_gates": "Dated delta-specific evidence is preserved; counts are not pooled or relabelled as an adopted-copy rerun. Final actual 1920x1080 rendering has one known llvmpipe V-Sync warning.",
+    "public_request_cap": 65536,
+    "http_body_cap": 4194304,
+    "full_history_300_chinese_bytes": 64627,
+    "model_calls": 0,
+    "fully_connected_status_source_slice": [
+      "poison",
+      "flight"
+    ],
+    "catalog_definitions": 168,
+    "other166_adapters_not_claimed_complete": true
+  },
+  "publication_validation": "Actual small-delta restore on the previously verified v26 recovery tree; idempotency; unknown user changes refused without partial writes; frozen production pins; unchanged base-resource identities. Only small inputs are read during publication testing; the full offline user command still verifies every base and resource byte."
+}

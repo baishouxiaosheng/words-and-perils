@@ -5833,10 +5833,22 @@
       }
     }
   ],
-  "active_version": "v22-equipment",
+  "active_version": "v23-packed-topology",
   "update_manifest": {
     "path": "updates/v22/manifest.json",
     "size": 8781,
     "sha256": "2cf556e046152158bce8c1a65fe989e15d521d5b478d9ed838a1c42fa0ddc868"
-  }
+  },
+  "update_manifests": [
+    {
+      "path": "updates/v22/manifest.json",
+      "size": 8781,
+      "sha256": "2cf556e046152158bce8c1a65fe989e15d521d5b478d9ed838a1c42fa0ddc868"
+    },
+    {
+      "path": "updates/v23/manifest.json",
+      "size": 4162,
+      "sha256": "824467d1aa14f6cea617d702cc765442b157a573558831ce1e21d117578787db"
+    }
+  ]
 }

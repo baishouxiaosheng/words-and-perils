@@ -1,0 +1,5 @@
+Original UI artwork and generation script, 2026.
+These assets were authored specifically for this tabletop project using the bundled deterministic pixel drawing script. No commercial game artwork, downloaded reference pixels, AI-generated art or third-party textures are included here.
+License: CC0 1.0 Universal for the original PNG artwork and the generation script.
+https://creativecommons.org/publicdomain/zero/1.0/
+The separately supplied Noto CJK font and Poly Haven terrain materials retain their own documented licenses.

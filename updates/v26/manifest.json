@@ -1,0 +1,479 @@
+{
+  "schema": "words-and-perils-source-delta/v1",
+  "version": "v26-vegetation-lifecycle",
+  "base_source_bundle_sha256": "8e88ac0ade3b12f314e3e3076a05efce2a9da335925e1859b6e9543deebeab81",
+  "previous_manifest_sha256": "69afd2e53d848428928845ad5d184dc0b387884651eda85fc6ede4fbd4800f1d",
+  "base_git_commit": "eb410b312c18d4473599c8bc35071bd748615323",
+  "files": [
+    {
+      "path": "artifacts/vegetation_compatibility_v26/INDEPENDENT_FINAL_ACCEPTANCE.json",
+      "size": 10531,
+      "sha256": "8f9a29c426e689afa79a130771d7ac3a9c92ad49be7c7c7b22c2cf049670ebf0",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/adoption_receipt.json",
+      "size": 4729,
+      "sha256": "466b7d1972e6d6e7e6b97cbb0d8645a08c87b6be3fdccd3ac998e4aeaf345825",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/asset_catalog.json",
+      "size": 3428,
+      "sha256": "ed54f3ba05b87b15ca6a69a293ab6a6de52f0b6b5da1ac8b7f75aa55b4692e2a",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/assets.guard.jsonl",
+      "size": 668,
+      "sha256": "8feaeee4e5ea2d168a411208ed6ef4e13fdb686abcdccc0990d8f2bd057caf9d",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/assets.log",
+      "size": 758,
+      "sha256": "bb653398ebbf3bd2deb5098dc0da5f1ef1934b327f58ea4bc5cf34981544b889",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/candidate_capture_manifest.json",
+      "size": 20309,
+      "sha256": "0f069e7aa2c7b62e9fb55f0fada7741ce567d5f32a89bf4c32fb1b887a3d1ca1",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/candidate_hud_report.json",
+      "size": 52,
+      "sha256": "f95d4b75bc04f42119db32d436d87e87d797612a230ffc6aee4a99219149492a",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/candidate_pins.json",
+      "size": 1294,
+      "sha256": "777d1479b22a8d658ba6ef6ef265c4623ebe2be02a4c19d7367a1bfe09df715c",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/capture.guard.jsonl",
+      "size": 24087,
+      "sha256": "bc4c738a28539a6fdfab700cf31d80ce17e705f9a9e1b838d6bdf2d610ddb79d",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/capture.log",
+      "size": 1240,
+      "sha256": "8c9a341627f5386d3d546a71a782dbaec3b02ea6b3393b81acc959101e7d53eb",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/capture_comparison.json",
+      "size": 821,
+      "sha256": "70a619d44215abeebbb1086551460d854d8e2d77d3e1594ca0ae10e594b6f51f",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/component.guard.jsonl",
+      "size": 2838,
+      "sha256": "ee1a2f2d50547c5424e80d1cef0ad352bcb76a877e5240099810eaaa19b71ddd",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/component.log",
+      "size": 6320,
+      "sha256": "9843691bd6ad5dce5009a2c9ce4b2f2fc9959136955847dcfd65a4f651e79a83",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/equipment.guard.jsonl",
+      "size": 51463,
+      "sha256": "575156fa3fad2bff152fc6aa9d55f2b6310de2288fc821219e71e47d65ffeb79",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/equipment.log",
+      "size": 761,
+      "sha256": "713974642dab187205824cf060088f45071df2e903fd2644a580eb3b0b323d9b",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/equipment_report.json",
+      "size": 2014,
+      "sha256": "d608b1944e44bce8d2bc8dbc4eed148a150890c0ca7fef598433cf8fb33cbbad",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/fallen.guard.jsonl",
+      "size": 26298,
+      "sha256": "cc1925d636e39bae48939eae1b7e06d80580e0ecb6efcf17c5f61dee6a42ee65",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/fallen.log",
+      "size": 15933,
+      "sha256": "88f1b145f74d690e044ce92c4e856aed6086fac8f8d591a47adc136734489c0d",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/fallen_report.json",
+      "size": 19222,
+      "sha256": "e85ae887dbea9ad1717890ab9d61772ea8ff6fcebb6f0628518b69b3c687d46d",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/hud.guard.jsonl",
+      "size": 36376,
+      "sha256": "d4b01bc077695eb9c94ab1d9655608abc013ecb158c3a1924dca9cfaba5b15d9",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/hud.log",
+      "size": 752,
+      "sha256": "3fa74430f2a06f3376b95d4fbda5c2ce49be6d1fdc38905646ca60505373f5ea",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/inherited_v24_capture_manifest.json",
+      "size": 20309,
+      "sha256": "0f069e7aa2c7b62e9fb55f0fada7741ce567d5f32a89bf4c32fb1b887a3d1ca1",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/permanent_legacy.guard.jsonl",
+      "size": 52473,
+      "sha256": "0d4db7c685fcf3e18c6d38a2734915b7020ab672ee36c70f2b863721996cbf65",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/permanent_legacy.log",
+      "size": 761,
+      "sha256": "65676f4ae4c94cd81d6c4ea8b42202ebcbed2e38cf4bf7d130fef4dad76eded1",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/permanent_legacy_report.json",
+      "size": 2014,
+      "sha256": "f96a9f9c03a49cf31de6d39f86881b563ec60481549bfbc9a18e486127860609",
+      "before_sha256": null
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/withdrawn_v25_pin_failure.json",
+      "size": 1296,
+      "sha256": "da9f6bfe6f9a90f8182e2e2ab499fdf4325e2497b130e333a39373411d905a1e",
+      "before_sha256": null
+    },
+    {
+      "path": "docs/vegetation_compatibility_v26.md",
+      "size": 3448,
+      "sha256": "92fc3156aae9be1b307c93704ba83c8980042612e8250687e8f0714b98248f50",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/fixtures/vegetation_v1/MANIFEST.json",
+      "size": 1143,
+      "sha256": "4ae1c17c409109d777fe81816a142a932cce4c0ff59e05cd8c0c0006d0849f7e",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/fixtures/vegetation_v1/asset_catalog_v24.json",
+      "size": 7819,
+      "sha256": "fdc5901bd445985c9d906cdf093c62703d23b1beaa7d7d45f55b23de02577361",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/fixtures/vegetation_v1/equipment_poisoned_history.json",
+      "size": 298765,
+      "sha256": "19269f461ffc5147a2eb80a4f3f7a74ee83a6e8c92fa798dd57aecbc7dc998ca",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/fixtures/vegetation_v1/generated_v3_village_enemy_v1.json",
+      "size": 162417,
+      "sha256": "9a236f96cc773c1a85d11a2fef5a3dce7fbaf0500e456f99df11fbaf68171f79",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/fixtures/vegetation_v1/generated_v3_village_equipment_v1.json",
+      "size": 278558,
+      "sha256": "bf0815e9b3ee265c8df90a0ace21840c02600708c9e9b669ff608e010788e3d3",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/fixtures/vegetation_v1/terminal_presentation_save.json",
+      "size": 273069,
+      "sha256": "2946c7f1af5597e6741ee690612ba8b1390b1d9436632d00d44121d76ed19135",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/generated_v3_equipment/test_adopted_copy.gd",
+      "size": 6817,
+      "sha256": "390434292fd3a8e73b081e061067a87ed0a01541c1e80cd6a1d3fef6f3dcbbda",
+      "before_sha256": "3661d0f9f091d6c46e9dadcd46891670f3df3b7db4f95d19cb72a112a27d267b"
+    },
+    {
+      "path": "tests/vegetation_compat/check_asset_pins.py",
+      "size": 1446,
+      "sha256": "7d9515ca950630fe2406bf7eb42cf3ab8961009dc63bc68bd25fdb73e812466d",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/vegetation_compat/test_asset_catalog.gd",
+      "size": 2311,
+      "sha256": "cc5cda273f21d316fa6c4b208fca747f9bc55c8f0d8865e1b8e2c47284caeac1",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/vegetation_compat/test_real_legacy_saves.gd",
+      "size": 1246,
+      "sha256": "0a2bb58d41a63a35e76ec4cffb7537abed118276a95d3576a2653473d22c71ae",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/vegetation_lifecycle/fixture_board.gd",
+      "size": 185,
+      "sha256": "f72d3febee40e17420523a1414232b38067ad1c84b8dafdb51a5b408b1648387",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/vegetation_lifecycle/fixture_canopies.gd",
+      "size": 826,
+      "sha256": "d91231a440f78a3cd1723dbb2f9a14144a6d1abcd58bc1859e2539c17ba340e5",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/vegetation_lifecycle/fixture_view.gd",
+      "size": 2167,
+      "sha256": "238dab30b7d39e71838b2727ea9a90bdd7ec0920020843353c4d6a450853e968",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/vegetation_lifecycle/profile_actual.gd",
+      "size": 930,
+      "sha256": "75e0f05894d0ff6cb98d4a390f1ffa77dfbb861c311ff955567d375bfcb2097d",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/vegetation_lifecycle/test_lifecycle.gd",
+      "size": 14757,
+      "sha256": "9cf4c50ad021008a648995d2cef7a4de83a2c425ccb75a0242ded51e9b04851f",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/vegetation_lifecycle/test_main_fallen_support.gd",
+      "size": 14429,
+      "sha256": "a0b0df0b5c1a4beac10d15ef06534470bc3d5a4f0224df4421f7f5c08cc0a9b2",
+      "before_sha256": null
+    },
+    {
+      "path": "tools/restore_repository.py",
+      "size": 217,
+      "sha256": "ab12fdb104d0d87159174eddd4e2655a94a3d19827537790f2f706f5ff93402f",
+      "before_sha256": "65b70c7c1e4651cb1b598af3127612a14ae3faeb4e5dbabd070a1612e96ecc0c"
+    },
+    {
+      "path": "tools/restore_v26.py",
+      "size": 9554,
+      "sha256": "dd4aac8b5f9f9ee525c5f367d47e322d39cba766e36995ba4e71da9d5f96a5ab",
+      "before_sha256": null
+    },
+    {
+      "path": "tools/verify_publication.py",
+      "size": 10747,
+      "sha256": "9fe03f21faaaf9ab14d8be36443ae9a63e64819697d925605ca60bc786778b9c",
+      "before_sha256": "32bf576c5748a84449f4454186eb4f2e9f6d11f3b78f366c7b4292d3f58ef924"
+    },
+    {
+      "path": "view/integrated_ecology_world/lighting_profile/miniature_profile.gd",
+      "size": 6548,
+      "sha256": "017af01cd7ecc7ae2309cdec352d58acf7b8a7005c2a7d3b2c4a1942ce39f727",
+      "before_sha256": "1a3ad4b20bd5768e9f856082310342ff211ace4e97d33a86533a1b6e351d73a8"
+    },
+    {
+      "path": "view/integrated_ecology_world/natural_shorelines/shore_layer.gd",
+      "size": 10471,
+      "sha256": "77037a2762f592c8cb526a2b9851faaae313e9a7288eb12ccffc6c3e1f2bdafe",
+      "before_sha256": "ee6e1d32c7b09a71e445f6a0d08494140ecc8f84373d1d4ac239184bbb005e0e"
+    },
+    {
+      "path": "view/integrated_ecology_world/performance_variant/whole_canopies_loader.gd",
+      "size": 876,
+      "sha256": "476679ce4cff6e7589102e10252433e919279a555897da02e883750ebd3ffd94",
+      "before_sha256": null
+    },
+    {
+      "path": "view/integrated_ecology_world/performance_variant/world_view66.gd",
+      "size": 17338,
+      "sha256": "6a5e7a73f81bb6471d8ffcccab93fc009084bc3119d6d5cfd912fd27afc1a9f8",
+      "before_sha256": "0b880bd1be6df43a22a241d6fa187681e8dc97c49d4f2b3b7b097de1bd3bd906"
+    },
+    {
+      "path": "view/playable_build/entity_selection.gd",
+      "size": 15827,
+      "sha256": "832d82a08943f0297b384d96332fed466015e3ea0a0d21c30a56c33a482cd010",
+      "before_sha256": "2d9dacd49933e78c0705b1bb84292445910107b82d0739f2482254db301a8f99"
+    }
+  ],
+  "production_pins": {
+    "view/integrated_ecology_world/lighting_profile/miniature_profile.gd": "017af01cd7ecc7ae2309cdec352d58acf7b8a7005c2a7d3b2c4a1942ce39f727",
+    "view/integrated_ecology_world/natural_shorelines/shore_layer.gd": "77037a2762f592c8cb526a2b9851faaae313e9a7288eb12ccffc6c3e1f2bdafe",
+    "view/integrated_ecology_world/performance_variant/whole_canopies_loader.gd": "476679ce4cff6e7589102e10252433e919279a555897da02e883750ebd3ffd94",
+    "view/integrated_ecology_world/performance_variant/world_view66.gd": "6a5e7a73f81bb6471d8ffcccab93fc009084bc3119d6d5cfd912fd27afc1a9f8",
+    "view/playable_build/entity_selection.gd": "832d82a08943f0297b384d96332fed466015e3ea0a0d21c30a56c33a482cd010"
+  },
+  "archive": {
+    "encoded_path": "updates/v26/source_delta.tar.xz.b64",
+    "encoded": {
+      "size": 148208,
+      "sha256": "0ce4b5c2b8f9b2b5f9e0a02730fa4f9224a8d06dec68cedf59833be48a6de674"
+    },
+    "size": 111156,
+    "sha256": "02514cc0945b52464f7ca2a7095de6c41eb4add7f7ebc4fdd65f620387cf8df3"
+  },
+  "original_delivery_entries": 48,
+  "evidence_sanitization": [
+    {
+      "path": "artifacts/vegetation_compatibility_v26/INDEPENDENT_FINAL_ACCEPTANCE.json",
+      "original_sha256": "b35b099ccf65ab14bcdb1b889ff78d8c2f3ed369f8663efc56002828e70f74fd",
+      "public_sha256": "8f9a29c426e689afa79a130771d7ac3a9c92ad49be7c7c7b22c2cf049670ebf0",
+      "kind": "report formatting and local-process/private-path redaction"
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/adoption_receipt.json",
+      "original_sha256": "94c9b6a4c8ec338dbd44e7e99f8c82684e1959bb00e6ccee1bea318b935aa0f6",
+      "public_sha256": "466b7d1972e6d6e7e6b97cbb0d8645a08c87b6be3fdccd3ac998e4aeaf345825",
+      "kind": "report formatting and local-process/private-path redaction"
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/asset_catalog.json",
+      "original_sha256": "a25a56d253ce83fb3af5d5ab3c0930045e39a9a8b19d49088d28c928919d8e71",
+      "public_sha256": "ed54f3ba05b87b15ca6a69a293ab6a6de52f0b6b5da1ac8b7f75aa55b4692e2a",
+      "kind": "report formatting and local-process/private-path redaction"
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/assets.guard.jsonl",
+      "original_sha256": "19ef6bf5d3c82ed6554e5d5c19c5f958eeef1c11bd708b20370d854964b0d562",
+      "public_sha256": "8feaeee4e5ea2d168a411208ed6ef4e13fdb686abcdccc0990d8f2bd057caf9d",
+      "kind": "report formatting and local-process/private-path redaction"
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/candidate_capture_manifest.json",
+      "original_sha256": "b98e37c3e52c040d0ae12c039bc4271722595ea7e25faf8ccb326e8211742c2b",
+      "public_sha256": "0f069e7aa2c7b62e9fb55f0fada7741ce567d5f32a89bf4c32fb1b887a3d1ca1",
+      "kind": "report formatting and local-process/private-path redaction"
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/candidate_hud_report.json",
+      "original_sha256": "4d31c7ffe3c177b08c10642eac6cc25e5805f5754874ece07ed156036bacf0d5",
+      "public_sha256": "f95d4b75bc04f42119db32d436d87e87d797612a230ffc6aee4a99219149492a",
+      "kind": "report formatting and local-process/private-path redaction"
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/capture.guard.jsonl",
+      "original_sha256": "47d02dbefa44bfe048b36053ec14567a65e61c79bda7a7a68fcf5a028f973c9b",
+      "public_sha256": "bc4c738a28539a6fdfab700cf31d80ce17e705f9a9e1b838d6bdf2d610ddb79d",
+      "kind": "report formatting and local-process/private-path redaction"
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/component.guard.jsonl",
+      "original_sha256": "66c34a753da05055c007af99f2d74b19a3bf5d9a3fdd3afdfcbf98211eb5beb3",
+      "public_sha256": "ee1a2f2d50547c5424e80d1cef0ad352bcb76a877e5240099810eaaa19b71ddd",
+      "kind": "report formatting and local-process/private-path redaction"
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/equipment.guard.jsonl",
+      "original_sha256": "fe711936771581a69bd228fd37583da677e3cfeeff0b440846cd192f1a8a39de",
+      "public_sha256": "575156fa3fad2bff152fc6aa9d55f2b6310de2288fc821219e71e47d65ffeb79",
+      "kind": "report formatting and local-process/private-path redaction"
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/equipment_report.json",
+      "original_sha256": "0a0336abca32ce85de9714fa3e82c3b11485591d9405038df75749890f945a3a",
+      "public_sha256": "d608b1944e44bce8d2bc8dbc4eed148a150890c0ca7fef598433cf8fb33cbbad",
+      "kind": "report formatting and local-process/private-path redaction"
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/fallen.guard.jsonl",
+      "original_sha256": "ea75b194fa421cec65411fb3486202aa39288f3d772ecb1d6823412988ebf792",
+      "public_sha256": "cc1925d636e39bae48939eae1b7e06d80580e0ecb6efcf17c5f61dee6a42ee65",
+      "kind": "report formatting and local-process/private-path redaction"
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/fallen_report.json",
+      "original_sha256": "c92d35d31617a83f499e1bd38a3c5b3b69aff78815aaf66b3f0ea4fe4a41e0fd",
+      "public_sha256": "e85ae887dbea9ad1717890ab9d61772ea8ff6fcebb6f0628518b69b3c687d46d",
+      "kind": "report formatting and local-process/private-path redaction"
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/hud.guard.jsonl",
+      "original_sha256": "4d7fa2c68dff9d1bbc0a302b042eb1eb016421da5e01c8d5d337bce93abd795e",
+      "public_sha256": "d4b01bc077695eb9c94ab1d9655608abc013ecb158c3a1924dca9cfaba5b15d9",
+      "kind": "report formatting and local-process/private-path redaction"
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/inherited_v24_capture_manifest.json",
+      "original_sha256": "b98e37c3e52c040d0ae12c039bc4271722595ea7e25faf8ccb326e8211742c2b",
+      "public_sha256": "0f069e7aa2c7b62e9fb55f0fada7741ce567d5f32a89bf4c32fb1b887a3d1ca1",
+      "kind": "report formatting and local-process/private-path redaction"
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/permanent_legacy.guard.jsonl",
+      "original_sha256": "67c4a288361d674678a4fb60e877f8b64bbf6aead8e35dc0258f7affb2a8ea56",
+      "public_sha256": "0d4db7c685fcf3e18c6d38a2734915b7020ab672ee36c70f2b863721996cbf65",
+      "kind": "report formatting and local-process/private-path redaction"
+    },
+    {
+      "path": "artifacts/vegetation_compatibility_v26/permanent_legacy_report.json",
+      "original_sha256": "31dc58106aa8bb26417caef2356dc1729f1564afcffd9b8d1142e24af470592c",
+      "public_sha256": "f96a9f9c03a49cf31de6d39f86881b563ec60481549bfbc9a18e486127860609",
+      "kind": "report formatting and local-process/private-path redaction"
+    },
+    {
+      "path": "docs/vegetation_compatibility_v26.md",
+      "original_sha256": "f3b8be0599b31303b4f0c3f8554271cb2cf586d6e2c8962f82595c3bc4504027",
+      "public_sha256": "92fc3156aae9be1b307c93704ba83c8980042612e8250687e8f0714b98248f50",
+      "kind": "publication-state and offline-restore clarification; internal location removed"
+    }
+  ],
+  "scope": "Five-file vegetation lifecycle and strict legacy-save compatibility repair from v24. Original serialized vegetation recipe unchanged; separate coast loader. C UI and binary resources unchanged. V25 withdrawn; no dependency on it. No status or river candidate. No RAM/FPS improvement claim.",
+  "previous_validation": {
+    "assets": {
+      "passed": 33,
+      "exit": 0,
+      "warnings": []
+    },
+    "component": {
+      "passed": 63,
+      "exit": 0,
+      "warnings": []
+    },
+    "equipment": {
+      "passed": 47,
+      "exit": 0,
+      "warnings": []
+    },
+    "fallen": {
+      "passed": 61,
+      "exit": 0,
+      "warnings": [
+        "WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver."
+      ]
+    },
+    "capture": {
+      "passed": 98,
+      "exit": 0,
+      "warnings": [
+        "WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver."
+      ]
+    },
+    "hud": {
+      "passed": 48,
+      "exit": 0,
+      "warnings": []
+    },
+    "permanent_legacy": {
+      "passed": 51,
+      "exit": 0,
+      "warnings": []
+    }
+  },
+  "publication_validation": "Actual small-delta restore on the verified v24 recovery tree, idempotency, preimage protection, exact production pins, and unchanged resource filesystem identities. Full base assets are not rehashed during publication testing; public full restore still verifies them."
+}

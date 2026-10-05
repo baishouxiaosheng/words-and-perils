@@ -5832,5 +5832,11 @@
         "sha256": "74e3bf7f8929dcaa84d0d64ddd47f8be335cb7d3c9cb2556b3361f26948c5fbf"
       }
     }
-  ]
+  ],
+  "active_version": "v22-equipment",
+  "update_manifest": {
+    "path": "updates/v22/manifest.json",
+    "size": 8781,
+    "sha256": "2cf556e046152158bce8c1a65fe989e15d521d5b478d9ed838a1c42fa0ddc868"
+  }
 }

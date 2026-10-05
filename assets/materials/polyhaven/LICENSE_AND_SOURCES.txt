@@ -1,0 +1,6 @@
+Poly Haven CC0 assets
+License: https://polyhaven.com/license
+CC0: https://creativecommons.org/publicdomain/zero/1.0/
+Leafy Grass — Charlotte Baglioni: https://polyhaven.com/a/leafy_grass
+Rock Face — Dario Barresi (processing), Greg Zaal (photography): https://polyhaven.com/a/rock_face
+Original1K diffuse, OpenGL normal and roughness maps downloaded2026-10-01. See provenance.json for exact URLs and SHA-256.

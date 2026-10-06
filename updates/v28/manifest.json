@@ -1,0 +1,254 @@
+{
+  "schema": "words-and-perils-source-delta/v1",
+  "version": "v28-natural-coast",
+  "base_source_bundle_sha256": "8e88ac0ade3b12f314e3e3076a05efce2a9da335925e1859b6e9543deebeab81",
+  "previous_manifest_sha256": "aa1e4edbaaf209a4415796509b8740432ea318da0d195f462cd988d472a389a2",
+  "base_git_commit": "2712458127fa79bffebe86928b938f0cf1e829d5",
+  "files": [
+    {
+      "path": "artifacts/natural_coast_v28/adoption_summary.json",
+      "size": 2116,
+      "sha256": "3fa031961f17ff9c6af3b0366af4fbe98052144c92dd6c9d40f58dd780cb1bac",
+      "before_sha256": null
+    },
+    {
+      "path": "docs/release_v28.md",
+      "size": 1889,
+      "sha256": "bd0e8fe24d02828f9e6fbf3ca824d563c5cd2a740eb3b16fbac5e3f14c55a1e3",
+      "before_sha256": null
+    },
+    {
+      "path": "main.gd",
+      "size": 182315,
+      "sha256": "2b05911a1bcde48b10a54e8d1475ef62c66aea84ff8c7f5b7cdc3052eaf9fc93",
+      "before_sha256": "1db6386f9c53f7f0946f84dae0b81a61b35420447b3b1035896678d86e367c4c"
+    },
+    {
+      "path": "tests/natural_coast_basic/expected_identities.json",
+      "size": 8513,
+      "sha256": "251ff3d61ca42d8359bbe11d3c24433228c7f7c60d897d24311ec18767d20408",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/natural_coast_basic/test_adapter.gd",
+      "size": 33449,
+      "sha256": "52fef3da71f5556c794940727514b0f575bc45da5962a42f0f667bf4b9a49889",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/natural_coast_basic/test_adopted_smoke.gd",
+      "size": 4170,
+      "sha256": "b2324122a3a0ef36532d9fcd01135d657d89bff82ee044327572456566e4e588",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/natural_coast_basic/test_compile.gd",
+      "size": 1835,
+      "sha256": "59fd844ef8fa005f4e01049505cf9380d594eb0b01665838aeef82f772c8a350",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/natural_coast_basic/test_full_main.gd",
+      "size": 17724,
+      "sha256": "6777f7e92715c451ef734ea6964d49fe5f3604cb2199ed86feb3f124dfb8f483",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/natural_coast_basic/test_pointer.gd",
+      "size": 10771,
+      "sha256": "16162017f20832ecfb7eeaa3649165c46b70e580d1db4b32cd02d299525b1d66",
+      "before_sha256": null
+    },
+    {
+      "path": "tests/natural_coast_basic/test_session.gd",
+      "size": 7356,
+      "sha256": "be396732fa1484f1768e620292af90a331540ab1cdc9534911f3674f3b9c8f58",
+      "before_sha256": null
+    },
+    {
+      "path": "tools/restore_repository.py",
+      "size": 217,
+      "sha256": "181004454fea7596cf4e4017e539ef04fbf9136f362f4e4c1d74063764195875",
+      "before_sha256": "9833e1f7a4976776b87ea9d66f243563fa28945bfcb67673b3d27be5372dd5bb"
+    },
+    {
+      "path": "tools/restore_v28.py",
+      "size": 9603,
+      "sha256": "d4e512de9dc058c900915b3da4b97e8d7adbf8f9973dbecd00b47b0e2a6832f5",
+      "before_sha256": null
+    },
+    {
+      "path": "tools/verify_publication.py",
+      "size": 13180,
+      "sha256": "2850b6dfea9919900a00d6b0950ec50b6e4f2cc8dfecea39e7289d5764f1abab",
+      "before_sha256": "a1265cabeb28871cbb057096a4e5978a6021742fece7c594f4b6fb0aa716c5b5"
+    },
+    {
+      "path": "view/generated_natural_coast_basic/adapter.gd",
+      "size": 20223,
+      "sha256": "7b14de3517ee7e0e1161775d0cbfb1ae58b6fa901a60c053a73073a9c153fc7b",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_natural_coast_basic/assessments.gd",
+      "size": 3819,
+      "sha256": "8ce80b2d7051a6e094d36b52ae72d62a931850696fe1df71594a8f709d5671ba",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_natural_coast_basic/authority_inputs.gd",
+      "size": 8909,
+      "sha256": "23c4872180595c05398dc69909c8d7a4adbf2cbcb7f584f36bac0254c8822669",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_natural_coast_basic/base_source.gd",
+      "size": 5064,
+      "sha256": "0fdf2564eb7f2e47ddc4ef3406ffec89c5b311dccf766360f92adeff2820002b",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_natural_coast_basic/board.gd",
+      "size": 10624,
+      "sha256": "1e40a596f7402336e6adccc8cc708ede4efc264504830a0cb960cb55f19925e2",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_natural_coast_basic/engine.gd",
+      "size": 8291,
+      "sha256": "bcba0f9c95d3b9ec3b8528f4cfb8d6df23d0867cc1e8d0a65be562f3d2859f36",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_natural_coast_basic/item_resolver.gd",
+      "size": 528,
+      "sha256": "f34435fab8c63f9f862c45bcb5e38b4855be216f3bb2922800ce4f3fbb98bd87",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_natural_coast_basic/main.gd",
+      "size": 15540,
+      "sha256": "6b742c721753414f7225318edb03ba6e7abaa2d9334c9766a602d1c8b7696566",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_natural_coast_basic/navigation.gd",
+      "size": 735,
+      "sha256": "753951a480deabbaf3cb5391ee91434d985c7ad968e8f379b9787a6748f5c800",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_natural_coast_basic/projection.gd",
+      "size": 4553,
+      "sha256": "e1ce6a2683e8cb4a00f0316431fb4fb660e810c69588787524cb07c5661b4da8",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_natural_coast_basic/resolver.gd",
+      "size": 453,
+      "sha256": "099af00e5c8990f6b7efe6410575f51540bb731dbfc72cff52363f8f3077cadc",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_natural_coast_basic/rule.gd",
+      "size": 880,
+      "sha256": "908d1791b0179abb2058d19f8524aa8cdf24d661d2fa29266ce22e4bf9685d09",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_natural_coast_basic/source.gd",
+      "size": 14149,
+      "sha256": "1950291a7403856bd8e99f6a1a14b3ed575be637f0dc1b640061fb20f5cdfefc",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_natural_coast_entry/controller.gd",
+      "size": 7160,
+      "sha256": "08a862fc4f177091bc440cf21dd2374971675381ee9bf55e97c83d2a5356e76b",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_natural_coast_entry/session.gd",
+      "size": 5730,
+      "sha256": "37a44ed13abe0f2170669ff9fa787ae10eb8d5e926e3282352dee7f0c6b7ddf5",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_natural_coast_entry/view.gd",
+      "size": 6530,
+      "sha256": "c0876b37414ce8e368e771d4352eaf256524331de278332c220d30db180e521c",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_natural_coast/builder.gd",
+      "size": 16108,
+      "sha256": "7a43df45770d7b62e212935e0c9183f8afcf31df8e6fb889985d70340faa9ad3",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_natural_coast/geometry.gd",
+      "size": 9761,
+      "sha256": "11ed37982240485e86dae5c7d1ced47a29a5f930de54d08e11bbead5a027212c",
+      "before_sha256": null
+    },
+    {
+      "path": "view/generated_v3_natural_coast/source_custody.gd",
+      "size": 6087,
+      "sha256": "65867c295c16107b36b2b1529fc1e374ffb2082fe1d302b631ff81b029af330e",
+      "before_sha256": null
+    }
+  ],
+  "production_pins": {
+    "main.gd": "2b05911a1bcde48b10a54e8d1475ef62c66aea84ff8c7f5b7cdc3052eaf9fc93",
+    "view/generated_natural_coast_basic/adapter.gd": "7b14de3517ee7e0e1161775d0cbfb1ae58b6fa901a60c053a73073a9c153fc7b",
+    "view/generated_natural_coast_basic/assessments.gd": "8ce80b2d7051a6e094d36b52ae72d62a931850696fe1df71594a8f709d5671ba",
+    "view/generated_natural_coast_basic/authority_inputs.gd": "23c4872180595c05398dc69909c8d7a4adbf2cbcb7f584f36bac0254c8822669",
+    "view/generated_natural_coast_basic/base_source.gd": "0fdf2564eb7f2e47ddc4ef3406ffec89c5b311dccf766360f92adeff2820002b",
+    "view/generated_natural_coast_basic/board.gd": "1e40a596f7402336e6adccc8cc708ede4efc264504830a0cb960cb55f19925e2",
+    "view/generated_natural_coast_basic/engine.gd": "bcba0f9c95d3b9ec3b8528f4cfb8d6df23d0867cc1e8d0a65be562f3d2859f36",
+    "view/generated_natural_coast_basic/item_resolver.gd": "f34435fab8c63f9f862c45bcb5e38b4855be216f3bb2922800ce4f3fbb98bd87",
+    "view/generated_natural_coast_basic/main.gd": "6b742c721753414f7225318edb03ba6e7abaa2d9334c9766a602d1c8b7696566",
+    "view/generated_natural_coast_basic/navigation.gd": "753951a480deabbaf3cb5391ee91434d985c7ad968e8f379b9787a6748f5c800",
+    "view/generated_natural_coast_basic/projection.gd": "e1ce6a2683e8cb4a00f0316431fb4fb660e810c69588787524cb07c5661b4da8",
+    "view/generated_natural_coast_basic/resolver.gd": "099af00e5c8990f6b7efe6410575f51540bb731dbfc72cff52363f8f3077cadc",
+    "view/generated_natural_coast_basic/rule.gd": "908d1791b0179abb2058d19f8524aa8cdf24d661d2fa29266ce22e4bf9685d09",
+    "view/generated_natural_coast_basic/source.gd": "1950291a7403856bd8e99f6a1a14b3ed575be637f0dc1b640061fb20f5cdfefc",
+    "view/generated_natural_coast_entry/controller.gd": "08a862fc4f177091bc440cf21dd2374971675381ee9bf55e97c83d2a5356e76b",
+    "view/generated_natural_coast_entry/session.gd": "37a44ed13abe0f2170669ff9fa787ae10eb8d5e926e3282352dee7f0c6b7ddf5",
+    "view/generated_natural_coast_entry/view.gd": "c0876b37414ce8e368e771d4352eaf256524331de278332c220d30db180e521c",
+    "view/generated_v3_natural_coast/builder.gd": "7a43df45770d7b62e212935e0c9183f8afcf31df8e6fb889985d70340faa9ad3",
+    "view/generated_v3_natural_coast/geometry.gd": "11ed37982240485e86dae5c7d1ced47a29a5f930de54d08e11bbead5a027212c",
+    "view/generated_v3_natural_coast/source_custody.gd": "65867c295c16107b36b2b1529fc1e374ffb2082fe1d302b631ff81b029af330e"
+  },
+  "archive": {
+    "encoded_path": "updates/v28/source_delta.tar.xz.b64",
+    "encoded": {
+      "size": 143036,
+      "sha256": "6d0cb627cf03edd6c555f26b74c02a364c15549dac36e3ff29f88c7644a10b91"
+    },
+    "size": 107276,
+    "sha256": "aeef272008523882546fd363013bdb748c0e21d9c473905244adae0fd38ee4e0"
+  },
+  "original_delivery_entries": 27,
+  "original_delivery_sha256": "4d18f9320e6fa57660e93f249b480aadb98b9d32483cc4ad782774714bfd7975",
+  "original_adoption_receipt_sha256": "fc69ee9fa2bc812582ff14d25b03455efc9c1e1583a08332cda4e523004f439c",
+  "original_adopted_manifest_sha256": "22d2e43aef4d75ff13b51b8651447d4c00a1ef86586360d7289beebf338765c5",
+  "scope": "Two explicit offline natural-coast entries from v27. No actor or biome-preview bridge. V25 remains withdrawn.",
+  "candidate_validation": {
+    "compile": 4,
+    "coastal_adapter": 157,
+    "plateau_adapter": 157,
+    "entry_session": 35,
+    "localized_full_scene": 81,
+    "real_os_input": 20
+  },
+  "adopted_copy_validation": {
+    "checks": 16,
+    "run_id": "20261006T052429_3c92659e",
+    "exit_code": 0,
+    "engine_errors": [],
+    "failures": []
+  },
+  "public_literal_active_script_closure": 300,
+  "publication_validation": "Actual small-delta restoration over previously verified v27 public recovery; idempotence; modified-preimage refusal without partial writes; exact production hashes; unchanged base-resource filesystem identities. No new engine run or full-resource read. The full offline command preserves complete base/resource byte checks."
+}

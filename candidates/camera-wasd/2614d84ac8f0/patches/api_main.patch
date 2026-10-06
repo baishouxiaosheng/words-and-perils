@@ -1,0 +1,10 @@
+--- a/main.gd
++++ b/main.gd
+@@ -246,6 +246,7 @@
+ 	runtime_ai.changed.connect(_on_runtime_changed)
+ 	make_theme()
+ 	build_ui()
++	add_child(preload("res://view/tabletop_interaction/wasd_camera_pan.gd").new(self))
+ 	# Default startup replaces this initial legacy board before the first frame.
+ 	# Build its terrain only when requested, or if the coast cannot be opened.
+ 	var legacy_start := startup_legacy or OS.has_environment("FOGBANK_LEGACY_START") or "--legacy-start" in OS.get_cmdline_user_args()

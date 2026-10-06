@@ -1,0 +1,32 @@
+{
+  "schema": "dual_api_full_main_test_attachment/v1",
+  "status": "unexecuted_cloud_test_attachment",
+  "production_manifest_sha256": "300676b3eda9bbb61b72b71ae3d2bfa5e52f70dcd969762daa82c7a9cb701e8f",
+  "source_test": {
+    "path": "tests/runtime_ai/test_main_flow.gd",
+    "sha256": "e34c8c43a47cb02c1c48d48fbdb1fa1449e04b7f6abed00280698c668903bf6c"
+  },
+  "test": {
+    "path": "tests/dual_api_settings/test_full_main_flow.gd",
+    "bytes": 19794,
+    "sha256": "5fc46254c5f00f837ad2dc0bfbc07cfc91299e457ae5b472a7d764bed4434145"
+  },
+  "dependencies": [
+    "main.tscn and restored v28 production dependencies",
+    "tests/ai_gm_http/mock_transport.gd",
+    "core/ai_gm_rebuilt/canonical.gd",
+    "view/playable_build/world_bundle.gd and its restored public manifest/catalog/closure",
+    "final five-file API/typography production overlay"
+  ],
+  "requires_public_identity": true,
+  "uses_private_identity_fixtures": false,
+  "runs_without_real_network": true,
+  "required_environment": [
+    "FOGBANK_API_TEST_USER_DIR: exact explicit isolated Godot user data directory"
+  ],
+  "optional_environment": [
+    "FOGBANK_API_TEST_REPORT: output JSON path; default user://api_full_main_results.json"
+  ],
+  "changes": "Test setup/API dialog role assertions/report destination plus hard actual-world 1801/production profile/public Bundle identity gates; original gameplay and save/load assertions preserved",
+  "fullmain_execution_claim": false
+}

@@ -1,0 +1,137 @@
+{
+  "schema": "words-and-perils-public-v29-restoration-candidate/v1",
+  "status": "READY_FOR_INDEPENDENT_RESTORATION_QA_NOT_ADOPTED",
+  "version": "v29-playtest-enhanced",
+  "title": "public v29 试玩增强版（API设置/镜头/选择反馈/离线移动）",
+  "supersedes_incomplete_checkpoint": "CHECKPOINT.json",
+  "base_public_commit": "f630fc4ff92143f7add7d36907c317d709600e61",
+  "candidate_source_lineage_tip": "5eef3816f30cc2651d2ac47c95d3fcd9f03e3eda",
+  "source_files": 9,
+  "source_bytes": 270754,
+  "main_sha256": "6e2f62e76db2f4a64a9bbdf4d348a32588d1cb991e6d869bff4c730e12e61e5c",
+  "final_source_map_files": 1426,
+  "final_source_map_sha256": "64fb209753f4ebef856848399266d828e6e3b47b389872c2accace2074db465a",
+  "literal_scripts": 308,
+  "literal_script_map_sha256": "0d20d39685d41aa103bcc2c98fb3df70864acea488b4f9337672e702bf475038",
+  "separate_supplemental_pins": 6,
+  "control_artifacts": [
+    {
+      "path": "tools/restore_v29.py",
+      "size": 28323,
+      "sha256": "438a6230a147437dcb8f359519f7e4bca9a82e67fe816a88aec31e6784314b84"
+    },
+    {
+      "path": "updates/v29/manifest.json",
+      "size": 8997,
+      "sha256": "fc048fdad0c405bc82145e9277ae3737c0f617a22b960792469dfd12d8bec0f8"
+    },
+    {
+      "path": "updates/v29/distribution_manifest.json",
+      "size": 207021,
+      "sha256": "162a2ced850ce5c16f49ae37855e935f882d4de154fbeb7de85a96ee15c19fa2"
+    },
+    {
+      "path": "updates/v29/adoption_receipt.json",
+      "size": 4010,
+      "sha256": "d38dd3e3880daf682159155cc227d910088bfbd815b68f202450fe5c83ce3cdf"
+    },
+    {
+      "path": "updates/v29/source_delta.zip.b64",
+      "size": 105992,
+      "sha256": "6e33c6919f372a8aff7cc204d556beaeb9e53a747d39fd00453060e9fbbe7bfa"
+    },
+    {
+      "path": "distribution_manifest.json",
+      "size": 207021,
+      "sha256": "162a2ced850ce5c16f49ae37855e935f882d4de154fbeb7de85a96ee15c19fa2"
+    },
+    {
+      "path": "tools/restore_repository.py",
+      "size": 224,
+      "sha256": "2f4edd63a5e4614f8935cc85ab1863182049b13c0aed44793d8071a8a3ca4f2f"
+    }
+  ],
+  "unchanged_validator_dependencies_included": [
+    {
+      "path": "candidates/api-typography/15b7faa87361/apply_candidate.py",
+      "size": 25498,
+      "sha256": "4fd50e6c75206da80458eb82e8b7746b471373926d117cc4a5a2ae58946e3a45"
+    },
+    {
+      "path": "candidates/api-typography/15b7faa87361/manifest.json",
+      "size": 4747,
+      "sha256": "b32b4920c8aab18b8f56de1138f0458a6982c636b46c53fdf526fb5c04e22a6d"
+    }
+  ],
+  "archive": {
+    "file": "candidate_bundle.zip.b64",
+    "encoded_bytes": 301836,
+    "encoded_sha256": "a34cab05c088fac5d723d914a8c7f1ba29b008ebf53ae6f927f8d4e9fbc81b4a",
+    "zip_bytes": 226375,
+    "zip_sha256": "00212f0b735bba9217aa0e883061758f9b33ed97da608cd46be2c4ae0f540cf2",
+    "members": {
+      "candidates/api-typography/15b7faa87361/apply_candidate.py": {
+        "size": 25498,
+        "sha256": "4fd50e6c75206da80458eb82e8b7746b471373926d117cc4a5a2ae58946e3a45"
+      },
+      "candidates/api-typography/15b7faa87361/manifest.json": {
+        "size": 4747,
+        "sha256": "b32b4920c8aab18b8f56de1138f0458a6982c636b46c53fdf526fb5c04e22a6d"
+      },
+      "distribution_manifest.json": {
+        "size": 207021,
+        "sha256": "162a2ced850ce5c16f49ae37855e935f882d4de154fbeb7de85a96ee15c19fa2"
+      },
+      "tools/restore_repository.py": {
+        "size": 224,
+        "sha256": "2f4edd63a5e4614f8935cc85ab1863182049b13c0aed44793d8071a8a3ca4f2f"
+      },
+      "tools/restore_v29.py": {
+        "size": 28323,
+        "sha256": "438a6230a147437dcb8f359519f7e4bca9a82e67fe816a88aec31e6784314b84"
+      },
+      "updates/v29/adoption_receipt.json": {
+        "size": 4010,
+        "sha256": "d38dd3e3880daf682159155cc227d910088bfbd815b68f202450fe5c83ce3cdf"
+      },
+      "updates/v29/distribution_manifest.json": {
+        "size": 207021,
+        "sha256": "162a2ced850ce5c16f49ae37855e935f882d4de154fbeb7de85a96ee15c19fa2"
+      },
+      "updates/v29/manifest.json": {
+        "size": 8997,
+        "sha256": "fc048fdad0c405bc82145e9277ae3737c0f617a22b960792469dfd12d8bec0f8"
+      },
+      "updates/v29/source_delta.zip.b64": {
+        "size": 105992,
+        "sha256": "6e33c6919f372a8aff7cc204d556beaeb9e53a747d39fd00453060e9fbbe7bfa"
+      }
+    }
+  },
+  "preparation_checks": {
+    "transaction_fixture_tests": 14,
+    "mixed_states": 1024,
+    "write_faults": 20,
+    "unknown_edit_refusals": 13,
+    "malformed_zip_cases": 14,
+    "corrupt_control_cases": 6,
+    "semantic_control_refusals": 5,
+    "independent_review": "passed_for_QA_handoff"
+  },
+  "installation_contract": [
+    "Use a fresh isolated copy of the verified public repository/base with its existing historical archives and resources; no base archives or assets are included here",
+    "Verify encoded and decoded archive hashes plus exact regular-file member allowlist before extraction into a separate empty staging directory",
+    "Preserve known original root distribution and restore wrapper preimages; stop on unknown control changes",
+    "Install the two unchanged validator dependencies only if absent or byte-identical; never overwrite another version",
+    "Stage all versioned controls and source payload first; copy candidate root distribution next and candidate wrapper last only inside the isolated QA project",
+    "Run python tools/restore_repository.py for actual complete restoration, then --check and repeat restoration; require zero source writes on the repeat",
+    "Exercise unknown-edit preservation only in disposable fixtures, restore their original bytes, and bind final nine source hashes before gameplay gates",
+    "Perform API request-controls, WASD Main, selection Main and offline movement gates on these exact final source hashes with fresh isolated user data and the approved process/resource guard"
+  ],
+  "limits": [
+    "This package is not adoption and does not change the repository default restore entry",
+    "The pending receipt contains prior Main33 tested-source evidence only; actual restoration and same-version four-gate QA remain pending",
+    "No OS physical input, final GPU visual, real provider, or independently triggered busy-guard acceptance is claimed",
+    "Native canonical v28 remains a distinct unchanged distribution; actor/status, shadow and Jev successors are excluded"
+  ]
+}

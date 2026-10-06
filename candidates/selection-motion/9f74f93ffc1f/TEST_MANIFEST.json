@@ -1,0 +1,58 @@
+{
+  "schema": "selection-motion-small-fixture/v1",
+  "status": "candidate_only_not_run",
+  "engine": "Godot 4.6.3",
+  "runtime_inputs": {
+    "project.godot": {
+      "source": "tests/project.godot",
+      "sha256": "4a9b254468b475701eedb79d819ee9a097bf925f774861c9769cd31bbe64b95c",
+      "bytes": 190
+    },
+    "view/tabletop_interaction/selection_motion.gd": {
+      "source": "view/tabletop_interaction/selection_motion.gd",
+      "sha256": "60835b0672a4426faf747c57e6a21617ebbf87e08c68b8cb3244175f813448e7",
+      "bytes": 13375
+    },
+    "view/attention_catalog.gd": {
+      "source": "tests/support/attention_catalog.gd",
+      "sha256": "828b6f1250d3bab65a6749887f29b840f6f3407e6bd5eb509b7d00d266cb2aee",
+      "bytes": 8046
+    },
+    "tests/selection_motion/test_selection_motion.gd": {
+      "source": "tests/selection_motion/test_selection_motion.gd",
+      "sha256": "5b18b36d28c7f7a4692049745554d8ae47bb6ad0295e0074eb2583f369301559",
+      "bytes": 9631
+    }
+  },
+  "total_runtime_input_bytes": 31242,
+  "source_dependency": {
+    "source": "stable v28 view/attention_catalog.gd (unchanged)",
+    "unchanged_copy": "tests/support/attention_catalog.gd",
+    "sha256": "828b6f1250d3bab65a6749887f29b840f6f3407e6bd5eb509b7d00d266cb2aee"
+  },
+  "materialization": "Copy only these four exact files into one fresh isolated runtime, using the map keys as destination paths. Do not copy a gameplay project, Main, assets, save data, import cache or credentials. Check all SHA256 values before launching. Do not apply Main patches for this boundary fixture.",
+  "parse_arguments": [
+    "--headless",
+    "--path",
+    "<isolated-runtime>",
+    "--check-only",
+    "--script",
+    "res://tests/selection_motion/test_selection_motion.gd"
+  ],
+  "fixture_arguments": [
+    "--headless",
+    "--path",
+    "<isolated-runtime>",
+    "--script",
+    "res://tests/selection_motion/test_selection_motion.gd"
+  ],
+  "run_guard": "Use the approved QA guard/environment; parse first. Run fixture only after parse succeeds. Keep each process bounded to 20 seconds and preserve exit/stdout/stderr. Neither command has been executed for this candidate.",
+  "expected_result": {
+    "suite": "selection_motion",
+    "passed": 31,
+    "failures": [],
+    "live_Main_GUI_tested": false
+  },
+  "acceptance_limit": "Passing headless proves only these lightweight mesh/Tween/cancel/reparent/free/cache/state-boundary assertions. It does not prove real Main, focus/modal events, terrain integration, graphics quality, shared resource appearance, saved-world identity or user-visible motion. Native visual acceptance remains required.",
+  "main_patch_policy": "The six Main patches are mutually exclusive input variants for the integration owner. They belong to the production candidate, not this minimal headless fixture."
+}

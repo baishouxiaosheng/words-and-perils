@@ -1,0 +1,159 @@
+OWNED_GODOT_GUARD {"event": "baseline", "elapsed_s": 0.0001, "utc_epoch": 1791317541.3577297, "cgroup_current": 411774976, "physical_cgroup_limit": 17179869184, "effective_budget": 8589934592, "additional_budget": 1073741824, "stop_threshold": 1485516800, "reserve_bytes": 536870912, "timeout_s": 120.0, "executable": "/opt/godot/4.6.3/Godot_v4.6.3-stable_linux.x86_64"}
+OWNED_GODOT_GUARD {"event": "owned_launched", "elapsed_s": 0.0008, "utc_epoch": 1791317541.3584402, "owned_pid": 1117, "identity": ["/opt/godot/4.6.3/Godot_v4.6.3-stable_linux.x86_64", 1116, 55343]}
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.
+     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:364)
+OpenGL API 4.5 (Core Profile) Mesa 25.0.7-2+deb13u1 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 19.1.7, 256 bits)
+
+ERROR: Unhandled XServer error: BadAccess (attempt to access private resource denied)
+   Major opcode of failed request: 130
+   Serial number of failed request: 1
+   Current serial number in output stream: 256
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 258
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 292
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 299
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 306
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 313
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 320
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+SHADOW_CAPTURE A_tabs 727b775bae3c8c18733c875f9de28f9dd76e9c8f19c6480614d275a43fa7d579
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 327
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 334
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 341
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 348
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 355
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+SHADOW_CAPTURE B_uncut bbd2da2c3edb64add33624b8973095b38a91ea9d3b3a8a0e542e81fe536efd1a
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 362
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 369
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 376
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 383
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 390
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+SHADOW_CAPTURE B_clipped 2c8145280cd55ae4d8a4da7f3b0059d94c28d5c926e510541f004d533d5eff72
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 397
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 404
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 411
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 418
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 425
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+SHADOW_CAPTURE B_no_cast 68ed375faf071bcd6d06c5403496f91fcd8e2d4bf18c442997a44ee6205654da
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 432
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 439
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 446
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 453
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 460
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+SHADOW_CAPTURE A_restored 727b775bae3c8c18733c875f9de28f9dd76e9c8f19c6480614d275a43fa7d579
+SHADOW_LOCAL_PASS {"camera":{"basis":"[X: (1.0, 0.0, 0.0), Y: (0.0, 0.730121, -0.683318), Z: (0.0, 0.683318, 0.730121)]","far":22.0,"near":0.200000002980232,"position":"(5.6, 8.1, 28.2)","projection":"orthographic","size":7.30000019073486,"viewport":[1280,960]},"canopy_instances":47,"captures":{"A_restored":"727b775bae3c8c18733c875f9de28f9dd76e9c8f19c6480614d275a43fa7d579","A_tabs":"727b775bae3c8c18733c875f9de28f9dd76e9c8f19c6480614d275a43fa7d579","B_clipped":"2c8145280cd55ae4d8a4da7f3b0059d94c28d5c926e510541f004d533d5eff72","B_no_cast":"68ed375faf071bcd6d06c5403496f91fcd8e2d4bf18c442997a44ee6205654da","B_uncut":"bbd2da2c3edb64add33624b8973095b38a91ea9d3b3a8a0e542e81fe536efd1a"},"cast_changes_real_render":true,"device":"llvmpipe (LLVM 19.1.7, 256 bits)","geometry_after":"8d818e9baf0366fdf334ab8e53a4e8503820b8b13e25c9b664e6fed962dff813","geometry_before":"8d818e9baf0366fdf334ab8e53a4e8503820b8b13e25c9b664e6fed962dff813","geometry_during":"8d818e9baf0366fdf334ab8e53a4e8503820b8b13e25c9b664e6fed962dff813","geometry_pose_camera_unchanged":true,"material_identity_restored":true,"pixel_exact_A_restore":true,"proxy":{"all_retained_original_vertices_unchanged":true,"closed_volume_claimed":false,"contact_edges":244,"crossed_triangles":244,"cut_u":0.025,"exact_terrain_conformity_claimed":false,"fully_removed":99,"high_peak_and_retained_crop_endpoints_unchanged":true,"max_sampled_contact_edge_gap_world":0.00421453835883434,"new_contact_vertices":488,"proxy_triangles":475,"retained_original_vertex_occurrences":830,"source_triangles":520},"proxy_changes_real_render":true,"renderer":"gl_compatibility","unknown_shader_atomic_rejection":true}
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 3
+   Current serial number in output stream: 467
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+ERROR: Unhandled XServer error: BadShmSeg (invalid shared segment parameter)
+   Major opcode of failed request: 130
+   Serial number of failed request: 2
+   Current serial number in output stream: 497
+   at: default_window_error_handler (platform/linuxbsd/x11/display_server_x11.cpp:1310)
+OWNED_GODOT_GUARD {"event": "exited", "elapsed_s": 24.4914, "utc_epoch": 1791317565.8490415, "child_exit": 0, "cgroup_current": 424337408, "owned_pid": 1117}

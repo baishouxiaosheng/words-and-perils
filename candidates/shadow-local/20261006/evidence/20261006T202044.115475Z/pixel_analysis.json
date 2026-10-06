@@ -1,0 +1,33 @@
+{
+  "scope": "actual 1280x960 ridge fixture; not full Main or target hardware acceptance",
+  "A_restore_pixel_exact": true,
+  "overlap_interior_pixels": 1109,
+  "overlap_rgb_max_difference_from_form_only": 0,
+  "near_ridge_green_roi_pixels": 263278,
+  "uncut_vs_no_cast_roi_pixels_over_4_levels": 8817,
+  "clipped_vs_no_cast_roi_pixels_over_4_levels": 1826,
+  "roi_pixels_changed_uncut_then_restored_by_clip": 7081,
+  "sampled_contact_gap_world": 0.00421453835883434,
+  "sampled_gap_projected_vertical_pixels": 0.4046627455680641,
+  "estimated_far_split_sphere_diameter_world": 24.965331517481953,
+  "estimated_bias_reference_texel_world": 0.012190103280020485,
+  "sampled_gap_as_bias_reference_texels": 0.3457344258716779,
+  "atlas_tile_pixels": [
+    2048,
+    1024
+  ],
+  "max_owned_engine_rss_mib": 514.1015625,
+  "cgroup_peak_mib": 917.78125,
+  "cgroup_peak_additional_mib": 456.73046875,
+  "engine_elapsed_s": 23.2723,
+  "png_sha256": {
+    "A_restored.png": "1bb6a81a2314e9cd0f60224fc4802d0663eda2d5b1187178ebf4a42eb010c0cf",
+    "A_tabs.png": "1bb6a81a2314e9cd0f60224fc4802d0663eda2d5b1187178ebf4a42eb010c0cf",
+    "B_clipped.png": "83ef349d38c643b76c970ca4768380d93d763ef1d8a82f04143fb9aee3173499",
+    "B_masks_form_cast_max.png": "11fc24241616ef27ffdab801c298623e313d92052c65dde888f03dfa817dafb6",
+    "B_no_cast.png": "95e2fc6f36dde1deb4139aebbe3ef13527386e0e8ceb763b4a08f35b81aacd52",
+    "B_receiver_normal_control.png": "36b352ed7daa67498944afe7ba9dedb0ab0f137194e254526837d48096abbf35",
+    "B_uncut.png": "06fea2965e2f00413986f359fba150249ade73526ec29b34b8f3ee304053c78f"
+  },
+  "remaining_visual_issue": "Thin self-shadow stripes remain on some light-facing mountain facets. This run does not establish complete visual acceptance."
+}

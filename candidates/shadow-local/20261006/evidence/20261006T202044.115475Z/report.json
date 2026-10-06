@@ -1,0 +1,53 @@
+{
+	"camera": {
+		"basis": "[X: (1.0, 0.0, 0.0), Y: (0.0, 0.730121, -0.683318), Z: (0.0, 0.683318, 0.730121)]",
+		"far": 22.0,
+		"near": 0.200000002980232,
+		"position": "(5.6, 8.1, 28.2)",
+		"projection": "orthographic",
+		"size": 7.30000019073486,
+		"viewport": [
+			1280,
+			960
+		]
+	},
+	"canopy_instances": 47,
+	"captures": {
+		"A_restored": "727b775bae3c8c18733c875f9de28f9dd76e9c8f19c6480614d275a43fa7d579",
+		"A_tabs": "727b775bae3c8c18733c875f9de28f9dd76e9c8f19c6480614d275a43fa7d579",
+		"B_clipped": "6e3fec895c899aac6d04a7b1555173a1d1c1a7ffc1d2ebb4bd80a13053e0a6f5",
+		"B_masks_form_cast_max": "434a76829b2b63749dc7aca33e2b073896ff0c55e3d6ec228793f1a8a42cd9e6",
+		"B_no_cast": "fa049e64e9effa3b8a123084b70000b243e1c4d9fd05b879489d5d8b77bd025d",
+		"B_receiver_normal_control": "4287dca40e17448f7564472c74ac22d6ceb83ad5c557bb92996d5feae634c4de",
+		"B_uncut": "47fd9d78692d2a84e885b47c50c2e6f048448998c4ec137026f14e014f6d3be3"
+	},
+	"cast_changes_real_render": true,
+	"device": "llvmpipe (LLVM 19.1.7, 256 bits)",
+	"geometry_after": "8d818e9baf0366fdf334ab8e53a4e8503820b8b13e25c9b664e6fed962dff813",
+	"geometry_before": "8d818e9baf0366fdf334ab8e53a4e8503820b8b13e25c9b664e6fed962dff813",
+	"geometry_during": "8d818e9baf0366fdf334ab8e53a4e8503820b8b13e25c9b664e6fed962dff813",
+	"geometry_pose_camera_unchanged": true,
+	"material_identity_restored": true,
+	"pixel_exact_A_restore": true,
+	"proxy": {
+		"all_retained_original_vertices_unchanged": true,
+		"closed_volume_claimed": false,
+		"contact_edges": 244,
+		"crossed_triangles": 244,
+		"cut_u": 0.025,
+		"exact_terrain_conformity_claimed": false,
+		"fully_removed": 99,
+		"high_peak_and_retained_crop_endpoints_unchanged": true,
+		"max_sampled_contact_edge_gap_world": 0.00421453835883434,
+		"missing_high_u_vertices": 0,
+		"missing_retained_vertices": 0,
+		"new_contact_vertices": 488,
+		"proxy_triangles": 475,
+		"retained_original_vertex_occurrences": 830,
+		"source_triangles": 520,
+		"verified_high_u_vertex_occurrences": 750
+	},
+	"proxy_changes_real_render": true,
+	"renderer": "gl_compatibility",
+	"unknown_shader_atomic_rejection": true
+}

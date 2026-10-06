@@ -49,4 +49,11 @@ static func build(vertices: PackedVector3Array, colors: PackedColorArray, ground
 			if is_finite(h):max_edge_gap=maxf(max_edge_gap,absf(point.y-h))
 	var arrays:=[];arrays.resize(Mesh.ARRAY_MAX);arrays[Mesh.ARRAY_VERTEX]=output
 	var mesh:=ArrayMesh.new();mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,arrays)
-	return {"ok":true,"mesh":mesh,"report":{"source_triangles":vertices.size()/3,"proxy_triangles":output.size()/3,"fully_removed":removed,"crossed_triangles":crossed,"new_contact_vertices":inserted,"retained_original_vertex_occurrences":retained,"contact_edges":contact_edges.size(),"max_sampled_contact_edge_gap_world":max_edge_gap,"cut_u":FOOT_U,"all_retained_original_vertices_unchanged":true,"high_peak_and_retained_crop_endpoints_unchanged":true,"exact_terrain_conformity_claimed":false,"closed_volume_claimed":false}}
+	var high_count:=0;var missing_high:=0;var missing_retained:=0
+	for i in range(vertices.size()):
+		if colors[i].g*4.0>=FOOT_U and not output.has(vertices[i]):missing_retained+=1
+		if colors[i].g*4.0>=0.14:
+			high_count+=1
+			if not output.has(vertices[i]):missing_high+=1
+	if missing_high>0 or missing_retained>0:return {"ok":false,"error":"Retained source vertex was lost","missing_high":missing_high,"missing_retained":missing_retained}
+	return {"ok":true,"mesh":mesh,"report":{"source_triangles":vertices.size()/3,"proxy_triangles":output.size()/3,"fully_removed":removed,"crossed_triangles":crossed,"new_contact_vertices":inserted,"retained_original_vertex_occurrences":retained,"verified_high_u_vertex_occurrences":high_count,"missing_high_u_vertices":missing_high,"missing_retained_vertices":missing_retained,"contact_edges":contact_edges.size(),"max_sampled_contact_edge_gap_world":max_edge_gap,"cut_u":FOOT_U,"all_retained_original_vertices_unchanged":true,"high_peak_and_retained_crop_endpoints_unchanged":true,"exact_terrain_conformity_claimed":false,"closed_volume_claimed":false}}

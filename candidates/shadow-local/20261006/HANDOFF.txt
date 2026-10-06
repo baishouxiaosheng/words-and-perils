@@ -1,0 +1,49 @@
+Independent ridge shadow checkpoint, 2026-10-06
+
+What is ready
+- Self-contained real source fixture: 568 rendered ground triangles, 520 visible mountain triangles from source groups 9/10, and 47 original MultiMesh canopy instances. Exact public source hashes are in fixture/SOURCE_PINS.json. Additional triangles from the same original ground chunk support CPU terrain-height queries only.
+- A_tabs / B_uncut / B_clipped / B_no_cast / receiver-normal regression control / A_restored at identical geometry, pose and camera. Accepted functional run: evidence/20261006T202044.115475Z.
+- One shader palette, max(form, cast) evaluated once, transition saturation applied once with endpoint clamps. Actual GPU overlap test: 1,109 interior pixels, maximum RGB difference from existing form shadow = 0. No dark stacking.
+- Mountain foot endpoints are separately mixed from rock/grass, form=mix(rock_form,0,j), then cast is combined once. Terrain normals are not forged.
+- Shadow-only proxy clips linearly at u=4*COLOR.g=.025. New contact endpoints sample the original terrain triangles. 99 entire low source faces are removed; clipped triangulation has 475 faces. All 830 retained original vertex occurrences are present unchanged, including all 750 high-u>=.14 occurrences. Visible mountains/ground and tree poses are unchanged.
+- Measured contact-edge sample error 0.00421454 world units (15 interior samples per edge), about 0.405 vertical pixels at this camera, or 0.346 of the far cascade's bias-reference texel estimate. This is an approximation, not an exact contact bound or watertight-volume claim. Retained original crop endpoints are unchanged; low clipped portions intentionally differ in the shadow-only proxy.
+- Correct inverse-transpose MultiMesh instance normal matrix in vertex(), plus MODELVIEW_NORMAL_MATRIX=mat3(VIEW_MATRIX)*Nw. VERTEX and instance poses are unchanged. A deliberately missing receiver-normal assignment is retained as a same-pose diagnostic PNG; this is 47-tree ridge coverage, not the former 117-tree SouthWatch result.
+- Scoped reversible material transaction: preflight unknown shader/material overlay/multiple surfaces/next pass; reject before mutation. No StandardMaterial3D/city or arbitrary textured shader is flattened. Dedicated receiver/caster layers, one shadow sun; prior lights exclude BOTH dedicated bits. Original static ground contact field is absent from the B shader and restored through original material identity on uninstall.
+
+What is not ready
+- Some light-facing mountain facets retain thin self-shadow stripes. The u=.025 cut removes the outer phantom skirt loop but does not establish complete visual acceptance. No default installation is recommended yet.
+- SouthWatch manor/production pieces/117 trees, water-edge saturation, city multi-material adaptation, camera movement, whole-Main integration, far-view visual quality, native v28 and target GPU performance remain untested here.
+- This code was newly implemented from verified public source; the Library six-source ZIP was NOT recovered on this executor. Two official transfer attempts returned "library file transfer failed: download failed". Do not describe this as recovered Library content.
+
+Validation
+- Godot 4.6.3 official, GL Compatibility, Xorg GLX llvmpipe; no engine/script/shader errors in final run. Known GLX VSync warning preserved verbatim. Xorg device-discovery DBus messages are also retained in display logs; no display error is rewritten as a passed engine check.
+- Final run: 23.2723s; 514.10MiB maximum owned-engine RSS; 917.78MiB cgroup peak; +456.73MiB cgroup over run baseline. Physical environment is 16GiB, explicitly capped by guard accounting at effective 8GiB, reserve>=512MiB, additional<=1024MiB, timeout<=120s. Single engine and owned executable/parent/start-time signal checks.
+- Geometry/pose/camera fingerprint unchanged through A/B/restored; original material identities restored; A/restored PNGs and raw pixels exactly identical; unknown shader rejection is atomic.
+- Fixed near-ridge green ROI: uncut-to-no-cast difference >4 levels affects 8,817 pixels; clipped affects 1,826; 7,081 changed pixels return within one level of no-cast. These are measured image changes, not a classification of every residual pixel as a defect.
+- Current shaders use linear radiance in custom light(): decode(c), regardless of OUTPUT_IS_SRGB, because the renderer encodes the light accumulation. Sending encoded c caused rejected washed-out images in an earlier run.
+- Only one documented-default bias comparison was made (.025/1.0 preliminary -> .1/2.0 defaults). Camera, 2048 atlas, 2 splits+blend, and depth setting remained fixed. This comparison was not declared an acne fix.
+
+Run in this cloud environment
+  cd candidates/shadow-local/20261006
+  python3 tests/run.py
+  python3 tests/analyze.py evidence/<new run directory>
+The fixture is already included; rebuilding/restoring the full game is unnecessary for this test. Optional tests/build_fixture.py only selects the same verified public source triangles after the existing repository restore chain has run; it is not a terrain generator or a new full restore tool.
+run.py launches its owned Xorg and Godot within the SAME invocation/IPC namespace, then stops the owned display. A display created in an earlier sandbox invocation produced BadShmSeg and was rejected. EGL was not used as a fallback. Every run uses a new evidence directory and before/after input hashes.
+
+Evidence chronology
+- 201130: blocked on missing ground query support at a clipped boundary; original visible triangle crop unchanged when support was added.
+- 201212: CPU proxy/source checks pass, no rendering acceptance.
+- 201221: screenshot invariants pass but X11 shared-memory errors -> strict run failure; never an accepted rendering run.
+- 201324: same-invocation display resolves X11 errors; functional pass, visual rejection for double color encoding / old light influence.
+- 201505: palette and layer corrections; functional pass, outer skirt loop gone; remaining interior acne explicitly recorded.
+- 201749: single documented-default bias control, still some interior acne.
+- 202044: final source vertex retention assertions plus complete identical-camera image series and pixel analysis.
+
+Source/publication boundaries
+Fixed public base 5eef3816f30cc2651d2ac47c95d3fcd9f03e3eda. The existing restore_repository.py recovered and verified public v28 source/resources, whose main.gd differs from the Git transport entry as recorded in environment_receipt.json. That local restored main.gd change is NOT committed on this candidate.
+Candidate commits contain only candidates/shadow-local/20261006/. No main installation, README mutation, Actions, visibility/default-branch change or history rewrite. Physics, navigation, saves and public source identities are not altered. The public mesh identity is 68931983818b291b07022477029d4ad4761aceac0c670463fbe742b6a2ac986c; no native-v28 identity is asserted.
+
+Engine references
+https://docs.godotengine.org/en/4.6/classes/class_light3d.html
+https://raw.githubusercontent.com/godotengine/godot/4.6.3-stable/drivers/gles3/shaders/scene.glsl
+https://raw.githubusercontent.com/godotengine/godot/4.6.3-stable/drivers/gles3/rasterizer_scene_gles3.cpp

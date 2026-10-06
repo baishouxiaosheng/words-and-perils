@@ -1,0 +1,13 @@
+OWNED_GODOT_GUARD {"event": "baseline", "elapsed_s": 0.0001, "utc_epoch": 1791317490.444881, "cgroup_current": 401600512, "physical_cgroup_limit": 17179869184, "effective_budget": 8589934592, "additional_budget": 1073741824, "stop_threshold": 1475342336, "reserve_bytes": 536870912, "timeout_s": 120.0, "executable": "/opt/godot/4.6.3/Godot_v4.6.3-stable_linux.x86_64"}
+OWNED_GODOT_GUARD {"event": "owned_launched", "elapsed_s": 0.001, "utc_epoch": 1791317490.4457924, "owned_pid": 987, "identity": ["/opt/godot/4.6.3/Godot_v4.6.3-stable_linux.x86_64", 986, 50252]}
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.
+     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:364)
+OpenGL API 4.5 (Core Profile) Mesa 25.0.7-2+deb13u1 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 19.1.7, 256 bits)
+
+ERROR: { "ok": false, "error": "No frozen ground triangle at clipped contact", "triangle": 97 }
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] fail (res://tests/capture.gd:14)
+       [1] run (res://tests/capture.gd:94)
+OWNED_GODOT_GUARD {"event": "exited", "elapsed_s": 12.8873, "utc_epoch": 1791317503.3320355, "child_exit": 1, "cgroup_current": 410337280, "owned_pid": 987}

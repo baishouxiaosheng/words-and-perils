@@ -51,7 +51,9 @@ func install(root:Node3D, nodes:Array, shadow_mesh:ArrayMesh) -> bool:
 	root.add_child(proxy)
 	sun=DirectionalLight3D.new();sun.name="SinglePaletteShadowSun"
 	sun.light_cull_mask=RECEIVER;sun.shadow_caster_mask=CASTER
-	sun.shadow_enabled=true;sun.shadow_bias=0.025;sun.shadow_normal_bias=1.0
+	# Documented Godot defaults, replacing the preliminary half-default offset.
+	# This does not claim to solve all self-shadow acne; camera/depth stay fixed.
+	sun.shadow_enabled=true;sun.shadow_bias=0.1;sun.shadow_normal_bias=2.0
 	sun.directional_shadow_mode=DirectionalLight3D.SHADOW_PARALLEL_2_SPLITS
 	sun.directional_shadow_split_1=0.35;sun.directional_shadow_blend_splits=true
 	root.add_child(sun);sun.look_at(-Vector3(-.55,.74,.39).normalized(),Vector3.UP)

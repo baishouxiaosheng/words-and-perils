@@ -1,0 +1,32 @@
+{
+  "selected_environment": "ccarenv_b64_Y2NhcmVudl9lMjcyYWFmYjQ4ODA4MTkxYTQyYjVlMGVmNzQ2OGIzZA",
+  "initial_checkout_sha": "1365cd497cd5591db024e12f0733845fe5571425",
+  "fixed_public_base": "5eef3816f30cc2651d2ac47c95d3fcd9f03e3eda",
+  "candidate_branch": "candidate/shadow-local-20261006",
+  "engine_version": "4.6.3.stable.official.7d41c59c4",
+  "engine_sha256": "f64d4ed19fc9df9440321653fcc80df8c6e365ba7b6de0a29e2cfa9fa71bfeb3",
+  "physical_cgroup_bytes": 17179869184,
+  "effective_budget_bytes": 8589934592,
+  "reserve_bytes": 536870912,
+  "additional_small_project_bytes": 1073741824,
+  "timeout_s": 120,
+  "restored_public_main_sha256": "2b05911a1bcde48b10a54e8d1475ef62c66aea84ff8c7f5b7cdc3052eaf9fc93",
+  "git_base_main_sha256": "e346071dd0149805f96ed53d18fda4f28223354b121fb6831f66c1c7b862eec4",
+  "restored_main_local_diff_is_existing_restore_output_not_candidate_commit": true,
+  "README_bytes": 1,
+  "native_source_identity_claimed": false,
+  "library_input": {
+    "id": "libfile_5b141764a3c48191bb402dac502fb144",
+    "version": 0,
+    "expected_bytes": 8631,
+    "expected_sha256": "92fec3f31a431c695f09ab198e7238f49d4a78188c3c19771b8fa81614df97cb",
+    "local_bytes_recovered": false,
+    "official_transfer_attempts": 2,
+    "returned_error": "library file transfer failed: download failed"
+  },
+  "no_paid_api_calls": true,
+  "primary_engine_sources": [
+    "https://docs.godotengine.org/en/4.6/classes/class_light3d.html",
+    "https://raw.githubusercontent.com/godotengine/godot/4.6.3-stable/drivers/gles3/shaders/scene.glsl"
+  ]
+}

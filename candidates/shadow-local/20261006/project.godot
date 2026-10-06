@@ -1,0 +1,16 @@
+config_version=5
+[application]
+config/name="Words and Perils - independent ridge shadow evidence"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=960
+window/size/window_width_override=1280
+window/size/window_height_override=960
+window/vsync/vsync_mode=0
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+lights_and_shadows/directional_shadow/size=2048
+lights_and_shadows/directional_shadow/16_bits=false
+anti_aliasing/quality/msaa_3d=2

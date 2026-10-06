@@ -1,0 +1,7 @@
+INDEPENDENT SHADOW CANDIDATE - NOT IN DEFAULT RESTORE CHAIN
+Base: 5eef3816f30cc2651d2ac47c95d3fcd9f03e3eda, restored by existing public restore_repository.py.
+Library partial ZIP official helper returned "library file transfer failed: download failed" twice. No ZIP bytes recovered; all candidate code is newly authored against public sources.
+Fixture: exact selected public terrain 568 triangles, ridge groups 9/10 520 triangles, 47 source canopy instances with shoreline support heights. All input hashes are in fixture/SOURCE_PINS.json.
+Source checkpoint only. Runtime and visual acceptance PENDING.
+Original visible triangles, transforms, physics, navigation, saves and source identity are untouched.
+No main.gd installation, default branch change, GitHub Actions, visibility or history change.

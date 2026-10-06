@@ -1,0 +1,39 @@
+{
+  "schema": "wordsandperils_provider_presets_candidate/v1",
+  "status": "unadopted_successor_candidate",
+  "parent_api_manifest_sha256": "300676b3eda9bbb61b72b71ae3d2bfa5e52f70dcd969762daa82c7a9cb701e8f",
+  "base_main_sha256": "48d166879987b7285c21ce2bf7388a37654f1710131db851dfc0f70b0d6deb42",
+  "files": [
+    {
+      "path": "view/dual_api_settings/client.gd",
+      "bytes": 13777,
+      "sha256": "79751f2bdebac0305a773fc81793d936fb7538e59d466fb742249831a4ca2d83",
+      "before_sha256": "5d84992c2f3a7e28f02795511b0b0c79bc24f2ae0e0cbf0e5a8b4ec8f2db7ffc"
+    },
+    {
+      "path": "view/dual_api_settings/panel.gd",
+      "bytes": 20121,
+      "sha256": "978d6d4b3895b01516da9184fe0b95b56873acb9b4bc2cab78265a077c183183",
+      "before_sha256": "3c7c0298e79bf334dae4d7dc67d334f11e0d46aee1ed145672ae7bc6a1853c75"
+    },
+    {
+      "path": "view/dual_api_settings/provider_presets.gd",
+      "bytes": 2617,
+      "sha256": "75a34b77be51992a2b4eaefd8c562b0349e0d38ed0cb4943b76cf8a8c863f16e",
+      "before_sha256": null
+    }
+  ],
+  "required_unchanged_files": {
+    "main.gd": "48d166879987b7285c21ce2bf7388a37654f1710131db851dfc0f70b0d6deb42",
+    "view/dual_api_settings/controller.gd": "214ccf927d266317a7fe037c18f5d1d6f6592fe4c49e7059485969735f05063a",
+    "view/ui_typography/style.gd": "0ce716c357b80da23063ae8f8d678a2c4c022f58df63c34b14ad802f9b90e565"
+  },
+  "scope": "Three-file provider settings/wire delta only; no Main, style, authority, save or data changes",
+  "credential_persistence": "session_memory_only",
+  "provider_protocol": "OpenAI-compatible Chat Completions JSON only",
+  "component_assertions": 115,
+  "component_engine_exit": 0,
+  "component_strict_warning_status": "held: cloud llvmpipe V-Sync warning persists; not a clean-warning pass",
+  "local_full_main_successor": "not_yet_run",
+  "live_provider_tested": false
+}

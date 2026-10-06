@@ -1,0 +1,51 @@
+{
+  "schema": "dual_api_real_main_restart_attachment/v1",
+  "status": "test_only_unexecuted_cloud",
+  "test": {
+    "path": "tests/dual_api_settings/test_main_restart.gd",
+    "bytes": 16154,
+    "sha256": "3025d3d30b8506236c6c0b9c13ca74a67a4e907c7a6149824760b7331183ca27"
+  },
+  "production_manifest_sha256": "300676b3eda9bbb61b72b71ae3d2bfa5e52f70dcd969762daa82c7a9cb701e8f",
+  "stages": [
+    "write",
+    "read"
+  ],
+  "actual_engine_processes_required": 2,
+  "requires_new_nonce_owned_isolated_user_directory": true,
+  "refuses_prior_coast_save_and_sidecar": true,
+  "old_fixtures_touched": false,
+  "production_changed": false,
+  "network_mode": "mandatory successfully installed mock only; fail closed before any configuration on installation failure",
+  "native_private_identity_fixtures": false,
+  "inputs": [
+    "complete validated public project with accepted five production source hashes",
+    "FOGBANK_API_TEST_USER_DIR matching OS.get_user_data_dir exactly",
+    "FOGBANK_API_RESTART_NONCE same new 16-80 ASCII identifier for both stages",
+    "FOGBANK_API_RESTART_STAGE=write then read",
+    "reader only: FOGBANK_API_RESTART_RECEIPT_SHA256 from verified exited writer"
+  ],
+  "outputs": [
+    "user://api_restart_receipt_<nonce>.json",
+    "user://api_restart_write_<nonce>.json",
+    "user://api_restart_read_<nonce>.json",
+    "isolated real Coast save and narration sidecar"
+  ],
+  "runner_requirements": [
+    "writer fully exited zero with clean strict logs and final ok report before reader starts",
+    "record both distinct actual PIDs and process start/exit evidence",
+    "independently hash writer receipt then bind reader expected SHA",
+    "pin before/after five production and public authority/protection files",
+    "missing final report, any runtime error or warning, wrong process/nonce/hash is failure"
+  ],
+  "static_review": {
+    "reviewed": true,
+    "engine_executed": false,
+    "one_issue_fixed": "mock install failure now immediately exits before configuring or sending",
+    "JSON_canonical_equality_preserved": true
+  },
+  "readme": {
+    "path": "README.md",
+    "sha256": "16f40e0056213c8934eec58d401eb660a9f7e2bf8dbc16cfa245a52bf025e40c"
+  }
+}

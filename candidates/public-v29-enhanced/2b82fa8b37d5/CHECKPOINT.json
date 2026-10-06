@@ -1,0 +1,94 @@
+{
+  "schema": "words-and-perils-source-checkpoint/v1",
+  "status": "INCOMPLETE_CANDIDATE_NOT_ADOPTED",
+  "title": "public v29 试玩增强版（API设置/镜头/选择反馈/离线移动）",
+  "base_public_commit": "f630fc4ff92143f7add7d36907c317d709600e61",
+  "source_files": [
+    {
+      "path": "main.gd",
+      "size": 184920,
+      "sha256": "6e2f62e76db2f4a64a9bbdf4d348a32588d1cb991e6d869bff4c730e12e61e5c",
+      "public_v28_before_sha256": "2b05911a1bcde48b10a54e8d1475ef62c66aea84ff8c7f5b7cdc3052eaf9fc93"
+    },
+    {
+      "path": "view/dual_api_settings/client.gd",
+      "size": 13777,
+      "sha256": "79751f2bdebac0305a773fc81793d936fb7538e59d466fb742249831a4ca2d83",
+      "public_v28_before_sha256": null
+    },
+    {
+      "path": "view/dual_api_settings/controller.gd",
+      "size": 1022,
+      "sha256": "214ccf927d266317a7fe037c18f5d1d6f6592fe4c49e7059485969735f05063a",
+      "public_v28_before_sha256": null
+    },
+    {
+      "path": "view/dual_api_settings/panel.gd",
+      "size": 24541,
+      "sha256": "932dc0c71d5d95c966e961ea406d4ed8b971a5d88d7e125a42223f2f20d34c69",
+      "public_v28_before_sha256": null
+    },
+    {
+      "path": "view/dual_api_settings/provider_presets.gd",
+      "size": 3659,
+      "sha256": "26520871eaecc153258e036926474ade94828fb260df578bc2f3c10f1bf70dc5",
+      "public_v28_before_sha256": null
+    },
+    {
+      "path": "view/tabletop_interaction/offline_move_demo.gd",
+      "size": 7620,
+      "sha256": "7ec81eca42e9e1d51d63a6c0e3d379a786caa9b18e6e40aa9159abab34629b4b",
+      "public_v28_before_sha256": null
+    },
+    {
+      "path": "view/tabletop_interaction/selection_motion.gd",
+      "size": 13375,
+      "sha256": "60835b0672a4426faf747c57e6a21617ebbf87e08c68b8cb3244175f813448e7",
+      "public_v28_before_sha256": null
+    },
+    {
+      "path": "view/tabletop_interaction/wasd_camera_pan.gd",
+      "size": 6941,
+      "sha256": "c26abf87dd3ff1d0b76b318a6887fa5ca9c6342571d128f0ef2662d9a6a29ef0",
+      "public_v28_before_sha256": null
+    },
+    {
+      "path": "view/ui_typography/style.gd",
+      "size": 14899,
+      "sha256": "0ce716c357b80da23063ae8f8d678a2c4c022f58df63c34b14ad802f9b90e565",
+      "public_v28_before_sha256": null
+    }
+  ],
+  "source_count": 9,
+  "source_bytes": 270754,
+  "helper": {
+    "path": "tools/restore_v29.py",
+    "bytes": 28323,
+    "sha256": "438a6230a147437dcb8f359519f7e4bca9a82e67fe816a88aec31e6784314b84"
+  },
+  "payload": {
+    "path": "updates/v29/source_delta.zip.b64",
+    "encoded_bytes": 105992,
+    "encoded_sha256": "6e33c6919f372a8aff7cc204d556beaeb9e53a747d39fd00453060e9fbbe7bfa",
+    "zip_bytes": 79492,
+    "zip_sha256": "2b82fa8b37d5681a6bafa3821956cba8bca58807c66bf35bc127f1a1873cebd3"
+  },
+  "completed_preparation_checks": {
+    "isolated_fixture_tests": 14,
+    "mixed_states": 1024,
+    "write_faults": 20,
+    "unknown_source_refusals": 13,
+    "malformed_zip_refusals": 14,
+    "unchanged_public_validator_contract": true
+  },
+  "pending": [
+    "Measured final literal script closure",
+    "Complete frozen release control graph",
+    "Independent actual restoration and idempotence",
+    "Same-version four-gate acceptance and true adoption receipt"
+  ],
+  "restore_ready": false,
+  "default_activation": false,
+  "native_canonical_version": "v28 unchanged",
+  "instruction": "This source checkpoint is incomplete and must not be treated as a runnable restore release. Use the later complete candidate manifest for isolated QA."
+}

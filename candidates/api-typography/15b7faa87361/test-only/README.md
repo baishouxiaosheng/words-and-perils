@@ -1,0 +1,11 @@
+# Optional full-Main API regression test
+
+This is a separate test attachment, not a production patch. It has not been executed in the cloud. Run against the exact five-file candidate on a completely restored public v28 project with its original identity/Save validation intact.
+
+The test derives from the shipped `tests/runtime_ai/test_main_flow.gd`, replacing obsolete single-key panel setup with the real two-role modal. It adds hard boot assertions for actual world identity, both 1801-cell counts, production coast_release/v1 profile, real Coast board and public Bundle/catalog/source identity. No native private digest is embedded. It retains the original assessment/narration, duplicate/late/error response, actual Main save/load and pending-load checks. It adds modal Cancel/blank preservation, background end-turn blocking, and distinct role credential/model/endpoint assertions. All calls use the existing mock transport and `.invalid` endpoints. No external identity fixture or real Key is required.
+
+Set `FOGBANK_API_TEST_USER_DIR` to the exact isolated Godot user data directory already configured for this test project. The test refuses to run when it is missing or different from `OS.get_user_data_dir()`. Optionally set `FOGBANK_API_TEST_REPORT` to an absolute test output JSON path; otherwise it writes `user://api_full_main_results.json`. Never point it at normal player data.
+
+Place the test under its declared `tests/dual_api_settings/` path, then invoke the selected official Godot executable with `--path <isolated-project> --script res://tests/dual_api_settings/test_full_main_flow.gd`. Use the existing process/resource guard and capture stdout/stderr/exit code; script errors or missing final report are failures even if the engine returns zero. Do not change assertions to make an environment pass. Preserve the original source hashes and final production pins.
+
+Dependencies: the complete restored project and final five-file production candidate, `tests/ai_gm_http/mock_transport.gd`, and `core/ai_gm_rebuilt/canonical.gd`. No separate assets or private data are included here. This is not the broad actor/status/experimental-world matrix and does not certify physical IME, OS keyboard focus, rendering performance, or live-provider behavior.

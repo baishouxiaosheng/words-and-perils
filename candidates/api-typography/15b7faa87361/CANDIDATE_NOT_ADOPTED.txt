@@ -1,0 +1,62 @@
+API / TYPOGRAPHY CANDIDATE 15b7faa87361 — NOT ADOPTED
+
+This is an isolated test candidate. It does not change the repository's default
+restore entry, active distribution, README, or Actions configuration.
+
+Required base
+  Fully restore and verify public commit
+  f630fc4ff92143f7add7d36907c317d709600e61 into an isolated project directory.
+  The restored main.gd must have SHA-256:
+  2b05911a1bcde48b10a54e8d1475ef62c66aea84ff8c7f5b7cdc3052eaf9fc93
+  This is the restored Main, not the older recovery-base Main visible at the
+  repository root before restoration. A native/Library distribution is not a
+  substitute for this public base.
+
+Download this directory's payload.zip.b64, apply_candidate.py, manifest.json and
+this guide from one fixed, verified commit. Keep them together outside the game
+project. Use Python 3.10 or newer; only the standard library is required.
+
+Close the game/editor for the isolated target, then run:
+  python apply_candidate.py --project "<isolated-public-project>" --check
+  python apply_candidate.py --project "<isolated-public-project>" --apply
+  python apply_candidate.py --project "<isolated-public-project>" --check
+
+To return the five known source paths to the exact base:
+  python apply_candidate.py --project "<isolated-public-project>" --rollback
+
+The tool checks the frozen package, exact source preimages and protected public
+files before writing. The payload contains five production scripts, an exact
+Main preimage, the original production manifest and the readable Main patch.
+Only the five production paths are applied. Source bytes are preserved exactly.
+The API/typography candidate does not add actor/status upgrades, replace game
+authority data, migrate saves, or install font assets.
+
+The two longstanding public identity files and the entry Save guard remain
+unchanged. No credentials, saved API settings, user data or Library files are
+part of this package. The installer does not use Library helpers or xattrs.
+
+An already-applied candidate is a zero-write operation. Unknown changes are
+refused. Rollback removes only recognized added candidate files and restores
+the known Main preimage; it will not overwrite unrecognized user edits.
+Ordinary write failures are journaled and rolled back where the written images
+are still recognized. This is not a power-loss durability or concurrent-writer
+transaction guarantee. Do not run competing installers against the same target.
+
+Runtime test boundary
+  Use a new, isolated Godot user-data directory. Do not use existing journeys,
+  saved settings or real API credentials for background acceptance.
+  Any test-only attachment is separate from these five production files. Its
+  manifest states its own validation status. A supplied but unexecuted test is
+  not a passed FullMain, startup, scene, network or Windows acceptance result.
+  Formal adoption requires the separate acceptance decision after local tests.
+
+Do not rerun the base's default restorer over an applied candidate: the changed
+Main is intentionally outside the base manifest and will be refused. Roll back
+this candidate first if you want to verify the original public base again.
+
+Windows portability
+  This candidate tool uses forward-slash serialization only for trusted internal
+  relative Path objects. Untrusted archive names containing backslashes, drive
+  syntax, traversal or Windows aliases are refused. It does not modify or invoke
+  the older default restore helper; any base-restorer portability maintenance is
+  a separate change.

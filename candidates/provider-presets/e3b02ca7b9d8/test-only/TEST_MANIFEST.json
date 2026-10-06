@@ -1,0 +1,20 @@
+{
+  "schema": "provider_presets_main_test_attachment/v1",
+  "status": "unexecuted_cloud_test_only",
+  "source_test_sha256": "5fc46254c5f00f837ad2dc0bfbc07cfc91299e457ae5b472a7d764bed4434145",
+  "test": {
+    "path": "tests/dual_api_settings/test_provider_main_flow.gd",
+    "bytes": 21934,
+    "sha256": "25747efab215201a4ae0fa18b8906b1dd40d57d23da10f65ccae9acc1036a824"
+  },
+  "production_manifest_sha256": "e3b02ca7b9d8cdd29d73b2c08263f145264892028e5055ecb05bdfb84a373d3a",
+  "changes": "same actual Main flow; choose narration DeepSeek and decision OpenRouter through real preset UI, fail-closed mock installation, exact wire fields and endpoint/blank-key atomic refusal",
+  "existing_world_1801_profile_save_load_late_reply_assertions_kept": true,
+  "required_env": "FOGBANK_API_TEST_USER_DIR exact isolated directory",
+  "optional_env": "FOGBANK_API_TEST_REPORT new output file path",
+  "old_outputs_or_fixtures_overwritten": false,
+  "live_network_permitted": false,
+  "all_five_preset_wire_matrix_scope": "separate cloud mock component 115 assertions, not transferred as Main proof",
+  "requires_new_isolated_user_directory": true,
+  "expected_checks_if_complete": 70
+}

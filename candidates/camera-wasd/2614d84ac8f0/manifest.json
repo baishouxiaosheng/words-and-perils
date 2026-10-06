@@ -1,0 +1,62 @@
+{
+  "schema": "wordsandperils_wasd_camera_candidate/v1",
+  "status": "candidate_only_not_adopted",
+  "files": {
+    "view/tabletop_interaction/wasd_camera_pan.gd": {
+      "bytes": 6941,
+      "sha256": "c26abf87dd3ff1d0b76b318a6887fa5ca9c6342571d128f0ef2662d9a6a29ef0"
+    },
+    "patches/stable_v28_main.patch": {
+      "bytes": 500,
+      "sha256": "39bfac3bd23f26cb03c6fe0b2a46ea33c01f9e750beeb8be8ccd42fdb18bda61"
+    },
+    "patches/api_main.patch": {
+      "bytes": 500,
+      "sha256": "efbd11f3eaf2f3beeb905df49b965b3f06a7e68a07f5b8a1d943c9d11c382382"
+    },
+    "patches/actor_main.patch": {
+      "bytes": 514,
+      "sha256": "16d39b40073b7f41f5050c0cbbaf00d4c829f75ba4e3ee4ce0f19f1a876fc430"
+    },
+    "tests/camera_wasd/test_camera_wasd.gd": {
+      "bytes": 7738,
+      "sha256": "ebfca3cae07279ed2ab266c999d10c33b869cf82a6afe8c79c7d4998327acfae"
+    },
+    "README.txt": {
+      "bytes": 1445,
+      "sha256": "05c8b2b3cbd300633cf4730556946277bf3b0f7b569218f59099e08c69234207"
+    }
+  },
+  "choose_exactly_one_main_base": {
+    "public_v28": {
+      "main_before_sha256": "2b05911a1bcde48b10a54e8d1475ef62c66aea84ff8c7f5b7cdc3052eaf9fc93",
+      "main_after_sha256": "477f33df3ab2592824b6e251b3df7b5594667c466c7c5b1c14b1e76d4cd3381c",
+      "patch": "patches/stable_v28_main.patch",
+      "insertions": 1
+    },
+    "dual_api_model_p1": {
+      "main_before_sha256": "48d166879987b7285c21ce2bf7388a37654f1710131db851dfc0f70b0d6deb42",
+      "main_after_sha256": "b17a361b0ee8a1c671b90e2bd3a0d5774a373a66ecc618042d2bbf7c8f0aa32c",
+      "patch": "patches/api_main.patch",
+      "insertions": 1
+    },
+    "actor_status_a6de": {
+      "main_before_sha256": "bb15728f636f5d22a0d2f54b026468933246d073dfee59998fa78e2e54f3fa84",
+      "main_after_sha256": "6ca36a8b35d9b797f593ea500b2f5e08a2418fb22bda710180e0dc70f96c321b",
+      "patch": "patches/actor_main.patch",
+      "insertions": 1
+    }
+  },
+  "new_production_path_must_be_absent": "view/tabletop_interaction/wasd_camera_pan.gd",
+  "source_module_sha256": "c26abf87dd3ff1d0b76b318a6887fa5ca9c6342571d128f0ef2662d9a6a29ef0",
+  "production_changes": "One new presentation-only module plus one Main installation line; no hash-bound camera/world-view edits",
+  "world_authority_changed": false,
+  "native_small_checks": 207,
+  "native_small_strict_exit": 0,
+  "native_small_scope": "XZ mathematics, actual Node3D rig transform/globalY and generic blocked-context latch; no real Main or live focus/modal/window acceptance",
+  "native_small_input_freeze_sha256": "6d5e41b9092c0c1d640d53f75875d085d4bd919cbb4dac9ac564f7b84d9c62f8",
+  "actual_main_tested": false,
+  "live_ui_tested": false,
+  "native_full_game_or_visual_accepted": false,
+  "network_used": false
+}

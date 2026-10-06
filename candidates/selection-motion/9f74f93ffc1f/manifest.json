@@ -1,0 +1,103 @@
+{
+  "schema": "selection-motion-public-candidate/v1",
+  "status": "candidate_only_runtime_and_native_not_run",
+  "module_sha256": "60835b0672a4426faf747c57e6a21617ebbf87e08c68b8cb3244175f813448e7",
+  "fixture_assertions": 31,
+  "fixture_sha256": "5b18b36d28c7f7a4692049745554d8ae47bb6ad0295e0074eb2583f369301559",
+  "main_patches": {
+    "stable_v28": {
+      "before_sha256": "2b05911a1bcde48b10a54e8d1475ef62c66aea84ff8c7f5b7cdc3052eaf9fc93",
+      "suggested_after_sha256": "6a07c958efbf32d79b8a09c7dbbc83d9c40dd9c5be69a4a59ddb310975ef0bc2",
+      "patch": "patches/stable_v28_main.patch",
+      "insertions": 3,
+      "source_modified": false
+    },
+    "stable_v28_after_wasd": {
+      "before_sha256": "477f33df3ab2592824b6e251b3df7b5594667c466c7c5b1c14b1e76d4cd3381c",
+      "suggested_after_sha256": "2b1d07b7dbf86b28609b72cf0a605e87984077bdbfd5fb13d653e45dd0631630",
+      "patch": "patches/stable_v28_after_wasd_main.patch",
+      "insertions": 3,
+      "source_modified": false
+    },
+    "api": {
+      "before_sha256": "48d166879987b7285c21ce2bf7388a37654f1710131db851dfc0f70b0d6deb42",
+      "suggested_after_sha256": "a1c82944c07590289bb959f72fd279a191f7b4e16b522003cd21199e7ff53b7a",
+      "patch": "patches/api_main.patch",
+      "insertions": 3,
+      "source_modified": false
+    },
+    "api_after_wasd": {
+      "before_sha256": "b17a361b0ee8a1c671b90e2bd3a0d5774a373a66ecc618042d2bbf7c8f0aa32c",
+      "suggested_after_sha256": "d759e33bbe942f9935a72cbf0d99495296259311bc0f221cb642b3a8ea85939a",
+      "patch": "patches/api_after_wasd_main.patch",
+      "insertions": 3,
+      "source_modified": false
+    },
+    "actor": {
+      "before_sha256": "bb15728f636f5d22a0d2f54b026468933246d073dfee59998fa78e2e54f3fa84",
+      "suggested_after_sha256": "c6fa89cb2180ff76da5d7822cc560f2c48823748b2c335324b1ee35b996bbbd9",
+      "patch": "patches/actor_main.patch",
+      "insertions": 3,
+      "source_modified": false
+    },
+    "actor_after_wasd": {
+      "before_sha256": "6ca36a8b35d9b797f593ea500b2f5e08a2418fb22bda710180e0dc70f96c321b",
+      "suggested_after_sha256": "888084dea50eb0e6b333c60ec93b483316eeab4c74709357ea80e19e38527dcc",
+      "patch": "patches/actor_after_wasd_main.patch",
+      "insertions": 3,
+      "source_modified": false
+    }
+  },
+  "test_manifest": "TEST_MANIFEST.json",
+  "runtime_input_bytes": 31242,
+  "files": {
+    "README.txt": {
+      "sha256": "e0aa0b8d6228cda9977677bf37aba2a928a7b33d9a33a35eafe6ad4530451834",
+      "bytes": 1377
+    },
+    "TEST_MANIFEST.json": {
+      "sha256": "c3666f0747d957742b5ccfbefdd90ef45933f37dda6321e5986ea489c291a634",
+      "bytes": 2813
+    },
+    "patches/actor_after_wasd_main.patch": {
+      "sha256": "0c68898b6a07206b381b2ca4381c05dfbf437759dcc90c796537238766468a6f",
+      "bytes": 1255
+    },
+    "patches/actor_main.patch": {
+      "sha256": "2b0061d0dc511fb42a69bb1560d94e6cebadd55cb09de7b3379379b23232e0fb",
+      "bytes": 1234
+    },
+    "patches/api_after_wasd_main.patch": {
+      "sha256": "6f3f4d2c4e5cc1e509db22c15af0bc54f89a3201db87900606d8e00d53b9d548",
+      "bytes": 1255
+    },
+    "patches/api_main.patch": {
+      "sha256": "b8d893f7194040bab5211f9f6975dc5e2ec9b6e450d1bdc0500057caabfc3de8",
+      "bytes": 1220
+    },
+    "patches/stable_v28_after_wasd_main.patch": {
+      "sha256": "a8df443556ccc49932c447dd00868917f050fca7d83582e2665cbf062477d5ea",
+      "bytes": 1255
+    },
+    "patches/stable_v28_main.patch": {
+      "sha256": "e811ea551948dc666f07892a15c058cb10973c9c9c247ff72b61834ae3badaee",
+      "bytes": 1220
+    },
+    "tests/project.godot": {
+      "sha256": "4a9b254468b475701eedb79d819ee9a097bf925f774861c9769cd31bbe64b95c",
+      "bytes": 190
+    },
+    "tests/selection_motion/test_selection_motion.gd": {
+      "sha256": "5b18b36d28c7f7a4692049745554d8ae47bb6ad0295e0074eb2583f369301559",
+      "bytes": 9631
+    },
+    "tests/support/attention_catalog.gd": {
+      "sha256": "828b6f1250d3bab65a6749887f29b840f6f3407e6bd5eb509b7d00d266cb2aee",
+      "bytes": 8046
+    },
+    "view/tabletop_interaction/selection_motion.gd": {
+      "sha256": "60835b0672a4426faf747c57e6a21617ebbf87e08c68b8cb3244175f813448e7",
+      "bytes": 13375
+    }
+  }
+}

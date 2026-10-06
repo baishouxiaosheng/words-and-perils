@@ -1,0 +1,26 @@
+--- a/main.gd
++++ b/main.gd
+@@ -266,6 +266,7 @@
+ 	runtime_ai.intention_ready.connect(_on_actor_intention_ready)
+ 	make_theme()
+ 	build_ui()
++	add_child(preload("res://view/tabletop_interaction/selection_motion.gd").new(self))
+ 	# Default startup replaces this initial legacy board before the first frame.
+ 	# Build its terrain only when requested, or if the coast cannot be opened.
+ 	var legacy_start := startup_legacy or OS.has_environment("FOGBANK_LEGACY_START") or "--legacy-start" in OS.get_cmdline_user_args()
+@@ -1157,6 +1158,7 @@
+ 	latest_dialogue.tooltip_text = text
+ 
+ func refresh_world(animate_changes: bool = false) -> void:
++	if has_node("SelectionMotion"): get_node("SelectionMotion").cancel()
+ 	if playtest_mode:
+ 		refresh_playtest_world(animate_changes)
+ 		return
+@@ -2433,6 +2435,7 @@
+ 	update_playtest_controls()
+ 
+ func refresh_playtest_world(animate_changes: bool = false) -> void:
++	if has_node("SelectionMotion"): get_node("SelectionMotion").cancel()
+ 	var state: Dictionary = playtest.state_copy()
+ 	if not state.get("actors") is Dictionary or not state.actors.has("actor_player"):
+ 		show_world_load_error(WorldBundle.last_error if not WorldBundle.last_error.is_empty() else "Invalid adventure state");return

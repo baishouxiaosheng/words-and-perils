@@ -1,0 +1,29 @@
+{
+  "schema": "camera_wasd_real_main_test_attachment/v1",
+  "status": "source_frozen_not_executed",
+  "camera_candidate_manifest_sha256": "2614d84ac8f0843ed74f3ddf5749977545b6ba16fb80754e190d52c6e6f84c0a",
+  "required_production_files": {
+    "main.gd": "b17a361b0ee8a1c671b90e2bd3a0d5774a373a66ecc618042d2bbf7c8f0aa32c",
+    "view/dual_api_settings/client.gd": "79751f2bdebac0305a773fc81793d936fb7538e59d466fb742249831a4ca2d83",
+    "view/dual_api_settings/controller.gd": "214ccf927d266317a7fe037c18f5d1d6f6592fe4c49e7059485969735f05063a",
+    "view/ui_typography/style.gd": "0ce716c357b80da23063ae8f8d678a2c4c022f58df63c34b14ad802f9b90e565",
+    "view/dual_api_settings/provider_presets.gd": "26520871eaecc153258e036926474ade94828fb260df578bc2f3c10f1bf70dc5",
+    "view/dual_api_settings/panel.gd": "932dc0c71d5d95c966e961ea406d4ed8b971a5d88d7e125a42223f2f20d34c69",
+    "view/tabletop_interaction/wasd_camera_pan.gd": "c26abf87dd3ff1d0b76b318a6887fa5ca9c6342571d128f0ef2662d9a6a29ef0"
+  },
+  "test": {
+    "path": "tests/camera_wasd/test_main_events.gd",
+    "bytes": 10816,
+    "sha256": "478c31d1670d5e79e1fc61a6b6490fd7df2857845b7b7933a392d094831a8f0f"
+  },
+  "required_env": "FOGBANK_WASD_TEST_USER_DIR exact fresh isolated user directory",
+  "optional_env": "FOGBANK_WASD_TEST_REPORT new output JSON file",
+  "expected_checks_if_complete": 67,
+  "scope": "actual public1801 Main, installed production controller, Input.parse_input_event and actual GUI focus/windows with controlled dt",
+  "controlled_dt": "only controller autonomous _process disabled; same production _process is called at0.25s and reads real Input/GUI state",
+  "headless_supported_by_official_source": true,
+  "headless_focus_limitation": "backend always reports OS window focused; focus-out signal is injected, not a true OS app switch",
+  "visual_or_os_physical_keyboard_claim": false,
+  "network_calls_permitted": 0,
+  "new_framework_or_runner": false
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "model_presets_main_test_attachment/v1",
+  "status": "unexecuted_actual_main_test_only",
+  "source_test_sha256": "25747efab215201a4ae0fa18b8906b1dd40d57d23da10f65ccae9acc1036a824",
+  "test": {
+    "path": "tests/dual_api_settings/test_model_main_flow.gd",
+    "bytes": 22542,
+    "sha256": "9678502961f53abd02d3e5688f107e26b93e78e8d6c22b8e06719e5346f35d64"
+  },
+  "production_manifest_sha256": "daeaa168d238bb1fb566e4990a537016de41974f6334a8b43d072a943cc27829",
+  "changes": "Accepted provider Main flow with actual per-role model OptionButton selection events, independent friendly-label/exact-ID assertions, selector-based Cancel and exact outgoing model IDs. Same 1801/profile/save/load/late-reply checks retained.",
+  "required_env": "FOGBANK_API_TEST_USER_DIR exact fresh isolated directory",
+  "optional_env": "FOGBANK_API_TEST_REPORT new output file path",
+  "requires_new_isolated_user_directory": true,
+  "live_network_permitted": false,
+  "mock_installation": "fail-closed before configuring any official endpoint",
+  "expected_checks_if_complete": 74
+}

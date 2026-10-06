@@ -1,0 +1,29 @@
+{
+  "schema": "wordsandperils_api_request_controls_candidate/v1",
+  "status": "unadopted_successor_candidate",
+  "parent_model_manifest_sha256": "daeaa168d238bb1fb566e4990a537016de41974f6334a8b43d072a943cc27829",
+  "files": [
+    {
+      "path": "view/dual_api_settings/panel.gd",
+      "bytes": 24541,
+      "sha256": "932dc0c71d5d95c966e961ea406d4ed8b971a5d88d7e125a42223f2f20d34c69",
+      "before_sha256": "58083f859201b9108f32ea6b12fb8a7ccaf815124bfcc5dfcb67204aaec10923"
+    }
+  ],
+  "required_unchanged_files": {
+    "main.gd": "48d166879987b7285c21ce2bf7388a37654f1710131db851dfc0f70b0d6deb42",
+    "view/dual_api_settings/client.gd": "79751f2bdebac0305a773fc81793d936fb7538e59d466fb742249831a4ca2d83",
+    "view/dual_api_settings/controller.gd": "214ccf927d266317a7fe037c18f5d1d6f6592fe4c49e7059485969735f05063a",
+    "view/ui_typography/style.gd": "0ce716c357b80da23063ae8f8d678a2c4c022f58df63c34b14ad802f9b90e565",
+    "view/dual_api_settings/provider_presets.gd": "26520871eaecc153258e036926474ade94828fb260df578bc2f3c10f1bf70dc5"
+  },
+  "scope": "One panel file: explicit visible request preference drafts, default checked on first use by user request; no client, wire, Main, authority or save changes",
+  "preference_scope": "session_memory_only; cancel and validation failure preserve committed preferences; saved false remains false on reopen",
+  "default_checks_do_not_enable_connection_or_send": true,
+  "save_sends_request": false,
+  "component_assertions": 19,
+  "component_engine_exit": 0,
+  "component_strict_warning_status": "held: known cloud llvmpipe V-Sync warning; no clean-warning claim",
+  "actual_main_successor_test": "not_yet_run",
+  "live_provider_tested": false
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "offline_move_demo_candidate/v1",
+  "status": "candidate_only_not_executed",
+  "parent_main_sha256": "d759e33bbe942f9935a72cbf0d99495296259311bc0f221cb642b3a8ea85939a",
+  "main_sha256": "6e2f62e76db2f4a64a9bbdf4d348a32588d1cb991e6d869bff4c730e12e61e5c",
+  "main_patch": "patches/main.patch",
+  "patch_inserted_lines": 2,
+  "new_production_path": "view/tabletop_interaction/offline_move_demo.gd",
+  "files": {
+    "patches/main.patch": {
+      "sha256": "155e56f32494b1ba52e7054aab9fe9cbbcd1459fdf21e470d86aaff07bec4f81",
+      "bytes": 979
+    },
+    "view/tabletop_interaction/offline_move_demo.gd": {
+      "sha256": "7ec81eca42e9e1d51d63a6c0e3d379a786caa9b18e6e40aa9159abab34629b4b",
+      "bytes": 7620
+    }
+  },
+  "allowed_intent": "exact complete natural display of current registered movement_goal for selected legal tile, explicit offline mode and confirmation only",
+  "changes_authority_or_save_identity": false,
+  "network_calls_permitted": 0
+}

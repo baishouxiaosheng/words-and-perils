@@ -120,7 +120,7 @@
   "scope": "API-only routing and typography over the verified public base. No actor/status upgrade, authority-data replacement, save migration or font assets.",
   "helper": {
     "path": "apply_candidate.py",
-    "bytes": 25015,
-    "sha256": "07f287c4dfafc5f371d38a1cbf772789f06b3d147b61dc44d0522b13150d0fed"
+    "bytes": 25498,
+    "sha256": "4fd50e6c75206da80458eb82e8b7746b471373926d117cc4a5a2ae58946e3a45"
   }
 }

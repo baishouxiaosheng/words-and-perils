@@ -1,0 +1,7 @@
+WASD camera candidate
+
+Install only into an isolated project matching exactly one Main before-image in manifest.json. The new module path must be absent. Apply only the matching one-line Main patch and verify its exact after-image; do not apply all three patches. Preserve previous source for rollback. No canonical or user play tree has been modified by this candidate.
+
+W/A/S/D translate camera view parallel to global ground XZ with normalized diagonals and delta time. Existing Q/E and mouse input remain unchanged. The controller updates retained rig focus as well as Camera3D position, keeping global height and cancelling existing automatic framing through its existing method. Text focus, windows/popups, paused/disabled/guest contexts and lost application focus are guarded; releasing held keys is required before resuming.
+
+Actual original-cloud headless parse and 207 math/rig/latch assertions passed with no script errors or warnings. The blocked categories in the latch unit test reuse a false input; they do not prove live TextEdit/LineEdit/PopupMenu focus extraction. Main installation, real keyboard/UI interaction, full gameplay and visual acceptance remain pending. Run the supplied test in a separately admitted private project under the existing resource guard. Test script: res://tests/camera_wasd/test_camera_wasd.gd; report prefix CAMERA_WASD_RESULT. No network, credentials, game state or actor coordinates are modified.

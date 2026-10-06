@@ -1,0 +1,34 @@
+{
+  "schema": "wordsandperils_model_presets_candidate/v1",
+  "status": "unadopted_successor_candidate",
+  "parent_provider_manifest_sha256": "e3b02ca7b9d8cdd29d73b2c08263f145264892028e5055ecb05bdfb84a373d3a",
+  "base_main_sha256": "48d166879987b7285c21ce2bf7388a37654f1710131db851dfc0f70b0d6deb42",
+  "files": [
+    {
+      "path": "view/dual_api_settings/panel.gd",
+      "bytes": 23179,
+      "sha256": "58083f859201b9108f32ea6b12fb8a7ccaf815124bfcc5dfcb67204aaec10923",
+      "before_sha256": "978d6d4b3895b01516da9184fe0b95b56873acb9b4bc2cab78265a077c183183"
+    },
+    {
+      "path": "view/dual_api_settings/provider_presets.gd",
+      "bytes": 3659,
+      "sha256": "26520871eaecc153258e036926474ade94828fb260df578bc2f3c10f1bf70dc5",
+      "before_sha256": "75a34b77be51992a2b4eaefd8c562b0349e0d38ed0cb4943b76cf8a8c863f16e"
+    }
+  ],
+  "required_unchanged_files": {
+    "main.gd": "48d166879987b7285c21ce2bf7388a37654f1710131db851dfc0f70b0d6deb42",
+    "view/dual_api_settings/client.gd": "79751f2bdebac0305a773fc81793d936fb7538e59d466fb742249831a4ca2d83",
+    "view/dual_api_settings/controller.gd": "214ccf927d266317a7fe037c18f5d1d6f6592fe4c49e7059485969735f05063a",
+    "view/ui_typography/style.gd": "0ce716c357b80da23063ae8f8d678a2c4c022f58df63c34b14ad802f9b90e565"
+  },
+  "scope": "Two-file model dropdown UI/catalog delta only; existing provider client/wire and Main unchanged",
+  "credential_persistence": "session_memory_only",
+  "model_catalog_checked": "2026-10-06",
+  "component_assertions": 93,
+  "component_engine_exit": 0,
+  "component_strict_warning_status": "held: known cloud llvmpipe V-Sync warning; no clean-warning claim",
+  "new_actual_main_test": "not_yet_run",
+  "live_provider_tested": false
+}

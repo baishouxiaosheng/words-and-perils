@@ -1,0 +1,18 @@
+{
+  "schema": "dual_api_main_restart_reader_correction/v1",
+  "status": "reader_only_unexecuted_cloud",
+  "test": {
+    "path": "tests/dual_api_settings/test_main_restart_reader.gd",
+    "bytes": 14693,
+    "sha256": "f761235965245a3491e9e58ebaec513a2ac2507b471cc0c0bf5a6c224b2b4e56"
+  },
+  "accepted_writer_test_sha256": "629e6b4e5a540a5a8b10992ea6b31de2218a8dd175867c1b1443888a2cae366d",
+  "requires_prior_successful_writer": true,
+  "writer_rerun": false,
+  "production_pins_unchanged": true,
+  "receipt_same_nonce_and_exact_sha_required": true,
+  "old_reader_report_overwritten": false,
+  "report_name": "user://api_restart_read_r3_<nonce>.json",
+  "correction": "Validate exact shapes and finite safe integers rejecting bool/fraction/invalid ranges, then existing canonical JSON comparison; split predicates and report typeof; whole-engine/world/RNG/history/prose hashes unchanged",
+  "normalized_values_and_canonical_bytes_must_be_nonempty": true
+}

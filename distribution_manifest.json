@@ -5833,7 +5833,7 @@
       }
     }
   ],
-  "active_version": "v27-status-river",
+  "active_version": "v28-natural-coast",
   "update_manifest": {
     "path": "updates/v22/manifest.json",
     "size": 8781,
@@ -5864,6 +5864,11 @@
       "path": "updates/v27/manifest.json",
       "size": 33368,
       "sha256": "aa1e4edbaaf209a4415796509b8740432ea318da0d195f462cd988d472a389a2"
+    },
+    {
+      "path": "updates/v28/manifest.json",
+      "size": 11055,
+      "sha256": "2f6b893489f8688ffe52950226df958fb0dba618e0345c22beb5a26a8d283fbf"
     }
   ]
 }

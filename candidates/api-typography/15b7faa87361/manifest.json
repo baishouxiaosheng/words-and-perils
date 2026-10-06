@@ -1,0 +1,126 @@
+{
+  "schema": "words-and-perils-public-candidate/v1",
+  "candidate_id": "api-typography-15b7faa87361",
+  "status": "unadopted_candidate",
+  "base_commit": "f630fc4ff92143f7add7d36907c317d709600e61",
+  "base_tree": "72bbdbe88a70eae14c2161c947715227faaaa618",
+  "source_manifest_sha256": "300676b3eda9bbb61b72b71ae3d2bfa5e52f70dcd969762daa82c7a9cb701e8f",
+  "source_filemap_sha256": "15b7faa873617ef53ced0c0f7488b55b5948cf5f993ed743f63d18456305a4b7",
+  "files": [
+    {
+      "path": "main.gd",
+      "bytes": 184435,
+      "sha256": "48d166879987b7285c21ce2bf7388a37654f1710131db851dfc0f70b0d6deb42",
+      "before_sha256": "2b05911a1bcde48b10a54e8d1475ef62c66aea84ff8c7f5b7cdc3052eaf9fc93"
+    },
+    {
+      "path": "view/dual_api_settings/client.gd",
+      "bytes": 9256,
+      "sha256": "5d84992c2f3a7e28f02795511b0b0c79bc24f2ae0e0cbf0e5a8b4ec8f2db7ffc",
+      "before_sha256": null
+    },
+    {
+      "path": "view/dual_api_settings/controller.gd",
+      "bytes": 1022,
+      "sha256": "214ccf927d266317a7fe037c18f5d1d6f6592fe4c49e7059485969735f05063a",
+      "before_sha256": null
+    },
+    {
+      "path": "view/dual_api_settings/panel.gd",
+      "bytes": 15049,
+      "sha256": "3c7c0298e79bf334dae4d7dc67d334f11e0d46aee1ed145672ae7bc6a1853c75",
+      "before_sha256": null
+    },
+    {
+      "path": "view/ui_typography/style.gd",
+      "bytes": 14899,
+      "sha256": "0ce716c357b80da23063ae8f8d678a2c4c022f58df63c34b14ad802f9b90e565",
+      "before_sha256": null
+    }
+  ],
+  "protected_files": {
+    "README.md": {
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "project.godot": {
+      "bytes": 808,
+      "sha256": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd"
+    },
+    "main.tscn": {
+      "bytes": 253,
+      "sha256": "1e191898de710cf7d4fd1388e9798e8b4f39cf48fcd9c826ddc5169915e53f2b"
+    },
+    "distribution_manifest.json": {
+      "bytes": 206858,
+      "sha256": "6154796927071e068a8bed51e3146f9c8da5f407b4d702c127ddf42bbdcb641e"
+    },
+    "updates/v28-ui-safety/manifest.json": {
+      "bytes": 2701,
+      "sha256": "b188cfddaf8e11878acdf2df2b861a0a4a87bd85d429e2bc4692f7b4c59296cb"
+    },
+    "tools/restore_repository.py": {
+      "bytes": 227,
+      "sha256": "7acc199c51befb1cc8ee4c65df5694b968af32c0b36220eb80c2898f6b95ecb2"
+    },
+    "view/integrated_ecology_world/performance_variant/source_receipt.gd": {
+      "bytes": 1093,
+      "sha256": "dbc75c69f734f0ca0565947f609c55f483278e87334ebdd9e7e61e2a53431ff9"
+    },
+    "view/playable_build/settlement_content.gd": {
+      "bytes": 9184,
+      "sha256": "a0ad49733a6b85b5d9b113d395a845d95bab95455e1ffdc05d59e0df5bc86af8"
+    },
+    "view/generated_natural_coast_entry/view.gd": {
+      "bytes": 8403,
+      "sha256": "0b41c8536c048adc12243972a5cfa81ccaa9c978446fa0c5ce50dc3624ec384f"
+    }
+  },
+  "payload": {
+    "file": "payload.zip.b64",
+    "encoded_bytes": 154296,
+    "encoded_sha256": "c94faab9b23ed3f3add262d7b944aae12e2d5299840acfca5d91b590752b9fe3",
+    "zip_bytes": 115722,
+    "zip_sha256": "5dd27afdd3f310396b3becbc01619d4aa4a46f4c6135c793bf1049fd5ed81de0",
+    "members": {
+      "PRODUCTION_MANIFEST.json": {
+        "bytes": 1421,
+        "sha256": "300676b3eda9bbb61b72b71ae3d2bfa5e52f70dcd969762daa82c7a9cb701e8f"
+      },
+      "main.patch": {
+        "bytes": 6530,
+        "sha256": "f3d938e65f873e89f990da3df5807acd9718d4bbba2f720373756558b4ae91d3"
+      },
+      "payload/main.gd": {
+        "bytes": 184435,
+        "sha256": "48d166879987b7285c21ce2bf7388a37654f1710131db851dfc0f70b0d6deb42"
+      },
+      "payload/view/dual_api_settings/client.gd": {
+        "bytes": 9256,
+        "sha256": "5d84992c2f3a7e28f02795511b0b0c79bc24f2ae0e0cbf0e5a8b4ec8f2db7ffc"
+      },
+      "payload/view/dual_api_settings/controller.gd": {
+        "bytes": 1022,
+        "sha256": "214ccf927d266317a7fe037c18f5d1d6f6592fe4c49e7059485969735f05063a"
+      },
+      "payload/view/dual_api_settings/panel.gd": {
+        "bytes": 15049,
+        "sha256": "3c7c0298e79bf334dae4d7dc67d334f11e0d46aee1ed145672ae7bc6a1853c75"
+      },
+      "payload/view/ui_typography/style.gd": {
+        "bytes": 14899,
+        "sha256": "0ce716c357b80da23063ae8f8d678a2c4c022f58df63c34b14ad802f9b90e565"
+      },
+      "preimages/main.gd": {
+        "bytes": 182315,
+        "sha256": "2b05911a1bcde48b10a54e8d1475ef62c66aea84ff8c7f5b7cdc3052eaf9fc93"
+      }
+    }
+  },
+  "scope": "API-only routing and typography over the verified public base. No actor/status upgrade, authority-data replacement, save migration or font assets.",
+  "helper": {
+    "path": "apply_candidate.py",
+    "bytes": 25015,
+    "sha256": "07f287c4dfafc5f371d38a1cbf772789f06b3d147b61dc44d0522b13150d0fed"
+  }
+}

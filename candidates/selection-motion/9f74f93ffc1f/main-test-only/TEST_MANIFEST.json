@@ -1,0 +1,38 @@
+{
+  "schema": "selection_motion_real_main_test_attachment/v1",
+  "status": "source_frozen_not_executed",
+  "required_production_files": {
+    "main.gd": "d759e33bbe942f9935a72cbf0d99495296259311bc0f221cb642b3a8ea85939a",
+    "view/dual_api_settings/client.gd": "79751f2bdebac0305a773fc81793d936fb7538e59d466fb742249831a4ca2d83",
+    "view/dual_api_settings/controller.gd": "214ccf927d266317a7fe037c18f5d1d6f6592fe4c49e7059485969735f05063a",
+    "view/ui_typography/style.gd": "0ce716c357b80da23063ae8f8d678a2c4c022f58df63c34b14ad802f9b90e565",
+    "view/dual_api_settings/provider_presets.gd": "26520871eaecc153258e036926474ade94828fb260df578bc2f3c10f1bf70dc5",
+    "view/dual_api_settings/panel.gd": "932dc0c71d5d95c966e961ea406d4ed8b971a5d88d7e125a42223f2f20d34c69",
+    "view/tabletop_interaction/wasd_camera_pan.gd": "c26abf87dd3ff1d0b76b318a6887fa5ca9c6342571d128f0ef2662d9a6a29ef0",
+    "view/tabletop_interaction/selection_motion.gd": "60835b0672a4426faf747c57e6a21617ebbf87e08c68b8cb3244175f813448e7"
+  },
+  "main_preimage_sha256": "b17a361b0ee8a1c671b90e2bd3a0d5774a373a66ecc618042d2bbf7c8f0aa32c",
+  "main_patch_sha256": "6f3f4d2c4e5cc1e509db22c15af0bc54f89a3201db87900606d8e00d53b9d548",
+  "selection_source_manifest_sha256": "9f74f93ffc1fa627ed398d7e420594193c4bcee227263ca01527b170b616a291",
+  "files": {
+    "README.txt": {
+      "sha256": "adfe8e340c66a2439439084a0e78deeff22b4cedfdb4b5223b52a26a65679240",
+      "bytes": 3087
+    },
+    "tests/selection_motion/test_main_events.gd": {
+      "sha256": "12cb7487b1874e909013baaed105fb16759b852b9c36a5aa78e470b61445b69f",
+      "bytes": 16430
+    }
+  },
+  "required_env": "FOGBANK_SELECTION_TEST_USER_DIR exact fresh isolated user data",
+  "optional_env": [
+    "FOGBANK_SELECTION_TEST_REPORT fresh JSON output",
+    "FOGBANK_SELECTION_CAPTURE_DIR new existing owned directory on graphical backend only"
+  ],
+  "scope": "actual1801 Coast Main selected actor/item meshes, production native Tween, repeated/clear/menu events, real refresh, existing route preview and complete authority equality",
+  "attention_catalog_scope": "additional unchanged production Catalog recapture on actual selected scene mesh; native Coast mesh bounds separately checked; no V3/legacy claim",
+  "network_calls_permitted": 0,
+  "new_framework_or_runner": false,
+  "os_input_or_visual_acceptance": false,
+  "comparison_tolerance": "Engine complete state and real local mesh transforms exact; recaptured world-to-local Catalog float matrices/AABBs use Godot is_equal_approx with exact prototype IDs/order/nonempty shape"
+}

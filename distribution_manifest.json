@@ -5833,7 +5833,7 @@
       }
     }
   ],
-  "active_version": "v28-natural-coast",
+  "active_version": "v28-public-entry-save-safety",
   "update_manifest": {
     "path": "updates/v22/manifest.json",
     "size": 8781,
@@ -5869,6 +5869,11 @@
       "path": "updates/v28/manifest.json",
       "size": 11055,
       "sha256": "2f6b893489f8688ffe52950226df958fb0dba618e0345c22beb5a26a8d283fbf"
+    },
+    {
+      "path": "updates/v28-ui-safety/manifest.json",
+      "size": 2701,
+      "sha256": "b188cfddaf8e11878acdf2df2b861a0a4a87bd85d429e2bc4692f7b4c59296cb"
     }
   ]
 }

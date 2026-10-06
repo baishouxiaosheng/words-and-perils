@@ -26,5 +26,6 @@ void fragment() {
 }
 void light() {
     vec3 c=shade_once(palette_lit,palette_shade,form_mask,1.0-ATTENUATION);
-    DIFFUSE_LIGHT+=OUTPUT_IS_SRGB?c:decode(c);
+    // Godot encodes custom-light accumulation on output; supply linear radiance.
+    DIFFUSE_LIGHT+=decode(c);
 }

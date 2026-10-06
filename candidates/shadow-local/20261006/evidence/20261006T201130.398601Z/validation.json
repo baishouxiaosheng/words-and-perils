@@ -1,0 +1,9 @@
+{
+  "process_exit": 1,
+  "inputs_unchanged": true,
+  "engine_errors": [
+    "ERROR: { \"ok\": false, \"error\": \"No frozen ground triangle at clipped contact\", \"triangle\": 97 }"
+  ],
+  "pass_marker": false,
+  "scope": "cpu"
+}

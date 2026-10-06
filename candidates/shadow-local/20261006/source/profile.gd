@@ -40,7 +40,7 @@ func install(root:Node3D, nodes:Array, shadow_mesh:ArrayMesh) -> bool:
 	# All material validation and proxy building precede the synchronous commit.
 	for light:Light3D in root.find_children("*","Light3D",true,false):
 		light_snapshots.append({"node":light,"mask":light.light_cull_mask})
-		light.light_cull_mask &= ~RECEIVER
+		light.light_cull_mask &= ~(RECEIVER|CASTER)
 	snapshots=pending
 	for row in snapshots:
 		row.node.material_override=row.styled

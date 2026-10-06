@@ -20,11 +20,12 @@ def selected(t):
     return (x.max(1)>=bounds[0])&(x.min(1)<=bounds[2])&(z.max(1)>=bounds[1])&(z.min(1)<=bounds[3])
 r=Path('artifacts/natural_shorelines_v03_20261002/cache')
 m=js(r/'manifest.json')
-ground=[];ground_provenance=[]
+ground=[];ground_provenance=[];support=[]
 for row in m['chunks']:
     lo,hi=row['bounds_min'],row['bounds_max']
     if row['kind']!='ground' or lo[0]>bounds[2] or hi[0]<bounds[0] or lo[2]>bounds[3] or hi[2]<bounds[1]:continue
     t=np.frombuffer(gzip.decompress(read(r/row['vertices'],m['files'][row['vertices']]['sha256'])),'<f4').reshape(-1,3,14)
+    support.extend(t.reshape(-1,14)[:,:3].tolist())
     ids=np.where(selected(t))[0]
     ground.extend(t[ids].reshape(-1,14).tolist())
     ground_provenance.extend([{'chunk':row['key'],'triangle':int(i)} for i in ids])
@@ -50,7 +51,7 @@ for i,row in enumerate(rows):
     if bounds[0]<=x<=bounds[2] and bounds[1]<=z<=bounds[3] and not change['hide']:
         values=row.tolist();values[1]=change['height']
         trees.append({'source_row':i,'kind':rr['kinds'][int(row[7])],'values':values})
-write('ridge.json',{'bounds':bounds,'ground':ground,'mountains':mountains,'trees':trees,'ground_provenance':ground_provenance,'mountain_provenance':mount_provenance})
+write('ridge.json',{'bounds':bounds,'ground':ground,'ground_support':support,'mountains':mountains,'trees':trees,'ground_provenance':ground_provenance,'mountain_provenance':mount_provenance})
 for src in ['view/ecology_preview/vegetation_meshes.gd','view/integrated_ecology_world/tabs_style/ground.gdshader','view/integrated_ecology_world/tabs_style/vegetation.gdshader','view/integrated_ecology_world/faceted_mountains/mountains.gdshader']:
     (OUT/'fixture'/Path(src).name).write_bytes(read(Path(src)))
 (OUT/'fixture'/'visual_weights_v03.png').write_bytes(read(r/'visual_weights_v03.png',m['files']['visual_weights_v03.png']['sha256']))

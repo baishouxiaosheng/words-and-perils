@@ -1,0 +1,5 @@
+.godot/
+*.uid
+*.import
+evidence/**/xdg_*/
+evidence/**/Xorg.*.log.old

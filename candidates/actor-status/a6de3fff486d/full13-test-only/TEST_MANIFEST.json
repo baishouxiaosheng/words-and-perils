@@ -1,0 +1,160 @@
+{
+  "schema": "actor_public_fullmain_test_attachment/v1",
+  "status": "SOURCE_ONLY_NOT_PARSED_NOT_RUN",
+  "production_manifest_sha256": "a6de3fff486df95013f47602fd743de5ed21af484b13f63ac3e9c1a9b5d2a546",
+  "public_source_pinset_sha256": "9017a2c377b14e66eac54d7a10a56ed38fb6cd69eaf34bc7d2eda548ec1ab282",
+  "expected_main_sha256": "bb15728f636f5d22a0d2f54b026468933246d073dfee59998fa78e2e54f3fa84",
+  "expected_authority_profile": "084f3c14412ea01fd0d5f4023463232979376e8938a5800325feffa93371cc6e",
+  "original_driver_sha256": "9e8d437cb2faff4ad6a1bd8671e7ecda117854ad654186ffca20796fe1731a65",
+  "original_helper_sha256": "3bf7e2eece5505618f6532a1102b6562c162b9fe35928ecc8053f49020a0226b",
+  "base_pin_verification": {
+    "main.tscn": {
+      "sha256": "1e191898de710cf7d4fd1388e9798e8b4f39cf48fcd9c826ddc5169915e53f2b",
+      "bytes": 253,
+      "actual_small_source_hash_verified": true
+    },
+    "view/runtime_ai/controller.gd": {
+      "sha256": "6a54eec5cc7f0cfba540678fb906cecf701a73d1fd696700349e30a97296dbbf",
+      "bytes": 13558,
+      "actual_small_source_hash_verified": true
+    },
+    "view/runtime_ai/connection_panel.gd": {
+      "sha256": "56ff309081646275d8aeb13eb1307e51cfab6855a480c2e911bfbfed06ea7273",
+      "bytes": 3701,
+      "actual_small_source_hash_verified": true
+    },
+    "view/runtime_ai/scoped_engine.gd": {
+      "sha256": "08eca5ccc7d8377ed8bea7b7929db4b11903e776e4ae7477f314f83a4621d44a",
+      "bytes": 14355,
+      "actual_small_source_hash_verified": true
+    },
+    "view/runtime_ai/bounded_profile_engine.gd": {
+      "sha256": "5d701b98deaee66a02ac23501aa807078f06a576ced35da54d2c097d32c912da",
+      "bytes": 5363,
+      "actual_small_source_hash_verified": true
+    },
+    "view/generated_v3_equipment/runtime_engine.gd": {
+      "sha256": "5fc227b36035cd960b862d936cb66faf6c729610123e541a2eea024c13bd8883",
+      "bytes": 4716,
+      "actual_small_source_hash_verified": true
+    },
+    "view/generated_v3_enemy/runtime_engine.gd": {
+      "sha256": "f37f25d2fd860288574f67d7ef3aab1ed4996b0d304c8407e018a873f413e8c2",
+      "bytes": 4692,
+      "actual_small_source_hash_verified": true
+    },
+    "core/ai_gm_http/client.gd": {
+      "sha256": "a49b9bb771b4e2aead8f130018d04a89bd1b0b60f64e9e2a5799f69c33a818b8",
+      "bytes": 15836,
+      "actual_small_source_hash_verified": true
+    },
+    "core/ai_gm_http/openai_chat_codec.gd": {
+      "sha256": "12a078df16f9a8be0de7639284692ad9936de40f10a245b75a978ef1bf972514",
+      "bytes": 6137,
+      "actual_small_source_hash_verified": true
+    },
+    "core/ai_gm_http/request_budget.gd": {
+      "sha256": "ce6d36337e2ac328eaf97d7afc34a4b2764ac84ad34e3dbab2e170700fa8924a",
+      "bytes": 1007,
+      "actual_small_source_hash_verified": true
+    },
+    "core/ai_gm_http/http_transport.gd": {
+      "sha256": "62d7f0d4a8acc08a2c6a437d1fcb1ff8b06dae82fefffece41d176d9eff8ac9a",
+      "bytes": 1913,
+      "actual_small_source_hash_verified": true
+    }
+  },
+  "semantic_scope": "Existing actor-v2 FullMain 13 scenarios only; status and deferred guest cases excluded",
+  "changes": [
+    "Explicit current public Main/authority identities",
+    "Environment-supplied absolute isolated root with original strict descendant checks and fresh-producer guard",
+    "Exact 62-source pinset checked before Main and at report; checkpoint additionally binds pinset and driver",
+    "Actual deployed dual/status/runtime inheritance paths replace undeployed old actor runtime paths",
+    "Existing interruptions configuration uses actual dual-role model modal and Save, with fail-closed exact no-network transport and unchanged budget/timeout/automatic-off contracts"
+  ],
+  "test_source_provenance": {
+    "tests/test_full_main_bridge.gd": "Existing actor-v2 combined FullMain driver, public-source adaptation",
+    "tests/test_view_facade.gd": "Existing actor-v2 facade SceneTree and typed reply helper, unchanged",
+    "tests/ai_gm_http/mock_transport.gd": "Existing no-network mock transport, unchanged"
+  },
+  "deferred_guest_cases_included": false,
+  "native_runs": 0,
+  "new_framework_or_runner": false,
+  "resources_or_data_copied": false,
+  "execution_order": [
+    {
+      "gate": "flow",
+      "case": ""
+    },
+    {
+      "gate": "display",
+      "case": "death-enemy"
+    },
+    {
+      "gate": "display",
+      "case": "death-player"
+    },
+    {
+      "gate": "continue",
+      "case": "player_awaiting_assessment"
+    },
+    {
+      "gate": "continue",
+      "case": "player_ready_roll"
+    },
+    {
+      "gate": "continue",
+      "case": "player_rolled"
+    },
+    {
+      "gate": "continue",
+      "case": "player_staged"
+    },
+    {
+      "gate": "continue",
+      "case": "enemy_awaiting_assessment"
+    },
+    {
+      "gate": "continue",
+      "case": "enemy_ready_roll"
+    },
+    {
+      "gate": "continue",
+      "case": "enemy_rolled"
+    },
+    {
+      "gate": "continue",
+      "case": "enemy_staged"
+    },
+    {
+      "gate": "interruptions",
+      "case": ""
+    },
+    {
+      "gate": "display",
+      "case": "movement"
+    }
+  ],
+  "files": {
+    "README.md": {
+      "bytes": 6461,
+      "sha256": "4588cce2b678b95b3729c991a3ec2c5a2e14c13725c2094ab35e8a1c2768be73"
+    },
+    "tests/actor_full_main/public_source_pins.json": {
+      "bytes": 8216,
+      "sha256": "9017a2c377b14e66eac54d7a10a56ed38fb6cd69eaf34bc7d2eda548ec1ab282"
+    },
+    "tests/ai_gm_http/mock_transport.gd": {
+      "bytes": 1210,
+      "sha256": "8d8e3fafc18e9ed9bb1295bb2d3eff3a52771afeb9ccc162017a2402001ec2df"
+    },
+    "tests/test_full_main_bridge.gd": {
+      "bytes": 59218,
+      "sha256": "f19170e038f1bfafafc1b6233a94c3a6f59f901dcdd4a6cca1a7d99a54d7685f"
+    },
+    "tests/test_view_facade.gd": {
+      "bytes": 18408,
+      "sha256": "3bf7e2eece5505618f6532a1102b6562c162b9fe35928ecc8053f49020a0226b"
+    }
+  }
+}

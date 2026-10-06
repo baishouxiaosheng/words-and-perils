@@ -1,0 +1,32 @@
+{
+  "schema": "offline_move_demo_real_main_test/v1",
+  "status": "source_frozen_not_executed",
+  "source_manifest_sha256": "b2bad55ceaf01a7031270d9f6ac4178ebfdd1b1e772b7c5588c27adf6a3b8e58",
+  "required_production_files": {
+    "main.gd": "6e2f62e76db2f4a64a9bbdf4d348a32588d1cb991e6d869bff4c730e12e61e5c",
+    "view/dual_api_settings/client.gd": "79751f2bdebac0305a773fc81793d936fb7538e59d466fb742249831a4ca2d83",
+    "view/dual_api_settings/controller.gd": "214ccf927d266317a7fe037c18f5d1d6f6592fe4c49e7059485969735f05063a",
+    "view/ui_typography/style.gd": "0ce716c357b80da23063ae8f8d678a2c4c022f58df63c34b14ad802f9b90e565",
+    "view/dual_api_settings/provider_presets.gd": "26520871eaecc153258e036926474ade94828fb260df578bc2f3c10f1bf70dc5",
+    "view/dual_api_settings/panel.gd": "932dc0c71d5d95c966e961ea406d4ed8b971a5d88d7e125a42223f2f20d34c69",
+    "view/tabletop_interaction/wasd_camera_pan.gd": "c26abf87dd3ff1d0b76b318a6887fa5ca9c6342571d128f0ef2662d9a6a29ef0",
+    "view/tabletop_interaction/selection_motion.gd": "60835b0672a4426faf747c57e6a21617ebbf87e08c68b8cb3244175f813448e7",
+    "view/tabletop_interaction/offline_move_demo.gd": "7ec81eca42e9e1d51d63a6c0e3d379a786caa9b18e6e40aa9159abab34629b4b"
+  },
+  "files": {
+    "README.txt": {
+      "sha256": "f30f8b9b83fa5d9d1f2fbe6a65f9d5de8832b58abdc1c043d66bee3995bb41e6",
+      "bytes": 2489
+    },
+    "tests/offline_move_demo/test_main_flow.gd": {
+      "sha256": "30ee6203c084cccc38169cd47d2f1fc109a96ee4ae8ad80132b0d744da15899a",
+      "bytes": 11633
+    }
+  },
+  "required_env": "FOGBANK_OFFLINE_MOVE_TEST_USER_DIR exact fresh isolated user directory",
+  "optional_env": "FOGBANK_OFFLINE_MOVE_TEST_REPORT new JSON output",
+  "scope": "actual public1801 Main, real Control mouse/Unicode events, finite explicit template, original weighted movement fixture/transaction/receipt and production visual movement completion",
+  "network_calls_permitted": 0,
+  "os_or_visual_acceptance_claim": false,
+  "new_runner": false
+}

@@ -167,6 +167,13 @@ def stamp(st):
     return (st.st_dev, st.st_ino, st.st_size, st.st_mtime_ns, st.st_ctime_ns)
 
 
+def cross_api_stamp(st):
+    # Windows CPython may expose creation time via lstat's ctime, but
+    # metadata-change time via fstat's ctime. Compare those clocks only
+    # within the same API; dev/ino/size/mtime still bind path to handle.
+    return stamp(st)[:-1] if os.name == 'nt' else stamp(st)
+
+
 def lst(path):
     try:
         return path.lstat()
@@ -195,12 +202,16 @@ def safe_read(path, limit):
     fd = os.open(str(path), flags)
     with os.fdopen(fd, 'rb') as stream:
         opened = os.fstat(stream.fileno())
-        if reparse(opened) or not stat.S_ISREG(opened.st_mode) or stamp(first) != stamp(opened):
+        if (reparse(opened) or not stat.S_ISREG(opened.st_mode)
+                or cross_api_stamp(first) != cross_api_stamp(opened)):
             raise Refusal('File changed while opening: ' + str(path))
         data = stream.read(limit + 1)
         final = os.fstat(stream.fileno())
     last = lst(path)
-    if len(data) > limit or last is None or stamp(first) != stamp(final) or stamp(first) != stamp(last):
+    if (len(data) > limit or last is None
+            or reparse(final) or not stat.S_ISREG(final.st_mode)
+            or reparse(last) or not stat.S_ISREG(last.st_mode)
+            or stamp(opened) != stamp(final) or stamp(first) != stamp(last)):
         raise Refusal('File changed while reading: ' + str(path))
     return data
 

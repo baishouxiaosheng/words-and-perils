@@ -1,0 +1,65 @@
+{
+  "schema": "words-and-perils-source-delta/v1",
+  "version": "v28-public-entry-save-safety",
+  "base_source_bundle_sha256": "8e88ac0ade3b12f314e3e3076a05efce2a9da335925e1859b6e9543deebeab81",
+  "previous_manifest_sha256": "2f6b893489f8688ffe52950226df958fb0dba618e0345c22beb5a26a8d283fbf",
+  "base_git_commit": "6dbba39fac650a3f48fd00955a9ed74ebab3e9ca",
+  "files": [
+    {
+      "path": "artifacts/public_distribution/v28_entry_save_safety.json",
+      "size": 3824,
+      "sha256": "c62f0f0f198c93d48cf8c7270fafd1293b0f54a92f74c375a9a85d9283ecc27f",
+      "before_sha256": null
+    },
+    {
+      "path": "docs/public_distribution_v28.md",
+      "size": 2529,
+      "sha256": "e8f4008fd6d5b5fd2d6a7cd4d5e864d1a181986100ba8c7affdee796bc5c9b16",
+      "before_sha256": null
+    },
+    {
+      "path": "tools/restore_repository.py",
+      "size": 227,
+      "sha256": "7acc199c51befb1cc8ee4c65df5694b968af32c0b36220eb80c2898f6b95ecb2",
+      "before_sha256": "181004454fea7596cf4e4017e539ef04fbf9136f362f4e4c1d74063764195875"
+    },
+    {
+      "path": "tools/restore_v28_ui_safety.py",
+      "size": 11538,
+      "sha256": "1aa511f6991e16ed2e9f7b5e61f1dddc0a6a30e623f787281eb3fa761094f875",
+      "before_sha256": null
+    },
+    {
+      "path": "tools/verify_publication.py",
+      "size": 14240,
+      "sha256": "6d8c6a42d407dd16d024d4dee46b1c600843ffc4be63d072c9ac240673336584",
+      "before_sha256": "2850b6dfea9919900a00d6b0950ec50b6e4f2cc8dfecea39e7289d5764f1abab"
+    },
+    {
+      "path": "view/generated_natural_coast_entry/view.gd",
+      "size": 8403,
+      "sha256": "0b41c8536c048adc12243972a5cfa81ccaa9c978446fa0c5ce50dc3624ec384f",
+      "before_sha256": "c0876b37414ce8e368e771d4352eaf256524331de278332c220d30db180e521c"
+    }
+  ],
+  "production_pins": {
+    "view/generated_natural_coast_entry/view.gd": "0b41c8536c048adc12243972a5cfa81ccaa9c978446fa0c5ce50dc3624ec384f"
+  },
+  "archive": {
+    "encoded_path": "updates/v28-ui-safety/source_delta.tar.xz.b64",
+    "encoded": {
+      "size": 17376,
+      "sha256": "3fe91901c2f0cb7f0ca9627084feabe07b33cd4272025b3de37f9c9864d79a72"
+    },
+    "size": 13032,
+    "sha256": "1fc440a9b259e782cc2bf0cc75400da25128701c4faa7931af9d375889d1e4d9"
+  },
+  "scope": "Entry UI Save identity protection only. Gameplay authority unchanged. Direct adapter and standalone basic view are not fixed.",
+  "native_validation": {
+    "coastal_range_save_signal_checks": 63,
+    "exit_code": 0,
+    "engine_errors": [],
+    "full_scene_and_OS_input": false
+  },
+  "publication_validation": "Small-delta restoration, exact pins, unchanged authority source bytes and wrapper-last activation; no full-resource read or new engine run during publication."
+}

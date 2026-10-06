@@ -1,0 +1,18 @@
+{
+  "schema": "api_request_controls_main_test_attachment/v1",
+  "status": "unexecuted_actual_main_test_only",
+  "source_test_sha256": "9678502961f53abd02d3e5688f107e26b93e78e8d6c22b8e06719e5346f35d64",
+  "test": {
+    "path": "tests/dual_api_settings/test_request_controls_main_flow.gd",
+    "bytes": 24371,
+    "sha256": "2dcd99eb24697ba1ce0a5a0a0db3b11a59b2529c85fa8922db772a13fb63ca0e"
+  },
+  "production_manifest_sha256": "ad182c61487f9f0d2066305763035730324548697e7ad9a52896d81ac3a60d6f",
+  "changes": "Existing model Main flow: visible checked draft defaults, first Cancel, Save activates both, saved unchecked narration remains false; removes all direct assignment to legacy automatic checkboxes. Actual model/role routing, world1801/source/save/load/late/error checks retained.",
+  "expected_checks_if_complete": 78,
+  "required_env": "FOGBANK_API_TEST_USER_DIR exact fresh isolated directory",
+  "optional_env": "FOGBANK_API_TEST_REPORT new output file path",
+  "requires_new_isolated_user_directory": true,
+  "live_network_permitted": false,
+  "mock_installation": "fail-closed before configuring official endpoints"
+}

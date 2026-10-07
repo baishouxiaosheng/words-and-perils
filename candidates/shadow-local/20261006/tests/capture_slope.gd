@@ -42,6 +42,7 @@ func capture(name_:String)->void:
 	for i in range(5):await process_frame
 	await RenderingServer.frame_post_draw
 	var im:=root.get_texture().get_image()
+	if im.get_size()!=Vector2i(1280,960):fail("Unexpected capture viewport "+str(im.get_size()));return
 	if im.save_png(output+"/"+name_+".png")!=OK:fail("PNG save failed "+name_);return
 	captures[name_]=bytes_digest(im.get_data())
 	print("SHADOW_CAPTURE ",name_," ",captures[name_])

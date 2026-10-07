@@ -47,6 +47,9 @@ func capture(name_:String)->void:
 	captures[name_]=bytes_digest(im.get_data())
 	print("SHADOW_CAPTURE ",name_," ",captures[name_])
 func run()->void:
+	# Keep the logical evidence viewport fixed when dot negotiates a smaller window.
+	root.content_scale_size=Vector2i(1280,960)
+	root.content_scale_mode=Window.CONTENT_SCALE_MODE_VIEWPORT
 	var args:=OS.get_cmdline_user_args()
 	output=args[0] if args.size()>0 else ProjectSettings.globalize_path("res://evidence/manual")
 	DirAccess.make_dir_recursive_absolute(output)

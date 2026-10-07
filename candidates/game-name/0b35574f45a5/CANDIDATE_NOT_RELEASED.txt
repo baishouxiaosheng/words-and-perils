@@ -1,0 +1,8 @@
+Words and Perils display-name candidate
+
+Only project.godot is proposed for change. README stays blank.
+The display title becomes Words and Perils. Existing desktop saves and settings keep the same physical directory through an explicit compatibility storage identity. No data migration or save-ID change is performed.
+
+Native Godot, window-title and existing-save reload tests have NOT been run. The formal default remains v30, unchanged. The new bytes are not covered by prior receipts or restoration/source pins. Apply only in an isolated QA copy, then let the Main owner merge a separately verified adoption layer.
+
+Historical archives and receipts retain their original names and bytes. FOGBANK_ technical identifiers are compatibility interfaces and are not game display titles.

@@ -1,0 +1,66 @@
+{
+  "schema": "words-and-perils-game-name-candidate/v1",
+  "status": "candidate_only_native_and_save_regression_not_run",
+  "base_public_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+  "formal_display_name": "Words and Perils",
+  "candidate_files": [
+    {
+      "path": "project.godot",
+      "before_sha256": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd",
+      "before_git_blob_sha": "ccdc3ce8f922b6a5af5299bac3526e2fc7c0c23e",
+      "before_bytes": 808,
+      "sha256": "0b35574f45a5b50307636bb3eee790a9c99be785ce3dc30c2b44e1c666dc0038",
+      "bytes": 1075
+    }
+  ],
+  "scope": "Only project display name and desktop user-data path compatibility; no Main, save IDs, API settings, README, restoration controls, distribution hashes or historical receipts changed",
+  "storage_compatibility": {
+    "purpose": "The former application name remains only as a stable existing desktop storage identity, not a visible game title",
+    "default_custom_dir": "Godot/app_userdata/雾岸纪事 · AI 沙盘",
+    "linuxbsd_override": "godot/app_userdata/雾岸纪事 · AI 沙盘",
+    "desktop_path_equivalence": "Static model checked against Godot 4.6 documented layout; native engine verification still required",
+    "mobile_web": "The custom-user-dir option is desktop-only; mobile and browser behavior has not been verified",
+    "data_migration": "none; no existing files renamed, copied, rewritten or deleted"
+  },
+  "audit": {
+    "fixed_git_public_text_blobs_scanned": 41,
+    "exclusions": [
+      "candidates/** historical/development payloads",
+      "*.b64 encoded historical source/resource bundles"
+    ],
+    "exact_legacy_matches": [
+      {
+        "path": "project.godot",
+        "sha": "ccdc3ce8f922b6a5af5299bac3526e2fc7c0c23e",
+        "error": false,
+        "matches": [
+          {
+            "line": 13,
+            "text": "config/name=\"雾岸纪事 · AI 沙盘\""
+          }
+        ]
+      }
+    ],
+    "private_bridge_main": {
+      "sha256": "2cd43ebabf2aa8ac0501ef14c9b34aebe408ecf917aadd2128184697902c3f9b",
+      "game_name_matches": 0
+    },
+    "historical_receipts": "Old app_userdata log paths are preserved as recorded facts",
+    "legacy_internal_identifiers": "FOGBANK_ environment flags and fogbank artifact paths retained for compatibility, not treated as the display title",
+    "complete_restored_source_scan": "pending Main owner report",
+    "readme": "Root README remains one newline"
+  },
+  "verification": {
+    "static_check": "passed; text/SHA/isolated patch/path model only",
+    "godot_parse": "not_run",
+    "native_window_title": "not_run",
+    "existing_save_reload": "not_run",
+    "public_restoration_check": "not_run; current v30 fixed source graph must be extended by a later separately verified adoption layer"
+  },
+  "adoption_warning": "Do not overwrite stable formal root or alter old source signatures. The v30 restorer pins project.godot and will correctly reject this candidate byte change until a new adoption layer is verified.",
+  "references": [
+    "https://docs.godotengine.org/en/4.6/classes/class_projectsettings.html#class-projectsettings-property-application-config-name",
+    "https://docs.godotengine.org/en/4.6/tutorials/io/data_paths.html",
+    "https://docs.godotengine.org/en/4.6/tutorials/export/feature_tags.html"
+  ]
+}

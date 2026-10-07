@@ -1,0 +1,35 @@
+{
+  "schema": "words-and-perils-game-name-static-check/v1",
+  "status": "passed",
+  "scope": "Text integrity, exact-old SHA reconstruction, isolated patch application and documented desktop path model only",
+  "project_before_sha256": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd",
+  "project_after_sha256": "0b35574f45a5b50307636bb3eee790a9c99be785ce3dc30c2b44e1c666dc0038",
+  "checks": [
+    "candidate byte count and SHA",
+    "formal display name exact",
+    "two legacy occurrences exclusively desktop compatibility identities",
+    "visible name/description free of legacy title",
+    "old configuration reconstructs exact original SHA",
+    "git apply --check and apply in temporary fixture",
+    {
+      "platform": "windows",
+      "documented_old_and_new_relative_paths_equal": true
+    },
+    {
+      "platform": "macos",
+      "documented_old_and_new_relative_paths_equal": true
+    },
+    {
+      "platform": "linux",
+      "documented_old_and_new_relative_paths_equal": true
+    },
+    {
+      "platform": "bsd",
+      "documented_old_and_new_relative_paths_equal": true
+    }
+  ],
+  "native_godot": "not_run",
+  "window_title": "not_run",
+  "actual_save_reload": "not_run",
+  "data_writes": "Temporary fixture only; no real project or user data changed"
+}

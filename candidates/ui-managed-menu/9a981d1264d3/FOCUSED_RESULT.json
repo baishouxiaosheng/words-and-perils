@@ -1,0 +1,11 @@
+{
+  "status": "focused_candidate_passed_not_adopted",
+  "main_sha256": "9a981d1264d3207910e9ccc722287019aca5a226b565e9e4f5f8731ea93dfcf8",
+  "managed_menu_sha256": "88cc4a980adee961b27485a4a499cf6762a2bdd5995aac2368db1d208b9a93b4",
+  "checks": 16,
+  "scope": "Existing right HUD four-entry menu data, original Adventure/Advanced hierarchy and Back, long menu scroll, original API command after eased close exactly once, closing input lock and outside dismissal, complete authority unchanged. Authored root Input events; physical keyboard input and complete menu matrix not claimed.",
+  "retained_warning": "Driver cannot change VSync mode",
+  "new_diagnostics": 0,
+  "stable_default": "public v30 unchanged",
+  "source_dependency": "Measured Ground-ring presentation overlay remains a separate private checkpoint; this UI source candidate is not a complete release restore package."
+}

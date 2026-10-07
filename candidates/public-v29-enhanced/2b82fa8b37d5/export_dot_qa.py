@@ -20,8 +20,9 @@ for kind in ('selection','offline','api','wasd'):
     items.append(row(directory/'report.json'))
     logs.extend([row(directory/'runtime.log',False),row(directory/'guard.jsonl',False)])
     guard=(directory/'guard.jsonl').read_bytes()
-    last=guard.splitlines(keepends=True)[-1]
-    items.append({'path':str((directory/'guard.jsonl').relative_to(E))+':last-line','bytes':len(last),'sha256':hashlib.sha256(last).hexdigest(),'base64':base64.b64encode(last).decode()})
+    lines=guard.splitlines(keepends=True)
+    for label,record in [('baseline',lines[0]),('owned-launched',lines[1]),('last-line',lines[-1])]:
+        items.append({'path':str((directory/'guard.jsonl').relative_to(E))+':'+label,'bytes':len(record),'sha256':hashlib.sha256(record).hexdigest(),'base64':base64.b64encode(record).decode()})
 for p in [E/'selection/runtime.log',E/'selection/guard.jsonl',*E.glob('selection-20*/runtime.log'),*E.glob('selection-20*/guard.jsonl'),*E.glob('import-20*/runtime.log'),*E.glob('import-20*/guard.jsonl')]:
     if p.exists():logs.append(row(p,False))
 report={'schema':'words-and-perils-dot-native-all4-raw-evidence/v1','environment':'dot native cloud Linux /workspace/wap','artifact_scope':'Four original strict headless gates on this dot project, raw reports and guard tail bytes, final9/876 before API-WASD and after all four; raw logs remain native and hash-bound','limits':['API78/WASD67/selection47/offline33 ran on the same exact dot project final nine sources; headless logic only','X11 selection assertions passed with one VSync warning; GPU/OS-input acceptance is not signed','First selection/offline had full1426+953 admission and post876; new API/WASD have explicit876+9 pre and post checkpoints'],'files':items,'raw_logs':logs}

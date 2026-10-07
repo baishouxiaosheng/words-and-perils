@@ -34,7 +34,15 @@ def run_restore(name,extra=()):
     with (E/(name+'.log')).open('w') as log:
         code=subprocess.call([sys.executable,'-B',str(ROOT/'tools/restore_repository.py'),*extra],cwd=ROOT,stdout=log,stderr=subprocess.STDOUT)
     if code: raise RuntimeError(name+' exited '+str(code))
-    print('DOT_QA_RESTORE',name,'passed',flush=True)
+    reports=[]
+    for line in (E/(name+'.log')).read_text().splitlines():
+        try:
+            value=json.loads(line)
+            if isinstance(value,dict) and 'source_files' in value:reports.append(value)
+        except ValueError:pass
+    if not reports:raise ValueError('Restorer final JSON report missing')
+    print('DOT_QA_RESTORE',name,json.dumps(reports[-1]),flush=True)
+    return reports[-1]
 def install():
     E.mkdir(parents=True,exist_ok=True)
     c=config(); a=c['archive']; encoded=read(PREFIX/a['file'])
@@ -64,18 +72,19 @@ def install():
         target=ROOT/n
         if target.is_symlink():raise ValueError('Control is symlink')
         target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(payload[n])
-    run_restore('restore-final')
+    final=run_restore('restore-final')
     source_pins();run_restore('check-final',('--check',))
     sm=json.loads(read(ROOT/'distribution_manifest.json'))['source_files']
     before={r['path']:(ROOT/r['path']).stat().st_mtime_ns for r in sm}
-    run_restore('restore-repeat')
+    repeat=run_restore('restore-repeat')
+    if repeat.get('source_writes')!=0:raise ValueError('Authoritative repeat source writes are not zero')
     after={r['path']:(ROOT/r['path']).stat().st_mtime_ns for r in sm}
     if before!=after:raise ValueError('Repeated restoration changed source mtimes')
-    p=source_pins();save('install-receipt.json',{'status':'restored_checked_repeat_zero_source_writes','environment':'dot native cloud Linux /workspace/wap','candidate_manifest_sha256':MANIFEST_SHA,'source_pins':p,'source_count':len(sm),'guard_sha256':digest(GUARD_BYTES),'repository_default_restore_unchanged':True,'native_canonical_v28_unchanged':True})
+    p=source_pins();save('install-receipt.json',{'status':'restored_checked_repeat_zero_source_writes','environment':'dot native cloud Linux /workspace/wap','candidate_manifest_sha256':MANIFEST_SHA,'source_pins':p,'source_count':final['source_files'],'restore_report':final,'repeat_report':repeat,'guard_sha256':digest(GUARD_BYTES),'repository_default_restore_unchanged':True,'native_canonical_v28_unchanged':True})
     print('DOT_QA_INSTALL_PASS source_count',len(sm),'main',p['main.gd'],'repeat_zero_source_writes',flush=True)
 def gate(kind):
     E.mkdir(parents=True,exist_ok=True);c=config();source_pins()
-    work=E/kind
+    work=E/(kind+'-'+time.strftime('%Y%m%dT%H%M%SZ',time.gmtime()))
     if work.exists():raise ValueError('Fresh gate directory required')
     work.mkdir(); guard=E/'guard_effective8g.py'
     if guard.exists() and read(guard)!=GUARD_BYTES:raise ValueError('Guard changed')
@@ -105,7 +114,7 @@ def gate(kind):
     save(kind+'-request.json',{'source_pins':source_pins(),'fixture_original_sha256':digest(read(orig)),'fixture_executed_sha256':digest(b),'fixture_change':'selection Main binding only' if kind=='selection' else 'none','guard_sha256':digest(GUARD_BYTES),'expected_checks':expected_checks,'display':'native x11; synthetic real GUI events, no OS input or visual acceptance claim'})
     start=time.monotonic()
     with (work/'runtime.log').open('w') as log: code=subprocess.call(command,cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT)
-    text=(work/'runtime.log').read_text(errors='replace');strict=re.findall(r'(?m)^.*(?:SCRIPT ERROR:|ERROR:|WARNING:).*$ ',text)
+    text=(work/'runtime.log').read_text(errors='replace')
     strict=[line for line in text.splitlines() if re.search(r'(?:SCRIPT ERROR:|ERROR:|WARNING:)',line)]
     result=json.loads(read(report)) if report.exists() else {}
     rows=[json.loads(line) for line in read(work/'guard.jsonl').decode().splitlines()] if (work/'guard.jsonl').exists() else []
@@ -113,7 +122,22 @@ def gate(kind):
     summary={'status':'passed' if passed else 'failed','code':code,'elapsed_s':time.monotonic()-start,'checks':result.get('checks'),'failures':result.get('failures'),'strict_error_count':len(strict),'strict_errors':strict,'pid':result.get('pid'),'main_sha256':result.get('main_sha256'),'display':result.get('display_backend'),'last_guard_event':rows[-1] if rows else None,'environment':'dot native cloud Linux /workspace/wap','network_claim':'fixture records no provider work; no packet capture','receipt':result.get('receipt')}
     source_pins();save(kind+'-summary.json',summary);print('DOT_QA_GATE',kind,json.dumps(summary,ensure_ascii=False),flush=True)
     if not passed:raise SystemExit(1)
+def import_assets():
+    E.mkdir(parents=True,exist_ok=True);before=source_pins()
+    work=E/('import-'+time.strftime('%Y%m%dT%H%M%SZ',time.gmtime()));work.mkdir()
+    guard=E/'guard_effective8g.py'
+    if guard.exists() and read(guard)!=GUARD_BYTES:raise ValueError('Guard changed')
+    guard.write_bytes(GUARD_BYTES)
+    command=[sys.executable,'-B',str(guard),'--log',str(work/'guard.jsonl'),'--timeout','180','--reserve-mib','512','--admission-extra-mib','1741','--','godot','--path',str(ROOT),'--headless','--editor','--import','--quit','--audio-driver','Dummy']
+    with (work/'runtime.log').open('w') as log:code=subprocess.call(command,cwd=ROOT,stdout=log,stderr=subprocess.STDOUT)
+    text=(work/'runtime.log').read_text(errors='replace');errors=[line for line in text.splitlines() if re.search(r'(?:SCRIPT ERROR:|ERROR:|WARNING:)',line)]
+    after=source_pins()
+    save('import-summary.json',{'code':code,'before':before,'after':after,'diagnostics':errors,'native_scope':'Official Godot editor asset import only; this is not a gameplay pass','log_directory':str(work)})
+    print('DOT_QA_IMPORT',code,'diagnostic_lines',len(errors),'source9_unchanged',before==after,flush=True)
+    if code or before!=after:raise SystemExit(1)
+    run_restore('check-after-import',('--check',))
 if __name__=='__main__':
     if len(sys.argv)!=2:raise SystemExit('Use install, selection, or offline')
     if sys.argv[1]=='install':install()
+    elif sys.argv[1]=='import':import_assets()
     else:gate(sys.argv[1])

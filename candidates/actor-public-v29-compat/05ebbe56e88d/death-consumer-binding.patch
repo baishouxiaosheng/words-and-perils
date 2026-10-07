@@ -1,0 +1,28 @@
+--- original/test_full_main_bridge_logic.gd
++++ consumer/test_full_main_bridge_logic.gd
+@@ -7,11 +7,14 @@
+ const OfflineTransport = preload("res://tests/ai_gm_http/mock_transport.gd")
+ const NativeSupport = preload("res://view/actor_action_entry/moving_support.gd")
+ const ActorPolicy = preload("res://view/actor_action_profile_v2/policy.gd")
+-const EXPECTED_MAIN_SHA = "bb15728f636f5d22a0d2f54b026468933246d073dfee59998fa78e2e54f3fa84"
++const EXPECTED_MAIN_SHA = "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f"
++# Exact immutable historical checkpoint producer; never retag old saves as this consumer.
++const EXPECTED_CHECKPOINT_MAIN_SHA = "bb15728f636f5d22a0d2f54b026468933246d073dfee59998fa78e2e54f3fa84"
++const EXPECTED_CHECKPOINT_PIN_SHA = "9017a2c377b14e66eac54d7a10a56ed38fb6cd69eaf34bc7d2eda548ec1ab282"
+ const EXPECTED_AUTHORITY_SHA = "084f3c14412ea01fd0d5f4023463232979376e8938a5800325feffa93371cc6e"
+ const PRIVATE_ROOT_ENV = "FOGBANK_ACTOR_FULL_TEST_ROOT"
+ const PUBLIC_PIN_PATH = "res://tests/actor_full_main/public_source_pins.json"
+-const EXPECTED_PUBLIC_PIN_SHA = "9017a2c377b14e66eac54d7a10a56ed38fb6cd69eaf34bc7d2eda548ec1ab282"
++const EXPECTED_PUBLIC_PIN_SHA = "776ad0621197ffe7ddbd270603a75b4bdeda6293373d42b08583d73e1ca4f0bd"
+ const EXPECTED_PRODUCTION_MANIFEST_SHA = "a6de3fff486df95013f47602fd743de5ed21af484b13f63ac3e9c1a9b5d2a546"
+ const OUT = "user://actor_full_main/"
+ const PLAYER = "actor_player"
+@@ -219,7 +222,7 @@
+ func install_checkpoint(name: String, fresh_continue: bool) -> Dictionary:
+ 	var directory: String = OUT + "checkpoints/" + name + "/"
+ 	var manifest: Dictionary = read_json(directory + "manifest.json")
+-	if not expect(not manifest.is_empty() and manifest.get("main_sha256") == EXPECTED_MAIN_SHA and manifest.get("authority_profile_digest") == EXPECTED_AUTHORITY_SHA and manifest.get("source_pins_sha256") == EXPECTED_PUBLIC_PIN_SHA and manifest.get("driver_sha256") == file_signature("res://tests/test_full_main_bridge.gd"), "checkpoint manifest matches exact bridge and authority"): return {}
++	if not expect(not manifest.is_empty() and manifest.get("main_sha256") == EXPECTED_CHECKPOINT_MAIN_SHA and manifest.get("authority_profile_digest") == EXPECTED_AUTHORITY_SHA and manifest.get("source_pins_sha256") == EXPECTED_CHECKPOINT_PIN_SHA and manifest.get("driver_sha256") == file_signature("res://tests/test_full_main_bridge.gd"), "checkpoint manifest matches exact bridge and authority"): return {}
+ 	var saved: String = directory + "actor_actions_v2.json"
+ 	if not expect(file_signature(saved) == manifest.save_sha256 and file_signature(saved + ".narration.json") == manifest.sidecar_sha256, "checkpoint and sidecar hashes still match producer"): return {}
+ 	if not copy_private_file(saved, View.SAVE_PATH) or not copy_private_file(saved + ".narration.json", View.SAVE_PATH + ".narration.json"): return {}

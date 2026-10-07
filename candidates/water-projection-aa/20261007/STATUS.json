@@ -1,0 +1,27 @@
+{
+  "scope": "Independent water-only source candidate. One switch false/true changes only projection threshold AA; no Main or tree/shadow-atlas setting change.",
+  "base_water_sha256": "dffafc1e9f0370e9591c258e7bdc24c7d51c2173b38a503111bcdad35667e70c",
+  "candidate_water_sha256": "e46f17a963875cc213d579dccc2ac5e7678155ad4449619c4decce1a07652b42",
+  "default_off": true,
+  "native_tested": true,
+  "palette_include_sha256": "2991c9cc2fbd1d02128bbca722f6de67f80438b67b9ead9d7b33edb45389d60c",
+  "diagnosis": "Old shared threshold halfwidth cap.020 yields <1px support when fwidth(mask)>.04. Existing water ripple AA never changes real projected visibility. Atlas-specific contribution remains unmeasured.",
+  "unknowns": "One-pixel threshold AA cannot erase true low-poly crown silhouette or fix insufficient shadow atlas sampling; must view same Main camera.",
+  "native_scope": "Actual Main36 same-camera A/B; ground ring off both",
+  "native_result": {
+    "exit": 0,
+    "seconds": 33.9982,
+    "strict_errors": 0,
+    "full1741_peak_mib": 1489.203125,
+    "source_pins_unchanged": true,
+    "camera_geometry_authority_same": true
+  },
+  "visual_result": "Small water-shadow edge steps softened; broad polygon crown silhouette remains; no whole-art acceptance",
+  "pixel_result": {
+    "changed_pixels": 930,
+    "visible_water_core_unchanged_pixels": 45217
+  },
+  "source_base_commit": "f9f841ef1cf9617f7c7ac2f8a5e8e046e73f31ae",
+  "main_source_adopted": false,
+  "proof_scope": "Actual Main36 water-only A/B, Ground ring off. No private logs/archive or cancelled Main source overlay are included."
+}

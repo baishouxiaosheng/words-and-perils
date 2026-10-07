@@ -14,7 +14,7 @@ names=['selection-headless-summary.json','offline-headless-summary.json','select
 items=[row(E/name) for name in names]
 logs=[]
 for kind in ('selection','offline'):
-    directories=sorted(E.glob(kind+'-headless-*'))
+    directories=sorted(p for p in E.glob(kind+'-headless-*') if p.is_dir() and not p.is_symlink())
     if len(directories)!=1:raise ValueError('Expected one completed strict headless gate')
     directory=directories[0]
     items.append(row(directory/'report.json'))

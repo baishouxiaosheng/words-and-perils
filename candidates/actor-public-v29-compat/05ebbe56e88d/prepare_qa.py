@@ -63,7 +63,41 @@ def run_parse():
     (work/'report.json').write_text(json.dumps(result,indent=2)+'\n')
     print('ACTOR_COMBO_PARSE_RESULT',code,'strict',len(errors),flush=True)
     if code or errors:raise SystemExit(1)
+def run_finite():
+    e=DEST/'artifacts/actor05eb_qa';pins=json.loads(regular(e/'source-pins.json'))
+    original=json.loads(regular(REPO/'candidates/actor-status/a6de3fff486d/manifest.json'))
+    for row in original['production_files']:
+        if row['path']!='main.gd' and digest(regular(DEST/row['path']))!=row['sha256']:raise ValueError('Original actor source mismatch')
+    for row in json.loads(regular(REPO/'updates/v29/manifest.json'))['files']:
+        if row['path'] not in [r['path'] for r in original['production_files']] and digest(regular(DEST/row['path']))!=row['sha256']:raise ValueError('Original v29 source mismatch')
+    runtime=json.loads(regular(REPO/'candidates/public-v29-enhanced/2b82fa8b37d5/runtime_876_pins.json'))
+    def verify_all():
+        for n,h in pins.items():
+            if digest(regular(DEST/n))!=h:raise ValueError('Candidate source mismatch')
+        for n,row in runtime.items():
+            b=regular(DEST/n)
+            if len(b)!=row['bytes'] or digest(b)!=row['sha256']:raise ValueError('Original876 runtime input mismatch')
+    verify_all()
+    work=e/('finite-'+time.strftime('%Y%m%dT%H%M%SZ',time.gmtime()));work.mkdir()
+    env=os.environ.copy()
+    for key in ('DATA','CACHE','CONFIG'):
+        p=work/key.lower();p.mkdir();env['XDG_'+key+'_HOME']=str(p)
+    env['FOGBANK_ACTOR_FINITE_USER_DIR']=str(work/'data/godot/app_userdata/雾岸纪事 · AI 沙盘')
+    env['FOGBANK_ACTOR_FINITE_REPORT']=str(work/'report.json')
+    guard=REPO/'artifacts/dot_native_qa_20261007/guard_effective8g.py'
+    if digest(regular(guard))!='22605fa19cf73893a3812836c78d509e20be449b6eca6d3ec12eacfc43cefb52':raise ValueError('Approved guard differs')
+    script=REPO/'candidates/actor-public-v29-compat/05ebbe56e88d/test_finite_main.gd'
+    cmd=[sys.executable,'-B',str(guard),'--log',str(work/'guard.jsonl'),'--timeout','180','--reserve-mib','512','--admission-extra-mib','1741','--','godot','--headless','--path',str(DEST),'--audio-driver','Dummy','--script',str(script)]
+    with (work/'runtime.log').open('w') as log:code=subprocess.call(cmd,cwd=DEST,env=env,stdout=log,stderr=subprocess.STDOUT)
+    text=(work/'runtime.log').read_text(errors='replace');errors=[x for x in text.splitlines() if 'ERROR:' in x or 'WARNING:' in x]
+    verify_all()
+    report=json.loads(regular(work/'report.json')) if (work/'report.json').exists() else {}
+    summary={'code':code,'strict_errors':errors,'source_pins_before_after':pins,'original_runtime_inputs_verified_before_after':len(runtime),'driver_sha256':digest(regular(script)),'result':report}
+    (work/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
+    print('ACTOR_COMBO_FINITE_RESULT',code,'strict',len(errors),'report',json.dumps(report,ensure_ascii=False),flush=True)
+    if code or errors or not report.get('ok'):raise SystemExit(1)
 if __name__=='__main__':
     if sys.argv[1]=='stage':stage()
     elif sys.argv[1]=='parse':run_parse()
+    elif sys.argv[1]=='finite':run_finite()
     else:raise SystemExit('Use stage or parse')

@@ -5833,7 +5833,7 @@
       }
     }
   ],
-  "active_version": "v29-playtest-enhanced",
+  "active_version": "v30-actor-status",
   "update_manifest": {
     "path": "updates/v22/manifest.json",
     "size": 8781,
@@ -5877,8 +5877,8 @@
     }
   ],
   "adoption_manifest": {
-    "path": "updates/v29/manifest.json",
-    "size": 8997,
-    "sha256": "fc048fdad0c405bc82145e9277ae3737c0f617a22b960792469dfd12d8bec0f8"
+    "path": "updates/v30/manifest.json",
+    "size": 22680,
+    "sha256": "b3d9bed51dafc6a86acdc53b5e5456556d2b262b7bb16dbdef72d69febd5d5b9"
   }
 }

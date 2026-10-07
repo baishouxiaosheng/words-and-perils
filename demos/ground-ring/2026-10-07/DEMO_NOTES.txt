@@ -1,0 +1,9 @@
+Actual Main Ground-ring candidate
+
+7.766667 seconds at recorded 30 fps. Authored connected menus and the existing production camera/selection presentation methods; no physical-keyboard or real-time performance claim.
+
+The dialogue is hidden using the existing game control to show the castle and Ground shadows. OFF, ON, camera movement, a stable updated ring, and OFF restore are shown. While movement invalidates the mask, the original coloured shadow remains; the ring returns after two stable draws of the same generation.
+
+Ground only. Water-side tree-shadow aliasing remains; Water ring and all-material visual acceptance are pending. The top title edge is slightly cropped in this candidate recording. Offline, with no provider configured.
+
+Candidate Main SHA256 d4d25f45a847b857b779df03ad2086e643d09a0d760c1763467b8a98ea92c759. MP4 SHA256 85d0dc7888a795d053d0d0caeabf034b4ac94e956403d6cb1fe220415f45c630, 1024796 bytes. Stable default v30 is unchanged. Source overlay and raw evidence are retained privately; this publication includes only the demo and this note.

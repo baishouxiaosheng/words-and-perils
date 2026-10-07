@@ -1,0 +1,209 @@
+{
+  "schema": "words-and-perils-public-zip-adoption/v1",
+  "version": "v29-playtest-enhanced",
+  "title": "public v29 试玩增强版（API设置/镜头/选择反馈/离线移动）",
+  "distribution_identity": "public-source-derived",
+  "native_canonical_version": "v28_unchanged",
+  "base_public_commit": "f630fc4ff92143f7add7d36907c317d709600e61",
+  "previous_distribution": {
+    "path": "updates/v28-ui-safety/distribution_manifest.json",
+    "size": 206858,
+    "sha256": "6154796927071e068a8bed51e3146f9c8da5f407b4d702c127ddf42bbdcb641e"
+  },
+  "previous_manifest_sha256": "b188cfddaf8e11878acdf2df2b861a0a4a87bd85d429e2bc4692f7b4c59296cb",
+  "excluded_versions": [
+    "v25"
+  ],
+  "files": [
+    {
+      "path": "main.gd",
+      "size": 184920,
+      "sha256": "6e2f62e76db2f4a64a9bbdf4d348a32588d1cb991e6d869bff4c730e12e61e5c",
+      "before_sha256": "2b05911a1bcde48b10a54e8d1475ef62c66aea84ff8c7f5b7cdc3052eaf9fc93"
+    },
+    {
+      "path": "view/dual_api_settings/client.gd",
+      "size": 13777,
+      "sha256": "79751f2bdebac0305a773fc81793d936fb7538e59d466fb742249831a4ca2d83",
+      "before_sha256": null
+    },
+    {
+      "path": "view/dual_api_settings/controller.gd",
+      "size": 1022,
+      "sha256": "214ccf927d266317a7fe037c18f5d1d6f6592fe4c49e7059485969735f05063a",
+      "before_sha256": null
+    },
+    {
+      "path": "view/dual_api_settings/panel.gd",
+      "size": 24541,
+      "sha256": "932dc0c71d5d95c966e961ea406d4ed8b971a5d88d7e125a42223f2f20d34c69",
+      "before_sha256": null
+    },
+    {
+      "path": "view/dual_api_settings/provider_presets.gd",
+      "size": 3659,
+      "sha256": "26520871eaecc153258e036926474ade94828fb260df578bc2f3c10f1bf70dc5",
+      "before_sha256": null
+    },
+    {
+      "path": "view/tabletop_interaction/offline_move_demo.gd",
+      "size": 7620,
+      "sha256": "7ec81eca42e9e1d51d63a6c0e3d379a786caa9b18e6e40aa9159abab34629b4b",
+      "before_sha256": null
+    },
+    {
+      "path": "view/tabletop_interaction/selection_motion.gd",
+      "size": 13375,
+      "sha256": "60835b0672a4426faf747c57e6a21617ebbf87e08c68b8cb3244175f813448e7",
+      "before_sha256": null
+    },
+    {
+      "path": "view/tabletop_interaction/wasd_camera_pan.gd",
+      "size": 6941,
+      "sha256": "c26abf87dd3ff1d0b76b318a6887fa5ca9c6342571d128f0ef2662d9a6a29ef0",
+      "before_sha256": null
+    },
+    {
+      "path": "view/ui_typography/style.gd",
+      "size": 14899,
+      "sha256": "0ce716c357b80da23063ae8f8d678a2c4c022f58df63c34b14ad802f9b90e565",
+      "before_sha256": null
+    }
+  ],
+  "archive": {
+    "format": "zip+base64",
+    "encoded_path": "updates/v29/source_delta.zip.b64",
+    "encoded": {
+      "size": 105992,
+      "sha256": "6e33c6919f372a8aff7cc204d556beaeb9e53a747d39fd00453060e9fbbe7bfa"
+    },
+    "size": 79492,
+    "sha256": "2b82fa8b37d5681a6bafa3821956cba8bca58807c66bf35bc127f1a1873cebd3",
+    "members": {
+      "payload/main.gd": {
+        "bytes": 184920,
+        "sha256": "6e2f62e76db2f4a64a9bbdf4d348a32588d1cb991e6d869bff4c730e12e61e5c"
+      },
+      "payload/view/dual_api_settings/client.gd": {
+        "bytes": 13777,
+        "sha256": "79751f2bdebac0305a773fc81793d936fb7538e59d466fb742249831a4ca2d83"
+      },
+      "payload/view/dual_api_settings/controller.gd": {
+        "bytes": 1022,
+        "sha256": "214ccf927d266317a7fe037c18f5d1d6f6592fe4c49e7059485969735f05063a"
+      },
+      "payload/view/dual_api_settings/panel.gd": {
+        "bytes": 24541,
+        "sha256": "932dc0c71d5d95c966e961ea406d4ed8b971a5d88d7e125a42223f2f20d34c69"
+      },
+      "payload/view/dual_api_settings/provider_presets.gd": {
+        "bytes": 3659,
+        "sha256": "26520871eaecc153258e036926474ade94828fb260df578bc2f3c10f1bf70dc5"
+      },
+      "payload/view/tabletop_interaction/offline_move_demo.gd": {
+        "bytes": 7620,
+        "sha256": "7ec81eca42e9e1d51d63a6c0e3d379a786caa9b18e6e40aa9159abab34629b4b"
+      },
+      "payload/view/tabletop_interaction/selection_motion.gd": {
+        "bytes": 13375,
+        "sha256": "60835b0672a4426faf747c57e6a21617ebbf87e08c68b8cb3244175f813448e7"
+      },
+      "payload/view/tabletop_interaction/wasd_camera_pan.gd": {
+        "bytes": 6941,
+        "sha256": "c26abf87dd3ff1d0b76b318a6887fa5ca9c6342571d128f0ef2662d9a6a29ef0"
+      },
+      "payload/view/ui_typography/style.gd": {
+        "bytes": 14899,
+        "sha256": "0ce716c357b80da23063ae8f8d678a2c4c022f58df63c34b14ad802f9b90e565"
+      }
+    }
+  },
+  "zip_validator": {
+    "helper": {
+      "path": "candidates/api-typography/15b7faa87361/apply_candidate.py",
+      "size": 25498,
+      "sha256": "4fd50e6c75206da80458eb82e8b7746b471373926d117cc4a5a2ae58946e3a45"
+    },
+    "manifest": {
+      "path": "candidates/api-typography/15b7faa87361/manifest.json",
+      "size": 4747,
+      "sha256": "b32b4920c8aab18b8f56de1138f0458a6982c636b46c53fdf526fb5c04e22a6d"
+    },
+    "scope": "Unchanged safe_read/read_archive validation primitives only; original five-file CONTRACT is not modified or used to certify this nine-file archive."
+  },
+  "release_wrapper": {
+    "path": "tools/restore_repository.py",
+    "size": 224,
+    "sha256": "2f4edd63a5e4614f8935cc85ab1863182049b13c0aed44793d8071a8a3ca4f2f",
+    "before_sha256": "7acc199c51befb1cc8ee4c65df5694b968af32c0b36220eb80c2898f6b95ecb2"
+  },
+  "release_helper": {
+    "path": "tools/restore_v29.py",
+    "size": 28323,
+    "sha256": "438a6230a147437dcb8f359519f7e4bca9a82e67fe816a88aec31e6784314b84"
+  },
+  "protected_public_files": {
+    "README.md": {
+      "size": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "project.godot": {
+      "size": 808,
+      "sha256": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd"
+    },
+    "main.tscn": {
+      "size": 253,
+      "sha256": "1e191898de710cf7d4fd1388e9798e8b4f39cf48fcd9c826ddc5169915e53f2b"
+    },
+    "updates/v28-ui-safety/manifest.json": {
+      "size": 2701,
+      "sha256": "b188cfddaf8e11878acdf2df2b861a0a4a87bd85d429e2bc4692f7b4c59296cb"
+    },
+    "view/integrated_ecology_world/performance_variant/source_receipt.gd": {
+      "size": 1093,
+      "sha256": "dbc75c69f734f0ca0565947f609c55f483278e87334ebdd9e7e61e2a53431ff9"
+    },
+    "view/playable_build/settlement_content.gd": {
+      "size": 9184,
+      "sha256": "a0ad49733a6b85b5d9b113d395a845d95bab95455e1ffdc05d59e0df5bc86af8"
+    },
+    "view/generated_natural_coast_entry/view.gd": {
+      "size": 8403,
+      "sha256": "0b41c8536c048adc12243972a5cfa81ccaa9c978446fa0c5ce50dc3624ec384f"
+    }
+  },
+  "final_source_files": 1426,
+  "final_source_map_sha256": "64fb209753f4ebef856848399266d828e6e3b47b389872c2accace2074db465a",
+  "literal_script_closure": {
+    "scripts": 308,
+    "scripts_sha256": "0d20d39685d41aa103bcc2c98fb3df70864acea488b4f9337672e702bf475038",
+    "scope": "Static literal load/preload/extends reachability only; excludes dynamic loads and runtime/native behavior."
+  },
+  "supplemental_source_pins": {
+    "tests/capture_fieldbook_c.gd": "87be257069c11e69d75077232ae7c09fb50be6a96f879c86b8644dc6c0e63c0b",
+    "tests/test_fieldbook_art.gd": "8900f5e223ed99a628f6e5ef4f99226560c4d25e0cff7e473cee0bcc12034563",
+    "view/adventure_fieldbook/layout.gd": "1dbcbd97f0e7569de2b507b3844d1b9bc281cd6af2eb94d7d82da743215be154",
+    "view/adventure_fieldbook/tokens.gd": "83d588eb6bad86a05e5f9422e5738f9425a4647af670c8f79480e1c827dbb37f",
+    "view/playable_build/scene_test_board.gd": "6c7b216b8f8090c8b92cff50f3032c650605830e0149ec1c8572c2d9d63eb0a2",
+    "view/river_overlay_preview/river_water_queries.gd": "e8af0f6ea23d3e337f29c9d646b0dacab5c3731f682d95a02a31f7747ea16933"
+  },
+  "supplemental_source_count": 6,
+  "supplemental_source_scope": "Six exact paths for separate original manifest checks or relative preload audit. Not claimed as an independently recursive runtime or test closure; original literal queue remains 308.",
+  "adoption_receipt": {
+    "path": "updates/v29/adoption_receipt.json",
+    "role": "External acceptance evidence; not hashed here to avoid a release-control hash cycle."
+  },
+  "scope": "Public playtest API settings and provider presets, camera panning, selection feedback, typography and offline movement. No actor/status upgrade, shadow/Jev integration, authority replacement, save migration, font asset or native-v28 change.",
+  "recovery_contract": {
+    "source_base": "Direct genuine public v28 + UI safety to final nine-source revision",
+    "unknown_or_other_candidate_edits": "Refused and preserved before source writes",
+    "known_historical_or_final_states": "Recoverable forward and idempotent; final Main and wrapper have terminal ranks",
+    "ordinary_errors": "Per-layer rollback of recognized preimages; prior completed layers may remain",
+    "limits": [
+      "No whole-restoration atomicity",
+      "No power-loss durability",
+      "No malicious concurrent-writer guarantee"
+    ],
+    "source_only_modes": "--check and --sources-only exclude binary resource payloads"
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "schema": "words-and-perils-public-adoption-receipt/v1",
+  "status": "accepted_for_public_v29_headless_playtest_activation",
+  "version": "v29-playtest-enhanced",
+  "title": "public v29 试玩增强版（API设置/镜头/选择反馈/离线移动）",
+  "distribution_identity": "public-source-derived",
+  "native_canonical_version": "v28_unchanged",
+  "base_public_commit": "f630fc4ff92143f7add7d36907c317d709600e61",
+  "adoption_time_utc": "2026-10-07T05:21:27Z",
+  "adoption_time_basis": "Actual bounded public-v29 adoption decision after independent review of the original four-gate evidence",
+  "activation_status": "Accepted for activation. Activation is effective only when the public root distribution and default restoration wrapper both match the exact pinned control artifacts; the final Git activation publishes them atomically.",
+  "accepted_scope": "Public enhanced-playtest API settings/provider presets, WASD camera, selection feedback, typography and offline movement; headless logical acceptance only",
+  "control_artifacts": [
+    {
+      "path": "tools/restore_v29.py",
+      "size": 28323,
+      "sha256": "438a6230a147437dcb8f359519f7e4bca9a82e67fe816a88aec31e6784314b84"
+    },
+    {
+      "path": "updates/v29/manifest.json",
+      "size": 8997,
+      "sha256": "fc048fdad0c405bc82145e9277ae3737c0f617a22b960792469dfd12d8bec0f8"
+    },
+    {
+      "path": "updates/v29/distribution_manifest.json",
+      "size": 207021,
+      "sha256": "162a2ced850ce5c16f49ae37855e935f882d4de154fbeb7de85a96ee15c19fa2"
+    },
+    {
+      "path": "updates/v29/source_delta.zip.b64",
+      "size": 105992,
+      "sha256": "6e33c6919f372a8aff7cc204d556beaeb9e53a747d39fd00453060e9fbbe7bfa"
+    },
+    {
+      "path": "distribution_manifest.json",
+      "size": 207021,
+      "sha256": "162a2ced850ce5c16f49ae37855e935f882d4de154fbeb7de85a96ee15c19fa2"
+    },
+    {
+      "path": "tools/restore_repository.py",
+      "size": 224,
+      "sha256": "2f4edd63a5e4614f8935cc85ab1863182049b13c0aed44793d8071a8a3ca4f2f"
+    }
+  ],
+  "source_pins": {
+    "main.gd": "6e2f62e76db2f4a64a9bbdf4d348a32588d1cb991e6d869bff4c730e12e61e5c",
+    "view/dual_api_settings/client.gd": "79751f2bdebac0305a773fc81793d936fb7538e59d466fb742249831a4ca2d83",
+    "view/dual_api_settings/controller.gd": "214ccf927d266317a7fe037c18f5d1d6f6592fe4c49e7059485969735f05063a",
+    "view/dual_api_settings/panel.gd": "932dc0c71d5d95c966e961ea406d4ed8b971a5d88d7e125a42223f2f20d34c69",
+    "view/dual_api_settings/provider_presets.gd": "26520871eaecc153258e036926474ade94828fb260df578bc2f3c10f1bf70dc5",
+    "view/tabletop_interaction/offline_move_demo.gd": "7ec81eca42e9e1d51d63a6c0e3d379a786caa9b18e6e40aa9159abab34629b4b",
+    "view/tabletop_interaction/selection_motion.gd": "60835b0672a4426faf747c57e6a21617ebbf87e08c68b8cb3244175f813448e7",
+    "view/tabletop_interaction/wasd_camera_pan.gd": "c26abf87dd3ff1d0b76b318a6887fa5ca9c6342571d128f0ef2662d9a6a29ef0",
+    "view/ui_typography/style.gd": "0ce716c357b80da23063ae8f8d678a2c4c022f58df63c34b14ad802f9b90e565"
+  },
+  "hash_graph": "Root and versioned distributions are identical. Distribution pins the manifest; manifest pins helper, wrapper, ZIP and unchanged validators. Receipt is external evidence and is not hashed by the manifest.",
+  "authoritative_final_qa_evidence": {
+    "dot_headless_gates": [
+      {
+        "gate": "api",
+        "checks": 78,
+        "failures": [],
+        "process_exit": 0,
+        "strict_error_count": 0,
+        "elapsed_seconds": 103.76924070299901,
+        "display": "headless",
+        "owned_process_admission_launch_and_exit_verified": true,
+        "evidence_level": "Original report, summary, gate request and guarded admission/owned-launch/terminal bytes independently SHA-256 verified",
+        "evidence_sha256": {
+          "summary": "3df0aedcb748575e475c81fdd01a79020cbaac489d950435e3f56d4297e4dc3f",
+          "request": "d0bfa7d2932d9f5af4eb718ce646ddef21ce7988dcede8b1fe4ce80c040b1f22",
+          "report": "ddb0d1f899af26e9e9066c58a9865b5d5091888716481b189e5ca1e651317fc3",
+          "guard_admission": "d20865b762b74e9356b51f70a1942025f977a125c76d419c4dc8835801935cc0",
+          "guard_owned_launch": "b15b22bf129c7eef56b650b60df0740697238d9825f07d25d05d4be2c8ea6bdb",
+          "guard_terminal_record": "70703537eee5382cb3ba324d4d9b983cfc9d5809dc543858c975c1575699f8c2",
+          "runtime_log_hash_record": "e5edb5e8fcbcb8af67f5de1243e8eb3385cdd8554a129ec05e553f6ca7af4051",
+          "full_guard_log_hash_record": "4f894161b78938120cb1756e5fc25580716757d30898b24a77a2dbe5dfd054dc"
+        },
+        "raw_log_boundary": "Full runtime and guard log digests were exported by the executor; complete logs remain private and were not independently read in this publication review. Original small reports and exact guarded event bytes were reviewed.",
+        "fixture_original_sha256": "2dcd99eb24697ba1ce0a5a0a0db3b11a59b2529c85fa8922db772a13fb63ca0e",
+        "fixture_executed_sha256": "2dcd99eb24697ba1ce0a5a0a0db3b11a59b2529c85fa8922db772a13fb63ca0e",
+        "fixture_change": "none"
+      },
+      {
+        "gate": "wasd",
+        "checks": 67,
+        "failures": [],
+        "process_exit": 0,
+        "strict_error_count": 0,
+        "elapsed_seconds": 25.858047405001344,
+        "display": "headless",
+        "owned_process_admission_launch_and_exit_verified": true,
+        "evidence_level": "Original report, summary, gate request and guarded admission/owned-launch/terminal bytes independently SHA-256 verified",
+        "evidence_sha256": {
+          "summary": "8745438fce3e2f7cd33e3ccce66604bbfc4241b3dadebfbc9173da455c48eebb",
+          "request": "6ee418d565c7a06736df5a32644931dc2e904a404fa2b67dcc4f424b535575dd",
+          "report": "cae9c7ff0bc3c488627708af6750db3c38c412b2f58a250ca085c358af8d72d8",
+          "guard_admission": "f5345755a1b65a3624fd21b6a9c26e0540b9f26adaf37ff1e3f84033f9ddf402",
+          "guard_owned_launch": "e70e196d1d0d7e0742c9ac35cbc825417a164076d0113f5ea2479440c017316d",
+          "guard_terminal_record": "f33eff4709b7be2fb147245b4f19c0f371c84a7ca3c3b23451f937f175735888",
+          "runtime_log_hash_record": "8ea7e91b25307843f263ece95fe0b0add90bebd4c2c949bcbc1f320b1c367b89",
+          "full_guard_log_hash_record": "7b12c297b3a0de3b2a1936de3284fc63b7a7b9b623bb4bdd8dfa2c075fcaa26e"
+        },
+        "raw_log_boundary": "Full runtime and guard log digests were exported by the executor; complete logs remain private and were not independently read in this publication review. Original small reports and exact guarded event bytes were reviewed.",
+        "fixture_original_sha256": "478c31d1670d5e79e1fc61a6b6490fd7df2857845b7b7933a392d094831a8f0f",
+        "fixture_executed_sha256": "ca0d34dde09ee5a43ca0fdbe9c4b7c563d27308a9e81020bb295f1c54de3b332",
+        "fixture_change": "wasd Main binding only"
+      },
+      {
+        "gate": "selection",
+        "checks": 47,
+        "failures": [],
+        "process_exit": 0,
+        "strict_error_count": 0,
+        "elapsed_seconds": 29.4956760770001,
+        "display": "headless",
+        "owned_process_admission_launch_and_exit_verified": true,
+        "evidence_level": "Original report, summary, gate request and guarded admission/owned-launch/terminal bytes independently SHA-256 verified",
+        "evidence_sha256": {
+          "summary": "c87d35ac4cb6d76c3e1f8a02b8da5461c1831e53de0fc93883b4e3eaa00cdac1",
+          "request": "d49835c0353b35d63bd02f5aee5b7d33ca1d8f5bee3fd5f3c6be403b150a3e93",
+          "report": "997cf8bc86b70e5207ed137eb485396ab0a0329db62080a28131a9c9bcd5fc1d",
+          "guard_admission": "c76affe1bc4fa25b0ec70b3f4308ef7a23d5fc9c220e168ae87dc3e83a1a4821",
+          "guard_owned_launch": "28d08eb39c73e035715c48bbfab0534e019c49ff487996ee0d9e5aacf998d93d",
+          "guard_terminal_record": "2ac52fd6fdd961a329679b9d06af26a0a87f7075bf9ed069578e4b2a6559f084",
+          "runtime_log_hash_record": "713efc07922320f6da42ef6b05360c207d839a86953abad608cba4187d4afbe6",
+          "full_guard_log_hash_record": "048f25a209e1f2ed377647ad9b893620135ade782ab9f4449804431dfc67fcde"
+        },
+        "raw_log_boundary": "Full runtime and guard log digests were exported by the executor; complete logs remain private and were not independently read in this publication review. Original small reports and exact guarded event bytes were reviewed.",
+        "fixture_original_sha256": "12cb7487b1874e909013baaed105fb16759b852b9c36a5aa78e470b61445b69f",
+        "fixture_executed_sha256": "c5cb2fdfa8d45eae330bec63e6f01446a444693a5b75757d412a1b1257edfda9",
+        "fixture_change": "selection Main binding only"
+      },
+      {
+        "gate": "offline",
+        "checks": 33,
+        "failures": [],
+        "process_exit": 0,
+        "strict_error_count": 0,
+        "elapsed_seconds": 36.145188930000586,
+        "display": "headless",
+        "owned_process_admission_launch_and_exit_verified": true,
+        "evidence_level": "Original report, summary, gate request and guarded admission/owned-launch/terminal bytes independently SHA-256 verified",
+        "evidence_sha256": {
+          "summary": "da0cde79225f5911dbe1309949350992dd6111f34a979c78df2d9300445d7e1d",
+          "request": "af3bd3c3d6119fcb66bc377b018aea6ba9217a48f40918fac3c4eb96aeebcf21",
+          "report": "de5203556bd50d53d06f0986e92f208b537aa17d6bfcd61f2c7e72e13d560ba6",
+          "guard_admission": "0c9211f16d83dbf94ac5cd3dffe9e0dd1d80afb5b33a87e0c6faf6d3bbf5f3cd",
+          "guard_owned_launch": "768dab90ae2a589f7be10dd9859d30c134a14bcc19a54b169ecbdc78b073ce47",
+          "guard_terminal_record": "626ed5a3971c52602c0d853655164402ccee2cbc7595b7f6b4145f420d497432",
+          "runtime_log_hash_record": "449aa1b56737301968a5467d80a11e91d591145b06f9ba7aefe0841e2e0affe0",
+          "full_guard_log_hash_record": "8b2399fd3c07d506992fee20568f37a11e7ff57d8de76bbe53438633d911623a"
+        },
+        "raw_log_boundary": "Full runtime and guard log digests were exported by the executor; complete logs remain private and were not independently read in this publication review. Original small reports and exact guarded event bytes were reviewed.",
+        "fixture_original_sha256": "30ee6203c084cccc38169cd47d2f1fc109a96ee4ae8ad80132b0d744da15899a",
+        "fixture_executed_sha256": "30ee6203c084cccc38169cd47d2f1fc109a96ee4ae8ad80132b0d744da15899a",
+        "fixture_change": "none"
+      }
+    ],
+    "original_export_sha256": "f58adb2af0b9bf0862d73b0358f9c8f04f876c4fa34f3b346687c3c78da0696b",
+    "original_exported_files_sha_verified": 33,
+    "guard_sha256": "22605fa19cf73893a3812836c78d509e20be449b6eca6d3ec12eacfc43cefb52",
+    "restoration_before_gates": {
+      "final_sources": 1426,
+      "literal_scripts": 308,
+      "binary_resources": 953,
+      "binary_bytes": 83942609,
+      "binary_verification": "passed",
+      "source_writes": 9,
+      "final_source_map_sha256": "64fb209753f4ebef856848399266d828e6e3b47b389872c2accace2074db465a",
+      "restore_report_sha256": "144c1f6e2e45dfa1ccc4d46b99fa09ebc6c7c997632b9cf700c3363707383bbb",
+      "check_report_sha256": "bab38498cc93355bf599a2777192ad3ccbfc510f3c4944274f4b176990a4de8d",
+      "repeat_source_writes": 0,
+      "repeat_binary_verification": "passed",
+      "repeat_report_sha256": "1fc9d53cb7e83df4725fc3c71595d22a6702afa1dbd34c29f5b188da5100cbb6"
+    },
+    "post_gate_source_check": {
+      "final_sources": 1426,
+      "literal_scripts": 308,
+      "source_writes": 0,
+      "final_source_map_sha256": "64fb209753f4ebef856848399266d828e6e3b47b389872c2accace2074db465a",
+      "report_sha256": "1bccd96bbdbc55fa7aa343bf1f78f4a8729fe5067becafcd27a9b19d7cd04026",
+      "evidence_form": "Final source --check embedded in original after-all-four input receipt"
+    },
+    "runtime_inputs_post_gate": {
+      "files": 876,
+      "bytes": 42482604,
+      "original_map_sha256": "4f61e1ce088cc0817ef2044f142f6c80edd5a6a7c3ec47688fa559ed16c1860e",
+      "receipt_sha256": "1bccd96bbdbc55fa7aa343bf1f78f4a8729fe5067becafcd27a9b19d7cd04026",
+      "all_paths_match": true,
+      "boundary": "All-four final checkpoint verifies original 876 items after all four gates. For initial selection/offline gates, admission verified canonical 1426 sources and 953 binary resources, followed by a post-gate 876-item check. New API/WASD additionally have explicit original-876 pre/post checkpoints. No separate original-876 pre-snapshot is claimed for the initial selection/offline pair.",
+      "post_selection_offline_receipt_sha256": "f606af129cbdfa0960b3bdf8448ebe208aef660c25ac6f0c668a04af168d4413",
+      "pre_api_wasd_receipt_sha256": "9eaa34cdd09645ee2686bfda4af6e52ffb3a8009eca38ae57b5d45e816be14ee"
+    },
+    "source_binding": "All nine source pins in all four gate requests and the final post-all-four observations match the immutable v29 manifest.",
+    "same_environment_final_nine_source_four_gate_acceptance": true,
+    "guard_contract": {
+      "effective_budget_bytes": 8589934592,
+      "reserve_bytes": 536870912,
+      "stop_threshold_bytes": 8053063680,
+      "timeout_seconds": 180,
+      "all_four_admissions_below_threshold": true,
+      "all_four_owned_processes_exited_zero": true
+    }
+  },
+  "prior_independent_qa": {
+    "environment_class": "separate saved cloud QA environment",
+    "source_main_sha256": "6e2f62e76db2f4a64a9bbdf4d348a32588d1cb991e6d869bff4c730e12e61e5c",
+    "api_request_controls": {
+      "checks": 78,
+      "strict_error_count": 0,
+      "elapsed_seconds": 139.37
+    },
+    "wasd_camera": {
+      "checks": 67,
+      "strict_error_count": 0,
+      "elapsed_seconds": 35.97
+    },
+    "evidence_level": "Source-bound executor tool reports reviewed by the project owner; original report bytes were not exported",
+    "not_claimed": "No independently verified original-report SHA or same-environment four-gate acceptance from these older reports."
+  },
+  "pending_gates": [],
+  "not_verified": [
+    "OS physical input or IME",
+    "Final graphical/GPU visual acceptance; prior X11 selection passed assertions with a VSync warning",
+    "Live provider response, latency or packet-capture verification",
+    "Independently triggered busy-guard acceptance",
+    "All gameplay or full-game completion",
+    "Actor/status, shadow or Jev successors; native v28 upgrades"
+  ],
+  "prior_attempt_boundaries": [
+    "Initial dot selection cache/import failure remains historical evidence and is not counted as a passed gate",
+    "Editor asset import recorded a nested test-project warning; import is not gameplay acceptance",
+    "Earlier X11 assertion pass is separate from warning-free final headless gates"
+  ],
+  "offline_fixture_outcome": {
+    "kind": "explicitly_attributed_fixture",
+    "live": false,
+    "receipt_hash": "fc2b5b53986e71e60528dcfcef3f4ef01c89a07528ff0db857a917cf0e990bae",
+    "actor_destination": [
+      0,
+      14
+    ],
+    "stamina_delta": -2,
+    "turn": 1,
+    "rolls": [],
+    "boundary": "The retained fixture narration template is not a live provider response or a claim that all gameplay is complete."
+  }
+}

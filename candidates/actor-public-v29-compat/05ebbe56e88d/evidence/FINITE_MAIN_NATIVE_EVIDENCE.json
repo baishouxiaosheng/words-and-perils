@@ -42,9 +42,9 @@
     "provenance": "Selected values read from native terminal; full original guard files retained natively and identified below"
   },
   "native_original_log_sha256": {
-    "finite-20261007T062146Z/guard.jsonl": "882cdab30bc1b51ab4671fa51a7c5fec154040261cc2b056e7358339ac31a2",
+    "finite-20261007T062146Z/guard.jsonl": "882c4dcab30bc1b51ab4671fa51a7c5fec154040261cc2b056e7358339ac31a2",
     "finite-20261007T062146Z/runtime.log": "06a1467574163b42a10bc0f89d8362f3da9ebd9f3b7c5601c98744b9634c8ee3",
-    "finite-20261007T063418Z/guard.jsonl": "dbb2e5932f71d4ce6ac2311bef7c73d9b6de932cf00cd13819eccf2f8872ade",
+    "finite-20261007T063418Z/guard.jsonl": "dbb22e5932f71d4ce6ac2311bef7c73d9b6de932cf00cd13819eccf2f8872ade",
     "finite-20261007T063418Z/runtime.log": "fcf32bf9579acb41e19637817faa96cc4e414219f54bd9ba32aaaae896cf7107"
   },
   "scope_notes": [

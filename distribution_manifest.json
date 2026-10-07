@@ -5833,7 +5833,7 @@
       }
     }
   ],
-  "active_version": "v28-public-entry-save-safety",
+  "active_version": "v29-playtest-enhanced",
   "update_manifest": {
     "path": "updates/v22/manifest.json",
     "size": 8781,
@@ -5875,5 +5875,10 @@
       "size": 2701,
       "sha256": "b188cfddaf8e11878acdf2df2b861a0a4a87bd85d429e2bc4692f7b4c59296cb"
     }
-  ]
+  ],
+  "adoption_manifest": {
+    "path": "updates/v29/manifest.json",
+    "size": 8997,
+    "sha256": "fc048fdad0c405bc82145e9277ae3737c0f617a22b960792469dfd12d8bec0f8"
+  }
 }

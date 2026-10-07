@@ -1,0 +1,68 @@
+Independent slope-depth candidate, 2026-10-07
+
+Status: SOURCE PREPARED; NOT NATIVE-RENDERED OR VISUALLY ACCEPTED
+Base candidate: 81f0de2bcdb43630154e0d329036bf2352f9833e
+Only the independent ridge fixture is affected. Main/default restoration,
+visible geometry, physics, navigation, saves, README, and CI are unchanged.
+
+Problem localization
+Accepted 20261006T202044.115475Z PNG bytes were inspected and compared.
+The thin mountain marks disappear with real cast shadows disabled.
+A read-only CPU projection selected interior pixels, excluding fully dark
+form-mask endpoints. It is a localization aid, not a new GPU result.
+On fixture facet 326 / source group 9 triangle 4680, 172 pixels differ by
+more than four RGB levels. Rays from those points toward the actual sun
+are unobstructed by the 475-face clipped mountain proxy and all 47
+original tree recipes and poses (3619 tree faces). This intact high-u
+facet does not include the clipped grass foot.
+Facet 102 / source group 9 triangle 2920 includes both real neighboring
+facet occlusion (360 selected points) and unobstructed points (249).
+The candidate must preserve real shadowing, rather than remove the whole
+surface's cast contribution. Camera projection uses the accepted basis
+rounded to six decimals; mesh arithmetic is approximated with float32.
+
+One candidate variable
+slope_bias_enabled applies half a shadow-raster texel's L1 depth slope
+plus one 24-bit depth quantum to the shadow-only mountain proxy.
+The existing sun bias, normal bias, atlas, cascades, depth format, camera,
+receiver normals, and max-union palette remain fixed. No parameter sweep.
+Default profile installation still leaves the proxy material unchanged.
+The new material is opt-in inside tests/capture_slope.gd only.
+
+Godot 4.6.3 GLES3 source-path checks
+DEPTH maps to gl_FragDepth. FRAGMENT code is injected before the
+MODE_RENDER_DEPTH branch. A later depth write is exclusive to omni
+linear-depth rendering, and does not overwrite directional shadow depth.
+Fragment-only materials otherwise use a shared default shadow material.
+The explicit identity VERTEX write prevents that substitution without
+moving any source or proxy vertex. This needs the native route test below.
+
+Primary sources, all 4.6.3-stable:
+https://github.com/godotengine/godot/blob/4.6.3-stable/drivers/gles3/storage/material_storage.cpp#L1313
+https://github.com/godotengine/godot/blob/4.6.3-stable/drivers/gles3/storage/material_storage.cpp#L3036
+https://github.com/godotengine/godot/blob/4.6.3-stable/drivers/gles3/rasterizer_scene_gles3.cpp#L269
+https://github.com/godotengine/godot/blob/4.6.3-stable/drivers/gles3/rasterizer_scene_gles3.cpp#L2248
+https://github.com/godotengine/godot/blob/4.6.3-stable/drivers/gles3/shaders/scene.glsl#L2111
+https://github.com/godotengine/godot/blob/4.6.3-stable/drivers/gles3/shaders/scene.glsl#L2512
+https://github.com/godotengine/godot/blob/4.6.3-stable/drivers/gles3/storage/light_storage.cpp#L1651
+
+Required native controls, still pending
+- Custom caster disabled must pixel-match the default-material proxy
+- A test-only DEPTH=0 probe must pixel-match hiding only the mountain proxy
+  and differ from the ordinary cast frame, proving the shadow-depth route
+- Enable exactly one slope-depth variable; capture raw ATTENUATION,
+  authored form alone, final union color, and form/cast/max masks
+- Toggle back must pixel-match the disabled custom caster
+- Uninstall must restore original material identities and exact A pixels
+- Visible geometry, canopy poses and camera fingerprints must be unchanged
+- Analyze clear-ray artifact reduction and real-neighbor shadow retention
+- Recheck max-union overlap colors, endpoint clamps, shadow-outline/contact
+  error and resource budgets; never declare acceptance from process exit alone
+
+Run only after the native Godot slot is free, on dot's existing GLX display:
+python3 tests/run_slope.py --engine <verified official Godot executable>
+The wrapper keeps source hashes before/after, all engine log lines, one
+owned-engine guard, effective <=8GiB, >=512MiB reserve, <=1024MiB extra,
+and <=120s. It does not create another display or switch to EGL.
+Python syntax checks passed in preparation. Godot script/shader parsing,
+the native depth-route proof, rendering and visual acceptance are NOT RUN.

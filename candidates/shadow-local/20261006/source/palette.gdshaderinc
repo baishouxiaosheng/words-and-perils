@@ -6,6 +6,8 @@ vec3 shade_endpoint(vec3 base) { return base*vec3(.62,.74,.86); }
 vec3 shade_once(vec3 lit, vec3 shade, float form, float cast) {
     float mask=clamp(max(form,cast),0.0,1.0);
     if(shadow_debug==1)return vec3(form,cast,mask);
+    if(shadow_debug==2)return vec3(1.0-cast); // Raw ATTENUATION, before union
+    if(shadow_debug==3)return vec3(form); // Authored surface form only
     vec3 base=mix(lit,shade,mask);
     // Saturate the CURRENT transition color, never inject a blue shadow outline.
     float band=smoothstep(.12,.34,mask)*(1.0-smoothstep(.60,.82,mask));

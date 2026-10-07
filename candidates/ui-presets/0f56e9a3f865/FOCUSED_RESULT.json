@@ -1,0 +1,55 @@
+{
+  "status": "focused_candidate_passed_not_adopted",
+  "main_sha256": "0f56e9a3f865037c04a1c7e2315ba472b029159fbcc9f4f38ef0f03d94d067a2",
+  "checks": 22,
+  "source_pins": {
+    "main.gd": {
+      "bytes": 207334,
+      "sha256": "0f56e9a3f865037c04a1c7e2315ba472b029159fbcc9f4f38ef0f03d94d067a2"
+    },
+    "presets.gd": {
+      "bytes": 1782,
+      "sha256": "3b482149b605d439480fbbd73bfb23fb6f12a49ba1baafe5dc1ce8007da7cbbb"
+    },
+    "presenter.gd": {
+      "bytes": 2658,
+      "sha256": "84b39c57391a38e913ff742d97083fa1ba0f380f0c63cc8d889402fde327ffbe"
+    },
+    "examples.gd": {
+      "bytes": 1950,
+      "sha256": "428bce3bd73a082d9454031e18dde3ab94627fd317716f4c29736aead88d9b62"
+    },
+    "modal_window.gd": {
+      "bytes": 4246,
+      "sha256": "996d7eb3908b5b9fd282d3949099a96bb6b4a5c494d5cf3bb8279cf9988b06fb"
+    },
+    "popup_motion.gd": {
+      "bytes": 4764,
+      "sha256": "db9880186b3850bb5c5711d8378c3d4a47c1403e08cfeda1c4485a979faa888e"
+    },
+    "history_motion.gd": {
+      "bytes": 3298,
+      "sha256": "21d949ea113996092f03faee45e86d37921ea6918c2bc2d40a639a760beecabc"
+    },
+    "style.gd": {
+      "bytes": 15477,
+      "sha256": "07156ab2fdba6759ac38a9ebf0b8315df5209db2b87bca8bd6c91862ce33e048"
+    },
+    "panel.gd": {
+      "bytes": 24574,
+      "sha256": "d2de09cb03972873f057a2071b8f2d98e28f3ab99c2833f1e41bc1fc7903b142"
+    },
+    "smoke.gd": {
+      "bytes": 3901,
+      "sha256": "cda47cc56e822ed75a786d97f94538313f1352819ccc4c4ea7362ceace9fae7d"
+    }
+  },
+  "video": {
+    "path": "demos/ui-presets/2026-10-07/WordsAndPerils_UIPresets_Candidate.mp4",
+    "bytes": 1473882,
+    "sha256": "55e3eca48a2facb918550a1267e281ed2ad0fc254beec63ebb9311c8c5c1b7be",
+    "seconds": 6.733333,
+    "fps": 30
+  },
+  "scope": "Four configured Main windows: small, standard, large and a new configuration-only size; actual viewport containment, long-content scroll, eased exit/input restoration, original API cancel and complete authority preservation. Authored connected menu signals. Recording fps is not performance. Native menu closing remains pending. Stable public v30 is unchanged."
+}

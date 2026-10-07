@@ -1,0 +1,5 @@
+Unified UI presets candidate
+
+Small, standard, large, and one newly configured window size; long content scrolls. Original API cancel remains intact.
+6.733333 seconds at recorded 30 fps. Authored connected menu signals, not a performance benchmark. Offline; no provider configured.
+Candidate Main 0f56e9a3f865037c04a1c7e2315ba472b029159fbcc9f4f38ef0f03d94d067a2. Stable default v30 is unchanged. Native menu closing remains pending.

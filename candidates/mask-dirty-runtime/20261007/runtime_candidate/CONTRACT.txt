@@ -1,0 +1,91 @@
+Runtime source candidate, 2026-10-07
+
+No Godot process, engine parser, native run, dynamic visual test, FPS measurement,
+or dynamic memory measurement has been performed. Static r4/colour5tap results
+belong to the separate frozen 1280x960 fixture and do not validate this runtime.
+
+Keep this directory immediately below precomputed_ring/ (or the corresponding
+deployed private_mask_precomputed directory). The Node preloads its sibling new
+helper; both use the unchanged ../adapters shaders. The frozen original helper,
+capture source, shaders, original native receipts, Main and controller are intact.
+
+Parent dirty_mask_runtime.gd to the live tree, then call:
+ install(source_view: Node3D, camera: Camera3D, source_viewport: Viewport,
+         receivers: Array, casters: Array, sun: DirectionalLight3D,
+         ground_materials: Array, registered_source_shader_pins: Dictionary,
+         actor_watch: Array = [], registered_opaque_casters: Dictionary = {})
+ set_enabled(true)
+
+install stages source inputs and connects only owned listeners. It defaults off,
+changes no Ground shader, and allocates no render viewport/private World3D.
+enable allocates one private mask World/viewport and one owned canvas viewport,
+installs only the explicitly supplied staged Ground ShaderMaterial slots, and
+keeps receiver_mask_valid false until a completed current-epoch resolve.
+Ground materials must be a unique set covering all staged Ground material refs.
+Water participates in raw domain data and keeps its original colour shader.
+
+receivers are explicit {source: GeometryInstance3D, kind: "ground"|"water"} rows.
+registered_source_shader_pins is a caller-reviewed {lowercase_sha256: role} map,
+where role is exactly ground, water or caster. It has no default fixture93 map,
+no name-based admission and no unknown shader fallback. Actual material.shader
+code must hash to its registered exact role at stage. The caller must audit the
+shader's vertex/opacity behaviour and any includes before registering its SHA.
+After stage, source material, Shader, mesh and MultiMesh identities are retained;
+changing them or Shader.code requires uninstall and explicit reviewed restaging.
+
+registered_opaque_casters is optional explicit {node_instance_id: admission}.
+admission null_shadow_proxy permits only the original single-surface ArrayMesh
+MeshInstance3D, SHADOWS_ONLY, no material/override/overlay, no skin/blendshapes.
+admission opaque_standard permits only original opaque StandardMaterial3D
+caster refs: transparency disabled, albedo alpha 1, no next_pass or fades.
+These admissions do not replace any source material or create guard geometry.
+Runtime sync and draw-completion checks reject changed opacity fields or refs.
+A null-material MultiMesh caster is still rejected; its existing caller-audited
+guard ShaderMaterial must be registered with an exact caster SHA.
+
+The source camera must be orthographic and currently selected in the explicitly
+supplied viewport. The actual source texture raster must be positive and contain
+at most 1280*960 pixels; it is not assumed to be 1280x960. Source 3D upscaling,
+MSAA, screen-space AA and TAA are rejected. The selected Sun must be visible
+with shadows enabled. Both Ground and Water receivers are required.
+
+Call mark_dirty(reason) synchronously whenever changing relevant source inputs,
+before they can be drawn. It immediately closes Ground receiver_mask_valid and
+increments epoch. Existing Main LOD/MultiMesh-buffer signals must call it; there
+is no per-frame MultiMesh-buffer read, geometry hash or hierarchy discovery.
+Small explicit actor_watch (maximum 32 Node3D nodes), camera properties/pose and
+Sun properties/pose are monitored. Apply source movement before this Node's
+process callback, or call mark_dirty directly; the default process_priority is
+100 and cannot anticipate later unannounced writes by other callbacks.
+
+Viewport size_changed closes valid and suspends new builds. The caller must
+call set_size(actual_raster: Vector2i), explicitly matching the source texture's
+current positive capped raster. Owned viewport sizes change in place; the mask
+World and geometry proxies survive. A failed resize restores baseline and needs
+explicit restaging. Unknown source selection changes require uninstall+install;
+there is no automatic scene/actor/camera replacement discovery.
+
+At most one pending coroutine runs. A build explicitly syncs the mask, awaits
+frame_post_draw, requests one canvas UPDATE_ONCE, awaits frame_post_draw again,
+then checks epoch, installation generation, current source identities/code and
+source/watch poses. Movement during drawing discards that result and coalesces
+the newest request. Completed resolved texture binding and all valid gates are
+applied with no await between them. Dirty epochs fall back to ordinary two-band
+Ground colour while raw mask and resolved RGBA8 textures remain resident.
+
+set_enabled(false) closes valid, restores the original Ground Shader and every
+captured original parameter, and pauses owned updates. Allocations persist for
+later enable. uninstall disconnects owned listeners, restores Ground slots,
+clears owned texture refs, removes only the owned canvas and private mask World,
+and cancels late coroutine commits using installation generation. It never
+destroys the source World or changes source physics. Source replacements need
+an uninstall/install boundary; failures emit failed(error) and disable the path.
+
+report() exposes source-only status, pending/epoch/resize state, default-off,
+Water-ring exclusion and dynamic_cost_measured=false. SOURCE_REVIEW.json records
+only lexical/structural inspection; it is not a GDScript parse or runtime test.
+
+Dynamic costs are unmeasured: retained mask+resolve RGBA8 render textures,
+private-world viewport attachments and shadows, proxy nodes, occasional source
+parameter synchronization and 49-tap canvas resolve all add to the static case.
+No dynamic performance or original small-memory headroom acceptance is claimed.

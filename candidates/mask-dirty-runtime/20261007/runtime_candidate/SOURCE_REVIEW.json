@@ -1,0 +1,27 @@
+{
+  "kind": "source-only lexical/structural review",
+  "godot_invoked": false,
+  "engine_parser_run": false,
+  "native_or_dynamic_validation_run": false,
+  "checks": [
+    "balanced lexical delimiters/strings",
+    "tab-indented source",
+    "unique method names",
+    "no CPU image readback/MM buffer path",
+    "preload sibling exists",
+    "old frozen helper unchanged"
+  ],
+  "files": {
+    "dirty_mask_runtime.gd": {
+      "sha256": "a447ef42e36cf3d3afb8ee2f375e7aca5f3febab3c5a10a8d18a0fdd8ab37905",
+      "lines": 314,
+      "functions": 25
+    },
+    "local_mask_pass_runtime.gd": {
+      "sha256": "0ac38cbb1bd0f882a5a54b4fdc0cfdbcc9728b69eb139d3b11db773ad0a9d897",
+      "lines": 379,
+      "functions": 20
+    }
+  },
+  "frozen_helper_sha256": "9b06769314cd2e8a735ce6fc97bd3612abf10c069b4a9035bffdfcd3b5fc1fa2"
+}

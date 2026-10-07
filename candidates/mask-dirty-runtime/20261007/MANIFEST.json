@@ -1,0 +1,74 @@
+{
+  "candidate_directory": "candidates/mask-dirty-runtime/20261007",
+  "source_base_commit": "9cf8add4f8a2d4b9fc2cd2254224d4dbf343d148",
+  "source_base_tree": "59e9a732f5019d8d6f76ad7892bd2bdfc7aaf198",
+  "preserved_base_blobs": {
+    "README.md": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+    "main.gd": "ab101ed955f44ff58eefb1b11753d5c0fc8de2e9",
+    "project.godot": "ccdc3ce8f922b6a5af5299bac3526e2fc7c0c23e",
+    "source_bundle.tar.xz.b64": "eb82cde5470b4da784877b82535bae1fee7f4841"
+  },
+  "files": [
+    {
+      "path": "runtime_candidate/dirty_mask_runtime.gd",
+      "bytes": 20072,
+      "sha256": "a447ef42e36cf3d3afb8ee2f375e7aca5f3febab3c5a10a8d18a0fdd8ab37905",
+      "git_blob_sha": "2da8129e830e8770fc67f953626319b97eeae72b"
+    },
+    {
+      "path": "runtime_candidate/local_mask_pass_runtime.gd",
+      "bytes": 28929,
+      "sha256": "0ac38cbb1bd0f882a5a54b4fdc0cfdbcc9728b69eb139d3b11db773ad0a9d897",
+      "git_blob_sha": "6a0e4254d0b1352d36955f097b284295a243191d"
+    },
+    {
+      "path": "runtime_candidate/CONTRACT.txt",
+      "bytes": 5988,
+      "sha256": "863e82600b9dc1d1c979e6fb09c00d503896ad14ebc27d1a88d05fa851979858",
+      "git_blob_sha": "87a28423a46db42821124af3a7fb12b78b9cbb31"
+    },
+    {
+      "path": "runtime_candidate/SOURCE_REVIEW.json",
+      "bytes": 823,
+      "sha256": "8441d1cef484cdcd2e63bcff08277fcc0b2dbd1eb8964b64ef7b2d798b0714ee",
+      "git_blob_sha": "1060a9114e9b5375c099591265690a42f7cb91bc"
+    },
+    {
+      "path": "adapters/ground_mask_data.gdshader",
+      "bytes": 3558,
+      "sha256": "a030587df23167d4b200dd09e0d3ea1c4e99f2655a0a7b4e3df378055c55c673",
+      "git_blob_sha": "4dc9c3b182af0505c641a2361854a8996367d557"
+    },
+    {
+      "path": "adapters/water_mask_data.gdshader",
+      "bytes": 3064,
+      "sha256": "433768bf4f108ce328a241ab4a603b7ff4efd928b6a7b532368d12a5ec5bffea",
+      "git_blob_sha": "b49e454766b7e7859c9ea3abc8a48146275bbc53"
+    },
+    {
+      "path": "adapters/mask_data_interface.gdshaderinc",
+      "bytes": 1210,
+      "sha256": "07873ef9852ba0d8d171cc7dd716b3b520497d6754278769ba1de6d3bd7c779b",
+      "git_blob_sha": "e2762cba08651941eddc48b5e1602f011498592d"
+    },
+    {
+      "path": "adapters/ground_receiver_color.gdshader",
+      "bytes": 3919,
+      "sha256": "659e8bb23e6b90a92b149513dc26701ad4228f4cf404cca38b0e4c166b7f286f",
+      "git_blob_sha": "75abf95fa774da2899949289d0d18178f643950a"
+    },
+    {
+      "path": "adapters/receiver_ring_interface.gdshaderinc",
+      "bytes": 6161,
+      "sha256": "266905b4fcd43131cb5510c0062d423dddca163993e25c052ab5c285cdd1ee91",
+      "git_blob_sha": "db6cd6de9ed21348708d0e87a002f6865ada8fb7"
+    },
+    {
+      "path": "adapters/ring_resolve.gdshader",
+      "bytes": 4373,
+      "sha256": "3d4cf931fe70ff32ced70a472d244b3a1a31c28283def1443ebb82d4dc53bf72",
+      "git_blob_sha": "8329493c332d8b510c41f1e59a4a8a7d60b899b2"
+    }
+  ],
+  "publication_scope": "Only these source files and nonsensitive status/manifest. No private archive, raw logs, screenshots or Source Main replacement."
+}

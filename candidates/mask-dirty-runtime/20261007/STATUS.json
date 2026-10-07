@@ -1,0 +1,33 @@
+{
+  "kind": "unverified opt-in dirty-mask runtime source checkpoint",
+  "default_off": true,
+  "main_integrated": false,
+  "runtime_engine_parser_run": false,
+  "runtime_dynamic_visual_validation_run": false,
+  "runtime_dynamic_cost_measured": false,
+  "scope": "Ground saturation ring. Water ring is excluded. Caller-reviewed source shader/caster registration is required.",
+  "static_reference": {
+    "viewport": [
+      1280,
+      960
+    ],
+    "ground_only": true,
+    "shader_radius_pixels": 4,
+    "outer_aa_footprint_pixels": 1,
+    "union_max_once": true,
+    "rgb_data_protocol_preserved": true,
+    "original_small_extra_budget_mib": 1024,
+    "measured_extra_peak_mib": 1019.87890625,
+    "static_data_and_budget_pass": true,
+    "whole_art_acceptance": false,
+    "remaining": "Fine silhouette alias remains; regular wall-shadow teeth have source geometry support. Static reference does not validate runtime."
+  },
+  "runtime_limits": {
+    "retained_data_and_resolve_viewports": true,
+    "no_cpu_image_readback_per_update": true,
+    "one_pending_epoch": true,
+    "dirty_epochs_restore_baseline": true,
+    "continuous_motion_ring_acceptance": false,
+    "actual_positive_raster_pixel_cap": 1228800
+  }
+}

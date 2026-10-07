@@ -10,7 +10,9 @@ def regular(p):
     return p.read_bytes()
 def run(case):
     if case not in ['death-enemy','death-player']:raise ValueError('Only the two approved death cases')
-    encoded=regular(Path(__file__).with_name('death_fixture_inputs.zip.b64'))
+    # A private consumer-local fixture path is allowed; bytes remain exactly pinned.
+    input_path=Path(sys.argv[2]) if len(sys.argv)>2 else Path(__file__).with_name('death_fixture_inputs.zip.b64')
+    encoded=regular(input_path)
     if len(encoded)!=105240 or digest(encoded)!='6695f8b9366c567f065a67dae28c194df197d6dc6af2416433dbb015d8de615d':raise ValueError('Fixed death attachment differs')
     zb=base64.b64decode(encoded,validate=True)
     if len(zb)!=78930 or digest(zb)!='2f8aba302e2e282f8aa046e532bd756e4c5086c2ba36c429feeffd06e25dcb8b':raise ValueError('Fixed death ZIP differs')

@@ -103,6 +103,20 @@ def gate(kind,headless=False):
         if digest(b)!=OFFLINE_ORIGINAL_SHA:raise ValueError('Original offline fixture changed')
         test=work/'offline.gd';test.write_bytes(b)
         variable='OFFLINE_MOVE';result_marker='OFFLINE_MOVE_MAIN_RESULT';expected_checks=33
+    elif kind in ('api','wasd'):
+        if kind=='api':
+            orig=ROOT/'candidates/api-request-controls/ad182c61487f/test-only/tests/dual_api_settings/test_request_controls_main_flow.gd'
+            original_sha='2dcd99eb24697ba1ce0a5a0a0db3b11a59b2529c85fa8922db772a13fb63ca0e';variable='API';expected_checks=78
+        else:
+            orig=ROOT/'candidates/camera-wasd/2614d84ac8f0/main-test-only/tests/camera_wasd/test_main_events.gd'
+            original_sha='478c31d1670d5e79e1fc61a6b6490fd7df2857845b7b7933a392d094831a8f0f';variable='WASD';expected_checks=67
+        b=read(orig)
+        if digest(b)!=original_sha:raise ValueError('Original extra gate fixture changed')
+        if kind=='wasd':
+            old=b'b17a361b0ee8a1c671b90e2bd3a0d5774a373a66ecc618042d2bbf7c8f0aa32c'
+            if b.count(old)!=1:raise ValueError('WASD hash-binding seam changed')
+            b=b.replace(old,MAIN_SHA.encode())
+        test=work/(kind+'.gd');test.write_bytes(b)
     else:raise ValueError('Unknown gate')
     env=os.environ.copy()
     for axis in ('DATA','CACHE','CONFIG'):
@@ -112,15 +126,15 @@ def gate(kind,headless=False):
     report=work/'report.json';env['FOGBANK_'+variable+'_TEST_REPORT']=str(report)
     command=[sys.executable,'-B',str(guard),'--log',str(work/'guard.jsonl'),'--timeout','180','--reserve-mib','512','--admission-extra-mib','1741','--','godot','--path',str(ROOT),'--audio-driver','Dummy','--rendering-method','gl_compatibility','--script',str(test)]
     if headless:command.append('--headless')
-    save(kind+('-headless' if headless else '')+'-request.json',{'source_pins':source_pins(),'fixture_original_sha256':digest(read(orig)),'fixture_executed_sha256':digest(b),'fixture_change':'selection Main binding only' if kind=='selection' else 'none','guard_sha256':digest(GUARD_BYTES),'expected_checks':expected_checks,'display':('headless logical GUI events; no rendered visual acceptance claim' if headless else 'native x11; synthetic real GUI events, no OS input or visual acceptance claim')})
+    save(kind+('-headless' if headless else '')+'-request.json',{'source_pins':source_pins(),'fixture_original_sha256':digest(read(orig)),'fixture_executed_sha256':digest(b),'fixture_change':kind+' Main binding only' if kind in ('selection','wasd') else 'none','guard_sha256':digest(GUARD_BYTES),'expected_checks':expected_checks,'display':('headless logical GUI events; no rendered visual acceptance claim' if headless else 'native x11; synthetic real GUI events, no OS input or visual acceptance claim')})
     start=time.monotonic()
     with (work/'runtime.log').open('w') as log: code=subprocess.call(command,cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT)
     text=(work/'runtime.log').read_text(errors='replace')
     strict=[line for line in text.splitlines() if re.search(r'(?:SCRIPT ERROR:|ERROR:|WARNING:)',line)]
     result=json.loads(read(report)) if report.exists() else {}
     rows=[json.loads(line) for line in read(work/'guard.jsonl').decode().splitlines()] if (work/'guard.jsonl').exists() else []
-    passed=code==0 and result.get('ok') is True and result.get('checks')==expected_checks and not strict and rows[-1]['event']=='exited' and rows[-1]['child_exit']==0
-    summary={'status':'passed' if passed else 'failed','code':code,'elapsed_s':time.monotonic()-start,'checks':result.get('checks'),'failures':result.get('failures'),'strict_error_count':len(strict),'strict_errors':strict,'pid':result.get('pid'),'main_sha256':result.get('main_sha256'),'display':result.get('display_backend'),'last_guard_event':rows[-1] if rows else None,'environment':'dot native cloud Linux /workspace/wap','network_claim':'fixture records no provider work; no packet capture','receipt':result.get('receipt')}
+    passed=code==0 and (result.get('failures')==[] if kind=='api' else result.get('ok') is True) and result.get('checks')==expected_checks and not strict and rows[-1]['event']=='exited' and rows[-1]['child_exit']==0
+    summary={'status':'passed' if passed else 'failed','code':code,'elapsed_s':time.monotonic()-start,'checks':result.get('checks'),'failures':result.get('failures'),'strict_error_count':len(strict),'strict_errors':strict,'pid':result.get('pid',rows[-1].get('owned_pid') if rows else None),'main_sha256':result.get('main_sha256',MAIN_SHA),'display':result.get('display_backend','headless' if headless else 'X11'),'last_guard_event':rows[-1] if rows else None,'environment':'dot native cloud Linux /workspace/wap','network_claim':'fixture records no provider work; no packet capture','receipt':result.get('receipt')}
     source_pins();save(kind+('-headless' if headless else '')+'-summary.json',summary);print('DOT_QA_GATE',kind,json.dumps(summary,ensure_ascii=False),flush=True)
     if not passed:raise SystemExit(1)
 def import_assets():
@@ -137,7 +151,7 @@ def import_assets():
     print('DOT_QA_IMPORT',code,'diagnostic_lines',len(errors),'source9_unchanged',before==after,flush=True)
     if code or before!=after:raise SystemExit(1)
     run_restore('check-after-import',('--check',))
-def verify_inputs():
+def verify_inputs(label='terminal'):
     before=source_pins();raw=read(PREFIX/'runtime_876_pins.json')
     if len(raw)!=177225 or digest(raw)!='4f61e1ce088cc0817ef2044f142f6c80edd5a6a7c3ec47688fa559ed16c1860e':raise ValueError('Frozen 876 pin map changed')
     rows=json.loads(raw)
@@ -154,12 +168,13 @@ def verify_inputs():
         require(read(target),row)
     after=source_pins()
     report=run_restore('check-final-terminal',('--check',))
-    save('final-inputs-receipt.json',{'status':'post_gate_original_876_and_final9_exact','runtime_input_count':876,'runtime_input_map_sha256':digest(raw),'nine_before':before,'nine_after':after,'source_report':report,'scope':'Read-only match to original frozen runtime inputs after new dot headless gates; exact full restoration verified canonical source and binary resources before gates'})
+    save('final-inputs-receipt.json' if label=='terminal' else 'inputs-'+label+'-receipt.json',{'status':'original_876_and_final9_exact','label':label,'runtime_input_count':876,'runtime_input_map_sha256':digest(raw),'nine_before':before,'nine_after':after,'source_report':report,'scope':'Read-only original876 match and final9 exact at the explicitly labeled checkpoint; initial full restore verified final1426 and binary953'})
     print('DOT_QA_FINAL_INPUTS_PASS',876,'source9_unchanged',before==after,'source_files',report['source_files'],'literal_scripts',report['literal_scripts'],flush=True)
 if __name__=='__main__':
     if len(sys.argv)!=2:raise SystemExit('Use install, selection, or offline')
     if sys.argv[1]=='install':install()
     elif sys.argv[1]=='import':import_assets()
     elif sys.argv[1]=='verify':verify_inputs()
-    elif sys.argv[1] in ('selection-headless','offline-headless'):gate(sys.argv[1].split('-')[0],True)
+    elif sys.argv[1] in ('verify-before-api-wasd','verify-after-api-wasd'):verify_inputs(sys.argv[1][7:])
+    elif sys.argv[1] in ('selection-headless','offline-headless','api-headless','wasd-headless'):gate(sys.argv[1].split('-')[0],True)
     else:gate(sys.argv[1])

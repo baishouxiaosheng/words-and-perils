@@ -1,0 +1,25 @@
+{
+  "scope": "All 360 CPU geometric-occlusion probe positions, actual same-run B/C final PNG original bytes",
+  "count": 360,
+  "max_rgb_delta_bins": {
+    "0": 360,
+    "1": 0,
+    "2_to4": 0,
+    "5_to8": 0,
+    "9_to16": 0,
+    "gt16": 0
+  },
+  "max_rgb_delta": 0,
+  "mean_max_rgb_delta": 0.0,
+  "per_channel_mean_signed_delta": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "visible_foreground_mask_changed_pixels": 0,
+  "_sanitization": {
+    "sanitized": true,
+    "original_sha256": "9159c4061bdab0d32bb9eb0fe2a6295e8289ec83fd246350a58020a026793307",
+    "note": "Public derivative; paths/process identities removed where present, JSON reformatted. Test measurements, hashes, warnings and failures retained."
+  }
+}

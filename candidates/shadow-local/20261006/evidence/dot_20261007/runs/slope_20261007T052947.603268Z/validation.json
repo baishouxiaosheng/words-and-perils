@@ -1,0 +1,12 @@
+{
+  "process_exit": 0,
+  "inputs_unchanged": true,
+  "engine_errors": [],
+  "pass_marker": true,
+  "scope": "Real ridge slope-depth path and reversible controls; visual acceptance pending analysis",
+  "_sanitization": {
+    "sanitized": true,
+    "original_sha256": "4fc1b1fbbe71db7754dd79c1c99fe41e4b587e9b61d77e3f4ad5c8e09f0fcf59",
+    "note": "Public derivative; paths/process identities removed where present, JSON reformatted. Test measurements, hashes, warnings and failures retained."
+  }
+}

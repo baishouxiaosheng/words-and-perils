@@ -1,0 +1,88 @@
+{
+  "scope": "Same-run native B/C raw ATTENUATION, visible original ground only, with all source mountain and 47 tree raster occlusion included in CPU visibility domain. This is the fixed ridge view, not whole Main.",
+  "camera_rounding_limit": "Six-decimal accepted camera basis; float32 source tree arithmetic; two-pixel erosion excludes domain/visible object silhouette ambiguity.",
+  "threshold_attenuation_8bit": 128,
+  "ground_domain_pixels": 290222,
+  "changed_ground_raw_pixels": 58,
+  "max_ground_attenuation_delta": 80,
+  "binary_shadow_membership_changed_ground_pixels": 0,
+  "baseline_ground_shadow_contour_pixels": 764,
+  "candidate_ground_shadow_contour_pixels": 764,
+  "baseline_to_candidate_nearest_contour_max_px": 0.0,
+  "candidate_to_baseline_nearest_contour_max_px": 0.0,
+  "baseline_to_candidate_contour_p95_px": 0.0,
+  "candidate_to_baseline_contour_p95_px": 0.0,
+  "conservative_one_screen_pixel_budget_pass": true,
+  "changed_ground_bbox": [
+    207,
+    136,
+    744,
+    725
+  ],
+  "soft_band_threshold_checks": {
+    "64": {
+      "membership_changed_ground_pixels": 0,
+      "B_contour": 730,
+      "C_contour": 730,
+      "two_way_max_shift_px": 0.0,
+      "two_way_p95_shift_px": 0.0
+    },
+    "128": {
+      "membership_changed_ground_pixels": 0,
+      "B_contour": 764,
+      "C_contour": 764,
+      "two_way_max_shift_px": 0.0,
+      "two_way_p95_shift_px": 0.0
+    },
+    "192": {
+      "membership_changed_ground_pixels": 4,
+      "B_contour": 796,
+      "C_contour": 792,
+      "two_way_max_shift_px": 5.0,
+      "two_way_p95_shift_px": 0.0
+    }
+  },
+  "outer_soft_threshold_192_changes": [
+    {
+      "xy": [
+        214,
+        718
+      ],
+      "B_attenuation": 171,
+      "C_attenuation": 196,
+      "max_final_RGB_delta": 7
+    },
+    {
+      "xy": [
+        215,
+        719
+      ],
+      "B_attenuation": 175,
+      "C_attenuation": 193,
+      "max_final_RGB_delta": 5
+    },
+    {
+      "xy": [
+        216,
+        720
+      ],
+      "B_attenuation": 158,
+      "C_attenuation": 238,
+      "max_final_RGB_delta": 23
+    },
+    {
+      "xy": [
+        216,
+        721
+      ],
+      "B_attenuation": 175,
+      "C_attenuation": 255,
+      "max_final_RGB_delta": 23
+    }
+  ],
+  "_sanitization": {
+    "sanitized": true,
+    "original_sha256": "b57d2e7e5ec8ff945a586f7607b9a76cb9a98ccce3fa3cd49478ac23c4b5e8da",
+    "note": "Public derivative; paths/process identities removed where present, JSON reformatted. Test measurements, hashes, warnings and failures retained."
+  }
+}

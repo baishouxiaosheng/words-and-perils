@@ -1,0 +1,67 @@
+{
+  "status": "MEASURED_CANDIDATE_NOT_AUTOMATIC_VISUAL_ACCEPTANCE",
+  "run": "runs/slope_20261007T052947.603268Z",
+  "probe_reference_commit": "81f0de2bcdb43630154e0d329036bf2352f9833e",
+  "probe_scope": "CPU light-ray test reproducing fixed 81f clipped mountain proxy and all 47 original faceted tree recipes/poses. Not a new GPU test. Mesh float arithmetic is approximated with numpy float32.",
+  "engine_validation": {
+    "process_exit": 0,
+    "inputs_unchanged": true,
+    "engine_errors": [],
+    "pass_marker": true,
+    "scope": "Real ridge slope-depth path and reversible controls; visual acceptance pending analysis"
+  },
+  "depth_identity_matches_default": true,
+  "custom_shadow_depth_route_proven": true,
+  "caster_toggle_reversible": true,
+  "pixel_exact_A_restore": true,
+  "geometry_pose_camera_unchanged": true,
+  "form_pixels_exact": true,
+  "clear_ray_facet_4680": {
+    "reference_samples": 172,
+    "current_baseline_delta_gt4": 172,
+    "returned_to_no_cast_within1": 169,
+    "candidate_delta_gt4_on_baseline_affected": 1,
+    "baseline_mean_max_rgb_delta": 6.22093023255814,
+    "candidate_mean_max_rgb_delta": 0.06976744186046512
+  },
+  "true_neighbor_shadow_facet_2920": {
+    "reference_samples": 360,
+    "baseline_deep_shadow_attenuation_le8": 24,
+    "retained_deep_shadow_attenuation_le8": 24,
+    "retained_cast_attenuation_lt128": 24,
+    "candidate_mean_attenuation_on_deep_baseline": 1.8333333333333333
+  },
+  "union_overlap": {
+    "interior_pixels": 4155,
+    "maximum_rgb_difference_from_form_only_shade": 0
+  },
+  "png_sha256": {
+    "A_restored.png": "1bb6a81a2314e9cd0f60224fc4802d0663eda2d5b1187178ebf4a42eb010c0cf",
+    "A_tabs.png": "1bb6a81a2314e9cd0f60224fc4802d0663eda2d5b1187178ebf4a42eb010c0cf",
+    "B_clipped.png": "83ef349d38c643b76c970ca4768380d93d763ef1d8a82f04143fb9aee3173499",
+    "B_depth_route_far_probe.png": "7c7476124e9633efdc9fac99ad10a9482274af137dff67bb8f676e033f5d3ddb",
+    "B_depth_route_identity.png": "83ef349d38c643b76c970ca4768380d93d763ef1d8a82f04143fb9aee3173499",
+    "B_depth_route_restored.png": "83ef349d38c643b76c970ca4768380d93d763ef1d8a82f04143fb9aee3173499",
+    "B_form_only.png": "35b525b51d8cf65665282a66d16cb8e428bbd16f5065106fa3b76cd2de32b667",
+    "B_hidden_mountain_proxy.png": "7c7476124e9633efdc9fac99ad10a9482274af137dff67bb8f676e033f5d3ddb",
+    "B_masks_form_cast_max.png": "11fc24241616ef27ffdab801c298623e313d92052c65dde888f03dfa817dafb6",
+    "B_no_cast.png": "95e2fc6f36dde1deb4139aebbe3ef13527386e0e8ceb763b4a08f35b81aacd52",
+    "B_raw_attenuation.png": "37adcd6327a59f55c6c2ea00b678112257baa7e1ac636d0f3f8290f255b16439",
+    "B_receiver_normal_control.png": "36b352ed7daa67498944afe7ba9dedb0ab0f137194e254526837d48096abbf35",
+    "B_uncut.png": "06fea2965e2f00413986f359fba150249ade73526ec29b34b8f3ee304053c78f",
+    "C_form_only.png": "35b525b51d8cf65665282a66d16cb8e428bbd16f5065106fa3b76cd2de32b667",
+    "C_masks_form_cast_max.png": "b9f8c4db4fee0219a60f6a8fc2fa7bd5e9f5455f4ba6659ad20bfae28690309c",
+    "C_raw_attenuation.png": "36ff741a8e7c51363ccbd2d6e9d17886aa6999671ea856a7239123cc8f67ab8a",
+    "C_slope_depth.png": "7a1b9c5523b9ee396f2c97440333e868724a2fc6380347c3796ac28184f451e7"
+  },
+  "pending_visual_review": [
+    "Shadow/contact-outline displacement budget",
+    "Whole visible candidate image including retained real shadow shape",
+    "No full Main/SouthWatch/water/city/far acceptance is implied"
+  ],
+  "_sanitization": {
+    "sanitized": true,
+    "original_sha256": "43d14f3ca35069df6aff5114d377799eb81b8e1c205d992e3a6a2ca667bb0328",
+    "note": "Public derivative; paths/process identities removed where present, JSON reformatted. Test measurements, hashes, warnings and failures retained."
+  }
+}

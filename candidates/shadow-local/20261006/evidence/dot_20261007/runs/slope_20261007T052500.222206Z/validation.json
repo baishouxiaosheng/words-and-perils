@@ -1,0 +1,27 @@
+{
+  "process_exit": 1,
+  "inputs_unchanged": true,
+  "engine_errors": [
+    "ERROR: Unexpected capture viewport (1180, 812)",
+    "ERROR: 7 shaders of type SceneShaderGLES3 were never freed",
+    "ERROR: Texture with GL ID of 23: leaked 19493564 bytes.",
+    "ERROR: Texture with GL ID of 24: leaked 12582910 bytes.",
+    "ERROR: Buffer with GL ID of 31: leaked 31200 bytes.",
+    "ERROR: Buffer with GL ID of 32: leaked 6240 bytes.",
+    "ERROR: Buffer with GL ID of 39: leaked 17100 bytes.",
+    "ERROR: 8 resources still in use at exit (run with --verbose for details).",
+    "ERROR: 1 RID allocations of type 'N26RendererEnvironmentStorage11EnvironmentE' were leaked at exit.",
+    "ERROR: 2 RID allocations of type 'N5GLES34MeshE' were leaked at exit.",
+    "ERROR: 9 RID allocations of type 'N5GLES38MaterialE' were leaked at exit.",
+    "ERROR: 7 RID allocations of type 'N5GLES36ShaderE' were leaked at exit.",
+    "ERROR: 2 RID allocations of type 'N5GLES37TextureE' were leaked at exit.",
+    "ERROR: Pages in use exist at exit in PagedAllocator: N7Variant5Pools12BucketMediumE"
+  ],
+  "pass_marker": false,
+  "scope": "Real ridge slope-depth path and reversible controls; visual acceptance pending analysis",
+  "_sanitization": {
+    "sanitized": true,
+    "original_sha256": "d77e41cf0ad8e04aa2f93ce7e70f93431048034f8991b434507b6b52dd9a9746",
+    "note": "Public derivative; paths/process identities removed where present, JSON reformatted. Test measurements, hashes, warnings and failures retained."
+  }
+}

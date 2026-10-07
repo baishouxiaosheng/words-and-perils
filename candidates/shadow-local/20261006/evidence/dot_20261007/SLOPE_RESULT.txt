@@ -1,0 +1,84 @@
+SANITIZED PUBLIC ACCEPTANCE RECORD
+Original SLOPE_RESULT.txt SHA256: 23b6908362c4e2d6d9da6bf2d32b0da9820d7187a8d0a3e97d2d9a405cbc7034
+This is a curated public derivative, not the original native record bytes.
+
+Bounded ridge slope-depth result, native run 2026-10-07
+Status: LOCAL RIDGE IMPROVEMENT ACCEPTED; INDEPENDENT OPT-IN CANDIDATE
+Source checkpoint: 0a0c1f0e2551c6288cc3ab76d7aa09f8d495f805
+Evidence-only checkpoint. No installation in Main/default. No physics,
+source mesh, canopy pose, world/save identity or hash-bound core change.
+
+Native validation
+Successful run: runs/slope_20261007T052947.603268Z
+Godot 4.6.3 official / GL Compatibility / Xorg GLX llvmpipe.
+Owned process exited 0 in 20.7250s. Source hashes before/after identical;
+strict engine errors empty. Known GLX VSync warning remains in engine.log.
+Effective physical budget 8GiB, reserve >=512MiB, extra <=1024MiB,
+timeout <=120s. Max sampled cgroup 2525.277MiB / extra 484.148MiB;
+max sampled owned VmHWM 534.965MiB. These are guard sample metrics,
+not a whole-Main or target-GPU performance guarantee.
+
+First run: runs/slope_20261007T052500.222206Z
+It exited 1 in 9.1228s and was rejected for capture viewport 1180x812.
+Its viewport error, shader/texture/buffer/resource cleanup errors and
+ObjectDB leak warning are retained in the sanitized engine/validation logs.
+The recovery changed only fixture content base size to 1280x960 / viewport
+scaling. Camera, light, geometry and slope formula stayed fixed.
+
+Depth-path proof and reversible controls
+- Disabled custom caster and default proxy have exact equal raw pixels
+- Test-only DEPTH=0 matches hiding only the mountain proxy and differs
+  from ordinary cast, proving that the directional depth path executes
+- Authored form-only B/C are exact equal; caster toggle-back is exact
+- A/restored raw pixels equal; original material identities restored
+- Geometry/pose/camera fingerprint unchanged (from successful report):
+  8d818e9baf0366fdf334ab8e53a4e8503820b8b13e25c9b664e6fed962dff813
+
+Measured local result
+- Clear-ray source facet 4680: all 172 baseline affected points measured;
+  169 return within one RGB level of no-cast; one remains >4 levels.
+  Mean maximum RGB error: 6.22093 -> 0.06977
+- True-occlusion facet 2920: all 360 final RGB and raw ATTENUATION
+  samples remain exactly unchanged. Full baseline 8-bit attenuation:
+  0-8=24; 9-64=75; 65-127=78; 128-191=94; 192-254=89; 255=0.
+  The deep 24/24 subset is reported separately
+- 4155 interior full-form/cast overlap pixels match form-only shadow
+  color exactly (maximum RGB difference 0): no stacked darkness
+- Both whole final PNGs were visually inspected. Visible mountains,
+  tree poses, grass-foot joins and foreground geometry remain intact;
+  foreground mask changes 0 pixels
+
+Ground outline budget, fixed ridge only
+CPU visibility uses original ground/mountains and all 47 tree recipes,
+the accepted six-decimal camera basis and float32 approximation.
+Two-pixel domain erosion excludes visible-object/triangle-edge ambiguity.
+Across 290222 ground-domain pixels, 58 raw attenuation values change.
+At 25% (64) and 50% (128) thresholds, boundary membership and two-way
+contour positions are unchanged; the 50% contour has 764 pixels in B/C.
+The outer 75% (192) soft-band threshold changes four sparse pixels.
+P95 two-way contour displacement is 0, but maximum nearest-contour
+distance is 5px. This is not an all-edges <=1px result.
+Exact sparse samples (x,y / B attenuation / C / max final RGB delta):
+  (214,718) / 171 / 196 / 7
+  (215,719) / 175 / 193 / 5
+  (216,720) / 158 / 238 / 23
+  (216,721) / 175 / 255 / 23
+No further variable tuning was performed for this stage.
+
+Image identities
+All four published PNGs are unmodified game-only native files; their
+byte counts and SHA256 values are in manifest.json. Engine capture hashes
+are raw pixel hashes and are distinct from encoded PNG byte SHA256s.
+
+Provenance and scope
+Sanitized public copies of both native runs' engine logs, guard samples,
+before/after source hash receipts, validations, successful report and
+analyses are included. Original file hashes are retained in manifest.json.
+The private original archive is not published.
+This fixture has 568 ground / 520 visible mountain triangles,
+475 shadow proxy faces and 47 trees. SouthWatch 117-tree manor,
+production buildings/chess pieces, water, city multi-material support,
+camera movement, far LOD, full Main and final shadow art remain untested.
+The earlier unavailable six-source archive was not restored; this fixture
+was rebuilt from pinned public source. This bounded local acceptance does
+not accept the whole final shadow art or untested production scenes.

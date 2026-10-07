@@ -1,0 +1,29 @@
+{
+  "scope": "All 360 source-geometric true-occlusion positions, actual native B/C raw ATTENUATION PNG bytes",
+  "count": 360,
+  "changed": 0,
+  "equal": 360,
+  "max_abs_attenuation_8bit_delta": 0,
+  "mean_signed_delta": 0.0,
+  "baseline_attenuation_bins": {
+    "0_to8": 24,
+    "9_to64": 75,
+    "65_to127": 78,
+    "128_to191": 94,
+    "192_to254": 89,
+    "255": 0
+  },
+  "baseline_min_max": [
+    0,
+    235
+  ],
+  "candidate_min_max": [
+    0,
+    235
+  ],
+  "_sanitization": {
+    "sanitized": true,
+    "original_sha256": "cd5e29fd1544bde240e1d1322d392c73c6ba495261af8b84d6be44b7d0a5c0c3",
+    "note": "Public derivative; paths/process identities removed where present, JSON reformatted. Test measurements, hashes, warnings and failures retained."
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "format": "sanitized-bounded-ridge-shadow-evidence-v1",
+  "source_checkpoint": "0a0c1f0e2551c6288cc3ab76d7aa09f8d495f805",
+  "publication_scope": "Evidence only for the independent fixed ridge candidate, not installed into Main/default",
+  "sanitization": "All text is a sanitized public derivative. Original-byte SHA256 and public-copy SHA256 are distinguished below. Absolute environment paths, process identifiers and machine/container identities are omitted. Renderer/version and measured resource figures are retained for interpretation. No secrets or personal data found in approved records. PNGs are unmodified game-only native bytes.",
+  "records": [
+    {
+      "path": "B_clipped.png",
+      "kind": "native_png_original",
+      "original_sha256": "83ef349d38c643b76c970ca4768380d93d763ef1d8a82f04143fb9aee3173499",
+      "original_bytes": 168979,
+      "public_sha256": "83ef349d38c643b76c970ca4768380d93d763ef1d8a82f04143fb9aee3173499",
+      "public_bytes": 168979,
+      "transformations": []
+    },
+    {
+      "path": "C_slope_depth.png",
+      "kind": "native_png_original",
+      "original_sha256": "7a1b9c5523b9ee396f2c97440333e868724a2fc6380347c3796ac28184f451e7",
+      "original_bytes": 160699,
+      "public_sha256": "7a1b9c5523b9ee396f2c97440333e868724a2fc6380347c3796ac28184f451e7",
+      "public_bytes": 160699,
+      "transformations": []
+    },
+    {
+      "path": "B_raw_attenuation.png",
+      "kind": "native_png_original",
+      "original_sha256": "37adcd6327a59f55c6c2ea00b678112257baa7e1ac636d0f3f8290f255b16439",
+      "original_bytes": 174492,
+      "public_sha256": "37adcd6327a59f55c6c2ea00b678112257baa7e1ac636d0f3f8290f255b16439",
+      "public_bytes": 174492,
+      "transformations": []
+    },
+    {
+      "path": "C_raw_attenuation.png",
+      "kind": "native_png_original",
+      "original_sha256": "36ff741a8e7c51363ccbd2d6e9d17886aa6999671ea856a7239123cc8f67ab8a",
+      "original_bytes": 115951,
+      "public_sha256": "36ff741a8e7c51363ccbd2d6e9d17886aa6999671ea856a7239123cc8f67ab8a",
+      "public_bytes": 115951,
+      "transformations": []
+    },
+    {
+      "path": "slope_pixel_analysis.json",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "43d14f3ca35069df6aff5114d377799eb81b8e1c205d992e3a6a2ca667bb0328",
+      "original_bytes": 3451,
+      "public_sha256": "6817322bf7ced19ab77866eb09590b48e1220da5802e6684fdeaefadccea751a",
+      "public_bytes": 3725,
+      "transformations": [
+        "Path/process-identity sanitization where applicable; JSON reformatted; explicit sanitization metadata added"
+      ]
+    },
+    {
+      "path": "full360_final_delta.json",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "9159c4061bdab0d32bb9eb0fe2a6295e8289ec83fd246350a58020a026793307",
+      "original_bytes": 413,
+      "public_sha256": "3c6a14630321631256d7a495963f87254266adcaaa552e48b8095584f3dcf0c4",
+      "public_bytes": 711,
+      "transformations": [
+        "Path/process-identity sanitization where applicable; JSON reformatted; explicit sanitization metadata added"
+      ]
+    },
+    {
+      "path": "full360_raw_delta.json",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "cd5e29fd1544bde240e1d1322d392c73c6ba495261af8b84d6be44b7d0a5c0c3",
+      "original_bytes": 464,
+      "public_sha256": "02036e36038f20db927d980b99cfa69f3a206c2e3d0b458076040bb78754a508",
+      "public_bytes": 762,
+      "transformations": [
+        "Path/process-identity sanitization where applicable; JSON reformatted; explicit sanitization metadata added"
+      ]
+    },
+    {
+      "path": "outline_analysis.json",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "b57d2e7e5ec8ff945a586f7607b9a76cb9a98ccce3fa3cd49478ac23c4b5e8da",
+      "original_bytes": 2228,
+      "public_sha256": "e7d9cd9cc970ce61bb5a8c1dcb46f6d6cc0f05e3354a5ae199f0eeecc3f2e96a",
+      "public_bytes": 2526,
+      "transformations": [
+        "Path/process-identity sanitization where applicable; JSON reformatted; explicit sanitization metadata added"
+      ]
+    },
+    {
+      "path": "runs/slope_20261007T052500.222206Z/after.json",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "6c60da1d184bb03f39cca035a7ff92edb2fcb26dc9e264c267a8216badcdd3d1",
+      "original_bytes": 2981,
+      "public_sha256": "24e4896d656fc4f7701afe9f0887a29248a2294493cd892dd730d1e20878dda7",
+      "public_bytes": 3279,
+      "transformations": [
+        "Path/process-identity sanitization where applicable; JSON reformatted; explicit sanitization metadata added"
+      ]
+    },
+    {
+      "path": "runs/slope_20261007T052500.222206Z/before.json",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "6c60da1d184bb03f39cca035a7ff92edb2fcb26dc9e264c267a8216badcdd3d1",
+      "original_bytes": 2981,
+      "public_sha256": "24e4896d656fc4f7701afe9f0887a29248a2294493cd892dd730d1e20878dda7",
+      "public_bytes": 3279,
+      "transformations": [
+        "Path/process-identity sanitization where applicable; JSON reformatted; explicit sanitization metadata added"
+      ]
+    },
+    {
+      "path": "runs/slope_20261007T052500.222206Z/engine.log",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "dd53c330fd164ab8c3d58170d8b37aa63fc08149b9bcd3ec5633668e2a122900",
+      "original_bytes": 2807,
+      "public_sha256": "a971817eae1d3ea115e07ebfd51f6e63358f3e45092f96fa083e4183415acda6",
+      "public_bytes": 2896,
+      "transformations": [
+        "Executable directory removed; owned PID/process identity removed; sanitization notice added"
+      ]
+    },
+    {
+      "path": "runs/slope_20261007T052500.222206Z/guard.jsonl",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "58ae070c5d00ede17de2e96b086d444d546b431cbce76458c4bf875515fd3c32",
+      "original_bytes": 8654,
+      "public_sha256": "23e622300ef2babff7b0831987dee2b4cf45dc5decd695af032ec958fc3bb926",
+      "public_bytes": 8067,
+      "transformations": [
+        "Executable directory removed; owned PID/process identity removed; sanitization notice added"
+      ]
+    },
+    {
+      "path": "runs/slope_20261007T052500.222206Z/validation.json",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "d77e41cf0ad8e04aa2f93ce7e70f93431048034f8991b434507b6b52dd9a9746",
+      "original_bytes": 1221,
+      "public_sha256": "318ecb1b8904fc57bc8535af6e29e2a576440a8eab7d6653edae6aff21c58af8",
+      "public_bytes": 1519,
+      "transformations": [
+        "Path/process-identity sanitization where applicable; JSON reformatted; explicit sanitization metadata added"
+      ]
+    },
+    {
+      "path": "runs/slope_20261007T052947.603268Z/after.json",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "4c162d64c965e885e4ea712fe5ab6fde5680cc55468d57edad64abbec31ad501",
+      "original_bytes": 2981,
+      "public_sha256": "b0ab16240527206f9bde2bde9e61668e106055b3d31aea75c1057d8ec2450112",
+      "public_bytes": 3279,
+      "transformations": [
+        "Path/process-identity sanitization where applicable; JSON reformatted; explicit sanitization metadata added"
+      ]
+    },
+    {
+      "path": "runs/slope_20261007T052947.603268Z/before.json",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "4c162d64c965e885e4ea712fe5ab6fde5680cc55468d57edad64abbec31ad501",
+      "original_bytes": 2981,
+      "public_sha256": "b0ab16240527206f9bde2bde9e61668e106055b3d31aea75c1057d8ec2450112",
+      "public_bytes": 3279,
+      "transformations": [
+        "Path/process-identity sanitization where applicable; JSON reformatted; explicit sanitization metadata added"
+      ]
+    },
+    {
+      "path": "runs/slope_20261007T052947.603268Z/engine.log",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "9bf7abf2fd7da5842e86150b423d76fdf297df433a88cc06b908729c0d108f62",
+      "original_bytes": 5826,
+      "public_sha256": "08110d2e41b00a197b6ca67e095666f37affbdcd31e1d237d788a79e2755a158",
+      "public_bytes": 5915,
+      "transformations": [
+        "Executable directory removed; owned PID/process identity removed; sanitization notice added"
+      ]
+    },
+    {
+      "path": "runs/slope_20261007T052947.603268Z/guard.jsonl",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "a4bc7f534c16cdf56c94fb48c57af34caff66c56c6fd8741b4fd42f839c05a60",
+      "original_bytes": 18710,
+      "public_sha256": "5e08d112316b03964e04dff0be14080bf3a9c0e885c5708e77e9825a6b3901fb",
+      "public_bytes": 17249,
+      "transformations": [
+        "Executable directory removed; owned PID/process identity removed; sanitization notice added"
+      ]
+    },
+    {
+      "path": "runs/slope_20261007T052947.603268Z/report.json",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "e256fe1c21685a230bc47c05dd888208f50288de3d64e62a787abd4962644636",
+      "original_bytes": 3308,
+      "public_sha256": "c45da62173979e8ce17f49fadcd6e2718ae42116ced1cf5e7007b2635006b77b",
+      "public_bytes": 3719,
+      "transformations": [
+        "Path/process-identity sanitization where applicable; JSON reformatted; explicit sanitization metadata added"
+      ]
+    },
+    {
+      "path": "runs/slope_20261007T052947.603268Z/slope_pixel_analysis.json",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "43d14f3ca35069df6aff5114d377799eb81b8e1c205d992e3a6a2ca667bb0328",
+      "original_bytes": 3451,
+      "public_sha256": "6817322bf7ced19ab77866eb09590b48e1220da5802e6684fdeaefadccea751a",
+      "public_bytes": 3725,
+      "transformations": [
+        "Path/process-identity sanitization where applicable; JSON reformatted; explicit sanitization metadata added"
+      ]
+    },
+    {
+      "path": "runs/slope_20261007T052947.603268Z/validation.json",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "4fc1b1fbbe71db7754dd79c1c99fe41e4b587e9b61d77e3f4ad5c8e09f0fcf59",
+      "original_bytes": 200,
+      "public_sha256": "d4ca92205a53622e8cc0e8efdfcd9d494e932fa6d8f3f5ee0546c443b2bbf17b",
+      "public_bytes": 498,
+      "transformations": [
+        "Path/process-identity sanitization where applicable; JSON reformatted; explicit sanitization metadata added"
+      ]
+    },
+    {
+      "path": "SLOPE_RESULT.txt",
+      "kind": "sanitized_public_copy",
+      "original_sha256": "23b6908362c4e2d6d9da6bf2d32b0da9820d7187a8d0a3e97d2d9a405cbc7034",
+      "original_bytes": 4475,
+      "public_sha256": "d0ed02e4263b42ee216d7cda88c1958681446dc86a3885e4c25b7abcd570452f",
+      "public_bytes": 4674,
+      "transformations": [
+        "Curated public acceptance summary; environment paths/process IDs and private transfer details removed; fingerprint taken from successful report; warnings, failed run, measurements, limits and exact four soft-edge samples retained"
+      ]
+    }
+  ],
+  "private_original_archive": {
+    "published": false,
+    "bytes": 10528,
+    "sha256": "d5836e22bbd3a38504c3d37625e5a10cef67b9c10cae9da5d3c15ac6c235a1c2"
+  }
+}

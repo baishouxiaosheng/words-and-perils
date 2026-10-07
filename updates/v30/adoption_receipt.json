@@ -1,0 +1,273 @@
+{
+  "schema": "words-and-perils-public-adoption-receipt/v1",
+  "status": "accepted_for_public_v30_actor_status_limited_headless_activation",
+  "version": "v30-actor-status",
+  "title": "public v30 角色/状态整合版",
+  "distribution_identity": "public-source-derived",
+  "native_canonical_version": "v28_unchanged",
+  "base_public_commit": "06be017d60153fc1d018bd9f3e920ba739716e60",
+  "adoption_time_utc": "2026-10-07T08:22:27Z",
+  "authoritative_final_qa_evidence": {
+    "independent_complete_restoration": {
+      "environment": "Separate isolated project on the dot cloud computer; original release CLI only, no new Godot process",
+      "control_archive_sha256": "e1e525b7daef7dd4c30270eed9d1467936b3c912f6f431f6fce04dc5d4a879a8",
+      "control_installation_files": 7,
+      "preinstalled_final_wrapper": true,
+      "original_v29_receipt_metadata_corrected_in_isolated_copy": {
+        "size": 15047,
+        "sha256": "a6eeb1eb6aaa15ab558bb5b10986c83bc8f8f61c02d5e4e917dbd32b42bd60f0",
+        "original_baseline_modified": false
+      },
+      "owned_python_pid": 22287,
+      "child_exit": 0,
+      "strict_errors": 0,
+      "elapsed_seconds": 11.5863,
+      "source_files": 1466,
+      "literal_scripts": 347,
+      "runtime_resources": 876,
+      "legacy_binary_resources": 953,
+      "resource_parts": 12,
+      "source_writes": 42,
+      "repeat_source_writes": 0,
+      "check_exit": 0,
+      "final_check_exit": 0,
+      "unknown_main_one_byte_edit": {
+        "refusal_exit": 1,
+        "file_preserved": true,
+        "other_files_unchanged": true,
+        "owned_edit_reversal_final_check_exit": 0
+      },
+      "whole_project_snapshot": {
+        "files": 3248,
+        "before_after_repeat_equal": true,
+        "unknown_refusal_before_after_equal": true,
+        "final_owned_edit_reversal_equal": true,
+        "canonical_map_sha256": "337f212cbfa2f4f6f69e452820cd468208fec9b0744cfe93e71d28a8f9f78806",
+        "before_and_after_map_raw_file_sha256": "462feb9a90a09cb199c793db6ba545bbf516fc0aeec4dbf44f864f04d5639602"
+      },
+      "original_evidence_sha_verified": [
+        {
+          "name": "RESTORATION_RESULT.json",
+          "size": 3861,
+          "sha256": "5186580e2d41021199918b72aa5cd06073a5e503e0b2ea8893f5ab90c20cca7c"
+        },
+        {
+          "name": "guard.jsonl",
+          "size": 10553,
+          "sha256": "704f0e5da02304d09daef1e3431483fe20f92a95bff117b8c8aff666981c35be"
+        },
+        {
+          "name": "full_restore.json",
+          "size": 689,
+          "sha256": "ec462712e91f37560a377ffb7186dcf6465be2544c8d8f0af1dbf941952aa69a"
+        },
+        {
+          "name": "full_restore.log",
+          "size": 543,
+          "sha256": "8840d88e00746030f38f81f963a4ed8b1088a496ce294e4dad528eca7389d608"
+        },
+        {
+          "name": "check.json",
+          "size": 495,
+          "sha256": "c046a4d243a09fee441e79b30dc567f86b37398868bebb182eebdc36bd8d50c2"
+        },
+        {
+          "name": "check.log",
+          "size": 327,
+          "sha256": "8559e605c8fb44787e7bfefff28a5e195bd174579652ee337740a555d4932589"
+        },
+        {
+          "name": "repeat_full_restore.json",
+          "size": 688,
+          "sha256": "4421af26742895d3bf64367c334872aa6bae6c0380fde634d9d58824dcb44bb5"
+        },
+        {
+          "name": "repeat_full_restore.log",
+          "size": 542,
+          "sha256": "711819f611ef73f8dcf110e922eda504e0140d82781ba2e7f1acd811d1484b16"
+        },
+        {
+          "name": "unknown_edit_refusal.json",
+          "size": 141,
+          "sha256": "6537c8f25a61d0b725ff0a570256ad3f2788117366aa4b922443b41ed8c34b88"
+        },
+        {
+          "name": "unknown_edit_refusal.log",
+          "size": 59,
+          "sha256": "1060d6fa49b01d59166b069ee24af8c1611fe5b37926df6fb92c415d10c728a4"
+        },
+        {
+          "name": "final_check.json",
+          "size": 495,
+          "sha256": "c046a4d243a09fee441e79b30dc567f86b37398868bebb182eebdc36bd8d50c2"
+        },
+        {
+          "name": "final_check.log",
+          "size": 327,
+          "sha256": "8559e605c8fb44787e7bfefff28a5e195bd174579652ee337740a555d4932589"
+        },
+        {
+          "name": "runner_executed.py",
+          "size": 7610,
+          "sha256": "fbd466717c4946e0af4b874115c8985645ab915e78ed3bb0a9ebfacb93836b1f"
+        }
+      ],
+      "source_binding": {
+        "original49_production_sources_matched": 49,
+        "original65_pinmap_production_sources_matched": 64,
+        "remaining_65th_pin_role": "Independent consumer test driver, outside the release source map",
+        "main_sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f",
+        "consumer_driver_sha256": "5074627c9710a4d003704627f1dd9b38c6eba0c39e0fdbf20e128844d8298287",
+        "consumer65_pinmap_sha256": "776ad0621197ffe7ddbd270603a75b4bdeda6293373d42b08583d73e1ca4f0bd"
+      },
+      "guard_contract": {
+        "effective_budget_bytes": 8589934592,
+        "reserve_bytes": 536870912,
+        "timeout_seconds": 180,
+        "terminal": "owned Python exited with code0; original registry/identity records remain private"
+      },
+      "public_source_bound_evidence": {
+        "commit": "b0b11471b0230218f8ad137a5b12b18ec21346e3",
+        "path": "candidates/actor-public-v29-compat/05ebbe56e88d/evidence/RESTORATION_NATIVE_EVIDENCE.json",
+        "size": 6990,
+        "sha256": "1b0e365101a702bdcd0b7b8875010920814ecaf34cc0bc80a9de8f90482c601b"
+      }
+    },
+    "limited_same_source_gameplay": {
+      "finite_main_status_path": {
+        "checks": 49,
+        "owned_pid": 14450,
+        "elapsed_seconds": 67.3194,
+        "child_exit": 0,
+        "strict_errors": 0,
+        "public_status_profile_sha256": "9988155d5baf8e840c8d6063c2bc415c08bd0d7b1cd70157f9400bff40698994",
+        "outcomes": "Three actual commits: player status_source, player move, enemy observe then player slot. Same-process disk save/load twice and retained coast-cache round trip."
+      },
+      "actor_v2_death_consumers": {
+        "public_action_profile_sha256": "084f3c14412ea01fd0d5f4023463232979376e8938a5800325feffa93371cc6e",
+        "enemy": {
+          "checks": 239,
+          "owned_pid": 17788,
+          "elapsed_seconds": 34.6879,
+          "child_exit": 0,
+          "strict_errors": 0,
+          "original_report_sha256": "555c6b68f62a3889c5aea09414f8be20b8ee77db76f6c70f8efe5a892df49b7e"
+        },
+        "player": {
+          "checks": 296,
+          "owned_pid": 17996,
+          "elapsed_seconds": 46.9323,
+          "child_exit": 0,
+          "strict_errors": 0,
+          "original_report_sha256": "67788ca71fe69f23e4573831868adf1650117091e56cae6b82d5c081eacc15b0"
+        },
+        "original65_pins_and49_sources_and876_runtime_inputs_verified_before_after": true,
+        "whole_code_inputs_verified_before_after": 733,
+        "original_checkpoint_producer_state_schema_identity_history_unchanged": true,
+        "producer_and_consumer_are_distinct": true,
+        "public_summary_is_redacted_derivation_not_original_summary_bytes": true,
+        "full_bridge_accepted": false
+      },
+      "gameplay_gates_rerun_during_restoration": false
+    },
+    "six_immutable_controls_unchanged": true
+  },
+  "source_main_sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f",
+  "limited_source_evidence": {
+    "finite_main49": {
+      "commit": "dca29e20cb992bcf935e8cdfe001d7dbd442321c",
+      "path": "candidates/actor-public-v29-compat/05ebbe56e88d/evidence/FINITE_MAIN_NATIVE_EVIDENCE.json",
+      "sha256": "91c422bd8b31aee1c08ee6dc422021960ecdc11eedf76906a0fc6f970295046f",
+      "checks": 49,
+      "status_profile_sha256": "9988155d5baf8e840c8d6063c2bc415c08bd0d7b1cd70157f9400bff40698994"
+    },
+    "death_consumer": {
+      "commit": "e59357ca96e31fd8624f39d44f89c8c0c298cc13",
+      "path": "candidates/actor-public-v29-compat/05ebbe56e88d/evidence/DEATH_NATIVE_RESULTS.json",
+      "sha256": "8b0ae9715fe9fba83bfbae3bb22501979a436cbe7e8a434c7ebb48db457e3414",
+      "checks": {
+        "enemy": 239,
+        "player": 296
+      },
+      "action_profile_sha256": "084f3c14412ea01fd0d5f4023463232979376e8938a5800325feffa93371cc6e"
+    },
+    "scope": "Same-version bounded headless logic only. No rendered/GPU/OS/live-model/full-matrix or FullHUD acceptance. Original producer private artifacts are not in this package."
+  },
+  "pending_gates": [],
+  "control_artifacts": [
+    {
+      "path": "distribution_manifest.json",
+      "size": 207017,
+      "sha256": "7ec9feaa531147819801a907688d6483c0accfe7fe23d57fffa6dc2f07dc2075"
+    },
+    {
+      "path": "tools/restore_repository.py",
+      "size": 224,
+      "sha256": "fe05b2e5bbb7248d3ad6ad2d224ec0e1456190a297bcdededc06e03239d269ed"
+    },
+    {
+      "path": "tools/restore_v30.py",
+      "size": 22861,
+      "sha256": "0c7250e549bc6f7ab500a6570ad099c7b43a09a84b74d3d29a78c1d37ba7e75f"
+    },
+    {
+      "path": "updates/v30/distribution_manifest.json",
+      "size": 207017,
+      "sha256": "7ec9feaa531147819801a907688d6483c0accfe7fe23d57fffa6dc2f07dc2075"
+    },
+    {
+      "path": "updates/v30/manifest.json",
+      "size": 22680,
+      "sha256": "b3d9bed51dafc6a86acdc53b5e5456556d2b262b7bb16dbdef72d69febd5d5b9"
+    },
+    {
+      "path": "updates/v30/source_delta.zip.b64",
+      "size": 197228,
+      "sha256": "3a92d84234c9a0d63aa2362873618ed08aa06b175514e55d424527b9c74795f3"
+    }
+  ],
+  "hash_graph": "Immutable distribution pins manifest; manifest pins helper/wrapper/ZIP/unchanged dependencies; receipt hashes other controls and is not pinned by manifest.",
+  "adoption_time_basis": "Actual project-owner bounded public-v30 adoption decision after independent original same-source49/239/296 evidence and complete restoration review",
+  "activation_status": "Accepted for bounded activation. Activation is effective only when public root distribution and default restoration wrapper match the exact six other control artifacts; publish them atomically after the five versioned controls.",
+  "final_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e",
+  "literal_script_closure": {
+    "scripts": 347,
+    "canonical_path_hash_map_sha256": "ca9fbb3ca6b1164f10b1f9e86cedc04bfa7356b736c0fcc756655663c24da8fd"
+  },
+  "prior_attempt_boundaries": [
+    {
+      "kind": "initial_restoration_harness_counter_failure",
+      "owned_python_pid": 22148,
+      "child_exit": 1,
+      "elapsed_seconds": 7.0124,
+      "full_restoration_phase_exit": 0,
+      "actual_product_source_writes": 42,
+      "guard_sha256": "c9346b8c9f13caa41dbe71ab8322e73050cff20724f9a484bbe70338fa23c76d",
+      "full_phase_report_sha256": "ec462712e91f37560a377ffb7186dcf6465be2544c8d8f0af1dbf941952aa69a",
+      "runner_before_sha256": "54316ec9ef941c33b1f08a5a2a14a67188bacd85c531a8a6ec39dc9f4661d1d0",
+      "runner_after_sha256": "fbd466717c4946e0af4b874115c8985645ab915e78ed3bb0a9ebfacb93836b1f",
+      "change": "Only expected source-write count43 to42 and two explanatory lines; seven controls and product bytes unchanged",
+      "scope": "First full phase succeeded; the first complete harness did not pass and is not counted as a clean overall run"
+    },
+    {
+      "kind": "initial_finite_Main_fixture_failure",
+      "owned_pid": 13119,
+      "external_timeout_seconds": 180.0855,
+      "strict_errors": 1,
+      "original_failed_summary_sha256": "7fc27d1e4e1ec37be2950afb8fcd6dd911117610aaf110a1d2150e72cc5563b5",
+      "change": "Fixture-only call to engine.save_data, finite watchdog and coast Continue cache scope; production code unchanged",
+      "scope": "Retained failed attempt; only later49 source-bound successful run is accepted"
+    }
+  ],
+  "not_verified": [
+    "Rendered/GPU death/nameplate or whole-game visual acceptance",
+    "OS physical input or IME",
+    "Live provider responses or packet capture",
+    "Fresh-process gameplay save reopen",
+    "FullHUD or full bridge; full22 matrix and remaining broader cases",
+    "Gameplay or independent semantic acceptance of all168 authority source declarations",
+    "Shadow/Jev successors or any native-v28/laptop74 upgrade"
+  ],
+  "public_evidence_boundary": "Only public project source/control identities and bounded new outcome/digest records. Original producer archive/save/sidecar/manifest bodies, machine identity tuples and private raw summaries stay private.",
+  "accepted_scope": "Exact public actor/status integration combined with retained v29 playtest modules: bounded real Main status path and original actor-v2 death consumer outcomes, complete offline restoration and unknown-edit/idempotence protection. Logical headless scope only."
+}

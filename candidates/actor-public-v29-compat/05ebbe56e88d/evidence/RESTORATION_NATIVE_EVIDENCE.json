@@ -1,0 +1,38 @@
+{
+  "schema": "actual_v30_restore_native_evidence/v1",
+  "control_archive_sha256": "e1e525b7daef7dd4c30270eed9d1467936b3c912f6f431f6fce04dc5d4a879a8",
+  "original_result": {
+    "bytes": 3861,
+    "sha256": "5186580e2d41021199918b72aa5cd06073a5e503e0b2ea8893f5ab90c20cca7c",
+    "utf8": "{\n  \"actual_runtime_files_verified\": 876,\n  \"check\": {\n    \"code\": 0,\n    \"log_sha256\": \"8559e605c8fb44787e7bfefff28a5e195bd174579652ee337740a555d4932589\",\n    \"report\": {\n      \"binary_verification\": \"not_requested\",\n      \"final_source_map_sha256\": \"34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e\",\n      \"literal_scripts\": 347,\n      \"scope\": \"public distribution; native v28 unchanged; literal closure excludes dynamic loads\",\n      \"source_files\": 1466,\n      \"source_writes\": 0,\n      \"version\": \"v30-actor-status\"\n    },\n    \"strict_errors\": []\n  },\n  \"control_archive_sha256\": \"e1e525b7daef7dd4c30270eed9d1467936b3c912f6f431f6fce04dc5d4a879a8\",\n  \"final_check\": {\n    \"code\": 0,\n    \"log_sha256\": \"8559e605c8fb44787e7bfefff28a5e195bd174579652ee337740a555d4932589\",\n    \"report\": {\n      \"binary_verification\": \"not_requested\",\n      \"final_source_map_sha256\": \"34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e\",\n      \"literal_scripts\": 347,\n      \"scope\": \"public distribution; native v28 unchanged; literal closure excludes dynamic loads\",\n      \"source_files\": 1466,\n      \"source_writes\": 0,\n      \"version\": \"v30-actor-status\"\n    },\n    \"strict_errors\": []\n  },\n  \"first_full_restore\": {\n    \"code\": 0,\n    \"log_sha256\": \"8840d88e00746030f38f81f963a4ed8b1088a496ce294e4dad528eca7389d608\",\n    \"report\": {\n      \"binary_resources\": {\n        \"binary_bytes\": 83942609,\n        \"binary_resources\": 953,\n        \"resource_archive_bytes\": 70048256,\n        \"resource_parts\": 12\n      },\n      \"binary_verification\": \"passed\",\n      \"final_source_map_sha256\": \"34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e\",\n      \"literal_scripts\": 347,\n      \"runtime_resource_files\": 876,\n      \"scope\": \"public distribution; native v28 unchanged; literal closure excludes dynamic loads\",\n      \"source_files\": 1466,\n      \"source_writes\": 42,\n      \"version\": \"v30-actor-status\"\n    },\n    \"strict_errors\": []\n  },\n  \"literal_code_snapshot_scope\": \"complete isolated project regular files byte-map, before/after repeat/refusal/final reversal\",\n  \"literal_scripts\": 347,\n  \"main_sha256\": \"05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f\",\n  \"original49_source_bindings_matched\": 49,\n  \"original65_production_bindings_matched\": 64,\n  \"original_baseline_unchanged\": true,\n  \"original_public_v29_receipt_sha256\": \"a6eeb1eb6aaa15ab558bb5b10986c83bc8f8f61c02d5e4e917dbd32b42bd60f0\",\n  \"owned_python_pid\": 22287,\n  \"project_name\": \"restore30qa_20261007T081612Z\",\n  \"repeat_full_restore\": {\n    \"code\": 0,\n    \"log_sha256\": \"711819f611ef73f8dcf110e922eda504e0140d82781ba2e7f1acd811d1484b16\",\n    \"report\": {\n      \"binary_resources\": {\n        \"binary_bytes\": 83942609,\n        \"binary_resources\": 953,\n        \"resource_archive_bytes\": 70048256,\n        \"resource_parts\": 12\n      },\n      \"binary_verification\": \"passed\",\n      \"final_source_map_sha256\": \"34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e\",\n      \"literal_scripts\": 347,\n      \"runtime_resource_files\": 876,\n      \"scope\": \"public distribution; native v28 unchanged; literal closure excludes dynamic loads\",\n      \"source_files\": 1466,\n      \"source_writes\": 0,\n      \"version\": \"v30-actor-status\"\n    },\n    \"strict_errors\": []\n  },\n  \"schema\": \"actual_dot_v30_restoration_qa/v1\",\n  \"scope\": \"Actual isolated complete restore/check/zero-write repeat and one real unknown-byte refusal; no new Godot/gameplay run, default/adoption/nativev28/laptop change\",\n  \"source_files\": 1466,\n  \"status\": \"passed\",\n  \"unknown_edit_refusal\": {\n    \"code\": 1,\n    \"log_sha256\": \"1060d6fa49b01d59166b069ee24af8c1611fe5b37926df6fb92c415d10c728a4\",\n    \"report\": null,\n    \"strict_errors\": []\n  },\n  \"whole_project_map_sha256\": \"337f212cbfa2f4f6f69e452820cd468208fec9b0744cfe93e71d28a8f9f78806\",\n  \"whole_project_snapshot_files\": 3248\n}\n"
+  },
+  "guard": {
+    "source_sha256": "8bfcc1d562dc8ad40f628b6fc79285b230ef8d84ec3ac28564377f8b460cdc48",
+    "original_log_sha256": "704f0e5da02304d09daef1e3431483fe20f92a95bff117b8c8aff666981c35be",
+    "owned_python_pid": 22287,
+    "event": "exited",
+    "child_exit": 0,
+    "elapsed_s": 11.5863,
+    "effective_budget_bytes": 8589934592,
+    "admission_extra_bytes": 1825570816,
+    "reserve_bytes": 536870912,
+    "timeout_s": 180,
+    "max_sampled_owned_VmHWM_kib": 56124
+  },
+  "earlier_fixture_failure": {
+    "owned_python_pid": 22148,
+    "child_exit": 1,
+    "guard_elapsed_s": 7.0124,
+    "guard_log_sha256": "c9346b8c9f13caa41dbe71ab8322e73050cff20724f9a484bbe70338fa23c76d",
+    "original_first_full_phase": {
+      "bytes": 689,
+      "sha256": "ec462712e91f37560a377ffb7186dcf6465be2544c8d8f0af1dbf941952aa69a",
+      "utf8": "{\n  \"code\": 0,\n  \"log_sha256\": \"8840d88e00746030f38f81f963a4ed8b1088a496ce294e4dad528eca7389d608\",\n  \"report\": {\n    \"binary_resources\": {\n      \"binary_bytes\": 83942609,\n      \"binary_resources\": 953,\n      \"resource_archive_bytes\": 70048256,\n      \"resource_parts\": 12\n    },\n    \"binary_verification\": \"passed\",\n    \"final_source_map_sha256\": \"34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e\",\n    \"literal_scripts\": 347,\n    \"runtime_resource_files\": 876,\n    \"scope\": \"public distribution; native v28 unchanged; literal closure excludes dynamic loads\",\n    \"source_files\": 1466,\n    \"source_writes\": 42,\n    \"version\": \"v30-actor-status\"\n  },\n  \"strict_errors\": []\n}\n"
+    },
+    "reason": "Test-only coordinator expected43 writes but exact7 controls had already installed final wrapper; original complete CLI itself exited0/strict0 with42 product writes. Original restorer/controls/source/resources unchanged; new fresh-copy coordinator expected42, preserving all other gates."
+  },
+  "runner_sha256_before": "54316ec9ef941c33b1f08a5a2a14a67188bacd85c531a8a6ec39dc9f4661d1d0",
+  "runner_sha256_after": "fbd466717c4946e0af4b874115c8985645ab915e78ed3bb0a9ebfacb93836b1f",
+  "whole_project_before_after_original_json_sha256": "462feb9a90a09cb199c793db6ba545bbf516fc0aeec4dbf44f864f04d5639602",
+  "scope": "New actual isolated complete restoration/check/repeat/one unknown-byte refusal and restored source binding only; no new gameplay scores/Godot run/GPU claim/default adoption. Candidate pending adoption receipt is not published here; original raw private archives are not included."
+}

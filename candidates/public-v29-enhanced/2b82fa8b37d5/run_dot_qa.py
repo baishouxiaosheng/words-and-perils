@@ -82,9 +82,9 @@ def install():
     if before!=after:raise ValueError('Repeated restoration changed source mtimes')
     p=source_pins();save('install-receipt.json',{'status':'restored_checked_repeat_zero_source_writes','environment':'dot native cloud Linux /workspace/wap','candidate_manifest_sha256':MANIFEST_SHA,'source_pins':p,'source_count':final['source_files'],'restore_report':final,'repeat_report':repeat,'guard_sha256':digest(GUARD_BYTES),'repository_default_restore_unchanged':True,'native_canonical_v28_unchanged':True})
     print('DOT_QA_INSTALL_PASS source_count',len(sm),'main',p['main.gd'],'repeat_zero_source_writes',flush=True)
-def gate(kind):
+def gate(kind,headless=False):
     E.mkdir(parents=True,exist_ok=True);c=config();source_pins()
-    work=E/(kind+'-'+time.strftime('%Y%m%dT%H%M%SZ',time.gmtime()))
+    work=E/(kind+('-headless-' if headless else '-')+time.strftime('%Y%m%dT%H%M%SZ',time.gmtime()))
     if work.exists():raise ValueError('Fresh gate directory required')
     work.mkdir(); guard=E/'guard_effective8g.py'
     if guard.exists() and read(guard)!=GUARD_BYTES:raise ValueError('Guard changed')
@@ -111,7 +111,8 @@ def gate(kind):
     env['FOGBANK_'+variable+'_TEST_USER_DIR']=str(user)
     report=work/'report.json';env['FOGBANK_'+variable+'_TEST_REPORT']=str(report)
     command=[sys.executable,'-B',str(guard),'--log',str(work/'guard.jsonl'),'--timeout','180','--reserve-mib','512','--admission-extra-mib','1741','--','godot','--path',str(ROOT),'--audio-driver','Dummy','--rendering-method','gl_compatibility','--script',str(test)]
-    save(kind+'-request.json',{'source_pins':source_pins(),'fixture_original_sha256':digest(read(orig)),'fixture_executed_sha256':digest(b),'fixture_change':'selection Main binding only' if kind=='selection' else 'none','guard_sha256':digest(GUARD_BYTES),'expected_checks':expected_checks,'display':'native x11; synthetic real GUI events, no OS input or visual acceptance claim'})
+    if headless:command.append('--headless')
+    save(kind+('-headless' if headless else '')+'-request.json',{'source_pins':source_pins(),'fixture_original_sha256':digest(read(orig)),'fixture_executed_sha256':digest(b),'fixture_change':'selection Main binding only' if kind=='selection' else 'none','guard_sha256':digest(GUARD_BYTES),'expected_checks':expected_checks,'display':('headless logical GUI events; no rendered visual acceptance claim' if headless else 'native x11; synthetic real GUI events, no OS input or visual acceptance claim')})
     start=time.monotonic()
     with (work/'runtime.log').open('w') as log: code=subprocess.call(command,cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT)
     text=(work/'runtime.log').read_text(errors='replace')
@@ -120,7 +121,7 @@ def gate(kind):
     rows=[json.loads(line) for line in read(work/'guard.jsonl').decode().splitlines()] if (work/'guard.jsonl').exists() else []
     passed=code==0 and result.get('ok') is True and result.get('checks')==expected_checks and not strict and rows[-1]['event']=='exited' and rows[-1]['child_exit']==0
     summary={'status':'passed' if passed else 'failed','code':code,'elapsed_s':time.monotonic()-start,'checks':result.get('checks'),'failures':result.get('failures'),'strict_error_count':len(strict),'strict_errors':strict,'pid':result.get('pid'),'main_sha256':result.get('main_sha256'),'display':result.get('display_backend'),'last_guard_event':rows[-1] if rows else None,'environment':'dot native cloud Linux /workspace/wap','network_claim':'fixture records no provider work; no packet capture','receipt':result.get('receipt')}
-    source_pins();save(kind+'-summary.json',summary);print('DOT_QA_GATE',kind,json.dumps(summary,ensure_ascii=False),flush=True)
+    source_pins();save(kind+('-headless' if headless else '')+'-summary.json',summary);print('DOT_QA_GATE',kind,json.dumps(summary,ensure_ascii=False),flush=True)
     if not passed:raise SystemExit(1)
 def import_assets():
     E.mkdir(parents=True,exist_ok=True);before=source_pins()
@@ -140,4 +141,5 @@ if __name__=='__main__':
     if len(sys.argv)!=2:raise SystemExit('Use install, selection, or offline')
     if sys.argv[1]=='install':install()
     elif sys.argv[1]=='import':import_assets()
+    elif sys.argv[1] in ('selection-headless','offline-headless'):gate(sys.argv[1].split('-')[0],True)
     else:gate(sys.argv[1])

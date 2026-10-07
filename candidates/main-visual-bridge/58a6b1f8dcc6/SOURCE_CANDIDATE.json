@@ -1,0 +1,85 @@
+{
+  "schema": "main_visual_source_candidate/v1",
+  "status": "source_candidate_not_adopted",
+  "base_public_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+  "product_files": 17,
+  "product_bytes": 311253,
+  "files": {
+    "coast_board.gd": {
+      "bytes": 23559,
+      "sha256": "2f3314682f245722481e3994cc8238cec2f37aa2a141e0bfc3208913bc6ab5ac"
+    },
+    "controller.gd": {
+      "bytes": 16521,
+      "sha256": "00f0df34304e0399b399e86b2fb577189d5c8bfa5debd9435a5b872a7fdd7f66"
+    },
+    "daylight_profile.gd": {
+      "bytes": 7415,
+      "sha256": "0fa21b5fca8f1c522d5bdc848053b220aca24ed6c6a041dc865e296b726b0f9e"
+    },
+    "ground.gdshader": {
+      "bytes": 3062,
+      "sha256": "f4361b4b2cbf7c3e5ec781d0cfbf9aaf36892e7414aaa0f77902d2b30d962750"
+    },
+    "main.gd": {
+      "bytes": 205854,
+      "sha256": "58a6b1f8dcc655f992499ec49a8d6a18ae424c965fcbbcb770929e0be7e06fcd"
+    },
+    "main_material_contract.gd": {
+      "bytes": 10676,
+      "sha256": "3f597242dd846baa20ea10f2d29d8c0a132ff09348944579028d4d93f5375e0e"
+    },
+    "material_audit.gd": {
+      "bytes": 14064,
+      "sha256": "0e522477967f8e39b937af829e97a13a4962d9326f817f884f2cbb001792c380"
+    },
+    "mountain.gdshader": {
+      "bytes": 1373,
+      "sha256": "47c4226edc6fc78854132f3115ce4a7be1a366c260a1700345ad0a6c35e9a786"
+    },
+    "palette.gdshaderinc": {
+      "bytes": 1757,
+      "sha256": "2991c9cc2fbd1d02128bbca722f6de67f80438b67b9ead9d7b33edb45389d60c"
+    },
+    "ridge_shadow_proxy.gd": {
+      "bytes": 5006,
+      "sha256": "089ebbcae12215e998d8788e48216876b520c0e9fc31bcbf37f8b31bf3b4439a"
+    },
+    "rigid.gdshader": {
+      "bytes": 1632,
+      "sha256": "b38d49b70b5e603aaaf0a3a102a96107a5608e01cb51078737ad098131f08479"
+    },
+    "rigid_back.gdshader": {
+      "bytes": 1216,
+      "sha256": "23f36d292eb7dff1fa65e95d3ce0e5032539b8dadc515e611a442a040aeaf4fe"
+    },
+    "sapling_display_loader.gd": {
+      "bytes": 2119,
+      "sha256": "5a8e3d2b78d596ae0ebaea388fba91b61ee9f53bfa5c2ece802da2714fd8bba3"
+    },
+    "transaction.gd": {
+      "bytes": 12016,
+      "sha256": "747fa7614a5a6a6a23dec807a9d4af031c818193dfa2c880b526c2469212e83a"
+    },
+    "vegetation.gdshader": {
+      "bytes": 1890,
+      "sha256": "cf20b119f2e8220a4d5313ae3fb3fb5fb8515a73d21ca945b7fbb8fb5089bac0"
+    },
+    "water.gdshader": {
+      "bytes": 2473,
+      "sha256": "dffafc1e9f0370e9591c258e7bdc24c7d51c2173b38a503111bcdad35667e70c"
+    },
+    "world_view.gd": {
+      "bytes": 620,
+      "sha256": "e54232e6dee45d7cb807ec99fbbedc8393845e9225e786db6b35288e44cdb78c"
+    }
+  },
+  "install": "main.gd at independent project root; other16 files under private_main_visual/",
+  "default_enabled": false,
+  "validation_limits": [
+    "Prior29 actual-Main action checks used contract9bac; latest strict contract3f597 has separate9 UI feature checks and new6-check actual-Main opt-in launch",
+    "Complete combined29 action chain on3f597 is pending",
+    "Baseline hard shaded palette; continuous saturated contour requirement remains pending"
+  ],
+  "scope": "Source-only checkpoint; stable public v30/default remain separate"
+}

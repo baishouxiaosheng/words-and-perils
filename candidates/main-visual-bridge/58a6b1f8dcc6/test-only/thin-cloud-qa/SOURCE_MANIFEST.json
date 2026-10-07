@@ -1,0 +1,28 @@
+{
+  "schema": "thin_cloud_qa_sources/v1",
+  "status": "recording_sources_executed_name_probe_prepared_not_run",
+  "files": {
+    "record_offline_move_20261007/movie.gd": {
+      "bytes": 6221,
+      "sha256": "6eca84d28f5433db3627eed117d248a794e61410293f6260db0fcf5f0aeb57ad"
+    },
+    "record_offline_move_20261007/run.py": {
+      "bytes": 4404,
+      "sha256": "6a310eea4da813315bce6691bba65a7ce109d1078cbdedb9e45fbfe300b9df30"
+    },
+    "record_offline_move_20261007/review.py": {
+      "bytes": 1784,
+      "sha256": "0269da91c4a8c30fceaa92ff5b123ae19229e14d6f7bea50a61a9a00fd2c5040"
+    },
+    "game_name_native_probe_20261007/probe.gd": {
+      "bytes": 1067,
+      "sha256": "d70a6b39015a4aaf2ca744c9342227da9ffe3bbfb6edb46290f682ae647b535f"
+    },
+    "game_name_native_probe_20261007/run.py": {
+      "bytes": 2662,
+      "sha256": "dfd24e2ec3bb185a6afe1f043d803f2439a8da79e05a00d39bb7d236917c395a"
+    }
+  },
+  "runtime_base": "publicv30 + source-only main-visual-bridge58a6 candidate at749355e5690fe593cabb0231fe0c6adea95825c0",
+  "scope": "Only bounded source code; no raw save/state/report, no credentials; native execution remains assigned owner task"
+}

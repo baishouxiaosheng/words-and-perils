@@ -1,0 +1,9 @@
+Words and Perils — offline movement candidate demo
+
+Original reviewed MP4: 803968 bytes; SHA-256 36063f5f963860affcb5a46c823e9105815014b46f2905201a0f06145da782c5
+1440×900; 30 fps; 8.8 seconds
+Recorded from the source-only visual bridge candidate at 749355e5690fe593cabb0231fe0c6adea95825c0: Main SHA-256 58a6b1f8dcc655f992499ec49a8d6a18ae424c965fcbbcb770929e0be7e06fcd
+
+Shows actual Coast target selection, the complete registered Unicode intent, explicit offline confirmation, production movement commit, route stamina 8→6 and turn 1→2. Godot synthetic GUI input; no physical IME claim. Authored offline code fixture; Jev and live model services are not connected.
+
+Godot MovieMaker footage with original timing, transcoded to CFR MP4; no real-time performance claim. Candidate footage has a partially cropped title and bottom hint. Experimental visual bridge is off in this clip. Stable public v30 entry/default are unchanged.

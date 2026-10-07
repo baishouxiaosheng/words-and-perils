@@ -137,9 +137,29 @@ def import_assets():
     print('DOT_QA_IMPORT',code,'diagnostic_lines',len(errors),'source9_unchanged',before==after,flush=True)
     if code or before!=after:raise SystemExit(1)
     run_restore('check-after-import',('--check',))
+def verify_inputs():
+    before=source_pins();raw=read(PREFIX/'runtime_876_pins.json')
+    if len(raw)!=177225 or digest(raw)!='4f61e1ce088cc0817ef2044f142f6c80edd5a6a7c3ec47688fa559ed16c1860e':raise ValueError('Frozen 876 pin map changed')
+    rows=json.loads(raw)
+    if len(rows)!=876:raise ValueError('Frozen runtime count changed')
+    baseline=int(Path('/sys/fs/cgroup/memory.current').read_text())
+    if baseline+1024*1024**2>=8*1024**3-512*1024**2:raise ValueError('Read-only hash admission lacks headroom')
+    for n,row in rows.items():
+        parts=PurePosixPath(n).parts
+        if PurePosixPath(n).is_absolute() or '..' in parts or '\\' in n:raise ValueError('Unsafe frozen path')
+        target=ROOT
+        for part in parts:
+            target=target/part
+            if target.is_symlink():raise ValueError('Frozen input path is symlink')
+        require(read(target),row)
+    after=source_pins()
+    report=run_restore('check-final-terminal',('--check',))
+    save('final-inputs-receipt.json',{'status':'post_gate_original_876_and_final9_exact','runtime_input_count':876,'runtime_input_map_sha256':digest(raw),'nine_before':before,'nine_after':after,'source_report':report,'scope':'Read-only match to original frozen runtime inputs after new dot headless gates; exact full restoration verified canonical source and binary resources before gates'})
+    print('DOT_QA_FINAL_INPUTS_PASS',876,'source9_unchanged',before==after,'source_files',report['source_files'],'literal_scripts',report['literal_scripts'],flush=True)
 if __name__=='__main__':
     if len(sys.argv)!=2:raise SystemExit('Use install, selection, or offline')
     if sys.argv[1]=='install':install()
     elif sys.argv[1]=='import':import_assets()
+    elif sys.argv[1]=='verify':verify_inputs()
     elif sys.argv[1] in ('selection-headless','offline-headless'):gate(sys.argv[1].split('-')[0],True)
     else:gate(sys.argv[1])

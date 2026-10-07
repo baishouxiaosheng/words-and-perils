@@ -14,9 +14,18 @@ var failures:Array=[]
 var actions:Array=[]
 var world_id=""
 var saved_status:Dictionary={}
-func _initialize()->void:run.call_deferred()
+var finished=false
+var checkpoint="initialized"
+func _initialize()->void:
+	create_timer(150.0).timeout.connect(func():
+		if not finished:
+			expect(false,"finite fixture deadline at "+checkpoint)
+			finish())
+	run.call_deferred()
 func expect(ok:bool,label:String)->bool:
 	checks+=1
+	checkpoint=label
+	print("ACTOR_FINITE_CHECKPOINT ",checks," ",label," ",ok)
 	if not ok:failures.append(label);printerr("ACTOR_FINITE_FAIL ",label)
 	return ok
 func frames(n:int=2)->void:
@@ -79,7 +88,7 @@ func run()->void:
 	root.gui_embed_subwindows=true;root.size=Vector2i(1280,720)
 	app=Main.instantiate();root.add_child(app);current_scene=app;await frames(6)
 	if not expect(app.coast_mode and app.playtest.state_copy().hexes.size()==1801,"real default Coast Main remains current public1801"):finish();return
-	var coast=app.playtest;var coast_before:String=C.bytes(coast.save_data())
+	var coast=app.playtest;var coast_before:String=C.bytes(coast.engine.save_data())
 	mock=Mock.new()
 	if not expect(app.runtime_ai.set_transport(mock).get("ok",false) and not mock.info().live,"no-network mock installed before any role configuration"):finish();return
 	if not await configure_real_controls():finish();return
@@ -105,6 +114,8 @@ func run()->void:
 		if app.playtest.current_actor_id()==F.ENEMY:break
 		var preview:Dictionary=app.playtest.movement_preview(plan.route[index])
 		if not preview.get("ok",false):
+			var stamina:Dictionary=app.playtest.state_copy().actors[F.PLAYER].stamina
+			if not expect(stamina.current<stamina.max,"rejected movement only rests if stamina is not already full: "+str(preview.get("code",""))):finish();return
 			if (await action("rest")).is_empty():finish();return
 		if (await action("move",{"target_hex":plan.route[index]})).is_empty():finish();return
 	if not expect(app.playtest.current_actor_id()==F.ENEMY and app._waiting_enemy_phase(),"real committed player movement reaches actual enemy slot"):finish();return
@@ -114,13 +125,16 @@ func run()->void:
 	if not expect(app.playtest.current_actor_id()==F.PLAYER,"true player-enemy-player scheduler round trip"):finish();return
 	app.save_game();saved_status=app.playtest.save_data();app.load_game();await frames()
 	if not expect(app.last_save_result.get("ok",false) and app.last_load_result.get("ok",false) and C.bytes(app.playtest.save_data())==C.bytes(saved_status),"post enemy turn status save/reopen retains real authority"):finish();return
+	var previous_status=app.playtest
 	app.switch_coast();await frames()
-	if not expect(app.coast_mode and app.playtest==coast and C.bytes(coast.save_data())==coast_before,"actual Coast return preserves original independent adventure"):finish();return
+	if not expect(app.coast_mode and app.playtest==coast and C.bytes(coast.engine.save_data())==coast_before,"actual Coast return preserves original independent adventure"):finish();return
 	app.on_tool_selected(app.ACTOR_STATUS_ENTRY_CONTINUE);await frames()
-	expect(app.actor_status_mode and app.last_load_result.get("ok",false) and C.bytes(app.playtest.save_data())==C.bytes(saved_status),"real Continue status menu reopens independent saved source profile after Coast")
+	expect(app.actor_status_mode and app.playtest==previous_status and app.playtest.ready().get("ok",false) and C.bytes(app.playtest.save_data())==C.bytes(saved_status),"real Continue status menu returns retained cached adventure unchanged after Coast; disk reopen was separately checked by explicit Main load")
 	expect(mock.sent.is_empty() and not app.runtime_ai.intention_consent,"all finite paths remain no-network and no additional actor consent")
 	finish()
 func finish()->void:
+	if finished:return
+	finished=true
 	var report={"schema":"actor_v29_finite_main/v1","ok":failures.is_empty(),"checks":checks,"failures":failures,"pid":OS.get_process_id(),"main_sha256":FileAccess.get_sha256("res://main.gd"),"profile_hash":F.FROZEN_PROFILE,"world_id":world_id,"actions":actions,"network_calls":0,"scope":"real Main menus, real P1 Save flags, original source/status resolver/scheduler/tickets/RNG/commit, independent save/reopen and Coast return; finite headless logic, no OS/GPU, live model, broad22-matrix or actual-death outcome claim"}
 	var out=FileAccess.open(OS.get_environment("FOGBANK_ACTOR_FINITE_REPORT"),FileAccess.WRITE)
 	if out==null:printerr("ACTOR_FINITE_REPORT_FAILED");quit(2);return

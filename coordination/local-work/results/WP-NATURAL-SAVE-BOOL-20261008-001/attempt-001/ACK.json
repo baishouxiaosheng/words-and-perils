@@ -1,0 +1,42 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "ack",
+  "task_id": "WP-NATURAL-SAVE-BOOL-20261008-001",
+  "task_sha256": "b3d55be9f2cdab63b650fc25d373cfd985250ac4d26335861c0768c7baabc73e",
+  "attempt_id": "attempt-001",
+  "intake_commit": "6615185508a0e6e73fff23465ceca2a023f7df19",
+  "status": "acknowledged",
+  "automation_enabled": false,
+  "summary": "Exact directly authorized first task accepted in current local Codex session, single_task_only. Repo-wide file lock held; main CAS claim remote-read and owner/run verified. 7 task inputs and 2564 original Natural project files hash-verified. No engine started yet.",
+  "source_hashes": {
+    "adapter_baseline": "7932dc7a48a25981b9d154c108515af4ed927133a798819ca26424afd28948ba",
+    "engine_inherited": "dba3ca7fe04dc8a4100897250fc19c5c6c2acff2ef687ff120e894beadf6351d",
+    "corrected_suite": "60e46a3b5b607d3ba5cbe3634ebcd6bd3ebbfc98fa10d4bad8732ea95b5a0ba2"
+  },
+  "checks": [
+    {
+      "name": "claim",
+      "commit": "84bd5f1c5d8ce0b525b4848c295ee2ef05c0216c",
+      "owner_run_id": "run-20261008-a1b40-01",
+      "readback": true
+    },
+    {
+      "name": "source_inputs",
+      "matched": 7
+    },
+    {
+      "name": "baseline_files",
+      "matched": 2564
+    }
+  ],
+  "blockers": [
+    "future source authentication unverified",
+    "future supported worker entry and canary unverified"
+  ],
+  "context": {
+    "used_percent": null,
+    "source": "No runtime-reported context percentage interface exposed",
+    "compaction": "unavailable"
+  },
+  "candidate_adopted": false
+}

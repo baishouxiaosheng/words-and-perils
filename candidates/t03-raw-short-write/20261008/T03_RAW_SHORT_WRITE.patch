@@ -1,0 +1,19 @@
+--- a/core/ai_gm_rebuilt/engine.gd
++++ b/core/ai_gm_rebuilt/engine.gd
+@@ -415,11 +415,15 @@
+ func save_file(path: String) -> Dictionary:
+ 	if not _initial_error.is_empty(): return ready()
+ 	var temporary := path + ".tmp"
+ 	var file := FileAccess.open(temporary, FileAccess.WRITE)
+ 	if file == null: return C.fail("SAVE_FAILED", "Cannot write temporary save.")
+-	file.store_string(C.bytes(save_data())); file.flush(); file.close()
++	var stored: bool = file.store_string(C.bytes(save_data()))
++	file.flush()
++	var write_error: Error = file.get_error()
++	file.close()
++	if not stored or write_error != OK: return C.fail("SAVE_FAILED", "Temporary save write failed.")
+ 	var renamed: Error = DirAccess.rename_absolute(temporary, path)
+ 	if renamed != OK: return C.fail("SAVE_FAILED", "Atomic save rename failed.")
+ 	return {"ok": true}
+ 
+ func load_file(path: String) -> Dictionary:

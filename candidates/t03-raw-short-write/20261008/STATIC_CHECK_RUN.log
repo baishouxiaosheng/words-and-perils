@@ -1,0 +1,103 @@
+{
+  "status": "passed",
+  "scope": "Python source/byte/order consistency only; no GDScript parse or Engine execution",
+  "static_check_count": 23,
+  "checks": [
+    {
+      "label": "exact raw Engine base hash matches prior 168-input snapshot",
+      "passed": true
+    },
+    {
+      "label": "exact raw Engine candidate hash matches manifest",
+      "passed": true
+    },
+    {
+      "label": "only the one declared old save statement is replaced",
+      "passed": true
+    },
+    {
+      "label": "reversing the new five statements restores exact frozen Engine bytes",
+      "passed": true
+    },
+    {
+      "label": "save_file signature is identical and every non-save_file byte is identical",
+      "passed": true
+    },
+    {
+      "label": "store_string boolean is captured instead of discarded",
+      "passed": true
+    },
+    {
+      "label": "file-reported error is captured before close",
+      "passed": true
+    },
+    {
+      "label": "write refusal precedes rename and checks both signals",
+      "passed": true
+    },
+    {
+      "label": "close precedes both write refusal and rename",
+      "passed": true
+    },
+    {
+      "label": "existing readiness/open/rename failures and success return stay exact",
+      "passed": true
+    },
+    {
+      "label": "no new temporary deletion, lock, revalidation, schema or load path is added",
+      "passed": true
+    },
+    {
+      "label": "one production file and two test-only files are the entire overlay",
+      "passed": true
+    },
+    {
+      "label": "all declared small read-only inputs still match their hashes",
+      "passed": true
+    },
+    {
+      "label": "frozen project declares Godot 4.6 for the bool-returning store_string API",
+      "passed": true
+    },
+    {
+      "label": "raw Engine is already an authority input; list is unchanged",
+      "passed": true
+    },
+    {
+      "label": "previous natural-coast candidate production bytes remain exact",
+      "passed": true
+    },
+    {
+      "label": "previous authority snapshot remains byte-identical",
+      "passed": true
+    },
+    {
+      "label": "prepared tests pin exact Engine and extracted-method hashes",
+      "passed": true
+    },
+    {
+      "label": "prepared source fault harness changes only three backend identifier occurrences",
+      "passed": true
+    },
+    {
+      "label": "ten prepared cases contain seven in-memory and three isolated native cases",
+      "passed": true
+    },
+    {
+      "label": "test fixtures have exact manifest hashes",
+      "passed": true
+    },
+    {
+      "label": "minimal source patch is exact, hash-bound and contains one hunk",
+      "passed": true
+    },
+    {
+      "label": "recorded zero-fuzz disposable patch output is byte-identical to candidate",
+      "passed": true
+    }
+  ],
+  "godot_parses": 0,
+  "godot_runs": 0,
+  "runtime_cases_prepared": 10,
+  "runtime_cases_executed": 0
+}

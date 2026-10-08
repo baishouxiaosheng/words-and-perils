@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "scope": "zero-fuzz patch application to a one-file disposable copy only; not Godot parsing",
+  "command": "patch --batch --fuzz=0 -p1 < ../T03_RAW_SHORT_WRITE.patch; cmp core/ai_gm_rebuilt/engine.gd ../overlay/core/ai_gm_rebuilt/engine.gd",
+  "process_exit_code": 0,
+  "output": "patching file core/ai_gm_rebuilt/engine.gd",
+  "fuzz_allowed": 0,
+  "patched_sha256": "cb707722b1d28534615257cb9873d1c66ce9924ac2ee5ebdc2d1d2a46b09fdc3",
+  "candidate_sha256": "cb707722b1d28534615257cb9873d1c66ce9924ac2ee5ebdc2d1d2a46b09fdc3",
+  "godot_parses": 0,
+  "godot_runs": 0
+}

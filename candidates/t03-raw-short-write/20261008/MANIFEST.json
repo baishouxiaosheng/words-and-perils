@@ -1,0 +1,51 @@
+{
+  "status": "isolated_unrun_candidate",
+  "base_root": "exact_v30_restore_20261008/candidate",
+  "plan_url": "https://chatgpt.com/space/page_5d6b6711bbac8191a2bbaf758e03cd4f",
+  "base_authority_snapshot": {
+    "source": "t03_save_guard_candidate_20261008/BASE_AUTHORITY_INPUTS.json",
+    "sha256": "5a009fb5b5486c80f11327e27278a44780fac4689eeb4f00663d32ce32d51097",
+    "note": "Previous snapshot reused only as provenance; all 168 current inputs were not rehashed here."
+  },
+  "production_files": {
+    "core/ai_gm_rebuilt/engine.gd": {
+      "base_sha256": "3d41f2fc4e52459d5df01732fbacc9e849f0e4a9260094220426001ef236002d",
+      "candidate_sha256": "cb707722b1d28534615257cb9873d1c66ce9924ac2ee5ebdc2d1d2a46b09fdc3",
+      "base_bytes": 50887,
+      "candidate_bytes": 51047
+    }
+  },
+  "read_only_inputs": {
+    "core/ai_gm_rebuilt/canonical.gd": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c",
+    "tests/experimental/ai_gm_rebuilt/story_fixture.gd": "e187f474d35e5110c2e840c389c35c208fa83e3d81663efccca075826dfd9520",
+    "view/generated_natural_coast_basic/authority_inputs.gd": "23c4872180595c05398dc69909c8d7a4adbf2cbcb7f584f36bac0254c8822669",
+    "view/ai_gm_playtest/adapter.gd": "a0d2149c309c7cbcf002b915bd8084bd9735c4c91ea97da4b78774f23ce7ba76",
+    "view/playable_build/adapter.gd": "d7a49926e11846735492c24d790e9c1b6c677b2df841231510667ae79387ad5e",
+    "project.godot": "0b35574f45a5b50307636bb3eee790a9c99be785ce3dc30c2b44e1c666dc0038"
+  },
+  "new_test_files": {
+    "tests/t03_raw_short_write/io_probe.gd": {
+      "sha256": "c604a6be15d323c12b6efd45856c27d35997564c9d4d7755764be9e8bb0e5678",
+      "bytes": 1609
+    },
+    "tests/t03_raw_short_write/test_save_file.gd": {
+      "sha256": "30c1a74de27986d1965c993b6f362bea340c372d42af83c7b9e86db7d791dd6a",
+      "bytes": 8536
+    }
+  },
+  "source_patch": {
+    "path": "T03_RAW_SHORT_WRITE.patch",
+    "sha256": "1e64e82cf9cdf86b1ebe269a9b9051791d3f30dc3b198b5665ac9926be9d15f2",
+    "bytes": 878
+  },
+  "previous_candidate_unchanged": {
+    "overlay/view/generated_natural_coast_basic/adapter.gd": "7932dc7a48a25981b9d154c108515af4ed927133a798819ca26424afd28948ba",
+    "overlay/view/generated_natural_coast_basic/engine.gd": "dba3ca7fe04dc8a4100897250fc19c5c6c2acff2ef687ff120e894beadf6351d"
+  },
+  "verification": {
+    "godot_parses": 0,
+    "godot_runs": 0,
+    "prepared_runtime_cases": 10,
+    "status": "not_executed"
+  }
+}

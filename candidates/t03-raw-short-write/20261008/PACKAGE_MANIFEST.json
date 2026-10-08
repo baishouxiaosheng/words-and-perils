@@ -1,0 +1,59 @@
+{
+  "status": "isolated_unrun_candidate",
+  "godot_parses": 0,
+  "godot_runs": 0,
+  "files": {
+    "MANIFEST.json": {
+      "sha256": "d5e65fe80a0449b770b194b102c50e61b958a71479f1bf12e50b5cc398504bc2",
+      "bytes": 2428
+    },
+    "OFFICIAL_API_NOTES.json": {
+      "sha256": "cdaa4ff195b2c4a55f729fd00800eea77b956f200d00bcf3534549f04ebcca85",
+      "bytes": 1865
+    },
+    "PATCH_APPLICATION_CHECK.json": {
+      "sha256": "77e3295b96f5ce536b4236e5b8ef700b1a6f50a2f48ffc966207d79662ccc865",
+      "bytes": 592
+    },
+    "SOURCE_REVIEW.json": {
+      "sha256": "a94a54085041a8a0827d15bb29aaf3557b168ba190a5080814055571f20507a9",
+      "bytes": 1301
+    },
+    "STATIC_CHECKS.json": {
+      "sha256": "7b1ffde1ae3ef882b150691dec5981dc9287304c99e1c61d879a705ca808749c",
+      "bytes": 2885
+    },
+    "STATIC_CHECKS_initial_case_counter_failed.json": {
+      "sha256": "68df8ada475afeade4578ee5e8ebd997dea4a8b339713d860e11cd6b04e94a33",
+      "bytes": 2634
+    },
+    "STATIC_CHECK_RUN.log": {
+      "sha256": "7b1ffde1ae3ef882b150691dec5981dc9287304c99e1c61d879a705ca808749c",
+      "bytes": 2885
+    },
+    "STATUS.md": {
+      "sha256": "9f141e24ef85547e340406c533e0954ef87e01c83664d8515b8aad3abe156483",
+      "bytes": 7756
+    },
+    "T03_RAW_SHORT_WRITE.patch": {
+      "sha256": "1e64e82cf9cdf86b1ebe269a9b9051791d3f30dc3b198b5665ac9926be9d15f2",
+      "bytes": 878
+    },
+    "overlay/core/ai_gm_rebuilt/engine.gd": {
+      "sha256": "cb707722b1d28534615257cb9873d1c66ce9924ac2ee5ebdc2d1d2a46b09fdc3",
+      "bytes": 51047
+    },
+    "overlay/tests/t03_raw_short_write/io_probe.gd": {
+      "sha256": "c604a6be15d323c12b6efd45856c27d35997564c9d4d7755764be9e8bb0e5678",
+      "bytes": 1609
+    },
+    "overlay/tests/t03_raw_short_write/test_save_file.gd": {
+      "sha256": "30c1a74de27986d1965c993b6f362bea340c372d42af83c7b9e86db7d791dd6a",
+      "bytes": 8536
+    },
+    "verify_static.py": {
+      "sha256": "42a963ed37e4aae750027638d6abf0b02cb7e2ef96c6518163244de58d5d441c",
+      "bytes": 6845
+    }
+  }
+}

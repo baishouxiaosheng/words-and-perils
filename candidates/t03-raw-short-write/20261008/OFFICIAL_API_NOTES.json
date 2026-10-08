@@ -1,0 +1,26 @@
+{
+  "checked_at_utc": "2026-10-08T04:05:00Z",
+  "target_api": "Godot 4.6, matching frozen project.godot config/features",
+  "sources": [
+    {
+      "url": "https://docs.godotengine.org/en/4.6/classes/class_fileaccess.html#class-fileaccess-method-store-string",
+      "finding": "store_string has a bool return in the 4.6 API; callers can retain its write-success result."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/godotengine/godot/4.6-stable/core/io/file_access.cpp",
+      "lines": "793-800, 1030",
+      "finding": "store_string converts to UTF-8 and returns the store_buffer result. The method is exposed to scripts."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/godotengine/godot/4.6-stable/drivers/unix/file_access_unix.cpp",
+      "lines": "49-63, 191-197, 296-298, 316-325",
+      "finding": "Unix store_buffer compares fwrite's byte count with the requested length, updates last_error, and returns the comparison. get_error returns last_error. flush ignores fflush's return and does not call check_errors; closing ignores fclose's return. This patch cannot claim reliable detection of errors arising only during flush/close."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/godotengine/godot/4.6-stable/drivers/windows/file_access_windows.cpp",
+      "lines": "52-66, 331-333, 352-375",
+      "finding": "Windows store_buffer likewise compares fwrite's byte count, updates last_error, and returns bool. flush ignores fflush's return and does not update last_error. The reported-error check does not prove all buffered I/O failures are detected."
+    }
+  ],
+  "inference": "Capturing both the write-return bool and the file-reported error prevents the confirmed ignored short-write/error signals from reaching the explicit destination rename. It does not provide durability or resolve other save writers."
+}

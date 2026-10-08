@@ -1,0 +1,120 @@
+{
+  "kind": "independent_source_only_git_checkpoint",
+  "candidate_status": "not_adopted_not_runtime_tested",
+  "standalone_runnable": false,
+  "composition_with_prior_t03_or_ui_candidates": false,
+  "frozen_base_applied": false,
+  "save_migration": false,
+  "t03_complete": false,
+  "publication_scope": "These 14 byte-exact prepared source/evidence files and this independent checkpoint. No ZIP, video, README, release control, workflow or private player data included.",
+  "preparation_snapshot_note": "STATUS.md and packaged records describe preparation before this Git checkpoint. Their original bytes are preserved; their no-publication statements refer only to that preparation task.",
+  "starting_main": "83a285fd792445e850ce223a4ada6643cd4d1b26",
+  "starting_tree": "43661e2763b2ace7ea777a72120ca6090226ba7d",
+  "active_adopted_public_release": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+  "plan_url": "https://chatgpt.com/space/page_5d6b6711bbac8191a2bbaf758e03cd4f",
+  "plan_sequence_read": 86,
+  "original_candidate_zip": {
+    "bytes": 31300,
+    "sha256": "76ad1a022aef69b2dfd7805cfcfd997f472d63b6016523ed7156fa12e94aa9eb",
+    "uploaded_here": false,
+    "crc_and_all_14_member_byte_readback": "passed"
+  },
+  "original_manifest_sha256": "d5e65fe80a0449b770b194b102c50e61b958a71479f1bf12e50b5cc398504bc2",
+  "production_scope": "Only core/ai_gm_rebuilt/engine.gd changes: capture store_string boolean and get_error, close, then refuse before explicit rename on either reported failure.",
+  "source_static_checks_passed": 23,
+  "zero_fuzz_patch_reapplication": "exact_candidate_bytes",
+  "godot_parses": 0,
+  "godot_runs": 0,
+  "runtime_cases_prepared": 10,
+  "runtime_cases_executed": 0,
+  "local_base_source_lock": {
+    "sha256": "082235c6075572821390660c21d29463d88d8f475518d6ad591d34a5a8ba93a8",
+    "files_verified_now": 906
+  },
+  "local_base_authority_inputs": {
+    "sha256": "5a009fb5b5486c80f11327e27278a44780fac4689eeb4f00663d32ce32d51097",
+    "files_verified_now": 168
+  },
+  "apply_policy": "Apply only to a new disposable copy of the exact frozen restored base after the native memory guard is available. Never overwrite frozen base, adopted release, backup or real saves. Prior T03 identity and UI candidates remain separate; composition requires fresh identity pins, manifest and tests.",
+  "remaining_limits": [
+    "No late flush or close failure guarantee",
+    "No crash, power-loss or filesystem atomicity guarantee",
+    "No concurrency, shared temporary path or TOCTOU solution",
+    "Other envelope/arbitrary-path writers unchanged",
+    "Source hash advances runtime identity; existing strict load and distribution boundary remain; no old-save migration",
+    "Synthetic backend fault logic is not actual operating-system byte short-write evidence",
+    "Ten tests have never been Godot-parsed or run"
+  ],
+  "files": {
+    "MANIFEST.json": {
+      "bytes": 2428,
+      "sha256": "d5e65fe80a0449b770b194b102c50e61b958a71479f1bf12e50b5cc398504bc2",
+      "git_blob_sha": "5635214ae8a1b50b9acfaaf005a759950ce31849"
+    },
+    "OFFICIAL_API_NOTES.json": {
+      "bytes": 1865,
+      "sha256": "cdaa4ff195b2c4a55f729fd00800eea77b956f200d00bcf3534549f04ebcca85",
+      "git_blob_sha": "d613c54b74dcce22c911be49fe657a77b48cb19b"
+    },
+    "PATCH_APPLICATION_CHECK.json": {
+      "bytes": 592,
+      "sha256": "77e3295b96f5ce536b4236e5b8ef700b1a6f50a2f48ffc966207d79662ccc865",
+      "git_blob_sha": "4aa6865615f18cba7a030f78979eb7038e4ae703"
+    },
+    "SOURCE_REVIEW.json": {
+      "bytes": 1301,
+      "sha256": "a94a54085041a8a0827d15bb29aaf3557b168ba190a5080814055571f20507a9",
+      "git_blob_sha": "66c1a4b8826e79d7e50e54fa4c7c4506e84e180f"
+    },
+    "STATIC_CHECKS.json": {
+      "bytes": 2885,
+      "sha256": "7b1ffde1ae3ef882b150691dec5981dc9287304c99e1c61d879a705ca808749c",
+      "git_blob_sha": "6992ad70395983397120ea101ace1c2f793c6c56"
+    },
+    "STATIC_CHECKS_initial_case_counter_failed.json": {
+      "bytes": 2634,
+      "sha256": "68df8ada475afeade4578ee5e8ebd997dea4a8b339713d860e11cd6b04e94a33",
+      "git_blob_sha": "8c7504ec4df44687e4020bba1ebbda314bfeedf4"
+    },
+    "STATIC_CHECK_RUN.log": {
+      "bytes": 2885,
+      "sha256": "7b1ffde1ae3ef882b150691dec5981dc9287304c99e1c61d879a705ca808749c",
+      "git_blob_sha": "6992ad70395983397120ea101ace1c2f793c6c56"
+    },
+    "STATUS.md": {
+      "bytes": 7756,
+      "sha256": "9f141e24ef85547e340406c533e0954ef87e01c83664d8515b8aad3abe156483",
+      "git_blob_sha": "f1c0e335a0e583d09a746343e866d8f8f4849522"
+    },
+    "T03_RAW_SHORT_WRITE.patch": {
+      "bytes": 878,
+      "sha256": "1e64e82cf9cdf86b1ebe269a9b9051791d3f30dc3b198b5665ac9926be9d15f2",
+      "git_blob_sha": "79f9023b2aaad2ca43f1a8feb5397d7845d0f78c"
+    },
+    "overlay/core/ai_gm_rebuilt/engine.gd": {
+      "bytes": 51047,
+      "sha256": "cb707722b1d28534615257cb9873d1c66ce9924ac2ee5ebdc2d1d2a46b09fdc3",
+      "git_blob_sha": "0b9264c53aa7ee84c3e6e8cefb64515eefa11f87"
+    },
+    "overlay/tests/t03_raw_short_write/io_probe.gd": {
+      "bytes": 1609,
+      "sha256": "c604a6be15d323c12b6efd45856c27d35997564c9d4d7755764be9e8bb0e5678",
+      "git_blob_sha": "11d76a32c3849e0d69f29bd09f612f2dec483087"
+    },
+    "overlay/tests/t03_raw_short_write/test_save_file.gd": {
+      "bytes": 8536,
+      "sha256": "30c1a74de27986d1965c993b6f362bea340c372d42af83c7b9e86db7d791dd6a",
+      "git_blob_sha": "f57fc24fe5d3289705870cce44dc1fd5a0383a4e"
+    },
+    "verify_static.py": {
+      "bytes": 6845,
+      "sha256": "42a963ed37e4aae750027638d6abf0b02cb7e2ef96c6518163244de58d5d441c",
+      "git_blob_sha": "2d7b7c7a26b35bbd3740ce24055cc28d1d65703c"
+    },
+    "PACKAGE_MANIFEST.json": {
+      "bytes": 2020,
+      "sha256": "f4f284c9651b61afaaa53edd7bc40adc62e90710a0edbb80601246765d78dd2e",
+      "git_blob_sha": "6c0deb2b083d16e6e1496bb42ec3ed5be1128274"
+    }
+  }
+}

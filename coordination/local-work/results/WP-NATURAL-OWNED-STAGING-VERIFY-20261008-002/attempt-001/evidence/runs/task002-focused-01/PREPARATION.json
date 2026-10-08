@@ -1,0 +1,13 @@
+{
+  "run_id": "task002-focused-01",
+  "kind": "focused",
+  "recipe": "",
+  "project": "E:\\WordsAndPerils-Tasks\\local-queue-bootstrap-20261008\\run-01a1b40-02\\runs\\task002-focused-01\\project",
+  "suite": "tests/t03_natural_owned_staging/test_focused_write_result.gd",
+  "suite_sha256": "122c7ca5c33ec324177b56d3a3f01a4cc53373ac7d1608ebf39406fd98d7baaf",
+  "entry_sha256": "76dfe229ec273b61e752a3e87fdb7e88f962348b02d777f6ae612516f1052358",
+  "source_files": 2571,
+  "minimal_no_candidate_probe": false,
+  "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+  "production_edits": false
+}

@@ -1,0 +1,182 @@
+{
+  "intake_commit": "9eea0b017400921780bd55fc99366455a4e37de8",
+  "base_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+  "task_sha256": "49032c299667885b29120af6f7e37685272f8098302be457aaba91e314e9425a",
+  "schema_valid": true,
+  "all_17_verified": true,
+  "inputs": [
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/MANIFEST.json",
+      "git_blob_sha": "42016755be73157096e276004e06a348e301ac62",
+      "sha256": "1bcb2a01c9c24ade031bd7b670d2f00c0c104c76e812914df1150df1f3be7810",
+      "bytes": 3923,
+      "role": "Immutable cloud owned-staging candidate manifest; unparsed/unrun/unadopted provenance, not runtime results.",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/BASELINE_MANIFEST.json",
+      "git_blob_sha": "805418ccc7d7ae39c8798c7df4e14e57a3a51d3f",
+      "sha256": "452767dd49a51b93c17f398cacbb3bd157e4b1a2936853a08c6eae1525e659dd",
+      "bytes": 1056,
+      "role": "Immutable previous independently tested write-bool source/test provenance; do not replace the old manifest.",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/PRIMITIVE_PROOF.json",
+      "git_blob_sha": "8011d440113224de686a679d74d48ba2aaf156bd",
+      "sha256": "e9b87b93b04b3ee6cff51a9bd78af138ad0ae33790e81c80f5247401feab9416",
+      "bytes": 2786,
+      "role": "Official tag source contract only; does not bind the installed target binary.",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/SOURCE_BINARY_BINDING.json",
+      "git_blob_sha": "02f0d20738cc6dc4b189f9e7b3cb999d960a368c",
+      "sha256": "d2eebfcc074d6a718febeed529264bba89e8065211afc6862a210a23aa80b0de",
+      "bytes": 614,
+      "role": "Preserve actual 422 source lookup and not-established binary/source binding.",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/view/generated_natural_coast_basic/adapter.gd",
+      "git_blob_sha": "2a152b3dee8d6f1c6f400073dab3605786de1f04",
+      "sha256": "7e11cf5a3679fdc3bee4aa4264a11ed49cdadb2744136c0ffb4bae2ee47fe345",
+      "bytes": 25320,
+      "role": "Exact cloud production candidate to verify without editing.",
+      "project_path": "view/generated_natural_coast_basic/adapter.gd",
+      "verified": true
+    },
+    {
+      "repository_path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/RESULT.json",
+      "git_blob_sha": "8fee331aba51fa5b6a79d997f1e2d995d74cc53a",
+      "sha256": "3caf4fe445c2357c97290da7bdb9f0f51ec353661bd40ae3d0ae93da72edb0d4",
+      "bytes": 18404,
+      "role": "Remote predecessor reviewable terminal report only; does not prove local lock/ledger/processes released.",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/fake_adapter.gd",
+      "git_blob_sha": "a4312c658ec06bf7d26994bcf408f37dcf787b95",
+      "sha256": "0d35fe31e80b41faf3ec970936bf537e6f4d7df7faeba2c43b1da6e4c791c80a",
+      "bytes": 1292,
+      "role": "Exact cloud candidate test source; no old pass grade transfers.",
+      "project_path": "tests/t03_natural_owned_staging/fake_adapter.gd",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/io_probe.gd",
+      "git_blob_sha": "dfc07c8809331954bf1ec988279755665f2547ae",
+      "sha256": "370c6bab323d01b778ef65955aae73f83006f128b9078e7e8da535d7b05c5aa4",
+      "bytes": 4748,
+      "role": "Exact cloud candidate test source; no old pass grade transfers.",
+      "project_path": "tests/t03_natural_owned_staging/io_probe.gd",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/test_cleanup_diagnostic.gd",
+      "git_blob_sha": "4793009dc20ecee3b0dfb887f85adbe6f601dfe9",
+      "sha256": "6cbb794d684746ed6d4a2d607f4935c9a9ff88abe7f1f09f60e0b86add2782c7",
+      "bytes": 318,
+      "role": "Exact cloud candidate test source; no old pass grade transfers.",
+      "project_path": "tests/t03_natural_owned_staging/test_cleanup_diagnostic.gd",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/test_focused_write_result.gd",
+      "git_blob_sha": "1ea897db17cebb7b023190dc2e82821460089fc8",
+      "sha256": "122c7ca5c33ec324177b56d3a3f01a4cc53373ac7d1608ebf39406fd98d7baaf",
+      "bytes": 8180,
+      "role": "Exact cloud candidate test source; no old pass grade transfers.",
+      "project_path": "tests/t03_natural_owned_staging/test_focused_write_result.gd",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/test_mkdir_semantics_probe.gd",
+      "git_blob_sha": "4e1f770f53f08da40586732fee4c880c6234f501",
+      "sha256": "76a2c1d21771992fa40e8fbe339ca74396414b51eb625a577fc7c1609ca88dbb",
+      "bytes": 3106,
+      "role": "Exact cloud candidate test source; no old pass grade transfers.",
+      "project_path": "tests/t03_natural_owned_staging/test_mkdir_semantics_probe.gd",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/test_owned_staging.gd",
+      "git_blob_sha": "2e06c097df5a76ecf2d00b419cdd6aaa7ccce589",
+      "sha256": "464a8bd4b068bdc2cdd754714554efdfac870d1430e8e2350d52e09f7a3477b7",
+      "bytes": 9707,
+      "role": "Exact cloud candidate test source; no old pass grade transfers.",
+      "project_path": "tests/t03_natural_owned_staging/test_owned_staging.gd",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1-test-adaptation/MANIFEST.json",
+      "git_blob_sha": "6f8f3159a519e38f817aa39a792a84531c37fab1",
+      "sha256": "2ffa96256741f55cb038900a5642ceb1e4e580fa7f84ce2e935fde8ad445f923",
+      "bytes": 2412,
+      "role": "Separate immutable test-only 170-suite adaptation and provenance; unparsed/unrun, does not alter production or transfer old pass grades.",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1-test-adaptation/STATIC_CHECK_RECEIPT.json",
+      "git_blob_sha": "3596d4be4fda5e8db5a238edcd636692aba41c04",
+      "sha256": "007635bd0761153c48857b58ac075a0ac7a522250dc8f1524fabfaf9eaa3d5ce",
+      "bytes": 1579,
+      "role": "Separate immutable test-only 170-suite adaptation and provenance; unparsed/unrun, does not alter production or transfer old pass grades.",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1-test-adaptation/SUMMARY.txt",
+      "git_blob_sha": "053cb10864bb2759ee218814c54d53dc2e8d7ab7",
+      "sha256": "9d4bf4eb8444850c937d6594c1bba03fcb64f490f99a15117081519ef5f7c489",
+      "bytes": 1402,
+      "role": "Separate immutable test-only 170-suite adaptation and provenance; unparsed/unrun, does not alter production or transfer old pass grades.",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1-test-adaptation/TEST_ONLY_ADAPTATION.patch",
+      "git_blob_sha": "2e077b24aaaa705b1be0f9af42463536032d3d47",
+      "sha256": "3572bdeb3292bd6b9a32ad097182e08a6d63a3c7981041854d7ccd22191c452b",
+      "bytes": 2871,
+      "role": "Separate immutable test-only 170-suite adaptation and provenance; unparsed/unrun, does not alter production or transfer old pass grades.",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1-test-adaptation/overlay/tests/natural_coast_basic/test_adapter.gd",
+      "git_blob_sha": "72e490c53165d773d0993b01723ad243bad595cc",
+      "sha256": "ae391e16f204575beef057c245430dc8a830e4b9611f34683988ee42497052f8",
+      "bytes": 38896,
+      "role": "Separate immutable test-only 170-suite adaptation and provenance; unparsed/unrun, does not alter production or transfer old pass grades.",
+      "project_path": "tests/natural_coast_basic/test_adapter.gd",
+      "verified": true
+    }
+  ],
+  "guard": [
+    {
+      "name": "WindowsGuard.cs",
+      "sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+      "verified": true
+    },
+    {
+      "name": "Invoke-WindowsGuard.ps1",
+      "sha256": "f831a84e71f692fc851945b001cfc98092b7049fb3b48d0f5099fa49e016c5f8",
+      "verified": true
+    },
+    {
+      "name": "Test-WindowsGuard.ps1",
+      "sha256": "9393cb10524439cc6fdbd5d0ab7df276452b1f749cc4ae6b6c65a91aabd48e48",
+      "verified": true
+    },
+    {
+      "name": "Test-OutputGuard.ps1",
+      "sha256": "71647a58cfbed0259f4f6634e433a5023edb8845f2e7510402bf7c7db1502110",
+      "verified": true
+    },
+    {
+      "name": "Test-TerminalGuard.ps1",
+      "sha256": "d862e1da8048cb79b3918a485c048a01fe4176e2394daf3783933f03e86cfe32",
+      "verified": true
+    }
+  ],
+  "review_sha256": "f212bebebbe0f2fb3e2b72aa345ea6af19abf005547be0ca45826f45950f7897",
+  "production_change_permission": []
+}

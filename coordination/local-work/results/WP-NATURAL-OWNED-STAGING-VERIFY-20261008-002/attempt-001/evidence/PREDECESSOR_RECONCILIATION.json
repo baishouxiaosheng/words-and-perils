@@ -1,0 +1,13 @@
+{
+  "old_task": "WP-NATURAL-SAVE-BOOL-20261008-001",
+  "status": "reviewable",
+  "terminal_ledger_verified": true,
+  "old_lock_currently_free_before_own_acquisition": true,
+  "old_lock_owner_pid": 68284,
+  "old_owner_currently_alive": false,
+  "old_cleanup_receipt": "Lock released / job, reader and host exits verified in prior local receipts",
+  "godot_found": false,
+  "unknown_process_argv_or_environment_read": false,
+  "old_claim_deleted": false,
+  "checked_utc": "2026-10-08T15:14:11.2551843Z"
+}

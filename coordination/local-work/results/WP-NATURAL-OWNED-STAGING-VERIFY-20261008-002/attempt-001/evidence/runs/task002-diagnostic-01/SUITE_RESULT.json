@@ -1,0 +1,20 @@
+{
+  "adapter_sha256": "7e11cf5a3679fdc3bee4aa4264a11ed49cdadb2744136c0ffb4bae2ee47fe345",
+  "assertions": 10,
+  "cases": [
+    {
+      "branch": "cleanup_failure_diagnostic",
+      "group": "owned_cleanup",
+      "native_error_must_remain_visible": true,
+      "strict_guard_pass_expected": false
+    }
+  ],
+  "diagnostic_only": true,
+  "failures": [],
+  "group_count": 1,
+  "ok": true,
+  "pid": 42764,
+  "scope": "candidate actual save_file via explicit test I/O seams; in-memory collision/cleanup, no OS concurrency/CAS/Windows/crash claim",
+  "script_sha256": "c803f8c0a76e2ccab45edda34a93b8a528ea514173be19f72bf36137e7280ab7",
+  "strict_guard_pass_expected": false
+}

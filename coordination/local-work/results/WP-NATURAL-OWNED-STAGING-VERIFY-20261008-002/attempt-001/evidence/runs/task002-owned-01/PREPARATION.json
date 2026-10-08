@@ -1,0 +1,13 @@
+{
+  "run_id": "task002-owned-01",
+  "kind": "owned",
+  "recipe": "",
+  "project": "E:\\WordsAndPerils-Tasks\\local-queue-bootstrap-20261008\\run-01a1b40-02\\runs\\task002-owned-01\\project",
+  "suite": "tests/t03_natural_owned_staging/test_owned_staging.gd",
+  "suite_sha256": "464a8bd4b068bdc2cdd754714554efdfac870d1430e8e2350d52e09f7a3477b7",
+  "entry_sha256": "da14ae27c15f975abfeae3d6babbc86e758a9ad8c5550e0555c2bd2a2b26acd2",
+  "source_files": 2571,
+  "minimal_no_candidate_probe": false,
+  "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+  "production_edits": false
+}

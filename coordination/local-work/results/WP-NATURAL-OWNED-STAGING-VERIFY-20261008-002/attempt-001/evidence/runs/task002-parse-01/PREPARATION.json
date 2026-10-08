@@ -1,0 +1,13 @@
+{
+  "run_id": "task002-parse-01",
+  "kind": "parse",
+  "recipe": "",
+  "project": "E:\\WordsAndPerils-Tasks\\local-queue-bootstrap-20261008\\run-01a1b40-02\\runs\\task002-parse-01\\project",
+  "suite": "",
+  "suite_sha256": null,
+  "entry_sha256": "6791232275b89d97887e66026c9c7af5197eb48e3cc208f724ed06ba9db53f2c",
+  "source_files": 2571,
+  "minimal_no_candidate_probe": false,
+  "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+  "production_edits": false
+}

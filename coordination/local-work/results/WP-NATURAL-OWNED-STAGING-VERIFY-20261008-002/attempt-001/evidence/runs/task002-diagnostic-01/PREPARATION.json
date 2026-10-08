@@ -1,0 +1,13 @@
+{
+  "run_id": "task002-diagnostic-01",
+  "kind": "diagnostic",
+  "recipe": "",
+  "project": "E:\\WordsAndPerils-Tasks\\local-queue-bootstrap-20261008\\run-01a1b40-02\\runs\\task002-diagnostic-01\\project",
+  "suite": "tests/t03_natural_owned_staging/test_cleanup_diagnostic.gd",
+  "suite_sha256": "6cbb794d684746ed6d4a2d607f4935c9a9ff88abe7f1f09f60e0b86add2782c7",
+  "entry_sha256": "c803f8c0a76e2ccab45edda34a93b8a528ea514173be19f72bf36137e7280ab7",
+  "source_files": 2571,
+  "minimal_no_candidate_probe": false,
+  "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+  "production_edits": false
+}

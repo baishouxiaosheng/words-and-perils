@@ -1,0 +1,52 @@
+{
+  "schema": "wordsandperils_windows_guard_acceptance/v3",
+  "status": "passed_small_native_guard_checks_godot_not_admitted",
+  "source_sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+  "wrapper_sha256": "f831a84e71f692fc851945b001cfc98092b7049fb3b48d0f5099fa49e016c5f8",
+  "assertion_count": 135,
+  "test_summaries": [
+    {
+      "path": "selftest-20261008T064347-d61232\\selftest-summary.json",
+      "sha256": "0152acbb350f674853482f0eef94aabb586a386ab0194f47babc1cac9503e115",
+      "status": "passed_windows_native_guard_selftests",
+      "assertion_count": 50,
+      "closed_utc": "2026-10-08T06:43:54.7675722Z"
+    },
+    {
+      "path": "output-selftest-20261008T064355-7d3a56\\output-selftest-summary.json",
+      "sha256": "2b81d5907607d303d9bfb8fc2d774d69d645a721d2857bd6f181e68e3a75408f",
+      "status": "passed_v2_tiny_output_selftests",
+      "assertion_count": 45,
+      "closed_utc": "2026-10-08T06:43:57.7211329Z"
+    },
+    {
+      "path": "terminal-selftest-20261008T064359-175456\\terminal-selftest-summary.json",
+      "sha256": "8c3e764075c8ac73faa3f7eaaadcda5ef3e943e778ad44393602fc01150d2c55",
+      "status": "passed_v3_terminal_boundary_selftests",
+      "assertion_count": 40,
+      "closed_utc": "2026-10-08T06:44:01.4067497Z"
+    }
+  ],
+  "production_wrapper": {
+    "output_limit_bytes": 65536,
+    "readers_finished": true,
+    "root_exit_code": 0,
+    "schema": "wordsandperils_windows_native_guard/v3",
+    "all_owned_exited": true,
+    "ended_utc": "2026-10-08T06:44:03.0653018Z",
+    "synthetic_fault": false,
+    "output_observed_bytes": 1,
+    "guard_exit_code": 0,
+    "job_empty": true,
+    "sha256": "64b2b93686e761d233ab8ff8ccb5175749d8b38dd04bd7adef891278f4beafc6",
+    "started_utc": "2026-10-08T06:44:02.8363384Z"
+  },
+  "remaining_scope": [
+    "Godot not executed",
+    "actual user:// not probed",
+    "memory exhaustion and allocation refusal stress not tested",
+    "PID reuse accounting and exceptional finally descendant waiting unchanged"
+  ],
+  "engine_started": false,
+  "closed_utc": "2026-10-08T06:56:38.0626375Z"
+}

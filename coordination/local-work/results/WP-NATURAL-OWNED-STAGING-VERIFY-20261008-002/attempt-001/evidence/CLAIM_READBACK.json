@@ -1,0 +1,14 @@
+{
+  "commit": "5c1400d105da60a84941b035024e85b0a38b8cd5",
+  "all_match": true,
+  "files": [
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/CLAIM.json",
+      "bytes": 556,
+      "sha256": "3ae572d7fa15dd193e6778e931ae218a61ab83a08af72a71aac9eec29b42f8ab",
+      "git_blob_sha": "8cbf2ed8dbffaf7eabc262f6a348dafdcd366b04",
+      "actual_http_bytes_match": true
+    }
+  ],
+  "verified_utc": "2026-10-08T15:14:47.325428+00:00"
+}

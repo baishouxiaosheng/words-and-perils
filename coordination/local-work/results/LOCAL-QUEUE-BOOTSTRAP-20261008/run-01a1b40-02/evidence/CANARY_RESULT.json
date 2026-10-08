@@ -1,0 +1,27 @@
+{
+  "kind": "non_game_worker_canary",
+  "version": "codex-cli 0.160.1",
+  "model": "gpt-6.1-sol",
+  "interface": "codex exec",
+  "ephemeral": true,
+  "requested_sandbox": "read-only",
+  "timeout_seconds": 120,
+  "launch_utc": "2026-10-08T15:10:18.7913769Z",
+  "game_execution": false,
+  "worker_file_modifications_authorized": false,
+  "credentials_created_or_exported": false,
+  "pid": 5128,
+  "process_created_utc": "2026-10-08T15:10:18.8220798Z",
+  "timed_out": false,
+  "exit_code": 0,
+  "process_exited": true,
+  "readers_finished": true,
+  "agent_messages": [
+    "NON_GAME_WORKER_CANARY_OK\n2026-10-08T15:10:18.7913769Z"
+  ],
+  "command_execution_items": 0,
+  "token_present": true,
+  "passed": true,
+  "handle_disposed": true,
+  "ended_utc": "2026-10-08T15:10:27.6323333Z"
+}

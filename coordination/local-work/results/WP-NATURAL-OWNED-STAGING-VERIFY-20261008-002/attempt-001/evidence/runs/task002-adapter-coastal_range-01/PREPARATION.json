@@ -1,0 +1,13 @@
+{
+  "run_id": "task002-adapter-coastal_range-01",
+  "kind": "adapter",
+  "recipe": "coastal_range",
+  "project": "E:\\WordsAndPerils-Tasks\\local-queue-bootstrap-20261008\\run-01a1b40-02\\runs\\task002-adapter-coastal_range-01\\project",
+  "suite": "tests/natural_coast_basic/test_adapter.gd",
+  "suite_sha256": "ae391e16f204575beef057c245430dc8a830e4b9611f34683988ee42497052f8",
+  "entry_sha256": "8ac7ef50e11ddf1cf6d6605995a3478488af92f7108cfd6682d1fdb357b270fe",
+  "source_files": 2571,
+  "minimal_no_candidate_probe": false,
+  "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+  "production_edits": false
+}

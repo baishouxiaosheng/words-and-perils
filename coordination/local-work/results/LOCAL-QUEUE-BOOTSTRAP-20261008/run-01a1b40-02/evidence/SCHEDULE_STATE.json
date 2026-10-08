@@ -1,0 +1,19 @@
+{
+  "id": "words-and-perils-github",
+  "type": "native thread heartbeat",
+  "interval_minutes": 5,
+  "status": "ACTIVE",
+  "target_thread": "01a11b40-22df-7ec2-9731-f1b27c005303",
+  "persisted_config_verified": true,
+  "persisted_config_sha256": "2899fb41e16caeedbe1225d05c8731f0411bab597f6065a5226e66d646eab2a7",
+  "native_post_original_turn_run_verified": false,
+  "automation_enabled": false,
+  "cli_version": "codex-cli 0.160.1",
+  "canary_worker_actually_started": true,
+  "scheduled_game_writer_started": false,
+  "requires": "Computer awake and Codex desktop app running",
+  "new_services_installed": false,
+  "new_keys_created": false,
+  "security_settings_modified": false,
+  "official_reference": "https://learn.chatgpt.com/docs/automations?surface=app"
+}

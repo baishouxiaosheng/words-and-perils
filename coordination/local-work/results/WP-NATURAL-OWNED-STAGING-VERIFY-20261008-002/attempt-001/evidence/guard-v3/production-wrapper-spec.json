@@ -1,0 +1,21 @@
+{
+  "executable": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "arguments": [
+    "-NoLogo",
+    "-NoProfile",
+    "-NonInteractive",
+    "-Command",
+    "[Console]::Out.Write('P');exit 0"
+  ],
+  "working_directory": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\windows-guard-v3",
+  "isolated_data_root": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\windows-guard-v3\\production-wrapper-data",
+  "profile": "full",
+  "timeout_seconds": 10,
+  "log_path": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\windows-guard-v3\\production-wrapper-result.json",
+  "self_test": true,
+  "fault_mode": "terminal_unreadable",
+  "output_limit_bytes": 65537,
+  "SelfTest": true,
+  "FaultMode": "terminal_unreadable",
+  "OutputLimitBytes": 65537
+}

@@ -1,0 +1,14 @@
+{
+  "commit": "87612d7d5fab41d1ab821539cb0fa0883a1faff0",
+  "all_match": true,
+  "files": [
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/ACK.json",
+      "bytes": 4571,
+      "sha256": "3aaa2df84952895b9d53eb0a5b1de81f6626ad86320e9c6f1151b0cea332474f",
+      "git_blob_sha": "d0fc61430eaef07abf96dc202712a1fadb233423",
+      "actual_http_bytes_match": true
+    }
+  ],
+  "verified_utc": "2026-10-08T15:14:52.285733+00:00"
+}

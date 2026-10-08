@@ -1,0 +1,42 @@
+{
+  "repository_id": 1403552519,
+  "owner_id": 128279531,
+  "current_authenticated_account_id": 128279531,
+  "permission": "admin",
+  "channel": "main:coordination/local-work/inbox/",
+  "authority": "Direct user instruction in current local chat, 2026-10-08; fixed designated bounded repository channel.",
+  "signature_or_all_collaborator_roster_required": false,
+  "author_text_used_as_authentication": false,
+  "source_channel_gate_passed": true,
+  "canary": {
+    "kind": "non_game_worker_canary",
+    "version": "codex-cli 0.160.1",
+    "model": "gpt-6.1-sol",
+    "interface": "codex exec",
+    "ephemeral": true,
+    "requested_sandbox": "read-only",
+    "timeout_seconds": 120,
+    "launch_utc": "2026-10-08T15:10:18.7913769Z",
+    "game_execution": false,
+    "worker_file_modifications_authorized": false,
+    "credentials_created_or_exported": false,
+    "pid": 5128,
+    "process_created_utc": "2026-10-08T15:10:18.8220798Z",
+    "timed_out": false,
+    "exit_code": 0,
+    "process_exited": true,
+    "readers_finished": true,
+    "agent_messages": [
+      "NON_GAME_WORKER_CANARY_OK\n2026-10-08T15:10:18.7913769Z"
+    ],
+    "command_execution_items": 0,
+    "token_present": true,
+    "passed": true,
+    "handle_disposed": true,
+    "ended_utc": "2026-10-08T15:10:27.6323333Z"
+  },
+  "automation_enabled": false,
+  "native_persistence_verified": false,
+  "protocol_sha256": "209cc25f649f2ce6635012d6d6f0bdcf09526ac68d1a7dcbf907e7398a73c05a",
+  "schema_sha256": "ad3a3cd71adae6c38817042e06322d0aaa0092080be3c15579ccffe1b1c8e85c"
+}

@@ -1,0 +1,19 @@
+{
+  "boundary": "engine_task002-adapter-plateau_hinterland-01",
+  "started_utc": "2026-10-08T15:32:25.750935+00:00",
+  "passed": true,
+  "local_stop": "E:\\WordsAndPerils-Tasks\\.local-work-state\\repo-1403552519\\STOP",
+  "local_lock_held": true,
+  "head": "87612d7d5fab41d1ab821539cb0fa0883a1faff0",
+  "remote_stop_absent": true,
+  "control": {
+    "protocol": "words-and-perils-local-work/v1",
+    "kind": "control",
+    "queue_enabled": true,
+    "stop": false,
+    "resume_generation": 0,
+    "reason": "First bounded Natural write-result task is prepared. This control does not prove local automation is enabled."
+  },
+  "claim_verified": true,
+  "ended_utc": "2026-10-08T15:32:27.139809+00:00"
+}

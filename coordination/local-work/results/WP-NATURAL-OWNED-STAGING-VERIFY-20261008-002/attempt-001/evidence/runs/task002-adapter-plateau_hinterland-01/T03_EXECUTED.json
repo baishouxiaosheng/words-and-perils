@@ -1,0 +1,54 @@
+[
+  {
+    "label": "T03 exact distribution envelope saves repeatedly",
+    "passed": true
+  },
+  {
+    "label": "T03 independent same-distribution entry can save",
+    "passed": true
+  },
+  {
+    "label": "T03 direct raw API preserves even its own adapter envelope",
+    "passed": true
+  },
+  {
+    "label": "T03 foreign-identity fixture preserves generator content hash",
+    "passed": true
+  },
+  {
+    "label": "T03 same-terrain foreign runtime envelope is preserved by both entries",
+    "passed": true
+  },
+  {
+    "label": "T03 direct raw API preserves foreign envelope and temp sentinel",
+    "passed": true
+  },
+  {
+    "label": "T03 exact envelope identity cannot hide a different engine world",
+    "passed": true
+  },
+  {
+    "label": "T03 malformed typed source refuses without a script exception",
+    "passed": true
+  },
+  {
+    "label": "T03 direct raw API retains same-distribution saves",
+    "passed": true
+  },
+  {
+    "label": "T03 direct raw API preserves foreign authority signature before any write",
+    "passed": true
+  },
+  {
+    "label": "T03 malformed raw JSON is preserved",
+    "passed": true
+  },
+  {
+    "label": "T03 direct raw load cannot redefine constructor-bound save authority",
+    "passed": true
+  },
+  {
+    "label": "T03 allowed and refused writes preserve live state, RNG, pending and receipts",
+    "passed": true
+  }
+]

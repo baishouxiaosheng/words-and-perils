@@ -1,0 +1,13 @@
+{
+  "redactions": [
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/run-01a1b40-02/evidence/CANARY.stdout.log",
+      "original_bytes": 1509,
+      "original_sha256": "7fe251a3a3177a42f64a6020b6fc6649da7685327eb92862cd265e2d53334e81",
+      "public_sha256": "f8b88754c32332d1ab69db294fa318271b826d029be8c21f6f48935493c434b0",
+      "only_change": "Private account component of Windows C Users path redacted; diagnostic content retained."
+    }
+  ],
+  "raw_private_logs_preserved_locally": true,
+  "secrets_exported": false
+}

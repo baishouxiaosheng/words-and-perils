@@ -1,0 +1,12 @@
+{
+  "host_pid": 73828,
+  "host_created_utc": "2026-10-08T15:26:54.5755162Z",
+  "utc": "2026-10-08T15:26:55.6815857Z",
+  "fresh_powershell": true,
+  "guard_compiled_per_run": true,
+  "guard_source_sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+  "engine_sha256": "ef90e929ba1a6a4322860285d97f40f4aa349c90329a91b0e8b55b8df0f4cb00",
+  "injections": false,
+  "profile": "small",
+  "unknown_processes_killed": false
+}

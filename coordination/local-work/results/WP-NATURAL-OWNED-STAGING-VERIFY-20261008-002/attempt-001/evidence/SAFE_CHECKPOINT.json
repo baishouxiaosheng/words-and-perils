@@ -1,0 +1,20 @@
+{
+  "task_id": "WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002",
+  "task_sha256": "49032c299667885b29120af6f7e37685272f8098302be457aaba91e314e9425a",
+  "status": "tests_complete_awaiting_artifact_and_result_readback",
+  "owner_run_id": "run-01a1b40-02",
+  "claim_commit": "5c1400d105da60a84941b035024e85b0a38b8cd5",
+  "ack_commit": "87612d7d5fab41d1ab821539cb0fa0883a1faff0",
+  "next_steps": [
+    "Publish phase A artifacts, read actual remote bytes",
+    "Publish phase B result referencing phase A, read bytes",
+    "Update terminal ledger and release owned lock",
+    "Wait for actual native post-original-turn scheduling verification"
+  ],
+  "automation_enabled": false,
+  "context": {
+    "used_percent": null,
+    "compaction": "unavailable"
+  },
+  "unknown_state_rerun_forbidden": true
+}

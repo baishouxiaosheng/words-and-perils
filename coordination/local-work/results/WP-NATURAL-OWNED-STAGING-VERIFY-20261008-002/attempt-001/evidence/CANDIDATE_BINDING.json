@@ -1,0 +1,11 @@
+{
+  "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+  "production_adapter_sha256": "7e11cf5a3679fdc3bee4aa4264a11ed49cdadb2744136c0ffb4bae2ee47fe345",
+  "original_source_files_verified": 2564,
+  "candidate_source_files": 2570,
+  "input_overlays_copied_byte_exact": true,
+  "production_source_edits": 0,
+  "candidate_adopted": false,
+  "original_project_godot_unchanged": true,
+  "old_task_rerun": false
+}

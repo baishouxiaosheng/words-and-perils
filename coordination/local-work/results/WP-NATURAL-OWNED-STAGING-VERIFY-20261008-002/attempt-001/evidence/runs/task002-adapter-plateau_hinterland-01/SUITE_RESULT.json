@@ -1,0 +1,10 @@
+{
+  "checks": 170,
+  "failures": [],
+  "ok": true,
+  "owned_pid": 77596,
+  "recipe": "plateau_hinterland",
+  "run_id": "task002-adapter-plateau_hinterland-01",
+  "script_sha256": "4358487e9024420b75edca69b87b1c87f6cfb44a9a0aa43cffe8ad4ded0c70c4",
+  "suite": "res://tests/t03_natural_owned_staging_runtime/_local_entry.gd"
+}

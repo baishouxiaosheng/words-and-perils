@@ -1,0 +1,23 @@
+{
+  "existing_executable": "E:\\WordsAndPerils-Test\\Godot\\4.6.3\\Godot_v4.6.3-stable_win64.exe",
+  "executable_sha256": "ef90e929ba1a6a4322860285d97f40f4aa349c90329a91b0e8b55b8df0f4cb00",
+  "historical_version_receipt_sha256": "bff3ea47412828cb114069eeb1056e16ea9613dc58c51d397963390bc908d12a",
+  "historical_version_stdout": "4.6.3.stable.official.7d41c59c4",
+  "historical_version_started_utc": "2026-10-08T10:25:58.5455030Z",
+  "version_check_rerun": false,
+  "mkdir_observed_version": {
+    "build": "official",
+    "hash": "7d41c59c457bd5a245092b4e7eb2d833e3b3f8c3",
+    "hex": 263683,
+    "major": 4,
+    "minor": 6,
+    "patch": 3,
+    "status": "stable",
+    "string": "4.6.3-stable (official)",
+    "timestamp": 0
+  },
+  "observed_runtime_matches_existing_receipt": true,
+  "source_binary_provenance_established": false,
+  "source_ref_lookup_historical_http_status": 422,
+  "official_tag_is_rationale_only": true
+}

@@ -1,0 +1,13 @@
+{
+  "run_id": "task002-mkdir-01",
+  "kind": "mkdir",
+  "recipe": "",
+  "project": "E:\\WordsAndPerils-Tasks\\local-queue-bootstrap-20261008\\run-01a1b40-02\\runs\\task002-mkdir-01\\project",
+  "suite": "tests/t03_natural_owned_staging/test_mkdir_semantics_probe.gd",
+  "suite_sha256": "76a2c1d21771992fa40e8fbe339ca74396414b51eb625a577fc7c1609ca88dbb",
+  "entry_sha256": "8b149452b1ed0504ab58410e8dfaf11e72a1ae84933c2b10ccff25ad3e443b2e",
+  "source_files": 3,
+  "minimal_no_candidate_probe": true,
+  "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+  "production_edits": false
+}

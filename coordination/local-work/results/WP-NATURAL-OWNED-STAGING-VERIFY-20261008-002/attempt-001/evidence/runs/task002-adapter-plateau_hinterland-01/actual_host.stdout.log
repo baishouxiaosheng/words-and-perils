@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "started": true,
+  "root_pid": 77596,
+  "guard_exit_code": 0,
+  "root_exit_code": 0,
+  "stop_reason": null,
+  "job_empty": true,
+  "all_recorded_handles_exited": true,
+  "engine_started": true
+}

@@ -1,0 +1,10 @@
+{
+  "url": "https://api.github.com/repos/godotengine/godot/commits/7d41c59c4",
+  "http_status": 422,
+  "error": "HTTP Error 422: Unprocessable Entity",
+  "body": "{\"message\":\"No commit found for SHA: 7d41c59c4\",\"documentation_url\":\"https://docs.github.com/rest/commits/commits#get-a-commit\",\"status\":\"422\"}",
+  "target_binary_version_receipt": "4.6.3.stable.official.7d41c59c4",
+  "tag_commit": "35e80b3a8822a9df9be390814b62f44c0a9c69e8",
+  "source_binary_binding": "not_established",
+  "required_before_engine_tests": "isolated mkdir semantic probe on existing target binary; do not replace engine"
+}

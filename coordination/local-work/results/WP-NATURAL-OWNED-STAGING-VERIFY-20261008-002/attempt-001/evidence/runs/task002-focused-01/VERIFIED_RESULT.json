@@ -1,0 +1,198 @@
+{
+  "run": "task002-focused-01",
+  "kind": "focused",
+  "recipe": "",
+  "strict_pass": true,
+  "expected_diagnostic_observed": false,
+  "accepted_stage": true,
+  "checks": null,
+  "assertions": 90,
+  "cases": [
+    {
+      "assertions": 15,
+      "calls": [
+        "open",
+        "store",
+        "flush",
+        "get_error",
+        "close"
+      ],
+      "case": "store_false_error_OK",
+      "counters": {
+        "closed": 1,
+        "error_reads": [
+          {
+            "after_flush": true,
+            "error": 0
+          }
+        ],
+        "opened": 1,
+        "read_closed": 0,
+        "read_opened": 0,
+        "renames": 0
+      },
+      "failure_code": "SAVE_FAILED",
+      "failure_simulation": "in-memory backend only",
+      "native_success": false,
+      "passed": true
+    },
+    {
+      "assertions": 15,
+      "calls": [
+        "open",
+        "store",
+        "flush",
+        "get_error",
+        "close"
+      ],
+      "case": "store_false_error_non_OK",
+      "counters": {
+        "closed": 1,
+        "error_reads": [
+          {
+            "after_flush": true,
+            "error": 13
+          }
+        ],
+        "opened": 1,
+        "read_closed": 0,
+        "read_opened": 0,
+        "renames": 0
+      },
+      "failure_code": "SAVE_FAILED",
+      "failure_simulation": "in-memory backend only",
+      "native_success": false,
+      "passed": true
+    },
+    {
+      "assertions": 15,
+      "calls": [
+        "open",
+        "store",
+        "flush",
+        "get_error",
+        "close"
+      ],
+      "case": "store_true_flush_observable_error",
+      "counters": {
+        "closed": 1,
+        "error_reads": [
+          {
+            "after_flush": true,
+            "error": 13
+          }
+        ],
+        "opened": 1,
+        "read_closed": 0,
+        "read_opened": 0,
+        "renames": 0
+      },
+      "failure_code": "SAVE_FAILED",
+      "failure_simulation": "in-memory backend only",
+      "native_success": false,
+      "passed": true
+    },
+    {
+      "assertions": 14,
+      "calls": [
+        "open"
+      ],
+      "case": "open_failure",
+      "counters": {
+        "closed": 0,
+        "error_reads": [],
+        "opened": 0,
+        "read_closed": 0,
+        "read_opened": 0,
+        "renames": 0
+      },
+      "failure_code": "SAVE_FAILED",
+      "failure_simulation": "in-memory backend only",
+      "native_success": false,
+      "passed": true
+    },
+    {
+      "assertions": 18,
+      "calls": [
+        "open",
+        "store",
+        "flush",
+        "get_error",
+        "close",
+        "rename"
+      ],
+      "case": "Unicode_UTF8_success",
+      "counters": {
+        "closed": 1,
+        "error_reads": [
+          {
+            "after_flush": true,
+            "error": 0
+          }
+        ],
+        "opened": 1,
+        "read_closed": 1,
+        "read_opened": 1,
+        "renames": 1
+      },
+      "failure_code": "",
+      "failure_simulation": "in-memory backend only",
+      "native_success": true,
+      "passed": true
+    }
+  ],
+  "t03_executed": 0,
+  "suite_failures": [],
+  "godot_pid": 41584,
+  "guard_host_pid": 77072,
+  "host_exit_code": 0,
+  "guard_exit_code": 0,
+  "godot_exit_code": 0,
+  "diagnostics": [],
+  "stderr_empty": true,
+  "job_empty": true,
+  "readers_finished": true,
+  "recorded_handles_exited": true,
+  "host_exited": true,
+  "isolation": {
+    "autoloads": [],
+    "globalized_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-focused-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+    "isolated": true,
+    "os_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-focused-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+    "run_id": "task002-focused-01"
+  },
+  "source_files_rehashed": 2571,
+  "source_mismatches": [],
+  "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+  "suite_sha256": "122c7ca5c33ec324177b56d3a3f01a4cc53373ac7d1608ebf39406fd98d7baaf",
+  "entry_sha256": "76dfe229ec273b61e752a3e87fdb7e88f962348b02d777f6ae612516f1052358",
+  "guard_result_sha256": "45a05626b216c9367809f0bce0b7dee8338d7712fbdd737f849735dd2c634b57",
+  "source_map_sha256": "07587ac5e77b09cc0f9f37641c2c0c4eef37044334cd6bcd80c74f224b00b7b7",
+  "started_utc": "2026-10-08T15:23:51.2273003Z",
+  "ended_utc": "2026-10-08T15:23:55.2014530Z",
+  "elapsed_seconds": 3.9741,
+  "job_peak_commit_bytes": 108851200,
+  "physical_peak_rss_measured": false,
+  "output_bytes": 4293,
+  "admission": {
+    "Allowed": true,
+    "Reason": "admitted",
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 7627997184,
+    "BudgetBytes": 8589934592,
+    "ReserveBytes": 536870912,
+    "AdditionalBytes": 1073741824,
+    "ProfileTimeoutSeconds": 120
+  },
+  "policy_restore": [
+    {
+      "path": "core/ai_gm_rebuilt/traversal_policy.gd",
+      "before_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+      "after_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+      "matches": true
+    }
+  ],
+  "version_observed_in_test": null,
+  "bound": true,
+  "prohibited_scope_run": false
+}

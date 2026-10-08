@@ -1,0 +1,8 @@
+{
+  "issues": [
+    "mkdir helper recipe placeholders initially changed unused COAST_PLAY environment key names; corrected before any candidate suite runs, original wrapper retained.",
+    "Local audit helper treated PowerShell Get-Process absent-owned-host exit 1 as a tool failure; host absence is expected. Corrected helper to return inspected identity or empty output with explicit exit 0. No guard/test assertions altered."
+  ],
+  "engine_reruns": 0,
+  "candidate_source_edits": 0
+}

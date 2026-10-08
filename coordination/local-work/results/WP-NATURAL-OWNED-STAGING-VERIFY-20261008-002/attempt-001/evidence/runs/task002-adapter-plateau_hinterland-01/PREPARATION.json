@@ -1,0 +1,13 @@
+{
+  "run_id": "task002-adapter-plateau_hinterland-01",
+  "kind": "adapter",
+  "recipe": "plateau_hinterland",
+  "project": "E:\\WordsAndPerils-Tasks\\local-queue-bootstrap-20261008\\run-01a1b40-02\\runs\\task002-adapter-plateau_hinterland-01\\project",
+  "suite": "tests/natural_coast_basic/test_adapter.gd",
+  "suite_sha256": "ae391e16f204575beef057c245430dc8a830e4b9611f34683988ee42497052f8",
+  "entry_sha256": "4358487e9024420b75edca69b87b1c87f6cfb44a9a0aa43cffe8ad4ded0c70c4",
+  "source_files": 2571,
+  "minimal_no_candidate_probe": false,
+  "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+  "production_edits": false
+}

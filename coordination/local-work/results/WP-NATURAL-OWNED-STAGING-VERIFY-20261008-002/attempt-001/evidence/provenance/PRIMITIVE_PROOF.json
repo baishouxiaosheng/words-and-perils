@@ -1,0 +1,71 @@
+{
+  "status": "official_source_contract_confirmed_not_runtime_verified",
+  "tag": "4.6.3-stable",
+  "commit": "35e80b3a8822a9df9be390814b62f44c0a9c69e8",
+  "wrapper": {
+    "path": "core/io/dir_access.cpp",
+    "lines": [
+      272,
+      275
+    ],
+    "contract": "make_dir_absolute directly returns make_dir; do not use recursive variant"
+  },
+  "windows": {
+    "path": "drivers/windows/dir_access_windows.cpp",
+    "lines": [
+      188,
+      215
+    ],
+    "contract": "OK only when CreateDirectoryW succeeds; ERROR_ALREADY_EXISTS and ERROR_ACCESS_DENIED both map to non-OK ERR_ALREADY_EXISTS; remaining failure ERR_CANT_CREATE"
+  },
+  "unix": {
+    "path": "drivers/unix/dir_access_unix.cpp",
+    "lines": [
+      320,
+      341
+    ],
+    "contract": "OK only when mkdir returns zero; EEXIST non-OK; remaining failure ERR_CANT_CREATE"
+  },
+  "rename_boundary": {
+    "path": "drivers/windows/dir_access_windows.cpp",
+    "lines": [
+      302,
+      310
+    ],
+    "contract": "existing target may be removed before MoveFileW failure; preserve owned recovery payload and directory on failed rename; no automatic rollback"
+  },
+  "scope": "staging allocation between participating calls only; not protection against external replacement of directories/links, target CAS or durability",
+  "runtime_binary_bound_to_source": false,
+  "source_files": [
+    {
+      "path": "core/io/dir_access.cpp",
+      "commit": "35e80b3a8822a9df9be390814b62f44c0a9c69e8",
+      "http_status": 200,
+      "git_blob": "fde1fbb796961fd659d973df4f31a57fc8b6380b",
+      "bytes": 22108,
+      "sha256": "03ee7d7b71c7ac1ec0ffdcc1d43091f6a056058d32228b6e25baccf352ced458",
+      "url": "https://github.com/godotengine/godot/blob/35e80b3a8822a9df9be390814b62f44c0a9c69e8/core/io/dir_access.cpp",
+      "readback_equal": true
+    },
+    {
+      "path": "drivers/windows/dir_access_windows.cpp",
+      "commit": "35e80b3a8822a9df9be390814b62f44c0a9c69e8",
+      "http_status": 200,
+      "git_blob": "73df578cf8262901e659811ee5a2e78ef4f0b5d3",
+      "bytes": 15933,
+      "sha256": "e209e4acc45d019329ed19963a2c8786d1595763524ddb502bbdfc0bc6d05750",
+      "url": "https://github.com/godotengine/godot/blob/35e80b3a8822a9df9be390814b62f44c0a9c69e8/drivers/windows/dir_access_windows.cpp",
+      "readback_equal": true
+    },
+    {
+      "path": "drivers/unix/dir_access_unix.cpp",
+      "commit": "35e80b3a8822a9df9be390814b62f44c0a9c69e8",
+      "http_status": 200,
+      "git_blob": "399157c1a08bee61c84f0a3110ea6cf01188a4c1",
+      "bytes": 18196,
+      "sha256": "549c1f5017d1b2cc9b922065e88ef5002aa13faacda8ef3d95838cfdd9d0cd05",
+      "url": "https://github.com/godotengine/godot/blob/35e80b3a8822a9df9be390814b62f44c0a9c69e8/drivers/unix/dir_access_unix.cpp",
+      "readback_equal": true
+    }
+  ]
+}

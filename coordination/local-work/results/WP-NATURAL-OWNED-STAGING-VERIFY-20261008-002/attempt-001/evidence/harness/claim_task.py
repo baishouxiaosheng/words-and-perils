@@ -1,0 +1,16 @@
+from queue_io import *
+assert load(R/'INPUT_VERIFICATION.json')['all_17_verified'] and load(R/'CANARY_RESULT.json')['passed']
+ledger=load(STATE/'LEDGER.json');assert TASK not in ledger['tasks'],'Known task: reconcile only'
+config={'repository':'baishouxiaosheng/words-and-perils','repo_id':1403552519,'owner_id':128279531,'branch':'main','inbox':'coordination/local-work/inbox/','local_stop':str(STATE/'STOP'),'protocol_sha256':PROTOCOL_SHA,'schema_sha256':SCHEMA_SHA,'source_authority':'Direct current local user designates authenticated owner-controlled repository channel. Full collaborator inventory/signature/branch protection not prerequisites.','allowed_scope':'Independent Raw or Natural save-integrity repairs and guarded focused verification; new candidates/nonsecret results only; no HUD/Main/UI/FPS/live AI/adoption/security/credentials/services.','task_id':TASK,'task_sha256':TASK_SHA,'source_base':'e8941c2235069a168d9b6d92a0e9e1a62acce296','owner_run_id':'run-01a1b40-02','automation_enabled':False,'native_post_turn_run_verified':False}
+put(STATE/'QUEUE_CONFIG.v2.json',config)
+h=gate('preclaim',claim=False)
+claim={'protocol':'words-and-perils-local-work/v1','kind':'claim','task_id':TASK,'task_sha256':TASK_SHA,'attempt_id':'attempt-001','owner_run_id':'run-01a1b40-02','owner_account_id':128279531,'intake_commit':h,'base_commit':config['source_base'],'execution_mode':'current_local_queue_writer','claimed_utc':now()}
+put(R/'CLAIM.json',claim)
+c=publish('CLAIM',[('coordination/local-work/results/'+TASK+'/CLAIM.json',R/'CLAIM.json')],h,'Claim exact owned-staging verification task with repository-wide local lock')
+ledger['tasks'][TASK]={'task_sha256':TASK_SHA,'owner_run_id':config['owner_run_id'],'attempt_id':'attempt-001','claim_commit':c,'status':'claimed','automation_enabled':False,'terminal_for_deduplication':False,'base_commit':config['source_base'],'intake_commit':h};put(STATE/'LEDGER.json',ledger)
+h=gate('ack')
+ack={'protocol':'words-and-perils-local-work/v1','kind':'ack','task_id':TASK,'task_sha256':TASK_SHA,'attempt_id':'attempt-001','intake_commit':claim['intake_commit'],'status':'acknowledged','automation_enabled':False,'summary':'Unique claim remote bytes verified. All 17 input rows, guard source, predecessor terminal ledger/released lock and current source channel verified. Non-game codex exec canary actually passed. This exact verification task now starts; native post-turn persistence not yet verified.','source_hashes':{x['repository_path']:x['sha256'] for x in load(R/'INPUT_VERIFICATION.json')['inputs']},'checks':[load(R/'PREDECESSOR_RECONCILIATION.json'),{'input_rows_verified':17,'claim_commit':c,'claim_actual_remote_bytes_match':True}], 'blockers':[],'context':{'used_percent':None,'compaction':'unavailable'},'candidate_adopted':False}
+put(R/'ACK.json',ack)
+a=publish('ACK',[('coordination/local-work/results/'+TASK+'/attempt-001/ACK.json',R/'ACK.json')],h,'Acknowledge verified owned-staging task inputs and start bounded local verification')
+ledger['tasks'][TASK].update(status='running',ack_commit=a);put(STATE/'LEDGER.json',ledger)
+print(json.dumps({'task':TASK,'claim_commit':c,'ack_commit':a,'remote_bytes_verified':True,'automation_enabled':False}))

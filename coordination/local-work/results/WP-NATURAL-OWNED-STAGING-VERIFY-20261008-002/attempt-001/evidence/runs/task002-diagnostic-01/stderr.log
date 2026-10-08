@@ -1,0 +1,6 @@
+ERROR: NATURAL_SAVE_STAGING_CLEANUP_FAILED: E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-diagnostic-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘/.words-and-perils-natural-stage-0101010101010101010101010101010101010101010101010101010101010101 (20)
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] save_file (res://view/generated_natural_coast_basic/adapter.gd:229)
+       [1] cleanup_diagnostic (res://tests/t03_natural_owned_staging/test_owned_staging.gd:114)
+       [2] _run (res://tests/t03_natural_owned_staging/test_owned_staging.gd:46)

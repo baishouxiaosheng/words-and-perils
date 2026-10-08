@@ -1,0 +1,10 @@
+{
+  "checks": 170,
+  "failures": [],
+  "ok": true,
+  "owned_pid": 50284,
+  "recipe": "coastal_range",
+  "run_id": "task002-adapter-coastal_range-01",
+  "script_sha256": "8ac7ef50e11ddf1cf6d6605995a3478488af92f7108cfd6682d1fdb357b270fe",
+  "suite": "res://tests/t03_natural_owned_staging_runtime/_local_entry.gd"
+}

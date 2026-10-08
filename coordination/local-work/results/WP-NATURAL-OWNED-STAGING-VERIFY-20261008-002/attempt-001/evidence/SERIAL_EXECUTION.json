@@ -1,0 +1,54 @@
+{
+  "engines_and_project_copies_serial_verified": true,
+  "runs": [
+    {
+      "run": "task002-mkdir-01",
+      "started_utc": "2026-10-08T15:16:27.6904785Z",
+      "ended_utc": "2026-10-08T15:16:28.0823430Z",
+      "project_created_after_previous_engine": true
+    },
+    {
+      "run": "task002-parse-01",
+      "started_utc": "2026-10-08T15:20:16.2800173Z",
+      "ended_utc": "2026-10-08T15:20:17.4366763Z",
+      "project_created_after_previous_engine": true
+    },
+    {
+      "run": "task002-focused-01",
+      "started_utc": "2026-10-08T15:23:51.2273003Z",
+      "ended_utc": "2026-10-08T15:23:55.2014530Z",
+      "project_created_after_previous_engine": true
+    },
+    {
+      "run": "task002-owned-01",
+      "started_utc": "2026-10-08T15:24:28.3834590Z",
+      "ended_utc": "2026-10-08T15:24:31.1443189Z",
+      "project_created_after_previous_engine": true
+    },
+    {
+      "run": "task002-compile-01",
+      "started_utc": "2026-10-08T15:25:48.3884898Z",
+      "ended_utc": "2026-10-08T15:25:49.6511487Z",
+      "project_created_after_previous_engine": true
+    },
+    {
+      "run": "task002-diagnostic-01",
+      "started_utc": "2026-10-08T15:26:56.3023478Z",
+      "ended_utc": "2026-10-08T15:26:58.8634970Z",
+      "project_created_after_previous_engine": true
+    },
+    {
+      "run": "task002-adapter-coastal_range-01",
+      "started_utc": "2026-10-08T15:28:05.7958720Z",
+      "ended_utc": "2026-10-08T15:28:43.2035311Z",
+      "project_created_after_previous_engine": true
+    },
+    {
+      "run": "task002-adapter-plateau_hinterland-01",
+      "started_utc": "2026-10-08T15:32:28.8930096Z",
+      "ended_utc": "2026-10-08T15:33:04.4815945Z",
+      "project_created_after_previous_engine": true
+    }
+  ],
+  "runtime_expected_cleanup_diagnostic_separate": true
+}

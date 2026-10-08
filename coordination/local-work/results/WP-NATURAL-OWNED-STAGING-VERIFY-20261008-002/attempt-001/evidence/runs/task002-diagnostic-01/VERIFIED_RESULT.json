@@ -1,0 +1,74 @@
+{
+  "run": "task002-diagnostic-01",
+  "kind": "diagnostic",
+  "recipe": "",
+  "strict_pass": false,
+  "expected_diagnostic_observed": true,
+  "accepted_stage": true,
+  "checks": null,
+  "assertions": 10,
+  "cases": [
+    {
+      "branch": "cleanup_failure_diagnostic",
+      "group": "owned_cleanup",
+      "native_error_must_remain_visible": true,
+      "strict_guard_pass_expected": false
+    }
+  ],
+  "t03_executed": 0,
+  "suite_failures": [],
+  "godot_pid": 42764,
+  "guard_host_pid": 73828,
+  "host_exit_code": 0,
+  "guard_exit_code": 0,
+  "godot_exit_code": 0,
+  "diagnostics": [
+    "ERROR: NATURAL_SAVE_STAGING_CLEANUP_FAILED: E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-diagnostic-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘/.words-and-perils-natural-stage-0101010101010101010101010101010101010101010101010101010101010101 (20)"
+  ],
+  "stderr_empty": false,
+  "job_empty": true,
+  "readers_finished": true,
+  "recorded_handles_exited": true,
+  "host_exited": true,
+  "isolation": {
+    "autoloads": [],
+    "globalized_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-diagnostic-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+    "isolated": true,
+    "os_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-diagnostic-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+    "run_id": "task002-diagnostic-01"
+  },
+  "source_files_rehashed": 2571,
+  "source_mismatches": [],
+  "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+  "suite_sha256": "6cbb794d684746ed6d4a2d607f4935c9a9ff88abe7f1f09f60e0b86add2782c7",
+  "entry_sha256": "c803f8c0a76e2ccab45edda34a93b8a528ea514173be19f72bf36137e7280ab7",
+  "guard_result_sha256": "b2a01e1a9a492e8d2695c5fdebac303391ccf35b565bb2009780384f602e0378",
+  "source_map_sha256": "8c643f8985d40ef0fdcedd5fec6eb33e088c0641d7495c1f6aa975b6eeff5fd0",
+  "started_utc": "2026-10-08T15:26:56.3023478Z",
+  "ended_utc": "2026-10-08T15:26:58.8634970Z",
+  "elapsed_seconds": 2.5611,
+  "job_peak_commit_bytes": 97865728,
+  "physical_peak_rss_measured": false,
+  "output_bytes": 1787,
+  "admission": {
+    "Allowed": true,
+    "Reason": "admitted",
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 7886757888,
+    "BudgetBytes": 8589934592,
+    "ReserveBytes": 536870912,
+    "AdditionalBytes": 1073741824,
+    "ProfileTimeoutSeconds": 120
+  },
+  "policy_restore": [
+    {
+      "path": "core/ai_gm_rebuilt/traversal_policy.gd",
+      "before_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+      "after_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+      "matches": true
+    }
+  ],
+  "version_observed_in_test": null,
+  "bound": true,
+  "prohibited_scope_run": false
+}

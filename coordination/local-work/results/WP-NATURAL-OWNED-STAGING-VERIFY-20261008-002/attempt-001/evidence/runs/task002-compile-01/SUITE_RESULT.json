@@ -1,0 +1,10 @@
+{
+  "checks": 4,
+  "failures": [],
+  "ok": true,
+  "owned_pid": 76016,
+  "recipe": "",
+  "run_id": "task002-compile-01",
+  "script_sha256": "45500a0c44af635ad22e014361bbda14b8c587b7db6d5b064b7d68b04d103529",
+  "suite": "res://tests/t03_natural_owned_staging_runtime/_local_entry.gd"
+}

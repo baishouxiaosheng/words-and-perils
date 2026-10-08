@@ -1,0 +1,17 @@
+[
+  {
+    "path": "project.godot",
+    "sha256": "96ce2924d308cd9d7e0f57f3efc89702f9e9bdb73afa1af750a077d35a5bfea3",
+    "bytes": 152
+  },
+  {
+    "path": "tests/t03_natural_owned_staging/test_mkdir_semantics_probe.gd",
+    "sha256": "76a2c1d21771992fa40e8fbe339ca74396414b51eb625a577fc7c1609ca88dbb",
+    "bytes": 3106
+  },
+  {
+    "path": "tests/t03_natural_owned_staging_runtime/_local_entry.gd",
+    "sha256": "8b149452b1ed0504ab58410e8dfaf11e72a1ae84933c2b10ccff25ad3e443b2e",
+    "bytes": 1369
+  }
+]

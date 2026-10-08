@@ -1,0 +1,25 @@
+{
+  "checks": 11,
+  "failures": [],
+  "mkdir_results": {
+    "cleanup_parent": 0,
+    "existing_directory": 32,
+    "existing_file": 32,
+    "first": 0
+  },
+  "ok": true,
+  "pid": 59244,
+  "scope": "isolated actual mkdir semantics only; not source/binary provenance, save concurrency, target replacement or durability",
+  "script_sha256": "8b149452b1ed0504ab58410e8dfaf11e72a1ae84933c2b10ccff25ad3e443b2e",
+  "version": {
+    "build": "official",
+    "hash": "7d41c59c457bd5a245092b4e7eb2d833e3b3f8c3",
+    "hex": 263683,
+    "major": 4,
+    "minor": 6,
+    "patch": 3,
+    "status": "stable",
+    "string": "4.6.3-stable (official)",
+    "timestamp": 0
+  }
+}

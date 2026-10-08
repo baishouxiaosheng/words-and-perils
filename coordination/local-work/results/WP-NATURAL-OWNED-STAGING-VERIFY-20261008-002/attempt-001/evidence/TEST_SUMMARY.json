@@ -1,0 +1,733 @@
+{
+  "task_id": "WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002",
+  "task_sha256": "49032c299667885b29120af6f7e37685272f8098302be457aaba91e314e9425a",
+  "base_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+  "new_actual_engine_runs": 8,
+  "strict_pass_stages": 7,
+  "expected_diagnostic_stages": 1,
+  "runs": [
+    {
+      "run": "task002-mkdir-01",
+      "kind": "mkdir",
+      "recipe": "",
+      "strict_pass": true,
+      "expected_diagnostic_observed": false,
+      "accepted_stage": true,
+      "checks": 11,
+      "assertions": null,
+      "cases": [],
+      "t03_executed": 0,
+      "suite_failures": [],
+      "godot_pid": 59244,
+      "guard_host_pid": 69860,
+      "host_exit_code": 0,
+      "guard_exit_code": 0,
+      "godot_exit_code": 0,
+      "diagnostics": [],
+      "stderr_empty": true,
+      "job_empty": true,
+      "readers_finished": true,
+      "recorded_handles_exited": true,
+      "host_exited": true,
+      "isolation": {
+        "autoloads": [],
+        "globalized_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-mkdir-01/data/appdata/Godot/app_userdata/WordsAndPerils Owned Mkdir Probe Task002",
+        "isolated": true,
+        "os_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-mkdir-01/data/appdata/Godot/app_userdata/WordsAndPerils Owned Mkdir Probe Task002",
+        "run_id": "task002-mkdir-01"
+      },
+      "source_files_rehashed": 3,
+      "source_mismatches": [],
+      "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+      "suite_sha256": "76a2c1d21771992fa40e8fbe339ca74396414b51eb625a577fc7c1609ca88dbb",
+      "entry_sha256": "8b149452b1ed0504ab58410e8dfaf11e72a1ae84933c2b10ccff25ad3e443b2e",
+      "guard_result_sha256": "9c82922f036244db8fd7a02e102e23f69a49eafe2c865bc7435b6a483a94a3cd",
+      "source_map_sha256": "11bfe6e4f9ff3feff22dd3dedd0ed311319a938c918856ac06ec8bc19ba70612",
+      "started_utc": "2026-10-08T15:16:27.6904785Z",
+      "ended_utc": "2026-10-08T15:16:28.0823430Z",
+      "elapsed_seconds": 0.3919,
+      "job_peak_commit_bytes": 39784448,
+      "physical_peak_rss_measured": false,
+      "output_bytes": 1101,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 8784551936,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "policy_restore": [],
+      "version_observed_in_test": {
+        "build": "official",
+        "hash": "7d41c59c457bd5a245092b4e7eb2d833e3b3f8c3",
+        "hex": 263683,
+        "major": 4,
+        "minor": 6,
+        "patch": 3,
+        "status": "stable",
+        "string": "4.6.3-stable (official)",
+        "timestamp": 0
+      },
+      "bound": true,
+      "prohibited_scope_run": false
+    },
+    {
+      "run": "task002-parse-01",
+      "kind": "parse",
+      "recipe": "",
+      "strict_pass": true,
+      "expected_diagnostic_observed": false,
+      "accepted_stage": true,
+      "checks": null,
+      "assertions": null,
+      "cases": [],
+      "t03_executed": 0,
+      "suite_failures": [],
+      "godot_pid": 78664,
+      "guard_host_pid": 8596,
+      "host_exit_code": 0,
+      "guard_exit_code": 0,
+      "godot_exit_code": 0,
+      "diagnostics": [],
+      "stderr_empty": true,
+      "job_empty": true,
+      "readers_finished": true,
+      "recorded_handles_exited": true,
+      "host_exited": true,
+      "isolation": {
+        "autoloads": [],
+        "globalized_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-parse-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+        "isolated": true,
+        "os_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-parse-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+        "run_id": "task002-parse-01"
+      },
+      "source_files_rehashed": 2571,
+      "source_mismatches": [],
+      "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+      "suite_sha256": null,
+      "entry_sha256": "6791232275b89d97887e66026c9c7af5197eb48e3cc208f724ed06ba9db53f2c",
+      "guard_result_sha256": "7035a261761bb43f6a73f5c39168d1d02ed88ce30d66073b05c69279f0472c5e",
+      "source_map_sha256": "f4e5b0a9a3cb82222575d4281597bf68d9d4f29e8196964cfb6bcbcfe5d342cc",
+      "started_utc": "2026-10-08T15:20:16.2800173Z",
+      "ended_utc": "2026-10-08T15:20:17.4366763Z",
+      "elapsed_seconds": 1.1566,
+      "job_peak_commit_bytes": 95678464,
+      "physical_peak_rss_measured": false,
+      "output_bytes": 707,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 7351955456,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "policy_restore": [
+        {
+          "path": "core/ai_gm_rebuilt/traversal_policy.gd",
+          "before_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+          "after_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+          "matches": true
+        }
+      ],
+      "version_observed_in_test": null,
+      "bound": true,
+      "prohibited_scope_run": false
+    },
+    {
+      "run": "task002-focused-01",
+      "kind": "focused",
+      "recipe": "",
+      "strict_pass": true,
+      "expected_diagnostic_observed": false,
+      "accepted_stage": true,
+      "checks": null,
+      "assertions": 90,
+      "cases": [
+        {
+          "assertions": 15,
+          "calls": [
+            "open",
+            "store",
+            "flush",
+            "get_error",
+            "close"
+          ],
+          "case": "store_false_error_OK",
+          "counters": {
+            "closed": 1,
+            "error_reads": [
+              {
+                "after_flush": true,
+                "error": 0
+              }
+            ],
+            "opened": 1,
+            "read_closed": 0,
+            "read_opened": 0,
+            "renames": 0
+          },
+          "failure_code": "SAVE_FAILED",
+          "failure_simulation": "in-memory backend only",
+          "native_success": false,
+          "passed": true
+        },
+        {
+          "assertions": 15,
+          "calls": [
+            "open",
+            "store",
+            "flush",
+            "get_error",
+            "close"
+          ],
+          "case": "store_false_error_non_OK",
+          "counters": {
+            "closed": 1,
+            "error_reads": [
+              {
+                "after_flush": true,
+                "error": 13
+              }
+            ],
+            "opened": 1,
+            "read_closed": 0,
+            "read_opened": 0,
+            "renames": 0
+          },
+          "failure_code": "SAVE_FAILED",
+          "failure_simulation": "in-memory backend only",
+          "native_success": false,
+          "passed": true
+        },
+        {
+          "assertions": 15,
+          "calls": [
+            "open",
+            "store",
+            "flush",
+            "get_error",
+            "close"
+          ],
+          "case": "store_true_flush_observable_error",
+          "counters": {
+            "closed": 1,
+            "error_reads": [
+              {
+                "after_flush": true,
+                "error": 13
+              }
+            ],
+            "opened": 1,
+            "read_closed": 0,
+            "read_opened": 0,
+            "renames": 0
+          },
+          "failure_code": "SAVE_FAILED",
+          "failure_simulation": "in-memory backend only",
+          "native_success": false,
+          "passed": true
+        },
+        {
+          "assertions": 14,
+          "calls": [
+            "open"
+          ],
+          "case": "open_failure",
+          "counters": {
+            "closed": 0,
+            "error_reads": [],
+            "opened": 0,
+            "read_closed": 0,
+            "read_opened": 0,
+            "renames": 0
+          },
+          "failure_code": "SAVE_FAILED",
+          "failure_simulation": "in-memory backend only",
+          "native_success": false,
+          "passed": true
+        },
+        {
+          "assertions": 18,
+          "calls": [
+            "open",
+            "store",
+            "flush",
+            "get_error",
+            "close",
+            "rename"
+          ],
+          "case": "Unicode_UTF8_success",
+          "counters": {
+            "closed": 1,
+            "error_reads": [
+              {
+                "after_flush": true,
+                "error": 0
+              }
+            ],
+            "opened": 1,
+            "read_closed": 1,
+            "read_opened": 1,
+            "renames": 1
+          },
+          "failure_code": "",
+          "failure_simulation": "in-memory backend only",
+          "native_success": true,
+          "passed": true
+        }
+      ],
+      "t03_executed": 0,
+      "suite_failures": [],
+      "godot_pid": 41584,
+      "guard_host_pid": 77072,
+      "host_exit_code": 0,
+      "guard_exit_code": 0,
+      "godot_exit_code": 0,
+      "diagnostics": [],
+      "stderr_empty": true,
+      "job_empty": true,
+      "readers_finished": true,
+      "recorded_handles_exited": true,
+      "host_exited": true,
+      "isolation": {
+        "autoloads": [],
+        "globalized_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-focused-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+        "isolated": true,
+        "os_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-focused-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+        "run_id": "task002-focused-01"
+      },
+      "source_files_rehashed": 2571,
+      "source_mismatches": [],
+      "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+      "suite_sha256": "122c7ca5c33ec324177b56d3a3f01a4cc53373ac7d1608ebf39406fd98d7baaf",
+      "entry_sha256": "76dfe229ec273b61e752a3e87fdb7e88f962348b02d777f6ae612516f1052358",
+      "guard_result_sha256": "45a05626b216c9367809f0bce0b7dee8338d7712fbdd737f849735dd2c634b57",
+      "source_map_sha256": "07587ac5e77b09cc0f9f37641c2c0c4eef37044334cd6bcd80c74f224b00b7b7",
+      "started_utc": "2026-10-08T15:23:51.2273003Z",
+      "ended_utc": "2026-10-08T15:23:55.2014530Z",
+      "elapsed_seconds": 3.9741,
+      "job_peak_commit_bytes": 108851200,
+      "physical_peak_rss_measured": false,
+      "output_bytes": 4293,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 7627997184,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "policy_restore": [
+        {
+          "path": "core/ai_gm_rebuilt/traversal_policy.gd",
+          "before_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+          "after_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+          "matches": true
+        }
+      ],
+      "version_observed_in_test": null,
+      "bound": true,
+      "prohibited_scope_run": false
+    },
+    {
+      "run": "task002-owned-01",
+      "kind": "owned",
+      "recipe": "",
+      "strict_pass": true,
+      "expected_diagnostic_observed": false,
+      "accepted_stage": true,
+      "checks": null,
+      "assertions": 49,
+      "cases": [
+        {
+          "group": "independent_ownership_collision",
+          "kind": "deterministic in-memory interleave; not OS concurrency",
+          "observed": {
+            "a_bytes_survived_b": true,
+            "b_saved_own_bytes": true,
+            "collision_did_not_claim": true,
+            "collision_did_not_write": true,
+            "collision_rejected": true,
+            "different_owned_directories": true,
+            "same_first_name": true
+          }
+        },
+        {
+          "group": "legacy_tmp_preserved",
+          "save_succeeded": true
+        },
+        {
+          "group": "legacy_tmp_preserved",
+          "save_succeeded": false
+        },
+        {
+          "branch": "pre_rename_failure",
+          "group": "owned_cleanup",
+          "settings": {
+            "open_failed": true
+          }
+        },
+        {
+          "branch": "pre_rename_failure",
+          "group": "owned_cleanup",
+          "settings": {
+            "stored": false,
+            "write_error": 0
+          }
+        },
+        {
+          "branch": "pre_rename_failure",
+          "group": "owned_cleanup",
+          "settings": {
+            "readback_corrupt": true
+          }
+        },
+        {
+          "branch": "rename_failure_payload_retained",
+          "group": "owned_cleanup",
+          "kind": "simulated backend removes target; not native Windows proof"
+        },
+        {
+          "branch": "successful_commit_cleanup",
+          "group": "owned_cleanup"
+        }
+      ],
+      "t03_executed": 0,
+      "suite_failures": [],
+      "godot_pid": 31900,
+      "guard_host_pid": 54600,
+      "host_exit_code": 0,
+      "guard_exit_code": 0,
+      "godot_exit_code": 0,
+      "diagnostics": [],
+      "stderr_empty": true,
+      "job_empty": true,
+      "readers_finished": true,
+      "recorded_handles_exited": true,
+      "host_exited": true,
+      "isolation": {
+        "autoloads": [],
+        "globalized_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-owned-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+        "isolated": true,
+        "os_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-owned-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+        "run_id": "task002-owned-01"
+      },
+      "source_files_rehashed": 2571,
+      "source_mismatches": [],
+      "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+      "suite_sha256": "464a8bd4b068bdc2cdd754714554efdfac870d1430e8e2350d52e09f7a3477b7",
+      "entry_sha256": "da14ae27c15f975abfeae3d6babbc86e758a9ad8c5550e0555c2bd2a2b26acd2",
+      "guard_result_sha256": "59707701baaa1027775bb3be882fdc171af179318416281398556eecf1b00d53",
+      "source_map_sha256": "37b10e1cfb8e76e91c6c82cb5baaa50b7b704ff802df6135c53df363ebd97dcb",
+      "started_utc": "2026-10-08T15:24:28.3834590Z",
+      "ended_utc": "2026-10-08T15:24:31.1443189Z",
+      "elapsed_seconds": 2.7608,
+      "job_peak_commit_bytes": 97595392,
+      "physical_peak_rss_measured": false,
+      "output_bytes": 1874,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 7991218176,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "policy_restore": [
+        {
+          "path": "core/ai_gm_rebuilt/traversal_policy.gd",
+          "before_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+          "after_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+          "matches": true
+        }
+      ],
+      "version_observed_in_test": null,
+      "bound": true,
+      "prohibited_scope_run": false
+    },
+    {
+      "run": "task002-compile-01",
+      "kind": "compile",
+      "recipe": "",
+      "strict_pass": true,
+      "expected_diagnostic_observed": false,
+      "accepted_stage": true,
+      "checks": 4,
+      "assertions": null,
+      "cases": [],
+      "t03_executed": 0,
+      "suite_failures": [],
+      "godot_pid": 76016,
+      "guard_host_pid": 58784,
+      "host_exit_code": 0,
+      "guard_exit_code": 0,
+      "godot_exit_code": 0,
+      "diagnostics": [],
+      "stderr_empty": true,
+      "job_empty": true,
+      "readers_finished": true,
+      "recorded_handles_exited": true,
+      "host_exited": true,
+      "isolation": {
+        "autoloads": [],
+        "globalized_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-compile-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+        "isolated": true,
+        "os_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-compile-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+        "run_id": "task002-compile-01"
+      },
+      "source_files_rehashed": 2571,
+      "source_mismatches": [],
+      "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+      "suite_sha256": "59fd844ef8fa005f4e01049505cf9380d594eb0b01665838aeef82f772c8a350",
+      "entry_sha256": "45500a0c44af635ad22e014361bbda14b8c587b7db6d5b064b7d68b04d103529",
+      "guard_result_sha256": "4e725c22377757924c477582f6777077fffb0f9ef355867eb598888d06ebbd7c",
+      "source_map_sha256": "06d4f9824e73c91a2fb37b1cf1fdf96bba896a778deea2a3a55f28d06a62eecf",
+      "started_utc": "2026-10-08T15:25:48.3884898Z",
+      "ended_utc": "2026-10-08T15:25:49.6511487Z",
+      "elapsed_seconds": 1.2626,
+      "job_peak_commit_bytes": 98406400,
+      "physical_peak_rss_measured": false,
+      "output_bytes": 778,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 7848251392,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "policy_restore": [
+        {
+          "path": "core/ai_gm_rebuilt/traversal_policy.gd",
+          "before_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+          "after_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+          "matches": true
+        }
+      ],
+      "version_observed_in_test": null,
+      "bound": true,
+      "prohibited_scope_run": false
+    },
+    {
+      "run": "task002-diagnostic-01",
+      "kind": "diagnostic",
+      "recipe": "",
+      "strict_pass": false,
+      "expected_diagnostic_observed": true,
+      "accepted_stage": true,
+      "checks": null,
+      "assertions": 10,
+      "cases": [
+        {
+          "branch": "cleanup_failure_diagnostic",
+          "group": "owned_cleanup",
+          "native_error_must_remain_visible": true,
+          "strict_guard_pass_expected": false
+        }
+      ],
+      "t03_executed": 0,
+      "suite_failures": [],
+      "godot_pid": 42764,
+      "guard_host_pid": 73828,
+      "host_exit_code": 0,
+      "guard_exit_code": 0,
+      "godot_exit_code": 0,
+      "diagnostics": [
+        "ERROR: NATURAL_SAVE_STAGING_CLEANUP_FAILED: E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-diagnostic-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘/.words-and-perils-natural-stage-0101010101010101010101010101010101010101010101010101010101010101 (20)"
+      ],
+      "stderr_empty": false,
+      "job_empty": true,
+      "readers_finished": true,
+      "recorded_handles_exited": true,
+      "host_exited": true,
+      "isolation": {
+        "autoloads": [],
+        "globalized_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-diagnostic-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+        "isolated": true,
+        "os_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-diagnostic-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+        "run_id": "task002-diagnostic-01"
+      },
+      "source_files_rehashed": 2571,
+      "source_mismatches": [],
+      "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+      "suite_sha256": "6cbb794d684746ed6d4a2d607f4935c9a9ff88abe7f1f09f60e0b86add2782c7",
+      "entry_sha256": "c803f8c0a76e2ccab45edda34a93b8a528ea514173be19f72bf36137e7280ab7",
+      "guard_result_sha256": "b2a01e1a9a492e8d2695c5fdebac303391ccf35b565bb2009780384f602e0378",
+      "source_map_sha256": "8c643f8985d40ef0fdcedd5fec6eb33e088c0641d7495c1f6aa975b6eeff5fd0",
+      "started_utc": "2026-10-08T15:26:56.3023478Z",
+      "ended_utc": "2026-10-08T15:26:58.8634970Z",
+      "elapsed_seconds": 2.5611,
+      "job_peak_commit_bytes": 97865728,
+      "physical_peak_rss_measured": false,
+      "output_bytes": 1787,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 7886757888,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "policy_restore": [
+        {
+          "path": "core/ai_gm_rebuilt/traversal_policy.gd",
+          "before_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+          "after_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+          "matches": true
+        }
+      ],
+      "version_observed_in_test": null,
+      "bound": true,
+      "prohibited_scope_run": false
+    },
+    {
+      "run": "task002-adapter-coastal_range-01",
+      "kind": "adapter",
+      "recipe": "coastal_range",
+      "strict_pass": true,
+      "expected_diagnostic_observed": false,
+      "accepted_stage": true,
+      "checks": 170,
+      "assertions": null,
+      "cases": [],
+      "t03_executed": 13,
+      "suite_failures": [],
+      "godot_pid": 50284,
+      "guard_host_pid": 78196,
+      "host_exit_code": 0,
+      "guard_exit_code": 0,
+      "godot_exit_code": 0,
+      "diagnostics": [],
+      "stderr_empty": true,
+      "job_empty": true,
+      "readers_finished": true,
+      "recorded_handles_exited": true,
+      "host_exited": true,
+      "isolation": {
+        "autoloads": [],
+        "globalized_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-adapter-coastal_range-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+        "isolated": true,
+        "os_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-adapter-coastal_range-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+        "run_id": "task002-adapter-coastal_range-01"
+      },
+      "source_files_rehashed": 2571,
+      "source_mismatches": [],
+      "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+      "suite_sha256": "ae391e16f204575beef057c245430dc8a830e4b9611f34683988ee42497052f8",
+      "entry_sha256": "8ac7ef50e11ddf1cf6d6605995a3478488af92f7108cfd6682d1fdb357b270fe",
+      "guard_result_sha256": "d644545a9715ecdc1a2ded432d5c5cdd7c1a57cbf2574540700b8905145b69f8",
+      "source_map_sha256": "47bd4055925a554afcb698e4a2a8a74bc22a33e0e254598b6d8619add4cdf814",
+      "started_utc": "2026-10-08T15:28:05.7958720Z",
+      "ended_utc": "2026-10-08T15:28:43.2035311Z",
+      "elapsed_seconds": 37.4076,
+      "job_peak_commit_bytes": 189849600,
+      "physical_peak_rss_measured": false,
+      "output_bytes": 2158,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 7698513920,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "policy_restore": [
+        {
+          "path": "core/ai_gm_rebuilt/traversal_policy.gd",
+          "before_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+          "after_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+          "matches": true
+        }
+      ],
+      "version_observed_in_test": null,
+      "bound": true,
+      "prohibited_scope_run": false
+    },
+    {
+      "run": "task002-adapter-plateau_hinterland-01",
+      "kind": "adapter",
+      "recipe": "plateau_hinterland",
+      "strict_pass": true,
+      "expected_diagnostic_observed": false,
+      "accepted_stage": true,
+      "checks": 170,
+      "assertions": null,
+      "cases": [],
+      "t03_executed": 13,
+      "suite_failures": [],
+      "godot_pid": 77596,
+      "guard_host_pid": 49956,
+      "host_exit_code": 0,
+      "guard_exit_code": 0,
+      "godot_exit_code": 0,
+      "diagnostics": [],
+      "stderr_empty": true,
+      "job_empty": true,
+      "readers_finished": true,
+      "recorded_handles_exited": true,
+      "host_exited": true,
+      "isolation": {
+        "autoloads": [],
+        "globalized_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-adapter-plateau_hinterland-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+        "isolated": true,
+        "os_user_dir": "E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-adapter-plateau_hinterland-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+        "run_id": "task002-adapter-plateau_hinterland-01"
+      },
+      "source_files_rehashed": 2571,
+      "source_mismatches": [],
+      "source_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+      "suite_sha256": "ae391e16f204575beef057c245430dc8a830e4b9611f34683988ee42497052f8",
+      "entry_sha256": "4358487e9024420b75edca69b87b1c87f6cfb44a9a0aa43cffe8ad4ded0c70c4",
+      "guard_result_sha256": "570c839bdb69c862c458ff17f8a8e8916d659cc2377c523560cd52a757aae58a",
+      "source_map_sha256": "1303995abb436c6c1481a2473e7cc5346e7452bbe8d823d8d1b9926d715fe8c6",
+      "started_utc": "2026-10-08T15:32:28.8930096Z",
+      "ended_utc": "2026-10-08T15:33:04.4815945Z",
+      "elapsed_seconds": 35.5886,
+      "job_peak_commit_bytes": 188063744,
+      "physical_peak_rss_measured": false,
+      "output_bytes": 2183,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 7856738304,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "policy_restore": [
+        {
+          "path": "core/ai_gm_rebuilt/traversal_policy.gd",
+          "before_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+          "after_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+          "matches": true
+        }
+      ],
+      "version_observed_in_test": null,
+      "bound": true,
+      "prohibited_scope_run": false
+    }
+  ],
+  "old_task001_grades_reused": false,
+  "production_edits": 0,
+  "candidate_adopted": false,
+  "limits": "Cooperative owned staging only; memory interleave/failures plus isolated native mkdir/UTF8. Not real OS concurrency, target CAS/external replacement protection, native failed-rename target preservation, real disk short-write or power-loss durability. Source/binary provenance remains unestablished (historical HTTP422 retained).",
+  "automation_enabled": false
+}

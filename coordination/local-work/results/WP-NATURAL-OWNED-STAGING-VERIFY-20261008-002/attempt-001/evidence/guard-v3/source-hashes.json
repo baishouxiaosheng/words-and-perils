@@ -1,0 +1,27 @@
+[
+  {
+    "name": "WindowsGuard.cs",
+    "bytes": 28655,
+    "sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957"
+  },
+  {
+    "name": "Invoke-WindowsGuard.ps1",
+    "bytes": 1574,
+    "sha256": "f831a84e71f692fc851945b001cfc98092b7049fb3b48d0f5099fa49e016c5f8"
+  },
+  {
+    "name": "Test-WindowsGuard.ps1",
+    "bytes": 11313,
+    "sha256": "9393cb10524439cc6fdbd5d0ab7df276452b1f749cc4ae6b6c65a91aabd48e48"
+  },
+  {
+    "name": "Test-OutputGuard.ps1",
+    "bytes": 7901,
+    "sha256": "71647a58cfbed0259f4f6634e433a5023edb8845f2e7510402bf7c7db1502110"
+  },
+  {
+    "name": "Test-TerminalGuard.ps1",
+    "bytes": 7827,
+    "sha256": "d862e1da8048cb79b3918a485c048a01fe4176e2394daf3783933f03e86cfe32"
+  }
+]

@@ -1,0 +1,4 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+LOCAL_SUITE_ISOLATION {"autoloads":[],"globalized_user_dir":"E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-compile-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘","isolated":true,"os_user_dir":"E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-compile-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘","run_id":"task002-compile-01"}
+NATURAL_COAST_BASIC {"checks":4,"failures":[],"ok":true,"owned_pid":76016,"recipe":"","run_id":"task002-compile-01","script_sha256":"45500a0c44af635ad22e014361bbda14b8c587b7db6d5b064b7d68b04d103529","suite":"res://tests/t03_natural_owned_staging_runtime/_local_entry.gd"}

@@ -1,0 +1,15 @@
+{
+  "functional_worker_canary_passed": true,
+  "strict_diagnostics_clean": false,
+  "raw_stdout": "CANARY.stdout.log",
+  "raw_stderr": "CANARY.stderr.log",
+  "startup_warnings_and_errors": [
+    "Unrecognized preexisting config fields/features",
+    "PowerShell shell snapshot unsupported",
+    "Unrelated Figma MCP startup AuthRequired/transport closed"
+  ],
+  "agent_tool_commands": 0,
+  "canary_rerun": false,
+  "credentials_or_security_modified": false,
+  "public_raw_log_policy": "Keep all diagnostic content; redact only private C Users account path in public copy; preserve original raw file size and hash in public manifest"
+}

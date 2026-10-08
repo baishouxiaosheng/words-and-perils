@@ -1,0 +1,268 @@
+{
+  "Schema": "wordsandperils_windows_native_guard/v3",
+  "Status": "completed",
+  "StopReason": null,
+  "ErrorOperation": null,
+  "StartedUtc": "2026-10-08T15:20:16.2800173Z",
+  "EndedUtc": "2026-10-08T15:20:17.4366763Z",
+  "Stdout": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org\r\n\r\nLOCAL_SUITE_ISOLATION {\"autoloads\":[],\"globalized_user_dir\":\"E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-parse-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘\",\"isolated\":true,\"os_user_dir\":\"E:/WordsAndPerils-Tasks/local-queue-bootstrap-20261008/run-01a1b40-02/runs/task002-parse-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘\",\"run_id\":\"task002-parse-01\"}\r\nCANDIDATE_PARSE {\"adapter_sha256\":\"7e11cf5a3679fdc3bee4aa4264a11ed49cdadb2744136c0ffb4bae2ee47fe345\",\"ok\":true,\"pid\":78664,\"script_sha256\":\"6791232275b89d97887e66026c9c7af5197eb48e3cc208f724ed06ba9db53f2c\"}\r\n",
+  "Stderr": "",
+  "Started": true,
+  "WorkloadResumed": true,
+  "JobAssignedBeforeResume": true,
+  "KillOnCloseVerified": true,
+  "BreakawayDisabledVerified": true,
+  "JobEmptyAfterRun": true,
+  "AllRecordedHandlesExited": true,
+  "PhysicalMemoryWasActuallyRead": true,
+  "EnvironmentInherited": false,
+  "SyntheticFault": false,
+  "EngineStarted": true,
+  "OutputLimitExceeded": false,
+  "OutputLimitTerminationRequested": false,
+  "OutputLimitTerminationSucceeded": false,
+  "OutputReadersFinished": true,
+  "OutputLimitBytes": 65536,
+  "StdoutRetainedBytes": 707,
+  "StderrRetainedBytes": 0,
+  "OutputTerminationNativeError": 0,
+  "OutputObservedBytes": 707,
+  "NativeError": 0,
+  "GuardExitCode": 0,
+  "TimeoutSeconds": 120,
+  "RootPid": 78664,
+  "RootExitCode": 0,
+  "JobCommitLimitBytes": 1073741824,
+  "QueriedJobCommitLimitBytes": 1073741824,
+  "PeakJobCommitBytes": 95678464,
+  "LowestActualAvailPhysBytes": 7184592896,
+  "AffinityMask": 3,
+  "ElapsedSeconds": 1.1566,
+  "MemoryScope": "Win32 physical availability independently; kernel job-wide committed-memory peak/limit includes descendants; guardian host outside job covered by reserve",
+  "Admission": {
+    "Allowed": true,
+    "Reason": "admitted",
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 7351955456,
+    "BudgetBytes": 8589934592,
+    "ReserveBytes": 536870912,
+    "AdditionalBytes": 1073741824,
+    "ProfileTimeoutSeconds": 120
+  },
+  "AdmissionNativeReading": {
+    "Success": true,
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 7351955456,
+    "NativeError": 0
+  },
+  "CompletionNativeReading": {
+    "Success": true,
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 7303966720,
+    "NativeError": 0
+  },
+  "CompletionDeadlineExceeded": false,
+  "PriorityClassBeforeResume": 16384,
+  "CreatedSuspended": true,
+  "NoWindowFlagRequested": true,
+  "OwnedProcesses": [
+    {
+      "Pid": 78664,
+      "CreatedUtc": "2026-10-08T15:20:16.2871501Z",
+      "JobMembershipVerified": true,
+      "Exited": true
+    }
+  ],
+  "Samples": [
+    {
+      "ElapsedSeconds": 0.0474,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 7343128576,
+      "EffectiveAvailPhysBytes": 7343128576,
+      "PeakJobCommitBytes": 3604480,
+      "JobPids": [
+        78664
+      ]
+    },
+    {
+      "ElapsedSeconds": 0.148,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 7272923136,
+      "EffectiveAvailPhysBytes": 7272923136,
+      "PeakJobCommitBytes": 36360192,
+      "JobPids": [
+        78664
+      ]
+    },
+    {
+      "ElapsedSeconds": 0.2482,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 7244001280,
+      "EffectiveAvailPhysBytes": 7244001280,
+      "PeakJobCommitBytes": 68169728,
+      "JobPids": [
+        78664
+      ]
+    },
+    {
+      "ElapsedSeconds": 0.3484,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 7229333504,
+      "EffectiveAvailPhysBytes": 7229333504,
+      "PeakJobCommitBytes": 81096704,
+      "JobPids": [
+        78664
+      ]
+    },
+    {
+      "ElapsedSeconds": 0.4494,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 7228882944,
+      "EffectiveAvailPhysBytes": 7228882944,
+      "PeakJobCommitBytes": 84676608,
+      "JobPids": [
+        78664
+      ]
+    },
+    {
+      "ElapsedSeconds": 0.5503,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 7227297792,
+      "EffectiveAvailPhysBytes": 7227297792,
+      "PeakJobCommitBytes": 91832320,
+      "JobPids": [
+        78664
+      ]
+    },
+    {
+      "ElapsedSeconds": 0.6512,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 7225753600,
+      "EffectiveAvailPhysBytes": 7225753600,
+      "PeakJobCommitBytes": 92930048,
+      "JobPids": [
+        78664
+      ]
+    },
+    {
+      "ElapsedSeconds": 0.7523,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 7226929152,
+      "EffectiveAvailPhysBytes": 7226929152,
+      "PeakJobCommitBytes": 95678464,
+      "JobPids": [
+        78664
+      ]
+    },
+    {
+      "ElapsedSeconds": 0.8529,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 7192961024,
+      "EffectiveAvailPhysBytes": 7192961024,
+      "PeakJobCommitBytes": 95678464,
+      "JobPids": [
+        78664
+      ]
+    },
+    {
+      "ElapsedSeconds": 0.9531,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 7185121280,
+      "EffectiveAvailPhysBytes": 7185121280,
+      "PeakJobCommitBytes": 95678464,
+      "JobPids": [
+        78664
+      ]
+    },
+    {
+      "ElapsedSeconds": 1.0546,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 7184592896,
+      "EffectiveAvailPhysBytes": 7184592896,
+      "PeakJobCommitBytes": 95678464,
+      "JobPids": [
+        78664
+      ]
+    },
+    {
+      "ElapsedSeconds": 1.1561,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": true,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 7303966720,
+      "EffectiveAvailPhysBytes": 7303966720,
+      "PeakJobCommitBytes": 95678464,
+      "JobPids": []
+    }
+  ]
+}

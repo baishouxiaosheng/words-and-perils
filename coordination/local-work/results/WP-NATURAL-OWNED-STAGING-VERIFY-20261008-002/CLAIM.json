@@ -1,0 +1,13 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "claim",
+  "task_id": "WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002",
+  "task_sha256": "49032c299667885b29120af6f7e37685272f8098302be457aaba91e314e9425a",
+  "attempt_id": "attempt-001",
+  "owner_run_id": "run-01a1b40-02",
+  "owner_account_id": 128279531,
+  "intake_commit": "9eea0b017400921780bd55fc99366455a4e37de8",
+  "base_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+  "execution_mode": "current_local_queue_writer",
+  "claimed_utc": "2026-10-08T15:14:42.780680+00:00"
+}

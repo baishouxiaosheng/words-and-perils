@@ -1,0 +1,203 @@
+{
+  "kind": "offline-source-and-patch-assertions",
+  "status": "passed",
+  "assertion_count": 41,
+  "checks": [
+    {
+      "name": "baseline byte count",
+      "passed": true
+    },
+    {
+      "name": "baseline SHA256",
+      "passed": true
+    },
+    {
+      "name": "baseline Git blob",
+      "passed": true
+    },
+    {
+      "name": "final source identity: main.gd",
+      "passed": true
+    },
+    {
+      "name": "LF and final newline: main.gd",
+      "passed": true
+    },
+    {
+      "name": "no trailing whitespace: main.gd",
+      "passed": true
+    },
+    {
+      "name": "final source identity: view/ui_motion/hud_panel_motion.gd",
+      "passed": true
+    },
+    {
+      "name": "LF and final newline: view/ui_motion/hud_panel_motion.gd",
+      "passed": true
+    },
+    {
+      "name": "no trailing whitespace: view/ui_motion/hud_panel_motion.gd",
+      "passed": true
+    },
+    {
+      "name": "final source identity: tests/ui_motion/test_hud_panel_motion.gd",
+      "passed": true
+    },
+    {
+      "name": "LF and final newline: tests/ui_motion/test_hud_panel_motion.gd",
+      "passed": true
+    },
+    {
+      "name": "no trailing whitespace: tests/ui_motion/test_hud_panel_motion.gd",
+      "passed": true
+    },
+    {
+      "name": "Main function topology unchanged",
+      "passed": true
+    },
+    {
+      "name": "only three Main functions changed",
+      "passed": true
+    },
+    {
+      "name": "ready only installs adapter",
+      "passed": true
+    },
+    {
+      "name": "map visibility only delegates dock presentation",
+      "passed": true
+    },
+    {
+      "name": "layout only adds before/after hooks",
+      "passed": true
+    },
+    {
+      "name": "CUBIC ease-in-out present",
+      "passed": true
+    },
+    {
+      "name": "no size scale disabled text or editable writes",
+      "passed": true
+    },
+    {
+      "name": "no persistence RNG or action transaction access",
+      "passed": true
+    },
+    {
+      "name": "sample and completion generation guards",
+      "passed": true
+    },
+    {
+      "name": "weak snapshots and teardown cancellation present",
+      "passed": true
+    },
+    {
+      "name": "input footprint and release tails consumed",
+      "passed": true
+    },
+    {
+      "name": "actual endpoint checked on equal resting-position resize",
+      "passed": true
+    },
+    {
+      "name": "test source routes GUI events instead of emitting intent",
+      "passed": true
+    },
+    {
+      "name": "test source asserts no early input propagation",
+      "passed": true
+    },
+    {
+      "name": "unrun test source covers half-close reverse",
+      "passed": true
+    },
+    {
+      "name": "unrun test source covers rapid toggles",
+      "passed": true
+    },
+    {
+      "name": "unrun test source covers resize-close-open",
+      "passed": true
+    },
+    {
+      "name": "unrun test source covers stale close",
+      "passed": true
+    },
+    {
+      "name": "unrun test source covers panel destruction",
+      "passed": true
+    },
+    {
+      "name": "unrun test source covers adapter destruction",
+      "passed": true
+    },
+    {
+      "name": "unrun test source covers hidden click/Enter",
+      "passed": true
+    },
+    {
+      "name": "unrun test source covers exactly one intent",
+      "passed": true
+    },
+    {
+      "name": "unrun test source covers draft retained",
+      "passed": true
+    },
+    {
+      "name": "unrun test source covers disabled changes",
+      "passed": true
+    },
+    {
+      "name": "unrun test source covers held accept key",
+      "passed": true
+    },
+    {
+      "name": "overlay has exactly three source files",
+      "passed": true
+    },
+    {
+      "name": "git apply --check",
+      "passed": true
+    },
+    {
+      "name": "git apply in disposable directory",
+      "passed": true
+    },
+    {
+      "name": "patch roundtrip reproduces all three source bytes",
+      "passed": true
+    }
+  ],
+  "baseline": {
+    "repository": "baishouxiaosheng/words-and-perils",
+    "commit": "2b1134bd20a9d22ead3b5c3f504452f3a7e95e0e",
+    "path": "candidates/actor-public-v29-compat/05ebbe56e88d/production/main.gd",
+    "bytes": 203707,
+    "sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f",
+    "git_blob": "2c522dfa6942bf51c4004d2d8a69c8a667c4ca56"
+  },
+  "source_files": [
+    {
+      "path": "overlay/main.gd",
+      "bytes": 204035,
+      "sha256": "fa8a8c81275b4521ebfa38cc3f4156edbc4d67ca6b25f7bcf0ce9fb19ce7401e",
+      "git_blob": "67d66a3592df6d61065d00d2b3aba1c3acdc99f1"
+    },
+    {
+      "path": "overlay/view/ui_motion/hud_panel_motion.gd",
+      "bytes": 6290,
+      "sha256": "d02bf598712829a7520c7d187347f185674b048a7042065aae6e7ef28d013546",
+      "git_blob": "3d0c6c91cb7aa3effdb8d4a75b8ba3614b0f3e69"
+    },
+    {
+      "path": "overlay/tests/ui_motion/test_hud_panel_motion.gd",
+      "bytes": 11893,
+      "sha256": "9db7b4ca06b8bd29183ec539f3771c80e9fcda76fa8251140b3caff57ef6ef6d",
+      "git_blob": "ae181d76655709a90dac9f7ab1c74dd5b3a70839"
+    }
+  ],
+  "godot_semantic_parse": "not_run",
+  "godot_tests": "not_run",
+  "main_gui_video_fps_ime": "not_run",
+  "adopted": false
+}

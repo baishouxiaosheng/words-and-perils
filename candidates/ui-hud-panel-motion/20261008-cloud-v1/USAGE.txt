@@ -1,0 +1,63 @@
+Words and Perils: bottom submission dock motion candidate
+
+Status: source candidate only; not adopted. Godot semantic parsing, all Godot
+tests, real Main integration, visible video, FPS and IME checks are NOT RUN.
+This directory is prepared for review. It has not been uploaded or published.
+
+Feature
+The dock uses a 0.28-second CUBIC ease-in-out slide when the map overview hides
+the dialogue and when dialogue is restored. Reversal starts from the displayed
+position. Responsive layout retains authority over the dock's resting position
+and size. Old Tween callbacks are ignored. The adapter does not write draft text,
+business disabled flags, world position, RNG or receipts, or call an action.
+These are source-level properties; their runtime behavior remains unverified.
+Only the bottom submission dock is changed; other panels are outside this patch.
+
+Required application baseline
+Repository: baishouxiaosheng/words-and-perils
+Commit: 2b1134bd20a9d22ead3b5c3f504452f3a7e95e0e
+Source path: candidates/actor-public-v29-compat/05ebbe56e88d/production/main.gd
+Size: 203707 bytes
+SHA256: 05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f
+Git blob: 2c522dfa6942bf51c4004d2d8a69c8a667c4ca56
+The repository-root 177810-byte main.gd is a different source and is unsuitable.
+The baseline and full public-v30 dependency closure are not included here.
+
+Offline static verification (Python 3 and Git required)
+python static_checks.py --baseline-main <exact-public-baseline-main.gd>
+The baseline is read only. Patch application occurs in a disposable directory.
+The script writes deterministic static_results.json and never starts Godot or
+accesses a network. Static assertions do not prove GDScript semantic parsing,
+runtime input propagation, smooth visuals, or engine performance.
+python static_checks.py --verify-manifest-only
+This second mode verifies the payload sizes/hashes without rewriting results.
+
+Applying for engine verification
+Use a new isolated copy of a fully restored public-v30 project. First verify its
+production main.gd against the baseline above. Keep real saves and the production
+installation separate. Apply candidate.patch there, or copy the three overlay
+files to their matching project-relative paths. Do not mix other candidates.
+Main changes are limited to _ready, set_map_dialogue_hidden and
+apply_responsive_layout. Full public-v30 dependencies must already be present.
+
+Minimal test fixture (not a complete game)
+Create a new empty directory. Copy fixture_project.godot there as project.godot.
+Copy only overlay/view/ui_motion/hud_panel_motion.gd and
+overlay/tests/ui_motion/test_hud_panel_motion.gd to their matching paths beneath
+that directory. Do not copy overlay/main.gd into the minimal fixture.
+The configuration has no Autoload and uses a dedicated custom user directory.
+Only after the applicable engine process guard permits the isolated test, run:
+godot --headless --path <fixture-directory> --script res://tests/ui_motion/test_hud_panel_motion.gd
+Preserve original stdout, stderr and exit status, including any parse failure.
+The suite covers reversal, repeated toggles, resize, stale callbacks, destruction,
+draft/disabled preservation, blocked clicks and Enter, input release tails, and
+one restored button click producing one fixture intent.
+This fixture does not verify the real Main or its SubViewport input propagation.
+
+Remaining verification
+Run semantic parsing and real Main input checks in the complete isolated game.
+Check the actual map overview and dialogue restore buttons, mid-slide reversal,
+resize, modal input protection, preserved draft/disabled state, and input into
+the board/SubViewport. Record authority state and intent counts before/after.
+A real GUI/video run needs a suitable graphics process guard. Headless success
+cannot substitute for visible animation, physical mouse, IME, DPI or FPS checks.

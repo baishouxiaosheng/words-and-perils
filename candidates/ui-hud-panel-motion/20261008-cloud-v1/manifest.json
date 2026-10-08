@@ -1,0 +1,79 @@
+{
+  "schema": "wp-hud-panel-motion-minimal-review/v1",
+  "status": "local_review_only_unadopted_unpublished",
+  "baseline": {
+    "repository": "baishouxiaosheng/words-and-perils",
+    "commit": "2b1134bd20a9d22ead3b5c3f504452f3a7e95e0e",
+    "path": "candidates/actor-public-v29-compat/05ebbe56e88d/production/main.gd",
+    "bytes": 203707,
+    "sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f",
+    "git_blob": "2c522dfa6942bf51c4004d2d8a69c8a667c4ca56",
+    "included": false
+  },
+  "files": [
+    {
+      "path": "USAGE.txt",
+      "bytes": 3881,
+      "sha256": "2c63e3c8ff9d6d23ee069035db2263af72380fe42d23bce98617831ba28d4379",
+      "git_blob": "85f4047d5416e932211a12925bb97093d65b814c"
+    },
+    {
+      "path": "candidate.patch",
+      "bytes": 20501,
+      "sha256": "922b6e5d5ef24a27020dedfb24920fd668ac6c371b4f6e80c77de76714be2644",
+      "git_blob": "dc6a4c6f2d5bd742d69700a374dd0b45242d0fb3"
+    },
+    {
+      "path": "fixture_project.godot",
+      "bytes": 487,
+      "sha256": "1c97b03db70c4f9524460aa3731f09550baf2e4754a58ad4302cf54e470047a8",
+      "git_blob": "86c3e421cc5a1171725c3424cafb1b387b87c982"
+    },
+    {
+      "path": "overlay/main.gd",
+      "bytes": 204035,
+      "sha256": "fa8a8c81275b4521ebfa38cc3f4156edbc4d67ca6b25f7bcf0ce9fb19ce7401e",
+      "git_blob": "67d66a3592df6d61065d00d2b3aba1c3acdc99f1"
+    },
+    {
+      "path": "overlay/tests/ui_motion/test_hud_panel_motion.gd",
+      "bytes": 11893,
+      "sha256": "9db7b4ca06b8bd29183ec539f3771c80e9fcda76fa8251140b3caff57ef6ef6d",
+      "git_blob": "ae181d76655709a90dac9f7ab1c74dd5b3a70839"
+    },
+    {
+      "path": "overlay/view/ui_motion/hud_panel_motion.gd",
+      "bytes": 6290,
+      "sha256": "d02bf598712829a7520c7d187347f185674b048a7042065aae6e7ef28d013546",
+      "git_blob": "3d0c6c91cb7aa3effdb8d4a75b8ba3614b0f3e69"
+    },
+    {
+      "path": "static_checks.py",
+      "bytes": 8003,
+      "sha256": "9c3a1ce4ab89b5cb7f53e3d400445eb29fb25d88343285bff35f8ac605a2b8bc",
+      "git_blob": "9689d04242c81a35206fb14523ca913d1c8fe8fc"
+    },
+    {
+      "path": "static_results.json",
+      "bytes": 5142,
+      "sha256": "ec91f9b6417c4b75ef251dbd53776bf28d2e46f6bd7760c01a423284708f6dbe",
+      "git_blob": "e0b960f562efe1c51d09a38dc5725cd478e8caae"
+    }
+  ],
+  "manifest_self_hash_excluded": true,
+  "static_source_patch_assertions": 41,
+  "godot_semantic_parse": "not_run",
+  "godot_tests": "not_run",
+  "real_main_gui_video_fps_ime": "not_run",
+  "three_final_source_bytes_preserved": true,
+  "excluded_categories": [
+    "ZIP archive",
+    "historical source checkpoints",
+    "complete baseline and dependency copies",
+    "private project Page references and block metadata",
+    "cloud environment paths",
+    "operational handoff records",
+    "peer review process records",
+    "previous intermediate static reports"
+  ]
+}

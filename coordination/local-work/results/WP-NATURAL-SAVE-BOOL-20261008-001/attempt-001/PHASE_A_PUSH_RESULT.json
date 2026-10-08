@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "commit": "e5745fbfd568415a5d8ca35ca25bd18d5a092e98",
+  "expected_head": "5dbeaef6918c7404788c50a22aaf4d695bb81daa",
+  "file_count": 167,
+  "force": false,
+  "CAS": "pre-push exact advertised main head + Git receive-pack old/new ref compare"
+}

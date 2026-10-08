@@ -1,0 +1,10 @@
+{
+  "phase_a_commit": "e5745fbfd568415a5d8ca35ca25bd18d5a092e98",
+  "all_167_files_actual_bytes_verified": true,
+  "initial_readback_exit": 1,
+  "initial_failure": "One raw HTTP read exceeded 25 seconds. Read-only reconciliation found 166 complete matching files and one missing file.",
+  "reconciliation_exit": 0,
+  "missing_file_attempts_after_reconciliation": 1,
+  "second_same_cause_failure": false,
+  "git_push_warnings": "Full phase-A Git .gitattributes long-path warnings retained; push exit 0 and all exact remote bytes verified. No settings changed."
+}

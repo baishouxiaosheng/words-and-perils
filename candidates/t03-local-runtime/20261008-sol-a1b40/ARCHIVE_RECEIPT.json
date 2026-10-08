@@ -1,0 +1,12 @@
+{
+  "archive": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\local-dev-20261008-sol-a1b40\\WordsAndPerils_Local_T03_20261008_Evidence.zip",
+  "bytes": 2587853,
+  "sha256": "7ef3be5675316e6ec550c4ce87c58ab600a549568fe1f1e01e75d015ea10e1fa",
+  "git_blob_sha": "2eee43fc2fc1f85cd1e90b17e6309531be6468c9",
+  "members": 165,
+  "all_crc_path_size_sha_and_bytes_verified": true,
+  "standalone_runnable": false,
+  "independent_candidates_not_combined": true,
+  "real_player_data_included": false,
+  "utc": "2026-10-08T11:42:11.423970+00:00"
+}

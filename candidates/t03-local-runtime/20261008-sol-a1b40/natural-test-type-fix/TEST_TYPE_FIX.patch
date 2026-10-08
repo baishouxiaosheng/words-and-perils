@@ -1,0 +1,30 @@
+diff --git a/public-candidates/natural-save-identity/project/tests/natural_coast_basic/test_adapter.gd b/evidence/local-dev-20261008-sol-a1b40/natural-test-type-fix/overlay/tests/natural_coast_basic/test_adapter.gd
+index dfe9381..de1f88b 100644
+--- a/public-candidates/natural-save-identity/project/tests/natural_coast_basic/test_adapter.gd
++++ b/evidence/local-dev-20261008-sol-a1b40/natural-test-type-fix/overlay/tests/natural_coast_basic/test_adapter.gd
+@@ -42,7 +42,7 @@ func t03_overwrite_guard(adapter: RefCounted, recipe: String) -> void:
+ 	check(independent.ready().ok and C.bytes(independent.source.identity) == C.bytes(adapter.source.identity) and independent.save_file(path).ok,"T03 independent same-distribution entry can save")
+ 	var same_envelope_bytes := FileAccess.get_file_as_string(path)
+ 	check(not adapter.engine.save_file(path).ok and FileAccess.get_file_as_string(path) == same_envelope_bytes,"T03 direct raw API preserves even its own adapter envelope")
+-	var existing := adapter.save_data()
++	var existing: Dictionary = adapter.save_data()
+ 	existing.identity.inventory_profile_hash = "0".repeat(64)
+ 	existing.identity.runtime_hash = "0".repeat(64)
+ 	existing.engine.state.generated_world = existing.identity.duplicate(true)
+@@ -61,14 +61,14 @@ func t03_overwrite_guard(adapter: RefCounted, recipe: String) -> void:
+ 	check(not adapter.save_file(path).ok and FileAccess.get_file_as_string(path) == encoded,"T03 malformed typed source refuses without a script exception")
+ 	DirAccess.remove_absolute(path+".tmp")
+ 	check(adapter.engine.save_file(raw_path).ok and adapter.engine.save_file(raw_path).ok,"T03 direct raw API retains same-distribution saves")
+-	var raw := adapter.engine.save_data(); raw.state.generated_world.inventory_profile_hash = "0".repeat(64)
++	var raw: Dictionary = adapter.engine.save_data(); raw.state.generated_world.inventory_profile_hash = "0".repeat(64)
+ 	encoded = C.bytes(raw); FileAccess.open(raw_path,FileAccess.WRITE).store_string(encoded)
+ 	FileAccess.open(raw_path+".tmp",FileAccess.WRITE).store_string("T03 raw temporary sentinel")
+ 	check(not adapter.engine.save_file(raw_path).ok and FileAccess.get_file_as_string(raw_path) == encoded and FileAccess.get_file_as_string(raw_path+".tmp") == "T03 raw temporary sentinel","T03 direct raw API preserves foreign authority signature before any write")
+ 	FileAccess.open(raw_path,FileAccess.WRITE).store_string("{invalid")
+ 	check(not adapter.engine.save_file(raw_path).ok and FileAccess.get_file_as_string(raw_path) == "{invalid","T03 malformed raw JSON is preserved")
+ 	var independent_before := C.bytes(independent.engine.save_data())
+-	var foreign_raw := independent.engine.save_data()
++	var foreign_raw: Dictionary = independent.engine.save_data()
+ 	foreign_raw.state.world_id = Source.WORLD_PREFIX+"0".repeat(64)
+ 	foreign_raw.state.generated_world.runtime_hash = "0".repeat(64)
+ 	foreign_raw.campaign_memory.world_id = foreign_raw.state.world_id

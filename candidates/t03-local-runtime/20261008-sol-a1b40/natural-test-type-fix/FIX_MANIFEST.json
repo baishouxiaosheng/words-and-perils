@@ -1,0 +1,21 @@
+{
+  "status": "independent_unadopted_test_only_correction",
+  "original_source": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\public-candidates\\natural-save-identity\\project\\tests\\natural_coast_basic\\test_adapter.gd",
+  "original_sha256": "99d750960ed2ba6197b5e624044a31276accd78c32aea78e000661179d2c66df",
+  "corrected_test": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\local-dev-20261008-sol-a1b40\\natural-test-type-fix\\overlay\\tests\\natural_coast_basic\\test_adapter.gd",
+  "corrected_sha256": "60e46a3b5b607d3ba5cbe3634ebcd6bd3ebbfc98fa10d4bad8732ea95b5a0ba2",
+  "production_files_changed": [],
+  "test_corrections": [
+    "existing: Dictionary",
+    "raw: Dictionary",
+    "foreign_raw: Dictionary"
+  ],
+  "cause": "GDScript cannot infer return types from methods on a parameter declared RefCounted. Three reported errors at test lines 45, 64, 71.",
+  "behavior": "Explicit existing Dictionary types only; same assertions and fixtures",
+  "old_manifest_retained": true,
+  "failure_records": [
+    "natural-adapter-coastal-01/GUARD_RESULT.json",
+    "natural-adapter-parse-diagnostic-01/GUARD_RESULT.json"
+  ],
+  "adopted": false
+}

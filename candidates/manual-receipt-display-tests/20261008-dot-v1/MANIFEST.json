@@ -1,0 +1,62 @@
+{
+  "schema": "manual-receipt-test-only-driver-package/v1",
+  "status": "AUTHORED_STATIC_CHECKED_GODOT_NOT_PARSED_NOT_RUN_NOT_PUBLISHED",
+  "published_seven_file_candidate_unchanged": true,
+  "new_production_code_changes": 0,
+  "helper_bytes_unchanged": true,
+  "source_bound_profile": "actor_actions_v2",
+  "scope": "one contact route, two authentic rounds, manual narration helper chain",
+  "Godot_started": false,
+  "preparer_stage_executed": false,
+  "preparer_review_fixes": [
+    "Full1466 formal source allowlist plus876 resource allowlist only; no copytree or unknown file traversal",
+    "Reject symlinks at every component before reading inputs",
+    "Require new QA directory and reject overlap in either direction with source/candidate/package",
+    "No chmod; use explicit sh invocation",
+    "Keep/classify ERROR and WARNING; functional result and diagnostic cleanliness separated; unknown ERROR fails"
+  ],
+  "files": [
+    {
+      "path": "tests/manual_receipt_display/driver.gd",
+      "bytes": 14529,
+      "sha256": "c571f132265a74642a154c936a61e1775f2f5cd2cbdfe923ed045b4023fe9a12"
+    },
+    {
+      "path": "tests/manual_receipt_display/helper.gd",
+      "bytes": 8013,
+      "sha256": "a53846c2072b1cf3a7e646cfc0924302a89c9d975af55a05cd58de03a1b43d5e"
+    },
+    {
+      "path": "INPUT_PINS.json",
+      "bytes": 16649,
+      "sha256": "4f28261d4e9bc54d0fd6d9cc60f36266ceb0d4c1bd496d561b365f7cbed827df"
+    },
+    {
+      "path": "RESTORED_SOURCE_ALLOWLIST.json",
+      "bytes": 259059,
+      "sha256": "694b034c86b24c77586b554a20c213c1c8eb61fdabcfe89fa0fa9aee6af0cb0f"
+    },
+    {
+      "path": "prepare_driver.py",
+      "bytes": 8929,
+      "sha256": "79e38116f991c99041b3188e02adf6b675ca28d524eaadf7bca46532903acb17"
+    },
+    {
+      "path": "check_static.py",
+      "bytes": 8049,
+      "sha256": "5900e9a7806fff2079895ede731d56be8d609d74cb8cd70718f1785ce18f78e6"
+    },
+    {
+      "path": "STATIC_CHECKS.json",
+      "bytes": 1927,
+      "sha256": "b70b6bd6d5099862cdf82dfeeafeed71eb92e228e1ca465b796b6927f7c84ad9"
+    },
+    {
+      "path": "USAGE.txt",
+      "bytes": 7886,
+      "sha256": "d6b887ca90b072a9a2c8d4e5d6216e6e3c600e3ae8c070190f423348e0792344"
+    }
+  ],
+  "manifest_excludes_itself": true,
+  "static_checker_inputs": "Explicit --restored-root/--candidate-root/--guard; optional --runtime-pins; no internal sibling-path defaults"
+}

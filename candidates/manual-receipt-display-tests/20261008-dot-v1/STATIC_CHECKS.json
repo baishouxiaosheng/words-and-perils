@@ -1,0 +1,62 @@
+{
+  "schema": "manual-receipt-test-driver-static-check/v1",
+  "status": "STATIC_CHECKS_PASSED_GODOT_NOT_RUN",
+  "static_checker_sha256": "5900e9a7806fff2079895ede731d56be8d609d74cb8cd70718f1785ce18f78e6",
+  "input_selection": "explicit_cli_paths",
+  "driver_sha256": "c571f132265a74642a154c936a61e1775f2f5cd2cbdfe923ed045b4023fe9a12",
+  "helper_sha256": "a53846c2072b1cf3a7e646cfc0924302a89c9d975af55a05cd58de03a1b43d5e",
+  "source_pins_matched": 140,
+  "restored_source_allowlist_matched": 1466,
+  "restored_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e",
+  "published_helper_unchanged": true,
+  "python_preparer_syntax": "ast.parse_passed",
+  "preparer_stage_executed": false,
+  "small_path_safety_function_checks": [
+    {
+      "label": "middle symlink",
+      "ok": true
+    },
+    {
+      "label": "leaf symlink",
+      "ok": true
+    },
+    {
+      "label": "symlink root ancestor",
+      "ok": true
+    },
+    {
+      "label": "relative traversal",
+      "ok": true
+    },
+    {
+      "label": "QA inside source",
+      "ok": true
+    },
+    {
+      "label": "QA inside candidate",
+      "ok": true
+    },
+    {
+      "label": "QA inside package",
+      "ok": true
+    },
+    {
+      "label": "input inside proposed QA",
+      "ok": true
+    },
+    {
+      "label": "existing QA root",
+      "ok": true
+    },
+    {
+      "label": "regular file and new disjoint root admitted",
+      "ok": true
+    }
+  ],
+  "Godot_started": false,
+  "Godot_parser": "not_run",
+  "real_Main_regression": "not_run",
+  "Git_writes": 0,
+  "finite_scope": "One contact route; first real player/enemy round trip; two pending imports and actual cancels; two additional observe commits; latest idle import.",
+  "remaining_inputs": "Complete restored source/resources, exact published candidate, original876 pinmap, exact complete guard and authorized Godot4.6.3 in a compliant recovered environment."
+}

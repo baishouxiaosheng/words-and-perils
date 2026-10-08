@@ -1,0 +1,53 @@
+Manual receipt display: finite real-Main test-only entry
+
+Status: authored locally, NOT parsed by Godot and NOT executed. No new files have been published. The already published seven-file production candidate is unchanged. STATIC_CHECKS.json records only actual static checks; it is not gameplay acceptance.
+
+Files:
+- tests/manual_receipt_display/driver.gd: executable SceneTree test entry.
+- tests/manual_receipt_display/helper.gd: byte-identical copy of the published a53846c2... helper.
+- INPUT_PINS.json: exact base/candidate/authority/helper/guard/resource-map identity and 140 source dependency pins.
+- RESTORED_SOURCE_ALLOWLIST.json: the complete1466-file restored public-v30 source map, matching its formal34d1bfad... checksum; unknown source files are never copied.
+- prepare_driver.py: checks inputs, creates one disposable test copy and writes run_prepared.sh. It NEVER invokes Godot or the guard itself.
+- check_static.py and STATIC_CHECKS.json: portable static authoring checker/result only; not a game launcher. Provide explicit restored-root, candidate-root and guard paths. The original runtime876 map can also be supplied explicitly if it is outside the restored source tree.
+
+Why a new driver is needed:
+The public-v30 test_finite_main.gd really exercises the manual player -> enemy -> player sequence, but enters actor_status_v1. The older full13 test_full_main_bridge.gd enters actor_actions_v2 but requires old Main bb157... and includes unrelated gates. Neither directly runs this fcbe64b5... candidate and its manual-narration regression. This driver reuses their real Main menu/button/manual-JSON method and the existing offline actor-v2 assessment-builder contract, with only move/observe/rest.
+
+Finite flow:
+1. Boot the actual public-v30 Main, install the existing no-network mock before any provider configuration, and keep all automatic model calls off.
+2. Generate the existing seed726381/radius4/coastal_range source, admit the real legacy enemy adapter, then use the actual advanced-menu ACTOR_ENTRY_NEW route into independent actor_actions_v2.
+3. Follow at most32 real source navigation edges to the contact anchor. Every move/rest is separately evaluated and committed by the real Engine through Main; movement is revalidated after rest.
+4. Evaluate and commit one real enemy observe action, returning to the player slot. Keep the actual player and enemy receipts from that chain.
+5. Run pending_import for the earlier player receipt; its real new pending is then canceled through Main without time/RNG/receipt mutation.
+6. Run pending_import for the latest enemy receipt; cancel its real new pending the same way.
+7. Commit two further real ordinary observe actions, player then enemy, to obtain an un-narrated latest enemy receipt; run idle_latest_import.
+
+The three helper calls include unknown/duplicate import checks. The source/Engine is never reset or substituted. There is only one contact route. Published helper comments recommend separate fresh fixtures; this integration instead supplies a genuinely un-narrated receipt for each first-import check and validates the same real source/profile at every call, avoiding three redundant approach journeys. No changed helper bytes or forged save/receipt are used.
+
+Required consumer-local inputs:
+A. Complete restored public-v30 game source/resources, with main.gd SHA 05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f. The repository root Main is a different file and must NOT be used.
+B. Published seven-file candidate directory at commit ff31b69bd0d5c72dc104550990f5e0f1eaeb24ae: candidates/manual-receipt-display/20261008-dot-v1. Manifest SHA d703dd7bfa142fbb27a31c774b36cfffd354d283e544e980bf3da51e22e9fb9e; candidate Main SHA fcbe64b533f21bbd6e6b21c9c020f11f934ccee4c064078216e0f69cdcb6376b.
+C. Original public runtime876 map: candidates/public-v29-enhanced/2b82fa8b37d5/runtime_876_pins.json, SHA 4f61e1ce088cc0817ef2044f142f6c80edd5a6a7c3ec47688fa559ed16c1860e.
+D. Exact complete reviewed guard SHA 6f36575487980209ca91a0759f79c8f276e0c181ed098efff59d3c5858bce54d. It requires physical Linux cgroup memory.max/memory.current, an effective cap <=8GiB, >=512MiB reserve,1741MiB additional admission and a180s ceiling. Do not substitute a weaker guard, bypass a denial, or launch the engine directly.
+E. Authorized Godot4.6.3 binary in the recovered environment. This preparation does not download or install it. The guard is Linux-specific; these commands are not a Windows guard port.
+
+Future exact invocation, only after the execution environment is approved and recovered:
+
+Portable static review first, without Godot or staging:
+python3 /path/to/this-test-package/check_static.py --restored-root /path/to/restored-v30 --candidate-root /path/to/published/seven-file-candidate --guard /path/to/exact-reviewed-guard.py --runtime-pins /path/to/runtime_876_pins.json
+
+Then prepare the disposable entry, still without starting Godot:
+
+python3 /path/to/this-test-package/prepare_driver.py --restored-root /path/to/restored-v30 --candidate-root /path/to/published/seven-file-candidate --qa-root /path/to/new-disposable-qa --runtime-pins /path/to/runtime_876_pins.json --guard /path/to/exact-reviewed-guard.py --godot /path/to/godot4.6.3 --variant candidate
+
+The preparer validates the complete fixed1466-file restored source allowlist plus140 focused dependency pins, all876 resources, the full seven-file manifest/payloads, the published helper and the complete guard before writing the disposable project. It copies only the exact source/resource allowlists, rejects symlinks at every path component, and requires a new QA directory with no overlap in either direction with source, candidate or this test package. Unknown user files and links are not read or copied. It prints the exact generated run_prepared.sh path. Review RUN_PLAN.json, then invoke sh /path/to/new-disposable-qa/run_prepared.sh once in the same approved environment. No executable-permission change is needed. The script uses the unchanged guard, a new isolated XDG/user directory, and this direct entry:
+res://tests/manual_receipt_display/driver.gd
+
+For an optional baseline negative replay, use a separate fresh QA root and --variant baseline. The driver admits only the exact base or candidate Main. Baseline display assertions should fail; no baseline run has occurred and this expected failure is not already established by an engine run.
+
+--headless may be added only for logic-only checking; it cannot establish visual/GPU acceptance. Native rendering is the default, but this finite driver still does not certify pixel appearance, OS mouse input or broad gameplay.
+
+Expected outputs after a future actual run:
+- session/result.json: actual checks, helper results, real action/receipt IDs, source hash, driver/helper/Main/authority hashes, renderer and zero model request count.
+- session/runtime.log and session/guard.jsonl: actual runtime/parser diagnostics and original guard events.
+Report functional outcome and diagnostic cleanliness separately. Functional success requires guard/runtime exit0, result.ok=true and zero model requests. Preserve every ERROR:/WARNING: line with its source and classify it; an unknown ERROR fails the run. Any expected diagnostic must be explicitly verified one by one against applicable prior evidence and the current run, rather than ignored by a broad pattern. A known GLX/platform WARNING alone is not a newly invented functional acceptance gate. Warnings still remain visible in the diagnostic report, which may be non-clean even when functional assertions pass. Do not claim functional success for an unexplained error or describe retained diagnostics as clean. The stage contains only verified public source/resources and no real user saves or provider credentials. If the guard or a source/resource pin fails, stop and report it; do not relax a condition.

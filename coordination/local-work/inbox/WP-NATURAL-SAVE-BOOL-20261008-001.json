@@ -1,0 +1,139 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "task",
+  "task_id": "WP-NATURAL-SAVE-BOOL-20261008-001",
+  "status": "ready",
+  "title": "Repair Natural save write-result handling",
+  "base_commit": "4644948268784506165ce1152215716ddf8d2854",
+  "candidate_root": "candidates/t03-natural-write-result/wp-natural-save-bool-20261008-001",
+  "inputs": [
+    {
+      "repository_path": "tools/restore_v30.py",
+      "git_blob_sha": "08728f5819b8f1517ebc68bd7c439cd14942bb9c",
+      "sha256": "0c7250e549bc6f7ab500a6570ad099c7b43a09a84b74d3d29a78c1d37ba7e75f",
+      "bytes": 22861,
+      "role": "Existing public-v30 restore reference. Inspect before use; only run in a new disposable copy."
+    },
+    {
+      "repository_path": "updates/v30/manifest.json",
+      "git_blob_sha": "6fa5b0b35eb526c4fcd992bc0a285748762ad8f9",
+      "sha256": "b3d9bed51dafc6a86acdc53b5e5456556d2b262b7bb16dbdef72d69febd5d5b9",
+      "bytes": 22680,
+      "role": "Public final release/restoration authority; do not edit."
+    },
+    {
+      "repository_path": "distribution_manifest.json",
+      "git_blob_sha": "1544dcc4b608a63bfc8fe8fe0875d7019a37183e",
+      "sha256": "7ec9feaa531147819801a907688d6483c0accfe7fe23d57fffa6dc2f07dc2075",
+      "bytes": 207017,
+      "role": "Public base source/resource authority; do not substitute private project pins."
+    },
+    {
+      "repository_path": "candidates/t03-natural-save-identity/20261008/overlay/view/generated_natural_coast_basic/adapter.gd",
+      "git_blob_sha": "94a95f05eeea7ab6ae17843619513cff212484ca",
+      "sha256": "7932dc7a48a25981b9d154c108515af4ed927133a798819ca26424afd28948ba",
+      "bytes": 21219,
+      "role": "Immediate Natural production baseline; only this production file may change.",
+      "project_path": "view/generated_natural_coast_basic/adapter.gd"
+    },
+    {
+      "repository_path": "candidates/t03-natural-save-identity/20261008/overlay/view/generated_natural_coast_basic/engine.gd",
+      "git_blob_sha": "8819df7b10879c26bc3886598ea7025f8242689a",
+      "sha256": "dba3ca7fe04dc8a4100897250fc19c5c6c2acff2ef687ff120e894beadf6351d",
+      "bytes": 11375,
+      "role": "Inherit unchanged Natural identity/history protection.",
+      "project_path": "view/generated_natural_coast_basic/engine.gd"
+    },
+    {
+      "repository_path": "candidates/t03-natural-save-identity/20261008/overlay/tests/natural_coast_basic/test_adapter.gd",
+      "git_blob_sha": "dfe9381c4507ba3c983724add697b2191a44fdc3",
+      "sha256": "99d750960ed2ba6197b5e624044a31276accd78c32aea78e000661179d2c66df",
+      "bytes": 38409,
+      "role": "Historical original test; retain original parse failure provenance."
+    },
+    {
+      "repository_path": "candidates/t03-local-runtime/20261008-sol-a1b40/natural-test-type-fix/overlay/tests/natural_coast_basic/test_adapter.gd",
+      "git_blob_sha": "de1f88bebcb2b8437170da2089b604e991b5c976",
+      "sha256": "60e46a3b5b607d3ba5cbe3634ebcd6bd3ebbfc98fa10d4bad8732ea95b5a0ba2",
+      "bytes": 38442,
+      "role": "Use exact existing three-Dictionary test-only correction; preserve all 170 checks and 13 T03 checks.",
+      "project_path": "tests/natural_coast_basic/test_adapter.gd"
+    }
+  ],
+  "baseline_project_pins": {
+    "project.godot": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd",
+    "view/generated_natural_coast_basic/adapter.gd": "7932dc7a48a25981b9d154c108515af4ed927133a798819ca26424afd28948ba",
+    "view/generated_natural_coast_basic/engine.gd": "dba3ca7fe04dc8a4100897250fc19c5c6c2acff2ef687ff120e894beadf6351d",
+    "core/ai_gm_rebuilt/engine.gd": "3d41f2fc4e52459d5df01732fbacc9e849f0e4a9260094220426001ef236002d",
+    "core/ai_gm_rebuilt/traversal_policy.gd": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+    "tests/natural_coast_basic/test_compile.gd": "59fd844ef8fa005f4e01049505cf9380d594eb0b01665838aeef82f772c8a350",
+    "tests/natural_coast_basic/test_adapter.gd": "60e46a3b5b607d3ba5cbe3634ebcd6bd3ebbfc98fa10d4bad8732ea95b5a0ba2"
+  },
+  "allowed_production_changes": [
+    "view/generated_natural_coast_basic/adapter.gd"
+  ],
+  "allowed_test_changes": [
+    "tests/t03_natural_write_result/"
+  ],
+  "requirements": [
+    "Create a new independent unadopted candidate from the exact restored public-v30 project plus only the existing Natural identity overlay and exact Dictionary test overlay. Keep the Raw short-write candidate separate.",
+    "Natural adapter save_file currently ignores FileAccess.store_string boolean at line 207. Capture it. A false result must fail SAVE_FAILED and never rename the temporary file over the destination, even when get_error returns OK. Keep post-flush observable error rejection and close opened handles exactly once.",
+    "Add deterministic fake-backend tests for false+OK, false+non-OK, true+observable error after flush, open failure and Unicode success. Exercise the actual changed production save_file path through a minimal bounded test seam if needed; a duplicated test-only algorithm is insufficient. Record call order and rename count.",
+    "Every failed write case must show no rename, byte-exact old destination preservation and unchanged live state, RNG, pending action and receipts. Open failure must not perform store/flush/rename. Successful Unicode serialization must be byte-exact UTF-8 and round-trip through the existing loader.",
+    "Do not change destination identity/namespace safeguards, Natural engine semantics, load policy, budget, inherited core or other save/export APIs. Any additional defect is reported for a separate ready task.",
+    "Keep original manifests, original independent candidates, previous passed/failed evidence and the exact three-line Dictionary correction. Do not edit the corrected 170-check suite to absorb new cases or redefine its counts.",
+    "Publish a clear production-file diff, binding manifest, focused-test source, actual run records and short review summary. If tests cannot run, publish blocked/unrun state honestly; do not claim success from static review."
+  ],
+  "verification": {
+    "compile": {
+      "entry": "tests/natural_coast_basic/test_compile.gd",
+      "expected_checks": 4
+    },
+    "regression": {
+      "entry": "tests/natural_coast_basic/test_adapter.gd",
+      "recipes": [
+        "coastal_range",
+        "plateau_hinterland"
+      ],
+      "checks_per_recipe": 170,
+      "t03_checks_per_recipe": 13,
+      "count_policy": "Original totals remain separate from additional focused write-result cases. Report each actually executed case/assertion, not hard-coded success totals."
+    },
+    "focused_cases": [
+      "store_false_error_OK",
+      "store_false_error_non_OK",
+      "store_true_flush_observable_error",
+      "open_failure",
+      "Unicode_UTF8_success"
+    ],
+    "guard_provenance": {
+      "archive_repository_path": "candidates/t03-local-runtime/20261008-sol-a1b40/WordsAndPerils_Local_T03_20261008_Evidence.zip",
+      "archive_git_blob_sha": "2eee43fc2fc1f85cd1e90b17e6309531be6468c9",
+      "archive_bytes": 2587853,
+      "archive_sha256": "7ef3be5675316e6ec550c4ce87c58ab600a549568fe1f1e01e75d015ea10e1fa",
+      "guard_source_sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+      "guard_wrapper_sha256": "f831a84e71f692fc851945b001cfc98092b7049fb3b48d0f5099fa49e016c5f8"
+    },
+    "new_run_binding": "Hash final changed adapter, inherited engine/core, exact corrected suite, compile entry, new focused tests and actual executed entry wrappers before and after each run. Include isolated data paths and guard terminal evidence. Never substitute archived prior passes for new runs.",
+    "limits": "Deterministic fake I/O and isolated normal file success do not prove real disk short writes, power-loss or crash durability."
+  },
+  "preserve": [
+    "Adopted public-v30 and original private/native releases",
+    "Actual player saves and all unrelated directories",
+    "Original candidate manifests/evidence",
+    "Raw candidate independence",
+    "Production source/data identity, live state, RNG, pending and receipts"
+  ],
+  "out_of_scope": [
+    "Raw/Natural combined patch",
+    "Shared-temp/concurrency/TOCTOU redesign in this task",
+    "Main/UI/FPS/full player journey/live AI",
+    "Formal adoption or release-control changes",
+    "README/Actions/history/visibility changes"
+  ],
+  "publication": {
+    "result_root": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001",
+    "adopted": false,
+    "phases": "Artifacts commit first; separate summary/result commit references artifacts commit and hashes. Use main-head CAS/fast-forward only."
+  }
+}

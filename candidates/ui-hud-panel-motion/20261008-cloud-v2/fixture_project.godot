@@ -1,0 +1,13 @@
+; Test fixture only. Do not copy this over the production project.godot.
+config_version=5
+[application]
+config/name="Words and Perils HUD motion isolated fixture"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/use_custom_user_dir=true
+config/custom_user_dir_name="WordsAndPerilsHudMotionRestoreFixtureV2"
+[display]
+window/size/viewport_width=1000
+window/size/viewport_height=700
+window/stretch/mode="disabled"
+[rendering]
+renderer/rendering_method="gl_compatibility"

@@ -1,0 +1,89 @@
+{
+  "schema": "wp-hud-panel-motion-minimal-candidate/v2",
+  "status": "source_candidate_unadopted",
+  "baseline": {
+    "repository": "baishouxiaosheng/words-and-perils",
+    "commit": "4be6cf5d271889f2680b3bb50aa2f93c75ed14a4",
+    "tree": "f4f42e4fc9badeae051b87855666a1edd2d104f9",
+    "candidate_prefix": "candidates/ui-hud-panel-motion/20261008-cloud-v1/",
+    "files": [
+      {
+        "path": "overlay/main.gd",
+        "bytes": 204035,
+        "sha256": "fa8a8c81275b4521ebfa38cc3f4156edbc4d67ca6b25f7bcf0ce9fb19ce7401e",
+        "git_blob": "67d66a3592df6d61065d00d2b3aba1c3acdc99f1"
+      },
+      {
+        "path": "overlay/view/ui_motion/hud_panel_motion.gd",
+        "bytes": 6290,
+        "sha256": "d02bf598712829a7520c7d187347f185674b048a7042065aae6e7ef28d013546",
+        "git_blob": "3d0c6c91cb7aa3effdb8d4a75b8ba3614b0f3e69"
+      },
+      {
+        "path": "overlay/tests/ui_motion/test_hud_panel_motion.gd",
+        "bytes": 11893,
+        "sha256": "9db7b4ca06b8bd29183ec539f3771c80e9fcda76fa8251140b3caff57ef6ef6d",
+        "git_blob": "ae181d76655709a90dac9f7ab1c74dd5b3a70839"
+      }
+    ],
+    "included": false
+  },
+  "files": [
+    {
+      "path": "USAGE.txt",
+      "bytes": 3764,
+      "sha256": "47ec7fa33ba56c0c8266c33c091b0e2f027f1cda354f0de9b9afe1c0358a80bf",
+      "git_blob": "f781e2968af804f5943498695adc128c35e271f9"
+    },
+    {
+      "path": "candidate.patch",
+      "bytes": 11518,
+      "sha256": "28f1af2960e50054a61eb98fb292526456aae5d0834096d8458c7b0f76722f43",
+      "git_blob": "609682e5e303857f571ad3cd31978f5451f41bb1"
+    },
+    {
+      "path": "fixture_project.godot",
+      "bytes": 488,
+      "sha256": "568cd20d9dd8ea7ae9568628bc02683ddd1d937b535233bfbe7dd73a69be68f6",
+      "git_blob": "5ccb8a7d5bab938311a52bdea9d41b9950d91fcb"
+    },
+    {
+      "path": "overlay/main.gd",
+      "bytes": 204060,
+      "sha256": "ba9a9b53ec8d7f21411f32e0ed0f70d88529bc2736f7f9d99b2dc66ffa4930be",
+      "git_blob": "e4c1506171c4c84b4b24dd7b9030d5f84aa819b2"
+    },
+    {
+      "path": "overlay/tests/ui_motion/test_hud_panel_motion.gd",
+      "bytes": 17087,
+      "sha256": "d72ca6e8d94bc80e219543aff4ccdd6903158528abd1e09a681e177d401b6534",
+      "git_blob": "1f3b6a5cbc21a1e3b234e4a220dc6450a303c341"
+    },
+    {
+      "path": "overlay/view/ui_motion/hud_panel_motion.gd",
+      "bytes": 8494,
+      "sha256": "5e303bae3aef1af4a5692bd6c90db3b8e780e1cfe2c1fae6bb7b1ec18004b4c5",
+      "git_blob": "0e0d702bde5382c73e8e19174996ecd8acb7c2fd"
+    },
+    {
+      "path": "static_checks.py",
+      "bytes": 8271,
+      "sha256": "5f843812477421e864fa1be9c44035b8d9736a51995ebc42377c82ad863f07f1",
+      "git_blob": "3fe07776566de146a81107a3a067cd16528fa164"
+    },
+    {
+      "path": "static_results.json",
+      "bytes": 5011,
+      "sha256": "a69e508115ce224682ec38894f49a11b901a8e72714f47653cddab969f640c09",
+      "git_blob": "1b85f3875a35e9a40d839b7ec0f44747bf3e3826"
+    }
+  ],
+  "manifest_self_hash_excluded": true,
+  "static_source_patch_assertions": 42,
+  "engine_parse": "not_run",
+  "runtime_tests": "not_run",
+  "real_main_gui_video_fps_ime": "not_run",
+  "independent_review": "not_run",
+  "adopted": false,
+  "scope": "Nine minimal HUD candidate files only. No ZIP, history snapshots, baseline copies or private metadata."
+}

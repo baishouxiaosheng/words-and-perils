@@ -1,0 +1,195 @@
+{
+  "kind": "source-and-patch-only",
+  "baseline_commit": "4be6cf5d271889f2680b3bb50aa2f93c75ed14a4",
+  "status": "passed",
+  "assertion_count": 42,
+  "checks": [
+    {
+      "name": "published v1 baseline identity: main.gd",
+      "passed": true
+    },
+    {
+      "name": "published v1 baseline identity: view/ui_motion/hud_panel_motion.gd",
+      "passed": true
+    },
+    {
+      "name": "published v1 baseline identity: tests/ui_motion/test_hud_panel_motion.gd",
+      "passed": true
+    },
+    {
+      "name": "Main function topology preserved",
+      "passed": true
+    },
+    {
+      "name": "v2 changes only Main ready binding",
+      "passed": true
+    },
+    {
+      "name": "Main only passes actual RestoreDialogue control",
+      "passed": true
+    },
+    {
+      "name": "adapter adds only Restore click helpers",
+      "passed": true
+    },
+    {
+      "name": "existing adapter changes limited to binding routing and cleanup",
+      "passed": true
+    },
+    {
+      "name": "original dock mouse keyboard and tail shielding unchanged",
+      "passed": true
+    },
+    {
+      "name": "layout tween generation and input snapshots preserved",
+      "passed": true
+    },
+    {
+      "name": "one existing Main UI callback site",
+      "passed": true
+    },
+    {
+      "name": "event consumed before Main callback",
+      "passed": true
+    },
+    {
+      "name": "captured click cleared before callback",
+      "passed": true
+    },
+    {
+      "name": "capture restricted to primary click during close",
+      "passed": true
+    },
+    {
+      "name": "canceled events and dock-origin press tails cannot restore",
+      "passed": true
+    },
+    {
+      "name": "Restore capture precedes ordinary shield",
+      "passed": true
+    },
+    {
+      "name": "Restore availability checks visible button",
+      "passed": true
+    },
+    {
+      "name": "Restore availability checks business disabled veto",
+      "passed": true
+    },
+    {
+      "name": "Restore availability checks same viewport",
+      "passed": true
+    },
+    {
+      "name": "Restore availability checks API modal veto",
+      "passed": true
+    },
+    {
+      "name": "Restore availability checks visible window veto",
+      "passed": true
+    },
+    {
+      "name": "adapter does not write geometry size disabled or draft text",
+      "passed": true
+    },
+    {
+      "name": "no authority persistence RNG or action transaction access",
+      "passed": true
+    },
+    {
+      "name": "regression sends actual input at the sibling RestoreDialogue control",
+      "passed": true
+    },
+    {
+      "name": "regression does not replace Restore input with a direct reopen or signal emission",
+      "passed": true
+    },
+    {
+      "name": "regression reproduces public layout overlap",
+      "passed": true
+    },
+    {
+      "name": "unrun input regression covers actual RestoreDialogue click reverses closing exactly once",
+      "passed": true
+    },
+    {
+      "name": "unrun input regression covers actual RestoreDialogue reversal starts at displayed position",
+      "passed": true
+    },
+    {
+      "name": "unrun input regression covers RestoreDialogue click synchronizes all Main visibility state",
+      "passed": true
+    },
+    {
+      "name": "unrun input regression covers RestoreDialogue click neither submits nor reaches board input",
+      "passed": true
+    },
+    {
+      "name": "unrun input regression covers after actual RestoreDialogue recovery one click yields one intent",
+      "passed": true
+    },
+    {
+      "name": "unrun input regression covers dock-to-Restore release",
+      "passed": true
+    },
+    {
+      "name": "unrun input regression covers Restore drag-out release",
+      "passed": true
+    },
+    {
+      "name": "unrun input regression covers canceled Restore release",
+      "passed": true
+    },
+    {
+      "name": "unrun input regression covers modal API gate blocks RestoreDialogue",
+      "passed": true
+    },
+    {
+      "name": "unrun regression asserts zero early input and GUI penetration",
+      "passed": true
+    },
+    {
+      "name": "unrun regression retains draft business flags and authority bytes",
+      "passed": true
+    },
+    {
+      "name": "v2 overlay contains exactly three final sources",
+      "passed": true
+    },
+    {
+      "name": "v2 patch application precheck",
+      "passed": true
+    },
+    {
+      "name": "v2 patch application",
+      "passed": true
+    },
+    {
+      "name": "patch roundtrip reproduces all three v2 sources",
+      "passed": true
+    },
+    {
+      "name": "baseline source files unchanged after checks",
+      "passed": true
+    }
+  ],
+  "source_defect": {
+    "dock_rect": [
+      380,
+      856,
+      840,
+      198
+    ],
+    "restore_center": [
+      800,
+      1043
+    ],
+    "center_inside_resting_dock": true
+  },
+  "godot_semantic_parse": "not_run",
+  "godot_tests": "not_run",
+  "real_main_gui": "not_run",
+  "independent_review": "not_run",
+  "phase": "prepublication_static_check",
+  "adopted": false
+}

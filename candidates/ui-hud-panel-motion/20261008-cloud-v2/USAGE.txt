@@ -1,0 +1,63 @@
+Words and Perils: HUD RestoreDialogue motion candidate v2
+
+Status
+42 offline source/patch assertions passed. Godot semantic parsing, runtime tests,
+real Main/GUI/video/FPS/IME verification and independent review are NOT RUN.
+This is an unadopted source candidate. Saving it in Git is candidate backup,
+not installation, runtime certification or formal adoption.
+static_results.json records the prepublication source-only checks.
+
+Change from v1
+The actual RestoreDialogue button overlaps the dock's resting footprint. v1's
+closing input shield consumed its click, preventing mid-close recovery.
+v2 binds that existing button, captures a complete primary mouse click on it,
+consumes the input before board handlers, and calls Main's existing UI visibility
+handler once. It retains the original dock/Enter shielding and input-tail guards.
+The Main change is one _ready binding line. The adapter does not write draft text,
+business disabled flags, dock size, world position, RNG or receipts, or call an
+action transaction. These are source properties, not verified runtime results.
+
+Exact v1 baseline
+Repository: baishouxiaosheng/words-and-perils
+Commit: 4be6cf5d271889f2680b3bb50aa2f93c75ed14a4
+Directory: candidates/ui-hud-panel-motion/20261008-cloud-v1/
+overlay/main.gd: 204035 bytes
+SHA256 fa8a8c81275b4521ebfa38cc3f4156edbc4d67ca6b25f7bcf0ce9fb19ce7401e
+overlay/view/ui_motion/hud_panel_motion.gd: 6290 bytes
+SHA256 d02bf598712829a7520c7d187347f185674b048a7042065aae6e7ef28d013546
+overlay/tests/ui_motion/test_hud_panel_motion.gd: 11893 bytes
+SHA256 9db7b4ca06b8bd29183ec539f3771c80e9fcda76fa8251140b3caff57ef6ef6d
+The repository-root main.gd is a different source. Do not apply this patch there.
+
+Static verification (Python 3 and Git required)
+python static_checks.py --baseline-dir <downloaded-v1-candidate-directory>
+The baseline is read only. Patch application occurs in a disposable directory.
+The script writes static_results.json, uses no network and never starts Godot.
+Static assertions cannot certify GDScript parsing, input propagation or visuals.
+
+Application for later verification
+Use a separate, fully restored public-v30 project with the exact v1 overlay
+already present. Check the three baseline files above. Apply candidate.patch
+there or copy this candidate's three overlay files to matching project paths.
+Full public-v30 dependencies and real saves are not included here.
+Keep production files and real save directories separate from the candidate.
+
+Minimal fixture
+In a new empty directory, copy fixture_project.godot as project.godot and copy
+only the adapter and test from overlay/ to their corresponding paths. Do not
+copy overlay/main.gd into the minimal fixture. There are no Autoload entries;
+the configuration uses a dedicated v2 custom user directory.
+Only when the applicable engine process guard permits the isolated test, use:
+godot --headless --path <fixture-directory> --script res://tests/ui_motion/test_hud_panel_motion.gd
+Preserve original stdout, stderr, exit status and any parse or runtime failures.
+The unrun regression sends mouse input over a sibling RestoreDialogue button at
+the public layout's overlapping position. It asserts continuous reversal, Main
+UI visibility synchronization, no intent or board click during recovery, and
+one restored normal submit click producing one fixture intent. It also contains
+invalid-release, canceled-click, modal-veto and input-tail assertions.
+The fixture does not certify real Main or SubViewport integration.
+
+Remaining verification
+Independent source review, Godot semantic parsing and runtime tests are pending.
+Real Main input checks and a separately guarded GUI/video run are also pending.
+Headless results cannot substitute for physical mouse, IME, DPI, visuals or FPS.

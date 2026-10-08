@@ -1,0 +1,58 @@
+{
+  "schema": "words-and-perils-manual-receipt-display-candidate/v1",
+  "status": "STATIC_CHECKS_PASSED_RUNTIME_NOT_RUN_NOT_ADOPTED",
+  "repository": "baishouxiaosheng/words-and-perils",
+  "target_directory": "candidates/manual-receipt-display/20261008-dot-v1",
+  "formal_base_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+  "base_main_path": "candidates/actor-public-v29-compat/05ebbe56e88d/production/main.gd",
+  "base_main_bytes": 203707,
+  "base_main_sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f",
+  "candidate_main_sha256": "fcbe64b533f21bbd6e6b21c9c020f11f934ccee4c064078216e0f69cdcb6376b",
+  "changed_functions": [
+    "apply_playtest_reply"
+  ],
+  "changed_lines": {
+    "removed": 1,
+    "added": 5
+  },
+  "gameplay_scope": "actor_actions_v2 real player -> single enemy -> player; manual committed-receipt narration display only",
+  "frozen_actor_authority_sha256": "084f3c14412ea01fd0d5f4023463232979376e8938a5800325feffa93371cc6e",
+  "godot_parse": "not_run",
+  "gameplay_regression": "not_run",
+  "standalone_test_runner": false,
+  "tests_require": "Existing admitted isolated real-Main offline round-trip QA fixture; no guard bypass",
+  "files": [
+    {
+      "path": "overlay/main.gd",
+      "bytes": 204023,
+      "sha256": "fcbe64b533f21bbd6e6b21c9c020f11f934ccee4c064078216e0f69cdcb6376b"
+    },
+    {
+      "path": "MANUAL_RECEIPT_DISPLAY.patch",
+      "bytes": 1147,
+      "sha256": "21c651097fb8ef7c399ba20d62cc27421f2dedf848c3e04bc4021f9e0d591ff0"
+    },
+    {
+      "path": "tests/test_manual_receipt_display.gd",
+      "bytes": 8013,
+      "sha256": "a53846c2072b1cf3a7e646cfc0924302a89c9d975af55a05cd58de03a1b43d5e"
+    },
+    {
+      "path": "SOURCE_REVIEW.md",
+      "bytes": 8648,
+      "sha256": "3201c19998ae4df4568b55a6938f2818fa72093eba27a7644a67014b49e0dd9f"
+    },
+    {
+      "path": "USAGE.txt",
+      "bytes": 3513,
+      "sha256": "0464dfa7bc11ed0eec0e99b4897014824396ccefc9e701d8b6de3b03efd99f2e"
+    },
+    {
+      "path": "STATIC_CHECKS.json",
+      "bytes": 24018,
+      "sha256": "0ada1c965de9b0fc36944771ffbc5c05e58a41754cb204f991e9b03559c88530"
+    }
+  ],
+  "manifest_excludes_itself": true,
+  "publication_scope": "Only these six payload files and this manifest under target_directory; no root Main, game README, existing planning files, HUD candidates, visibility or history changes"
+}

@@ -1,0 +1,15 @@
+--- a/main.gd
++++ b/main.gd
+@@ -2199,7 +2199,11 @@
+ 	var result: Dictionary = _runtime_adapter().import_narration(decision) if (actor_action_mode or generated_v3_npc_mode) and decision.get("schema_version")=="ai_gm_narration/v1" else playtest.import_reply(decision)
+ 	if not result.ok: set_status("评估未应用，数值保留：" + _assessment_error_text(result)); return false
+ 	if decision.get("schema_version") == "ai_gm_narration/v1":
+-		if not result.get("already_recorded",false): append_journal("叙事记录", result.narration)
++		if not result.get("already_recorded",false):
++			var action_id:String=str(decision.get("action_id",""))
++			var caption:String="叙事记录 · 第%d回合"%int(playtest.committed(action_id).turn) if actor_action_mode else "叙事记录"
++			var promote_latest:bool=not actor_action_mode or (action_id==playtest.last_action and playtest.phase()=="idle")
++			append_journal(caption,result.narration,promote_latest)
+ 		set_status("叙事仅显示文字，不能改数值、重掷或阻塞提交")
+ 	else:
+ 		set_status("人工离线评估通过结构校验，演示规则已准备；下一步结算一次")

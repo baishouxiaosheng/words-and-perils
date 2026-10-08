@@ -1,0 +1,29 @@
+Words and Perils: manual committed-receipt dialogue ownership candidate
+
+Status: source candidate only, not adopted. Godot parsing and gameplay regression have NOT run. Static source checks passed; see STATIC_CHECKS.json and SOURCE_REVIEW.md.
+
+Input: restored public-v30 Main from formal commit e8ec5db0341f8b4a8aaa0a933e5968c33440c9da, 203707 bytes, SHA-256 05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f. Do not use the repository root Main or another game version as this patch's base.
+
+Candidate Main: overlay/main.gd, 204023 bytes, SHA-256 fcbe64b533f21bbd6e6b21c9c020f11f934ccee4c064078216e0f69cdcb6376b.
+
+Purpose: optional manual narration for an older committed receipt stays in history, while a newer player action keeps the current speaker, text and tooltip. Latest idle receipt narration still promotes normally. Only apply_playtest_reply changes: one removed line and five added lines. History import remains supported.
+
+Review or apply MANUAL_RECEIPT_DISPLAY.patch only to a disposable copy of the exact restored base. overlay/main.gd is the full corresponding candidate for byte/hash comparison. Nothing here automatically changes the active game, its root Main, README, repository visibility, save data or production branch adoption.
+
+Prepared tests: tests/test_manual_receipt_display.gd contains callable helpers, not a standalone launcher or fixture builder. Run only from the existing authorized real-Main QA fixture, using the original actor_actions_v2 source/Engine and offline transport, after a real player -> one enemy -> player round trip. Keep the approved process/resource guard and isolated user directory unchanged; do not bypass a blocked environment or resource check.
+
+Use separate fresh fixtures with real, un-narrated receipts:
+1. pending_import(app, committed_player_receipt.action_id, "MANUAL_OLDER_RECEIPT_ONLY")
+2. pending_import(app, committed_enemy_receipt.action_id, "MANUAL_LATEST_RECEIPT_WITH_NEW_PENDING")
+3. idle_latest_import(app, "MANUAL_LATEST_IDLE_RECEIPT")
+
+The helpers exercise the actual Main manual JSON modal and verify history identity, unknown/duplicate reply handling, current dialogue ownership, pending request identity, unchanged authority/RNG/turns and no receipt-effects replay. They do not create a model request, fake a receipt, alter world facts, replace the Engine or force RNG.
+
+Native acceptance is still required. This candidate is independent of HUD layout work and does not merge or overwrite another candidate.
+
+Future static review, without starting Godot:
+- Verify the disposable restored base main.gd has the input SHA above.
+- In that disposable copy, run: patch --dry-run -p1 < /path/to/MANUAL_RECEIPT_DISPLAY.patch
+- Compare the patch and overlay: only apply_playtest_reply differs, with one removed line and five added lines. Reconstructing that patch must produce the candidate SHA above.
+- Compare the new promote_latest expression with _on_runtime_narration. Enumerate actor_action_mode in [false,true], action_id==last_action in [false,true], and phase in [idle,awaiting_assessment,ready_roll,rolled,staged]. Those are the 20 rows recorded in STATIC_CHECKS.json. The expected promotion is true for every non-actor row; for actor rows, only same receipt plus idle is true. This verifies the display predicate, not real Engine or UI behavior.
+- Verify each delivered payload's bytes/hash against MANIFEST.json. Then run the prepared real-Main regression only in an approved isolated QA environment before adoption.

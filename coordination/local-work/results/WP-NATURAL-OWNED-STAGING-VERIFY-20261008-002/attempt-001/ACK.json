@@ -1,0 +1,56 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "ack",
+  "task_id": "WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002",
+  "task_sha256": "49032c299667885b29120af6f7e37685272f8098302be457aaba91e314e9425a",
+  "attempt_id": "attempt-001",
+  "intake_commit": "9eea0b017400921780bd55fc99366455a4e37de8",
+  "status": "acknowledged",
+  "automation_enabled": false,
+  "summary": "Unique claim remote bytes verified. All 17 input rows, guard source, predecessor terminal ledger/released lock and current source channel verified. Non-game codex exec canary actually passed. This exact verification task now starts; native post-turn persistence not yet verified.",
+  "source_hashes": {
+    "candidates/t03-natural-owned-staging/20261008-cloud-v1/MANIFEST.json": "1bcb2a01c9c24ade031bd7b670d2f00c0c104c76e812914df1150df1f3be7810",
+    "candidates/t03-natural-owned-staging/20261008-cloud-v1/BASELINE_MANIFEST.json": "452767dd49a51b93c17f398cacbb3bd157e4b1a2936853a08c6eae1525e659dd",
+    "candidates/t03-natural-owned-staging/20261008-cloud-v1/PRIMITIVE_PROOF.json": "e9b87b93b04b3ee6cff51a9bd78af138ad0ae33790e81c80f5247401feab9416",
+    "candidates/t03-natural-owned-staging/20261008-cloud-v1/SOURCE_BINARY_BINDING.json": "d2eebfcc074d6a718febeed529264bba89e8065211afc6862a210a23aa80b0de",
+    "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/view/generated_natural_coast_basic/adapter.gd": "7e11cf5a3679fdc3bee4aa4264a11ed49cdadb2744136c0ffb4bae2ee47fe345",
+    "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/RESULT.json": "3caf4fe445c2357c97290da7bdb9f0f51ec353661bd40ae3d0ae93da72edb0d4",
+    "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/fake_adapter.gd": "0d35fe31e80b41faf3ec970936bf537e6f4d7df7faeba2c43b1da6e4c791c80a",
+    "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/io_probe.gd": "370c6bab323d01b778ef65955aae73f83006f128b9078e7e8da535d7b05c5aa4",
+    "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/test_cleanup_diagnostic.gd": "6cbb794d684746ed6d4a2d607f4935c9a9ff88abe7f1f09f60e0b86add2782c7",
+    "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/test_focused_write_result.gd": "122c7ca5c33ec324177b56d3a3f01a4cc53373ac7d1608ebf39406fd98d7baaf",
+    "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/test_mkdir_semantics_probe.gd": "76a2c1d21771992fa40e8fbe339ca74396414b51eb625a577fc7c1609ca88dbb",
+    "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/test_owned_staging.gd": "464a8bd4b068bdc2cdd754714554efdfac870d1430e8e2350d52e09f7a3477b7",
+    "candidates/t03-natural-owned-staging/20261008-cloud-v1-test-adaptation/MANIFEST.json": "2ffa96256741f55cb038900a5642ceb1e4e580fa7f84ce2e935fde8ad445f923",
+    "candidates/t03-natural-owned-staging/20261008-cloud-v1-test-adaptation/STATIC_CHECK_RECEIPT.json": "007635bd0761153c48857b58ac075a0ac7a522250dc8f1524fabfaf9eaa3d5ce",
+    "candidates/t03-natural-owned-staging/20261008-cloud-v1-test-adaptation/SUMMARY.txt": "9d4bf4eb8444850c937d6594c1bba03fcb64f490f99a15117081519ef5f7c489",
+    "candidates/t03-natural-owned-staging/20261008-cloud-v1-test-adaptation/TEST_ONLY_ADAPTATION.patch": "3572bdeb3292bd6b9a32ad097182e08a6d63a3c7981041854d7ccd22191c452b",
+    "candidates/t03-natural-owned-staging/20261008-cloud-v1-test-adaptation/overlay/tests/natural_coast_basic/test_adapter.gd": "ae391e16f204575beef057c245430dc8a830e4b9611f34683988ee42497052f8"
+  },
+  "checks": [
+    {
+      "old_task": "WP-NATURAL-SAVE-BOOL-20261008-001",
+      "status": "reviewable",
+      "terminal_ledger_verified": true,
+      "old_lock_currently_free_before_own_acquisition": true,
+      "old_lock_owner_pid": 68284,
+      "old_owner_currently_alive": false,
+      "old_cleanup_receipt": "Lock released / job, reader and host exits verified in prior local receipts",
+      "godot_found": false,
+      "unknown_process_argv_or_environment_read": false,
+      "old_claim_deleted": false,
+      "checked_utc": "2026-10-08T15:14:11.2551843Z"
+    },
+    {
+      "input_rows_verified": 17,
+      "claim_commit": "5c1400d105da60a84941b035024e85b0a38b8cd5",
+      "claim_actual_remote_bytes_match": true
+    }
+  ],
+  "blockers": [],
+  "context": {
+    "used_percent": null,
+    "compaction": "unavailable"
+  },
+  "candidate_adopted": false
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "independent_source_only_checkpoint",
+  "adopted": false,
+  "standalone_runnable": false,
+  "merged_with_other_new_candidates": false,
+  "godot_parse_run": false,
+  "engine_run": false,
+  "runtime_tests_run": 0,
+  "base_final_source_lock_sha256": "082235c6075572821390660c21d29463d88d8f475518d6ad591d34a5a8ba93a8",
+  "base_final_source_files_verified": 906,
+  "apply_policy": "Use only a new disposable copy of the exact independently verified base. Do not apply to the frozen candidate, backup, current adopted release or actual player save directory.",
+  "scope": "Source and text evidence only. No full archive, video, release-control, adoption or workflow file is included.",
+  "original_candidate_zip_sha256": "cb3cf30676db32aec8260193b8c861412c3f4ce888d1d79618782fe5b31530dc",
+  "verification": "Static source verification only; no Godot parser, engine or visual acceptance.",
+  "files": {
+    "MANIFEST.json": {
+      "sha256": "767a5695f8629cb7d759cd374addf77f2117d5ef3d1ddeb4c104736a4ca02f6d",
+      "bytes": 3206
+    },
+    "STATIC_REVIEW.md": {
+      "sha256": "ed29fcfa11d1898c32bed445bef13d8ed02251a1db6f0e188fb8b55996348f06",
+      "bytes": 2211
+    },
+    "intent_ui_labels.patch": {
+      "sha256": "735093f52776155f6148913c9ddd63f78297fae7c1c8789dfecfc67569babd4d",
+      "bytes": 2816
+    },
+    "overlay/main.gd": {
+      "sha256": "fd7f2eddd90ea3795e2fa8884ddabf642ecf72ad60f8503ad0c2184a198ce7a0",
+      "bytes": 208841
+    }
+  }
+}

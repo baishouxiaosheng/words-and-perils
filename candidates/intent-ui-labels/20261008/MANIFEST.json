@@ -1,0 +1,76 @@
+{
+  "schema": "words-and-perils-intent-ui-labels-overlay/v1",
+  "created_utc": "2026-10-08T01:20:49.286754+00:00",
+  "status": "candidate_not_adopted_not_runtime_tested",
+  "standalone_runnable": false,
+  "base": {
+    "project": "exact restored final candidate identified by source-lock SHA-256",
+    "main.gd": {
+      "sha256": "7bc4bb027e40111c2bb508ec7377be6adc294399a7df7793bd5aee054a28d0c6",
+      "bytes": 208515
+    },
+    "candidate_manifest_sha256": "72501e2842b4df8f4ef7bf147c080005a8fdef968c53e1f1dffbfec2c60b0dac",
+    "final_source_lock_sha256": "082235c6075572821390660c21d29463d88d8f475518d6ad591d34a5a8ba93a8"
+  },
+  "files": {
+    "overlay/main.gd": {
+      "sha256": "fd7f2eddd90ea3795e2fa8884ddabf642ecf72ad60f8503ad0c2184a198ce7a0",
+      "bytes": 208841,
+      "target": "main.gd"
+    },
+    "intent_ui_labels.patch": {
+      "sha256": "735093f52776155f6148913c9ddd63f78297fae7c1c8789dfecfc67569babd4d",
+      "bytes": 2816
+    }
+  },
+  "scope": [
+    "normal submission caption: 提交\\n意图 (existing two-line layout preserved)",
+    "tile picker terrain label: reuse existing terrain_name mapping; unknown labels unchanged"
+  ],
+  "verification": [
+    {
+      "check": "frozen_source_lock",
+      "status": "passed",
+      "files": 906
+    },
+    {
+      "check": "candidate_overlay_manifest",
+      "status": "passed",
+      "files": 50
+    },
+    {
+      "check": "exact_delta_allowlist",
+      "status": "passed",
+      "detail": "Two literal caption replacements; display-only copied picker choices using unchanged terrain_name helper. No other edits."
+    },
+    {
+      "check": "unchanged_callback_and_phase_control_text",
+      "status": "passed",
+      "detail": "Exact reverse-delta equality to locked main.gd; end_turn callback and EndTurn node name unchanged. Waiting, complete-turn, enemy, fallen, dice, confirm and retry controls untouched."
+    },
+    {
+      "check": "gdscript_syntax",
+      "status": "static_review_only",
+      "detail": "Existing typed Array/Dictionary iteration and String.split/PackedStringArray/join syntax reviewed. No Godot parser, engine or runtime executed."
+    },
+    {
+      "check": "picker_semantics",
+      "status": "static_review_only",
+      "detail": "Only reference.kind=tile display copies are considered; split maxsplit=2 retains suffix; terrain_name Dictionary.get(name,name) preserves unknown names; source choices/reference/order/distance and picker callback unchanged."
+    },
+    {
+      "check": "frozen_main_unchanged_after_write",
+      "status": "passed"
+    },
+    {
+      "check": "patch_dry_run_against_frozen_base",
+      "status": "passed",
+      "detail": "patch --dry-run --batch -p1: checking file main.gd; no changes applied."
+    }
+  ],
+  "runtime_tested": false,
+  "runtime_blocker": "Guard-required cgroup inputs unavailable, as reported by parent. No engine/runtime/native display attempted.",
+  "apply_policy": "Apply only to a new isolated copy of the exact locked base. Do not overwrite frozen restored candidate or its completed backup.",
+  "publication": "Independent source-only Git checkpoint; not adopted. No runtime acceptance is claimed.",
+  "readme": "Unchanged; no README included."
+}

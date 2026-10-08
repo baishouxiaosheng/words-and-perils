@@ -1,0 +1,62 @@
+--- baseline/tests/t03_natural_write_result/test_save_file.gd
++++ candidate/tests/t03_natural_owned_staging/test_focused_write_result.gd
+@@ -1,15 +1,21 @@
+ extends SceneTree
+ const Adapter = preload("res://view/generated_natural_coast_basic/adapter.gd")
+-const FakeAdapter = preload("res://tests/t03_natural_write_result/fake_adapter.gd")
+-const ProbeIO = preload("res://tests/t03_natural_write_result/io_probe.gd")
++const FakeAdapter = preload("res://tests/t03_natural_owned_staging/fake_adapter.gd")
++const ProbeIO = preload("res://tests/t03_natural_owned_staging/io_probe.gd")
+ const Generator = preload("res://core/world_generation_v3/generator.gd")
+ const C = preload("res://core/ai_gm_rebuilt/canonical.gd")
+-const ADAPTER_SHA256 := "6f9e593303a297391995329e0a5daecb477250b69944ee471247d9cca5df1bff"
++const ADAPTER_SHA256 := "7e11cf5a3679fdc3bee4aa4264a11ed49cdadb2744136c0ffb4bae2ee47fe345"
+ var assertions := 0
+ var failures: Array = []
+ var cases: Array = []
+ var setup_assertions := 0
+-func _initialize() -> void: _run.call_deferred()
++func _initialize() -> void:
++	var expected: String = OS.get_environment("FOGBANK_STAGING_TEST_USER_DIR").replace("\\","/").trim_suffix("/")
++	if expected.is_empty() or OS.get_user_data_dir().replace("\\","/").trim_suffix("/") != expected:
++		printerr("STAGING_TEST_REFUSED: explicit isolated user directory required"); quit(2); return
++	if FileAccess.file_exists("user://natural_coast_basic_save_write_result.json"):
++		printerr("STAGING_TEST_REFUSED: fresh isolated test directory required"); quit(2); return
++	_run.call_deferred()
+ func check(ok: bool, label_: String) -> void:
+ 	assertions += 1
+ 	if not ok: failures.append(label_); printerr("FAIL: "+label_)
+@@ -54,7 +60,7 @@
+ 	ProbeIO.reset(options,path,original)
+ 	adapter.use_fake_backend = true
+ 	# Inherited production save_file includes actual identity/state validation.
+-	# Only the virtual temporary open and rename boundaries are fake.
++	# Allocation, staging readback and fixed cleanup are additional explicit I/O seams.
+ 	var result: Dictionary = adapter.save_file(path)
+ 	check(result.get("ok",false) == expect_ok,label_+": exact result")
+ 	if not expect_ok: check(result.get("code") == "SAVE_FAILED",label_+": SAVE_FAILED returned")
+@@ -68,7 +74,7 @@
+ 		check(C.bytes(after.engine[field]) == C.bytes(saved.engine[field]),label_+": "+field+" byte-exact")
+ 	check(FileAccess.get_file_as_bytes(path) == original,label_+": real old destination byte-exact")
+ 	if expect_ok:
+-		check(ProbeIO.files[path] == encoded.to_utf8_buffer() and not ProbeIO.files.has(path+".tmp"),label_+": memory success exact UTF-8")
++		check(ProbeIO.files[path] == encoded.to_utf8_buffer() and ProbeIO.files[path+".tmp"] == "PREEXISTING_TEST_TMP".to_utf8_buffer(),label_+": memory success exact UTF-8")
+ 		check(encoded.contains("雪岸") and encoded.to_utf8_buffer().size() > encoded.length(),label_+": actual multibyte Unicode serialization")
+ 		var memory_reader := Adapter.new()
+ 		check(memory_reader.load_data(JSON.parse_string(ProbeIO.files[path].get_string_from_utf8())).ok and C.bytes(memory_reader.save_data()) == encoded,label_+": existing strict loader memory roundtrip")
+@@ -84,13 +90,13 @@
+ 		if options.get("open_failed",false):
+ 			check(ProbeIO.files[path+".tmp"] == "PREEXISTING_TEST_TMP".to_utf8_buffer(),label_+": no temp/store/flush on open failure")
+ 		else:
+-			check(ProbeIO.files.has(path+".tmp"),label_+": failed temp never promoted")
++			check(ProbeIO.files[path+".tmp"] == "PREEXISTING_TEST_TMP".to_utf8_buffer() and ProbeIO.directories.is_empty(),label_+": old temp unchanged; own failed staging removed")
+ 			check(ProbeIO.counters.error_reads.size() == 1 and ProbeIO.counters.error_reads[0].after_flush,label_+": observable error checked after flush")
+ 	adapter.use_fake_backend = false
+ 	var outcome := {"case":label_,"passed":failures.size()==start_failures,"assertions":assertions-start_assertions,"calls":ProbeIO.calls.duplicate(),"counters":ProbeIO.counters.duplicate(true),"failure_code":result.get("code",""),"failure_simulation":"in-memory backend only","native_success":expect_ok}
+ 	cases.append(outcome)
+ 	print("FOCUSED_CASE ",JSON.stringify(outcome))
+ func finish() -> void:
+-	print("NATURAL_WRITE_RESULT ",JSON.stringify({"ok":failures.is_empty(),"assertions":assertions,"setup_assertions":setup_assertions,"cases":cases,"failures":failures,"owned_pid":OS.get_process_id(),"adapter_sha256":ADAPTER_SHA256,"script_sha256":FileAccess.get_sha256(get_script().resource_path),"scope":"actual production save_file via virtual I/O; simulated failures plus real isolated Unicode success, not OS short-write/power-loss/crash durability"}))
++	print("NATURAL_WRITE_RESULT ",JSON.stringify({"ok":failures.is_empty(),"assertions":assertions,"setup_assertions":setup_assertions,"cases":cases,"failures":failures,"owned_pid":OS.get_process_id(),"adapter_sha256":ADAPTER_SHA256,"script_sha256":FileAccess.get_sha256(get_script().resource_path),"scope":"adapted original five stimuli through candidate production save_file; staging seams explicit; not the old script hash or OS short-write/crash acceptance"}))
+ 	quit(0 if failures.is_empty() else 1)
+ 

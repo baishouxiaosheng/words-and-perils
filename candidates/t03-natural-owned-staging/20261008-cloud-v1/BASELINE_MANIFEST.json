@@ -1,0 +1,30 @@
+[
+  {
+    "path": "view/generated_natural_coast_basic/adapter.gd",
+    "bytes": 21635,
+    "sha256": "6f9e593303a297391995329e0a5daecb477250b69944ee471247d9cca5df1bff",
+    "origin_commit": "e5745fbfd568415a5d8ca35ca25bd18d5a092e98",
+    "readback_equal": true
+  },
+  {
+    "path": "tests/t03_natural_write_result/fake_adapter.gd",
+    "bytes": 533,
+    "sha256": "c642076ad58159f4a1f4f46760bb5867084e33b2b34a4b7d47e5e6fddad094f2",
+    "origin_commit": "e5745fbfd568415a5d8ca35ca25bd18d5a092e98",
+    "readback_equal": true
+  },
+  {
+    "path": "tests/t03_natural_write_result/io_probe.gd",
+    "bytes": 1957,
+    "sha256": "6405bdd124d0d65d96f680bffb295415849f2c90117896f01233f7cbc4d843f8",
+    "origin_commit": "e5745fbfd568415a5d8ca35ca25bd18d5a092e98",
+    "readback_equal": true
+  },
+  {
+    "path": "tests/t03_natural_write_result/test_save_file.gd",
+    "bytes": 7547,
+    "sha256": "400ca10734ae4d3774f8a9aeb7c2fbb074d814144106b930f7c79fc91e843961",
+    "origin_commit": "e5745fbfd568415a5d8ca35ca25bd18d5a092e98",
+    "readback_equal": true
+  }
+]

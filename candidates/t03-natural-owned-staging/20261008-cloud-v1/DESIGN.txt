@@ -1,0 +1,23 @@
+Natural adapter 自有暂存隔离 — 未解析、未运行、未采用初稿
+
+基底仅 e574 的 Natural adapter 6f9e593303a297391995329e0a5daecb477250b69944ee471247d9cca5df1bff。保存的 baseline 与 candidate 分开。生产修改只在该 adapter 的 save_file 和小 helpers；原身份/namespace 检查、状态验证、Canonical、24 MiB 预算、store bool、flush 后 get_error、单次写句柄 close 保留。没有组合 Raw 候选，没有修改 inherited Engine、完整170套件或T03 13场景。
+
+原语证据按官方 4.6.3-stable commit 35e80b3a8822a9df9be390814b62f44c0a9c69e8 固定。make_dir_absolute 直接透传非递归 make_dir；Windows CreateDirectoryW 成功才 OK，Unix mkdir 成功才 OK；已有路径不是 OK。Crypto.generate_random_bytes 按同 commit Crypto.xml 记录为强随机。所有下载来自官方 GitHub API，原件及 Git blob SHA/SHA256 在 official-source。
+本机版本回执 4.6.3.stable.official.7d41c59c4 与该 tag 不同。官方 commits/7d41c59c4 返回 HTTP 422: No commit found for SHA: 7d41c59c4，原错误保留。未建立源码/binary 绑定，未重试另一来源。现有 binary 的隔离 test_mkdir_semantics_probe 必须先运行并由原守卫严格验收，再考虑候选测试；不安装或更换引擎。probe 的通过也不是 binary 来源证明。
+
+保存一次只生成一个32-byte Crypto nonce，并以目标同父目录下固定前缀 .words-and-perils-natural-stage- 加64位hex命名。只有非递归 mkdir 返回 OK 后才持有该目录，内部 payload.json 才允许打开 WRITE。碰撞或任何非 OK 立即拒绝，不认领、不写入、不删除、不扫描、不生产自动换名。强随机只是降低碰撞；独占保证来自创建结果。路径只由本次 destination 的父目录及固定前缀/nonce构造。
+编码结果在进入暂存前固定。原 bool/flush/error/close 后，用独立只读句柄检查长度恰等于期望 UTF-8 字节数，再读取恰好该长度；读错误必须 OK/EOF，实际 PackedByteArray 必须逐字节相等，关闭该读句柄一次。该验证不更改数据/签名或游戏 RNG。
+读取或写入失败在 rename 前：允许仅删除本事务固定 payload（若存在）及自有空目录；非递归，不扫描旧目录。清理失败保留错误元数据并 push_error。
+rename 失败：完全不清理，不删除 payload 或事务目录，不删旧、不回滚。返回 SAVE_FAILED + 精确 recovery_path/staging_directory/rename_error。Windows 官方非同名分支会先尝试移除旧目标再 MoveFileW，因此绝不宣称原目标仍保持或问题已修复；本候选仅不再自行删除恢复资料。
+rename 成功：提交已经成功，仅删除本事务空目录。删除失败仍保留 ok=true 和 path，并添加 cleanup_ok=false/cleanup_error/cleanup_directory，同时 push_error；不会误称未保存或伪装无诊断成功。
+
+所有权边界仅为参与该 adapter 保存流程的合作调用的暂存。Raw direct、Natural Engine direct、请求导出器、其他 adapter 及任意外部目录/链接替换不参与；不提供目标CAS、全写者互斥、旧状态覆盖保护、Windows目标替换修复或掉电/崩溃耐久。没有修改目标替换API，也没有增设目标锁。
+
+测试绑定结构
+新 tests/t03_natural_owned_staging/io_probe.gd 明确模拟 nonce、独占目录创建、暂存 WRITE/readback、固定删除和 rename。FakeAdapter 只覆盖这些 I/O seams，身份检查/生成/序列化/保存控制流使用候选实际 adapter。old open/rename 两 seam 保留，新 seam diff 在 ADAPTER_DIFF.patch；不会把旧 test hash 当成新入口。
+test_focused_write_result 保留原五个 stimuli、fixture、状态/RNG/pending/receipts、原子操作顺序及 loader/Unicode 语义；temp断言显式改为旧 shared sentinel 保持及自有失败暂存清理。原函数check调用数不增加，是否仍为90断言只能未来实跑确认。FOCUSED_TEST_ADAPTATION.patch 与原400ca...脚本同时保留。写/读句柄计数分开，由新增场景检查读回句柄单次关闭。
+test_owned_staging 三个场景组：首名强制碰撞（A成功创建，B碰撞拒绝且不碰A数据；B下一独立调用使用不同nonce，A/B各提升自己的bytes）；legacy path.tmp在成功和失败原样；自有清理区分prewrite/open/readback失败、rename失败保payload和成功删除空目录。确定性 interleave 仅内存后端，不是操作系统并发。
+test_cleanup_diagnostic 是独立预期ERROR观察入口。模拟成功提交后目录删除失败，断言提交ok和cleanup错误同时存在，不抑制生产 push_error。原严格守卫应将此入口记录为有ERROR、非strict-pass；不能把该入口汇入零ERROR成功门。未来如何独审这种有意诊断由主线程决定，当前没有放宽守卫。
+所有入口先核显式隔离 FOGBANK_STAGING_TEST_USER_DIR，并拒绝已有测试目标。正常成功测试仍须原严格守卫零ERROR/WARNING、PID/exit及前后源hash记录。新增组与原五场景、170/T0313分别计数，绝不挪用本机旧成绩。
+
+本轮只编写源码和源级检查，Godot解析/运行次数0。所有后续运行都由主线程安排；生产采用/发布未进行。

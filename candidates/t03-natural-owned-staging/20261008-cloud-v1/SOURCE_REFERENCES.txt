@@ -1,0 +1,13 @@
+Official source reference only; no full upstream source is bundled.
+Godot Engine, copyright (c) 2014-present Godot Engine contributors and (c) 2007-2014 Juan Linietsky, Ariel Manzur. Upstream source is MIT licensed. Retain upstream copyright and permission notice if redistributing any upstream source.
+License: https://github.com/godotengine/godot/blob/35e80b3a8822a9df9be390814b62f44c0a9c69e8/LICENSE.txt
+Tag: https://github.com/godotengine/godot/tree/4.6.3-stable
+Pinned source commit: 35e80b3a8822a9df9be390814b62f44c0a9c69e8
+Wrapper: https://github.com/godotengine/godot/blob/35e80b3a8822a9df9be390814b62f44c0a9c69e8/core/io/dir_access.cpp#L272
+Windows mkdir: https://github.com/godotengine/godot/blob/35e80b3a8822a9df9be390814b62f44c0a9c69e8/drivers/windows/dir_access_windows.cpp#L188
+Unix mkdir: https://github.com/godotengine/godot/blob/35e80b3a8822a9df9be390814b62f44c0a9c69e8/drivers/unix/dir_access_unix.cpp#L320
+Windows rename limitation: https://github.com/godotengine/godot/blob/35e80b3a8822a9df9be390814b62f44c0a9c69e8/drivers/windows/dir_access_windows.cpp#L302
+Crypto random bytes: https://github.com/godotengine/godot/blob/35e80b3a8822a9df9be390814b62f44c0a9c69e8/doc/classes/Crypto.xml
+Target binary version receipt: 4.6.3.stable.official.7d41c59c4
+Official commits/7d41c59c4 lookup returned HTTP422. No source/binary binding established; no alternate query performed.
+The isolated mkdir probe on that existing binary is a runtime prerequisite. Probe success establishes observed semantics, not binary provenance.

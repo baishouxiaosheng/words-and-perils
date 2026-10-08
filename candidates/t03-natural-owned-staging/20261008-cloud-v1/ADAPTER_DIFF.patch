@@ -1,0 +1,87 @@
+--- baseline/view/generated_natural_coast_basic/adapter.gd
++++ candidate/view/generated_natural_coast_basic/adapter.gd
+@@ -201,14 +201,78 @@
+ 	checked = source.validate_state(state_copy())
+ 	if not checked.ok: return checked
+ 	var encoded := C.bytes(save_data())
+-	if encoded.to_utf8_buffer().size() > MAX_SAVE_BYTES: return C.fail("V3_SAVE_BUDGET","进度资料超出此版本限制，原文件未改变。")
+-	var file := _open_save_temporary(path+".tmp")
+-	if file == null: return C.fail("SAVE_FAILED","无法写入临时进度文件。")
++	var expected: PackedByteArray = encoded.to_utf8_buffer()
++	if expected.size() > MAX_SAVE_BYTES: return C.fail("V3_SAVE_BUDGET","进度资料超出此版本限制，原文件未改变。")
++	var staging: Dictionary = _create_save_staging(path)
++	if not staging.ok: return staging
++	var file := _open_save_temporary(staging.payload)
++	if file == null: return _save_failed_before_rename(staging,"无法写入本次暂存进度文件。")
+ 	var stored: bool = file.store_string(encoded); file.flush()
+ 	var write_error: Error = file.get_error(); file.close()
+-	if not stored or write_error != OK: return C.fail("SAVE_FAILED","临时进度文件未写完，原进度文件保留。")
+-	if _rename_save_temporary(path+".tmp",path) != OK: return C.fail("SAVE_FAILED","保存未完成，原进度文件保留。")
+-	return {"ok":true,"path":path}
++	if not stored or write_error != OK: return _save_failed_before_rename(staging,"本次暂存进度文件未写完，未提交。")
++	if not _verify_save_staging(staging.payload,expected): return _save_failed_before_rename(staging,"本次暂存进度读回不一致，未提交。")
++	var rename_error: Error = _rename_save_temporary(staging.payload,path)
++	if rename_error != OK:
++		# Windows may already have removed the old target. Never erase recovery data.
++		var failed: Dictionary = C.fail("SAVE_FAILED","保存未完成；本次暂存进度保留在恢复位置。")
++		failed["recovery_path"] = staging.payload
++		failed["staging_directory"] = staging.directory
++		failed["rename_error"] = int(rename_error)
++		return failed
++	var result: Dictionary = {"ok":true,"path":path}
++	var cleanup_error: Error = _cleanup_save_staging(staging,false)
++	if cleanup_error != OK:
++		# The commit succeeded. Keep that fact and independently expose the cleanup error.
++		result["cleanup_ok"] = false
++		result["cleanup_error"] = int(cleanup_error)
++		result["cleanup_directory"] = staging.directory
++		push_error("NATURAL_SAVE_STAGING_CLEANUP_FAILED: " + staging.directory + " (" + str(int(cleanup_error)) + ")")
++	return result
++
++# Ownership comes only from successful non-recursive mkdir, never from this nonce.
++# Cooperating calls own distinct staging; target replacement/CAS is unchanged.
++func _create_save_staging(path: String) -> Dictionary:
++	var nonce: PackedByteArray = _new_save_staging_nonce()
++	if nonce.size() != 32: return C.fail("SAVE_FAILED","无法分配本次暂存标识，未写入。")
++	var parent: String = ProjectSettings.globalize_path(path).simplify_path().get_base_dir()
++	var directory: String = parent.path_join(".words-and-perils-natural-stage-" + nonce.hex_encode())
++	var created: Error = _make_save_staging_directory(directory)
++	if created != OK: return C.fail("SAVE_FAILED","本次暂存目录未能独占创建，未认领或修改已有目录。")
++	return {"ok":true,"directory":directory,"payload":directory.path_join("payload.json")}
++func _new_save_staging_nonce() -> PackedByteArray:
++	return Crypto.new().generate_random_bytes(32)
++func _make_save_staging_directory(path: String) -> Error:
++	return DirAccess.make_dir_absolute(path)
++func _open_save_staging_readback(path: String) -> RefCounted:
++	return FileAccess.open(path,FileAccess.READ)
++func _verify_save_staging(path: String, expected: PackedByteArray) -> bool:
++	var file := _open_save_staging_readback(path)
++	if file == null: return false
++	if file.get_length() != expected.size():
++		file.close()
++		return false
++	var actual: PackedByteArray = file.get_buffer(expected.size())
++	var read_error: Error = file.get_error(); file.close()
++	return actual == expected and read_error in [OK,ERR_FILE_EOF]
++func _save_staging_payload_exists(path: String) -> bool:
++	return FileAccess.file_exists(path)
++func _remove_save_staging_path(path: String) -> Error:
++	return DirAccess.remove_absolute(path)
++func _cleanup_save_staging(staging: Dictionary, remove_payload: bool) -> Error:
++	if remove_payload and _save_staging_payload_exists(staging.payload):
++		var removed: Error = _remove_save_staging_path(staging.payload)
++		if removed != OK: return removed
++	# Native remove must reject a nonempty directory. Do not scan or recurse.
++	return _remove_save_staging_path(staging.directory)
++func _save_failed_before_rename(staging: Dictionary, message: String) -> Dictionary:
++	var failed: Dictionary = C.fail("SAVE_FAILED",message)
++	var cleanup_error: Error = _cleanup_save_staging(staging,true)
++	if cleanup_error != OK:
++		failed["cleanup_ok"] = false
++		failed["cleanup_error"] = int(cleanup_error)
++		failed["cleanup_directory"] = staging.directory
++		push_error("NATURAL_SAVE_STAGING_CLEANUP_FAILED: " + staging.directory + " (" + str(int(cleanup_error)) + ")")
++	return failed
+ # Virtual I/O boundaries allow deterministic tests of the production save path.
+ # Normal callers always use the unchanged native file and rename backends.
+ func _open_save_temporary(path: String) -> RefCounted:

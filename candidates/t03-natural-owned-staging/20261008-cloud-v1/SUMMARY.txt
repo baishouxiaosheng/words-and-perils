@@ -1,0 +1,12 @@
+Natural owned staging — cloud v1，未解析、未运行、未采用
+
+此目录是独立源码候选，不改变正式 v30 或任何旧候选。基底为 e574 的 Natural adapter 6f9e593303a297391995329e0a5daecb477250b69944ee471247d9cca5df1bff；唯一 production overlay 为 adapter 7e11cf5a3679fdc3bee4aa4264a11ed49cdadb2744136c0ffb4bae2ee47fe345。按 overlay 相对项目路径应用；原完整170/T03 13套件和 inherited Engine 不改，MANIFEST记录所需hash。
+
+一次保存使用强随机32-byte nonce及同父目录固定前缀；只有非递归 mkdir 返回 OK 才认领目录，写固定 payload.json。碰撞立即拒绝，无自动换名。写后按预期UTF8长度/bytes读回。rename 前失败只清理自有固定payload和空目录；rename失败保留payload/目录及恢复位置；rename成功只清理自有空目录。成功后清理失败仍ok=true，另外保留cleanup错误和生产push_error。
+仅保证合作保存调用的暂存所有权；不提供目标CAS、全写者互斥、旧目标保持、外部链接替换防护或崩溃/掉电耐久。
+
+全部测试源码未解析、未运行。保留旧5 focused stimuli，新增强制首名碰撞、legacy tmp不变、各清理分支三组；不把静态check计数当成运行90断言。cleanup_diagnostic有意观察生产ERROR，原严格守卫应记录非strict-pass，不抑制或降低门槛。完整170及T03 13成绩不可从旧候选挪用。
+
+官方4.6.3-stable tag源码commit为35e80b3a8822a9df9be390814b62f44c0a9c69e8；本机版本回执7d41c59c4的官方查询HTTP422，保留原文。源码/binary未绑定；独审后须在现有本机binary运行隔离mkdirprobe作为前置。probe通过也不是来源证明。不更换引擎。
+
+原始静态检查回执保留字段及hash，个人绝对目录仅规范化为相对路径。仅发布源码引用和许可链接，不包含full官方源。STATIC_RECHECK是Python字节/hash/文本断言，不是Godot解析。Godot解析0，运行0；没有本机任务派发、自动采用或Library传输。

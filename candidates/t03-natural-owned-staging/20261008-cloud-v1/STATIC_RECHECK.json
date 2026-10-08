@@ -1,0 +1,153 @@
+{
+  "time_utc": "2026-10-08T14:27:47.817708+00:00",
+  "status": "Python byte/hash/text assertions only; not GDScript parsing",
+  "original_checkpoint_files_verified": [
+    {
+      "path": "candidate/tests/t03_natural_owned_staging/fake_adapter.gd",
+      "bytes": 1292,
+      "sha256": "0d35fe31e80b41faf3ec970936bf537e6f4d7df7faeba2c43b1da6e4c791c80a",
+      "readback_equal": true
+    },
+    {
+      "path": "candidate/tests/t03_natural_owned_staging/io_probe.gd",
+      "bytes": 4748,
+      "sha256": "370c6bab323d01b778ef65955aae73f83006f128b9078e7e8da535d7b05c5aa4",
+      "readback_equal": true
+    },
+    {
+      "path": "candidate/tests/t03_natural_owned_staging/test_cleanup_diagnostic.gd",
+      "bytes": 318,
+      "sha256": "6cbb794d684746ed6d4a2d607f4935c9a9ff88abe7f1f09f60e0b86add2782c7",
+      "readback_equal": true
+    },
+    {
+      "path": "candidate/tests/t03_natural_owned_staging/test_focused_write_result.gd",
+      "bytes": 8180,
+      "sha256": "122c7ca5c33ec324177b56d3a3f01a4cc53373ac7d1608ebf39406fd98d7baaf",
+      "readback_equal": true
+    },
+    {
+      "path": "candidate/tests/t03_natural_owned_staging/test_mkdir_semantics_probe.gd",
+      "bytes": 3106,
+      "sha256": "76a2c1d21771992fa40e8fbe339ca74396414b51eb625a577fc7c1609ca88dbb",
+      "readback_equal": true
+    },
+    {
+      "path": "candidate/tests/t03_natural_owned_staging/test_owned_staging.gd",
+      "bytes": 9707,
+      "sha256": "464a8bd4b068bdc2cdd754714554efdfac870d1430e8e2350d52e09f7a3477b7",
+      "readback_equal": true
+    },
+    {
+      "path": "candidate/view/generated_natural_coast_basic/adapter.gd",
+      "bytes": 25320,
+      "sha256": "7e11cf5a3679fdc3bee4aa4264a11ed49cdadb2744136c0ffb4bae2ee47fe345",
+      "readback_equal": true
+    },
+    {
+      "path": "PRIMITIVE_PROOF.json",
+      "bytes": 2786,
+      "sha256": "e9b87b93b04b3ee6cff51a9bd78af138ad0ae33790e81c80f5247401feab9416",
+      "readback_equal": true
+    },
+    {
+      "path": "DESIGN.txt",
+      "bytes": 5272,
+      "sha256": "3deab8df2510dcd02808ffd1c8ede1779578f1215ae8e8927234e39aa8ae2fbd",
+      "readback_equal": true
+    },
+    {
+      "path": "ADAPTER_DIFF.patch",
+      "bytes": 5471,
+      "sha256": "5b0869e518cb9c1a8ec6e5144ab115faaf196859b8967ec9c5cd5b3ebf505c6d",
+      "readback_equal": true
+    },
+    {
+      "path": "FOCUSED_TEST_ADAPTATION.patch",
+      "bytes": 5164,
+      "sha256": "911c362fcdddf8859a633aeb334b591650485a0125d0b8a4a190ccd2208d4cba",
+      "readback_equal": true
+    },
+    {
+      "path": "MANIFEST.json",
+      "bytes": 3590,
+      "sha256": "99884f9c5c52380722927bd09cdbb702da9c6b8ad9f1e97f50f4c5a2e4c6e055",
+      "readback_equal": true
+    },
+    {
+      "path": "official-source/core/io/dir_access.cpp",
+      "bytes": 22108,
+      "sha256": "03ee7d7b71c7ac1ec0ffdcc1d43091f6a056058d32228b6e25baccf352ced458",
+      "readback_equal": true
+    },
+    {
+      "path": "official-source/drivers/windows/dir_access_windows.cpp",
+      "bytes": 15933,
+      "sha256": "e209e4acc45d019329ed19963a2c8786d1595763524ddb502bbdfc0bc6d05750",
+      "readback_equal": true
+    },
+    {
+      "path": "official-source/drivers/unix/dir_access_unix.cpp",
+      "bytes": 18196,
+      "sha256": "549c1f5017d1b2cc9b922065e88ef5002aa13faacda8ef3d95838cfdd9d0cd05",
+      "readback_equal": true
+    },
+    {
+      "path": "official-source/doc/classes/Crypto.xml",
+      "bytes": 7520,
+      "sha256": "38f8632de2462dd03ff13d3e55f706a967304c64a84ce03e6a9d5c1a63ed9d56",
+      "readback_equal": true
+    },
+    {
+      "path": "official-source/target-binary-ref/binding-receipt.json",
+      "bytes": 614,
+      "sha256": "d2eebfcc074d6a718febeed529264bba89e8065211afc6862a210a23aa80b0de",
+      "readback_equal": true
+    }
+  ],
+  "baseline_four_verified": [
+    {
+      "path": "view/generated_natural_coast_basic/adapter.gd",
+      "bytes": 21635,
+      "sha256": "6f9e593303a297391995329e0a5daecb477250b69944ee471247d9cca5df1bff",
+      "origin_commit": "e5745fbfd568415a5d8ca35ca25bd18d5a092e98",
+      "readback_equal": true
+    },
+    {
+      "path": "tests/t03_natural_write_result/fake_adapter.gd",
+      "bytes": 533,
+      "sha256": "c642076ad58159f4a1f4f46760bb5867084e33b2b34a4b7d47e5e6fddad094f2",
+      "origin_commit": "e5745fbfd568415a5d8ca35ca25bd18d5a092e98",
+      "readback_equal": true
+    },
+    {
+      "path": "tests/t03_natural_write_result/io_probe.gd",
+      "bytes": 1957,
+      "sha256": "6405bdd124d0d65d96f680bffb295415849f2c90117896f01233f7cbc4d843f8",
+      "origin_commit": "e5745fbfd568415a5d8ca35ca25bd18d5a092e98",
+      "readback_equal": true
+    },
+    {
+      "path": "tests/t03_natural_write_result/test_save_file.gd",
+      "bytes": 7547,
+      "sha256": "400ca10734ae4d3774f8a9aeb7c2fbb074d814144106b930f7c79fc91e843961",
+      "origin_commit": "e5745fbfd568415a5d8ca35ca25bd18d5a092e98",
+      "readback_equal": true
+    }
+  ],
+  "checks": {
+    "baseline_four_hashes_match": true,
+    "all_existing_production_methods_except_save_file_byte_identical": true,
+    "production_files_changed": 1,
+    "nonrecursive_make_dir_only": true,
+    "strong_nonce_crypto_32_bytes": true,
+    "legacy_shared_tmp_not_used_by_save": true,
+    "rename_failure_contains_no_cleanup": true,
+    "committed_cleanup_failure_keeps_ok_true_and_error_diagnostic": true,
+    "focused_five_stimuli_and_static_check_call_count_preserved": true
+  },
+  "godot_parses": 0,
+  "engine_runs": 0,
+  "exit_code_expected": 0,
+  "follow_up_prerequisite": "Existing target binary isolated mkdir probe under unchanged guard, after independent source review; not yet run"
+}

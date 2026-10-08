@@ -1,0 +1,83 @@
+{
+  "status": "draft_unparsed_unrun_unadopted",
+  "task_id": "WP-NATURAL-OWNED-STAGING-20261008",
+  "base_commit": "e5745fbfd568415a5d8ca35ca25bd18d5a092e98",
+  "base_adapter_sha256": "6f9e593303a297391995329e0a5daecb477250b69944ee471247d9cca5df1bff",
+  "production_scope": [
+    "view/generated_natural_coast_basic/adapter.gd:save_file and small staging helpers only"
+  ],
+  "official_source_tag": "4.6.3-stable",
+  "official_source_commit": "35e80b3a8822a9df9be390814b62f44c0a9c69e8",
+  "target_binary_receipt": "4.6.3.stable.official.7d41c59c4",
+  "source_binary_binding": "not_established; official ref lookup HTTP422",
+  "runtime_prerequisite": "test_mkdir_semantics_probe.gd on existing isolated target binary under unchanged guard; not yet run",
+  "required_inherited_engine_sha256": "dba3ca7fe04dc8a4100897250fc19c5c6c2acff2ef687ff120e894beadf6351d",
+  "unchanged_170_suite_sha256_from_prior_source_review": "60e46a3b5b607d3ba5cbe3634ebcd6bd3ebbfc98fa10d4bad8732ea95b5a0ba2",
+  "candidate_files": [
+    {
+      "path": "overlay/tests/t03_natural_owned_staging/fake_adapter.gd",
+      "bytes": 1292,
+      "sha256": "0d35fe31e80b41faf3ec970936bf537e6f4d7df7faeba2c43b1da6e4c791c80a",
+      "readback_equal": true
+    },
+    {
+      "path": "overlay/tests/t03_natural_owned_staging/io_probe.gd",
+      "bytes": 4748,
+      "sha256": "370c6bab323d01b778ef65955aae73f83006f128b9078e7e8da535d7b05c5aa4",
+      "readback_equal": true
+    },
+    {
+      "path": "overlay/tests/t03_natural_owned_staging/test_cleanup_diagnostic.gd",
+      "bytes": 318,
+      "sha256": "6cbb794d684746ed6d4a2d607f4935c9a9ff88abe7f1f09f60e0b86add2782c7",
+      "readback_equal": true
+    },
+    {
+      "path": "overlay/tests/t03_natural_owned_staging/test_focused_write_result.gd",
+      "bytes": 8180,
+      "sha256": "122c7ca5c33ec324177b56d3a3f01a4cc53373ac7d1608ebf39406fd98d7baaf",
+      "readback_equal": true
+    },
+    {
+      "path": "overlay/tests/t03_natural_owned_staging/test_mkdir_semantics_probe.gd",
+      "bytes": 3106,
+      "sha256": "76a2c1d21771992fa40e8fbe339ca74396414b51eb625a577fc7c1609ca88dbb",
+      "readback_equal": true
+    },
+    {
+      "path": "overlay/tests/t03_natural_owned_staging/test_owned_staging.gd",
+      "bytes": 9707,
+      "sha256": "464a8bd4b068bdc2cdd754714554efdfac870d1430e8e2350d52e09f7a3477b7",
+      "readback_equal": true
+    },
+    {
+      "path": "overlay/view/generated_natural_coast_basic/adapter.gd",
+      "bytes": 25320,
+      "sha256": "7e11cf5a3679fdc3bee4aa4264a11ed49cdadb2744136c0ffb4bae2ee47fe345",
+      "readback_equal": true
+    }
+  ],
+  "static_source_checks": {
+    "baseline_four_hashes_match": true,
+    "all_existing_production_methods_except_save_file_byte_identical": true,
+    "production_files_changed": 1,
+    "nonrecursive_make_dir_only": true,
+    "strong_nonce_crypto_32_bytes": true,
+    "legacy_shared_tmp_not_used_by_save": true,
+    "rename_failure_contains_no_cleanup": true,
+    "committed_cleanup_failure_keeps_ok_true_and_error_diagnostic": true,
+    "focused_five_stimuli_and_static_check_call_count_preserved": true
+  },
+  "godot_parses": 0,
+  "engine_runs": 0,
+  "library_calls": 0,
+  "scope_claim": "cooperative staging ownership only; not CAS/all-writer lock/target preservation/OS concurrency/crash durability",
+  "diagnostic_entry": "test_cleanup_diagnostic.gd intentionally emits production ERROR; strict_guard_pass_expected=false; do not suppress diagnostics",
+  "old_tests_preserved_under": "not copied; pinned in BASELINE_MANIFEST.json and original e574 candidate",
+  "new_tests_bound_separately": true,
+  "publication_status": "unparsed_unrun_unadopted_source_candidate",
+  "historical_source_checkpoint_git_pushes": 0,
+  "tests_status": "All six test source files unparsed and unrun; no grades transferred from prior tests",
+  "full_official_source_included": false,
+  "publication_parent": "f66fc963f1b976a6778f95a5f730c0989d93f6d6"
+}

@@ -1,0 +1,77 @@
+Raw closed-staging readback candidate, prepared 2026-10-08 UTC
+
+Status: source-only candidate, not adopted or published. Godot parsing, runtime,
+native failure injection, GUI, memory and performance checks were not run.
+
+Scope
+Only core/ai_gm_rebuilt/engine.gd::save_file changes in production. This is an
+independent successor to the existing Raw bool/error candidate, not a Natural
+composition and not an alteration to the formal public v30 release. The base
+Raw source SHA-256 is cb707722b1d28534615257cb9873d1c66ce9924ac2ee5ebdc2d1d2a46b09fdc3.
+The public e8ec5db0341f8b4a8aaa0a933e5968c33440c9da release and native v28
+distribution remain separate. Use the exact Raw base and its frozen dependency
+inputs; do not apply this overlay directly to another release or candidate.
+
+Behavior
+The save method freezes one canonical String and its expected UTF-8 bytes before
+opening the existing path + .tmp writer. It retains the store bool and reported
+write-error checks, closes the writer, then explicitly opens the same staging
+path for reading. Initial/final exact length and read-error checks plus byte
+comparisons in at most 65,536-byte chunks must pass before the existing rename.
+Any opened reader is closed once before success or verification refusal. Failed
+write/open/read/length/short-read/content checks never invoke rename, leave the
+old destination untouched by this method, and retain the failed temporary file.
+No temporary cleanup, destination write-open, new lock, fallback replacement,
+identity relaxation, migration or native engine code is introduced.
+
+Known limits
+This addresses an already-documented source-level buffered-I/O signal gap.
+Godot official Unix/Windows code can ignore fflush/fclose failure returns;
+get_error alone does not establish that the closed staging content is complete.
+The historical target binary reports 4.6.3.stable.official.7d41c59c4, while the
+referenced official 4.6.3 tag commit is 35e80b3a8822a9df9be390814b62f44c0a9c69e8.
+The previous commit lookup returned HTTP 422; source/binary binding remains
+unestablished. No native failure has been reproduced in this candidate.
+
+Readback can see operating-system cached bytes and does not establish fsync,
+power-loss durability, crash safety, all-writer locking, shared-.tmp concurrency,
+CAS, or TOCTOU protection. Content may change after verification. The existing
+platform-dependent rename and its failure behavior are unchanged; this does not
+prove that native rename failure preserves an old target, especially on Windows.
+Random names or cooperative staging would not by themselves settle those issues.
+
+Memory/performance
+For N expected UTF-8 bytes, this retains an additional full N-byte PackedByteArray
+and extends the canonical String's lifetime through verification. store_string
+still performs its own UTF-8 conversion. Each verification step additionally
+holds an actual chunk and an expected slice, each at most 65,536 bytes. This is a
+bounded read-buffer size, not a bounded whole-save memory claim. Serialization,
+allocator overhead, temporary copies, peak RSS and save timing are not measured.
+The extra read/compare work is linear in the encoded save length.
+
+Identity
+Production Engine bytes change, so any runtime identity that includes this
+source hash must be rebuilt and pinned for the candidate. Strict load/schema,
+signature and existing identity conditions are untouched. Old saves are not
+migrated or silently accepted. This package is not a standalone playable build.
+
+Prepared verification
+verify_static.py performs literal source, SHA-256, patch and test-coverage checks,
+not GDScript parsing or execution. It reconstructs the exact Raw base from the
+candidate's unchanged prefix/suffix and original method preimage.
+
+The new test-only suite extracts and hash-checks the complete production method,
+then changes only FileAccess./DirAccess. identifiers to the memory backend.
+Twenty-one cases are prepared: 17 injected probes, one unready/no-I/O case and
+three inherited native happy-path/open-failure cases. Injected cases include
+late flush/close loss with stored=true/error=OK, read-open/length/read errors,
+truncated and short reads, equal-length corruption, growth during verification,
+multi-chunk Unicode and a tiny canonical object. Failure assertions protect the
+old target, live payload and retained temporary; opened writer/reader close
+counts and successful close-before-rename order are checked. Simulated rename
+failure preserves the target by fake-backend contract only.
+
+The original Raw suite remains unchanged with its separate 10-case/57-assertion
+historical run. Those results are not transferred to this new source hash.
+Any future Godot run requires the approved guard, exact disposable source and
+isolated user:// data. Do not run this candidate against real player saves.

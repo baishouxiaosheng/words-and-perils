@@ -1,0 +1,182 @@
+{
+  "status": "source_static_passed",
+  "checks": 42,
+  "engine_sha256": "f609fbf0bf717568c2429578bf4cde3eecf9a7aa806546c1d75c8dabdb0a4ef5",
+  "method_sha256": "30cc3607de346361a8073dc689e8d957281f33cbebe7a79683a4c23f5e44bcc7",
+  "base_engine_sha256": "cb707722b1d28534615257cb9873d1c66ce9924ac2ee5ebdc2d1d2a46b09fdc3",
+  "prepared_cases": 21,
+  "godot_parse_runs": 0,
+  "godot_test_runs": 0,
+  "native_failure_reproductions": 0,
+  "scope": "literal source and artifact checks only; not GDScript parsing or runtime proof",
+  "results": [
+    {
+      "check": "exact candidate engine bytes",
+      "passed": true
+    },
+    {
+      "check": "exact candidate method bytes",
+      "passed": true
+    },
+    {
+      "check": "all production bytes outside save_file unchanged",
+      "passed": true
+    },
+    {
+      "check": "exact existing Raw method preimage",
+      "passed": true
+    },
+    {
+      "check": "patch reproduces this one-method source delta",
+      "passed": true
+    },
+    {
+      "check": "patch applies to exact Raw preimage with zero fuzz and offset",
+      "passed": true
+    },
+    {
+      "check": "patch application produces exact candidate bytes",
+      "passed": true
+    },
+    {
+      "check": "freeze canonical UTF8 once before opening writer",
+      "passed": true
+    },
+    {
+      "check": "existing store bool is retained",
+      "passed": true
+    },
+    {
+      "check": "existing write failure gate and close precede readback",
+      "passed": true
+    },
+    {
+      "check": "read-open failure refuses before rename",
+      "passed": true
+    },
+    {
+      "check": "initial and final exact length plus read-error gates",
+      "passed": true
+    },
+    {
+      "check": "read chunks bounded to 64 KiB",
+      "passed": true
+    },
+    {
+      "check": "each chunk requires exact length, bytes and no read error",
+      "passed": true
+    },
+    {
+      "check": "reader closes and failed verification refuses before rename",
+      "passed": true
+    },
+    {
+      "check": "one unchanged explicit replacement, no cleanup or alternate replacement path",
+      "passed": true
+    },
+    {
+      "check": "destination is never opened for writing",
+      "passed": true
+    },
+    {
+      "check": "test freezes exact production file and method",
+      "passed": true
+    },
+    {
+      "check": "fault harness substitutes only backend identifiers",
+      "passed": true
+    },
+    {
+      "check": "fake backend models distinct read and write opens",
+      "passed": true
+    },
+    {
+      "check": "prepared case: late flush loss with stored true and stale OK",
+      "passed": true
+    },
+    {
+      "check": "prepared case: late close loss with stored true and stale OK",
+      "passed": true
+    },
+    {
+      "check": "prepared case: readback open failure",
+      "passed": true
+    },
+    {
+      "check": "prepared case: staging truncated before readback",
+      "passed": true
+    },
+    {
+      "check": "prepared case: readback length query reports error",
+      "passed": true
+    },
+    {
+      "check": "prepared case: short read with stale OK",
+      "passed": true
+    },
+    {
+      "check": "prepared case: reported read error despite full bytes",
+      "passed": true
+    },
+    {
+      "check": "prepared case: same length content corruption",
+      "passed": true
+    },
+    {
+      "check": "prepared case: length grows during verification",
+      "passed": true
+    },
+    {
+      "check": "prepared case: bounded multi chunk UTF8 success",
+      "passed": true
+    },
+    {
+      "check": "prepared case: tiny canonical object success",
+      "passed": true
+    },
+    {
+      "check": "failure cases assert original target, live payload and temporary retention",
+      "passed": true
+    },
+    {
+      "check": "tests assert both handles close before replacement",
+      "passed": true
+    },
+    {
+      "check": "tests assert the multi-chunk boundary and read cap",
+      "passed": true
+    },
+    {
+      "check": "no native durability, lock or staging ownership mechanism added",
+      "passed": true
+    },
+    {
+      "check": "engine.gd: UTF8/LF without BOM",
+      "passed": true
+    },
+    {
+      "check": "test_save_file.gd: UTF8/LF without BOM",
+      "passed": true
+    },
+    {
+      "check": "io_probe.gd: UTF8/LF without BOM",
+      "passed": true
+    },
+    {
+      "check": "RAW_READBACK.patch: UTF8/LF without BOM",
+      "passed": true
+    },
+    {
+      "check": "no common embedded credential-token or private-key format in package",
+      "passed": true
+    },
+    {
+      "check": "21 prepared cases: 17 injected probes, unready, 3 native happy/open-failure cases",
+      "passed": true
+    },
+    {
+      "check": "public save_file signature unchanged",
+      "passed": true
+    }
+  ]
+}

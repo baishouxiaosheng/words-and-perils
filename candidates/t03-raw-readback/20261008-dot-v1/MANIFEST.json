@@ -1,0 +1,108 @@
+{
+  "schema": "words-and-perils-raw-closed-staging-readback-candidate/v1",
+  "created_utc": "2026-10-08T21:13:00Z",
+  "status": "source_only_unparsed_unrun_unpublished_unadopted",
+  "unique_owner_task": "raw-closed-staging-readback-20261008",
+  "base_repository": "baishouxiaosheng/words-and-perils",
+  "read_commit": "0de311ffc64d466a1ea23a88ddeed0146131687e",
+  "formal_public_release_unchanged": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+  "native_distribution": "v28_separate_unchanged",
+  "base_candidate_path": "candidates/t03-raw-short-write/20261008",
+  "base_engine": {
+    "path": "core/ai_gm_rebuilt/engine.gd",
+    "bytes": 51047,
+    "sha256": "cb707722b1d28534615257cb9873d1c66ce9924ac2ee5ebdc2d1d2a46b09fdc3",
+    "save_method_sha256": "a67af61429e9d9caef0b16b182682319389eb52600a1de5c85f74564051d811c"
+  },
+  "production_scope": [
+    "core/ai_gm_rebuilt/engine.gd::save_file"
+  ],
+  "candidate_engine_sha256": "f609fbf0bf717568c2429578bf4cde3eecf9a7aa806546c1d75c8dabdb0a4ef5",
+  "candidate_save_method_sha256": "30cc3607de346361a8073dc689e8d957281f33cbebe7a79683a4c23f5e44bcc7",
+  "candidate_identity": "new source hash; rebuild and pin runtime identity where this source participates; strict identity checks unchanged; no old-save migration",
+  "composition_with_natural": false,
+  "formal_adoption": false,
+  "standalone_runnable": false,
+  "expected_read_chunk_limit_bytes": 65536,
+  "memory_scope": "additional whole expected UTF8 PackedByteArray; longer canonical String lifetime; store_string UTF8 conversion unchanged; actual chunk plus expected slice each <=65536 bytes; whole-save memory/RSS and performance unmeasured",
+  "read_only_dependency_pins": {
+    "core/ai_gm_rebuilt/canonical.gd": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c",
+    "tests/experimental/ai_gm_rebuilt/story_fixture.gd": "e187f474d35e5110c2e840c389c35c208fa83e3d81663efccca075826dfd9520",
+    "project.godot": "0b35574f45a5b50307636bb3eee790a9c99be785ce3dc30c2b44e1c666dc0038"
+  },
+  "original_raw_test_evidence": {
+    "cases": 10,
+    "assertions": 57,
+    "passed_on_original_source_only": true,
+    "test_sha256": "30c1a74de27986d1965c993b6f362bea340c372d42af83c7b9e86db7d791dd6a",
+    "probe_sha256": "c604a6be15d323c12b6efd45856c27d35997564c9d4d7755764be9e8bb0e5678",
+    "evidence_path": "candidates/t03-local-runtime/20261008-sol-a1b40/DELIVERY_RESULT.json",
+    "run": "raw-short-write-01",
+    "result_sha256": "43c3e4f9002342830cace99c4303168e5080eb01b5424e46dec51be86b62a6d8",
+    "not_transferred_to_this_candidate": true
+  },
+  "prepared_test_cases": {
+    "total": 21,
+    "source_bound_memory_faults": 17,
+    "unready_no_io": 1,
+    "inherited_native_happy_path_or_open_failure": 3,
+    "executed": 0
+  },
+  "validation": {
+    "source_static_checks": 42,
+    "gdscript_parses": 0,
+    "godot_test_runs": 0,
+    "native_failure_reproductions": 0,
+    "save_performance_or_memory_measurement": false
+  },
+  "source_binary_binding": {
+    "official_tag_commit": "35e80b3a8822a9df9be390814b62f44c0a9c69e8",
+    "historical_binary_version": "4.6.3.stable.official.7d41c59c4",
+    "status": "not_established",
+    "previous_short_commit_lookup_http_status": 422
+  },
+  "upstream_references": [
+    "https://docs.godotengine.org/en/4.6/classes/class_fileaccess.html",
+    "https://raw.githubusercontent.com/godotengine/godot/4.6.3-stable/drivers/unix/file_access_unix.cpp",
+    "https://raw.githubusercontent.com/godotengine/godot/35e80b3a8822a9df9be390814b62f44c0a9c69e8/drivers/windows/file_access_windows.cpp"
+  ],
+  "unresolved": [
+    "power-loss/fsync durability",
+    "native crash safety",
+    "native rename failure old-target preservation",
+    "all-writer locking",
+    "shared temporary path concurrency",
+    "TOCTOU/CAS",
+    "other save writers"
+  ],
+  "files": {
+    "RAW_READBACK.patch": {
+      "bytes": 1862,
+      "sha256": "98440b251f3273324f15790ff5c5614614793caf81b75c97e719391f7abebcde"
+    },
+    "STATIC_CHECK_RECEIPT.json": {
+      "bytes": 4779,
+      "sha256": "7e70e0a0b304b70214d2c4cbe6547abdc32e473d28480582fd8e2a6e325298d5"
+    },
+    "SUMMARY.txt": {
+      "bytes": 4821,
+      "sha256": "fe87153df25ed35f8957333c0741a9efcb5fe518c7a25878736e52439ce6bf10"
+    },
+    "overlay/core/ai_gm_rebuilt/engine.gd": {
+      "bytes": 52068,
+      "sha256": "f609fbf0bf717568c2429578bf4cde3eecf9a7aa806546c1d75c8dabdb0a4ef5"
+    },
+    "overlay/tests/t03_raw_readback/io_probe.gd": {
+      "bytes": 3359,
+      "sha256": "973daa46c3360a06bc1b667a89c15929ddd1ec7f820ea097f12d798f18e0e609"
+    },
+    "overlay/tests/t03_raw_readback/test_save_file.gd": {
+      "bytes": 10710,
+      "sha256": "6f2f6fadf6bd171e601c89819cb77530ab7c761c714c37fe64d51abf72103492"
+    },
+    "verify_static.py": {
+      "bytes": 7683,
+      "sha256": "0f86b5ff9d02aea1ffe99de94a9c8ccdbf3bb76338ff566551d39b679bad59c3"
+    }
+  }
+}

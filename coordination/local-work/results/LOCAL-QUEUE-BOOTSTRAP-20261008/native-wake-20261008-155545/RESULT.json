@@ -1,0 +1,29 @@
+{
+  "record_type": "local_queue_bootstrap_activation_result",
+  "automation_id": "words-and-perils-github",
+  "automation_enabled": true,
+  "schedule_type": "native thread heartbeat",
+  "interval_minutes": 5,
+  "native_post_completed_idle_turn_wake_verified": true,
+  "source_gate_passed": true,
+  "real_native_worker_and_existing_auth_canary_verified": true,
+  "task002_end_to_end_verified": true,
+  "artifact_commit": "0f2e236826837426b6794e481ff2410ef7c4965f",
+  "artifact_manifest_sha256": "12e59e8a916def923c3db705d4228a6c62309a404d545460a22f4479fed25675",
+  "artifact_files_actual_remote_bytes_verified": 16,
+  "canary_stdout_and_stderr": "Preserved in phase A evidence; startup warnings/errors retained, private account paths only masked. Functional canary passed, diagnostics not claimed clean.",
+  "known_tasks_deduplicated": [
+    "WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002",
+    "WP-NATURAL-SAVE-BOOL-20261008-001"
+  ],
+  "new_ready_tasks": 0,
+  "game_engine_runs_this_turn": 0,
+  "conditions": "Computer awake, app running, existing auth valid, current STOP/CONTROL permits. STOP/denial/source uncertainty/two same-cause failures always take precedence.",
+  "candidate_adoption": false,
+  "security_credentials_services_actions_changes": false,
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  },
+  "next_step": "Read back this result then persist local activation checkpoint. Future unchanged/empty queue ticks stay quiet and create no empty commits."
+}

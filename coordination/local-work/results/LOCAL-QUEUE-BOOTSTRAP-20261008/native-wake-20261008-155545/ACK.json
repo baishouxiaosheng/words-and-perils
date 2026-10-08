@@ -1,0 +1,14 @@
+{
+  "kind": "non_game_worker_canary_ack",
+  "automation_id": "words-and-perils-github",
+  "native_wake_utc": "2026-10-08T15:55:45.641Z",
+  "canary_pid": 78032,
+  "marker": "NON_GAME_WORKER_CANARY_OK",
+  "launch_utc": "2026-10-08T15:56:51.2526561Z",
+  "exit_code": 0,
+  "readers_finished": true,
+  "process_exited": true,
+  "handle_disposed": true,
+  "game_tests_rerun": 0,
+  "scope": "Native idle wake and existing-auth CLI worker observation only; no game task claim or permission expansion."
+}

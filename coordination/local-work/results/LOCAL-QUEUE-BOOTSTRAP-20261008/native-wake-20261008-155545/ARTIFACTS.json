@@ -1,0 +1,81 @@
+{
+  "self_excluded": true,
+  "record_type": "bootstrap_artifacts",
+  "files": [
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/native-wake-20261008-155545/evidence/NATIVE_WAKE_PROVENANCE.json",
+      "bytes": 1666,
+      "sha256": "6616370ed351fbd4f69ce960750bde34a286bac2ffffd80f5c31bd54e7477325"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/native-wake-20261008-155545/evidence/CANARY_RESULT.json",
+      "bytes": 811,
+      "sha256": "cf5c3dd7bdcadb2e13835cd32b10b24e74c4151f1fa484defeede6fbf353b41c"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/native-wake-20261008-155545/evidence/Canary.ps1",
+      "bytes": 3405,
+      "sha256": "4d6dc5144dc7ea968086c1ae1e9d1484817b76bc5a4b07d3e8b88157b23fe450"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/native-wake-20261008-155545/evidence/CANARY.stdout.log",
+      "bytes": 1499,
+      "sha256": "f08ca7b6b934e1b48dd8d34e26feabb606eb058ea8ca831cf769509f0d5d4b47"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/native-wake-20261008-155545/evidence/CANARY.stderr.log",
+      "bytes": 5020,
+      "sha256": "15f67841665df3139e051c59aa30a068953639fc84c268278ef98d730296d6a6"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/native-wake-20261008-155545/evidence/CLI_VERSION.stdout.log",
+      "bytes": 18,
+      "sha256": "eeecd3950ed2edf22e2f7ac0317480e921226b0a28df75a7f4af0f4bfe91fa49"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/native-wake-20261008-155545/evidence/CLI_VERSION.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/native-wake-20261008-155545/evidence/CLI_EXEC_HELP.stdout.log",
+      "bytes": 4031,
+      "sha256": "0e82cfde0122715250e93dc65866caa956b2ac5b9d0b20ec4ad4f9e81486509e"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/native-wake-20261008-155545/evidence/CLI_EXEC_HELP.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/native-wake-20261008-155545/evidence/CLI_RESUME_HELP.stdout.log",
+      "bytes": 2883,
+      "sha256": "3246e30965c8127b80e2dad49b1433e4a842699c7607d38bc241319553c6cbd0"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/native-wake-20261008-155545/evidence/CLI_RESUME_HELP.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/native-wake-20261008-155545/evidence/STARTUP_GATES.json",
+      "bytes": 2645,
+      "sha256": "a6c33ca375e9d65947e1f4b66235cc03e23bbf91da6c52cd0d7b33f089f98890"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/native-wake-20261008-155545/evidence/GATE-activation_A.json",
+      "bytes": 1266,
+      "sha256": "0d619de1b1f5a17f86efbcf052ce31b6242010ae41eb61afe3de7e4a3c7d966b"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/native-wake-20261008-155545/evidence/PRIVACY_REDACTIONS.json",
+      "bytes": 420,
+      "sha256": "3f6158efd8b884d080c849b81db520d6189c9b5457ce015dc5e00d0c5625a41e"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/native-wake-20261008-155545/ACK.json",
+      "bytes": 510,
+      "sha256": "094432fd4805b382dd1cd22d2680acb4426ec25aa73b2864a1c1165222663d36"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{"type":"thread.started","thread_id":"01a11c3b-4f7c-7261-be60-e0f3e601a8ca"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Codex is ignoring 2 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (C:\\Users\\[REDACTED_USER]\\.codex\\config.toml): `computer_use.windows.always_allowed_app_ids` is ignored.\n  user (C:\\Users\\[REDACTED_USER]\\.codex\\config.toml): `features.rmcp_client` is ignored."}}
+{"type":"item.completed","item":{"id":"item_1","type":"error","message":"Codex is ignoring 2 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (C:\\Users\\[REDACTED_USER]\\.codex\\config.toml): `computer_use.windows.always_allowed_app_ids` is ignored.\n  user (C:\\Users\\[REDACTED_USER]\\.codex\\config.toml): `features.rmcp_client` is ignored."}}
+{"type":"item.completed","item":{"id":"item_2","type":"error","message":"Under-development features enabled: respect_system_proxy. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:\\Users\\[REDACTED_USER]\\.codex\\config.toml."}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_3","type":"agent_message","text":"NON_GAME_WORKER_CANARY_OK\n2026-10-08T15:56:51.2526561Z"}}
+{"type":"turn.completed","usage":{"input_tokens":18792,"cached_input_tokens":13440,"cache_write_input_tokens":0,"output_tokens":29,"reasoning_output_tokens":0}}

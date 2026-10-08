@@ -1,0 +1,70 @@
+{
+  "source_channel": {
+    "passed": true,
+    "repository_id": 1403552519,
+    "owner_id": 128279531,
+    "authenticated_owner_id": 128279531,
+    "admin_and_push_verified_this_native_turn": true,
+    "authority": "Direct human authorization of fixed bounded repository/main/inbox; authors not identities, no extra signatures/roster/branch protection gates."
+  },
+  "worker_entry": {
+    "passed": true,
+    "native_agent_actual_tools_executed": true,
+    "native_session_runtime_permissions": {
+      "filesystem": "unrestricted",
+      "approval": "never",
+      "network": "enabled"
+    },
+    "existing_login_cli_exec_canary_passed": true,
+    "cli_version": "codex-cli 0.160.1",
+    "model": "gpt-6.1-sol",
+    "canary_pid": 78032,
+    "no_tools_game_or_model_file_edits": true,
+    "startup_diagnostics_are_preserved_not_clean": true
+  },
+  "persistent_native_wake": {
+    "passed": true,
+    "automation_id": "words-and-perils-github",
+    "kind": "thread heartbeat",
+    "interval_minutes": 5,
+    "prior_turn_completed_at_unix": 1791474913,
+    "current_scheduled_turn_started_at_unix": 1791474945,
+    "idle_gap_seconds": 32,
+    "no_active_polling_loop_needed": true,
+    "requires": "Computer awake and Codex app running; does not promise operation while app closed/computer asleep."
+  },
+  "task002_end_to_end": {
+    "passed": true,
+    "claim_commit": "5c1400d105da60a84941b035024e85b0a38b8cd5",
+    "ack_commit": "87612d7d5fab41d1ab821539cb0fa0883a1faff0",
+    "actual_engine_runs": 8,
+    "artifact_commit": "420016a61bba806e52d57b9321399e4a6f88becf",
+    "result_commit": "afe4cdf0d8c4cb236d6f7976b87bafc276431857",
+    "actual_remote_readback_files": 213,
+    "terminal_ledger_and_clean_lock_verified": true
+  },
+  "queue": [
+    {
+      "path": "coordination/local-work/inbox/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002.json",
+      "task_id": "WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002",
+      "raw_sha256": "49032c299667885b29120af6f7e37685272f8098302be457aaba91e314e9425a",
+      "status": "ready",
+      "local_terminal": true,
+      "eligible_for_rerun": false
+    },
+    {
+      "path": "coordination/local-work/inbox/WP-NATURAL-SAVE-BOOL-20261008-001.json",
+      "task_id": "WP-NATURAL-SAVE-BOOL-20261008-001",
+      "raw_sha256": "b3d55be9f2cdab63b650fc25d373cfd985250ac4d26335861c0768c7baabc73e",
+      "status": "ready",
+      "local_terminal": true,
+      "eligible_for_rerun": false
+    }
+  ],
+  "engine_reruns": 0,
+  "security_or_credentials_changes": false,
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "head": "afe4cdf0d8c4cb236d6f7976b87bafc276431857",
+  "stop_absent": true,
+  "control": {
+    "protocol": "words-and-perils-local-work/v1",
+    "kind": "control",
+    "queue_enabled": true,
+    "stop": false,
+    "resume_generation": 0,
+    "reason": "First bounded Natural write-result task is prepared. This control does not prove local automation is enabled."
+  },
+  "protocol_and_schema_pins_match": true,
+  "repo_wide_exclusive_lock_held_by_foreground_pid": 77868,
+  "known_tasks": [
+    {
+      "path": "coordination/local-work/inbox/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002.json",
+      "task_id": "WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002",
+      "raw_sha256": "49032c299667885b29120af6f7e37685272f8098302be457aaba91e314e9425a",
+      "status": "ready",
+      "local_terminal": true,
+      "eligible_for_rerun": false
+    },
+    {
+      "path": "coordination/local-work/inbox/WP-NATURAL-SAVE-BOOL-20261008-001.json",
+      "task_id": "WP-NATURAL-SAVE-BOOL-20261008-001",
+      "raw_sha256": "b3d55be9f2cdab63b650fc25d373cfd985250ac4d26335861c0768c7baabc73e",
+      "status": "ready",
+      "local_terminal": true,
+      "eligible_for_rerun": false
+    }
+  ],
+  "checked_utc": "2026-10-08T15:59:57.789526+00:00"
+}

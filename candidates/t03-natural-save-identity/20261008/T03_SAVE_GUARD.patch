@@ -1,0 +1,148 @@
+--- a/view/generated_natural_coast_basic/adapter.gd
++++ b/view/generated_natural_coast_basic/adapter.gd
+@@ -164,12 +164,22 @@
+ 	if destination == counterpart: return C.fail("V3_SAVE_NAMESPACE","请求文件和进度文件必须分开保存。")
+ 	if FileAccess.file_exists(path):
+ 		var file := FileAccess.open(path,FileAccess.READ)
+-		if file == null or file.get_length() > MAX_SAVE_BYTES: return C.fail("V3_SAVE_NAMESPACE","无法验证已有文件，未覆盖。")
+-		var existing: Variant = JSON.parse_string(file.get_as_text()); file.close()
++		if file == null: return C.fail("V3_SAVE_NAMESPACE","无法验证已有文件，未覆盖。")
++		if file.get_length() > MAX_SAVE_BYTES:
++			file.close()
++			return C.fail("V3_SAVE_NAMESPACE","无法验证已有文件，未覆盖。")
++		var encoded := file.get_as_text(); var read_error: Error = file.get_error(); file.close()
++		if read_error not in [OK,ERR_FILE_EOF]: return C.fail("V3_SAVE_NAMESPACE","无法完整验证已有文件，未覆盖。")
++		var existing: Variant = JSON.parse_string(encoded)
+ 		if request_file:
+ 			if not _is_v3_request(existing): return C.fail("V3_SAVE_NAMESPACE","已有文件不是此版本的请求文件，未覆盖。")
+-		elif not existing is Dictionary or (existing.get("schema_version") != SAVE_SCHEMA or existing.get("profile") != Source.PROFILE or existing.get("source",{}).get("content_hash") != source.identity.content_hash):
+-			return C.fail("V3_SAVE_NAMESPACE","已有文件不属于此探索版本，未覆盖。")
++		else:
++			# Match every existing runtime signature before opening a temporary file.
++			# Equal generator content does not authorize cross-distribution overwrite.
++			if not C.exact_fields(existing,SAVE_FIELDS) or not C.safe(existing) or existing.schema_version != SAVE_SCHEMA or existing.profile != Source.PROFILE or not existing.source is Dictionary or not existing.identity is Dictionary or not existing.engine is Dictionary:
++				return C.fail("V3_SAVE_NAMESPACE","已有文件不属于此探索版本，未覆盖。")
++			if C.bytes(existing.source) != C.bytes(source.data) or existing.source.get("content_hash") != source.identity.content_hash or existing.renderer_profile != source.identity.renderer_profile or existing.geometry_hash != source.identity.geometry_hash or C.bytes(existing.identity) != C.bytes(source.identity) or not engine.matches_save_identity(existing.engine):
++				return C.fail("V3_SAVE_NAMESPACE","已有进度属于另一精确运行版本，请使用原版本继续；未覆盖。")
+ 	return {"ok":true}
+ static func _is_v3_request(value: Variant) -> bool:
+ 	if not value is Dictionary or not C.safe(value) or value.get("schema_version") != "ai_gm_rebuilt/v1" or value.get("phase") not in ["assessment","narration"] or not value.get("context") is Dictionary or not value.get("contract") is Dictionary or not value.get("action_id") is String or not value.get("context_hash") is String: return false
+--- a/view/generated_natural_coast_basic/engine.gd
++++ b/view/generated_natural_coast_basic/engine.gd
+@@ -1,6 +1,47 @@
+ extends "res://core/ai_gm_rebuilt/engine.gd"
+-## Only public projection seams differ. All transaction, RNG, stage, commit and save code is inherited.
++## Public projection seams and save-destination protection differ.
++## Transactions, RNG, stage, commit, loading and the existing temp-write/rename implementation remain inherited.
+ const CoastProjection = preload("res://view/generated_natural_coast_basic/projection.gd")
++const MAX_DIRECT_SAVE_BYTES := 24 * 1024 * 1024
++var _save_world_id := ""
++var _save_authority_identity: Dictionary = {}
++
++func _init(initial: Dictionary, calculator: RefCounted = null, resolvers: Dictionary = {}, projection: Dictionary = {}, test_seed: Variant = null) -> void:
++	# Keep the exact inherited constructor signature and initialization once.
++	super(initial,calculator,resolvers,projection,test_seed)
++	if _initial_error.is_empty() and _state.get("generated_world") is Dictionary:
++		_save_world_id = String(_state.get("world_id",""))
++		_save_authority_identity = _state.get("generated_world",{}).duplicate(true)
++
++func _matches_configured_world(value: Variant) -> bool:
++	return value is Dictionary and not _save_world_id.is_empty() and not _save_authority_identity.is_empty() and value.get("world_id") == _save_world_id and value.get("generated_world") is Dictionary and C.bytes(value.generated_world) == C.bytes(_save_authority_identity)
++
++func matches_save_identity(value: Variant) -> bool:
++	# Terrain content alone is insufficient: public/native authority code hashes
++	# produce different runtime/world identities. Do not reinterpret either one.
++	var fields := ["schema_version","state","policy","rng","next_action","pending","receipts","attempt_ledger","rule_id","resolver_ids"]
++	if value is Dictionary and value.has("campaign_memory"): fields.append("campaign_memory")
++	if not C.exact_fields(value,fields) or not C.safe(value): return false
++	if value.schema_version != SCHEMA or value.rule_id != rule_id() or not value.resolver_ids is Array or C.bytes(value.resolver_ids) != C.bytes(_resolver_ids()): return false
++	if not value.policy is Dictionary or C.bytes(value.policy) != C.bytes(_policy) or not value.state is Dictionary or not value.state.get("generated_world") is Dictionary: return false
++	return _matches_configured_world(value.state)
++
++func save_file(path: String) -> Dictionary:
++	if not _initial_error.is_empty(): return ready()
++	if not _matches_configured_world(_state): return C.fail("V3_SAVE_NAMESPACE","当前世界与此运行版本的原始身份不同，未写入。")
++	if path.is_empty(): return C.fail("V3_SAVE_NAMESPACE","请使用此版本的独立文件，旧旅程不会被覆盖。")
++	if FileAccess.file_exists(path):
++		var file := FileAccess.open(path,FileAccess.READ)
++		if file == null: return C.fail("V3_SAVE_NAMESPACE","无法验证已有文件，未覆盖。")
++		if file.get_length() > MAX_DIRECT_SAVE_BYTES:
++			file.close()
++			return C.fail("V3_SAVE_NAMESPACE","无法验证已有文件，未覆盖。")
++		var encoded := file.get_as_text(); var read_error: Error = file.get_error(); file.close()
++		var parser := JSON.new(); var parsed: Error = parser.parse(encoded)
++		# The raw API cannot replace an adapter envelope, even for this identity.
++		if read_error not in [OK,ERR_FILE_EOF] or parsed != OK or not matches_save_identity(parser.data): return C.fail("V3_SAVE_NAMESPACE","已有文件不属于此精确运行版本，未覆盖。")
++	return super.save_file(path)
++
+ func capability_catalog(actor_id: String = "actor_player", selected_focus: Dictionary = {}) -> Dictionary:
+ 	if not _initial_error.is_empty(): return ready()
+ 	var admission := {"ok": true}
+--- a/tests/natural_coast_basic/test_adapter.gd
++++ b/tests/natural_coast_basic/test_adapter.gd
+@@ -29,6 +29,57 @@
+ func reject_load(adapter: RefCounted, value: Dictionary, label_: String) -> void:
+ 	var before := C.bytes(adapter.save_data())
+ 	check(not adapter.load_data(value).ok and C.bytes(adapter.save_data()) == before,label_+" rejects atomically")
++func t03_overwrite_guard(adapter: RefCounted, recipe: String) -> void:
++	# Dedicated synthetic fixtures only; run with isolated user:// under the
++	# existing native guard. These are not actual public/native player saves.
++	var path := "user://natural_coast_basic_save_t03_%s.json" % recipe
++	var raw_path := "user://natural_coast_basic_save_t03_raw_%s.json" % recipe
++	for fixture_path in [path,raw_path,path+".tmp",raw_path+".tmp"]:
++		if FileAccess.file_exists(fixture_path): DirAccess.remove_absolute(fixture_path)
++	var before := C.bytes(adapter.save_data())
++	check(adapter.save_file(path).ok and adapter.save_file(path).ok,"T03 exact distribution envelope saves repeatedly")
++	var independent := Adapter.new(adapter.source.data)
++	check(independent.ready().ok and C.bytes(independent.source.identity) == C.bytes(adapter.source.identity) and independent.save_file(path).ok,"T03 independent same-distribution entry can save")
++	var same_envelope_bytes := FileAccess.get_file_as_string(path)
++	check(not adapter.engine.save_file(path).ok and FileAccess.get_file_as_string(path) == same_envelope_bytes,"T03 direct raw API preserves even its own adapter envelope")
++	var existing := adapter.save_data()
++	existing.identity.inventory_profile_hash = "0".repeat(64)
++	existing.identity.runtime_hash = "0".repeat(64)
++	existing.engine.state.generated_world = existing.identity.duplicate(true)
++	existing.engine.state.world_id = Source.WORLD_PREFIX+existing.identity.runtime_hash
++	var encoded := C.bytes(existing)
++	FileAccess.open(path,FileAccess.WRITE).store_string(encoded)
++	FileAccess.open(path+".tmp",FileAccess.WRITE).store_string("T03 temporary sentinel")
++	check(existing.source.content_hash == adapter.source.identity.content_hash,"T03 foreign-identity fixture preserves generator content hash")
++	check(not adapter.save_file(path).ok and not independent.save_file(path).ok and FileAccess.get_file_as_string(path) == encoded,"T03 same-terrain foreign runtime envelope is preserved by both entries")
++	check(not adapter.engine.save_file(path).ok and FileAccess.get_file_as_string(path) == encoded and FileAccess.get_file_as_string(path+".tmp") == "T03 temporary sentinel","T03 direct raw API preserves foreign envelope and temp sentinel")
++	existing = adapter.save_data(); existing.engine.state.world_id = "other_distribution_world"
++	encoded = C.bytes(existing); FileAccess.open(path,FileAccess.WRITE).store_string(encoded)
++	check(not adapter.save_file(path).ok and FileAccess.get_file_as_string(path) == encoded,"T03 exact envelope identity cannot hide a different engine world")
++	existing = adapter.save_data(); existing.source = []
++	encoded = C.bytes(existing); FileAccess.open(path,FileAccess.WRITE).store_string(encoded)
++	check(not adapter.save_file(path).ok and FileAccess.get_file_as_string(path) == encoded,"T03 malformed typed source refuses without a script exception")
++	DirAccess.remove_absolute(path+".tmp")
++	check(adapter.engine.save_file(raw_path).ok and adapter.engine.save_file(raw_path).ok,"T03 direct raw API retains same-distribution saves")
++	var raw := adapter.engine.save_data(); raw.state.generated_world.inventory_profile_hash = "0".repeat(64)
++	encoded = C.bytes(raw); FileAccess.open(raw_path,FileAccess.WRITE).store_string(encoded)
++	FileAccess.open(raw_path+".tmp",FileAccess.WRITE).store_string("T03 raw temporary sentinel")
++	check(not adapter.engine.save_file(raw_path).ok and FileAccess.get_file_as_string(raw_path) == encoded and FileAccess.get_file_as_string(raw_path+".tmp") == "T03 raw temporary sentinel","T03 direct raw API preserves foreign authority signature before any write")
++	FileAccess.open(raw_path,FileAccess.WRITE).store_string("{invalid")
++	check(not adapter.engine.save_file(raw_path).ok and FileAccess.get_file_as_string(raw_path) == "{invalid","T03 malformed raw JSON is preserved")
++	var independent_before := C.bytes(independent.engine.save_data())
++	var foreign_raw := independent.engine.save_data()
++	foreign_raw.state.world_id = Source.WORLD_PREFIX+"0".repeat(64)
++	foreign_raw.state.generated_world.runtime_hash = "0".repeat(64)
++	foreign_raw.campaign_memory.world_id = foreign_raw.state.world_id
++	var foreign_encoded := C.bytes(foreign_raw)
++	FileAccess.open(raw_path,FileAccess.WRITE).store_string(foreign_encoded)
++	var raw_load: Dictionary = independent.engine.load_data(foreign_raw)
++	check((not raw_load.ok and C.bytes(independent.engine.save_data()) == independent_before) or (raw_load.ok and not independent.engine.save_file(raw_path).ok and FileAccess.get_file_as_string(raw_path) == foreign_encoded and FileAccess.get_file_as_string(raw_path+".tmp") == "T03 raw temporary sentinel"),"T03 direct raw load cannot redefine constructor-bound save authority")
++	check(C.bytes(adapter.save_data()) == before,"T03 allowed and refused writes preserve live state, RNG, pending and receipts")
++	for fixture_path in [path,raw_path,path+".tmp",raw_path+".tmp"]:
++		DirAccess.remove_absolute(fixture_path)
++
+ func run() -> void:
+ 	var recipe := OS.get_environment("COAST_PLAY_RECIPE")
+ 	if recipe.is_empty(): recipe = "coastal_range"
+@@ -244,6 +295,7 @@
+ 	var reset: RefCounted = a.restarted()
+ 	check(reset.ready().ok and reset.state_copy().turn == 0 and reset.state_copy().actors.actor_player.inventory == [Source.ITEM] and C.bytes(reset.source.data) == raw_bytes and C.bytes(reset.source.identity) == C.bytes(a.source.identity),"explicit restart alone recreates one starting bundle and exact source identity")
+ 	check(FileAccess.get_file_as_string(path) == disk,"explicit restart never overwrites saved journey")
++	t03_overwrite_guard(a,recipe)
+ 	# Cross-recipe, forged physical identity, producer identity and exact source data fail closed.
+ 	var alternate_recipe := "plateau_hinterland" if recipe == "coastal_range" else "coastal_range"
+ 	var alternate := Adapter.new(Generator.generate("726381",4,alternate_recipe).source)

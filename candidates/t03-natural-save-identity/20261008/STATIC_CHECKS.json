@@ -1,0 +1,53 @@
+{
+  "status": "source_static_checks_passed_only",
+  "checks": 23,
+  "check_labels": [
+    "Three exact base file hashes unchanged",
+    "Three overlay hashes match manifest",
+    "All168 authority-source inputs unchanged",
+    "Frozen final-source-lock unchanged",
+    "Adapter function set unchanged",
+    "All adapter code except destination guard byte-identical, including admission/save/load",
+    "All existing natural Engine methods byte-identical",
+    "Direct raw signature and existing temp-write/rename delegation unchanged",
+    "Direct guard read-only before writer",
+    "Adapter guard read-only before writer",
+    "Adapter full source/runtime/engine identity comparisons present",
+    "Direct target full world/authority comparison uses constructor-bound identity",
+    "Direct API schema/rule/resolver/policy comparisons present",
+    "Incomplete existing-file I/O refuses before writing",
+    "Request identity validation unchanged",
+    "Production overlay exactly two approved natural-coast files",
+    "Patch applies with zero fuzz to disposable three-file base and matches overlay",
+    "Synthetic predicate witness: old guard permits equal terrain content with foreign runtime identity",
+    "Two changed files remain in unchanged authority-input closure, advancing runtime identity",
+    "Existing suite gains13 focused unrun checks and one invocation",
+    "Removing new helper/invocation restores exact old test, including source-mutation behavior",
+    "Exact inherited constructor signature, one inherited initialization and detached typed identity capture",
+    "Foreign raw-loaded current state refuses before target read or write"
+  ],
+  "focused_new_engine_checks_prepared": 13,
+  "godot_parse_run": false,
+  "engine_run": false,
+  "real_public_native_save_pair_run": false,
+  "base_or_backup_writes": 0,
+  "git_or_library_writes": 0,
+  "synthetic_witness_scope": "Source predicate model only; no game runtime identity calculated or Engine executed",
+  "preparation_correction": "Initial helper/report count mismatch corrected by adding same-identity envelope test; later fixed constructor-bound writer identity after inspecting inherited raw load behavior. Final complete static checks rerun. Independent review then found case13 initially targeted invalid JSON, masking old behavior; corrected it to matching foreign_raw payload plus temp sentinel and reran all23 source/static checks.",
+  "native_runtime_blocker": "Required memory.max and memory.current absent; supported native route unchanged",
+  "test_isolation": "Full existing suite requires disposable project and isolated user://; unchanged suite temporarily writes traversal_policy.gd before restoration",
+  "residual_scope": [
+    "Generic Engine and other-mode arbitrary-path save APIs unchanged",
+    "Cross-distribution interoperability and migration unsupported",
+    "Old source-hash identity remains protected; candidate advances its own identity",
+    "Raw inherited writer omits write-error check before rename",
+    "No final identity revalidation or exclusive temporary ownership; cross-process destination and .tmp races remain",
+    "Filesystem atomic replacement and crash durability unverified"
+  ],
+  "verified_final_file_sha256": {
+    "view/generated_natural_coast_basic/adapter.gd": "7932dc7a48a25981b9d154c108515af4ed927133a798819ca26424afd28948ba",
+    "view/generated_natural_coast_basic/engine.gd": "dba3ca7fe04dc8a4100897250fc19c5c6c2acff2ef687ff120e894beadf6351d",
+    "tests/natural_coast_basic/test_adapter.gd": "99d750960ed2ba6197b5e624044a31276accd78c32aea78e000661179d2c66df"
+  },
+  "report_scope": "Preparation-time source/static verification. git_or_library_writes counts only that preparation, before this independent Git source checkpoint."
+}

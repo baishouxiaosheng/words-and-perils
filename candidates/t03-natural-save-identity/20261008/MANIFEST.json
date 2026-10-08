@@ -1,0 +1,31 @@
+{
+  "status": "isolated_unrun_candidate",
+  "base_root": "exact restored final candidate identified by source-lock SHA-256",
+  "base_final_source_lock_sha256": "082235c6075572821390660c21d29463d88d8f475518d6ad591d34a5a8ba93a8",
+  "files": {
+    "view/generated_natural_coast_basic/adapter.gd": {
+      "base_sha256": "7b14de3517ee7e0e1161775d0cbfb1ae58b6fa901a60c053a73073a9c153fc7b",
+      "candidate_sha256": "7932dc7a48a25981b9d154c108515af4ed927133a798819ca26424afd28948ba",
+      "base_bytes": 20223,
+      "candidate_bytes": 21219,
+      "kind": "production",
+      "overlay_path": "overlay/view/generated_natural_coast_basic/adapter.gd"
+    },
+    "view/generated_natural_coast_basic/engine.gd": {
+      "base_sha256": "bcba0f9c95d3b9ec3b8528f4cfb8d6df23d0867cc1e8d0a65be562f3d2859f36",
+      "candidate_sha256": "dba3ca7fe04dc8a4100897250fc19c5c6c2acff2ef687ff120e894beadf6351d",
+      "base_bytes": 8291,
+      "candidate_bytes": 11375,
+      "kind": "production",
+      "overlay_path": "overlay/view/generated_natural_coast_basic/engine.gd"
+    },
+    "tests/natural_coast_basic/test_adapter.gd": {
+      "base_sha256": "52fef3da71f5556c794940727514b0f575bc45da5962a42f0f667bf4b9a49889",
+      "candidate_sha256": "99d750960ed2ba6197b5e624044a31276accd78c32aea78e000661179d2c66df",
+      "base_bytes": 33449,
+      "candidate_bytes": 38409,
+      "kind": "test",
+      "overlay_path": "overlay/tests/natural_coast_basic/test_adapter.gd"
+    }
+  }
+}

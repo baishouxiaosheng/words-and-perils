@@ -1,0 +1,10 @@
+{
+	"checks": 170,
+	"failures": [],
+	"ok": true,
+	"owned_pid": 42148,
+	"recipe": "coastal_range",
+	"run_id": "natural-coastal-01",
+	"script_sha256": "22fcd83237d0668f23c7332752e95415cd087099d9cce36747c35765ba74b8a4",
+	"suite": "res://tests/t03_natural_write_result/_local_entry.gd"
+}

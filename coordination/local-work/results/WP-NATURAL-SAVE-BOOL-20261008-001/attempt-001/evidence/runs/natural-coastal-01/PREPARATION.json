@@ -1,0 +1,12 @@
+{
+  "candidate": "natural-save-identity",
+  "suite": "tests/natural_coast_basic/test_adapter.gd",
+  "recipe": "coastal_range",
+  "run_id": "natural-coastal-01",
+  "source": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-NATURAL-SAVE-BOOL-20261008-001\\run-20261008-a1b40-01\\candidate-project",
+  "project": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-NATURAL-SAVE-BOOL-20261008-001\\run-20261008-a1b40-01\\natural-coastal-01\\project",
+  "suite_sha256": "60e46a3b5b607d3ba5cbe3634ebcd6bd3ebbfc98fa10d4bad8732ea95b5a0ba2",
+  "entry_sha256": "22fcd83237d0668f23c7332752e95415cd087099d9cce36747c35765ba74b8a4",
+  "scope": "Fresh exact independent Natural candidate; actual changed adapter; inherited identity engine + exact Dictionary suite; no Raw; isolated data; no autoload",
+  "source_files": 2568
+}

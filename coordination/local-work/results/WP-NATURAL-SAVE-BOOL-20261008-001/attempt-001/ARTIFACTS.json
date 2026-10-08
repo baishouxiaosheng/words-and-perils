@@ -1,0 +1,841 @@
+{
+  "schema_version": 1,
+  "task_id": "WP-NATURAL-SAVE-BOOL-20261008-001",
+  "task_sha256": "b3d55be9f2cdab63b650fc25d373cfd985250ac4d26335861c0768c7baabc73e",
+  "phase": "A candidate/source/log artifacts",
+  "adopted": false,
+  "artifact_count": 166,
+  "artifacts": [
+    {
+      "path": "candidates/t03-natural-write-result/wp-natural-save-bool-20261008-001/overlay/view/generated_natural_coast_basic/adapter.gd",
+      "bytes": 21635,
+      "sha256": "6f9e593303a297391995329e0a5daecb477250b69944ee471247d9cca5df1bff"
+    },
+    {
+      "path": "candidates/t03-natural-write-result/wp-natural-save-bool-20261008-001/overlay/tests/t03_natural_write_result/fake_adapter.gd",
+      "bytes": 533,
+      "sha256": "c642076ad58159f4a1f4f46760bb5867084e33b2b34a4b7d47e5e6fddad094f2"
+    },
+    {
+      "path": "candidates/t03-natural-write-result/wp-natural-save-bool-20261008-001/overlay/tests/t03_natural_write_result/io_probe.gd",
+      "bytes": 1957,
+      "sha256": "6405bdd124d0d65d96f680bffb295415849f2c90117896f01233f7cbc4d843f8"
+    },
+    {
+      "path": "candidates/t03-natural-write-result/wp-natural-save-bool-20261008-001/overlay/tests/t03_natural_write_result/test_save_file.gd",
+      "bytes": 7547,
+      "sha256": "400ca10734ae4d3774f8a9aeb7c2fbb074d814144106b930f7c79fc91e843961"
+    },
+    {
+      "path": "candidates/t03-natural-write-result/wp-natural-save-bool-20261008-001/MANIFEST.json",
+      "bytes": 1863,
+      "sha256": "9afe042172496341b8c174fefdb16d4e2dc23ef0448a33408c01737e8c0ac0a2"
+    },
+    {
+      "path": "candidates/t03-natural-write-result/wp-natural-save-bool-20261008-001/SOURCE_DIFF.patch",
+      "bytes": 1869,
+      "sha256": "229a230f8373f343fdc7f73b9b7c232bce3203b8b2fbcdb420e3a18b039b0afe"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/AUTH.json",
+      "bytes": 487,
+      "sha256": "fd3807bac5d82005e23c92d58b2795f4887d698d2955b1bd788b08456019caa0"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/ACK.json",
+      "bytes": 1559,
+      "sha256": "03660fc915e41dd0eb11b89ab4783cb123460fafe60e05e7248f77c408e5d54c"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/CLAIM.json",
+      "bytes": 734,
+      "sha256": "ca2e43b7f76c9e0b0af5de87f14e84bf485d5a5878e428f2a10980c29d0031ac"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/CLAIM_PUBLICATION_RECEIPT.json",
+      "bytes": 1290,
+      "sha256": "9a2a79c39748b7e43376b43fae589f7d6bbd96b9556ff6061774db3abb28c5d7"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/ACK_PREPARED.json",
+      "bytes": 896,
+      "sha256": "d403a2256b28d0c9d9f340d9103b3ddbdb12e2c5b2be0b683ac716cc34feb531"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/ACK_PUSH_RESULT.json",
+      "bytes": 164,
+      "sha256": "693a78ed1eef61ee107505f684dc1345eecd8b5f2bcf11a0f37ac2dbcabd44c6"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/ACK_PUSH.stdout.log",
+      "bytes": 141,
+      "sha256": "99850c74b17e5822a3728df90058be6718e84fb6c7592b4c08233c9bfe527142"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/ACK_PUSH.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/INPUT_VERIFICATION.json",
+      "bytes": 5798,
+      "sha256": "c7a6862621a1cc96d22e8c261544c0462b62f12040f0311cd11a4bc6e1717fc2"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/BASELINE_SOURCE_MAP.json",
+      "bytes": 433711,
+      "sha256": "afa6061dcceb10c46425dd351cc294e413070e01531f0dcaa6c76eebe1ebaca0"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/CANDIDATE_SOURCE_MAP.json",
+      "bytes": 485496,
+      "sha256": "9d543bda8dd81c3360e3259728b3955a82c2253c232c88502b171c4fedb148af"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/TEST_SUMMARY.json",
+      "bytes": 13397,
+      "sha256": "fe2fed11836c9d49b5e91576684582453be20e55c5954b25866a8f693fea0587"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/SOURCE_HASHES.json",
+      "bytes": 514010,
+      "sha256": "46d2cfe70d3c4690c5abac93d7750aaccbd1936315e9d52bf505c918dc08bc92"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/ORIGINAL_FILES_POSTRUN.json",
+      "bytes": 114,
+      "sha256": "cfb0e78479cb5a8d690df9aa169e8eedfc37fda8321803d9edc8334bbcf75acf"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/SOURCE_DIFF.patch",
+      "bytes": 1869,
+      "sha256": "229a230f8373f343fdc7f73b9b7c232bce3203b8b2fbcdb420e3a18b039b0afe"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/CANDIDATE_MANIFEST.json",
+      "bytes": 1863,
+      "sha256": "9afe042172496341b8c174fefdb16d4e2dc23ef0448a33408c01737e8c0ac0a2"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/REVIEW_SUMMARY.txt",
+      "bytes": 2304,
+      "sha256": "23094d168543543a775a6aed7f14515bc26e527148a816af5e3e95a1102d420e"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/STARTUP_GATE.json",
+      "bytes": 2156,
+      "sha256": "a4b4ac730977eb2d38356b4b5063e52320d3e76c537a30aec586094cfcb08366"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/OWNER_RESUME.json",
+      "bytes": 394,
+      "sha256": "2966209605b2419185e92887040ef55481cef6d60343728051aaa5302d2f2ab5"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/STOP_LATCH_FALSE_POSITIVE.json",
+      "bytes": 311,
+      "sha256": "8e7e1fc7dafcbd7467b515200807fd00ca69bd6101994838f35b20017f283c89"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/LOCK_GATE_DIAGNOSTIC.json",
+      "bytes": 726,
+      "sha256": "77eae89520b4daee76226188ba169c87e080011f7d5d253c65fc0ca064e6069d"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/LOCK_OWNER.json",
+      "bytes": 360,
+      "sha256": "684cf1b3b3077be120a657972ac2bc29dbdebf6feee8449e20c53733c95dd70f"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/FOCUSED_FIXTURE_CORRECTION.json",
+      "bytes": 462,
+      "sha256": "5c9e528e69e889a2eae14350aeb56b3a255d8dc0f1bcb722196cad8ca392184f"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/CHECKPOINT_LOCAL_GATE.json",
+      "bytes": 4518,
+      "sha256": "9b994677ffae04e28345c468a2191555dc07705e54445078618b615e545d63cc"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/TASK.json",
+      "bytes": 8629,
+      "sha256": "b3d55be9f2cdab63b650fc25d373cfd985250ac4d26335861c0768c7baabc73e"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/PROTOCOL.json",
+      "bytes": 10612,
+      "sha256": "209cc25f649f2ce6635012d6d6f0bdcf09526ac68d1a7dcbf907e7398a73c05a"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/TASK_SCHEMA.json",
+      "bytes": 7064,
+      "sha256": "ad3a3cd71adae6c38817042e06322d0aaa0092080be3c15579ccffe1b1c8e85c"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/CONTROL.json",
+      "bytes": 265,
+      "sha256": "86a721fd16ffda7170e65e55908fe7c4ed42a26dcd9eec756c3d21cce73e7db1"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/Prepare.ps1",
+      "bytes": 4632,
+      "sha256": "c0cfc9261fc0b875df90bc86870fd0e83534d12161e5178a65336fda324d9001"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/Run-Test.ps1",
+      "bytes": 1846,
+      "sha256": "2ecc0cccc4cffba123fe1785ec021c3f13bd01e146d93987f9e7a376b4c57bf7"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/Invoke-Test.ps1",
+      "bytes": 1097,
+      "sha256": "97a7e52fda103f941009c7bdbd32464fde048d306388c3c11e07b699766678d1"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/Audit-Test.ps1",
+      "bytes": 6171,
+      "sha256": "491874f76dd71d66e5f7aa040a7c4a873825a0e6de45c3565ad1119d322740d3"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/Audit_PRE_DATE_FIX.ps1",
+      "bytes": 6018,
+      "sha256": "0b65d808a327c6860acd1ca02eda3472b8cebb494d3bb32ef6047f5fc90aeb08"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/Gate.ps1",
+      "bytes": 7454,
+      "sha256": "562a0a18db4f3c83e93b1a60e9a88cc1189ae7d3662017d83ccbd44eacce0d66"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/Gate_PRE_DATE_FIX.ps1",
+      "bytes": 7437,
+      "sha256": "87badef15e248c249cea354f9d58da29781abfb91b7ea66d05fcc6db42438af5"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/Hold-Repo-Lock.ps1",
+      "bytes": 1020,
+      "sha256": "0cc1df107bcd30aefd7e613c0f61ddc86806d84a425b4ede30c99ce1126cfc62"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/validate_start.py",
+      "bytes": 6138,
+      "sha256": "625b3c05c7dbe8e22cff7222939052df59e211644c07347c5b5236b9a10e8749"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/build_candidate.py",
+      "bytes": 2342,
+      "sha256": "260f01c18ed1a0822b84a4ac64c994c8e1b08943afddb39a92466c966c16815c"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/adapt_audit.py",
+      "bytes": 1096,
+      "sha256": "f654582e62840e3d1e439dffcc987a6919265db665fc031e718a246e9fbf7abb"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/prepare_publication.py",
+      "bytes": 3318,
+      "sha256": "66b01b1f369d31946c903581bdb6a90c569be58173957da2a68bf099a278df01"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/TOOLING_FAILURES.json",
+      "bytes": 2298,
+      "sha256": "bfcf57ae95bf222d68670c6c3c154bb8b65021732ed2768e656417737a171e31"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/actual_GUARD_SOURCE_PRELAUNCH.json",
+      "bytes": 1191,
+      "sha256": "60dfdcf561dc6a103016d27147c31ad93ddb3fdeb9c813b881ff09cbafdf7ad0"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/actual_host.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/actual_host.stdout.log",
+      "bytes": 235,
+      "sha256": "3da2ce7d4ed19f1a6d9d9f548eb36baf4509b426fa456d9eb7787a7264c83fb5"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/actual_HOST_EXIT.json",
+      "bytes": 81,
+      "sha256": "071141b90fd11bc1f9a588aa6ebb7f8f773ce5c9c93dcf87f1fd2cd9a4f4d9bb"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/actual_HOST_IDENTITY.json",
+      "bytes": 455,
+      "sha256": "23be27bcb91905c19e1dddcead31c9e6fd52ab7e9c4de30a914f1f64776861fa"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘/logs/godot.log",
+      "bytes": 849,
+      "sha256": "f1eb77f4e983f03180feaf7615d0a7dc724205cf6227ed91262392269bb89858"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/GUARD_RESULT.json",
+      "bytes": 9775,
+      "sha256": "92f532342f795c0585d38a5f8595cd5a333f2f5988469e004f98096f42369c24"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/output/completed.json",
+      "bytes": 226,
+      "sha256": "0013f54ec9199c5aad508cf09ebf83a50ec234ae6b2ddcc95b6d89ce3cc65c1c"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/output/result.json",
+      "bytes": 267,
+      "sha256": "e9701982580a6259ba17e3722789f7680b68e5772cc1d2b6575ad5781358999f"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/PREPARATION.json",
+      "bytes": 848,
+      "sha256": "e67423b06221bbebf193802b12cab7e01ecf38121ba95e6eae1f06bb022e6ce3"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/SOURCE_MAP.json",
+      "bytes": 678335,
+      "sha256": "d0ff30814bb32c15b760ee9872aeb28094e54fca74357e98a277f8974f58555e"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/SOURCE_POSTRUN.json",
+      "bytes": 737357,
+      "sha256": "eca3e0fd10e34aa2a1a68d691edf2c36765a3a3e391a03b802b09cc5a860ff3e"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/SPEC.json",
+      "bytes": 1138,
+      "sha256": "39586fcac4043150adbdf525ce97b25b9e1d06ec2d594b5aae0da1f0d7727227"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/stdout.log",
+      "bytes": 853,
+      "sha256": "27a78d4e7dbe1d7d4fe78e8f95defebb7601cc19512112bbf2a25eebff9fc456"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/SUITE_RESULT.json",
+      "bytes": 286,
+      "sha256": "4c73bb2b5efa783e57727860a2df882e883aeeb28a58ac995cfca73f5680a0d1"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/VERIFIED_RESULT.json",
+      "bytes": 2193,
+      "sha256": "83ae2afc7002e0fff1db1f9f96ec1292867694025d2c87ec04cb4b20734d1da7"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/executed_entry.gd",
+      "bytes": 1220,
+      "sha256": "1ab64d9a03bc03350f32c88756b1d10ef9f94ad84f9e1fa9dc4c1d2df08c343c"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/actual_GUARD_SOURCE_PRELAUNCH.json",
+      "bytes": 1191,
+      "sha256": "60dfdcf561dc6a103016d27147c31ad93ddb3fdeb9c813b881ff09cbafdf7ad0"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/actual_host.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/actual_host.stdout.log",
+      "bytes": 241,
+      "sha256": "b18085a1a0a01a1e2cf8faaefa5a031c4ce8493f4f8863399538262e4c09feb0"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/actual_HOST_EXIT.json",
+      "bytes": 81,
+      "sha256": "0553f34b006686a43a05321014d05728591250d4876e0802594199013da42e2c"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/actual_HOST_IDENTITY.json",
+      "bytes": 455,
+      "sha256": "d31ae57d91e4d86b9bde2ad79ff06369f963fe16fc94a83634c4d3ec0c4a29cc"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘/logs/godot.log",
+      "bytes": 4570,
+      "sha256": "de994271b6e4907c055b1f345443db692093dec89d2c2fd5aa9d1b63beeee64b"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘/natural_coast_basic_save_write_result.json",
+      "bytes": 104266,
+      "sha256": "410e55e5f36c241af8c1511edca239b9b899f4e2e4fdaae4e74a666b1699abb8"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘/natural_coast_basic_save_write_result_unicode.json",
+      "bytes": 104266,
+      "sha256": "410e55e5f36c241af8c1511edca239b9b899f4e2e4fdaae4e74a666b1699abb8"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/GUARD_RESULT.json",
+      "bytes": 23325,
+      "sha256": "85fa4e8ab313a0f7df69214fd06519a6978e28f4af3f3c5906bdfba616310f7e"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/PREPARATION.json",
+      "bytes": 855,
+      "sha256": "0ad7861c05dc39508f3d0c0fbcea666b16f3303e6a50581bebdc9701f54110b1"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/SOURCE_MAP.json",
+      "bytes": 678335,
+      "sha256": "17b4f851ada7e3d6a7983d0ffcab6fa56416f2d35be56e07af72ec3531ec6d2b"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/SOURCE_POSTRUN.json",
+      "bytes": 737357,
+      "sha256": "325e5b51fc21cc58a6886a31959a8f2634871fb50040b371df714ca3e5855d5f"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/SPEC.json",
+      "bytes": 1138,
+      "sha256": "25f4f570575954b10c21737b832ea25cac1d108fc5ebd025be62f805eef3ef61"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/stderr.log",
+      "bytes": 284,
+      "sha256": "2b60478dadf3915ad72eb986ae26cb1a75953782c41846acf29e4ef9a4a79dbb"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/stdout.log",
+      "bytes": 4302,
+      "sha256": "488915f067eddf0e4b9770a3dc0fbc85eb94f3ca7b4ab21c9fae6a90e5a4af0f"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/SUITE_RESULT.json",
+      "bytes": 3437,
+      "sha256": "8672a18896b66bfbd5507465a40f44fbf56159ac7ea8d9424fb0b08bc7f50ff9"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/VERIFIED_RESULT.json",
+      "bytes": 2540,
+      "sha256": "3c5baabf754089469df226d63aae9a8b5f1c49d435a159b41e9e681a31858bf2"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/executed_entry.gd",
+      "bytes": 1227,
+      "sha256": "2af724532b462b5a52ce138476ab842710e003fe47e3df906a60eb5480fd91a1"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/failed_source/test_save_file.gd",
+      "bytes": 7379,
+      "sha256": "658bf1c291ac059626c671be660469c83e3ecaa0a7bcc56afa12ddf9f56f2232"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/failed_source/fake_adapter.gd",
+      "bytes": 533,
+      "sha256": "c642076ad58159f4a1f4f46760bb5867084e33b2b34a4b7d47e5e6fddad094f2"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/failed_source/io_probe.gd",
+      "bytes": 1957,
+      "sha256": "6405bdd124d0d65d96f680bffb295415849f2c90117896f01233f7cbc4d843f8"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/actual_GUARD_SOURCE_PRELAUNCH.json",
+      "bytes": 1191,
+      "sha256": "60dfdcf561dc6a103016d27147c31ad93ddb3fdeb9c813b881ff09cbafdf7ad0"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/actual_host.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/actual_host.stdout.log",
+      "bytes": 235,
+      "sha256": "82e0b9fbddbe289ba7e4e64604c8ce334efc2b54e880502270a42bdc6a125696"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/actual_HOST_EXIT.json",
+      "bytes": 81,
+      "sha256": "4c01396ea5e77fdbe9fa59478abaad340fd3ff039044b45b8261deea9c679bdd"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/actual_HOST_IDENTITY.json",
+      "bytes": 455,
+      "sha256": "17e11d6bb328a1fa250d4ce023cc6aef4e72b079fff2b984b9182fedd89946f8"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘/logs/godot.log",
+      "bytes": 4042,
+      "sha256": "cedc8508e9fa8979ca42f83369525e73c70ef945f6c4707a85c4c179099be8f2"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘/natural_coast_basic_save_write_result.json",
+      "bytes": 107252,
+      "sha256": "2eb15b07e94bb34274dd29b2b64e2ad9446dbc9656a08a7e1ea775ebb5114a00"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘/natural_coast_basic_save_write_result_unicode.json",
+      "bytes": 107252,
+      "sha256": "2eb15b07e94bb34274dd29b2b64e2ad9446dbc9656a08a7e1ea775ebb5114a00"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/GUARD_RESULT.json",
+      "bytes": 23224,
+      "sha256": "d8b2d8179cada146011e11e363827a09e9a0df6aa9101f5307c5feb72590e699"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/PREPARATION.json",
+      "bytes": 855,
+      "sha256": "defa4f65c47854f1186336c5e21a67a7cd3f0ac868e2b4b4dd74107dbcfb091d"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/SOURCE_MAP.json",
+      "bytes": 678335,
+      "sha256": "d95ece1b475dbbe666cbb0e8b94befe3bd31417b74bb4c73b8c18b22971eb7d8"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/SOURCE_POSTRUN.json",
+      "bytes": 737357,
+      "sha256": "4b5d38dc04db4e905009898ccc4d128a5ac61d4af92aa76e609fd66183e14790"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/SPEC.json",
+      "bytes": 1138,
+      "sha256": "ecc0177244baceff2acfa596c81a8e98d5a3a9a893846d296ffeef54bd585eca"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/stdout.log",
+      "bytes": 4051,
+      "sha256": "4eca33f861e31ea2c3c1a16fc3fdbfce681603736684a68960b422f19319d02b"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/SUITE_RESULT.json",
+      "bytes": 3141,
+      "sha256": "53ca05822e9b82e315297f8e05455a462669e5e265a39ce2aab36e14fb6daf59"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/VERIFIED_RESULT.json",
+      "bytes": 2203,
+      "sha256": "0ce9fce8273a0a755fa4eae6d122b7913359ee1b712c4d849dd7f5c8cdaaf661"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/executed_entry.gd",
+      "bytes": 1227,
+      "sha256": "74fcdd2d0f410fa7385ad49a701e1982e3e507748b4291ab91d54625ba48031c"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/actual_GUARD_SOURCE_PRELAUNCH.json",
+      "bytes": 1191,
+      "sha256": "60dfdcf561dc6a103016d27147c31ad93ddb3fdeb9c813b881ff09cbafdf7ad0"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/actual_host.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/actual_host.stdout.log",
+      "bytes": 235,
+      "sha256": "0442e80a2be880ca79169ecc56ca02db3b118dc22621c305ad7535e0e01bf0a1"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/actual_HOST_EXIT.json",
+      "bytes": 81,
+      "sha256": "9488c035246e32588bce01015cbb3989b3a1bc612f56d3cd07b7e1a908c46196"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/actual_HOST_IDENTITY.json",
+      "bytes": 455,
+      "sha256": "4dd2d023d9a1de56120c4dae4dcf03159832f1e3bf97ef76c23ddfe3fc0285aa"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘/logs/godot.log",
+      "bytes": 2160,
+      "sha256": "172578cce011f007c84ee27a18aa2f24ff2acdc28646af40a8e01f162017600c"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘/natural_coast_basic_request_suite_coastal_range.json",
+      "bytes": 2581,
+      "sha256": "4028143500ca4f994d66d750019c7694e95ff12b9ed597c55fb146334a6620cf"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘/natural_coast_basic_save_suite_coastal_range.json",
+      "bytes": 105751,
+      "sha256": "a9c04fa7ce69223b61cc185999d360f9d9568d5ea45f2f651302bab325cf905b"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/GUARD_RESULT.json",
+      "bytes": 137718,
+      "sha256": "75e3f45cf3f1aaadcab648a65c506673351e8ee5e8b71d4da410d0641e0933d0"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/output/completed.json",
+      "bytes": 228,
+      "sha256": "5fb8ecd9dfd54468e153a4bfaa567073194980983d076c6fcf3095c9dc509f18"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/output/result.json",
+      "bytes": 282,
+      "sha256": "720f72eb95ace7a74ace9285d7acc171b9f28670e8c71398016b3f4d3e74b1b5"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/PREPARATION.json",
+      "bytes": 861,
+      "sha256": "14900d083c9c227a76c7837c747f91ed7eac19770246f18a92ca851cebaf3005"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/SOURCE_MAP.json",
+      "bytes": 678335,
+      "sha256": "1e7c2a59bb5beaa72ea2169e5f0874f5755ca6b2b69d394da0eab9d4e3e9cc4e"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/SOURCE_POSTRUN.json",
+      "bytes": 737357,
+      "sha256": "25bc9605789384a664073396723e008654e0dd3532aab680e48ac6891367ac35"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/SPEC.json",
+      "bytes": 1138,
+      "sha256": "f71cb264334807bfefdd3e29584108448ee50dcdb03f53f7d9b431221e514b4a"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/stdout.log",
+      "bytes": 2177,
+      "sha256": "2584c0145000abe00beb5486bbc09303aff8252766179626c3f32863ff80a16e"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/SUITE_RESULT.json",
+      "bytes": 301,
+      "sha256": "5a250eb1597db288f1963e5ef68a693daa808f1ebbc9e8386e6b047717998f34"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/T03_EXECUTED.json",
+      "bytes": 1418,
+      "sha256": "9323fd5a6e08fd6a5a5af1dd9602c34db6c4a468ebe62a8b8aed9d855928c71b"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/VERIFIED_RESULT.json",
+      "bytes": 2212,
+      "sha256": "c42bf8a13cb325749777078992095469478351dd188be9ceaccbee73ea5a9066"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/executed_entry.gd",
+      "bytes": 1434,
+      "sha256": "22fcd83237d0668f23c7332752e95415cd087099d9cce36747c35765ba74b8a4"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/actual_GUARD_SOURCE_PRELAUNCH.json",
+      "bytes": 1191,
+      "sha256": "60dfdcf561dc6a103016d27147c31ad93ddb3fdeb9c813b881ff09cbafdf7ad0"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/actual_host.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/actual_host.stdout.log",
+      "bytes": 235,
+      "sha256": "a82c2e81acf25f5ce007c8b78a4f2dc68a2b024c9b63ac7d53a75c6b4983c055"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/actual_HOST_EXIT.json",
+      "bytes": 81,
+      "sha256": "3027ff209323e9db80d20ac87725b4aab07ce8fe41120c8d9fafec48f29aa0aa"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/actual_HOST_IDENTITY.json",
+      "bytes": 455,
+      "sha256": "0877bb475de65be8e849adb3e9a9d1b8e25b3f66556f7604affcaf64ceeb736f"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘/logs/godot.log",
+      "bytes": 2165,
+      "sha256": "685c156ef0e5858d0c4670d247c9afd166136d71f2f4947f52a47af0be1f0942"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘/natural_coast_basic_request_suite_plateau_hinterland.json",
+      "bytes": 2400,
+      "sha256": "a9fe8bb5c08c37480e5fb58c2bdd8e522739867f0c5e184093da0538e28ddf1b"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘/natural_coast_basic_save_suite_plateau_hinterland.json",
+      "bytes": 106129,
+      "sha256": "151c8d06af42cc5bccd082d34c9af473c50234bcd1b6bcb5966db96bcb9ecb41"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/GUARD_RESULT.json",
+      "bytes": 138207,
+      "sha256": "228206117c1161a8446756bfef57aca07f5171e62af1da9438d750a8641382fc"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/output/completed.json",
+      "bytes": 228,
+      "sha256": "97434ecde64284c1f0519cd953c7bb888b940bdaca8bf3e226b3c7c38ea25eb6"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/output/result.json",
+      "bytes": 287,
+      "sha256": "267db5d6f1637744e75d19dcf2378a4dcb9dcbc0451316608b9905a962c16617"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/PREPARATION.json",
+      "bytes": 866,
+      "sha256": "b303e1ff96c45ee8032bba874b2e1f5a42bc28de992959d9951a6565c2d03da3"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/SOURCE_MAP.json",
+      "bytes": 678335,
+      "sha256": "29ffff54b20ad0e44c257565d61dd76fef6f2f9d8e006b42cfdeb8e63b58368f"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/SOURCE_POSTRUN.json",
+      "bytes": 737357,
+      "sha256": "a8314876ec0cc62f392edd90fbfba58bd984d72ca51f13155cf668d770d323ee"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/SPEC.json",
+      "bytes": 1138,
+      "sha256": "0e46c8bfc682218450b9bcb930e8871c5e25c8860b0e6cbd11d35be1f3a270cd"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/stdout.log",
+      "bytes": 2182,
+      "sha256": "dd00542d0945f0e7ed4e81b3e25f5bce85ce7da323f74622128ad4ee719bdd7c"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/SUITE_RESULT.json",
+      "bytes": 306,
+      "sha256": "ee4862f43f628cdbafc3a1f7cd5a6fd3f9d976cd75f64ec49edb47285907df17"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/T03_EXECUTED.json",
+      "bytes": 1418,
+      "sha256": "9323fd5a6e08fd6a5a5af1dd9602c34db6c4a468ebe62a8b8aed9d855928c71b"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/VERIFIED_RESULT.json",
+      "bytes": 2217,
+      "sha256": "6c271ef37bd620467d62ea95e04210601e6be0853138d0c1ef0b9e5f520dbd67"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/executed_entry.gd",
+      "bytes": 1439,
+      "sha256": "898c4c10c995dc9d71183d8630f5dab1d881d8533c32b7ac2bf8796607a4bc79"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-ack_publication-bae0574fc12c4535ade69635325e7c20.json",
+      "bytes": 776,
+      "sha256": "b38913dc1afc12a608ebab3b5dc4e853aa0975bc5d4af2ebf180689352fdb662"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-all_tests_verified-1231d47235e64cfab82280e477bed6bf.json",
+      "bytes": 807,
+      "sha256": "ca07bad1adb772537e8fcc24d26ec84fe84edd3775e4720b8d438afa9099d5ec"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-before_candidate_copy-d06907119dbb4b17b67a44dc7998ab6d.json",
+      "bytes": 782,
+      "sha256": "885c125780b03717a530f66873f711f929a606fb3c2366d77c3e000d370e33d6"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-claim_cas-bbe1f732f5004b4cabe75029d56c8011.json",
+      "bytes": 683,
+      "sha256": "c1585cbff11dc8a8147fc39edfa5af6b7d12db2333e295696a8df685b5ec5892"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-claim_cas_retry-0baf73cacb514273bb2e7b44c2f9940f.json",
+      "bytes": 689,
+      "sha256": "70cb493eda2c714012f384003c652bfafcb75c7a01db0f795baebebe53d3a583"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-claim_readback-869bef8939574fe593bb76175f11b023.json",
+      "bytes": 775,
+      "sha256": "79fb5ffdc309934933242ac3c4e60dd05c9232d7f3a14ecb26f60003134722f3"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-coastal_verified-a745a13672cb4019aec9f31d340ea753.json",
+      "bytes": 805,
+      "sha256": "1709efb3652f88b1498b6cc674100fde9ec6bf98dee0220158c269ccc204f6f4"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-compile_verified-8aede6ebe02a49c58f1936b223cea48e.json",
+      "bytes": 777,
+      "sha256": "97fa84d59ef74d409416051e342cd41dcafb932fdaa56a91d58b0516ce38d265"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-engine_natural-coastal-01-6becc4d6c3564f78969c5b559e0c5b6d.json",
+      "bytes": 814,
+      "sha256": "4710023e36c98c606f0b9cbac3e3a43a486815f34610b21b54cb4a070f7d170f"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-engine_natural-coastal-01-8714f53a6b9d4c99b60f9584b066c487.json",
+      "bytes": 311,
+      "sha256": "8e7e1fc7dafcbd7467b515200807fd00ca69bd6101994838f35b20017f283c89"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-engine_natural-compile-01-c9e9d69c4e204cd9840964b6f6e89a3d.json",
+      "bytes": 786,
+      "sha256": "77905b965f90280e5d61767d31d1e1dc7374a26c31c16b84d912db28ff80619d"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-engine_natural-focused-01-21540cc23c974fbca1924cea094c3718.json",
+      "bytes": 786,
+      "sha256": "1eb6a0acea5126a2a20a0e53d0124f6065aec628fcb1598a17710eedeea0bbd4"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-engine_natural-focused-02-6c0e402fa8eb44449c6a4d861463ec64.json",
+      "bytes": 786,
+      "sha256": "5bf0966b05bacf02eb3d5e0b8e407533385aee86f1372e5531f7205f21b8261a"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-engine_natural-plateau-01-61f6d9a7762341139648d0c9c58a1988.json",
+      "bytes": 814,
+      "sha256": "0f76fa54890cf81f44d32681071c971de9225695a75d2389c7c2a9844792b6b1"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-focused_fixture_fix-47a8d4d175b643cc839fe5f1ee9d5492.json",
+      "bytes": 780,
+      "sha256": "b57cb1baf0937b81448613b6cebe2eb946b8a6f2efafeca63a0ca7ef7d8d39ad"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-focused_verified-a37be901ebdc4bb0823805a79253dd5b.json",
+      "bytes": 777,
+      "sha256": "6ca5fb0e5b4643ece503a059111a882cde1e8a8fa7c293dc6326a87324641c03"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-preclaim-efc9acd688a84a8ebfa3fe0859bad8df.json",
+      "bytes": 682,
+      "sha256": "8ed1f0acba5ed489b45442284589c49c3aed5e276457c4b825e5eb7d8329d76a"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/guard/WindowsGuard.cs",
+      "bytes": 28655,
+      "sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/guard/Invoke-WindowsGuard.ps1",
+      "bytes": 1574,
+      "sha256": "f831a84e71f692fc851945b001cfc98092b7049fb3b48d0f5099fa49e016c5f8"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/guard/source-hashes.json",
+      "bytes": 758,
+      "sha256": "230fd53e35873bb031445600540f1ea2301ec7ea60e78f7cfc2df1b770d8c559"
+    }
+  ],
+  "self_reference": "This manifest excludes its own bytes/hash and contains no containing commit."
+}

@@ -1,0 +1,4 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+LOCAL_SUITE_ISOLATION {"autoloads":[],"globalized_user_dir":"E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-NATURAL-SAVE-BOOL-20261008-001/run-20261008-a1b40-01/natural-compile-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘","isolated":true,"os_user_dir":"E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-NATURAL-SAVE-BOOL-20261008-001/run-20261008-a1b40-01/natural-compile-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘","run_id":"natural-compile-01"}
+NATURAL_COAST_BASIC {"checks":4,"failures":[],"ok":true,"owned_pid":67108,"recipe":"","run_id":"natural-compile-01","script_sha256":"1ab64d9a03bc03350f32c88756b1d10ef9f94ad84f9e1fa9dc4c1d2df08c343c","suite":"res://tests/t03_natural_write_result/_local_entry.gd"}

@@ -1,0 +1,8 @@
+{
+  "boundary": "engine_natural-coastal-01",
+  "started_utc": "2026-10-08T13:11:18.3446763Z",
+  "local_stop": "E:\\WordsAndPerils-Tasks\\.local-work-state\\repo-1403552519\\STOP",
+  "passed": false,
+  "error": "Local lock owner/process identity changed",
+  "ended_utc": "2026-10-08T13:11:18.3911471Z"
+}

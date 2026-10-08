@@ -1,0 +1,47 @@
+{
+  "automation_enabled": false,
+  "execution_mode": "single_task_only",
+  "source_gate": {
+    "status": "blocked_source_authentication",
+    "repository_id_verified": 1403552519,
+    "owner_id_verified": 128279531,
+    "current_account_id": 128279531,
+    "current_connection_push": true,
+    "writer_roster_verified": false,
+    "dot_delivery_control_verified": false,
+    "main_protected": false,
+    "reason": "Repository identity and current owner's write permission are confirmed; authority/control of all main writers and dot delivery identity cannot be reliably established. GitHub connector collaborators endpoint is outside allowed public Fetch endpoints; no alternate route or permission changes attempted."
+  },
+  "worker_gate": {
+    "status": "blocked_worker_entry",
+    "supported_cli_present": true,
+    "cli_version": "codex-cli 0.160.1",
+    "interfaces": [
+      "codex exec",
+      "codex exec resume <SESSION_ID>",
+      "mcp__codex_app__automation_update heartbeat/cron"
+    ],
+    "cli_help_verified": true,
+    "actual_unattended_permission_model_verified": false,
+    "canary_ack_verified": false,
+    "scheduler_registered": false,
+    "reason": "Supported CLI and native scheduling interface are visible. No unattended writer or safe canary/ACK was started because future source gate is not satisfied. Default CLI read-only and native scheduled permission inheritance are documented; actual selected worker permissions/credentials remain unverified.",
+    "runtime_permission_this_session": {
+      "filesystem": "unrestricted",
+      "approval": "never",
+      "network": "enabled"
+    },
+    "sources": [
+      "https://learn.chatgpt.com/docs/automations?surface=app",
+      "https://learn.chatgpt.com/docs/non-interactive-mode"
+    ]
+  },
+  "context": {
+    "used_percent": null,
+    "observation_source": "Current runtime exposes no context percentage or native compact callable tool",
+    "compaction": "unavailable",
+    "checkpoint_required_before_wait": true
+  },
+  "prohibited_actions_performed": false,
+  "next_state": "After exact first-task result publication/checkpoint, wait; do not process unknown successors."
+}

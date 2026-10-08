@@ -1,0 +1,8 @@
+{
+  "owner_run_id": "run-20261008-a1b40-01",
+  "pid": 68284,
+  "started_utc": "2026-10-08T12:39:56.8796764Z",
+  "mechanism": "exclusive FileShare.None handle across local sessions/worktrees",
+  "lock_path": "E:\\WordsAndPerils-Tasks\\.local-work-state\\repo-1403552519\\REPO-WIDE-WRITER.lock",
+  "process_created_utc": "2026-10-08T12:39:55.7650461Z"
+}

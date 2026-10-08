@@ -1,0 +1,12 @@
+{
+  "candidate": "natural-save-identity",
+  "suite": "tests/natural_coast_basic/test_compile.gd",
+  "recipe": "",
+  "run_id": "natural-compile-01",
+  "source": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-NATURAL-SAVE-BOOL-20261008-001\\run-20261008-a1b40-01\\candidate-project",
+  "project": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-NATURAL-SAVE-BOOL-20261008-001\\run-20261008-a1b40-01\\natural-compile-01\\project",
+  "suite_sha256": "59fd844ef8fa005f4e01049505cf9380d594eb0b01665838aeef82f772c8a350",
+  "entry_sha256": "1ab64d9a03bc03350f32c88756b1d10ef9f94ad84f9e1fa9dc4c1d2df08c343c",
+  "scope": "Fresh exact independent Natural candidate; actual changed adapter; inherited identity engine + exact Dictionary suite; no Raw; isolated data; no autoload",
+  "source_files": 2568
+}

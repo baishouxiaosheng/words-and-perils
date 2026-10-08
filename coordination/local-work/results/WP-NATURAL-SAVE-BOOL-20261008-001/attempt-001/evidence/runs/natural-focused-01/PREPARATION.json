@@ -1,0 +1,12 @@
+{
+  "candidate": "natural-save-identity",
+  "suite": "tests/t03_natural_write_result/test_save_file.gd",
+  "recipe": "",
+  "run_id": "natural-focused-01",
+  "source": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-NATURAL-SAVE-BOOL-20261008-001\\run-20261008-a1b40-01\\candidate-project",
+  "project": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-NATURAL-SAVE-BOOL-20261008-001\\run-20261008-a1b40-01\\natural-focused-01\\project",
+  "suite_sha256": "658bf1c291ac059626c671be660469c83e3ecaa0a7bcc56afa12ddf9f56f2232",
+  "entry_sha256": "2af724532b462b5a52ce138476ab842710e003fe47e3df906a60eb5480fd91a1",
+  "scope": "Fresh exact independent Natural candidate; actual changed adapter; inherited identity engine + exact Dictionary suite; no Raw; isolated data; no autoload",
+  "source_files": 2568
+}

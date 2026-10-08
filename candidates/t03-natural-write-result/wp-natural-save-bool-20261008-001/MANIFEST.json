@@ -1,0 +1,47 @@
+{
+  "kind": "unadopted Natural overlay",
+  "task_id": "WP-NATURAL-SAVE-BOOL-20261008-001",
+  "task_sha256": "b3d55be9f2cdab63b650fc25d373cfd985250ac4d26335861c0768c7baabc73e",
+  "base_commit": "4644948268784506165ce1152215716ddf8d2854",
+  "inputs_verified": "INPUT_VERIFICATION.json",
+  "restore": "Existing byte-exact restored public-v30 authority; fresh disposable Natural copies. Original restore helper inspected, not rerun.",
+  "required_inherited_overlays": [
+    {
+      "path": "view/generated_natural_coast_basic/engine.gd",
+      "sha256": "dba3ca7fe04dc8a4100897250fc19c5c6c2acff2ef687ff120e894beadf6351d"
+    },
+    {
+      "path": "tests/natural_coast_basic/test_adapter.gd",
+      "sha256": "60e46a3b5b607d3ba5cbe3634ebcd6bd3ebbfc98fa10d4bad8732ea95b5a0ba2"
+    }
+  ],
+  "production_changed": [
+    {
+      "path": "view/generated_natural_coast_basic/adapter.gd",
+      "before_sha256": "7932dc7a48a25981b9d154c108515af4ed927133a798819ca26424afd28948ba",
+      "after_sha256": "6f9e593303a297391995329e0a5daecb477250b69944ee471247d9cca5df1bff"
+    }
+  ],
+  "new_tests": [
+    {
+      "path": "tests/t03_natural_write_result/fake_adapter.gd",
+      "bytes": 533,
+      "sha256": "c642076ad58159f4a1f4f46760bb5867084e33b2b34a4b7d47e5e6fddad094f2"
+    },
+    {
+      "path": "tests/t03_natural_write_result/io_probe.gd",
+      "bytes": 1957,
+      "sha256": "6405bdd124d0d65d96f680bffb295415849f2c90117896f01233f7cbc4d843f8"
+    },
+    {
+      "path": "tests/t03_natural_write_result/test_save_file.gd",
+      "bytes": 7547,
+      "sha256": "400ca10734ae4d3774f8a9aeb7c2fbb074d814144106b930f7c79fc91e843961"
+    }
+  ],
+  "existing_adapter_methods_except_save_unchanged": true,
+  "raw_combined": false,
+  "project_godot_changed": false,
+  "adopted": false,
+  "existing_tests_changed_by_this_task": false
+}

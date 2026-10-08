@@ -1,0 +1,10 @@
+{
+	"checks": 4,
+	"failures": [],
+	"ok": true,
+	"owned_pid": 67108,
+	"recipe": "",
+	"run_id": "natural-compile-01",
+	"script_sha256": "1ab64d9a03bc03350f32c88756b1d10ef9f94ad84f9e1fa9dc4c1d2df08c343c",
+	"suite": "res://tests/t03_natural_write_result/_local_entry.gd"
+}

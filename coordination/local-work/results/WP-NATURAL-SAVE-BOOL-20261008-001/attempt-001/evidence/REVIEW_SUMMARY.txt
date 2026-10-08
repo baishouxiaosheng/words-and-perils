@@ -1,0 +1,33 @@
+Natural save write-result candidate for review; NOT adopted.
+Production adapter now records store_string(bool), keeps post-flush error check,
+closes opened handles once, and refuses rename if bool is false or error is non-OK.
+Two small virtual I/O boundaries default to the original native APIs. Focused
+tests inherit and execute the actual production save_file, including original
+destination identity checks, validation and canonical serialization.
+
+Actual new runs: compile 4/4; focused 5 cases, 90 assertions (13 setup + 77 case);
+coastal_range 170/170 with 13 T03; plateau_hinterland 170/170 with 13 T03.
+The four successful suites have no ERROR/WARNING, engine/guard/host exit 0,
+empty Jobs, finished readers, exited recorded handles/hosts, source hashes intact
+and traversal_policy restored. Each uses an independent exact copy/data/log root.
+Original 170-check suite is the unchanged three-Dictionary overlay. New cases
+are counted separately. All 8136 pre-existing files were rehashed unchanged.
+
+Failures preserved: first focused fixture mistakenly requested rest at full
+stamina; unchanged rules correctly rejected it. Fixture changed to legal
+current-cell observation and passed. A local checker ISO-string/DateTime
+false-positive stopped before coastal launch; exact held lock/process identity
+was proved, parser fixed, direct user resume recorded. No hidden game failures.
+GitHub connector transport failures preserved; normal Git fast-forward publication
+uses a task-local pre-push expected-head check and Git's old/new-ref CAS.
+
+Fault cases are deterministic in-memory failures, not real disk short writes.
+Unicode success includes real isolated native UTF-8 write and existing loader
+roundtrip. Raw, Main, UI, FPS, live AI, real player saves and formal v30 unchanged.
+
+Future queue remains disabled: blocked_source_authentication; supported Codex CLI
+0.160.1 exec/resume and native scheduling interfaces exist but unattended worker
+permissions and canary/ACK were not verified (blocked_worker_entry). No schedule,
+service, boot startup, new key, security setting, Actions or history rewrite.
+Context percentage unknown; no native compact interface exposed. Checkpoint is
+required before wait; do not infer compaction or future automation from this task.

@@ -1,0 +1,8 @@
+{
+  "reason": "Full-stamina rest is correctly rejected by unchanged gameplay. Replace test fixture with valid current-cell observation; stop fixture setup on failure.",
+  "failed_run": "natural-focused-01",
+  "before_sha256": "658bf1c291ac059626c671be660469c83e3ecaa0a7bcc56afa12ddf9f56f2232",
+  "after_sha256": "400ca10734ae4d3774f8a9aeb7c2fbb074d814144106b930f7c79fc91e843961",
+  "production_adapter_unchanged": true,
+  "failed_copy_preserved": true
+}

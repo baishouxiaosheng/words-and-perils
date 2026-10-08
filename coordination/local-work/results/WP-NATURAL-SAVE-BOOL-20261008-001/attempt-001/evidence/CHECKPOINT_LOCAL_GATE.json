@@ -1,0 +1,104 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "checkpoint",
+  "task_id": "WP-NATURAL-SAVE-BOOL-20261008-001",
+  "task_sha256": "b3d55be9f2cdab63b650fc25d373cfd985250ac4d26335861c0768c7baabc73e",
+  "attempt_id": "attempt-001",
+  "intake_commit": "6615185508a0e6e73fff23465ceca2a023f7df19",
+  "status": "blocked",
+  "automation_enabled": false,
+  "summary": "Single authorized Natural task: production write-result fix implemented; compile 4/4 and five focused cases/90 assertions passed. First focused fixture failure retained. Coastal engine has not started: local checker falsely converted process creation ISO string to DateTime, latched stop before engine launch. Exact identity and held file lock proved read-only; checker corrected with DateKind String. Latch retained pending direct owner resume.",
+  "source_hashes": {
+    "adapter_candidate": "6f9e593303a297391995329e0a5daecb477250b69944ee471247d9cca5df1bff",
+    "engine_inherited": "dba3ca7fe04dc8a4100897250fc19c5c6c2acff2ef687ff120e894beadf6351d",
+    "corrected_regression_suite": "60e46a3b5b607d3ba5cbe3634ebcd6bd3ebbfc98fa10d4bad8732ea95b5a0ba2"
+  },
+  "checks": [
+    {
+      "run": "natural-compile-01",
+      "pass": true,
+      "checks": 4,
+      "pid": 67108
+    },
+    {
+      "run": "natural-focused-01",
+      "pass": false,
+      "pid": 17720,
+      "reason": "invalid full-stamina rest test fixture",
+      "record_preserved": true
+    },
+    {
+      "run": "natural-focused-02",
+      "pass": true,
+      "cases": 5,
+      "assertions": 90,
+      "pid": 65896
+    },
+    {
+      "run": "natural-coastal-01",
+      "status": "prepared_not_started",
+      "checks_executed": 0
+    },
+    {
+      "run": "natural-plateau-01",
+      "status": "not_prepared_not_started",
+      "checks_executed": 0
+    }
+  ],
+  "blockers": [
+    "blocked_local_gate_false_positive_latched_await_owner_resume",
+    "blocked_source_authentication for future queue",
+    "blocked_worker_entry: no safe unattended canary/ACK verified"
+  ],
+  "context": {
+    "used_percent": null,
+    "observation_source": "No current runtime-reported context percentage tool",
+    "compact_available": false,
+    "compaction_performed": false,
+    "checkpoint_written": true
+  },
+  "candidate_adopted": false,
+  "remaining_steps": [
+    "Direct owner resume of false-positive local latch",
+    "Validate fixed checker with fresh main/STOP/CONTROL/claim and held lock",
+    "Run coastal_range and plateau_hinterland 170 checks + 13 T03 each in separate disposable copies",
+    "Publish immutable candidate/source and full actual evidence/ARTIFACTS.json",
+    "Read back phase A bytes and publish RESULT/SUMMARY referring to A",
+    "Final readback, durable terminal ledger and own-process cleanup; wait without future queue automation"
+  ],
+  "worker_entry_evidence": {
+    "status": "blocked_worker_entry",
+    "supported_cli_present": true,
+    "cli_version": "codex-cli 0.160.1",
+    "interfaces": [
+      "codex exec",
+      "codex exec resume <SESSION_ID>",
+      "mcp__codex_app__automation_update heartbeat/cron"
+    ],
+    "cli_help_verified": true,
+    "actual_unattended_permission_model_verified": false,
+    "canary_ack_verified": false,
+    "scheduler_registered": false,
+    "reason": "Supported CLI and native scheduling interface are visible. No unattended writer or safe canary/ACK was started because future source gate is not satisfied. Default CLI read-only and native scheduled permission inheritance are documented; actual selected worker permissions/credentials remain unverified.",
+    "runtime_permission_this_session": {
+      "filesystem": "unrestricted",
+      "approval": "never",
+      "network": "enabled"
+    },
+    "sources": [
+      "https://learn.chatgpt.com/docs/automations?surface=app",
+      "https://learn.chatgpt.com/docs/non-interactive-mode"
+    ]
+  },
+  "source_authentication_evidence": {
+    "status": "blocked_source_authentication",
+    "repository_id_verified": 1403552519,
+    "owner_id_verified": 128279531,
+    "current_account_id": 128279531,
+    "current_connection_push": true,
+    "writer_roster_verified": false,
+    "dot_delivery_control_verified": false,
+    "main_protected": false,
+    "reason": "Repository identity and current owner's write permission are confirmed; authority/control of all main writers and dot delivery identity cannot be reliably established. GitHub connector collaborators endpoint is outside allowed public Fetch endpoints; no alternate route or permission changes attempted."
+  }
+}

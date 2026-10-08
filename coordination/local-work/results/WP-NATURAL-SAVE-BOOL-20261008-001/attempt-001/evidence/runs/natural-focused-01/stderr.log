@@ -1,0 +1,7 @@
+FAIL: prepare deterministic assessment
+FAIL: populate RNG fixture
+FAIL: stage prior action
+FAIL: populate receipt fixture
+FAIL: populate Unicode pending action
+FAIL: pending and receipt fixtures both populated
+FAIL: Unicode_UTF8_success: actual multibyte Unicode serialization

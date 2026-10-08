@@ -1,0 +1,8 @@
+{
+  "trusted_source": "Direct user reply in current Codex conversation",
+  "answer": "恢复这次首任务",
+  "scope": "Exact first task only, two-recipe regressions and candidate/results publication",
+  "automation_enabled": false,
+  "false_positive_latch_sha256": "8e7e1fc7dafcbd7467b515200807fd00ca69bd6101994838f35b20017f283c89",
+  "resumed_utc": "2026-10-08T13:15:05.3096721Z"
+}

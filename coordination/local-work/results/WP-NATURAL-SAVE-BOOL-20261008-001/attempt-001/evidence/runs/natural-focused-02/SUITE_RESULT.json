@@ -1,0 +1,134 @@
+{
+  "adapter_sha256": "6f9e593303a297391995329e0a5daecb477250b69944ee471247d9cca5df1bff",
+  "assertions": 90,
+  "cases": [
+    {
+      "assertions": 15,
+      "calls": [
+        "open",
+        "store",
+        "flush",
+        "get_error",
+        "close"
+      ],
+      "case": "store_false_error_OK",
+      "counters": {
+        "closed": 1,
+        "error_reads": [
+          {
+            "after_flush": true,
+            "error": 0
+          }
+        ],
+        "opened": 1,
+        "renames": 0
+      },
+      "failure_code": "SAVE_FAILED",
+      "failure_simulation": "in-memory backend only",
+      "native_success": false,
+      "passed": true
+    },
+    {
+      "assertions": 15,
+      "calls": [
+        "open",
+        "store",
+        "flush",
+        "get_error",
+        "close"
+      ],
+      "case": "store_false_error_non_OK",
+      "counters": {
+        "closed": 1,
+        "error_reads": [
+          {
+            "after_flush": true,
+            "error": 13
+          }
+        ],
+        "opened": 1,
+        "renames": 0
+      },
+      "failure_code": "SAVE_FAILED",
+      "failure_simulation": "in-memory backend only",
+      "native_success": false,
+      "passed": true
+    },
+    {
+      "assertions": 15,
+      "calls": [
+        "open",
+        "store",
+        "flush",
+        "get_error",
+        "close"
+      ],
+      "case": "store_true_flush_observable_error",
+      "counters": {
+        "closed": 1,
+        "error_reads": [
+          {
+            "after_flush": true,
+            "error": 13
+          }
+        ],
+        "opened": 1,
+        "renames": 0
+      },
+      "failure_code": "SAVE_FAILED",
+      "failure_simulation": "in-memory backend only",
+      "native_success": false,
+      "passed": true
+    },
+    {
+      "assertions": 14,
+      "calls": [
+        "open"
+      ],
+      "case": "open_failure",
+      "counters": {
+        "closed": 0,
+        "error_reads": [],
+        "opened": 0,
+        "renames": 0
+      },
+      "failure_code": "SAVE_FAILED",
+      "failure_simulation": "in-memory backend only",
+      "native_success": false,
+      "passed": true
+    },
+    {
+      "assertions": 18,
+      "calls": [
+        "open",
+        "store",
+        "flush",
+        "get_error",
+        "close",
+        "rename"
+      ],
+      "case": "Unicode_UTF8_success",
+      "counters": {
+        "closed": 1,
+        "error_reads": [
+          {
+            "after_flush": true,
+            "error": 0
+          }
+        ],
+        "opened": 1,
+        "renames": 1
+      },
+      "failure_code": "",
+      "failure_simulation": "in-memory backend only",
+      "native_success": true,
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "ok": true,
+  "owned_pid": 65896,
+  "scope": "actual production save_file via virtual I/O; simulated failures plus real isolated Unicode success, not OS short-write/power-loss/crash durability",
+  "script_sha256": "74fcdd2d0f410fa7385ad49a701e1982e3e507748b4291ab91d54625ba48031c",
+  "setup_assertions": 13
+}

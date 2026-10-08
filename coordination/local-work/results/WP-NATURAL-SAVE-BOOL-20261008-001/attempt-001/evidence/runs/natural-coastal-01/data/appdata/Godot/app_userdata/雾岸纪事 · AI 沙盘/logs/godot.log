@@ -1,0 +1,17 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+LOCAL_SUITE_ISOLATION {"autoloads":[],"globalized_user_dir":"E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-NATURAL-SAVE-BOOL-20261008-001/run-20261008-a1b40-01/natural-coastal-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘","isolated":true,"os_user_dir":"E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-NATURAL-SAVE-BOOL-20261008-001/run-20261008-a1b40-01/natural-coastal-01/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘","run_id":"natural-coastal-01"}
+T03_EXECUTED {"label":"T03 exact distribution envelope saves repeatedly","passed":true}
+T03_EXECUTED {"label":"T03 independent same-distribution entry can save","passed":true}
+T03_EXECUTED {"label":"T03 direct raw API preserves even its own adapter envelope","passed":true}
+T03_EXECUTED {"label":"T03 foreign-identity fixture preserves generator content hash","passed":true}
+T03_EXECUTED {"label":"T03 same-terrain foreign runtime envelope is preserved by both entries","passed":true}
+T03_EXECUTED {"label":"T03 direct raw API preserves foreign envelope and temp sentinel","passed":true}
+T03_EXECUTED {"label":"T03 exact envelope identity cannot hide a different engine world","passed":true}
+T03_EXECUTED {"label":"T03 malformed typed source refuses without a script exception","passed":true}
+T03_EXECUTED {"label":"T03 direct raw API retains same-distribution saves","passed":true}
+T03_EXECUTED {"label":"T03 direct raw API preserves foreign authority signature before any write","passed":true}
+T03_EXECUTED {"label":"T03 malformed raw JSON is preserved","passed":true}
+T03_EXECUTED {"label":"T03 direct raw load cannot redefine constructor-bound save authority","passed":true}
+T03_EXECUTED {"label":"T03 allowed and refused writes preserve live state, RNG, pending and receipts","passed":true}
+NATURAL_COAST_BASIC {"checks":170,"failures":[],"ok":true,"owned_pid":42148,"recipe":"coastal_range","run_id":"natural-coastal-01","script_sha256":"22fcd83237d0668f23c7332752e95415cd087099d9cce36747c35765ba74b8a4","suite":"res://tests/t03_natural_write_result/_local_entry.gd"}

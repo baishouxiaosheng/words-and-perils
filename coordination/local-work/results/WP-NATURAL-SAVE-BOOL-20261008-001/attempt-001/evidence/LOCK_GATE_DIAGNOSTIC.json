@@ -1,0 +1,13 @@
+{
+  "bug": "Default ConvertFrom-Json automatically converts ISO strings to DateTime; comparing invariant string against parsed DateTime falsely fails.",
+  "fix": "StrictJSON uses -DateKind String, preserving raw identity strings.",
+  "raw_process_created_utc": "2026-10-08T12:39:55.7650461Z",
+  "actual_process_created_utc": "2026-10-08T12:39:55.7650461Z",
+  "file_lock_verified_held": true,
+  "before_gate_sha256": "87badef15e248c249cea354f9d58da29781abfb91b7ea66d05fcc6db42438af5",
+  "fixed_gate_sha256": "562a0a18db4f3c83e93b1a60e9a88cc1189ae7d3662017d83ccbd44eacce0d66",
+  "local_STOP_exists": false,
+  "stop_latch_preserved": true,
+  "resume_requires_direct_owner": true,
+  "coastal_engine_started": false
+}

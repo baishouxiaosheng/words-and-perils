@@ -1,0 +1,38 @@
+{
+  "claim_blob": {
+    "sha": "e3390873e924b36ec52fab6665726b7f01ba000c"
+  },
+  "claim_tree": {
+    "sha": "1b1164e7feedefa45d3b7ba7c9bf2c9f9080b984"
+  },
+  "claim_commit": {
+    "sha": "84bd5f1c5d8ce0b525b4848c295ee2ef05c0216c"
+  },
+  "first_cas": {
+    "content": [
+      {
+        "type": "text",
+        "text": "tool call error: tool call failed for `codex_apps/github.update_ref`\n\nCaused by:\n    Transport send error: Transport [codex_rmcp_client::event_notification_transport::EventNotificationTransport<rmcp::transport::worker::WorkerTransport<rmcp::transport::streamable_http_client::StreamableHttpClientWorker<codex_rmcp_client::http_client_adapter::StreamableHttpClientAdapter>>>] error: Client error: HTTP request failed: http/request failed: error sending request for url (https://chatgpt.com/backend-api/ps/mcp)"
+      }
+    ],
+    "isError": true
+  },
+  "read_only_reconciliation": {
+    "head": "6615185508a0e6e73fff23465ceca2a023f7df19",
+    "claim_absent": true,
+    "engine_started": false
+  },
+  "second_cas": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "success": true
+    },
+    "isError": false
+  },
+  "remote_readback": "Gate claim_readback exact bytes/owner verified"
+}

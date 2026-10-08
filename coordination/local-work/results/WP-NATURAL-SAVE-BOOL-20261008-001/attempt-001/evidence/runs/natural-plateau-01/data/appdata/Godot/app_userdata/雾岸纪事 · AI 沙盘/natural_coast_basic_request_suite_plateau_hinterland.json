@@ -1,0 +1,92 @@
+{
+	"action_id": "natural_coast_basic_v1_b213e1af17f1dbd63613b818666ed2f05119fca57a87b0087207508f6d19a328:action_17",
+	"context": {
+		"actor_id": "actor_player",
+		"attention_focus": {
+			"facts": {
+				"air_blocked": false,
+				"all_blocked": false,
+				"biome": "jungle",
+				"elevation": 0.340087890625,
+				"flow": 0.24755859375,
+				"flow_to": "-2,0",
+				"ground_blocked": false,
+				"id": "hex_-1_-1",
+				"moisture": 0.77978515625,
+				"ocean": false,
+				"plateau_core": false,
+				"plateau_weight": 0,
+				"q": -1,
+				"r": -1,
+				"rainfall": 0.03271484375,
+				"river": true,
+				"scene_id": "scene_natural_coast_basic_v1",
+				"source_cell_version": "generated_v3_cell/v1",
+				"temperature": 0.614013671875,
+				"terrain": "jungle",
+				"terrain_mapping_id": "generated_v3_biome_terrain/v1",
+				"uplift": 0
+			},
+			"hex": [
+				-1,
+				-1
+			],
+			"id": "hex_-1_-1",
+			"kind": "tile",
+			"scene_id": "scene_natural_coast_basic_v1",
+			"schema_version": 1,
+			"world_id": "natural_coast_basic_v1_b213e1af17f1dbd63613b818666ed2f05119fca57a87b0087207508f6d19a328"
+		},
+		"authoritative_result": {
+			"action_id": "natural_coast_basic_v1_b213e1af17f1dbd63613b818666ed2f05119fca57a87b0087207508f6d19a328:action_17",
+			"numbers_authoritative": true,
+			"outcomes": {
+				"move": true
+			},
+			"public_effects": [
+				{
+					"actor_id": "actor_player",
+					"delta": -4,
+					"pool": "stamina",
+					"type": "actor_pool_delta"
+				},
+				{
+					"actor_id": "actor_player",
+					"hex": [
+						0,
+						-1
+					],
+					"scene_id": "scene_natural_coast_basic_v1",
+					"type": "actor_move"
+				},
+				{
+					"actor_id": "actor_player",
+					"hex": [
+						-1,
+						-1
+					],
+					"scene_id": "scene_natural_coast_basic_v1",
+					"type": "actor_move"
+				}
+			],
+			"rolls": [],
+			"schema_version": "ai_gm_result/v1",
+			"state_version": 10,
+			"turn": 10
+		},
+		"fact_scope": "historical_recorded_public_effects",
+		"goal": "【探索示例】沿可通行的干地走到（-1，-1）。",
+		"provisional_until_commit": false
+	},
+	"context_hash": "27c73d9965e2d670794cd1b430d5d355f9d8d31fc0318741fd15bfc581062dc5",
+	"contract": {
+		"cannot_patch_facts": true,
+		"cannot_rejudge": true,
+		"semantic_truth_not_programmatically_certified": true,
+		"text_only": true
+	},
+	"phase": "narration",
+	"reply_schema": "ai_gm_narration/v1",
+	"schema_version": "ai_gm_rebuilt/v1",
+	"state_version": 10
+}

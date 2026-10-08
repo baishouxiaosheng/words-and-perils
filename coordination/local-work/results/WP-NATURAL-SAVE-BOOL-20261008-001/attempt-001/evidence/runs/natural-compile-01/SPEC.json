@@ -1,0 +1,17 @@
+{
+  "executable": "E:\\WordsAndPerils-Test\\Godot\\4.6.3\\Godot_v4.6.3-stable_win64.exe",
+  "arguments": [
+    "--headless",
+    "--path",
+    "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-NATURAL-SAVE-BOOL-20261008-001\\run-20261008-a1b40-01\\natural-compile-01\\project",
+    "--script",
+    "res://tests/t03_natural_write_result/_local_entry.gd",
+    "--",
+    "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-NATURAL-SAVE-BOOL-20261008-001\\run-20261008-a1b40-01\\natural-compile-01\\data"
+  ],
+  "working_directory": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-NATURAL-SAVE-BOOL-20261008-001\\run-20261008-a1b40-01\\natural-compile-01\\project",
+  "isolated_data_root": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-NATURAL-SAVE-BOOL-20261008-001\\run-20261008-a1b40-01\\natural-compile-01\\data",
+  "profile": "small",
+  "timeout_seconds": 120,
+  "log_path": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-NATURAL-SAVE-BOOL-20261008-001\\run-20261008-a1b40-01\\natural-compile-01\\GUARD_RESULT.json"
+}

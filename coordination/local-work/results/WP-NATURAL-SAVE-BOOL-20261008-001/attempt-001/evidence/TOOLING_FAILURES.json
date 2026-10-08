@@ -1,0 +1,44 @@
+{
+  "failures": [
+    {
+      "operation": "GitHub connector update_ref then create_blob",
+      "handling": "Read-only reconciliation first; one same-tool CAS retry succeeded; then stopped connector writes after repeated transport instability; existing authorized normal Git save used, no approval rejection.",
+      "kind": "transport"
+    },
+    {
+      "operation": "Focused fixture",
+      "handling": "Preserved failed run; full-stamina rest correctly refused by game; changed fixture to valid observation and reran fresh copy.",
+      "kind": "invalid_test_setup"
+    },
+    {
+      "operation": "Local lock gate",
+      "handling": "Kept latch, wrote checkpoint, proved held lock and exact process identity; fixed DateKind String; direct user resume recorded before continuing.",
+      "kind": "PowerShell DateTime automatic parsing false-positive"
+    },
+    {
+      "operation": "Artifact sanitizer",
+      "handling": "Generic C:Users redaction pattern in already SHA-pinned guard wrapper was mistaken for a user profile path. Kept first staging directory; improved profile-token parsing, still rejecting real non-placeholder usernames, and built new staging directory.",
+      "kind": "redactor_regex_false_positive"
+    },
+    {
+      "operation": "Tool orchestration",
+      "handling": "No nested call executed; rewrote own script construction without backticks.",
+      "kind": "JavaScript template literal PowerShell backtick syntax error"
+    },
+    {
+      "operation": "Local library check",
+      "handling": "No installation; strict bounded schema-keyword validator plus semantic path/scope/type/hash checks used.",
+      "kind": "jsonschema module unavailable"
+    },
+    {
+      "operation": "Git hash-object path",
+      "kind": "Windows filename length",
+      "handling": "No ref write occurred. Keep all paths and security settings; read already-reviewed file bytes in Python and pass bytes to existing Git hash-object --stdin. Update bound helper and artifact hashes."
+    }
+  ],
+  "actual_game_runs": 5,
+  "successful_game_runs": 4,
+  "failed_game_runs_preserved": 1,
+  "approval_rejections": 0,
+  "source_writer_endpoint": "GitHub public Fetch collaborators endpoint not supported; no alternate endpoint route attempted"
+}

@@ -1,0 +1,20 @@
+{
+  "boundary": "coastal_verified",
+  "started_utc": "2026-10-08T13:16:25.3691586Z",
+  "local_stop": "E:\\WordsAndPerils-Tasks\\.local-work-state\\repo-1403552519\\STOP",
+  "passed": true,
+  "local_lock_held": true,
+  "head": "5dbeaef6918c7404788c50a22aaf4d695bb81daa",
+  "remote_stop_absent": true,
+  "control": {
+    "protocol": "words-and-perils-local-work/v1",
+    "kind": "control",
+    "queue_enabled": true,
+    "stop": false,
+    "resume_generation": 0,
+    "reason": "First bounded Natural write-result task is prepared. This control does not prove local automation is enabled."
+  },
+  "claim_sha256": "ca2e43b7f76c9e0b0af5de87f14e84bf485d5a5878e428f2a10980c29d0031ac",
+  "tree_sha": "5dbeaef6918c7404788c50a22aaf4d695bb81daa",
+  "ended_utc": "2026-10-08T13:16:27.1033067Z"
+}

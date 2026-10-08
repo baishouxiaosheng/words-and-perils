@@ -1,0 +1,17 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "claim",
+  "task_id": "WP-NATURAL-SAVE-BOOL-20261008-001",
+  "task_sha256": "b3d55be9f2cdab63b650fc25d373cfd985250ac4d26335861c0768c7baabc73e",
+  "attempt_id": "attempt-001",
+  "owner_id": 128279531,
+  "owner_run_id": "run-20261008-a1b40-01",
+  "writer_id": "local-repo1403552519-a1b40",
+  "intake_commit": "6615185508a0e6e73fff23465ceca2a023f7df19",
+  "base_commit": "4644948268784506165ce1152215716ddf8d2854",
+  "execution_mode": "single_task_only",
+  "automation_enabled": false,
+  "created_utc": "2026-10-08 12:43:21 UTC",
+  "local_lock": "repo-wide exclusive persistent handle",
+  "task_source_authority": "exact task directly authorized in attached START_LOCAL.txt"
+}

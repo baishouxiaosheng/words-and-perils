@@ -1,0 +1,101 @@
+{
+	"action_id": "natural_coast_basic_v1_92818a14c55171f31877c60f2155068334087271e9969cf079e9df0183f06dbd:action_17",
+	"context": {
+		"actor_id": "actor_player",
+		"attention_focus": {
+			"facts": {
+				"air_blocked": false,
+				"all_blocked": false,
+				"biome": "temperate_forest",
+				"elevation": 0.571533203125,
+				"flow": 0.077392578125,
+				"flow_to": "-1,-1",
+				"ground_blocked": false,
+				"id": "hex_-1_-2",
+				"moisture": 0.46875,
+				"ocean": false,
+				"plateau_core": false,
+				"plateau_weight": 0,
+				"q": -1,
+				"r": -2,
+				"rainfall": 0.021240234375,
+				"river": false,
+				"scene_id": "scene_natural_coast_basic_v1",
+				"source_cell_version": "generated_v3_cell/v1",
+				"temperature": 0.67236328125,
+				"terrain": "forest",
+				"terrain_mapping_id": "generated_v3_biome_terrain/v1",
+				"uplift": 0.007568359375
+			},
+			"hex": [
+				-1,
+				-2
+			],
+			"id": "hex_-1_-2",
+			"kind": "tile",
+			"scene_id": "scene_natural_coast_basic_v1",
+			"schema_version": 1,
+			"world_id": "natural_coast_basic_v1_92818a14c55171f31877c60f2155068334087271e9969cf079e9df0183f06dbd"
+		},
+		"authoritative_result": {
+			"action_id": "natural_coast_basic_v1_92818a14c55171f31877c60f2155068334087271e9969cf079e9df0183f06dbd:action_17",
+			"numbers_authoritative": true,
+			"outcomes": {
+				"move": true
+			},
+			"public_effects": [
+				{
+					"actor_id": "actor_player",
+					"delta": -4,
+					"pool": "stamina",
+					"type": "actor_pool_delta"
+				},
+				{
+					"actor_id": "actor_player",
+					"hex": [
+						0,
+						-1
+					],
+					"scene_id": "scene_natural_coast_basic_v1",
+					"type": "actor_move"
+				},
+				{
+					"actor_id": "actor_player",
+					"hex": [
+						0,
+						-2
+					],
+					"scene_id": "scene_natural_coast_basic_v1",
+					"type": "actor_move"
+				},
+				{
+					"actor_id": "actor_player",
+					"hex": [
+						-1,
+						-2
+					],
+					"scene_id": "scene_natural_coast_basic_v1",
+					"type": "actor_move"
+				}
+			],
+			"rolls": [],
+			"schema_version": "ai_gm_result/v1",
+			"state_version": 10,
+			"turn": 10
+		},
+		"fact_scope": "historical_recorded_public_effects",
+		"goal": "【探索示例】沿可通行的干地走到（-1，-2）。",
+		"provisional_until_commit": false
+	},
+	"context_hash": "1bfd32a5bf8da1a8c4e3baed3ceb3ab366973859a3aa7db29589f7d828ba753b",
+	"contract": {
+		"cannot_patch_facts": true,
+		"cannot_rejudge": true,
+		"semantic_truth_not_programmatically_certified": true,
+		"text_only": true
+	},
+	"phase": "narration",
+	"reply_schema": "ai_gm_narration/v1",
+	"schema_version": "ai_gm_rebuilt/v1",
+	"state_version": 10
+}

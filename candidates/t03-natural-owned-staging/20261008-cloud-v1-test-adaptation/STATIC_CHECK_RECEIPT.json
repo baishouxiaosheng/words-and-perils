@@ -1,0 +1,52 @@
+{
+  "time_utc": "2026-10-08T14:39:11.288911+00:00",
+  "checks": "Python bytes/hash/text only, no Godot parsing",
+  "exit_code_expected": 0,
+  "files": [
+    {
+      "path": "baseline/tests/natural_coast_basic/test_adapter.gd",
+      "bytes": 38442,
+      "sha256": "60e46a3b5b607d3ba5cbe3634ebcd6bd3ebbfc98fa10d4bad8732ea95b5a0ba2",
+      "readback_equal": true
+    },
+    {
+      "path": "overlay/tests/natural_coast_basic/test_adapter.gd",
+      "bytes": 38896,
+      "sha256": "ae391e16f204575beef057c245430dc8a830e4b9611f34683988ee42497052f8",
+      "readback_equal": true
+    },
+    {
+      "path": "TEST_ONLY_ADAPTATION.patch",
+      "bytes": 2871,
+      "sha256": "3572bdeb3292bd6b9a32ad097182e08a6d63a3c7981041854d7ccd22191c452b",
+      "readback_equal": true
+    },
+    {
+      "path": "MANIFEST.json",
+      "bytes": 1942,
+      "sha256": "2a8dca6f785e02150e039e0c0caac83f3e1184b8376f66e947262c5fd0da4b77",
+      "readback_equal": true
+    },
+    {
+      "path": "SUMMARY.txt",
+      "bytes": 1571,
+      "sha256": "898857ef540c59e3ffc47981ec3bc38cd7f1a9abe6d8a3bcf7939ff9d86f2281",
+      "readback_equal": true
+    },
+    {
+      "path": "prepare_static.py",
+      "bytes": 8608,
+      "sha256": "60ac1356148857f00776774e7d2326e98f9d0d264408659c3259c9a2fa103f29",
+      "readback_equal": true
+    }
+  ],
+  "v1_unchanged": true,
+  "baseline_suite_verified": true,
+  "reverse_reconstruction_equal": true,
+  "t03_block_byte_identical": true,
+  "check_call_sites_unchanged": true,
+  "runtime_unverified": true,
+  "godot_parses": 0,
+  "engine_runs": 0,
+  "git_pushes": 0
+}

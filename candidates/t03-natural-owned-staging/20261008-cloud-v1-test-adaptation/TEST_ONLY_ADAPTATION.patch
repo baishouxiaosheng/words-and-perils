@@ -1,0 +1,42 @@
+--- baseline/tests/natural_coast_basic/test_adapter.gd
++++ overlay/tests/natural_coast_basic/test_adapter.gd
+@@ -11,6 +11,17 @@
+ const Examples = preload("res://view/generated_natural_coast_basic/assessments.gd")
+ const C = preload("res://core/ai_gm_rebuilt/canonical.gd")
+ const ModelView = preload("res://core/ai_gm_rebuilt/model_view.gd")
++# Test-only fault injection: native open unless this single fixture enables it.
++class TemporaryWriteFailureAdapter:
++	extends "res://view/generated_natural_coast_basic/adapter.gd"
++	var fail_temporary_open := false
++	var temporary_open_failures := 0
++	func _open_save_temporary(path: String) -> RefCounted:
++		if fail_temporary_open:
++			temporary_open_failures += 1
++			return null
++		return super._open_save_temporary(path)
++
+ var checks := 0
+ var failures: Array = []
+ func _initialize() -> void: run.call_deferred()
+@@ -91,7 +102,7 @@
+ 	check(not rejected.ready().ok and rejected.state_copy().is_empty(),"rejected source never installs a traveler or bundle")
+ 	var rejected_renderer := Adapter.new(raw,"alternative_b")
+ 	check(not rejected_renderer.ready().ok and rejected_renderer.state_copy().is_empty(),"unsupported renderer never changes source or injects inventory")
+-	var a := Adapter.new()
++	var a := TemporaryWriteFailureAdapter.new()
+ 	check(not a.ready().ok and a.state_copy().is_empty(),"blank profile has no inherited test-world or item")
+ 	if not check(a.start_source(raw).ok,"explicit V3 inventory start admits original source"): printerr(a.ready()); finish(); return
+ 	var initial := a.state_copy(); var start: Array = initial.actors.actor_player.hex
+@@ -282,9 +293,9 @@
+ 	check(a.save_file(path).ok,"own profile atomic file save")
+ 	var disk := FileAccess.get_file_as_string(path); var loaded := Adapter.new()
+ 	check(loaded.load_file(path).ok and C.bytes(loaded.save_data()) == C.bytes(a.save_data()),"actual save file roundtrip is exact")
+-	DirAccess.make_dir_absolute(path+".tmp"); before = C.bytes(a.save_data())
+-	check(not a.save_file(path).ok and FileAccess.get_file_as_string(path) == disk and C.bytes(a.save_data()) == before,"failed temporary write loses neither old file nor item/RNG")
+-	DirAccess.remove_absolute(path+".tmp")
++	before = C.bytes(a.save_data()); a.fail_temporary_open = true
++	check(not a.save_file(path).ok and a.temporary_open_failures == 1 and FileAccess.get_file_as_string(path) == disk and C.bytes(a.save_data()) == before,"failed temporary write loses neither old file nor item/RNG")
++	a.fail_temporary_open = false
+ 	var request_path := "user://natural_coast_basic_request_suite_%s.json" % recipe
+ 	check(a.export_request(request_path).ok and a.export_request(request_path).ok,"own valid narration request can be exported repeatedly")
+ 	check(not a.save_file(request_path).ok and not a.export_request(path).ok,"recognized save/request schemas cannot overwrite each other")

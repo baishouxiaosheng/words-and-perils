@@ -1,0 +1,41 @@
+{
+  "status": "test_only_candidate_unparsed_unrun_unadopted",
+  "source_commit": "e5745fbfd568415a5d8ca35ca25bd18d5a092e98",
+  "source_repository_path": "candidates/t03-local-runtime/20261008-sol-a1b40/natural-test-type-fix/overlay/tests/natural_coast_basic/test_adapter.gd",
+  "source_git_blob": "de1f88bebcb2b8437170da2089b604e991b5c976",
+  "source_sha256": "60e46a3b5b607d3ba5cbe3634ebcd6bd3ebbfc98fa10d4bad8732ea95b5a0ba2",
+  "source_bytes": 38442,
+  "candidate_path": "overlay/tests/natural_coast_basic/test_adapter.gd",
+  "candidate_sha256": "ae391e16f204575beef057c245430dc8a830e4b9611f34683988ee42497052f8",
+  "candidate_bytes": 38896,
+  "patch_sha256": "3572bdeb3292bd6b9a32ad097182e08a6d63a3c7981041854d7ccd22191c452b",
+  "production_candidate_commit": "2b1134bd20a9d22ead3b5c3f504452f3a7e95e0e",
+  "production_adapter_sha256": "7e11cf5a3679fdc3bee4aa4264a11ed49cdadb2744136c0ffb4bae2ee47fe345",
+  "static_check_call_count": {
+    "before": 128,
+    "after": 128,
+    "meaning": "syntactic call occurrences; includes helper definition and loop sites, not runtime assertion total"
+  },
+  "t03_block_byte_identical": true,
+  "t03_check_call_sites": 13,
+  "expected_runtime_assertion_count_from_prior_suite": 170,
+  "expected_runtime_t03_assertions": 13,
+  "runtime_counts_verified": false,
+  "changes": [
+    "test-local subclass overrides only _open_save_temporary; native passthrough while disabled",
+    "same primary a uses this subclass throughout; same initialization and source/state flows",
+    "replace legacy tmp directory fixture with one-shot enabled null open and one-call evidence within original check"
+  ],
+  "all_other_original_bytes_reverse_verified": true,
+  "old_failure_old_target_and_state_checks_preserved": true,
+  "not_mkdir_failure_fixture": true,
+  "v1_all_21_files_before_after_hashes_unchanged": true,
+  "godot_parses": 0,
+  "engine_runs": 0,
+  "test_dispatches": 0,
+  "adopted": false,
+  "draft_preparation_git_pushes": 0,
+  "publication_parent": "2b1134bd20a9d22ead3b5c3f504452f3a7e95e0e",
+  "runtime_prerequisite": "Existing target binary isolated mkdir probe under unchanged guard; not run. Source/binary binding remains unestablished.",
+  "original_static_receipt_note": "Unmodified original draft receipt; baseline and prepare script are referenced local draft inputs, not bundled. Publication MANIFEST/SUMMARY change metadata only; suite and patch bytes unchanged."
+}

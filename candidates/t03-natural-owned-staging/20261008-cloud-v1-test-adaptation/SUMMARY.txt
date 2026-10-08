@@ -1,0 +1,9 @@
+170 suite test-only fixture adaptation — 未解析、未运行、未采用
+
+此目录仅提供test overlay，不修改生产7e11或cloud-v1既有21文件。原suite固定SHA60e46a3b5b607d3ba5cbe3634ebcd6bd3ebbfc98fa10d4bad8732ea95b5a0ba2；新suite SHAae391e16f204575beef057c245430dc8a830e4b9611f34683988ee42497052f8。完整来源commit/path与原、新bytes记录在MANIFEST。
+
+测试子类继承真实adapter，只override_open_save_temporary，开关默认false并调用super。仅原临时WRITE失败fixture启用返回null，然后关闭；保留失败、旧目标字节不变、save_data不变断言，并要求故障open被调用恰1次。若提前mkdir或身份检查失败，计数0会使断言失败。其他原测试字节除这三处明确替换外反向重建完全相等；T03整函数字节不变。check源码调用数128→128，170/T03 13仍仅运行预期，尚无新成绩。
+
+STATIC_CHECK_RECEIPT是原草稿静态回执，保持原bytes/hash；其中baseline、prepare脚本是未随包复制的本地输入，MANIFEST/SUMMARY的原草稿hash仅指历史版本。发布版本只更新这些说明元数据，suite/patch原字节不变。
+
+Godot解析0、运行0，未派发本机任务、未采用。独立mkdirprobe须先在现有本机binary按原守卫验收；源码/binary仍未绑定，probe通过也不是来源证明。由主线程统一候选版本及测试任务。

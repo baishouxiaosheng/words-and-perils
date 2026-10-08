@@ -1,0 +1,65 @@
+{
+  "schema": "status_player_poison_static/v1",
+  "ok": false,
+  "checks": [
+    {
+      "name": "artifact bytes: frozen_inputs/frozen_finite_main.gd",
+      "ok": true
+    },
+    {
+      "name": "artifact bytes: frozen_inputs/entry_fixture.gd",
+      "ok": true
+    },
+    {
+      "name": "artifact bytes: frozen_inputs/mock_transport.gd",
+      "ok": true
+    },
+    {
+      "name": "artifact bytes: overlay/tests/actor_status_death/test_player_poison.gd",
+      "ok": true
+    },
+    {
+      "name": "artifact bytes: USAGE.txt",
+      "ok": true
+    },
+    {
+      "name": "artifact bytes: check_static.py",
+      "ok": true
+    },
+    {
+      "name": "inherits exact49 Main helpers",
+      "ok": true
+    },
+    {
+      "name": "bounded two bottles / six actual owner actions",
+      "ok": true
+    },
+    {
+      "name": "no alternate engine, fabricated save or success search calls",
+      "ok": true
+    },
+    {
+      "name": "no direct authority writes",
+      "ok": false
+    },
+    {
+      "name": "actual RNG non-witness is inconclusive",
+      "ok": true
+    },
+    {
+      "name": "real receipt duplication and terminal save-byte assertions",
+      "ok": false
+    },
+    {
+      "name": "death request and late-data rejection assertions",
+      "ok": true
+    },
+    {
+      "name": "test-only deployment paths",
+      "ok": true
+    }
+  ],
+  "godot_parse": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "death_witness": "NOT_RUN"
+}

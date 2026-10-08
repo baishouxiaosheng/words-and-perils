@@ -1,0 +1,103 @@
+{
+  "schema": "words-and-perils-status-player-poison-test-only/v1",
+  "status": "SOURCE_CANDIDATE_RUNTIME_NOT_RUN_NOT_ADOPTED",
+  "formal_base_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+  "formal_main_sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f",
+  "status_profile_sha256": "9988155d5baf8e840c8d6063c2bc415c08bd0d7b1cd70157f9400bff40698994",
+  "source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e",
+  "new_driver": "overlay/tests/actor_status_death/test_player_poison.gd",
+  "new_driver_lines": 102,
+  "production_changes": [],
+  "fresh_lineages": 1,
+  "max_commits": 8,
+  "source_generation": {
+    "helper": "frozen_inputs/entry_fixture.gd",
+    "seed": 726381,
+    "radius": 4,
+    "recipe": "coastal_range",
+    "actual_source_generation": "NOT_RUN_IN_THIS_TASK"
+  },
+  "runtime_case": "typed owner poison kills player through actual Main import/roll/stage/commit; death receipt duplicate, no new enemy request, late intention/assessment rejection",
+  "reachability": "SOURCE_REASONING_ONLY_NO_ACTUAL_RNG_DEATH_WITNESS",
+  "unimplemented_successor_designs": [
+    "enemy typed-owner death returns player",
+    "typed plus legacy simultaneous death"
+  ],
+  "forbidden_shortcuts": [
+    "No direct health/world/save/receipt mutation",
+    "No alternative Engine or test rule",
+    "No RNG seed/state editing or forced outcomes",
+    "No retry, seed scan, success search or repeated lineages"
+  ],
+  "guard_contract": "Existing authorized Full180 guard unchanged; finite150 watchdog inherited; no launcher or admission provided",
+  "godot_parse": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "static_checks": "PASSED_15_READ_ONLY_CHECKS_NOT_GODOT_PARSE",
+  "input_provenance": {
+    "finite49_source": "candidates/actor-public-v29-compat/05ebbe56e88d/test_finite_main.gd",
+    "status_test_archive": "candidates/actor-status/a6de3fff486d/payload.zip.b64",
+    "encoded_bytes": 313436,
+    "encoded_sha256": "a21a9151d26a7a0e0bacbdd9c93641685fe2f6485534ed247dd625ed93b0297a",
+    "zip_bytes": 235075,
+    "zip_sha256": "8e69fb98b644e9f4b7551d17d4402abb6e6939f017c56e7c16fe5ba13ccea5de",
+    "extracted_members": [
+      "test-only/tests/actor_status_entry/entry_fixture.gd",
+      "test-only/tests/ai_gm_http/mock_transport.gd"
+    ]
+  },
+  "files": [
+    {
+      "path": "frozen_inputs/frozen_finite_main.gd",
+      "bytes": 10648,
+      "sha256": "89df6d366413a4624793f6668f31f08b4f7736729c32ba60f85ab9148fc74577",
+      "deployment_path": "tests/actor_status_death/frozen_finite_main.gd"
+    },
+    {
+      "path": "frozen_inputs/entry_fixture.gd",
+      "bytes": 12234,
+      "sha256": "b94c3a78924dd7c3f8f125b1c6830bbdb66dd7062b4342217da11fe0cc3cc6b8",
+      "deployment_path": "tests/actor_status_entry/entry_fixture.gd"
+    },
+    {
+      "path": "frozen_inputs/mock_transport.gd",
+      "bytes": 1210,
+      "sha256": "8d8e3fafc18e9ed9bb1295bb2d3eff3a52771afeb9ccc162017a2402001ec2df",
+      "deployment_path": "tests/ai_gm_http/mock_transport.gd"
+    },
+    {
+      "path": "overlay/tests/actor_status_death/test_player_poison.gd",
+      "bytes": 8752,
+      "sha256": "4843bcd54484876ed42158979fee47092b7673068b093d48ff90239b77c5fb2d",
+      "deployment_path": "tests/actor_status_death/test_player_poison.gd"
+    },
+    {
+      "path": "USAGE.txt",
+      "bytes": 5098,
+      "sha256": "e4b479d9b0f97d16b1d1499ac0f52ae572c8c2a3201a992dba5d49bb8f08d442"
+    },
+    {
+      "path": "check_static.py",
+      "bytes": 2807,
+      "sha256": "6767f97a15444f7364919d064131479ad9f790b78a09ce254f3e09f740b3f303"
+    }
+  ],
+  "manifest_excludes_itself_and_static_result": true,
+  "static_check_attempts": [
+    {
+      "attempt": 1,
+      "result": "FAILED_CHECKER_FALSE_POSITIVES",
+      "reason": "Equality operator was mistaken for assignment; terminal-save assertion count threshold was one too high. Driver unchanged."
+    },
+    {
+      "attempt": 2,
+      "result": "PASSED_14_CHECKS"
+    },
+    {
+      "attempt": 3,
+      "result": "PASSED_15_CHECKS",
+      "scope": "Root-reviewed report I/O integrity change; new driver and artifact hashes rechecked; no Godot parse or runtime"
+    }
+  ],
+  "report_integrity": "Godot4.6 store_string bool + write get_error + flush/get_error + one close; any failure exits2 with stderr stage/code",
+  "report_api_source": "https://docs.godotengine.org/en/4.6/classes/class_fileaccess.html"
+}

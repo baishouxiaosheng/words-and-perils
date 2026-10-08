@@ -1,0 +1,72 @@
+STATUS: SOURCE/STATIC CANDIDATE ONLY. GODOT PARSE AND RUNTIME NOT RUN. NOT ADOPTED.
+
+One first-stage case: legitimate typed owner poison kills the player. Enemy-owner
+death and typed+legacy simultaneous death remain later design work, not coverage.
+No production change is included. Do not overlay this into a real player project
+or existing user directory. Do not start any engine while guard admission is blocked.
+
+Exact baseline
+formal public-v30 commit e8ec5db0341f8b4a8aaa0a933e5968c33440c9da
+Main SHA-256 05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f
+status-v1 profile 9988155d5baf8e840c8d6063c2bc415c08bd0d7b1cd70157f9400bff40698994
+Use the exact restored release. The repository's historical root Main and the
+other recovered/coherent candidate Main are not interchangeable with this input.
+
+Deployment into an already authorized isolated exact QA copy
+frozen_inputs/frozen_finite_main.gd -> tests/actor_status_death/frozen_finite_main.gd
+frozen_inputs/entry_fixture.gd -> tests/actor_status_entry/entry_fixture.gd
+frozen_inputs/mock_transport.gd -> tests/ai_gm_http/mock_transport.gd
+overlay/tests/actor_status_death/test_player_poison.gd -> same relative path
+Do not replace any destination with different bytes. Frozen inputs are byte-exact
+public test-only sources. The new driver inherits the accepted finite-49 helpers;
+it calls only admit/assessment/proposal/status/applied and inherited Main helpers.
+It never calls the fixture's fresh/successful_sequence/successful_self searches.
+
+Legitimate source and bounded route
+The original entry fixture generates seed726381/radius4/coastal_range through the
+real Generator and admitted production source. Main's actual advanced menu starts
+the status-v1 adventure. Initial player health12/12, poison_vial quantity2, owned
+by the player and present in the inventory are asserted before action. The initial
+slot must be player and outside enemy contact; all observations stay at this spawn.
+For each of two bottles, submit status_source to self through actual Main/import/
+roll/stage/commit. Three subsequent observe actions supply actual owner ticks.
+Authored poison is flat1 plus10% max12: the integer resource calculation yields
+two health per owner tick. New generations skip the application action. This is
+source-level reachability reasoning; an actual RNG death witness is still missing.
+There are at most8 committed actions, one fresh lineage and no seed/RNG changes.
+If either contested application fails, report INCONCLUSIVE immediately; do not
+restart or reroll. Legitimate rejection of an invalid transition is not fabricated
+as success. Unexpected contract/state/assertion errors remain FAILED.
+
+Additional boundary assertions only after an actual death witness
+- Same death receipt committed twice returns already_committed; full save bytes
+  remain equal, including pools, source quantity, RNG, receipts, records and journal.
+- Actual Main death HUD disables editing and submission.
+- With explicit mock-only intention consent, request_intention returns ACTOR_DOWNED;
+  required-enemy queue/begin calls send nothing and preserve full save bytes.
+- A genuine cancelled pre-death grant and actual committed assessment are rejected
+  through Main after death. A new facade player intent is also rejected without cost.
+No live-model, socket, GPU, OS-input, fresh-process save reopen or broader death claim.
+
+Runtime prerequisites, still pending
+Use the original approved Full180 guard and existing physical budget/reserve rules.
+The driver inherits the finite150-second watchdog. No guard launcher is supplied
+or changed, and no runtime admission is implied by this candidate.
+FOGBANK_ACTOR_FINITE_USER_DIR must exactly equal the isolated OS.get_user_data_dir().
+FOGBANK_ACTOR_PLAYER_POISON_REPORT must name the owned isolated output JSON path.
+Authorized guard execution target: --headless --audio-driver Dummy --script
+res://tests/actor_status_death/test_player_poison.gd, within the exact QA project.
+Exit0=PASSED, exit1=FAILED, exit2=report/setup error, exit3=INCONCLUSIVE actual RNG.
+Result writes check store_string's bool and get_error before and after flush, then
+close exactly once. Missing output/open/store/flush failure prints its stage and
+error codes to stderr and exits2; it cannot silently become a gameplay pass.
+Keep original stdout/stderr and all warnings/errors; exit0 is not diagnostic review.
+Static checks below do not establish GDScript parsing or actual gameplay results.
+
+Read-only static check: python3 check_static.py
+
+Public source provenance
+https://github.com/baishouxiaosheng/words-and-perils/blob/e8ec5db0341f8b4a8aaa0a933e5968c33440c9da/candidates/actor-public-v29-compat/05ebbe56e88d/test_finite_main.gd
+https://github.com/baishouxiaosheng/words-and-perils/blob/e8ec5db0341f8b4a8aaa0a933e5968c33440c9da/candidates/actor-status/a6de3fff486d/manifest.json
+https://github.com/baishouxiaosheng/words-and-perils/blob/e8ec5db0341f8b4a8aaa0a933e5968c33440c9da/updates/v30/adoption_receipt.json
+Report API signatures: https://docs.godotengine.org/en/4.6/classes/class_fileaccess.html

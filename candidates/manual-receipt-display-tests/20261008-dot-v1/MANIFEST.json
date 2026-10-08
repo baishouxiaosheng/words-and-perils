@@ -1,6 +1,6 @@
 {
   "schema": "manual-receipt-test-only-driver-package/v1",
-  "status": "AUTHORED_STATIC_CHECKED_GODOT_NOT_PARSED_NOT_RUN_NOT_PUBLISHED",
+  "status": "AUTHORED_STATIC_CHECKED_GODOT_NOT_PARSED_NOT_RUN",
   "published_seven_file_candidate_unchanged": true,
   "new_production_code_changes": 0,
   "helper_bytes_unchanged": true,
@@ -53,10 +53,11 @@
     },
     {
       "path": "USAGE.txt",
-      "bytes": 7886,
-      "sha256": "d6b887ca90b072a9a2c8d4e5d6216e6e3c600e3ae8c070190f423348e0792344"
+      "bytes": 8036,
+      "sha256": "29b7d09970ddfdd37c37c50e91fa5b87d98f44c3e4d24b6e8c91b6fe2fde7c1c"
     }
   ],
   "manifest_excludes_itself": true,
-  "static_checker_inputs": "Explicit --restored-root/--candidate-root/--guard; optional --runtime-pins; no internal sibling-path defaults"
+  "static_checker_inputs": "Explicit --restored-root/--candidate-root/--guard; optional --runtime-pins; no internal sibling-path defaults",
+  "publication": "Confirmed by the Git commit containing this directory; this package does not record its own publication commit or a current publication status."
 }

@@ -1,6 +1,6 @@
 Manual receipt display: finite real-Main test-only entry
 
-Status: authored locally, NOT parsed by Godot and NOT executed. No new files have been published. The already published seven-file production candidate is unchanged. STATIC_CHECKS.json records only actual static checks; it is not gameplay acceptance.
+Status: Godot parsing, gameplay execution and preparation/staging have NOT run. Publication is confirmed by the Git commit containing this directory; this package does not record its own publication commit or maintain a self-referential publication status. The separate seven-file production candidate is unchanged. STATIC_CHECKS.json records only actual static checks; it is not gameplay acceptance.
 
 Files:
 - tests/manual_receipt_display/driver.gd: executable SceneTree test entry.

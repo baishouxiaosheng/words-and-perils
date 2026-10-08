@@ -1,0 +1,7 @@
+{
+  "human_answer": "恢复任务002发布",
+  "scope": "Clear only resume-order lock false positive; reacquire same task lock; publish existing artifacts/results, no test rerun.",
+  "received_in_current_local_chat": true,
+  "recorded_utc": "2026-10-08T15:50:28.318868+00:00",
+  "latch_preserved": "STOP-LATCH-RESOLVED-task002-publication-20261008.json"
+}

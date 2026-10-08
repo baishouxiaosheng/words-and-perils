@@ -1,0 +1,95 @@
+{
+  "record_type": "local_queue_bootstrap_result",
+  "artifact_commit": "420016a61bba806e52d57b9321399e4a6f88becf",
+  "artifact_manifest_sha256": "627af9627176a0712af1af290bedd9113406ff61c03e613bb733fc4320465145",
+  "source_channel_gate_passed": true,
+  "cli_version": "codex-cli 0.160.1",
+  "supported_entries": [
+    "codex exec",
+    "codex exec resume",
+    "native thread heartbeat"
+  ],
+  "real_non_game_canary_worker": {
+    "kind": "non_game_worker_canary",
+    "version": "codex-cli 0.160.1",
+    "model": "gpt-6.1-sol",
+    "interface": "codex exec",
+    "ephemeral": true,
+    "requested_sandbox": "read-only",
+    "timeout_seconds": 120,
+    "launch_utc": "2026-10-08T15:10:18.7913769Z",
+    "game_execution": false,
+    "worker_file_modifications_authorized": false,
+    "credentials_created_or_exported": false,
+    "pid": 5128,
+    "process_created_utc": "2026-10-08T15:10:18.8220798Z",
+    "timed_out": false,
+    "exit_code": 0,
+    "process_exited": true,
+    "readers_finished": true,
+    "agent_messages": [
+      "NON_GAME_WORKER_CANARY_OK\n2026-10-08T15:10:18.7913769Z"
+    ],
+    "command_execution_items": 0,
+    "token_present": true,
+    "passed": true,
+    "handle_disposed": true,
+    "ended_utc": "2026-10-08T15:10:27.6323333Z"
+  },
+  "canary_diagnostics": {
+    "functional_worker_canary_passed": true,
+    "strict_diagnostics_clean": false,
+    "raw_stdout": "CANARY.stdout.log",
+    "raw_stderr": "CANARY.stderr.log",
+    "startup_warnings_and_errors": [
+      "Unrecognized preexisting config fields/features",
+      "PowerShell shell snapshot unsupported",
+      "Unrelated Figma MCP startup AuthRequired/transport closed"
+    ],
+    "agent_tool_commands": 0,
+    "canary_rerun": false,
+    "credentials_or_security_modified": false,
+    "public_raw_log_policy": "Keep all diagnostic content; redact only private C Users account path in public copy; preserve original raw file size and hash in public manifest"
+  },
+  "schedule": {
+    "id": "words-and-perils-github",
+    "type": "native thread heartbeat",
+    "interval_minutes": 5,
+    "status": "ACTIVE",
+    "target_thread": "01a11b40-22df-7ec2-9731-f1b27c005303",
+    "persisted_config_verified": true,
+    "persisted_config_sha256": "2899fb41e16caeedbe1225d05c8731f0411bab597f6065a5226e66d646eab2a7",
+    "native_post_original_turn_run_verified": false,
+    "automation_enabled": false,
+    "cli_version": "codex-cli 0.160.1",
+    "canary_worker_actually_started": true,
+    "scheduled_game_writer_started": false,
+    "requires": "Computer awake and Codex desktop app running",
+    "new_services_installed": false,
+    "new_keys_created": false,
+    "security_settings_modified": false,
+    "official_reference": "https://learn.chatgpt.com/docs/automations?surface=app"
+  },
+  "native_delivery_observed_during_active_turn": [
+    "2026-10-08T15:35:31.405Z",
+    "2026-10-08T15:40:45.626Z"
+  ],
+  "native_delivery_after_finished_idle_turn_verified": false,
+  "automation_enabled": false,
+  "end_to_end_task": {
+    "id": "WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002",
+    "claim_commit": "5c1400d105da60a84941b035024e85b0a38b8cd5",
+    "ack_commit": "87612d7d5fab41d1ab821539cb0fa0883a1faff0",
+    "actual_engine_runs": 8,
+    "strict_passing_stages": 7,
+    "expected_diagnostic_stages": 1,
+    "artifact_files_readback": 205,
+    "result_status": "reviewable; remote result readback is performed after this separate commit"
+  },
+  "prohibited_changes": false,
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  },
+  "next_step": "Finish result readback/checkpoint, release owned foreground lock; let native heartbeat validate actual wake from completed idle turn before enabling automation. Keep task IDs deduplicated; no test rerun."
+}

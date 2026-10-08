@@ -1,7 +1,7 @@
 {
   "schema": "words-and-perils-raw-closed-staging-readback-candidate/v1",
   "created_utc": "2026-10-08T21:13:00Z",
-  "status": "source_only_unparsed_unrun_unpublished_unadopted",
+  "status": "source_only_unparsed_unrun_unadopted_candidate",
   "unique_owner_task": "raw-closed-staging-readback-20261008",
   "base_repository": "baishouxiaosheng/words-and-perils",
   "read_commit": "0de311ffc64d466a1ea23a88ddeed0146131687e",
@@ -85,8 +85,8 @@
       "sha256": "7e70e0a0b304b70214d2c4cbe6547abdc32e473d28480582fd8e2a6e325298d5"
     },
     "SUMMARY.txt": {
-      "bytes": 4821,
-      "sha256": "fe87153df25ed35f8957333c0741a9efcb5fe518c7a25878736e52439ce6bf10"
+      "bytes": 4888,
+      "sha256": "13343d1581cec9f287631dba0fab4539784e8460220f0c726b4f17df5d23f272"
     },
     "overlay/core/ai_gm_rebuilt/engine.gd": {
       "bytes": 52068,
@@ -104,5 +104,6 @@
       "bytes": 7683,
       "sha256": "0f86b5ff9d02aea1ffe99de94a9c8ccdbf3bb76338ff566551d39b679bad59c3"
     }
-  }
+  },
+  "publication": "Candidate storage is confirmed by the Git commit containing this directory; publication is not adoption."
 }

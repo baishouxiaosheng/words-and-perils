@@ -1,7 +1,8 @@
 Raw closed-staging readback candidate, prepared 2026-10-08 UTC
 
-Status: source-only candidate, not adopted or published. Godot parsing, runtime,
-native failure injection, GUI, memory and performance checks were not run.
+Status: source-only candidate. Candidate publication is confirmed by the Git
+commit containing this directory; Godot parsing, runtime, native failure
+injection, GUI, memory and performance checks were not run. Not adopted.
 
 Scope
 Only core/ai_gm_rebuilt/engine.gd::save_file changes in production. This is an

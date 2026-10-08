@@ -1,0 +1,437 @@
+{
+  "schema": "words-and-perils-status-enemy-poison-test-only/v1",
+  "status": "SOURCE_CANDIDATE_PARSE_RUNTIME_NOT_RUN_NOT_ADOPTED",
+  "base_git_commit": "8928d7012cb9c7cf42e1cb41f2717143299ebac9",
+  "formal_release_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+  "formal_main_sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f",
+  "status_profile_sha256": "9988155d5baf8e840c8d6063c2bc415c08bd0d7b1cd70157f9400bff40698994",
+  "formal_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e",
+  "new_driver": "overlay/tests/actor_status_death/test_enemy_poison.gd",
+  "driver_bytes": 13583,
+  "driver_lines": 134,
+  "driver_sha256": "0f4721c7beab5d1150521939175634edab103fdbfff0706dfd68e503cbc55191",
+  "production_changes": [],
+  "existing_player_test_changes": [],
+  "frozen_test_inputs": [
+    {
+      "path": "frozen_inputs/frozen_finite_main.gd",
+      "bytes": 10648,
+      "sha256": "89df6d366413a4624793f6668f31f08b4f7736729c32ba60f85ab9148fc74577",
+      "deployment_path": "tests/actor_status_death/frozen_finite_main.gd"
+    },
+    {
+      "path": "frozen_inputs/entry_fixture.gd",
+      "bytes": 12234,
+      "sha256": "b94c3a78924dd7c3f8f125b1c6830bbdb66dd7062b4342217da11fe0cc3cc6b8",
+      "deployment_path": "tests/actor_status_entry/entry_fixture.gd"
+    },
+    {
+      "path": "frozen_inputs/mock_transport.gd",
+      "bytes": 1210,
+      "sha256": "8d8e3fafc18e9ed9bb1295bb2d3eff3a52771afeb9ccc162017a2402001ec2df",
+      "deployment_path": "tests/ai_gm_http/mock_transport.gd"
+    }
+  ],
+  "fresh_lineages": 1,
+  "seed": 726381,
+  "radius": 4,
+  "recipe": "coastal_range",
+  "max_route_steps": 32,
+  "max_commits": 47,
+  "owner_tick_counts_per_vial": [
+    3,
+    2
+  ],
+  "source_reasoning": "Enemy starts5/5. Player owns2 poison vials, each costs1 stamina/unit and lasts3 owner actions. Separate integer flat/max-percent deltas yield1 HP per enemy tick. Player may target visible enemy across actual bidirectional dry adjacent source edge. Original enemy observes; player observations do not tick enemy status. Two applications, if actual RNG succeeds, permit5 enemy owner ticks and return living player.",
+  "reachability": "SOURCE_REASONING_ONLY; native source generation, contact and RNG outcome not witnessed by this task",
+  "outcomes": {
+    "passed": "requires actual enemy-only typed death, live player slot and unchanged full saved authority/pending on old receipt duplicates",
+    "inconclusive": "actual contested no-application or fixed-source contact route not admitted within original budget; no restart/retry; explicit reason; not product death failure",
+    "failed": "contract/state/assertion mismatch",
+    "setup_or_report_error": "exit2"
+  },
+  "duplicate_scope": "Both real first-vial and death receipts replay twice through core.commit while a real newer Main player intention is awaiting assessment; compare entire save, active action/phase and request. Ordinary Main cancellation afterwards.",
+  "guard_contract": "Existing approved Full180 budget/reserve/complete resource protection unchanged; inherited finite150 watchdog. No launcher, engine admission or computer task supplied.",
+  "source_dependency_scope": "42 formal release source entries and21 selected inherited source/data read back; source review only, not full resource restoration or runtime closure verification",
+  "old_v2_death_grades_reused": false,
+  "current_status_v1_death_grade": "NOT_RUN",
+  "godot_parse": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "adopted": false,
+  "publication_confirmation": "Publication is confirmed by the Git commit containing this directory; this package does not self-record a publication commit",
+  "static_check_count": 44,
+  "patch_sha256": "fa082a7ce46209a9a774025a368fb0d71a92eaf795b1514c5595c663d50d7c5f",
+  "scope_exclusions": [
+    "player death",
+    "typed+legacy double death",
+    "rendered/GPU/OS/live model/fresh-process save reopen",
+    "RNG mutation/seed scan/success search/world save or receipt fabrication"
+  ],
+  "verification_inputs": {
+    "repository_files": [
+      {
+        "path": "candidates/status-player-poison-test/20261008-dot-v1/MANIFEST.json",
+        "bytes": 4404,
+        "sha256": "d3d650ca87f0b38b3f6a216914c6a86bfb5eec43ab8cc8fcdffddde2eca7e3b3"
+      },
+      {
+        "path": "candidates/status-player-poison-test/20261008-dot-v1/USAGE.txt",
+        "bytes": 5098,
+        "sha256": "e4b479d9b0f97d16b1d1499ac0f52ae572c8c2a3201a992dba5d49bb8f08d442"
+      },
+      {
+        "path": "candidates/status-player-poison-test/20261008-dot-v1/overlay/tests/actor_status_death/test_player_poison.gd",
+        "bytes": 8752,
+        "sha256": "4843bcd54484876ed42158979fee47092b7673068b093d48ff90239b77c5fb2d"
+      },
+      {
+        "path": "candidates/status-player-poison-test/20261008-dot-v1/frozen_inputs/frozen_finite_main.gd",
+        "bytes": 10648,
+        "sha256": "89df6d366413a4624793f6668f31f08b4f7736729c32ba60f85ab9148fc74577"
+      },
+      {
+        "path": "candidates/status-player-poison-test/20261008-dot-v1/frozen_inputs/entry_fixture.gd",
+        "bytes": 12234,
+        "sha256": "b94c3a78924dd7c3f8f125b1c6830bbdb66dd7062b4342217da11fe0cc3cc6b8"
+      },
+      {
+        "path": "candidates/status-player-poison-test/20261008-dot-v1/frozen_inputs/mock_transport.gd",
+        "bytes": 1210,
+        "sha256": "8d8e3fafc18e9ed9bb1295bb2d3eff3a52771afeb9ccc162017a2402001ec2df"
+      },
+      {
+        "path": "tools/restore_v30.py",
+        "bytes": 22861,
+        "sha256": "0c7250e549bc6f7ab500a6570ad099c7b43a09a84b74d3d29a78c1d37ba7e75f"
+      },
+      {
+        "path": "updates/v30/manifest.json",
+        "bytes": 22680,
+        "sha256": "b3d9bed51dafc6a86acdc53b5e5456556d2b262b7bb16dbdef72d69febd5d5b9"
+      },
+      {
+        "path": "updates/v30/adoption_receipt.json",
+        "bytes": 12644,
+        "sha256": "c1b67e0f6c7045d037de8cbb91e2ddb49f4e8f717271b4b2503ec1bfaa0e90a5"
+      }
+    ],
+    "restored_files": [
+      {
+        "path": "main.gd",
+        "bytes": 203707,
+        "sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f"
+      },
+      {
+        "path": "view/actor_action_entry/board.gd",
+        "bytes": 7892,
+        "sha256": "37af60151c95cf268157bd312957d074fe1b66c3f5e692c8b2e365459a953683"
+      },
+      {
+        "path": "view/actor_action_entry/item_view.gd",
+        "bytes": 540,
+        "sha256": "8e4214988c3c63c793a2d353abc4a95a27c83d3ba55901eaada037f96ff606f7"
+      },
+      {
+        "path": "view/actor_action_entry/moving_support.gd",
+        "bytes": 4688,
+        "sha256": "12bc6fa20d4bed640db0f80c4157b7ba017efc5f6779c0d78b5e972b9d1b6df1"
+      },
+      {
+        "path": "view/actor_action_entry/panel.gd",
+        "bytes": 1807,
+        "sha256": "30cd052e330d89d82b05bd7964dba2139b3966534cb75467e2108f179608f6e6"
+      },
+      {
+        "path": "view/actor_action_entry/render_source.gd",
+        "bytes": 3233,
+        "sha256": "25a9346826d43dc7ae6793ac0fc5a51ed202744582eb8009095cbf29622f0fea"
+      },
+      {
+        "path": "view/actor_action_entry/runtime/actor_scope.gd",
+        "bytes": 8408,
+        "sha256": "43ecfa5bdabd576935f272421fe136070df54981fc9fe52a2473f7dc1f9b5198"
+      },
+      {
+        "path": "view/actor_action_entry/view_adapter.gd",
+        "bytes": 26215,
+        "sha256": "e2d2cc438b00b3d933a267df73e760f108fc4b89ac5334053615fd88c3454cc6"
+      },
+      {
+        "path": "view/actor_action_profile_v2/adapter.gd",
+        "bytes": 5582,
+        "sha256": "82517e0004f19016dad8dba162a86097d7366d56020a84fe02820c37d7eae7d0"
+      },
+      {
+        "path": "view/actor_action_profile_v2/decision.gd",
+        "bytes": 3525,
+        "sha256": "293c6049fb17a505c5496fdf4fc1f9cfc5a2806cc3b16d5053abafec616dda14"
+      },
+      {
+        "path": "view/actor_action_profile_v2/engine.gd",
+        "bytes": 11974,
+        "sha256": "d8218ab72d9e7f2b83fc48f96558c64b80e8760e13ac35fb47bbe5c0ea4e5353"
+      },
+      {
+        "path": "view/actor_action_profile_v2/history.gd",
+        "bytes": 3379,
+        "sha256": "193b7c5a2a0dbb001aef7eb5a0e72290ac1df8726a4f90fafa34b9ab25078c62"
+      },
+      {
+        "path": "view/actor_action_profile_v2/hooks.gd",
+        "bytes": 1838,
+        "sha256": "08d4dd8839fd29bdd2224cf72b94e9bd24423dc7aeca194f37950d8bee59716e"
+      },
+      {
+        "path": "view/actor_action_profile_v2/policy.gd",
+        "bytes": 2628,
+        "sha256": "8c72f0d1ab8b6812867d2bc1932bc0bc0dd2a32902f225d58fac6df3b8aefb68"
+      },
+      {
+        "path": "view/actor_action_profile_v2/projection.gd",
+        "bytes": 3042,
+        "sha256": "0121badfb0e4cf9189e270170de8214ce3d330d1c8b82824423a0e9cecd674b0"
+      },
+      {
+        "path": "view/actor_action_profile_v2/resolver.gd",
+        "bytes": 7339,
+        "sha256": "1bc27d10346ad22858a3a848baa826db31d6d587b794e3c48eeb3dbefa63c982"
+      },
+      {
+        "path": "view/actor_action_profile_v2/rule.gd",
+        "bytes": 532,
+        "sha256": "cf452edababe042f1ccd2c12517e3bba581cc856ea58bdacb3d94422900b1561"
+      },
+      {
+        "path": "view/actor_action_profile_v2/scheduler.gd",
+        "bytes": 10142,
+        "sha256": "fa6533672c7cebdce1f67f2c50a3358ea41d2d276833ede4202ab074d6bf34dc"
+      },
+      {
+        "path": "view/actor_action_profile_v2/source.gd",
+        "bytes": 12173,
+        "sha256": "7681a03d232452533ef584719d5f3e6c1c39942332b303ef1c2a3e973385e665"
+      },
+      {
+        "path": "view/actor_status_entry_v1/board.gd",
+        "bytes": 1180,
+        "sha256": "3b3f5e0aaa42b6f8cef19fce946be41324749d14e3f284fb9a5d50d72d790e3d"
+      },
+      {
+        "path": "view/actor_status_entry_v1/committed_effect_router.gd",
+        "bytes": 1845,
+        "sha256": "a8141bfb2d89f289c40cd4e233da35908f5d5babb236ce0f427bbfe5b30bd5b7"
+      },
+      {
+        "path": "view/actor_status_entry_v1/public_events.gd",
+        "bytes": 12262,
+        "sha256": "9e537b893d63497a31aa5bad014f2f9e22366735e02c21122ab5a6a818497f64"
+      },
+      {
+        "path": "view/actor_status_entry_v1/render_source.gd",
+        "bytes": 3254,
+        "sha256": "7988c5c588b90308986adbd382fed9dc5f118fc6607625c74fac431c90eae4f7"
+      },
+      {
+        "path": "view/actor_status_entry_v1/runtime/client.gd",
+        "bytes": 7296,
+        "sha256": "c691edfba3142bc64b69196a08b7f92881de6a3bef94439816a957dc6d17b38d"
+      },
+      {
+        "path": "view/actor_status_entry_v1/runtime/controller.gd",
+        "bytes": 9349,
+        "sha256": "832878afae4db541bfb4702d5b4a4e22c839b3358a01085d4033ad7946719267"
+      },
+      {
+        "path": "view/actor_status_entry_v1/runtime/intention_codec.gd",
+        "bytes": 2971,
+        "sha256": "be1dfd53d922e99ccdb1a44b94bdf40e96f8185fdf3c79dae53f99f9a285f454"
+      },
+      {
+        "path": "view/actor_status_entry_v1/runtime/status_scope.gd",
+        "bytes": 3254,
+        "sha256": "528bd5e8c86405ab35482ad735a0dce5f52f506f0ae59e72f671973257cb069e"
+      },
+      {
+        "path": "view/actor_status_entry_v1/view_adapter.gd",
+        "bytes": 28301,
+        "sha256": "a9a825b9096b67424e7358d2dcca32b8e39411983f7ac9be0975ef7bc869968d"
+      },
+      {
+        "path": "view/actor_status_profile_v1/adapter.gd",
+        "bytes": 6527,
+        "sha256": "fd5629777dbdefc0d50bf8ce58339d12bc6e351c09b2253701b1e9ea4f9486ba"
+      },
+      {
+        "path": "view/actor_status_profile_v1/decision.gd",
+        "bytes": 3532,
+        "sha256": "15d02d3d0f3bb60031bb98e96ae1a83a45b69e92f3053401a17390433c4bcb7f"
+      },
+      {
+        "path": "view/actor_status_profile_v1/domain.gd",
+        "bytes": 6165,
+        "sha256": "a2e1dbf15e9e3898f640e90b41eab1ecd29a3f6bf369022ea690a0634769212a"
+      },
+      {
+        "path": "view/actor_status_profile_v1/engine.gd",
+        "bytes": 16382,
+        "sha256": "ea6687e72df87f4df87b9848cd1dff28c1b0888143105f74fd11c2f9587ec85f"
+      },
+      {
+        "path": "view/actor_status_profile_v1/history.gd",
+        "bytes": 4062,
+        "sha256": "66cd6701f5380b2045da416ef542c731bc81365dfbba13d0b36247cabe403338"
+      },
+      {
+        "path": "view/actor_status_profile_v1/hooks.gd",
+        "bytes": 1167,
+        "sha256": "0d0bafb609601197f9f73449b31eea8f681eff65e617ade7186a01a8fc63842f"
+      },
+      {
+        "path": "view/actor_status_profile_v1/projection.gd",
+        "bytes": 3231,
+        "sha256": "2decabf7c9fbe1b4c5400b502ce1e464112bb4eea489dfdcee3a5cf1c150d5e6"
+      },
+      {
+        "path": "view/actor_status_profile_v1/public_status.gd",
+        "bytes": 6400,
+        "sha256": "335c0eb58165e4ebb01f8963a0292176eb2deaf354bfeb5c1876e0e5c8eeded1"
+      },
+      {
+        "path": "view/actor_status_profile_v1/resolver.gd",
+        "bytes": 9382,
+        "sha256": "c666a73e826080fda57aaebee341e24a65c1225e041e7685f14a5ebc75fb493b"
+      },
+      {
+        "path": "view/actor_status_profile_v1/rule.gd",
+        "bytes": 531,
+        "sha256": "39618f30030fc07025c67ca9f7a88e1e6870cd481613686b138b1d2e62897da1"
+      },
+      {
+        "path": "view/actor_status_profile_v1/source.gd",
+        "bytes": 10327,
+        "sha256": "f4ca4ca0551f0b1665b58f4ee1071dbc7df5180f357de18710d55a596b88ac03"
+      },
+      {
+        "path": "view/dual_api_settings/actor_client.gd",
+        "bytes": 6891,
+        "sha256": "d1c2f185d70090da37a70231840c6d5445e55fe1688722ee7cba3da4349c2e74"
+      },
+      {
+        "path": "view/dual_api_settings/actor_controller.gd",
+        "bytes": 1585,
+        "sha256": "b9461d141ef9ef0470de2e7e3e58b53e2516859d5bd1f42644a6d992fb73d124"
+      },
+      {
+        "path": "view/dual_api_settings/provider_presets.gd",
+        "bytes": 3798,
+        "sha256": "f64ceeb823e25c2e39c9637f49788e0082cf63eb3e02b520434870b116f6022f"
+      },
+      {
+        "path": "core/ai_gm_rebuilt/basic_actions.gd",
+        "bytes": 15229,
+        "sha256": "6eee6fc51bd88f7688a9751bcb9c48454e0b95d4271cdb270c269bd33b1e7afd"
+      },
+      {
+        "path": "core/ai_gm_rebuilt/basic_effects.gd",
+        "bytes": 17839,
+        "sha256": "4cdce65aa662b81b1ba6821044fd11e2dcaea1b76e5a45d8865e2746e0cb2c8d"
+      },
+      {
+        "path": "core/source_enemy/catalog.gd",
+        "bytes": 6226,
+        "sha256": "e42a774b96559d5b2cf54c4d2ddb2654d0714cda1915d48d26b8952a9de26b6d"
+      },
+      {
+        "path": "core/world_generation_v3/generator.gd",
+        "bytes": 17996,
+        "sha256": "53e1ba12da6597025d25d882eea001173b26718560399463fec333e77a3d140a"
+      },
+      {
+        "path": "view/generated_v3_adventure/source.gd",
+        "bytes": 13974,
+        "sha256": "b3059c6339dc79aeb627d483e0780e5bdec2d4a5805ed0c8ce9706a3e72e6e96"
+      },
+      {
+        "path": "view/generated_v3_enemy/navigation.gd",
+        "bytes": 5110,
+        "sha256": "f58f33f98adb0276c14b25cdb626ed8f366a17a429121532a5449ce59c84b7aa"
+      },
+      {
+        "path": "view/generated_v3_enemy/placement.gd",
+        "bytes": 18938,
+        "sha256": "d2391ed1a51cd91fcc797af50e087e082254a4445551ff1baaa5bb42bc3279ec"
+      },
+      {
+        "path": "view/generated_v3_enemy/policy.gd",
+        "bytes": 7294,
+        "sha256": "0c274de956b63d247d3014747e5b4c5e3e9ffe744239f696836a1c046c141c3f"
+      },
+      {
+        "path": "view/generated_v3_enemy/source.gd",
+        "bytes": 10322,
+        "sha256": "774368b3a339c7ff3e0229064c1fa03df6f5e0f6e8d7319126053082a1e90733"
+      },
+      {
+        "path": "core/source_equipment/catalog.gd",
+        "bytes": 8511,
+        "sha256": "867f95880a4dabeebf06e08bfee107de922e65979fc3f486cc581741d24c9fdd"
+      },
+      {
+        "path": "core/ai_gm_rebuilt/engine.gd",
+        "bytes": 50887,
+        "sha256": "3d41f2fc4e52459d5df01732fbacc9e849f0e4a9260094220426001ef236002d"
+      },
+      {
+        "path": "core/ai_gm_rebuilt/hooks.gd",
+        "bytes": 3111,
+        "sha256": "2afc8ba22cc4cb9a4df81ce8f8779193a652f8cd5ff49b2156f6899674ee84ec"
+      },
+      {
+        "path": "core/status_foundation/catalog.gd",
+        "bytes": 10981,
+        "sha256": "8effb5d5e6094cdb0f5413a697ae3adb4e7d86429c31a7b93d751e71f6b62681"
+      },
+      {
+        "path": "core/status_foundation/engine_bridge.gd",
+        "bytes": 10674,
+        "sha256": "06cce47760058a49e2dd994c91031ac93db7277d0b08f5c252af8d2ec8fafbc6"
+      },
+      {
+        "path": "core/status_foundation/runtime.gd",
+        "bytes": 23309,
+        "sha256": "ee79b110e35b5141334daf55e7a2f80f6f4d3060a56d408bf0a08094260bb059"
+      },
+      {
+        "path": "core/status_gameplay/action.gd",
+        "bytes": 9596,
+        "sha256": "5da4a78055a70b832cee399f64cc1bd46582a1f47585007249dd9b14c5c5d813"
+      },
+      {
+        "path": "core/status_gameplay/content.gd",
+        "bytes": 6978,
+        "sha256": "3c31d687682994658bf8504cf96bb28cb58e8662046039c58e103e11e6f00d6e"
+      },
+      {
+        "path": "core/status_gameplay/source_profiles.gd",
+        "bytes": 2571,
+        "sha256": "53e1ca59b24fb0e020b2dc4a5200868fe927264e787234873484d077d8057483"
+      },
+      {
+        "path": "data/catalog.json",
+        "bytes": 218084,
+        "sha256": "81712567dda2bb000b7cacefc9380c91bc271ea461c21758b1d2fa8074de4fde"
+      },
+      {
+        "path": "core/ai_gm_rebuilt/traversal_policy.gd",
+        "bytes": 8729,
+        "sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4"
+      },
+      {
+        "path": "view/generated_v3_enemy/adapter.gd",
+        "bytes": 15878,
+        "sha256": "32ea5c2c4a14cf42a15f09ae740166f27d7304682bf3143aad615b29bad48762"
+      }
+    ]
+  },
+  "checker_inputs": "Explicit --repo-root at base_git_commit and --restored-root for formal public-v30 restored sources; all required relative paths, bytes and SHA256 listed in verification_inputs. Checker is read-only and makes no network calls."
+}

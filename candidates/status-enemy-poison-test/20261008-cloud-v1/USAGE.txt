@@ -1,0 +1,19 @@
+SOURCE/STATIC TEST-ONLY CANDIDATE. PARSE/RUNTIME NOT RUN. NOT ADOPTED.
+
+Publication is confirmed by the Git commit containing this directory; this package does not self-record a publication commit.
+
+Exact fixed Git 8928d7012cb9c7cf42e1cb41f2717143299ebac9, formal public-v30 release e8ec5db0341f8b4a8aaa0a933e5968c33440c9da. Main05ebbe56..., actor_status_v1 profile9988155d...; complete pins in MANIFEST. Old239/296 belong to actor_actions_v2 and provide no grade for this driver.
+
+Three frozen helper files are copied byte-exact from the published player test package. Apply their MANIFEST deployment paths plus overlay/tests/actor_status_death/test_enemy_poison.gd only into an already authorized exact disposable public-v30 QA copy. Existing production, player test and Raw/Natural/HUD tasks remain untouched.
+
+One actual Main lineage, seed726381/radius4/coastal_range, original navigation/tickets/roll/stage/core.commit. At most32 contact moves and47 committed actions total. Contact uses the source attack anchor and production preview; no replacement world. Enemy first observes to return player. Player alone owns and delivers the two poison vials. Each vial costs1 item+1 stamina; a zero-stamina player may take one ordinary rest plus one enemy observation per vial. First poison generation expires after3 enemy-owner observations, second reaches enemy death after2. Player observations between enemy actions must not tick enemy poison. Enemy max5 means flat1 plus the separately integer-truncated10% contribution0, not two damage. No legacy attack or direct health/state/RNG edits.
+
+Any actual contested application without poison ends INCONCLUSIVE immediately. A fixed contact plan rejection is separately recorded as an unreachable-within-budget INCONCLUSIVE, not a product-death failure; no seed scan, restart, reroll or loop-until-success. Source reasoning is not a native contact or death witness.
+
+Only after actual death: require enemy0/player12 and actual player slot, no further enemy dispatch. Create a genuine newer player intention via Main. Replay original first-vial and death receipts twice each through core.commit; full save bytes, active action/phase and request must remain unchanged. Cancel that pending intention via Main with unchanged world state. The driver never edits a receipt or staged token.
+
+Future runtime needs unchanged approved Full180/physical budget/reserve/complete resource guard, exact isolated FOGBANK_ACTOR_FINITE_USER_DIR and owned FOGBANK_ACTOR_ENEMY_POISON_REPORT JSON output. Inherited watchdog150 stays. No engine/launcher or local task is started/provided here. Exact Main begins full1801 Coast; no small-world substitute. Full release dependencies/resources must be supplied by authorized restoration; the review's selected source files are not a runnable replacement project.
+
+Exit0=PASSED; exit1=FAILED; exit2=setup/report I/O error; exit3=INCONCLUSIVE. Report store bool, get_error before/after flush and one close are checked; preserve all stdout/stderr/ERROR/WARNING under original guard. Headless logic does not prove rendered/OS/GPU acceptance.
+
+Static entry: python check_static.py --repo-root REPO_ROOT --restored-root RESTORED_ROOT. REPO_ROOT contains the public repository at fixed commit8928d7012cb9c7cf42e1cb41f2717143299ebac9. RESTORED_ROOT contains formal public-v30 restored sources using that repository's existing tools/restore_v30.py logic. MANIFEST.verification_inputs lists every required repository/restored relative path, byte size and SHA256. Restoration is separate and is not performed by this checker. The checker reads only these explicit roots and this package, writes no files and emits its static result to stdout. Checks bytes, hashes, source conditions and test bounds; it does not parse GDScript or execute production logic. Official Godot source tag and target binary remain unbound; no native flush/close or durability claim.

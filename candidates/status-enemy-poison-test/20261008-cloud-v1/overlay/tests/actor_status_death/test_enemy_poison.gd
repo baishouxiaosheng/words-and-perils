@@ -1,0 +1,134 @@
+extends "res://tests/actor_status_death/frozen_finite_main.gd"
+## Test-only, one source lineage. Real Main/tickets/RNG/commit; no success search.
+const BASE_SHA = "89df6d366413a4624793f6668f31f08b4f7736729c32ba60f85ab9148fc74577"
+const FIXTURE_SHA = "b94c3a78924dd7c3f8f125b1c6830bbdb66dd7062b4342217da11fe0cc3cc6b8"
+const MOCK_SHA = "8d8e3fafc18e9ed9bb1295bb2d3eff3a52771afeb9ccc162017a2402001ec2df"
+const ActorPolicy = preload("res://view/actor_action_profile_v2/policy.gd")
+const POISON = "item_poison_vial"
+const MAX_ROUTE_STEPS = 32
+const MAX_COMMITS = 47 # <=32 contact moves + <=15 fixed encounter/rest actions.
+var inconclusive_reason := ""
+var death_witness := false
+var owner_ticks := 0
+var old_application_receipt: Dictionary = {}
+var death_receipt: Dictionary = {}
+var contact_route: Array = []
+
+func bounded_action(kind: String, extra: Dictionary = {}) -> Dictionary:
+	if not expect(actions.size() < MAX_COMMITS, "before every commit: finite action budget"): return {}
+	return await action(kind, extra)
+
+func run() -> void:
+	var isolated: String = OS.get_environment("FOGBANK_ACTOR_FINITE_USER_DIR")
+	if not expect(not isolated.is_empty() and OS.get_user_data_dir() == isolated, "exact isolated user directory"): finish(); return
+	for pin in [["res://main.gd", MAIN_SHA], ["res://tests/actor_status_death/frozen_finite_main.gd", BASE_SHA], ["res://tests/actor_status_entry/entry_fixture.gd", FIXTURE_SHA], ["res://tests/ai_gm_http/mock_transport.gd", MOCK_SHA]]:
+		if not expect(FileAccess.get_sha256(pin[0]) == pin[1], "exact input: " + str(pin[0])): finish(); return
+	root.gui_embed_subwindows = true; root.size = Vector2i(1280, 720)
+	app = Main.instantiate(); root.add_child(app); current_scene = app; await frames(6)
+	if not expect(app.coast_mode and app.playtest.state_copy().hexes.size() == 1801, "exact public Main starts its full1801 Coast"): finish(); return
+	mock = Mock.new()
+	if not expect(app.runtime_ai.set_transport(mock).get("ok", false) and not mock.info().live, "mock installed before configuration"): finish(); return
+	if not await configure_real_controls(): finish(); return
+	if not f.admit(): failures.append_array(f.failures); finish(); return
+	var original = OldEnemy.new(f.source_data)
+	if not expect(original.ready().get("ok", false), "original generated source admitted"): finish(); return
+	app._switch_mode_to("generated_v3_enemy", original); await frames()
+	app.on_tool_selected(app.ACTOR_STATUS_ENTRY_NEW); await frames()
+	if not expect(app.actor_status_mode and app.playtest.core.source.identity.profile_hash == F.FROZEN_PROFILE, "real Main enters exact status-v1 profile"): finish(); return
+	var initial: Dictionary = app.playtest.state_copy(); world_id = initial.world_id
+	if not expect(initial.actors[F.PLAYER].health == {"current":12,"max":12} and initial.actors[F.ENEMY].health == {"current":5,"max":5}, "authored living player12 and enemy5"): finish(); return
+	if not expect(initial.items[POISON].quantity == 2 and initial.items[POISON].owner_actor_id == F.PLAYER and POISON in initial.actors[F.PLAYER].inventory and not POISON in initial.actors[F.ENEMY].inventory, "two poison vials genuinely belong to acting player"): finish(); return
+	if not expect(initial.items[POISON].status_source.parameters == {"intensity":1,"flat_damage":1,"max_health_bps":1000} and initial.actors[F.PLAYER].statuses.is_empty() and initial.actors[F.ENEMY].statuses.is_empty(), "authored typed potency with no legacy weapon poison"): finish(); return
+	if not expect(app.playtest.current_actor_id() == F.PLAYER, "original player spawn slot"): finish(); return
+	var anchor: Array = app.playtest.core.source.base.enemy_placement_result.attack_anchor_hex
+	var plan: Dictionary = app.playtest.source.navigation.plan(initial, anchor, MAX_ROUTE_STEPS)
+	if not plan.get("ok", false):
+		inconclusive_reason = "Fixed source contact route not admitted within original stamina/budget: " + str(plan.get("code", "")) + "; no replacement fixture or retry."
+		finish(); return
+	if not expect(plan.route.size() <= MAX_ROUTE_STEPS+1, "source-authored contact route has at most32 steps"): finish(); return
+	contact_route = plan.route.duplicate(true)
+	for index in range(1, plan.route.size()):
+		if app.playtest.current_actor_id() == F.ENEMY: break
+		if not expect(app.playtest.movement_preview(plan.route[index]).get("ok", false), "each contact move is production-preview legal"): finish(); return
+		if (await bounded_action("move", {"target_hex":plan.route[index]})).is_empty(): finish(); return
+	if not expect(app.playtest.current_actor_id() == F.ENEMY and app._waiting_enemy_phase(), "actual contact gives enemy its ordinary slot"): finish(); return
+	if (await bounded_action("observe", {"target_hex":app.playtest.state_copy().actors[F.ENEMY].hex})).is_empty(): finish(); return
+	if not expect(app.playtest.current_actor_id() == F.PLAYER, "ordinary initial enemy observation returns player"): finish(); return
+	for bottle in range(2):
+		var before: Dictionary = app.playtest.state_copy()
+		if not expect(F.status(before, F.ENEMY, "poison").is_empty(), "new vial begins after old typed generation expired"): finish(); return
+		# At most one legal rest per vial, only for zero stamina; no retry loop.
+		if before.actors[F.PLAYER].stamina.current < 1:
+			if not expect(before.actors[F.PLAYER].stamina.current == 0 and before.actors[F.PLAYER].stamina.max >= 2, "one source-authorized rest can afford one vial"): finish(); return
+			if (await bounded_action("rest")).is_empty(): finish(); return
+			if not expect(app.playtest.current_actor_id() == F.ENEMY, "contact rest grants actual enemy slot"): finish(); return
+			if (await bounded_action("observe", {"target_hex":app.playtest.state_copy().actors[F.ENEMY].hex})).is_empty(): finish(); return
+			before = app.playtest.state_copy()
+		if not expect(app.playtest.current_actor_id() == F.PLAYER and ActorPolicy.Legacy.melee_range(before, F.PLAYER, F.ENEMY, app.playtest.core.source.navigation), "player may deliver across the real bidirectional dry edge"): finish(); return
+		var applied: Dictionary = await bounded_action("status_source", {"target_actor_id":F.ENEMY,"source_id":POISON})
+		if applied.is_empty(): finish(); return
+		var after: Dictionary = app.playtest.state_copy()
+		if not expect(after.items[POISON].quantity == 1-bottle and after.actors[F.PLAYER].stamina.current == before.actors[F.PLAYER].stamina.current-1 and after.actors[F.ENEMY].health.current == before.actors[F.ENEMY].health.current, "exact source/stamina cost and no enemy tick on player delivery"): finish(); return
+		if not F.applied(applied):
+			inconclusive_reason = "Actual contested RNG consumed vial %d without applying poison; no retry or fresh lineage." % (bottle+1)
+			finish(); return
+		if bottle == 0: old_application_receipt = applied.duplicate(true)
+		if not expect(F.status(after, F.ENEMY, "poison").get("remaining") == 3 and app.playtest.current_actor_id() == F.ENEMY, "typed enemy owner gets three ticks and genuine enemy slot"): finish(); return
+		var ticks: int = 3 if bottle == 0 else 2
+		for tick in range(ticks):
+			before = app.playtest.state_copy()
+			if not expect(app.playtest.current_actor_id() == F.ENEMY and before.actors[F.ENEMY].health.current > 0, "living enemy owns each poison tick action"): finish(); return
+			var poison: Dictionary = F.status(before, F.ENEMY, "poison")
+			var ticked: Dictionary = await bounded_action("observe", {"target_hex":before.actors[F.ENEMY].hex})
+			if ticked.is_empty(): finish(); return
+			owner_ticks += 1; after = app.playtest.state_copy()
+			if not expect(ticked.actor_id == F.ENEMY and after.actors[F.ENEMY].health.current == before.actors[F.ENEMY].health.current-1 and after.actors[F.PLAYER].health == initial.actors[F.PLAYER].health and after.items[POISON].quantity == before.items[POISON].quantity, "only enemy typed-owner tick removes one health; player and vial cost unchanged"): finish(); return
+			var remaining: Dictionary = F.status(after, F.ENEMY, "poison")
+			if not expect(remaining.is_empty() if poison.remaining == 1 else remaining.get("remaining") == poison.remaining-1, "typed duration advances exactly once on owner action"): finish(); return
+			if not expect(after.actors[F.ENEMY].statuses.is_empty() and after.actors[F.PLAYER].statuses.is_empty() and app.playtest.current_actor_id() == F.PLAYER, "no legacy poison or player death; each actual enemy action returns player"): finish(); return
+			if bottle == 1 and tick == 1: death_receipt = ticked.duplicate(true)
+			if tick < ticks-1:
+				var old_status: String = C.bytes(remaining); var hp: int = after.actors[F.ENEMY].health.current
+				if (await bounded_action("observe", {"target_hex":after.actors[F.PLAYER].hex})).is_empty(): finish(); return
+				after = app.playtest.state_copy()
+				if not expect(after.actors[F.ENEMY].health.current == hp and C.bytes(F.status(after, F.ENEMY, "poison")) == old_status and app.playtest.current_actor_id() == F.ENEMY, "interleaved player observation cannot tick enemy-owned poison"): finish(); return
+	var terminal_state: Dictionary = app.playtest.state_copy()
+	if not expect(owner_ticks == 5 and terminal_state.actors[F.ENEMY].health.current == 0 and terminal_state.actors[F.PLAYER].health.current == 12 and not death_receipt.is_empty(), "actual five owner ticks witness enemy-only typed poison death"): finish(); return
+	death_witness = true
+	if not expect(app.playtest.current_actor_id() == F.PLAYER and not app._waiting_enemy_phase() and not app.playtest.enemy_response_available() and app.playtest.phase() == "idle", "dead enemy yields live player slot without another enemy turn"): finish(); return
+	var terminal: String = C.bytes(app.playtest.save_data())
+	app._queue_required_enemy_turn(); app._begin_required_enemy_turn(); await frames()
+	if not expect(mock.sent.is_empty() and C.bytes(app.playtest.save_data()) == terminal, "dead enemy dispatch changes no saved authority and sends nothing"): finish(); return
+	# A real new player intent is pending when both genuinely old receipts replay.
+	app.set_player_intent("T04 ordinary player observation after enemy death")
+	app.submit_button.pressed.emit(); await frames()
+	if not expect(app.playtest.phase() == "awaiting_assessment" and app.playtest.action_copy().actor_id == F.PLAYER, "actual Main accepts live player intention after enemy death"): finish(); return
+	var pending: String = app.playtest.active_action; var request: String = C.bytes(app.playtest.request())
+	var preserved: String = C.bytes(app.playtest.save_data())
+	for old_receipt in [old_application_receipt, death_receipt]:
+		for repeat in range(2):
+			var duplicate: Dictionary = app.playtest.core.commit(old_receipt.action_id, old_receipt.stage_hash)
+			if not expect(duplicate.get("ok", false) and duplicate.get("already_committed", false) and C.bytes(app.playtest.save_data()) == preserved and app.playtest.active_action == pending and app.playtest.phase() == "awaiting_assessment" and C.bytes(app.playtest.request()) == request, "old application/death receipt duplicate cannot repay, retick, advance or clear newer player action: " + str(repeat)): finish(); return
+	app.cancel_pending(); await frames()
+	if not expect(app.playtest.phase() == "idle" and app.playtest.current_actor_id() == F.PLAYER and C.bytes(app.playtest.state_copy()) == C.bytes(terminal_state), "ordinary Main cancellation restores idle player with unchanged death-world facts"): finish(); return
+	expect(actions.size() <= MAX_COMMITS and mock.sent.is_empty(), "one bounded lineage and zero model sends")
+	finish()
+
+func finish() -> void:
+	if finished: return
+	finished = true
+	var outcome := "FAILED" if not failures.is_empty() else ("INCONCLUSIVE" if not inconclusive_reason.is_empty() else ("PASSED" if death_witness else "FAILED"))
+	var report: Dictionary = {"schema":"actor_status_enemy_poison_regression/v1","status":outcome,"checks":checks,"failures":failures,"inconclusive_reason":inconclusive_reason,"death_witness":death_witness,"owner_ticks":owner_ticks,"actions":actions,"max_commits":MAX_COMMITS,"max_route_steps":MAX_ROUTE_STEPS,"contact_route":contact_route,"fresh_lineages":1,"world_id":world_id,"main_sha256":MAIN_SHA,"profile_hash":F.FROZEN_PROFILE,"driver_sha256":FileAccess.get_sha256("res://tests/actor_status_death/test_enemy_poison.gd"),"old_application_receipt_hash":old_application_receipt.get("receipt_hash",""),"death_receipt_hash":death_receipt.get("receipt_hash",""),"mock_sends":mock.sent.size() if is_instance_valid(mock) else 0,"network_calls":0,"scope":"one real Main status-v1 enemy typed-owner poison death and old-receipt duplicates with newer player action pending; no player/double death, state/RNG injection or lineage search; headless logic only"}
+	var path: String = OS.get_environment("FOGBANK_ACTOR_ENEMY_POISON_REPORT")
+	var out := FileAccess.open(path, FileAccess.WRITE) if not path.is_empty() else null
+	if out == null:
+		printerr("ACTOR_ENEMY_POISON_REPORT_OPEN_FAILED missing_output_env=", path.is_empty(), " open_error=", FileAccess.get_open_error())
+		quit(2); return
+	var stored: bool = out.store_string(JSON.stringify(report, "\t"))
+	var write_error: Error = out.get_error(); out.flush(); var flush_error: Error = out.get_error(); out.close()
+	if not stored or write_error != OK or flush_error != OK:
+		printerr("ACTOR_ENEMY_POISON_REPORT_WRITE_FAILED stored=", stored, " write_error=", write_error, " flush_error=", flush_error)
+		quit(2); return
+	if is_instance_valid(app): app.free()
+	print("ACTOR_ENEMY_POISON_RESULT ", JSON.stringify(report))
+	quit(0 if outcome == "PASSED" else (3 if outcome == "INCONCLUSIVE" else 1))

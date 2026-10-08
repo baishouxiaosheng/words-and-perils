@@ -1,0 +1,245 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "task",
+  "task_id": "WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002",
+  "status": "ready",
+  "title": "Verify Natural owned staging candidate",
+  "base_commit": "e8941c2235069a168d9b6d92a0e9e1a62acce296",
+  "candidate_root": "candidates/t03-natural-owned-staging-verification/wp-natural-owned-staging-verify-20261008-002",
+  "inputs": [
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/MANIFEST.json",
+      "git_blob_sha": "42016755be73157096e276004e06a348e301ac62",
+      "sha256": "1bcb2a01c9c24ade031bd7b670d2f00c0c104c76e812914df1150df1f3be7810",
+      "bytes": 3923,
+      "role": "Immutable cloud owned-staging candidate manifest; unparsed/unrun/unadopted provenance, not runtime results."
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/BASELINE_MANIFEST.json",
+      "git_blob_sha": "805418ccc7d7ae39c8798c7df4e14e57a3a51d3f",
+      "sha256": "452767dd49a51b93c17f398cacbb3bd157e4b1a2936853a08c6eae1525e659dd",
+      "bytes": 1056,
+      "role": "Immutable previous independently tested write-bool source/test provenance; do not replace the old manifest."
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/PRIMITIVE_PROOF.json",
+      "git_blob_sha": "8011d440113224de686a679d74d48ba2aaf156bd",
+      "sha256": "e9b87b93b04b3ee6cff51a9bd78af138ad0ae33790e81c80f5247401feab9416",
+      "bytes": 2786,
+      "role": "Official tag source contract only; does not bind the installed target binary."
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/SOURCE_BINARY_BINDING.json",
+      "git_blob_sha": "02f0d20738cc6dc4b189f9e7b3cb999d960a368c",
+      "sha256": "d2eebfcc074d6a718febeed529264bba89e8065211afc6862a210a23aa80b0de",
+      "bytes": 614,
+      "role": "Preserve actual 422 source lookup and not-established binary/source binding."
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/view/generated_natural_coast_basic/adapter.gd",
+      "git_blob_sha": "2a152b3dee8d6f1c6f400073dab3605786de1f04",
+      "sha256": "7e11cf5a3679fdc3bee4aa4264a11ed49cdadb2744136c0ffb4bae2ee47fe345",
+      "bytes": 25320,
+      "role": "Exact cloud production candidate to verify without editing.",
+      "project_path": "view/generated_natural_coast_basic/adapter.gd"
+    },
+    {
+      "repository_path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/RESULT.json",
+      "git_blob_sha": "8fee331aba51fa5b6a79d997f1e2d995d74cc53a",
+      "sha256": "3caf4fe445c2357c97290da7bdb9f0f51ec353661bd40ae3d0ae93da72edb0d4",
+      "bytes": 18404,
+      "role": "Remote predecessor reviewable terminal report only; does not prove local lock/ledger/processes released."
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/fake_adapter.gd",
+      "git_blob_sha": "a4312c658ec06bf7d26994bcf408f37dcf787b95",
+      "sha256": "0d35fe31e80b41faf3ec970936bf537e6f4d7df7faeba2c43b1da6e4c791c80a",
+      "bytes": 1292,
+      "role": "Exact cloud candidate test source; no old pass grade transfers.",
+      "project_path": "tests/t03_natural_owned_staging/fake_adapter.gd"
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/io_probe.gd",
+      "git_blob_sha": "dfc07c8809331954bf1ec988279755665f2547ae",
+      "sha256": "370c6bab323d01b778ef65955aae73f83006f128b9078e7e8da535d7b05c5aa4",
+      "bytes": 4748,
+      "role": "Exact cloud candidate test source; no old pass grade transfers.",
+      "project_path": "tests/t03_natural_owned_staging/io_probe.gd"
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/test_cleanup_diagnostic.gd",
+      "git_blob_sha": "4793009dc20ecee3b0dfb887f85adbe6f601dfe9",
+      "sha256": "6cbb794d684746ed6d4a2d607f4935c9a9ff88abe7f1f09f60e0b86add2782c7",
+      "bytes": 318,
+      "role": "Exact cloud candidate test source; no old pass grade transfers.",
+      "project_path": "tests/t03_natural_owned_staging/test_cleanup_diagnostic.gd"
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/test_focused_write_result.gd",
+      "git_blob_sha": "1ea897db17cebb7b023190dc2e82821460089fc8",
+      "sha256": "122c7ca5c33ec324177b56d3a3f01a4cc53373ac7d1608ebf39406fd98d7baaf",
+      "bytes": 8180,
+      "role": "Exact cloud candidate test source; no old pass grade transfers.",
+      "project_path": "tests/t03_natural_owned_staging/test_focused_write_result.gd"
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/test_mkdir_semantics_probe.gd",
+      "git_blob_sha": "4e1f770f53f08da40586732fee4c880c6234f501",
+      "sha256": "76a2c1d21771992fa40e8fbe339ca74396414b51eb625a577fc7c1609ca88dbb",
+      "bytes": 3106,
+      "role": "Exact cloud candidate test source; no old pass grade transfers.",
+      "project_path": "tests/t03_natural_owned_staging/test_mkdir_semantics_probe.gd"
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1/overlay/tests/t03_natural_owned_staging/test_owned_staging.gd",
+      "git_blob_sha": "2e06c097df5a76ecf2d00b419cdd6aaa7ccce589",
+      "sha256": "464a8bd4b068bdc2cdd754714554efdfac870d1430e8e2350d52e09f7a3477b7",
+      "bytes": 9707,
+      "role": "Exact cloud candidate test source; no old pass grade transfers.",
+      "project_path": "tests/t03_natural_owned_staging/test_owned_staging.gd"
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1-test-adaptation/MANIFEST.json",
+      "git_blob_sha": "6f8f3159a519e38f817aa39a792a84531c37fab1",
+      "sha256": "2ffa96256741f55cb038900a5642ceb1e4e580fa7f84ce2e935fde8ad445f923",
+      "bytes": 2412,
+      "role": "Separate immutable test-only 170-suite adaptation and provenance; unparsed/unrun, does not alter production or transfer old pass grades."
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1-test-adaptation/STATIC_CHECK_RECEIPT.json",
+      "git_blob_sha": "3596d4be4fda5e8db5a238edcd636692aba41c04",
+      "sha256": "007635bd0761153c48857b58ac075a0ac7a522250dc8f1524fabfaf9eaa3d5ce",
+      "bytes": 1579,
+      "role": "Separate immutable test-only 170-suite adaptation and provenance; unparsed/unrun, does not alter production or transfer old pass grades."
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1-test-adaptation/SUMMARY.txt",
+      "git_blob_sha": "053cb10864bb2759ee218814c54d53dc2e8d7ab7",
+      "sha256": "9d4bf4eb8444850c937d6594c1bba03fcb64f490f99a15117081519ef5f7c489",
+      "bytes": 1402,
+      "role": "Separate immutable test-only 170-suite adaptation and provenance; unparsed/unrun, does not alter production or transfer old pass grades."
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1-test-adaptation/TEST_ONLY_ADAPTATION.patch",
+      "git_blob_sha": "2e077b24aaaa705b1be0f9af42463536032d3d47",
+      "sha256": "3572bdeb3292bd6b9a32ad097182e08a6d63a3c7981041854d7ccd22191c452b",
+      "bytes": 2871,
+      "role": "Separate immutable test-only 170-suite adaptation and provenance; unparsed/unrun, does not alter production or transfer old pass grades."
+    },
+    {
+      "repository_path": "candidates/t03-natural-owned-staging/20261008-cloud-v1-test-adaptation/overlay/tests/natural_coast_basic/test_adapter.gd",
+      "git_blob_sha": "72e490c53165d773d0993b01723ad243bad595cc",
+      "sha256": "ae391e16f204575beef057c245430dc8a830e4b9611f34683988ee42497052f8",
+      "bytes": 38896,
+      "role": "Separate immutable test-only 170-suite adaptation and provenance; unparsed/unrun, does not alter production or transfer old pass grades.",
+      "project_path": "tests/natural_coast_basic/test_adapter.gd"
+    }
+  ],
+  "baseline_project_pins": {
+    "project.godot": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd",
+    "view/generated_natural_coast_basic/adapter.gd": "7e11cf5a3679fdc3bee4aa4264a11ed49cdadb2744136c0ffb4bae2ee47fe345",
+    "view/generated_natural_coast_basic/engine.gd": "dba3ca7fe04dc8a4100897250fc19c5c6c2acff2ef687ff120e894beadf6351d",
+    "core/ai_gm_rebuilt/engine.gd": "3d41f2fc4e52459d5df01732fbacc9e849f0e4a9260094220426001ef236002d",
+    "core/ai_gm_rebuilt/traversal_policy.gd": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+    "tests/natural_coast_basic/test_compile.gd": "59fd844ef8fa005f4e01049505cf9380d594eb0b01665838aeef82f772c8a350",
+    "tests/natural_coast_basic/test_adapter.gd": "ae391e16f204575beef057c245430dc8a830e4b9611f34683988ee42497052f8"
+  },
+  "allowed_production_changes": [],
+  "allowed_test_changes": [
+    "tests/t03_natural_owned_staging_runtime/"
+  ],
+  "requirements": [
+    "All candidate and test-only adaptation input rows are fixed to the actually verified published base e8941c2235069a168d9b6d92a0e9e1a62acce296. Verify every raw size/hash/Git blob before use; do not infer missing source data or reuse prior runtime grades.",
+    "Before a new claim or test, reconcile the predecessor WP-NATURAL-SAVE-BOOL-20261008-001 remote reviewable terminal state with the existing repository-wide local durable ledger, shared lock, recorded owned processes/handles and job/reader cleanup. A remote terminal report alone is not proof of local release. Do not delete, steal or overwrite the old claim/lock; if unresolved, report blocked and do not relaunch the predecessor task. The new regression runs below are only against the changed owned-staging candidate.",
+    "This task is test-only. Stage immutable exact production inputs into a fresh disposable public-v30 test copy with the unchanged inherited Natural identity engine, published owned-staging adapter and its exact six tests. Copying pinned inputs for the test copy is permitted; production source edits, source-patch adjustments, adoption or Raw combination are not.",
+    "Run the independently bound mkdir semantics probe first on the existing previously verified target Godot binary under the unchanged Windows guard, in a minimal disposable no-autoload isolated project. The probe must not preload the candidate adapter. Bind the existing executable path/hash and actual version receipt; do not replace/install an engine or silently substitute the official tag binary. If this prerequisite fails, is unrun or lacks strict guard acceptance, stop all candidate-dependent parsing/tests and report blocked; do not work around it.",
+    "The runtime receipt 4.6.3.stable.official.7d41c59c4 could not be resolved in official source (HTTP422). Official tag commit 35e80b3a8822a9df9be390814b62f44c0a9c69e8 supplies source rationale only. A successful mkdir probe demonstrates its observed existing-binary behavior, not full binary/source provenance.",
+    "Only after the mkdir prerequisite really passes: parse the candidate, run the new focused five write-result cases and owned-staging tests, and compile four blank Natural objects. Keep candidate/test hashes exact; only minimal new isolated wrappers and receipt collectors within the allowed test path may be added.",
+    "Run test_cleanup_diagnostic.gd separately. Its intentional production ERROR must stay in raw stderr/guard evidence and be classified as expected diagnostic observation with strict_pass=false or the actual strict-guard failure; never suppress the ERROR, weaken the guard, change nonzero evidence or merge this into strict passing totals.",
+    "The old exact three-Dictionary suite hash 60e46a3b5b607d3ba5cbe3634ebcd6bd3ebbfc98fa10d4bad8732ea95b5a0ba2 remains historical immutable provenance. Its path+.tmp failure fixture no longer targets the private staging backend. Use only the separately published test-only adaptation with explicit open-failure injection and exactly-one open call evidence; retain the existing failure/live-state/old-destination assertion meaning.",
+    "Use the fully pinned adaptation ae391e16f204575beef057c245430dc8a830e4b9611f34683988ee42497052f8 to run coastal_range and plateau_hinterland separately, each retaining the original 170 checks including 13 T03 checks. Do not move new owned/focused cases into those counts, hard-code passing counters, substitute old receipts or rewrite prior manifests.",
+    "Every run is serial, headless Small guard 1GiB Job/120s/64KiB aggregate output/512MiB reserve with stricter existing rules preserved. Confirm both OS user directory and globalized user:// isolation before test bodies; no autoload, Main, UI, editor, live AI or actual player data.",
+    "Report actual passed/failed/unrun/expected-diagnostic stages, executed source and entry-wrapper hashes, before/after source maps, terminal Job/readers/owned-handle/host exits, and exact isolated-only traversal-policy restoration. The existing bound suite may run its already established temporary traversal-policy counterexample only in its disposable copy and must restore exact bytes; this is not a new production edit or permission to change the source outside that fixture. Job commit memory must not be labeled physical RSS.",
+    "Retain cooperative owned-staging scope limits: no claim of target CAS, all-writer lock, external symlink/replacement protection, actual disk short writes, real OS concurrency, crash/power-loss durability or target-preserving failed native rename. Preserve recovery payload observations on rename failure.",
+    "Use current STOP/CONTROL and verified unique new-task claim rules. Source-channel review does not authorize unattended worker deployment: keep automation_enabled=false until existing worker entry and end-to-end canary are actually established. On every safe task end apply the existing real-reported context/checkpoint/available-native-compaction rule without guessing.",
+    "Publish only this new test/evidence candidate root and exact new-task results. Preserve the original production candidate, adaptation directory, manifests, prior tests/results/claims and root protocol/schema/README. Two-phase CAS fast-forward publication and remote readback remain required."
+  ],
+  "verification": {
+    "execution_scope": "test_only_existing_candidate",
+    "execution_order": [
+      "predecessor_local_safe_reconciliation",
+      "current_stop_and_new_claim",
+      "independent_existing_binary_mkdir_probe",
+      "candidate_parse",
+      "focused_write_result",
+      "owned_staging",
+      "blank_object_compile",
+      "separate_expected_cleanup_diagnostic",
+      "coastal_range_170",
+      "plateau_hinterland_170"
+    ],
+    "mkdir_entry": "tests/t03_natural_owned_staging/test_mkdir_semantics_probe.gd",
+    "focused_entry": "tests/t03_natural_owned_staging/test_focused_write_result.gd",
+    "focused_case_names": [
+      "store_false_error_OK",
+      "store_false_error_non_OK",
+      "store_true_flush_observable_error",
+      "open_failure",
+      "Unicode_UTF8_success"
+    ],
+    "owned_entry": "tests/t03_natural_owned_staging/test_owned_staging.gd",
+    "cleanup_diagnostic": {
+      "entry": "tests/t03_natural_owned_staging/test_cleanup_diagnostic.gd",
+      "strict_pass_expected": false,
+      "preserve_raw_error_and_guard_status": true
+    },
+    "compile": {
+      "entry": "tests/natural_coast_basic/test_compile.gd",
+      "checks": 4
+    },
+    "regression": {
+      "entry": "tests/natural_coast_basic/test_adapter.gd",
+      "recipes": [
+        "coastal_range",
+        "plateau_hinterland"
+      ],
+      "checks_per_recipe": 170,
+      "t03_checks_per_recipe": 13,
+      "adaptation_required": true
+    },
+    "pending_inputs": [],
+    "channel_review": {
+      "repository_path": "coordination/local-work/reviews/CHANNEL_TRUST_REVIEW_20261008.json",
+      "sha256": "f212bebebbe0f2fb3e2b72aa345ea6af19abf005547be0ca45826f45950f7897",
+      "meaning": "Factual root tool-receipt review to be published with this task; not a task-authored permission or proof of worker/schedule readiness."
+    },
+    "source_runtime_binding": "not_established; preserve 422 separately; mkdir probe tests behavior only",
+    "guard_provenance": {
+      "guard_source_sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+      "guard_wrapper_sha256": "f831a84e71f692fc851945b001cfc98092b7049fb3b48d0f5099fa49e016c5f8"
+    },
+    "automation_enabled_expected": false
+  },
+  "preserve": [
+    "All production sources including exact adapter7e11cf5a…",
+    "Original owned-staging and test-adaptation directories/manifests",
+    "Previous terminal reports, claim, local ledger and locks",
+    "Exact inherited identity engine/core",
+    "Actual player saves and unrelated data",
+    "Immutable protocol/schema pins and approval policy"
+  ],
+  "out_of_scope": [
+    "Production edits",
+    "Re-running predecessor task as a substitute",
+    "Claim/lock stealing or deletion",
+    "Raw/Natural combination or formal adoption",
+    "Main/UI/FPS/live-model/full-game expansion",
+    "New worker platform/service/keys/software/security changes",
+    "README/Actions/history/visibility/protocol changes"
+  ],
+  "publication": {
+    "result_root": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002",
+    "adopted": false,
+    "phases": "New test-wrapper/evidence artifacts and binding manifest first; separate result/summary refers to artifact commit/hash. No production source edits. Main CAS and fast-forward only."
+  }
+}

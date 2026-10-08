@@ -1,0 +1,60 @@
+{
+  "record_type": "channel_trust_review",
+  "record_status": "factual_review_record_for_root_review_not_new_authority",
+  "repository": {
+    "full_name": "baishouxiaosheng/words-and-perils",
+    "id": 1403552519,
+    "owner_id": 128279531,
+    "branch": "main",
+    "inbox": "coordination/local-work/inbox"
+  },
+  "observation_provenance": "Sanitized summary of actual root GitHub plugin tool receipts reported to this draft preparer. This is not a raw unredacted tool-response JSON.",
+  "observations": [
+    {
+      "observed_utc": "2026-10-08T14:34:48Z",
+      "tool": "github.get_repo_collaborator_permission",
+      "arguments": {
+        "repository_full_name": "baishouxiaosheng/words-and-perils",
+        "username": "baishouxiaosheng"
+      },
+      "result_summary": {
+        "permission": "admin"
+      }
+    },
+    {
+      "observed_utc": "2026-10-08T14:34:59Z",
+      "tool": "github.get_profile",
+      "arguments": {},
+      "tool_semantics": "Retrieve the authenticated GitHub user, not an unauthenticated username lookup.",
+      "result_summary": {
+        "id": "128279531",
+        "nickname": "baishouxiaosheng"
+      }
+    },
+    {
+      "source": "Earlier verified GitHub repository response, separate from these 14:34 tool receipts.",
+      "result_summary": {
+        "repository_id": 1403552519,
+        "repository_full_name": "baishouxiaosheng/words-and-perils",
+        "owner_id": 128279531
+      }
+    }
+  ],
+  "existing_user_authorization": "The user already designated this exact repository/main/inbox once as the bounded future Words and Perils task delivery channel. This factual review does not create or enlarge that permission.",
+  "review_clarification": [
+    "The authenticated account ID/nickname matches the verified repository owner and that same account has admin permission on this exact repository. This is channel-owner/write-control evidence for the user-designated delivery channel.",
+    "No extra per-task authenticated pusher proof, all-collaborator inventory, author-name certification or branch-protection change is added as a prerequisite beyond the existing bounded protocol and direct user designation.",
+    "This does not authenticate dot as the pusher, any individual commit pusher, every repository writer, or task author/committer text. It does not make this public review file self-authorizing.",
+    "The existing protocol/schema pins and system/local approval policy stay in force. Continue exact task ID/hash dedupe, baseline/input hash verification, one-owner claims, current STOP/CONTROL checks and safe cleanup.",
+    "Source-channel clarification is separate from actual worker-entry, canary and scheduler evidence. No claim that unattended operation or a five-minute local schedule is enabled follows from these observations."
+  ],
+  "unchanged_pins": {
+    "PROTOCOL.json": "209cc25f649f2ce6635012d6d6f0bdcf09526ac68d1a7dcbf907e7398a73c05a",
+    "TASK_SCHEMA.json": "ad3a3cd71adae6c38817042e06322d0aaa0092080be3c15579ccffe1b1c8e85c"
+  },
+  "authority_created": false,
+  "protocol_changed": false,
+  "security_settings_changed": false,
+  "automation_enabled": false,
+  "public_privacy": "Only account ID/nickname, repository IDs/name and admin permission are included; personal email, avatar and unrelated profile fields are omitted."
+}

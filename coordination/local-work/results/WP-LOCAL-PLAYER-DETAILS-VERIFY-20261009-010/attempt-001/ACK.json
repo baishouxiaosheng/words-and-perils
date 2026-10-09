@@ -1,0 +1,312 @@
+{
+  "task_id": "WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010",
+  "task_sha256": "c7b4729ce5803e76a4e09977e4bd59126caf7bcac9d870f40d0de2b9e757277a",
+  "claim_commit": "cf8aac4888e1a1adcb606f6606dd9d5ccaf687d8",
+  "intake_commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+  "status": "acknowledged",
+  "all_inputs_verified": true,
+  "old_tasks_not_rerun": true,
+  "source_binding": {
+    "head": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+    "all_inputs_verified": true,
+    "files": [
+      {
+        "path": "candidates/status-clock-display-tests/20261009-cloud-v3/INPUTS.json",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 4782,
+        "sha256": "d5dac531e3f08d76b9e8a8152724c156be9c378162586731f31d12d36dfc652a",
+        "git_blob_sha": "886bb20dc50aee1639be05e44f981ffac365aa63"
+      },
+      {
+        "path": "candidates/status-clock-display-tests/20261009-cloud-v3/README.txt",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 4085,
+        "sha256": "c06a1a1053f2b38e3e3a8f7e7cead53fd4820c38b6b256ee8c7387a78ef787ec",
+        "git_blob_sha": "bb0a0cd042e13a05687c06cf575fe0ef443970c4"
+      },
+      {
+        "path": "candidates/status-clock-display-tests/20261009-cloud-v3/STATIC_RESULT.json",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 6356,
+        "sha256": "7c1162177837d5189d89b88cbac595633f0531f586aabe5063bb641df80526a3",
+        "git_blob_sha": "07a1d3fa8810f793544e10044ebe26987a97961c"
+      },
+      {
+        "path": "candidates/status-clock-display-tests/20261009-cloud-v3/TEST_MANIFEST.json",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 1877,
+        "sha256": "f70b27ab9a15afa78e35d6eb558ba75359fc78112e68fde548762bec845f3cfe",
+        "git_blob_sha": "a1698b7123b35aa9d673f69f70bf0e94a311eb52"
+      },
+      {
+        "path": "candidates/status-clock-display-tests/20261009-cloud-v3/check_static.py",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 9669,
+        "sha256": "cfe7351974a28bc19f1dc91b98a8223b7e4576cfc213cbcb4a41b644c4d6880f",
+        "git_blob_sha": "bb6735a06d8a3549442d75e57363603ac5a95776"
+      },
+      {
+        "path": "candidates/status-clock-display-tests/20261009-cloud-v3/prepare.py",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 7164,
+        "sha256": "eeec76df1e38930227f1d3a33108ed18e4b6ee336456ec82bfec0f9ecd57495b",
+        "git_blob_sha": "8bb0a1c34442f9408ca6373a22353952a18a1b0a"
+      },
+      {
+        "path": "candidates/status-clock-display-tests/20261009-cloud-v3/test_clock_display.gd",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 8643,
+        "sha256": "c0d8ca00ca919792e164150d8d4bf70aeb8321e1579c322095e30d4ea2b82486",
+        "git_blob_sha": "0295c0e2f7009dde3cca3aba1e767daf50959cef"
+      },
+      {
+        "path": "candidates/status-clock-display/20261009-cloud-v3/CHANGE.patch",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 1140,
+        "sha256": "3467106b110e666e95704aaa5542b2d6feec45d374f7b190847527200a5863f4",
+        "git_blob_sha": "c557427a75688f976e55f7a729ca256b0ba2ca16"
+      },
+      {
+        "path": "candidates/status-clock-display/20261009-cloud-v3/MANIFEST.json",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 3643,
+        "sha256": "cae8b4799c77789485bbd4fd9e97d7a42e02d734e152ce2514bc497ef85602bf",
+        "git_blob_sha": "9be9060068fd01d57e58166536e2e6e579dbd512"
+      },
+      {
+        "path": "candidates/status-clock-display/20261009-cloud-v3/STATIC_CHECKS.json",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 2516,
+        "sha256": "dfd079c1652f0237faef5c6f37b87a41aa31e5482be89fa7f56197c8cd06949e",
+        "git_blob_sha": "cb7acf8a5dfc5672fbcd9678fc9a9ce3b6d0370d"
+      },
+      {
+        "path": "candidates/status-clock-display/20261009-cloud-v3/USAGE.txt",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 2564,
+        "sha256": "f517224b6b1e0f071f4b13e8882aaa35c5030dd3689fbb44845ede75ef0f1ce5",
+        "git_blob_sha": "859b353bdbd8e53bd33f79219a6cc96e1f41265e"
+      },
+      {
+        "path": "candidates/status-clock-display/20261009-cloud-v3/check_static.py",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 5389,
+        "sha256": "6e9427b85484248078e8589f995fe0dce61d008e5fb7eedd34e6cb216c54a4ce",
+        "git_blob_sha": "57433f45e08e0d0b6e64e2db5514b2c840f513e4"
+      },
+      {
+        "path": "candidates/status-clock-display/20261009-cloud-v3/overlay/view/playable_build/player_details.gd",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 8902,
+        "sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+        "git_blob_sha": "4ae0fe8b7b0780620cab4290747a6da8e71c5025"
+      },
+      {
+        "path": "candidates/focus-location-display-tests/20261009-cloud-v3/INPUTS.json",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 4595,
+        "sha256": "ca9816f7eb7928b78427bf5d025a5ff80594dc8e016eeab88927697bdc6d7a26",
+        "git_blob_sha": "22f391c788b41ee769570a853612e26b198f8629"
+      },
+      {
+        "path": "candidates/focus-location-display-tests/20261009-cloud-v3/README.txt",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 4128,
+        "sha256": "424af2ccc8d3d178b83c44c44d3d4bdd852a933109489947b7d9392caeb0618a",
+        "git_blob_sha": "b4cd6dc7a009acd37785f185650ce9e55df1c2a9"
+      },
+      {
+        "path": "candidates/focus-location-display-tests/20261009-cloud-v3/STATIC_RESULT.json",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 6013,
+        "sha256": "4472d9ef01c6418e6c2c0c69a59b0c20c645badd1a61e89dd591745587859920",
+        "git_blob_sha": "2edf410077f180b11ea76dc1162054bada340ec2"
+      },
+      {
+        "path": "candidates/focus-location-display-tests/20261009-cloud-v3/TEST_MANIFEST.json",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 1834,
+        "sha256": "87aeb3eb42595976e7b62bc2f8a0fcfdb320219e35eae99926a25af344586be0",
+        "git_blob_sha": "bd1a1cb94fa2d657bd8265b32b6a6334c41053b8"
+      },
+      {
+        "path": "candidates/focus-location-display-tests/20261009-cloud-v3/check_static.py",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 9669,
+        "sha256": "cfe7351974a28bc19f1dc91b98a8223b7e4576cfc213cbcb4a41b644c4d6880f",
+        "git_blob_sha": "bb6735a06d8a3549442d75e57363603ac5a95776"
+      },
+      {
+        "path": "candidates/focus-location-display-tests/20261009-cloud-v3/prepare.py",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 7164,
+        "sha256": "eeec76df1e38930227f1d3a33108ed18e4b6ee336456ec82bfec0f9ecd57495b",
+        "git_blob_sha": "8bb0a1c34442f9408ca6373a22353952a18a1b0a"
+      },
+      {
+        "path": "candidates/focus-location-display-tests/20261009-cloud-v3/test_focus_location.gd",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 5952,
+        "sha256": "87c99370865600ebc48e616c2b9f17fa9e62bf267277085462aba48f6a8be4da",
+        "git_blob_sha": "5dd3de50a070a59f3fe7a1446d6baf26146a85a7"
+      },
+      {
+        "path": "candidates/focus-location-display/20261009-cloud-v3/CHANGE.patch",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 718,
+        "sha256": "fd5ecc575d4c1f332b8f9d1d34ad9b34e77c323324ba61e9a2a6726cd8582f3e",
+        "git_blob_sha": "e692e7f77c847c4f27372cbe343adfa6fbcd6ec2"
+      },
+      {
+        "path": "candidates/focus-location-display/20261009-cloud-v3/MANIFEST.json",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 3257,
+        "sha256": "be6ef3ed71815ca19a9f55d8a81a948af111578a7b645cb9a067b22e285d062b",
+        "git_blob_sha": "236c370718a64b91593d753c163ba4a0a60d6f4f"
+      },
+      {
+        "path": "candidates/focus-location-display/20261009-cloud-v3/STATIC_CHECKS.json",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 2199,
+        "sha256": "e2b11da0ccf3be064683035ed95379702ffb57645f9cb7ad68bb24b0748d4109",
+        "git_blob_sha": "c99599565db66575fbe61a8533c310cd4da0fc38"
+      },
+      {
+        "path": "candidates/focus-location-display/20261009-cloud-v3/USAGE.txt",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 2597,
+        "sha256": "be35c4cb9a4d9dfddd6bc218311ce27322daae9e3e1dcef053391ac72fb3868d",
+        "git_blob_sha": "45ca54b2921d7f0b2f47bd399a8391c1d5c6e0a6"
+      },
+      {
+        "path": "candidates/focus-location-display/20261009-cloud-v3/check_static.py",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 6149,
+        "sha256": "1bcba772c4bb7106c8b89b3a34c0d49ee3a687fd896f02a9698fc63ad163b4ef",
+        "git_blob_sha": "db63984948f87d6cccc96448a1b776fff250a3cd"
+      },
+      {
+        "path": "candidates/focus-location-display/20261009-cloud-v3/overlay/view/playable_build/player_details.gd",
+        "commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+        "bytes": 8409,
+        "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+        "git_blob_sha": "7f0d138c8028f2120f71e8c50ba9c03da2e26b62"
+      },
+      {
+        "path": "candidates/player-details-clock-location/20261009-cloud-v1/CHANGE.patch",
+        "commit": "f0e253db723fb27309bfc0ece1233960ef2bfd24",
+        "bytes": 1770,
+        "sha256": "2d5a968b695634e7a0e1bee490830c9738acd62d0181a4a79be265bdc706248f",
+        "git_blob_sha": "dbc7783e019defaaac7780f9cc0a3061c3f8cc4c"
+      },
+      {
+        "path": "candidates/player-details-clock-location/20261009-cloud-v1/MANIFEST.json",
+        "commit": "f0e253db723fb27309bfc0ece1233960ef2bfd24",
+        "bytes": 4877,
+        "sha256": "9e8a329439b70dca27f974c6ee263bc7706a0385aa0d7abb3d0ef499427668bf",
+        "git_blob_sha": "c86942bdca645cb4944ea572505a06c9957345dd"
+      },
+      {
+        "path": "candidates/player-details-clock-location/20261009-cloud-v1/RESULT.json",
+        "commit": "f0e253db723fb27309bfc0ece1233960ef2bfd24",
+        "bytes": 3314,
+        "sha256": "438469aa7c1741f3f512b12fb0e29947cbfc535229cbde2d778227361742478f",
+        "git_blob_sha": "1e01896fced52f39fcc1db8112deb3f3399e03ad"
+      },
+      {
+        "path": "candidates/player-details-clock-location/20261009-cloud-v1/STATIC_RESULT.json",
+        "commit": "f0e253db723fb27309bfc0ece1233960ef2bfd24",
+        "bytes": 5853,
+        "sha256": "ce8f78ba240bf6ced5b2bf728ff25c0ef8007de598352873659bce2c7676c223",
+        "git_blob_sha": "68f597ee7b20d3412c31d2269fb74b04b9c35e79"
+      },
+      {
+        "path": "candidates/player-details-clock-location/20261009-cloud-v1/USAGE.txt",
+        "commit": "f0e253db723fb27309bfc0ece1233960ef2bfd24",
+        "bytes": 1679,
+        "sha256": "2a83aa496859b9977895cb73387f2aec09f948813469ff9145953aac6036193f",
+        "git_blob_sha": "69ac6c6f9dc3359cc5698c389d49f553a3569822"
+      },
+      {
+        "path": "candidates/player-details-clock-location/20261009-cloud-v1/check_static.py",
+        "commit": "f0e253db723fb27309bfc0ece1233960ef2bfd24",
+        "bytes": 6262,
+        "sha256": "d868d34a6d472fc98f70dda8e8d8e186e2cca60b4168dcb9af86ea95cc002723",
+        "git_blob_sha": "a2f9893e29af83087571aa471268086c5fa56329"
+      },
+      {
+        "path": "candidates/player-details-clock-location/20261009-cloud-v1/focused-tests/INPUTS.json",
+        "commit": "f0e253db723fb27309bfc0ece1233960ef2bfd24",
+        "bytes": 5335,
+        "sha256": "ee0223f132ff9d68602ebf18feb18dd19d8462756541ca52cc842b4bfa5ef68f",
+        "git_blob_sha": "0d1f76d34116c89fc280eca136d9812e4d5aa9fc"
+      },
+      {
+        "path": "candidates/player-details-clock-location/20261009-cloud-v1/focused-tests/TEST_MANIFEST.json",
+        "commit": "f0e253db723fb27309bfc0ece1233960ef2bfd24",
+        "bytes": 1364,
+        "sha256": "f41f971d2c213cbbca7a548add2ba2b116204c9ee84884796d65f3e2e008961a",
+        "git_blob_sha": "f652d32926c4074415448bed36bf21f81f107774"
+      },
+      {
+        "path": "candidates/player-details-clock-location/20261009-cloud-v1/focused-tests/prepare.py",
+        "commit": "f0e253db723fb27309bfc0ece1233960ef2bfd24",
+        "bytes": 7364,
+        "sha256": "cba4fe39180a2345de5c3983532c2e4fd9f04c3e889ed1683770cc945a82eb3d",
+        "git_blob_sha": "e6072e144c99c1a678cd97b538f4d358675f72d0"
+      },
+      {
+        "path": "candidates/player-details-clock-location/20261009-cloud-v1/focused-tests/test_combined_player_details.gd",
+        "commit": "f0e253db723fb27309bfc0ece1233960ef2bfd24",
+        "bytes": 14785,
+        "sha256": "8b12348f54733ca74b8ce1b469ae243945574d2ecce485c77f328c75034af037",
+        "git_blob_sha": "20a18588a162873206ad4c6f5781caefcd5aa035"
+      },
+      {
+        "path": "candidates/player-details-clock-location/20261009-cloud-v1/inputs/clock_MANIFEST.json",
+        "commit": "f0e253db723fb27309bfc0ece1233960ef2bfd24",
+        "bytes": 3643,
+        "sha256": "cae8b4799c77789485bbd4fd9e97d7a42e02d734e152ce2514bc497ef85602bf",
+        "git_blob_sha": "9be9060068fd01d57e58166536e2e6e579dbd512"
+      },
+      {
+        "path": "candidates/player-details-clock-location/20261009-cloud-v1/inputs/clock_player_details.gd",
+        "commit": "f0e253db723fb27309bfc0ece1233960ef2bfd24",
+        "bytes": 8902,
+        "sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+        "git_blob_sha": "4ae0fe8b7b0780620cab4290747a6da8e71c5025"
+      },
+      {
+        "path": "candidates/player-details-clock-location/20261009-cloud-v1/inputs/location_MANIFEST.json",
+        "commit": "f0e253db723fb27309bfc0ece1233960ef2bfd24",
+        "bytes": 3257,
+        "sha256": "be6ef3ed71815ca19a9f55d8a81a948af111578a7b645cb9a067b22e285d062b",
+        "git_blob_sha": "236c370718a64b91593d753c163ba4a0a60d6f4f"
+      },
+      {
+        "path": "candidates/player-details-clock-location/20261009-cloud-v1/inputs/location_player_details.gd",
+        "commit": "f0e253db723fb27309bfc0ece1233960ef2bfd24",
+        "bytes": 8409,
+        "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+        "git_blob_sha": "7f0d138c8028f2120f71e8c50ba9c03da2e26b62"
+      },
+      {
+        "path": "candidates/player-details-clock-location/20261009-cloud-v1/overlay/view/playable_build/player_details.gd",
+        "commit": "f0e253db723fb27309bfc0ece1233960ef2bfd24",
+        "bytes": 9112,
+        "sha256": "e4e20fc6fb269238d3a6116634b6593f92078c5dafbbd055b237eb123b49d883",
+        "git_blob_sha": "36daa1fa31c2efed05385852f1d7eaa1843506dc"
+      }
+    ],
+    "formal_source_report": {
+      "source_files": 1466,
+      "literal_scripts": 347,
+      "final_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e"
+    },
+    "runtime_resource_report": 876,
+    "host_map_files": 2324,
+    "restoration_invoked": false,
+    "old_terminal_tasks_not_rerun": true,
+    "scope_receipt_sha256": "cc89e53a90eb85e0f21831883d7a2d836a3b03c0912405b4742280d486f5083f"
+  }
+}

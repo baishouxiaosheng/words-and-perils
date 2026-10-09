@@ -1,0 +1,101 @@
+{
+  "kind": "direct-owner-local-scope-acceptance",
+  "fixed_draft_commit": "bc7886778f9b906745599b4fa132ef19a88f5705",
+  "review_root": "coordination/local-work/reviews/scope-extension-20261009/",
+  "old_pins": {
+    "protocol_sha256": "209cc25f649f2ce6635012d6d6f0bdcf09526ac68d1a7dcbf907e7398a73c05a",
+    "schema_sha256": "ad3a3cd71adae6c38817042e06322d0aaa0092080be3c15579ccffe1b1c8e85c"
+  },
+  "new_pins": {
+    "protocol_sha256": "ac97c2523a6400bbde3c1f9b83f0398a704887891a8bfc94f5247476245400bc",
+    "schema_sha256": "14a68f72c3cea797799237051e154a5d1e9c5d1184d7cbebdf2d3db0086144ab"
+  },
+  "local_acceptance_status": "accepted",
+  "trusted_config_write_performed": true,
+  "trusted_config_readback_match": true,
+  "owner_update_entry": "Existing authorized local Codex filesystem editing tools, under direct human instruction; task data cannot invoke this entry or mutate trusted state. No Codex/system security or connection settings changed.",
+  "current_source_gate": {
+    "repo_id": 1403552519,
+    "owner_id": 128279531,
+    "existing_authenticated_push_pull": true,
+    "immutable_review_verified": true,
+    "current_main_commit": "bc7886778f9b906745599b4fa132ef19a88f5705"
+  },
+  "worker_gate": {
+    "current_local_execution_observed": true,
+    "native_heartbeat_previously_verified": true,
+    "new_game_or_canary_started": false
+  },
+  "stop_control_gate": {
+    "local_stop_absent": true,
+    "local_latch_absent": true,
+    "remote_stop_absent": true,
+    "fresh_control": {
+      "protocol": "words-and-perils-local-work/v1",
+      "kind": "control",
+      "queue_enabled": true,
+      "stop": false,
+      "resume_generation": 0,
+      "reason": "First bounded Natural write-result task is prepared. This control does not prove local automation is enabled."
+    }
+  },
+  "single_writer": {
+    "exclusive_kernel_lock_held_for_update": true,
+    "no_parallel_game_writer": true
+  },
+  "dedupe": {
+    "ledger_sha256_before": "bdd9020747860539f226cab3465495cb5d4cc3df0395e5348f656fd6f7592ef8",
+    "ledger_sha256_after": "bdd9020747860539f226cab3465495cb5d4cc3df0395e5348f656fd6f7592ef8",
+    "unchanged": true,
+    "terminal_task_count": 3
+  },
+  "remote_root_pins": {
+    "protocol_sha256": "209cc25f649f2ce6635012d6d6f0bdcf09526ac68d1a7dcbf907e7398a73c05a",
+    "schema_sha256": "ad3a3cd71adae6c38817042e06322d0aaa0092080be3c15579ccffe1b1c8e85c"
+  },
+  "remote_root_activation": "pending_coordinator_promotion",
+  "expanded_scope_task_execution_enabled": false,
+  "drafts": [
+    {
+      "task_id": "WP-FOCUS-LOCATION-FOCUSED-20261009-D01",
+      "status": "draft",
+      "sha256": "5cc97798e33bf4a1470bfcb7f0734162399ae44cb2b4262c0243e52d9c48389e",
+      "schema_valid": true,
+      "claimed": false,
+      "executed": false
+    },
+    {
+      "task_id": "WP-STATUS-CLOCK-FOCUSED-20261009-D01",
+      "status": "draft",
+      "sha256": "7623bafcdd2685fd0eca2d03e3b4f8a8e70678b2e6c97d0f40290d2477f9035f",
+      "schema_valid": true,
+      "claimed": false,
+      "executed": false
+    }
+  ],
+  "unchanged_boundaries": [
+    "repository",
+    "queue",
+    "publication",
+    "engine_guard",
+    "context_checkpoint",
+    "control_validation"
+  ],
+  "guard_policy": {
+    "profile": "Small",
+    "headless": true,
+    "additional_job_limit_bytes": 1073741824,
+    "wall_limit_seconds": 120,
+    "aggregate_output_limit_bytes": 65536,
+    "physical_reserve_bytes": 536870912,
+    "effective_budget": "min(actual physical limit,8GiB)",
+    "double_api_isolation": true,
+    "no_autoload": true,
+    "serial": true
+  },
+  "created_utc": "2026-10-09T07:06:23.815921+00:00",
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  }
+}

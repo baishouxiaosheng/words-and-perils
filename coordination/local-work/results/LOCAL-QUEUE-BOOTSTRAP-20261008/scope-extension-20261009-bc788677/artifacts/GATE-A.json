@@ -1,0 +1,14 @@
+{
+  "fresh_main_commit": "bc7886778f9b906745599b4fa132ef19a88f5705",
+  "local_remote_STOP_absent": true,
+  "strict_control_valid_enabled": true,
+  "root_pins": {
+    "protocol_sha256": "209cc25f649f2ce6635012d6d6f0bdcf09526ac68d1a7dcbf907e7398a73c05a",
+    "schema_sha256": "ad3a3cd71adae6c38817042e06322d0aaa0092080be3c15579ccffe1b1c8e85c"
+  },
+  "publication_of_direct_owner_acceptance_only": true,
+  "expanded_task_admission": false,
+  "exclusive_kernel_lock_held": true,
+  "ledger_unchanged": true,
+  "checked_utc": "2026-10-09T07:09:23.956803+00:00"
+}

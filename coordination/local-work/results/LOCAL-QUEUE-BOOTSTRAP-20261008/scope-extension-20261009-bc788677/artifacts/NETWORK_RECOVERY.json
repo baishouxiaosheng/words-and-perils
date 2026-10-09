@@ -1,0 +1,11 @@
+{
+  "prior_poll_trigger_utc": "2026-10-09T07:01:46.227Z",
+  "prior_status": "blocked",
+  "failure": "Git HTTPS SSL_ERROR_SYSCALL",
+  "failed_poll_preserved": true,
+  "subsequent_fresh_current_main_fetch_during_direct_owner_update": "succeeded",
+  "cached_STOP_not_used": true,
+  "same_existing_connection": true,
+  "new_auth_or_TLS_security_change": false,
+  "game_started": false
+}

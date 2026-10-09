@@ -1,0 +1,15 @@
+{
+  "kind": "native-schedule-scope-prompt-readback",
+  "automation_id": "words-and-perils-github",
+  "supported_update_api": "mcp__codex_app__automation_update",
+  "status": "ACTIVE",
+  "interval_minutes": 5,
+  "kind_preserved": "heartbeat",
+  "target_thread_preserved": true,
+  "actual_prompt_matches_requested_update": true,
+  "actual_automation_file_sha256": "ca44de83408361831c69f47489e731503dfe73178748822286ca86a46e0725b7",
+  "new_credential_service_security_settings": false,
+  "prior_native_idle_wake_activation_preserved": true,
+  "scope_acceptance_not_game_execution": true,
+  "readback_complete": true
+}

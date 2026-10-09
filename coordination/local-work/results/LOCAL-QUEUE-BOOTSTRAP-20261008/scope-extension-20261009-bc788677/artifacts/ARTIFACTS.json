@@ -1,0 +1,47 @@
+{
+  "kind": "scope-acceptance-artifacts",
+  "fixed_commit": "bc7886778f9b906745599b4fa132ef19a88f5705",
+  "self_hash_excluded": true,
+  "files": [
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/ACCEPTANCE.json",
+      "bytes": 3772,
+      "sha256": "cc89e53a90eb85e0f21831883d7a2d836a3b03c0912405b4742280d486f5083f"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/REVIEW_VALIDATION.json",
+      "bytes": 3003,
+      "sha256": "31a6cc6460b61ffbb8d271bb608c074a9de5f953872cab67bef961da7cb484a8"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/CONFIG_READBACK.json",
+      "bytes": 717,
+      "sha256": "2c3eea9bda528523257333f6c9436b533330dce6d10881fc2b8f6e0e8797892d"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/NATIVE_SCHEDULE_READBACK.json",
+      "bytes": 615,
+      "sha256": "2bb6890d14648562bcfdf90186fdaed27ab59fb095b6883a1d7a06141970106e"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/HANDOFF_READBACK.json",
+      "bytes": 141,
+      "sha256": "2be9391bfa435010d35aa0ab3be909b4a445c741087a5eed15759459308dc4d3"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/NETWORK_RECOVERY.json",
+      "bytes": 394,
+      "sha256": "50884baa34355486bb73d05b719cb36a9f2ebd041be0434c1bd7a4eb84a58e65"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/GATE-A.json",
+      "bytes": 571,
+      "sha256": "58a480ca251398d9ca07a99547ec2386f35068fe4a21927f3e41e2fa6f9f7d1a"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/ACCEPTANCE_SUMMARY.md",
+      "bytes": 2409,
+      "sha256": "40589f920f7183cbfa5bd729d8f59e72c074909a5503ed0866fb882ac826908b"
+    }
+  ]
+}

@@ -8,6 +8,8 @@
 
 记录任务 ID、唯一 owner、不可变 base commit、输入路径及必要 hash、允许改动路径、验收目标、执行环境和下一步。先查已有 claim、checkpoint 和结果，避免重复任务。同一文件不得有两个并行写者；独立任务可以并行，合并与 main 发布串行。可信队列任务继续使用其现有锁、claim、去重和 STOP 规则，不以本文替代。
 
+可信队列的已接受范围包含独立 Raw / Natural 存档完整性任务，以及所有者明确授权的界面显示、状态和交互聚焦测试；后者限独立精确副本、headless Small。以[锁定协议](../../coordination/local-work/PROTOCOL.json)和[任务 Schema](../../coordination/local-work/TASK_SCHEMA.json)为执行边界，[本地接受回读](../../coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/ACCEPTANCE.json)记录已接受的可信 pins，根协议/Schema 已在[范围对齐提交](https://github.com/baishouxiaosheng/words-and-perils/commit/f2a28954fe060ab2ede1fe1d2c463f540b5a991b)对齐。执行仍须核当前 source、worker、STOP、claim 和去重；这不授权自动 Main、full GUI、full-game、FPS、live-model、正式采用或 Raw/Natural 自动组合，也不允许任务修改可信配置或安全设置。本文仅同步已接受边界，不更新协议 hash 或本地 pins。
+
 ## 2. 源码和引擎分开安排
 
 源码阅读、编辑、补丁生成及离线静态检查优先使用可用的已授权云环境。Godot 解析、headless、Main、GUI、视频或 FPS 必须使用当前已授权且 guard 条件完整的原生执行器。电脑关机或断开时，不派发依赖它的新任务；可继续独立、已授权的源码工作，并保留运行待办。明确失败的云续接不盲目重建；状态 UNKNOWN 先核已有线程和产物，同因两次失败后停止该续接路线并报告。缺少粘贴入口时可使用当前受支持、已允许的逐键输入；工具缺失不等于整台电脑不可用。审批拒绝不能靠换执行器或路线绕过。

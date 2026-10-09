@@ -1,0 +1,187 @@
+{
+  "case": "autocrlf-true-only/focus",
+  "before": {
+    "bytes": 8199,
+    "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+    "CRLF": 0,
+    "LF": 104
+  },
+  "expected": {
+    "bytes": 8409,
+    "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+    "CRLF": 0,
+    "LF": 107
+  },
+  "patch": {
+    "bytes": 718,
+    "sha256": "fd5ecc575d4c1f332b8f9d1d34ad9b34e77c323324ba61e9a2a6726cd8582f3e",
+    "CRLF": 0,
+    "LF": 12
+  },
+  "replay": {
+    "old": {
+      "bytes": 8516,
+      "sha256": "6e2a23ed15a5c184801a21f4b638ddcfb45a93894b12f7135d5e03c7dc8aba55",
+      "CRLF": 107,
+      "LF": 107,
+      "actual_equals_expected": false,
+      "commands": [
+        {
+          "argv": [
+            "git",
+            "apply",
+            "--check",
+            "HASH_BOUND_PATCH"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "apply",
+            "HASH_BOUND_PATCH"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    },
+    "fixed": {
+      "bytes": 8409,
+      "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+      "CRLF": 0,
+      "LF": 107,
+      "actual_equals_expected": true,
+      "commands": [
+        {
+          "argv": [
+            "git",
+            "-c",
+            "core.autocrlf=false",
+            "-c",
+            "core.eol=lf",
+            "apply",
+            "--check",
+            "HASH_BOUND_PATCH"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "-c",
+            "core.autocrlf=false",
+            "-c",
+            "core.eol=lf",
+            "apply",
+            "HASH_BOUND_PATCH"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ]
+    }
+  },
+  "original_helper": {
+    "exit_code": 1,
+    "failure": "AssertionError: actual patch replay equals overlay"
+  },
+  "v2_helper": {
+    "exit_code": 0,
+    "result": {
+      "status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE",
+      "count": 20,
+      "checks": [
+        {
+          "name": "exact source view/playable_build/player_details.gd",
+          "passed": true
+        },
+        {
+          "name": "exact source main.gd",
+          "passed": true
+        },
+        {
+          "name": "exact source core/focus_contract.gd",
+          "passed": true
+        },
+        {
+          "name": "exact source core/ai_gm_rebuilt/model_view.gd",
+          "passed": true
+        },
+        {
+          "name": "exact source view/actor_status_profile_v1/source.gd",
+          "passed": true
+        },
+        {
+          "name": "exact source view/actor_action_profile_v2/source.gd",
+          "passed": true
+        },
+        {
+          "name": "exact source view/actor_status_entry_v1/view_adapter.gd",
+          "passed": true
+        },
+        {
+          "name": "exact source view/actor_status_profile_v1/projection.gd",
+          "passed": true
+        },
+        {
+          "name": "one changed UI file",
+          "passed": true
+        },
+        {
+          "name": "overlay exact bytes/SHA",
+          "passed": true
+        },
+        {
+          "name": "UTF8/LF overlay",
+          "passed": true
+        },
+        {
+          "name": "only three-line snapshot display insertion; all other code byte-exact",
+          "passed": true
+        },
+        {
+          "name": "static focus existing location/early return unchanged",
+          "passed": true
+        },
+        {
+          "name": "passage skips sole generic coordinates; dedicated support description byte-exact",
+          "passed": true
+        },
+        {
+          "name": "original ID/hex binding already provided",
+          "passed": true
+        },
+        {
+          "name": "original public projection already retains frozen hex",
+          "passed": true
+        },
+        {
+          "name": "UI file outside authority hash dependencies view/actor_action_profile_v2/source.gd",
+          "passed": true
+        },
+        {
+          "name": "UI file outside authority hash dependencies view/actor_status_profile_v1/source.gd",
+          "passed": true
+        },
+        {
+          "name": "actual patch replay equals overlay",
+          "passed": true
+        },
+        {
+          "name": "patch touches only allowed file",
+          "passed": true
+        }
+      ],
+      "overlay_sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+      "godot_parses": 0,
+      "runtime_runs": 0
+    }
+  }
+}

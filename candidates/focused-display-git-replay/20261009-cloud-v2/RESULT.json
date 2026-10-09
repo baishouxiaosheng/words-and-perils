@@ -1,0 +1,1163 @@
+{
+  "status": "PASSED_PYTHON_GIT_ONLY",
+  "git_version": "git version 2.52.0",
+  "platform": "linux",
+  "checks": [
+    {
+      "name": "autocrlf-true-only owns true config",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only command override false",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only command override LF",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/clock production patch unchanged",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/clock overlay unchanged",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/clock old Git ['--check'] exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/clock old Git [] exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/clock old real CRLF byte mismatch",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/clock fixed Git ['--check'] exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/clock fixed Git [] exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/clock fixed exact byte equality",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/clock original helper actually fails strict replay assertion",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/clock v2 helper exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/clock original static checks all preserved",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/focus production patch unchanged",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/focus overlay unchanged",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/focus old Git ['--check'] exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/focus old Git [] exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/focus old real CRLF byte mismatch",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/focus fixed Git ['--check'] exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/focus fixed Git [] exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/focus fixed exact byte equality",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/focus original helper actually fails strict replay assertion",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/focus v2 helper exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-only/focus original static checks all preserved",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf owns true config",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf command override false",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf command override LF",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/clock production patch unchanged",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/clock overlay unchanged",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/clock old Git ['--check'] exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/clock old Git [] exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/clock old real CRLF byte mismatch",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/clock fixed Git ['--check'] exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/clock fixed Git [] exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/clock fixed exact byte equality",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/clock original helper actually fails strict replay assertion",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/clock v2 helper exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/clock original static checks all preserved",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/focus production patch unchanged",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/focus overlay unchanged",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/focus old Git ['--check'] exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/focus old Git [] exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/focus old real CRLF byte mismatch",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/focus fixed Git ['--check'] exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/focus fixed Git [] exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/focus fixed exact byte equality",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/focus original helper actually fails strict replay assertion",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/focus v2 helper exit0",
+      "passed": true
+    },
+    {
+      "name": "autocrlf-true-eol-crlf/focus original static checks all preserved",
+      "passed": true
+    },
+    {
+      "name": "clock negative fixture patch token found",
+      "passed": true
+    },
+    {
+      "name": "clock v2 still refuses wrong replay by original strict assertion",
+      "passed": true
+    },
+    {
+      "name": "clock one persistent failure evidence child",
+      "passed": true
+    },
+    {
+      "name": "clock all original failure byte files survive helper exit",
+      "passed": true
+    },
+    {
+      "name": "clock retained diagnostic equals exact bytes",
+      "passed": true
+    },
+    {
+      "name": "focus negative fixture patch token found",
+      "passed": true
+    },
+    {
+      "name": "focus v2 still refuses wrong replay by original strict assertion",
+      "passed": true
+    },
+    {
+      "name": "focus one persistent failure evidence child",
+      "passed": true
+    },
+    {
+      "name": "focus all original failure byte files survive helper exit",
+      "passed": true
+    },
+    {
+      "name": "focus retained diagnostic equals exact bytes",
+      "passed": true
+    },
+    {
+      "name": "all original source/v1/v2 inputs unchanged",
+      "passed": true
+    }
+  ],
+  "count": 61,
+  "cases": [
+    {
+      "case": "autocrlf-true-only/clock",
+      "before": {
+        "bytes": 8199,
+        "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+        "CRLF": 0,
+        "LF": 104
+      },
+      "expected": {
+        "bytes": 8902,
+        "sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+        "CRLF": 0,
+        "LF": 117
+      },
+      "patch": {
+        "bytes": 1140,
+        "sha256": "3467106b110e666e95704aaa5542b2d6feec45d374f7b190847527200a5863f4",
+        "CRLF": 0,
+        "LF": 24
+      },
+      "replay": {
+        "old": {
+          "bytes": 9019,
+          "sha256": "c4d5c2888a4960dc8cddec42e5de260699219b09ddfc4889262798f93990b9d2",
+          "CRLF": 117,
+          "LF": 117,
+          "actual_equals_expected": false,
+          "commands": [
+            {
+              "argv": [
+                "git",
+                "apply",
+                "--check",
+                "HASH_BOUND_PATCH"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": ""
+            },
+            {
+              "argv": [
+                "git",
+                "apply",
+                "HASH_BOUND_PATCH"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": ""
+            }
+          ]
+        },
+        "fixed": {
+          "bytes": 8902,
+          "sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+          "CRLF": 0,
+          "LF": 117,
+          "actual_equals_expected": true,
+          "commands": [
+            {
+              "argv": [
+                "git",
+                "-c",
+                "core.autocrlf=false",
+                "-c",
+                "core.eol=lf",
+                "apply",
+                "--check",
+                "HASH_BOUND_PATCH"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": ""
+            },
+            {
+              "argv": [
+                "git",
+                "-c",
+                "core.autocrlf=false",
+                "-c",
+                "core.eol=lf",
+                "apply",
+                "HASH_BOUND_PATCH"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": ""
+            }
+          ]
+        }
+      },
+      "original_helper": {
+        "exit_code": 1,
+        "failure": "AssertionError: actual patch replay equals candidate"
+      },
+      "v2_helper": {
+        "exit_code": 0,
+        "result": {
+          "status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE",
+          "count": 24,
+          "checks": [
+            {
+              "name": "exact source view/playable_build/player_details.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/status_gameplay/details.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source main.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source core/ai_gm_rebuilt/hooks.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source core/status_foundation/engine_bridge.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_status_profile_v1/public_status.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_status_profile_v1/source.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_action_profile_v2/source.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_status_entry_v1/view_adapter.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_status_profile_v1/projection.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source core/status_gameplay/source_profiles.gd",
+              "passed": true
+            },
+            {
+              "name": "one changed production file",
+              "passed": true
+            },
+            {
+              "name": "candidate actual bytes and SHA",
+              "passed": true
+            },
+            {
+              "name": "UTF8/LF candidate",
+              "passed": true
+            },
+            {
+              "name": "existing function boundary",
+              "passed": true
+            },
+            {
+              "name": "existing function boundary",
+              "passed": true
+            },
+            {
+              "name": "all other functions incl HUD and signatures byte-exact",
+              "passed": true
+            },
+            {
+              "name": "function signature unchanged",
+              "passed": true
+            },
+            {
+              "name": "validate and deep-copy public packet before display",
+              "passed": true
+            },
+            {
+              "name": "bounded legacy wording only",
+              "passed": true
+            },
+            {
+              "name": "UI file excluded from authority dependencies view/actor_action_profile_v2/source.gd",
+              "passed": true
+            },
+            {
+              "name": "UI file excluded from authority dependencies view/actor_status_profile_v1/source.gd",
+              "passed": true
+            },
+            {
+              "name": "actual patch replay equals candidate",
+              "passed": true
+            },
+            {
+              "name": "patch touches only allowed file",
+              "passed": true
+            }
+          ],
+          "changed_file_sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+          "godot_parses": 0,
+          "runtime_runs": 0
+        }
+      }
+    },
+    {
+      "case": "autocrlf-true-only/focus",
+      "before": {
+        "bytes": 8199,
+        "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+        "CRLF": 0,
+        "LF": 104
+      },
+      "expected": {
+        "bytes": 8409,
+        "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+        "CRLF": 0,
+        "LF": 107
+      },
+      "patch": {
+        "bytes": 718,
+        "sha256": "fd5ecc575d4c1f332b8f9d1d34ad9b34e77c323324ba61e9a2a6726cd8582f3e",
+        "CRLF": 0,
+        "LF": 12
+      },
+      "replay": {
+        "old": {
+          "bytes": 8516,
+          "sha256": "6e2a23ed15a5c184801a21f4b638ddcfb45a93894b12f7135d5e03c7dc8aba55",
+          "CRLF": 107,
+          "LF": 107,
+          "actual_equals_expected": false,
+          "commands": [
+            {
+              "argv": [
+                "git",
+                "apply",
+                "--check",
+                "HASH_BOUND_PATCH"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": ""
+            },
+            {
+              "argv": [
+                "git",
+                "apply",
+                "HASH_BOUND_PATCH"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": ""
+            }
+          ]
+        },
+        "fixed": {
+          "bytes": 8409,
+          "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+          "CRLF": 0,
+          "LF": 107,
+          "actual_equals_expected": true,
+          "commands": [
+            {
+              "argv": [
+                "git",
+                "-c",
+                "core.autocrlf=false",
+                "-c",
+                "core.eol=lf",
+                "apply",
+                "--check",
+                "HASH_BOUND_PATCH"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": ""
+            },
+            {
+              "argv": [
+                "git",
+                "-c",
+                "core.autocrlf=false",
+                "-c",
+                "core.eol=lf",
+                "apply",
+                "HASH_BOUND_PATCH"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": ""
+            }
+          ]
+        }
+      },
+      "original_helper": {
+        "exit_code": 1,
+        "failure": "AssertionError: actual patch replay equals overlay"
+      },
+      "v2_helper": {
+        "exit_code": 0,
+        "result": {
+          "status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE",
+          "count": 20,
+          "checks": [
+            {
+              "name": "exact source view/playable_build/player_details.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source main.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source core/focus_contract.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source core/ai_gm_rebuilt/model_view.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_status_profile_v1/source.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_action_profile_v2/source.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_status_entry_v1/view_adapter.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_status_profile_v1/projection.gd",
+              "passed": true
+            },
+            {
+              "name": "one changed UI file",
+              "passed": true
+            },
+            {
+              "name": "overlay exact bytes/SHA",
+              "passed": true
+            },
+            {
+              "name": "UTF8/LF overlay",
+              "passed": true
+            },
+            {
+              "name": "only three-line snapshot display insertion; all other code byte-exact",
+              "passed": true
+            },
+            {
+              "name": "static focus existing location/early return unchanged",
+              "passed": true
+            },
+            {
+              "name": "passage skips sole generic coordinates; dedicated support description byte-exact",
+              "passed": true
+            },
+            {
+              "name": "original ID/hex binding already provided",
+              "passed": true
+            },
+            {
+              "name": "original public projection already retains frozen hex",
+              "passed": true
+            },
+            {
+              "name": "UI file outside authority hash dependencies view/actor_action_profile_v2/source.gd",
+              "passed": true
+            },
+            {
+              "name": "UI file outside authority hash dependencies view/actor_status_profile_v1/source.gd",
+              "passed": true
+            },
+            {
+              "name": "actual patch replay equals overlay",
+              "passed": true
+            },
+            {
+              "name": "patch touches only allowed file",
+              "passed": true
+            }
+          ],
+          "overlay_sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+          "godot_parses": 0,
+          "runtime_runs": 0
+        }
+      }
+    },
+    {
+      "case": "autocrlf-true-eol-crlf/clock",
+      "before": {
+        "bytes": 8199,
+        "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+        "CRLF": 0,
+        "LF": 104
+      },
+      "expected": {
+        "bytes": 8902,
+        "sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+        "CRLF": 0,
+        "LF": 117
+      },
+      "patch": {
+        "bytes": 1140,
+        "sha256": "3467106b110e666e95704aaa5542b2d6feec45d374f7b190847527200a5863f4",
+        "CRLF": 0,
+        "LF": 24
+      },
+      "replay": {
+        "old": {
+          "bytes": 9019,
+          "sha256": "c4d5c2888a4960dc8cddec42e5de260699219b09ddfc4889262798f93990b9d2",
+          "CRLF": 117,
+          "LF": 117,
+          "actual_equals_expected": false,
+          "commands": [
+            {
+              "argv": [
+                "git",
+                "apply",
+                "--check",
+                "HASH_BOUND_PATCH"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": ""
+            },
+            {
+              "argv": [
+                "git",
+                "apply",
+                "HASH_BOUND_PATCH"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": ""
+            }
+          ]
+        },
+        "fixed": {
+          "bytes": 8902,
+          "sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+          "CRLF": 0,
+          "LF": 117,
+          "actual_equals_expected": true,
+          "commands": [
+            {
+              "argv": [
+                "git",
+                "-c",
+                "core.autocrlf=false",
+                "-c",
+                "core.eol=lf",
+                "apply",
+                "--check",
+                "HASH_BOUND_PATCH"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": ""
+            },
+            {
+              "argv": [
+                "git",
+                "-c",
+                "core.autocrlf=false",
+                "-c",
+                "core.eol=lf",
+                "apply",
+                "HASH_BOUND_PATCH"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": ""
+            }
+          ]
+        }
+      },
+      "original_helper": {
+        "exit_code": 1,
+        "failure": "AssertionError: actual patch replay equals candidate"
+      },
+      "v2_helper": {
+        "exit_code": 0,
+        "result": {
+          "status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE",
+          "count": 24,
+          "checks": [
+            {
+              "name": "exact source view/playable_build/player_details.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/status_gameplay/details.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source main.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source core/ai_gm_rebuilt/hooks.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source core/status_foundation/engine_bridge.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_status_profile_v1/public_status.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_status_profile_v1/source.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_action_profile_v2/source.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_status_entry_v1/view_adapter.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_status_profile_v1/projection.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source core/status_gameplay/source_profiles.gd",
+              "passed": true
+            },
+            {
+              "name": "one changed production file",
+              "passed": true
+            },
+            {
+              "name": "candidate actual bytes and SHA",
+              "passed": true
+            },
+            {
+              "name": "UTF8/LF candidate",
+              "passed": true
+            },
+            {
+              "name": "existing function boundary",
+              "passed": true
+            },
+            {
+              "name": "existing function boundary",
+              "passed": true
+            },
+            {
+              "name": "all other functions incl HUD and signatures byte-exact",
+              "passed": true
+            },
+            {
+              "name": "function signature unchanged",
+              "passed": true
+            },
+            {
+              "name": "validate and deep-copy public packet before display",
+              "passed": true
+            },
+            {
+              "name": "bounded legacy wording only",
+              "passed": true
+            },
+            {
+              "name": "UI file excluded from authority dependencies view/actor_action_profile_v2/source.gd",
+              "passed": true
+            },
+            {
+              "name": "UI file excluded from authority dependencies view/actor_status_profile_v1/source.gd",
+              "passed": true
+            },
+            {
+              "name": "actual patch replay equals candidate",
+              "passed": true
+            },
+            {
+              "name": "patch touches only allowed file",
+              "passed": true
+            }
+          ],
+          "changed_file_sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+          "godot_parses": 0,
+          "runtime_runs": 0
+        }
+      }
+    },
+    {
+      "case": "autocrlf-true-eol-crlf/focus",
+      "before": {
+        "bytes": 8199,
+        "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+        "CRLF": 0,
+        "LF": 104
+      },
+      "expected": {
+        "bytes": 8409,
+        "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+        "CRLF": 0,
+        "LF": 107
+      },
+      "patch": {
+        "bytes": 718,
+        "sha256": "fd5ecc575d4c1f332b8f9d1d34ad9b34e77c323324ba61e9a2a6726cd8582f3e",
+        "CRLF": 0,
+        "LF": 12
+      },
+      "replay": {
+        "old": {
+          "bytes": 8516,
+          "sha256": "6e2a23ed15a5c184801a21f4b638ddcfb45a93894b12f7135d5e03c7dc8aba55",
+          "CRLF": 107,
+          "LF": 107,
+          "actual_equals_expected": false,
+          "commands": [
+            {
+              "argv": [
+                "git",
+                "apply",
+                "--check",
+                "HASH_BOUND_PATCH"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": ""
+            },
+            {
+              "argv": [
+                "git",
+                "apply",
+                "HASH_BOUND_PATCH"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": ""
+            }
+          ]
+        },
+        "fixed": {
+          "bytes": 8409,
+          "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+          "CRLF": 0,
+          "LF": 107,
+          "actual_equals_expected": true,
+          "commands": [
+            {
+              "argv": [
+                "git",
+                "-c",
+                "core.autocrlf=false",
+                "-c",
+                "core.eol=lf",
+                "apply",
+                "--check",
+                "HASH_BOUND_PATCH"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": ""
+            },
+            {
+              "argv": [
+                "git",
+                "-c",
+                "core.autocrlf=false",
+                "-c",
+                "core.eol=lf",
+                "apply",
+                "HASH_BOUND_PATCH"
+              ],
+              "exit_code": 0,
+              "stdout": "",
+              "stderr": ""
+            }
+          ]
+        }
+      },
+      "original_helper": {
+        "exit_code": 1,
+        "failure": "AssertionError: actual patch replay equals overlay"
+      },
+      "v2_helper": {
+        "exit_code": 0,
+        "result": {
+          "status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE",
+          "count": 20,
+          "checks": [
+            {
+              "name": "exact source view/playable_build/player_details.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source main.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source core/focus_contract.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source core/ai_gm_rebuilt/model_view.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_status_profile_v1/source.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_action_profile_v2/source.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_status_entry_v1/view_adapter.gd",
+              "passed": true
+            },
+            {
+              "name": "exact source view/actor_status_profile_v1/projection.gd",
+              "passed": true
+            },
+            {
+              "name": "one changed UI file",
+              "passed": true
+            },
+            {
+              "name": "overlay exact bytes/SHA",
+              "passed": true
+            },
+            {
+              "name": "UTF8/LF overlay",
+              "passed": true
+            },
+            {
+              "name": "only three-line snapshot display insertion; all other code byte-exact",
+              "passed": true
+            },
+            {
+              "name": "static focus existing location/early return unchanged",
+              "passed": true
+            },
+            {
+              "name": "passage skips sole generic coordinates; dedicated support description byte-exact",
+              "passed": true
+            },
+            {
+              "name": "original ID/hex binding already provided",
+              "passed": true
+            },
+            {
+              "name": "original public projection already retains frozen hex",
+              "passed": true
+            },
+            {
+              "name": "UI file outside authority hash dependencies view/actor_action_profile_v2/source.gd",
+              "passed": true
+            },
+            {
+              "name": "UI file outside authority hash dependencies view/actor_status_profile_v1/source.gd",
+              "passed": true
+            },
+            {
+              "name": "actual patch replay equals overlay",
+              "passed": true
+            },
+            {
+              "name": "patch touches only allowed file",
+              "passed": true
+            }
+          ],
+          "overlay_sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+          "godot_parses": 0,
+          "runtime_runs": 0
+        }
+      }
+    }
+  ],
+  "strict_negative_cases": [
+    {
+      "suite": "clock",
+      "exit_code": 1,
+      "evidence_relative": "strict-negative/clock/evidence",
+      "diagnostic": {
+        "error_type": "AssertionError",
+        "before": {
+          "bytes": 8199,
+          "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+          "CRLF": 0,
+          "LF": 104
+        },
+        "expected": {
+          "bytes": 8902,
+          "sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+          "CRLF": 0,
+          "LF": 117
+        },
+        "actual": {
+          "bytes": 8902,
+          "sha256": "4443cd74d1fa9eaf48aef09503b0d538380089c9177ca82ff60ea881eaa7272e",
+          "CRLF": 0,
+          "LF": 117
+        },
+        "actual_equals_expected": false,
+        "commands": [
+          {
+            "argv": [
+              "git",
+              "-c",
+              "core.autocrlf=false",
+              "-c",
+              "core.eol=lf",
+              "apply",
+              "--check",
+              "HASH_BOUND_PATCH"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-c",
+              "core.autocrlf=false",
+              "-c",
+              "core.eol=lf",
+              "apply",
+              "HASH_BOUND_PATCH"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": ""
+          }
+        ],
+        "original_bytes_retained": true,
+        "godot_invocations": 0
+      },
+      "evidence_location_role": "owned regression work-root, not repository publication path"
+    },
+    {
+      "suite": "focus",
+      "exit_code": 1,
+      "evidence_relative": "strict-negative/focus/evidence",
+      "diagnostic": {
+        "error_type": "AssertionError",
+        "before": {
+          "bytes": 8199,
+          "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+          "CRLF": 0,
+          "LF": 104
+        },
+        "expected": {
+          "bytes": 8409,
+          "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+          "CRLF": 0,
+          "LF": 107
+        },
+        "actual": {
+          "bytes": 8409,
+          "sha256": "e78cf8d4c382a4c9e0f6e0f68d2bc619b7e3b63cce58b6b391e0c670edb064bd",
+          "CRLF": 0,
+          "LF": 107
+        },
+        "actual_equals_expected": false,
+        "commands": [
+          {
+            "argv": [
+              "git",
+              "-c",
+              "core.autocrlf=false",
+              "-c",
+              "core.eol=lf",
+              "apply",
+              "--check",
+              "HASH_BOUND_PATCH"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "git",
+              "-c",
+              "core.autocrlf=false",
+              "-c",
+              "core.eol=lf",
+              "apply",
+              "HASH_BOUND_PATCH"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": ""
+          }
+        ],
+        "original_bytes_retained": true,
+        "godot_invocations": 0
+      },
+      "evidence_location_role": "owned regression work-root, not repository publication path"
+    }
+  ],
+  "system_user_config_read_or_written": false,
+  "godot_invocations": 0,
+  "frozen_task_retries": 0,
+  "original_windows_cause": "unproven: original temporary replay bytes were deleted; cloud reproduction only",
+  "strict_negative_evidence_publication": "NOT_PUBLISHED: synthetic wrong patch and its replay bytes are retained only in owned regression work-root after publication approval rejection; diagnostic hashes below are test-run summaries, not public candidate files"
+}

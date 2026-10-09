@@ -1,0 +1,87 @@
+{
+  "schema": "words-and-perils-focus-legacy-clock-display/v1",
+  "status": "SOURCE_CANDIDATE_NOT_PARSED_NOT_RUN_NOT_ADOPTED",
+  "base_git_commit": "332a1f5f7025792d34e181f3e79690205498f5ab",
+  "formal_release_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+  "formal_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e",
+  "formal_main_sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f",
+  "actor_status_profile_sha256": "9988155d5baf8e840c8d6063c2bc415c08bd0d7b1cd70157f9400bff40698994",
+  "changed_files": [
+    {
+      "path": "view/playable_build/player_details.gd",
+      "before_bytes": 8199,
+      "before_sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+      "after_bytes": 8902,
+      "after_sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+      "overlay_path": "overlay/view/playable_build/player_details.gd"
+    }
+  ],
+  "input_hashes": [
+    {
+      "path": "view/playable_build/player_details.gd",
+      "bytes": 8199,
+      "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3"
+    },
+    {
+      "path": "view/status_gameplay/details.gd",
+      "bytes": 13184,
+      "sha256": "2b1d377813660aa419ca4f2cb9026d591b9edadce853ef0fec57a1b3e98841b1"
+    },
+    {
+      "path": "main.gd",
+      "bytes": 203707,
+      "sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/hooks.gd",
+      "bytes": 3111,
+      "sha256": "2afc8ba22cc4cb9a4df81ce8f8779193a652f8cd5ff49b2156f6899674ee84ec"
+    },
+    {
+      "path": "core/status_foundation/engine_bridge.gd",
+      "bytes": 10674,
+      "sha256": "06cce47760058a49e2dd994c91031ac93db7277d0b08f5c252af8d2ec8fafbc6"
+    },
+    {
+      "path": "view/actor_status_profile_v1/public_status.gd",
+      "bytes": 6400,
+      "sha256": "335c0eb58165e4ebb01f8963a0292176eb2deaf354bfeb5c1876e0e5c8eeded1"
+    },
+    {
+      "path": "view/actor_status_profile_v1/source.gd",
+      "bytes": 10327,
+      "sha256": "f4ca4ca0551f0b1665b58f4ee1071dbc7df5180f357de18710d55a596b88ac03"
+    },
+    {
+      "path": "view/actor_action_profile_v2/source.gd",
+      "bytes": 12173,
+      "sha256": "7681a03d232452533ef584719d5f3e6c1c39942332b303ef1c2a3e973385e665"
+    },
+    {
+      "path": "view/actor_status_entry_v1/view_adapter.gd",
+      "bytes": 28301,
+      "sha256": "a9a825b9096b67424e7358d2dcca32b8e39411983f7ac9be0975ef7bc869968d"
+    },
+    {
+      "path": "view/actor_status_profile_v1/projection.gd",
+      "bytes": 3231,
+      "sha256": "2decabf7c9fbe1b4c5400b502ce1e464112bb4eea489dfdcee3a5cf1c150d5e6"
+    },
+    {
+      "path": "core/status_gameplay/source_profiles.gd",
+      "bytes": 2571,
+      "sha256": "53e1ca59b24fb0e020b2dc4a5200868fe927264e787234873484d077d8057483"
+    }
+  ],
+  "scope": "Only selected-object legacy duration/trigger wording, using a detached validated public packet; HUD, original packet/projection, protocol and authoritative state unchanged",
+  "godot_parse": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "adopted": false,
+  "publication_confirmation": "Publication is confirmed by the Git commit containing this directory; package does not self-record a publication commit",
+  "static_checks": {
+    "count": 24,
+    "status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE",
+    "entry": "python check_static.py --restored-root RESTORED_ROOT"
+  },
+  "test_tool_revision": "v2: command-local Git autocrlf=false/eol=lf; strict byte equality retained; persistent failure byte diagnostics; production patch/overlay/expected hashes unchanged"
+}

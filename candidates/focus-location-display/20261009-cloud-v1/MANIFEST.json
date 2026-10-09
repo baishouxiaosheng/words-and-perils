@@ -1,0 +1,70 @@
+{
+  "schema": "words-and-perils-focus-location-display/v1",
+  "status": "SOURCE_CANDIDATE_NOT_PARSED_NOT_RUN_NOT_ADOPTED",
+  "base_git_commit": "6f10c42a80b6ffbc8d43efa96b96ecb73cd17872",
+  "formal_release_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+  "formal_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e",
+  "changed_files": [
+    {
+      "path": "view/playable_build/player_details.gd",
+      "before_bytes": 8199,
+      "before_sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+      "after_bytes": 8409,
+      "after_sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+      "overlay_path": "overlay/view/playable_build/player_details.gd"
+    }
+  ],
+  "input_hashes": [
+    {
+      "path": "view/playable_build/player_details.gd",
+      "bytes": 8199,
+      "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3"
+    },
+    {
+      "path": "main.gd",
+      "bytes": 203707,
+      "sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f"
+    },
+    {
+      "path": "core/focus_contract.gd",
+      "bytes": 31447,
+      "sha256": "b8daf8124f80b8f474937caf25a3e446277636b28d08626d419d4da4336e9cd1"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/model_view.gd",
+      "bytes": 12807,
+      "sha256": "971508f8ccc88179a78c390323eae7b814572e4115b63254aabe2294a92a9f4c"
+    },
+    {
+      "path": "view/actor_status_profile_v1/source.gd",
+      "bytes": 10327,
+      "sha256": "f4ca4ca0551f0b1665b58f4ee1071dbc7df5180f357de18710d55a596b88ac03"
+    },
+    {
+      "path": "view/actor_action_profile_v2/source.gd",
+      "bytes": 12173,
+      "sha256": "7681a03d232452533ef584719d5f3e6c1c39942332b303ef1c2a3e973385e665"
+    },
+    {
+      "path": "view/actor_status_entry_v1/view_adapter.gd",
+      "bytes": 28301,
+      "sha256": "a9a825b9096b67424e7358d2dcca32b8e39411983f7ac9be0975ef7bc869968d"
+    },
+    {
+      "path": "view/actor_status_profile_v1/projection.gd",
+      "bytes": 3231,
+      "sha256": "2decabf7c9fbe1b4c5400b502ce1e464112bb4eea489dfdcee3a5cf1c150d5e6"
+    }
+  ],
+  "scope": "Display existing resolved focus.hex in the generic object inspector; preserve static-focus early return and passage_edge dedicated support coordinates; no live-world lookup, visibility, GM weighting, context/protocol, rule, state or identity changes; no unadopted candidate merge",
+  "godot_parse": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "adopted": false,
+  "publication_confirmation": "Publication is confirmed by the containing Git commit; package does not self-record publication commit",
+  "static_checks": {
+    "count": 20,
+    "status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE",
+    "entry": "python check_static.py --restored-root RESTORED_ROOT"
+  },
+  "visibility_evidence_limits": "Pinned actor_status view_adapter/projection source checks cover its existing player-visible actor/item/tile filtering only; no claim that all other modes passed privacy or that runtime refresh/visibility was verified"
+}

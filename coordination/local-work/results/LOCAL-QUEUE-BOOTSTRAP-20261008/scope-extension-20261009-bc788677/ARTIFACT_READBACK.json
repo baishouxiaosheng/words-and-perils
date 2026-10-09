@@ -1,0 +1,70 @@
+{
+  "commit": "3126d2eafcdd407788875d4f6909ca14ebf1a397",
+  "all_match": true,
+  "files": [
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/ACCEPTANCE.json",
+      "bytes": 3772,
+      "sha256": "cc89e53a90eb85e0f21831883d7a2d836a3b03c0912405b4742280d486f5083f",
+      "git_blob_sha": "77aca05ebb158d939becf20efd87dac0b91f7b1b",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/REVIEW_VALIDATION.json",
+      "bytes": 3003,
+      "sha256": "31a6cc6460b61ffbb8d271bb608c074a9de5f953872cab67bef961da7cb484a8",
+      "git_blob_sha": "bf69d87a1518e1ace02d50b6188f0eee2d379ad2",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/CONFIG_READBACK.json",
+      "bytes": 717,
+      "sha256": "2c3eea9bda528523257333f6c9436b533330dce6d10881fc2b8f6e0e8797892d",
+      "git_blob_sha": "ad969d52068a53dc5de5821887c5698f41b8b513",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/NATIVE_SCHEDULE_READBACK.json",
+      "bytes": 615,
+      "sha256": "2bb6890d14648562bcfdf90186fdaed27ab59fb095b6883a1d7a06141970106e",
+      "git_blob_sha": "22032638636b6dba4fa0640ddb57a73f0a55cb32",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/HANDOFF_READBACK.json",
+      "bytes": 141,
+      "sha256": "2be9391bfa435010d35aa0ab3be909b4a445c741087a5eed15759459308dc4d3",
+      "git_blob_sha": "e197ad5d23ebb3defc0ab1a5f55a9b3bcbeaee52",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/NETWORK_RECOVERY.json",
+      "bytes": 394,
+      "sha256": "50884baa34355486bb73d05b719cb36a9f2ebd041be0434c1bd7a4eb84a58e65",
+      "git_blob_sha": "b8fbeb85f87ee360160d2b56e177c808bde122f0",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/GATE-A.json",
+      "bytes": 571,
+      "sha256": "58a480ca251398d9ca07a99547ec2386f35068fe4a21927f3e41e2fa6f9f7d1a",
+      "git_blob_sha": "639485d02e68d3abe065ee1eddda5bbc3777853f",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/ACCEPTANCE_SUMMARY.md",
+      "bytes": 2409,
+      "sha256": "40589f920f7183cbfa5bd729d8f59e72c074909a5503ed0866fb882ac826908b",
+      "git_blob_sha": "3e36bf15611fc9a05ec39c387c250d03b762d72d",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/ARTIFACTS.json",
+      "bytes": 2290,
+      "sha256": "1d5cce8b567a57ab9fdb83303cdd8e947aabea6e0a6bcb7c5217b870667bd363",
+      "git_blob_sha": "2c7f743f568cf61f87d0dc29abf4f2ece4b4e282",
+      "actual_http_bytes_match": true
+    }
+  ],
+  "verified_utc": "2026-10-09T07:09:29.387261+00:00"
+}

@@ -1,0 +1,73 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "result",
+  "task_id": "LOCAL-SCOPE-EXTENSION-20261009",
+  "task_sha256": "901b3b8b23f416e6448946d4f41daf785525a6a4b00adf151d8534dcc2cfec07",
+  "attempt_id": "attempt-001",
+  "intake_commit": "bc7886778f9b906745599b4fa132ef19a88f5705",
+  "status": "reviewable",
+  "automation_enabled": true,
+  "summary": "Direct human-approved local scope and trusted pins updated/read back; native prompt updated/read back. Remote root promotion and future ready task delivery remain pending. No game task executed.",
+  "source_hashes": {
+    "old_protocol": "209cc25f649f2ce6635012d6d6f0bdcf09526ac68d1a7dcbf907e7398a73c05a",
+    "old_schema": "ad3a3cd71adae6c38817042e06322d0aaa0092080be3c15579ccffe1b1c8e85c",
+    "new_protocol": "ac97c2523a6400bbde3c1f9b83f0398a704887891a8bfc94f5247476245400bc",
+    "new_schema": "14a68f72c3cea797799237051e154a5d1e9c5d1184d7cbebdf2d3db0086144ab"
+  },
+  "checks": [
+    {
+      "name": "local_pin_acceptance_readback",
+      "passed": true
+    },
+    {
+      "name": "native_schedule_prompt_readback",
+      "passed": true
+    },
+    {
+      "name": "STOP_CONTROL_source_lock_dedupe",
+      "passed": true
+    },
+    {
+      "name": "artifact_actual_remote_bytes",
+      "passed": true,
+      "files": 9
+    },
+    {
+      "name": "expanded_scope_game_runtime",
+      "performed": false
+    },
+    {
+      "name": "remote_root_new_pin_activation",
+      "passed": false,
+      "outcome": "pending_coordinator_promotion"
+    }
+  ],
+  "blockers": [],
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  },
+  "artifact_commit": "3126d2eafcdd407788875d4f6909ca14ebf1a397",
+  "artifact_manifest_sha256": "1d5cce8b567a57ab9fdb83303cdd8e947aabea6e0a6bcb7c5217b870667bd363",
+  "candidate_adopted": false,
+  "remaining_steps": [
+    "Coordinator promotes root protocol/schema to exactly accepted pins and publishes bounded ready tasks through the fixed inbox. Local writer does not alter these queue files."
+  ],
+  "worker_entry_evidence": {
+    "native_heartbeat_verified_previously": true,
+    "current_existing_local_tools_executed": true,
+    "new_canary_started": false
+  },
+  "source_authentication_evidence": {
+    "repo_id": 1403552519,
+    "owner_id": 128279531,
+    "existing_authenticated_push_pull": true,
+    "fixed_owner_provided_review_commit": "bc7886778f9b906745599b4fa132ef19a88f5705"
+  },
+  "safe_cleanup": {
+    "no_engine_started": true,
+    "unknown_processes_killed": false,
+    "exclusive_lock_disposed_in_finally": true,
+    "ledger_unchanged": true
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "schema": "wp_focused_gui_actual_source_checks/v1",
+  "status": "passed",
+  "utc": "2026-10-09T11:17:18.255227+00:00",
+  "pid": 8738,
+  "checks": 52,
+  "passed": 52,
+  "cases": [
+    {
+      "case": "actual_helper_present_once",
+      "passed": true
+    },
+    {
+      "case": "fixed_source_count",
+      "passed": true
+    },
+    {
+      "case": "fixed_source_paths_unique",
+      "passed": true
+    },
+    {
+      "case": "fixed_project_bytes_and_sha",
+      "passed": true
+    },
+    {
+      "case": "bounded_diff_edit_0",
+      "passed": true
+    },
+    {
+      "case": "bounded_diff_edit_1",
+      "passed": true
+    },
+    {
+      "case": "bounded_diff_edit_2",
+      "passed": true
+    },
+    {
+      "case": "bounded_diff_edit_3",
+      "passed": true
+    },
+    {
+      "case": "bounded_diff_edit_4",
+      "passed": true
+    },
+    {
+      "case": "bounded_diff_edit_5",
+      "passed": true
+    },
+    {
+      "case": "bounded_diff_edit_6",
+      "passed": true
+    },
+    {
+      "case": "bounded_diff_edit_7",
+      "passed": true
+    },
+    {
+      "case": "bounded_diff_edit_8",
+      "passed": true
+    },
+    {
+      "case": "entire_original_source_restored_exactly",
+      "passed": true
+    },
+    {
+      "case": "real_unified_diff_matches_candidate",
+      "passed": true
+    },
+    {
+      "case": "patch_tool_available",
+      "passed": true
+    },
+    {
+      "case": "patch_applies_to_real_baseline",
+      "passed": true
+    },
+    {
+      "case": "patched_bytes_equal_delivered_candidate",
+      "passed": true
+    },
+    {
+      "case": "wrapper_default_headless",
+      "passed": true
+    },
+    {
+      "case": "wrapper_ordinary_spec_headless_set",
+      "passed": true
+    },
+    {
+      "case": "wrapper_dedicated_gui_owner_spec",
+      "passed": true
+    },
+    {
+      "case": "wrapper_explicit_owner_switch",
+      "passed": true
+    },
+    {
+      "case": "wrapper_owner_pin_not_spec",
+      "passed": true
+    },
+    {
+      "case": "wrapper_owner_run_id_not_spec",
+      "passed": true
+    },
+    {
+      "case": "wrapper_existing_result_no_overwrite",
+      "passed": true
+    },
+    {
+      "case": "wrapper_strict_gui_fields",
+      "passed": true
+    },
+    {
+      "case": "wrapper_owned_log_path",
+      "passed": true
+    },
+    {
+      "case": "wrapper_only_candidate_type",
+      "passed": true
+    },
+    {
+      "case": "wrapper_same_guard_exit",
+      "passed": true
+    },
+    {
+      "case": "wrapper_no_spec_mode_selection",
+      "passed": true
+    },
+    {
+      "case": "wrapper_no_queue_or_control_update",
+      "passed": true
+    },
+    {
+      "case": "implemented_fixed_gui_script",
+      "passed": true
+    },
+    {
+      "case": "implemented_exact_argument_equality",
+      "passed": true
+    },
+    {
+      "case": "implemented_small_120_64k_only",
+      "passed": true
+    },
+    {
+      "case": "implemented_fixed_engine_name",
+      "passed": true
+    },
+    {
+      "case": "implemented_exe_hash_checked",
+      "passed": true
+    },
+    {
+      "case": "implemented_input_write_delete_denied",
+      "passed": true
+    },
+    {
+      "case": "implemented_fixed_closure_checked",
+      "passed": true
+    },
+    {
+      "case": "implemented_reparse_rejected",
+      "passed": true
+    },
+    {
+      "case": "implemented_fresh_data_required",
+      "passed": true
+    },
+    {
+      "case": "implemented_fresh_cache_required",
+      "passed": true
+    },
+    {
+      "case": "implemented_roots_disjoint",
+      "passed": true
+    },
+    {
+      "case": "implemented_terminal_source_checked",
+      "passed": true
+    },
+    {
+      "case": "implemented_lease_cleanup_failure_nonzero",
+      "passed": true
+    },
+    {
+      "case": "gui_validation_before_job",
+      "passed": true
+    },
+    {
+      "case": "gui_same_createprocess_call",
+      "passed": true
+    },
+    {
+      "case": "gui_same_resume_call",
+      "passed": true
+    },
+    {
+      "case": "managed_test_compiles_actual_candidate",
+      "passed": true
+    },
+    {
+      "case": "managed_test_never_guard_run",
+      "passed": true
+    },
+    {
+      "case": "managed_test_never_launch",
+      "passed": true
+    },
+    {
+      "case": "original_bytes_unchanged_WindowsGuard.cs",
+      "passed": true
+    },
+    {
+      "case": "original_bytes_unchanged_Invoke-WindowsGuard.ps1",
+      "passed": true
+    }
+  ],
+  "engine_invocations": 0,
+  "native_connections": 0,
+  "csharp_compilation": "NOT_RUN; compiler unavailable",
+  "managed_csharp_tests": "NOT_RUN; pwsh unavailable",
+  "win32_equivalence": "NOT_VERIFIED",
+  "error": null
+}

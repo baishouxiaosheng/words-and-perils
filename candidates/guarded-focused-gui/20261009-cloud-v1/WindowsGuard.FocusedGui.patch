@@ -1,0 +1,186 @@
+--- baseline/WindowsGuard.cs
++++ WindowsGuard.FocusedGui.cs
+@@ -9,7 +9,18 @@
+ using System.Threading.Tasks;
+ using Microsoft.Win32.SafeHandles;
+ 
+-namespace WordsAndPerils.NativeGuardV3 {
++namespace WordsAndPerils.NativeGuardFocusedGuiCandidate {
++// Explicit owner invocation only; the ordinary wrapper never sets this mode.
++public enum RunMode { Headless = 0, FocusedGui = 1 }
++public sealed class OwnerFocusedGui {
++ public string RunId, ExpectedGodotSha256;
++}
++public sealed class FocusedSource {
++ public string Path, Sha256; public long Bytes;
++ public FocusedSource(string path,long bytes,string sha) { Path=path; Bytes=bytes; Sha256=sha; }
++}
++
++
+ public sealed class MemoryReading { public bool Success; public ulong TotalPhysBytes, AvailPhysBytes; public int NativeError; }
+ public sealed class Admission {
+  public bool Allowed; public string Reason; public ulong TotalPhysBytes, AvailPhysBytes, BudgetBytes, ReserveBytes, AdditionalBytes;
+@@ -23,6 +34,8 @@
+  public int OutputLimitBytes = 65536;
+  public bool SelfTest;
+  public string FaultMode = "none";
++ public RunMode Mode = RunMode.Headless;
++ public OwnerFocusedGui OwnerGui;
+ }
+ public sealed class OwnedProcess {
+  public uint Pid; public string CreatedUtc; public bool JobMembershipVerified, Exited;
+@@ -54,6 +67,8 @@
+  public bool CompletionDeadlineExceeded;
+  public uint PriorityClassBeforeResume;
+  public bool CreatedSuspended = true, NoWindowFlagRequested = true;
++ public string SelectedMode = "Headless", OwnerRunId;
++ public uint ActualCreationFlags; public ushort ActualShowWindow;
+  public List<OwnedProcess> OwnedProcesses = new List<OwnedProcess>();
+  public List<Sample> Samples = new List<Sample>();
+ }
+@@ -104,6 +119,99 @@
+  [DllImport("kernel32.dll")] static extern void DeleteProcThreadAttributeList(IntPtr list);
+  [DllImport("kernel32.dll", CharSet=CharSet.Unicode, SetLastError=true)] static extern bool CreateProcessW(string app, StringBuilder command, IntPtr processAttrs, IntPtr threadAttrs, bool inherit, uint flags, IntPtr env, string cwd, ref STARTUPINFOEX start, out PROCESS_INFORMATION info);
+ 
++ public static uint CreationFlags(RunMode mode) {
++  if(mode!=RunMode.Headless && mode!=RunMode.FocusedGui) throw new ArgumentException("unknown_run_mode");
++  return 0x4U|0x400U|0x80000U|BELOW_NORMAL|(mode==RunMode.Headless?0x08000000U:0U);
++ }
++ public static ushort ShowWindow(RunMode mode) {
++  if(mode!=RunMode.Headless && mode!=RunMode.FocusedGui) throw new ArgumentException("unknown_run_mode");
++  return (ushort)(mode==RunMode.Headless?0:1);
++ }
++ static string CanonicalOwnedPath(string path) {
++  if(String.IsNullOrWhiteSpace(path) || !Path.IsPathRooted(path) || path.IndexOf('\0')>=0 || path.StartsWith(@"\\") || path.Substring(2).Contains(":") || String.Equals(path,Path.GetPathRoot(path),StringComparison.OrdinalIgnoreCase) || path.Split(Path.DirectorySeparatorChar).Any(part=>part.EndsWith(".")||part.EndsWith(" ")) || !String.Equals(path,Path.GetFullPath(path),StringComparison.OrdinalIgnoreCase)) throw new ArgumentException("gui_canonical_local_path_required");
++  string cursor=path;
++  while(!String.IsNullOrEmpty(cursor)) {
++   if((File.Exists(cursor)||Directory.Exists(cursor)) && (File.GetAttributes(cursor)&FileAttributes.ReparsePoint)!=0) throw new ArgumentException("gui_reparse_path");
++   cursor=Path.GetDirectoryName(cursor);
++  }
++  return path.TrimEnd(Path.DirectorySeparatorChar);
++ }
++ static bool Under(string path,string parent) { return String.Equals(path,parent,StringComparison.OrdinalIgnoreCase) || path.StartsWith(parent+Path.DirectorySeparatorChar,StringComparison.OrdinalIgnoreCase); }
++ static bool ValidSha(string sha) { return sha!=null && sha.Length==64 && sha.All(c=>c>='0'&&c<='9'||c>='a'&&c<='f'); }
++ static string Sha(Stream stream) {
++  stream.Position=0; using(var hash=System.Security.Cryptography.SHA256.Create()) { return BitConverter.ToString(hash.ComputeHash(stream)).Replace("-","").ToLowerInvariant(); }
++ }
++ static readonly FocusedSource[] FocusedFiles = new FocusedSource[] {
++  new FocusedSource("core/ai_gm_rebuilt/canonical.gd",2814,"d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c"),
++  new FocusedSource("core/status_foundation/canonical.gd",2814,"d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c"),
++  new FocusedSource("core/status_foundation/catalog.gd",10981,"8effb5d5e6094cdb0f5413a697ae3adb4e7d86429c31a7b93d751e71f6b62681"),
++  new FocusedSource("core/status_foundation/runtime.gd",23309,"ee79b110e35b5141334daf55e7a2f80f6f4d3060a56d408bf0a08094260bb059"),
++  new FocusedSource("core/status_gameplay/source_profiles.gd",2571,"53e1ca59b24fb0e020b2dc4a5200868fe927264e787234873484d077d8057483"),
++  new FocusedSource("data/catalog.json",218084,"81712567dda2bb000b7cacefc9380c91bc271ea461c21758b1d2fa8074de4fde"),
++  new FocusedSource("PREPARATION_RECEIPT.json",3501,"c3e61d1d59b7d9462f0bca21dc183d01037e75ee8a218167d88ba7ab79dfb58e"),
++  new FocusedSource("project.godot",240,"cde62891e40354d47b704b3c6e9d241a1d665ee295807b5365a0a7f3a7bfb06d"),
++  new FocusedSource("tests/focused/baseline_player_details.gd",8199,"4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3"),
++  new FocusedSource("tests/focused/candidate_manifest.json",4877,"9e8a329439b70dca27f974c6ee263bc7706a0385aa0d7abb3d0ef499427668bf"),
++  new FocusedSource("tests/focused/clock_player_details.gd",8902,"8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c"),
++  new FocusedSource("tests/focused/local_gui.gd",8116,"8f68ab3b130d4326cc2c2a5e4fd3b80981f52f241320ae4cd1b942e469464bb7"),
++  new FocusedSource("tests/focused/local_gui_parse.gd",1597,"bfa4b7f7efcea2a79b6c282984320bb58f5653b546df035c60b946bde8b83664"),
++  new FocusedSource("tests/focused/location_player_details.gd",8409,"28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5"),
++  new FocusedSource("tests/focused/source_binding.json",2901,"efa807c7589b2af42ce5437822d2097a889f51b0cecf9390b7b5df7d4e6228b5"),
++  new FocusedSource("tests/focused/test_combined_player_details.gd",14785,"8b12348f54733ca74b8ce1b469ae243945574d2ecce485c77f328c75034af037"),
++  new FocusedSource("view/playable_build/player_details.gd",9112,"e4e20fc6fb269238d3a6116634b6593f92078c5dafbbd055b237eb123b49d883"),
++  new FocusedSource("view/status_gameplay/details.gd",13184,"2b1d377813660aa419ca4f2cb9026d591b9edadce853ef0fec57a1b3e98841b1"),
++ };
++ static List<string> SourcePaths(string project) {
++  var files=new List<string>(); var directories=new Stack<string>(); directories.Push(project);
++  while(directories.Count!=0) {
++   string directory=CanonicalOwnedPath(directories.Pop());
++   foreach(string child in Directory.GetDirectories(directory)) directories.Push(child);
++   foreach(string file in Directory.GetFiles(directory)) {
++    CanonicalOwnedPath(file); string relative=file.Substring(project.Length+1).Replace('\\','/');
++    // Godot-owned generated cache is isolated to this fixed fixture; never a source binding.
++    if(!relative.StartsWith(".godot/",StringComparison.OrdinalIgnoreCase)) files.Add(relative);
++   }
++  }
++  return files;
++ }
++ public sealed class GuiInputLease : IDisposable {
++  internal string Project;
++  readonly List<FileStream> leases=new List<FileStream>();
++  internal void Bind(string path,long bytes,string sha) {
++   var file=new FileStream(path,FileMode.Open,FileAccess.Read,FileShare.Read); leases.Add(file);
++   if((bytes>=0 && file.Length!=bytes) || Sha(file)!=sha) throw new ArgumentException("gui_source_hash_mismatch");
++  }
++  public void VerifySourceSet() {
++   var paths=SourcePaths(Project);
++   if(paths.Count!=FocusedFiles.Length || !new HashSet<string>(paths,StringComparer.Ordinal).SetEquals(FocusedFiles.Select(f=>f.Path))) throw new ArgumentException("gui_source_closure_mismatch");
++  }
++  public void Dispose() {
++   Exception error=null;
++   foreach(var lease in leases) { try { lease.Dispose(); } catch(Exception ex) { if(error==null) error=ex; } }
++   leases.Clear(); if(error!=null) throw new IOException("gui_input_lease_cleanup_failed",error);
++  }
++ }
++ // Pure managed validation can be tested without calling any Win32 API or starting an engine.
++ public static GuiInputLease ValidateFocusedGui(Options o) {
++  if(o.Mode!=RunMode.FocusedGui || o.OwnerGui==null || String.IsNullOrWhiteSpace(o.OwnerGui.RunId) || o.OwnerGui.RunId.Length>128 || !o.OwnerGui.RunId.All(c=>Char.IsLetterOrDigit(c)||c=='-'||c=='_') || !ValidSha(o.OwnerGui.ExpectedGodotSha256)) throw new ArgumentException("explicit_owner_gui_binding_required");
++  if(o.Profile!="small" || o.TimeoutSeconds!=120 || o.OutputLimitBytes!=MaximumOutputBytes || o.SelfTest || o.FaultMode!="none") throw new ArgumentException("gui_requires_small_production_limits");
++  string exe=CanonicalOwnedPath(o.Executable), project=CanonicalOwnedPath(o.WorkingDirectory), data=CanonicalOwnedPath(o.IsolatedDataRoot);
++  if(!String.Equals(Path.GetFileName(exe),"Godot_v4.6.3-stable_win64.exe",StringComparison.Ordinal) || !Directory.Exists(project) || !Directory.Exists(data) || Under(data,project) || Under(project,data) || Under(exe,project) || Under(exe,data)) throw new ArgumentException("gui_owned_roots_or_executable_invalid");
++  var expected=new[]{"--path",project,"--script","res://tests/focused/local_gui.gd","--fixed-fps","15","--",data};
++  if(o.Arguments==null || !o.Arguments.SequenceEqual(expected)) throw new ArgumentException("gui_arguments_not_exact_allowlist");
++  var leaves=new[]{"appdata","localappdata","temp"};
++  if(Directory.GetFiles(data).Length!=0 || Directory.GetDirectories(data).Length!=3 || leaves.Any(leaf=>!Directory.Exists(Path.Combine(data,leaf)) || Directory.GetFileSystemEntries(Path.Combine(data,leaf)).Length!=0)) throw new ArgumentException("gui_fresh_isolated_data_required");
++  foreach(string leaf in leaves) CanonicalOwnedPath(Path.Combine(data,leaf));
++  string cache=Path.Combine(project,".godot");
++  if(Directory.Exists(cache) && Directory.GetFileSystemEntries(cache).Length!=0) throw new ArgumentException("gui_fresh_cache_required");
++  var lease=new GuiInputLease { Project=project };
++  try {
++   lease.VerifySourceSet(); lease.Bind(exe,-1,o.OwnerGui.ExpectedGodotSha256);
++   foreach(var file in FocusedFiles) lease.Bind(Path.Combine(project,file.Path.Replace('/',Path.DirectorySeparatorChar)),file.Bytes,file.Sha256);
++   lease.VerifySourceSet(); return lease;
++  } catch { lease.Dispose(); throw; }
++ }
++
+  public static MemoryReading ReadPhysicalMemory() {
+   var s = new MEMORYSTATUSEX(); s.Length = (uint)Marshal.SizeOf(typeof(MEMORYSTATUSEX));
+   bool okay = GlobalMemoryStatusEx(ref s);
+@@ -241,6 +349,7 @@
+   var r=new RunResult { Status="refused", StartedUtc=DateTime.UtcNow.ToString("o"), SyntheticFault=o.FaultMode!="none" };
+   var watch=Stopwatch.StartNew(); IntPtr job=IntPtr.Zero, attributes=IntPtr.Zero, handles=IntPtr.Zero, environment=IntPtr.Zero;
+   IntPtr outRead=IntPtr.Zero,outWrite=IntPtr.Zero,errRead=IntPtr.Zero,errWrite=IntPtr.Zero,inRead=IntPtr.Zero,inWrite=IntPtr.Zero;
++  GuiInputLease guiInputs=null;
+   bool attributesReady=false; PROCESS_INFORMATION pi=new PROCESS_INFORMATION(); Task stdout=null,stderr=null; OutputCapture output=null;
+   try {
+    if(o.FaultMode!="none" && !o.SelfTest) throw new ArgumentException("fault_injection_requires_explicit_selftest");
+@@ -256,7 +365,11 @@
+    if(r.TimeoutSeconds<1 || r.TimeoutSeconds>r.Admission.ProfileTimeoutSeconds) throw new ArgumentException("timeout_outside_profile");
+    if(!Path.IsPathRooted(o.Executable) || !File.Exists(o.Executable) || !Directory.Exists(o.WorkingDirectory)) throw new ArgumentException("absolute_executable_and_existing_working_directory_required");
+    bool isGodot=Path.GetFileName(o.Executable).IndexOf("godot",StringComparison.OrdinalIgnoreCase)>=0;
+-   if(isGodot && !o.Arguments.Contains("--headless")) throw new ArgumentException("godot_requires_explicit_headless");
++   if(o.Mode==RunMode.Headless) {
++    if(isGodot && !o.Arguments.Contains("--headless")) throw new ArgumentException("godot_requires_explicit_headless");
++   } else if(o.Mode==RunMode.FocusedGui) {
++    r.SelectedMode="FocusedGui"; r.OwnerRunId=o.OwnerGui==null?null:o.OwnerGui.RunId; r.Schema="wordsandperils_windows_native_guard/focused-gui-candidate-v1"; guiInputs=ValidateFocusedGui(o);
++   } else throw new ArgumentException("unknown_run_mode");
+    r.JobCommitLimitBytes=r.Admission.AdditionalBytes; r.LowestActualAvailPhysBytes=first.AvailPhysBytes;
+    var env=ChildEnvironment(o.IsolatedDataRoot); environment=EnvironmentBlock(env);
+    job=CreateJobObject(IntPtr.Zero,null); Need(job!=IntPtr.Zero,"create_private_job");
+@@ -280,10 +393,11 @@
+    attributes=Marshal.AllocHGlobal(attributeBytes); Need(InitializeProcThreadAttributeList(attributes,1,0,ref attributeBytes),"initialize_handle_attributes"); attributesReady=true;
+    handles=Marshal.AllocHGlobal(IntPtr.Size*3); Marshal.WriteIntPtr(handles,0,outWrite); Marshal.WriteIntPtr(handles,IntPtr.Size,errWrite); Marshal.WriteIntPtr(handles,IntPtr.Size*2,inRead);
+    Need(UpdateProcThreadAttribute(attributes,0,new IntPtr(0x20002),handles,new IntPtr(IntPtr.Size*3),IntPtr.Zero,IntPtr.Zero),"restrict_inherited_handles");
+-   var start=new STARTUPINFOEX(); start.Info.cb=Marshal.SizeOf(typeof(STARTUPINFOEX)); start.Info.Flags=0x100|1; start.Info.ShowWindow=0;
++   var start=new STARTUPINFOEX(); start.Info.cb=Marshal.SizeOf(typeof(STARTUPINFOEX)); start.Info.Flags=0x100|1; start.Info.ShowWindow=ShowWindow(o.Mode);
++   r.ActualShowWindow=start.Info.ShowWindow; r.ActualCreationFlags=CreationFlags(o.Mode); r.NoWindowFlagRequested=(r.ActualCreationFlags&0x08000000)!=0;
+    start.Info.StdInput=inRead; start.Info.StdOutput=outWrite; start.Info.StdError=errWrite; start.Attributes=attributes;
+    var command=new StringBuilder(Quote(o.Executable)); foreach(string arg in o.Arguments) command.Append(' ').Append(Quote(arg));
+-   Need(CreateProcessW(o.Executable,command,IntPtr.Zero,IntPtr.Zero,true,0x4|0x08000000|0x400|0x80000|BELOW_NORMAL,environment,o.WorkingDirectory,ref start,out pi),"create_suspended_owned_process");
++   Need(CreateProcessW(o.Executable,command,IntPtr.Zero,IntPtr.Zero,true,r.ActualCreationFlags,environment,o.WorkingDirectory,ref start,out pi),"create_suspended_owned_process");
+    r.Started=true; r.RootPid=pi.Pid;
+    Need(AssignProcessToJobObject(job,pi.Process),"assign_before_resume"); bool inside; Need(IsProcessInJob(pi.Process,job,out inside),"verify_root_job");
+    if(!inside) throw new NativeFailure("root_not_in_private_job",0); r.JobAssignedBeforeResume=true;
+@@ -358,6 +472,10 @@
+    if(stdout!=null && stderr!=null) { r.OutputReadersFinished=Task.WaitAll(new Task[]{stdout,stderr},5000); }
+    if(output!=null) output.Report(r);
+    if(attributesReady) DeleteProcThreadAttributeList(attributes); if(attributes!=IntPtr.Zero) Marshal.FreeHGlobal(attributes); if(handles!=IntPtr.Zero) Marshal.FreeHGlobal(handles); if(environment!=IntPtr.Zero) Marshal.FreeHGlobal(environment);
++   if(guiInputs!=null) {
++    try { guiInputs.VerifySourceSet(); } catch(Exception ex) { r.Status="failed"; r.ErrorOperation="gui_terminal_source_check: "+ex.Message; r.GuardExitCode=3; }
++    finally { try { guiInputs.Dispose(); } catch(Exception ex) { r.Status="failed"; r.ErrorOperation="gui_input_cleanup: "+ex.Message; r.GuardExitCode=3; } }
++   }
+    r.ElapsedSeconds=Math.Round(watch.Elapsed.TotalSeconds,4); r.EndedUtc=DateTime.UtcNow.ToString("o");
+   }
+   return r;

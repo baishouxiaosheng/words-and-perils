@@ -1,0 +1,15 @@
+{
+  "schema": "wp_gui_candidate_publication_gate/v1",
+  "observed_main": "1e7ec0968947b135df09db653e2c3e88d3336b6d",
+  "observed_tree": "fbde22a0576bc88f48fabf4f37d73d17b6f54c74",
+  "scope": "Add independent guarded-focused-gui source candidate only; not native adoption or task dispatch",
+  "matching_new_gui_guard_candidate_in_tree": false,
+  "matching_new_gui_guard_owner_in_published_delta": false,
+  "native010_status": "terminal reviewable; GUI BLOCKED_GUARD_REQUIRES_HEADLESS; graphical engine PID0",
+  "native010_closeout_commit": "1e7ec0968947b135df09db653e2c3e88d3336b6d",
+  "native010_claim_is_previous_terminal_attempt": true,
+  "unknown_local_activity": "Not inferred from repository evidence",
+  "candidate_root": "candidates/guarded-focused-gui/20261009-cloud-v1",
+  "force": false,
+  "expected_parent": "1e7ec0968947b135df09db653e2c3e88d3336b6d"
+}

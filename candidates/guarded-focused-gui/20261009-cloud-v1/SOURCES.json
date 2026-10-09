@@ -1,0 +1,13 @@
+{
+  "commit": "a3a5b06cd4f9813bf00df99aa5ddd6e3735f6a95",
+  "guard_refusal": "https://github.com/baishouxiaosheng/words-and-perils/blob/a3a5b06cd4f9813bf00df99aa5ddd6e3735f6a95/coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/guard-v3/WindowsGuard.cs#L259",
+  "guard_window_selection": "https://github.com/baishouxiaosheng/words-and-perils/blob/a3a5b06cd4f9813bf00df99aa5ddd6e3735f6a95/coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/guard-v3/WindowsGuard.cs#L283",
+  "guard_creation_flags": "https://github.com/baishouxiaosheng/words-and-perils/blob/a3a5b06cd4f9813bf00df99aa5ddd6e3735f6a95/coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/guard-v3/WindowsGuard.cs#L286",
+  "original_wrapper": "https://github.com/baishouxiaosheng/words-and-perils/blob/a3a5b06cd4f9813bf00df99aa5ddd6e3735f6a95/coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/guard-v3/Invoke-WindowsGuard.ps1",
+  "starter": "https://github.com/baishouxiaosheng/words-and-perils/blob/a3a5b06cd4f9813bf00df99aa5ddd6e3735f6a95/coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/run_focused_gui.py",
+  "gui_refusal": "https://github.com/baishouxiaosheng/words-and-perils/blob/a3a5b06cd4f9813bf00df99aa5ddd6e3735f6a95/coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/runs/gui-capture/GUARD_RESULT.json",
+  "terminal_result": "https://github.com/baishouxiaosheng/words-and-perils/blob/a3a5b06cd4f9813bf00df99aa5ddd6e3735f6a95/coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/RESULT.json",
+  "read_only_peer_result_received": "Guard refusal before process creation; GUI PID0; lock released 10:33:40.561Z. No repeated full-archive review.",
+  "fixed_source_map": "https://github.com/baishouxiaosheng/words-and-perils/blob/a3a5b06cd4f9813bf00df99aa5ddd6e3735f6a95/coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/runs/gui-capture/SOURCE_MAP_BEFORE.json",
+  "fixed_project": "https://github.com/baishouxiaosheng/words-and-perils/blob/a3a5b06cd4f9813bf00df99aa5ddd6e3735f6a95/coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/generated/gui/project.godot"
+}

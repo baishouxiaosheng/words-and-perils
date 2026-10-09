@@ -1,0 +1,23 @@
+{
+  "schema": "wp_guarded_gui_source_index/v1",
+  "candidate_root": "candidates/guarded-focused-gui/20261009-cloud-v1",
+  "status": "source_candidate; NOT_COMPILED, NOT_DEPLOYED, NO_ENGINE_RUN",
+  "compile_inputs": [
+    "WindowsGuard.FocusedGui.cs",
+    "baseline/WindowsGuard.cs"
+  ],
+  "source_only_compile_test": {
+    "file": "Test-FocusedGui.SourceOnly.ps1",
+    "command": "pwsh -NoProfile -File ./Test-FocusedGui.SourceOnly.ps1",
+    "engine_starts": false
+  },
+  "candidate_entry": "Invoke-FocusedGuiGuard.ps1",
+  "exact_diff": "WindowsGuard.FocusedGui.patch",
+  "portable_static_check": {
+    "file": "test_source_candidate.py",
+    "command": "python3 -B test_source_candidate.py"
+  },
+  "existing_native_010_fixture_source_map": "inputs/FIXED_SOURCE_MAP.json",
+  "file_integrity_index": "MANIFEST.json",
+  "native_gui_dispatch_created": false
+}

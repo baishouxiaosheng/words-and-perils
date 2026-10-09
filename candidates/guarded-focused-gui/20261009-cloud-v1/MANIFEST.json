@@ -1,0 +1,115 @@
+{
+  "schema": "wp_guarded_focused_gui_public_candidate/v1",
+  "candidate_id": "20261009-cloud-v1",
+  "candidate_root": "candidates/guarded-focused-gui/20261009-cloud-v1",
+  "publication_parent": "1e7ec0968947b135df09db653e2c3e88d3336b6d",
+  "guard_source_ref": "a3a5b06cd4f9813bf00df99aa5ddd6e3735f6a95",
+  "implemented_csharp_source": true,
+  "status": "source_candidate_NOT_COMPILED_NOT_DEPLOYED_NO_ENGINE_RUN",
+  "default_mode": "Headless",
+  "focused_gui": "Dedicated owner-only explicit invocation; fixed 18-file focused fixture, exact eight argv tokens",
+  "original_v3_sources_unchanged": true,
+  "native_trusted_config_updated": false,
+  "formal_reference_changed": false,
+  "engine_invocations": 0,
+  "graphical_task_dispatched": false,
+  "csharp_compilation": "NOT_RUN; no installed compiler",
+  "managed_csharp_tests": "NOT_RUN; no installed PowerShell",
+  "win32_protection_equivalence": "NOT_VERIFIED",
+  "packaged_static_result": {
+    "file": "SOURCE_TEST_RESULT.json",
+    "checks": 52,
+    "passed": 52,
+    "pid": 8738,
+    "exit_code": 0
+  },
+  "privacy": {
+    "raw_inputs_published": false,
+    "native_absolute_path_starter_published": false,
+    "personal_information_published": false,
+    "keys_read_or_published": false
+  },
+  "required_before_native_adoption": [
+    "Compile actual candidate via source-only test",
+    "Supported local owner entry retaining existing repository lock, STOP/network/claim gates, PID/creation ownership, hashes, isolation/diagnostic/exit checks",
+    "Separate full native protection acceptance; no task010 rerun",
+    "Actual GUI and screenshots/video remain untested"
+  ],
+  "files": [
+    {
+      "path": "FocusedGuiSupport.cs.inc",
+      "bytes": 6340,
+      "sha256": "b5e3a5a86628388c4039bdcb73f540f6a914fdf5e35f9f7d3887ae1599b58a52"
+    },
+    {
+      "path": "Invoke-FocusedGuiGuard.ps1",
+      "bytes": 3580,
+      "sha256": "f13c36e2814d1bdb73dcb16b1f0288958d83e395f92cd5619614f2cb54e72264"
+    },
+    {
+      "path": "MODE_PLAN.md",
+      "bytes": 2820,
+      "sha256": "6d2b2ba2ee211eb60b3b34de96f61a862cd47e4612ceeece07d76978912c78a0"
+    },
+    {
+      "path": "PUBLISH_GATE.json",
+      "bytes": 864,
+      "sha256": "74b657434d98965f90d4e642637aa70fee917dc1bf0ac53423f3ebb318073419"
+    },
+    {
+      "path": "SOURCES.json",
+      "bytes": 2403,
+      "sha256": "2f9657b65495d4bf011a7cb1ae8e7123d8d6f5775cc82efedb25f768cf188f09"
+    },
+    {
+      "path": "SOURCE_TEST_RESULT.json",
+      "bytes": 4579,
+      "sha256": "cd9f35dca85f62fc24b7881bbd34c13d601e77ace32de3ef0dbafb2fdd7c785c"
+    },
+    {
+      "path": "Test-FocusedGui.SourceOnly.ps1",
+      "bytes": 5449,
+      "sha256": "ce59c1209b7945d8b60ba7ddd7142cee9b65b474d7435c79ebc86cdc8041d8bb"
+    },
+    {
+      "path": "WindowsGuard.FocusedGui.cs",
+      "bytes": 38365,
+      "sha256": "eb642e9b4092098614be6c9b5aff0becf96728a3a47bbe9f54dc12f13fb7ea4b"
+    },
+    {
+      "path": "WindowsGuard.FocusedGui.patch",
+      "bytes": 15461,
+      "sha256": "10311d125d824d5b4722121d7edc4a4b20f384fb05a039043ed49f484e139cb2"
+    },
+    {
+      "path": "baseline/Invoke-WindowsGuard.ps1",
+      "bytes": 1574,
+      "sha256": "f831a84e71f692fc851945b001cfc98092b7049fb3b48d0f5099fa49e016c5f8"
+    },
+    {
+      "path": "baseline/WindowsGuard.cs",
+      "bytes": 28655,
+      "sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957"
+    },
+    {
+      "path": "inputs/FIXED_SOURCE_MAP.json",
+      "bytes": 2841,
+      "sha256": "13b1ca23ff23062940f734551fba722583452ab276b85477480a14e5c0a1f925"
+    },
+    {
+      "path": "inputs/fixed_project.godot",
+      "bytes": 240,
+      "sha256": "cde62891e40354d47b704b3c6e9d241a1d665ee295807b5365a0a7f3a7bfb06d"
+    },
+    {
+      "path": "test_source_candidate.py",
+      "bytes": 8753,
+      "sha256": "eb1b40ed7e33af1f5dbb01a43fe62e4a36e7386735234f2366ccfa2e7201755e"
+    },
+    {
+      "path": "INDEX.json",
+      "bytes": 857,
+      "sha256": "e08dea40c2492c216c3d7d90981e19ff51cd4dcaaf9190e8476b3d010f31319c"
+    }
+  ]
+}

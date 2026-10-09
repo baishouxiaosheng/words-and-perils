@@ -1,0 +1,259 @@
+{
+  "commit": "d65577ed59c115b61aec38e69d58321d8b66058a",
+  "all_match": true,
+  "files": [
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/TASK.json",
+      "bytes": 24036,
+      "sha256": "e119a50952a87807b80613a2d0ba220d0b848a5272d20931a3e436cfddff3f14",
+      "git_blob_sha": "9fb20d539ef12dfe267d90c901285f82ef4e91dd",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/PROTOCOL.json",
+      "bytes": 12065,
+      "sha256": "ac97c2523a6400bbde3c1f9b83f0398a704887891a8bfc94f5247476245400bc",
+      "git_blob_sha": "926acf5b1ccc55ac70339c49e0437e8ec0117c58",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/TASK_SCHEMA.json",
+      "bytes": 7110,
+      "sha256": "14a68f72c3cea797799237051e154a5d1e9c5d1184d7cbebdf2d3db0086144ab",
+      "git_blob_sha": "6146d993e1b1b39a61ff8417cc030952aeaa1e8b",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/INPUT_VERIFICATION.json",
+      "bytes": 10136,
+      "sha256": "598cd706564a646a86cffcfb98893c115a0b703f0fb612ce0626f459155a5504",
+      "git_blob_sha": "2e44fc4c0abba104ab474d250778f3391b0147aa",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/HOST_SOURCE_RESOURCE_MAP.json",
+      "bytes": 441374,
+      "sha256": "5ff2e4cbcf62b8dda38f9559756f76a849560850e7ba5073c4ff5e9f1816fbd3",
+      "git_blob_sha": "bd44136fe37a6355b96c4c1433e33dc56903cd2d",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/HARNESS_BINDING.json",
+      "bytes": 502,
+      "sha256": "184099dc0677d567131618dd47d727541e1104b535361fac906fb8131369fdd9",
+      "git_blob_sha": "c9424aa95d610fa03cf9d8774fc0c42ead7ca03c",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/EXECUTION_OUTCOME.json",
+      "bytes": 795,
+      "sha256": "e80a9881283171c93533d5b9e92647b59d4d81cbc117d07c2bc6be7e1e6365f7",
+      "git_blob_sha": "7c89455824789c7c0a97be8ea7c9fdfb735ad462",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/EXECUTION_EXCEPTION.json",
+      "bytes": 206,
+      "sha256": "a5d270ac8644a0718162095f7b932822cb85b74cbd2e29b3a88312b799877424",
+      "git_blob_sha": "ddd8467d1bf1908332843a1b9a5182d2b68eb07a",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/EXECUTION_LOCK_RELEASED.json",
+      "bytes": 143,
+      "sha256": "fa2f2fde5bb769d018c948acc0b41ab1e49be654c56ea618d925073f9a915350",
+      "git_blob_sha": "7a2f56a58dcdf50991405944ef6d9c57481a320e",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/EXECUTION_LOCK_OWNER.json",
+      "bytes": 197,
+      "sha256": "2704f676f7c3a71e24e60e36683f5b5da8bb0283a39fef9e76d698ab5d1ccf45",
+      "git_blob_sha": "9591a7a3c8d2ff54deaeddf1e88c3a02d46ae23f",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/CLAIM_READBACK.json",
+      "bytes": 483,
+      "sha256": "2a06a214931ba2cfce1cd7559d32d0c38edcb9b8a0db9ee0c0ba3ddea1a4c622",
+      "git_blob_sha": "8db3f2c3b909e7600daa9abf97f0b21e7e5e08d6",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/ACK_READBACK.json",
+      "bytes": 494,
+      "sha256": "995bfb63ac90903fc42afbcdff863fcadc57646b71d443f66ccb3264b5320eee",
+      "git_blob_sha": "efaed781f0e96c1069cc31aac020f555122badc7",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/CHECKPOINT_LOCAL.json",
+      "bytes": 965,
+      "sha256": "46f98c74c6937c6c37ed8438dcd4c65f259f42f46e35d38bf4630c27211c0522",
+      "git_blob_sha": "c43092dd7a364e4efd42813f332459178fe243e8",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/ORIGINAL_INPUTS_PRESERVED.json",
+      "bytes": 165,
+      "sha256": "fd2d7eba0c265f4ca5d5db4eb3d7fa5a4568c07f7171eea47bcc041ba28f64a0",
+      "git_blob_sha": "7773fef36a31efd34484541a90bec8d24a90abde",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/TEST_SUMMARY.json",
+      "bytes": 1236,
+      "sha256": "1f3ffdd61bf2c82fecc71bdadf5e9fc55c0903a3f99af794bcb4fc23ee3c8db2",
+      "git_blob_sha": "138e878f9f40b905e4aaf24cdbe82cdb7433c8dd",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/VERIFICATION_MANIFEST.json",
+      "bytes": 2307,
+      "sha256": "e0f1c5c59e065c6b601878c9812fd7fcb51f7b6181246fe1e592b7724adb167d",
+      "git_blob_sha": "79c98e902c87653f7aa68082fe8a28124641cd9e",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/RETAINED_SETUP_FAILURE.json",
+      "bytes": 336,
+      "sha256": "bf067a3209c989f8a153349a79e8f887fa86a8dbf907a22ef96526cd97f6155e",
+      "git_blob_sha": "ad00066a278126b0b877148e4ebb4e54b2156d68",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/TOOL_CORRECTION.json",
+      "bytes": 302,
+      "sha256": "ef082003325c0a4f3f0845c0af93122abc38692484775d54f60e673918cd3b95",
+      "git_blob_sha": "cd3bad802b238b2e889c7e341871fef3e0a405d9",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/STATIC_FAILURE_DIAGNOSIS.json",
+      "bytes": 1128,
+      "sha256": "fe5c2cff63711dc08eb27fd99faf2381d0ed8b7670ebf60ae6e91f59d2f7d929",
+      "git_blob_sha": "6d89d7ed162affcaadcad4d85485f96099554652",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/gates/GATE-ack.json",
+      "bytes": 681,
+      "sha256": "33bdb4dc39946237184b38f27cf538e9fec1bf4d2f31916c6db9a9c6b838bdee",
+      "git_blob_sha": "1b16cf34a66a1d97d8fcbe9574beda428ba56959",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/gates/GATE-preclaim.json",
+      "bytes": 687,
+      "sha256": "73c4fc1f499a3890c0935b81578bafea5d88d66636c47f5bbef2163481c63645",
+      "git_blob_sha": "401be9eabf1e1fed9a8a57d931d586209c4955c6",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/gates/GATE-publication_A.json",
+      "bytes": 691,
+      "sha256": "15830b1de40485a5432cf0f4f8b508afe595d7fa6d26725f5113fe3f9ae41458",
+      "git_blob_sha": "a1f82d26ebead08f4024b63bf4b3eace476f149d",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/gates/GATE-python_candidate_static.json",
+      "bytes": 701,
+      "sha256": "b30eedbbedf5bb30a0b983b766fb1749c08c61f66b28a15da069b5336c2b553f",
+      "git_blob_sha": "815e429491e12317ea33fdef30c180af4420dae7",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/python-runs/candidate_static/PID.json",
+      "bytes": 141,
+      "sha256": "2bdf873d63a467291359830016dbefbd097e84496cdb62ef5f880a0f099b1c1d",
+      "git_blob_sha": "b8b6725c7c4450d7c39e9b7d00a539a83faf5467",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/python-runs/candidate_static/RESULT.json",
+      "bytes": 302,
+      "sha256": "b9f9a3b25fb8580657e3e3e78c9162ef079da35a062c6bb75664812de98a6795",
+      "git_blob_sha": "19eca95acbded8046c358f27239df2f71fae9718",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/python-runs/candidate_static/stderr.log",
+      "bytes": 676,
+      "sha256": "95d81fe589718c2a31c1c01b6ea0a825242cd504411201ce92784132a27e15a9",
+      "git_blob_sha": "e9788dfba55a42adbd400aab76431dfece24e3cf",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/python-runs/candidate_static/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/harness/task_io.py",
+      "bytes": 8827,
+      "sha256": "012e752ec4f5305349753abe551460fb22c3d91dd94d6171f8d93922088faf67",
+      "git_blob_sha": "34b5bfa9b1cd2b757db58406bb2eddae6e6680df",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/harness/Run-Test.ps1",
+      "bytes": 1846,
+      "sha256": "2ecc0cccc4cffba123fe1785ec021c3f13bd01e146d93987f9e7a376b4c57bf7",
+      "git_blob_sha": "312906eb485485ccc9a3fb2d3f46e8ead3366a45",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/harness/focused_queue_run.py",
+      "bytes": 15440,
+      "sha256": "e37b8c219790a09b7eb54154c320b2a330d904c987c8844cd31740ecee009f01",
+      "git_blob_sha": "6f7a9c868992b3b9148d30cf8a5a31b304a47d69",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "candidates/clock-display-focused-verification/20261009-local-004/MANIFEST.json",
+      "bytes": 2307,
+      "sha256": "e0f1c5c59e065c6b601878c9812fd7fcb51f7b6181246fe1e592b7724adb167d",
+      "git_blob_sha": "79c98e902c87653f7aa68082fe8a28124641cd9e",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "candidates/clock-display-focused-verification/20261009-local-004/frozen-candidate/CHANGE.patch",
+      "bytes": 1140,
+      "sha256": "3467106b110e666e95704aaa5542b2d6feec45d374f7b190847527200a5863f4",
+      "git_blob_sha": "c557427a75688f976e55f7a729ca256b0ba2ca16",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "candidates/clock-display-focused-verification/20261009-local-004/frozen-candidate/MANIFEST.json",
+      "bytes": 3429,
+      "sha256": "d1db5571176b2c597f4b0cd063acb7b653b3c295baf8e33336c06ac94d37fb9a",
+      "git_blob_sha": "2c3d09088d0460c2eb5e853d93912860a9d13a93",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "candidates/clock-display-focused-verification/20261009-local-004/frozen-candidate/overlay/view/playable_build/player_details.gd",
+      "bytes": 8902,
+      "sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+      "git_blob_sha": "4ae0fe8b7b0780620cab4290747a6da8e71c5025",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "candidates/clock-display-focused-verification/20261009-local-004/frozen-test/test_clock_display.gd",
+      "bytes": 8643,
+      "sha256": "c0d8ca00ca919792e164150d8d4bf70aeb8321e1579c322095e30d4ea2b82486",
+      "git_blob_sha": "0295c0e2f7009dde3cca3aba1e767daf50959cef",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/ARTIFACTS.json",
+      "bytes": 8928,
+      "sha256": "f853f6d58a2165b28262fffec6ca577fff8a0aab42d968f7e970e3c44fc99fb1",
+      "git_blob_sha": "1df25952a693817288a259afe0031f39b443d082",
+      "actual_http_bytes_match": true
+    }
+  ],
+  "verified_utc": "2026-10-09T07:50:12.284607+00:00"
+}

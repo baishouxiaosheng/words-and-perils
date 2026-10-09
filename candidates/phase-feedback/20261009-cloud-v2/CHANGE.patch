@@ -1,0 +1,33 @@
+--- a/main.gd
++++ b/main.gd
+@@ -2354,7 +2354,7 @@
+ 	roll_button.visible = phase in ["ready_roll","rolled","staged"]
+ 	roll_button.disabled = not roll_button.visible
+ 	roll_button.text = {"ready_roll":"调试：结算一次","rolled":"调试：暂存结果","staged":"调试：提交结果"}.get(phase,"等待裁定")
+-	phase_label.text = {"idle":"等待你的行动","awaiting_assessment":"离线 · 等待裁定","ready_roll":"裁定已就绪","rolled":"结果已锁定","staged":"结果待提交"}.get(phase,phase)
++	phase_label.text = {"idle":"你的回合 · 等待行动","awaiting_assessment":"离线 · 等待行动评估","ready_roll":"评估已就绪 · 等待完成回合","rolled":"结算已锁定 · 等待完成回合","staged":"行动结果就绪 · 等待完成回合"}.get(phase,phase)
+ 	next_step_label.text = {"idle":"写下行动后结束回合","awaiting_assessment":"菜单 → 连接与高级 → 导入裁定","ready_roll":"可完成本回合","rolled":"可继续完成本回合","staged":"可继续完成本回合"}.get(phase,"")
+ 	if generated_v3_mode:
+ 		if phase=="idle":next_step_label.text="连接与高级 → 选择行动示例"
+@@ -2367,10 +2367,10 @@
+ 	elif _runtime_supported() and phase=="awaiting_assessment" and runtime_ai.last_result.get("action_id","")==playtest.active_action and not runtime_ai.last_result.get("ok",true):
+ 		phase_label.text="评估未完成 · 世界未改变"; next_step_label.text="连接与高级 → 重试、导入或取消"
+ 	if enemy_pending:
+-		phase_label.text="敌方 · "+phase_label.text
++		phase_label.text="敌方回合 · "+phase_label.text
+ 		if phase=="awaiting_assessment": submit_button.text="等待\n敌方"; next_step_label.text="连接与高级 → 提供敌方评估"
+ 	elif enemy_waiting:
+-		phase_label.text="敌方回合 · 等待裁定"; next_step_label.text="继续敌方回合后才能开始你的下一次行动"; submit_button.text="继续\n敌方"
++		phase_label.text="敌方回合 · 尚未开始行动"; next_step_label.text="点击“继续敌方”处理它的行动，完成后再轮到你"; submit_button.text="继续\n敌方"
+ 	if (actor_action_mode or coast_mode or generated_v3_enemy_mode) and not pending and int(playtest.state_copy().actors.actor_player.health.current)<=0:
+ 		turn_footer.show();goal.editable=false;submit_button.disabled=true;submit_button.text="已经\n倒下";phase_label.text="旅人已经倒下";next_step_label.text="可从冒险菜单读取存档或重新开始"
+ 	relay_row.visible = true
+@@ -2386,7 +2386,7 @@
+ 		target_label.tooltip_text=_focus_details_description()+( "\n当前行动的目标已经确定；新点击只改变下一次目标。" if pending else "")
+ 	if actor_action_mode:
+ 		if playtest.decision_pending():
+-			phase_label.text="敌方 · 等待外部意图候选";next_step_label.text="连接与高级 → 导出候选请求 / 人工导入 / 明确启用接口"
++			phase_label.text="敌方回合 · 等待它决定做什么";next_step_label.text="连接与高级 → 导出意图请求 / 导入回复 / 明确启用接口"
+ 			cancel_button.visible=true;cancel_button.disabled=false
+ 		if runtime_ai.busy():submit_button.disabled=true
+ 	if actor_action_mode and not actor_render_error.is_empty():

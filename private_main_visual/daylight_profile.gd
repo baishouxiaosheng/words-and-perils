@@ -84,7 +84,7 @@ func _apply_materials(value:bool)->void:
 	for row in contact_overrides:
 		if not is_instance_valid(row.node):continue
 		row.node.material_override=row.styled if value else row.original
-		row.node.scale=row.scale*Vector3(1.75,1.0,1.75) if value else row.scale
+		row.node.scale=row.scale
 func set_enabled(value:bool)->void:
 	if ownership_suspended:refresh_dirty=true;return
 	if not last_error.is_empty() or field==null:return

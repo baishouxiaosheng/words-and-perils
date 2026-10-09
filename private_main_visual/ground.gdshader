@@ -33,9 +33,14 @@ void fragment(){
  vec3 arid=vec3(.80,.68,.39);
  vec3 base=w.r*grass+w.g*forest+w.b*jungle+w.a*arid;
  // Broad, very quiet variation replaces photographic soil detail.
- base*=.985+.025*clamp(field(p*.30),0.0,1.0);
- float stone=smoothstep(.25,.72,local_slope);
- base=mix(base,vec3(.659,.718,.804),stone*.85);
+ // Broad warm/cool meadow patches, no photographic grain.
+ float meadow=smoothstep(.25,.75,clamp(field(p*.23+vec2(3.1,-1.4)),0.0,1.0));
+ base=mix(base*vec3(.88,.96,.92),base*vec3(1.05,1.03,.84),meadow);
+ base*=.97+.06*clamp(field(p*.71),0.0,1.0);
+ // Steep ground turns to stone on a crisp line instead of a pale smear.
+ float sw=max(fwidth(local_slope),.002);
+ float stone=smoothstep(.55-sw,.55+sw,local_slope);
+ base=mix(base,vec3(.80,.72,.60),stone);
  float d=UV2.x;float slope=UV2.y;
  if(use_shore_tile>.5)d=texture(shore_distance_tile,(p-shore_tile_min)/shore_tile_extent).r*shore_distance_cap;
  float v=clamp(field(p),0,1);float width=mix(.11,.40,v)*mix(1.0,.25,smoothstep(.08,.40,slope));
@@ -46,8 +51,8 @@ void fragment(){
  base=mix(base,vec3(.64,.62,.40),wet*.55);
  float key=dot(n,normalize(vec3(-.55,.74,.39)));
  float lit=smoothstep(.34,.44,key);
- palette_lit=base;
- palette_shade=shade_endpoint(base);
+ palette_lit=face_lit(base,n);
+ palette_shade=face_shade(base,n);
  form_mask=1.0-lit;
  ALBEDO=vec3(1.0);ROUGHNESS=1.0;
 }

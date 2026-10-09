@@ -60,6 +60,7 @@ static func ready() -> bool:
 		var key := "%d,%d" % hex
 		if not cells.has(key): continue # Halo artwork has no playable cell or gameplay identity.
 		var kind: String = canopy.runtime.kinds[int(rows[j+7])]
+		if kind == "sapling": continue # Saplings are not part of the displayed map.
 		var id := "tree:"+identity+":"+str(i)
 		var rendered_root := Vector3(rows[j], float(update.height), rows[j+2])
 		var position := [rendered_root.x, rendered_root.y, rendered_root.z]

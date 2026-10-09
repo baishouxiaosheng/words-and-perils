@@ -21,9 +21,7 @@ var camera_snapshot:Dictionary={}
 var registered_lights:Array=[]
 var registered_contacts:Array=[]
 var registered_roots:Array=[]
-var sapling_scale_report:Array=[]
 var suspended_profile:Node
-var display_layer:Node3D
 func toggle(main:Node)->bool:
 	host=main
 	if desired_enabled:
@@ -32,6 +30,19 @@ func toggle(main:Node)->bool:
 	desired_enabled=accepted
 	return accepted
 func _exit_tree()->void:uninstall()
+## Startup: the coast profile and canopies attach a few frames after Main is
+## ready, so retry briefly instead of failing on the first, still-empty board.
+func enable_by_default(main:Node,attempts:int=40)->void:
+	host=main
+	if desired_enabled or attempts<=0 or not is_inside_tree():return
+	if not main.world_build_busy and not main.generated_start_busy and is_instance_valid(main.board) and main.board.is_inside_tree():
+		var view=main.board.get("world_view")
+		if is_instance_valid(view) and is_instance_valid(view.get("clear_daylight_profile")):
+			if toggle(main):
+				if is_instance_valid(main.display_menu):main.display_menu.set_item_checked(main.display_menu.get_item_index(main.PRIVATE_VISUAL_MENU_ID),true)
+				return
+			print("PALETTE_SHADOW startup not ready: ",last_error)
+	get_tree().create_timer(.1).timeout.connect(enable_by_default.bind(main,attempts-1))
 func before_world_change()->void:
 	source_revision+=1;uninstall();requested=false
 	if is_instance_valid(host) and is_instance_valid(host.display_menu):
@@ -72,8 +83,6 @@ func uninstall()->void:
 	if is_instance_valid(bound_view) and bound_view.private_visual_bounds_dirty.is_connected(_mark_bounds_dirty):bound_view.private_visual_bounds_dirty.disconnect(_mark_bounds_dirty)
 	bound_view=null;bound_entries.clear();bounds_dirty=false
 	if transaction!=null:transaction.uninstall()
-	if is_instance_valid(display_layer):display_layer.uninstall_sapling_policy()
-	display_layer=null
 	if not camera_snapshot.is_empty() and is_instance_valid(camera_snapshot.camera):
 		camera_snapshot.camera.near=camera_snapshot.near;camera_snapshot.camera.far=camera_snapshot.far
 		camera_snapshot.camera.cull_mask=camera_snapshot.cull_mask
@@ -112,16 +121,7 @@ func enable(main:Node)->bool:
 	last_report=Audit.serializable(inspected)
 	last_report["verified_original_exclusions"]={"zero_slots":excluded.verified_zero_slots,"unique_source_rows":excluded.unique_source_rows,"source_manifest_sha256":excluded.source_manifest_sha256,"scope":"Only original strict river/shore hide registry rows; MM buffers and group.rows/index remain unchanged; guarded shader custom inverse is skipped"}
 	last_report["registration"]={"board_id":board.get_instance_id(),"viewport_world_id":world_.get_instance_id(),"participant_roots":registered_roots.size(),"registered_contacts":registered_contacts.size(),"registered_shared_lights":registered_lights.size(),"scope":"Entire selected actual Main board; every same-World3D light explicitly registered; no93-surface extract claim"}
-	sapling_scale_report=[]
 	var view=board.get("world_view")
-	if is_instance_valid(view) and is_instance_valid(view.get("whole_canopies")):
-		var layer=view.whole_canopies
-		for group:Dictionary in layer.groups:
-			if str(group.near.name).begins_with("sapling_"):
-				var mesh:Mesh=group.near.multimesh.mesh
-				sapling_scale_report.append({"name":str(group.near.name),"mesh_aabb_size":mesh.get_aabb().size,"global_scale":group.near.global_transform.basis.get_scale(),"active_source_rows":group.active_count,"storage_slots":group.near.multimesh.instance_count,"near_visible":group.near.visible,"far_visible":group.far.visible})
-	last_report["sapling_scale_readonly"]=sapling_scale_report
-	last_report["sapling_policy"]="Parent recipe/cache/source IDs are preserved; no removal before actual Main loader factory is explicitly bound"
 	last_report["authority_unchanged"]=_authority(main)==before
 	if not last_report.authority_unchanged:last_error="Read-only preflight changed authority";return false
 	if not inspected.ready_for_atomic_install:
@@ -129,9 +129,6 @@ func enable(main:Node)->bool:
 	var profile:Node=view.get("clear_daylight_profile")
 	if not is_instance_valid(profile) or not profile.has_method("suspend_ownership"):
 		last_error="Selected Main profile has no explicit reversible ownership handoff";return false
-	var layer:Node3D=view.get("whole_canopies")
-	if not is_instance_valid(layer) or not layer.has_method("set_saplings_hidden"):
-		last_error="Selected Main canopy factory has no persistent display-only policy";return false
 	var proxies:Dictionary=_mountain_proxies(inspected.plans)
 	if not proxies.ok:last_error=str(proxies.error);return false
 	if not profile.suspend_ownership():last_error="Main profile ownership is already suspended";return false
@@ -143,7 +140,6 @@ func enable(main:Node)->bool:
 	for site:Dictionary in preload("res://view/playable_build/settlement_content.gd").all_settlements():required_ids.append(str(site.id))
 	if not transaction.install(board,proxies.meshes,["ground","tree","building","piece","water"],registered_contacts,-1,{"shared_lights":registered_lights,"originals":materials.entries,"exclusions":excluded.slots,"required_content_ids":required_ids}):
 		last_error=transaction.last_error;uninstall();return false
-	display_layer=layer;layer.set_saplings_hidden(true)
 	var geometry:Array=[]
 	for plan:Dictionary in inspected.plans:
 		if plan.classification.kind!="preserve":geometry.append(plan.node)
@@ -157,7 +153,6 @@ func enable(main:Node)->bool:
 	last_report["active_camera_bounds"]=bounds
 	last_report["mountain_proxies"]=proxies.reports
 	last_report["main_original_material_contract"]={"styled_opaque":materials.styled_opaque_count,"preserved":materials.preserved_count}
-	last_report["sapling_policy"]="Private original factory wrapper hides near/far display after every original update_lod; recipe/cache/source IDs unchanged"
 	if _authority(main)!=before:last_error="Presentation transaction changed authority";uninstall();return false
 	requested=true;last_error="";return true
 func _cache_local_bounds(geometry:Array,proxies:Array,exclusions:Dictionary)->void:

@@ -7,6 +7,8 @@ uniform vec4 base_color : source_color = vec4(1.0);
 uniform int vertex_rule=0;
 uniform float form_low=.20;
 uniform float form_high=.30;
+uniform float metallic=0.0;
+uniform float gloss=0.0;
 varying vec3 wn;
 void vertex(){
     mat3 Nw=transpose(inverse(mat3(MODEL_MATRIX)));
@@ -22,8 +24,14 @@ void fragment(){
         float dark_trim=1.0-smoothstep(.132868,.233022,value);
         c*=encode(linear*(1.0+.16*dark_trim));
     }
-    palette_lit=c;palette_shade=shade_endpoint(c);
+    vec3 n=normalize(wn);
+    c*=mix(1.0,.80,metallic);
+    palette_lit=face_lit(c,n);palette_shade=face_shade(c,n);
     form_mask=1.0-smoothstep(form_low,form_high,dot(normalize(wn),normalize(vec3(-.55,.74,.39))));
     ALBEDO=vec3(1.0);ROUGHNESS=1.0;
 }
-void light(){DIFFUSE_LIGHT+=decode(shade_once(palette_lit,palette_shade,form_mask,1.0-ATTENUATION));}
+void light(){
+    float mask=max(form_mask,1.0-ATTENUATION);
+    vec3 c=shade_once(palette_lit,palette_shade,form_mask,1.0-ATTENUATION);
+    DIFFUSE_LIGHT+=decode(glint(c,palette_lit,mask,NORMAL,LIGHT,VIEW,metallic,gloss));
+}

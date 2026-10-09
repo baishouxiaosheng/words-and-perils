@@ -382,11 +382,14 @@ func view_river() -> bool:
 	world_view._update_camera(); return true
 
 func _make_contact_shadow(id: String, target: Vector3) -> void:
-	# Reuse the original board's soft, visual-only contact shadow recipe.
+	# Visual-only contact darkening sized to the scaled token base (0.38 x 0.62),
+	# not the unscaled legacy disc. Alpha is kept low: the TABS contact shader
+	# multiplies it by 2.15.
+	var radius := 0.38*0.62*1.1
 	var surface := SurfaceTool.new(); surface.begin(Mesh.PRIMITIVE_TRIANGLES)
 	for i in range(32):
 		var a := float(i)*TAU/32.0; var b := float(i+1)*TAU/32.0
-		for pair in [[Vector3.ZERO,0.26],[Vector3(cos(a),0,sin(a))*0.32,0.0],[Vector3(cos(b),0,sin(b))*0.32,0.0]]:
+		for pair in [[Vector3.ZERO,0.14],[Vector3(cos(a),0,sin(a))*radius,0.0],[Vector3(cos(b),0,sin(b))*radius,0.0]]:
 			surface.set_color(Color(0.10,0.09,0.07,pair[1])); surface.add_vertex(pair[0])
 	var shadow := MeshInstance3D.new(); shadow.name = "ContactShadow_"+id; shadow.mesh = surface.commit()
 	var mat := StandardMaterial3D.new(); mat.vertex_color_use_as_albedo = true; mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA; mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED; mat.cull_mode = BaseMaterial3D.CULL_DISABLED

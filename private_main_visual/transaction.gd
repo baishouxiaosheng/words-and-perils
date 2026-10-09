@@ -83,6 +83,11 @@ func styled_material(plan:Dictionary)->ShaderMaterial:
 		if value is Color:color=value
 		elif value is Vector4:color=Color(value.x,value.y,value.z,value.w)
 	result.set_shader_parameter("base_color",color)
+	if source is StandardMaterial3D:
+		result.set_shader_parameter("metallic",source.metallic)
+		result.set_shader_parameter("gloss",clampf(1.0-source.roughness,0.0,1.0))
+	elif source is ShaderMaterial and source.get_shader_parameter("stone_roughness") is float:
+		result.set_shader_parameter("gloss",clampf(1.0-float(source.get_shader_parameter("stone_roughness")),0.0,1.0))
 	result.set_shader_parameter("vertex_rule",2 if kind=="city" else 1 if kind in ["settlement_solid","settlement_road"] else 0)
 	result.set_shader_parameter("road_top_normal_up",kind=="settlement_road")
 	result.set_shader_parameter("form_low",.34 if kind in ["city","settlement_solid","settlement_road"] else .20)
@@ -136,9 +141,11 @@ func install(root:Node3D,mountain_shadow_meshes:Dictionary={},required_roles:Arr
 			proxy.transform=root.global_transform.affine_inverse()*row.node.global_transform;proxies.append(proxy)
 	sun=DirectionalLight3D.new();sun.name="SinglePaletteShadowSun"
 	sun.light_cull_mask=RECEIVER;sun.shadow_caster_mask=CASTER
-	sun.shadow_enabled=true;sun.shadow_bias=.1;sun.shadow_normal_bias=2.0
+	sun.shadow_enabled=true;sun.shadow_bias=.06;sun.shadow_normal_bias=1.4
+	# Near split gets most of the atlas; the far split is coarser by design.
 	sun.directional_shadow_mode=DirectionalLight3D.SHADOW_PARALLEL_2_SPLITS
-	sun.directional_shadow_split_1=.35;sun.directional_shadow_blend_splits=true
+	sun.directional_shadow_max_distance=40.0;sun.directional_shadow_fade_start=.85
+	sun.directional_shadow_split_1=.30;sun.directional_shadow_blend_splits=true
 	# Recovery is available from the FIRST write, including test interruption.
 	installed=true;last_error=""
 	if test_interrupt_after_steps>light_snapshots.size()+snapshots.size()+proxies.size()+1:
@@ -156,7 +163,7 @@ func install(root:Node3D,mountain_shadow_meshes:Dictionary={},required_roles:Arr
 			if steps==test_interrupt_after_steps:return cancel_install("Test-only interrupted commit; original snapshots restored")
 			continue
 		row.node.material_override=row.styled
-		var casts:bool=row.kind not in ["ground","water","mountain","settlement_road"]
+		var casts:bool=row.kind not in ["ground","water","mountain","settlement_road"] and not _tiny_detail(row)
 		row.node.layers=RECEIVER|(CASTER if casts else 0)
 		row.node.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_ON if casts else GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 		steps+=1
@@ -168,6 +175,16 @@ func install(root:Node3D,mountain_shadow_meshes:Dictionary={},required_roles:Arr
 	if steps==test_interrupt_after_steps:return cancel_install("Test-only interrupted commit; original snapshots restored")
 	sun.look_at(sun.global_position-Vector3(-.55,.74,.39).normalized(),Vector3.UP)
 	last_error="";return true
+
+## Small settlement trim and shrubs (about 0.13 tall) cast only speckle-sized,
+## detached shadows; they still receive shadows but do not cast.
+func _tiny_detail(row:Dictionary)->bool:
+	if row.kind=="vegetation":return str(row.node.name).begins_with("shrub_")
+	if row.kind not in ["city","settlement_solid"]:return false
+	var mesh:Mesh=Audit.mesh_of(row.node)
+	if mesh==null:return false
+	var size:Vector3=mesh.get_aabb().size*row.node.global_transform.basis.get_scale()
+	return maxf(size.x,maxf(size.y,size.z))<.22
 
 func uninstall()->void:
 	if not installed:return

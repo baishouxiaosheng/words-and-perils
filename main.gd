@@ -273,6 +273,8 @@ func _ready() -> void:
 	make_theme()
 	build_ui()
 	private_main_visual=PrivateMainVisual.new();private_main_visual.name="PrivateMainVisualBridge";add_child(private_main_visual)
+	# Palette shading with real two-band cast shadows is the default look; the Display menu can withdraw it.
+	private_main_visual.enable_by_default(self)
 	add_child(preload("res://view/tabletop_interaction/wasd_camera_pan.gd").new(self))
 	add_child(preload("res://view/tabletop_interaction/selection_motion.gd").new(self))
 	ui_presenter=preload("res://view/ui_motion/presenter.gd").new();ui_presenter.name="UIPresenter";add_child(ui_presenter);ui_presenter.bind(self)

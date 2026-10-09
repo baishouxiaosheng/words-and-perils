@@ -19,7 +19,9 @@ static func settings(index: int) -> Dictionary:
 	elif preset == Preset.BALANCED: msaa = Viewport.MSAA_2X
 	return {"index": preset, "label": LABELS[preset], "msaa": msaa,
 		"samples": [0, 4, 2][preset], "software_preview": preset == Preset.LOW_LOAD,
-		"legacy_shadow_size": 1024 if preset == Preset.LOW_LOAD else 4096}
+		"legacy_shadow_size": [1024, 8192, 4096][preset],
+		# Hardware 2x2 PCF has no per-pixel noise, so the thresholded two-band contour stays clean.
+		"shadow_filter": [RenderingServer.SHADOW_QUALITY_SOFT_LOW, RenderingServer.SHADOW_QUALITY_HARD, RenderingServer.SHADOW_QUALITY_HARD][preset]}
 
 static func apply(world: SubViewport, hud: Viewport, container: SubViewportContainer, index: int) -> Dictionary:
 	var profile := settings(index)
@@ -35,6 +37,7 @@ static func apply(world: SubViewport, hud: Viewport, container: SubViewportConta
 	# The styled coast uses a mipmapped baked contact field, not shadow maps.
 	# This preserves the legacy PBR preview's existing shadow setting only.
 	RenderingServer.directional_shadow_atlas_set_size(profile.legacy_shadow_size, true)
+	RenderingServer.directional_soft_shadow_filter_set_quality(profile.shadow_filter)
 	world.set_meta(&"render_quality", profile.duplicate())
 	return profile
 

@@ -1,0 +1,13 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "claim",
+  "task_id": "WP-GUI-GUARD-MANAGED-VERIFY-20261009-012",
+  "task_sha256": "aacd0ae952b07ece581193600691cb97ce9a1ebe3f80ab1c33c5915a1dce4c6c",
+  "attempt_id": "attempt-001",
+  "owner_run_id": "native-012-run-102e0a1a47b0",
+  "owner_account_id": 128279531,
+  "intake_commit": "fa2aad27cda4e7e7215c2e6ffc61a90e03ddd932",
+  "base_commit": "d3330765b84dcfd2804cea7bac2d45a7b59a52d1",
+  "claimed_utc": "2026-10-09T12:32:03.797674+00:00",
+  "authority": "Fixed authorized channel; source-only project interface acceptance auxiliary; no GUI or adoption"
+}

@@ -1,0 +1,193 @@
+{
+  "task_id": "WP-FOCUS-LOCATION-FOCUSED-20261009-009",
+  "task_sha256": "c62be06d83ca87290323b9bbf00a538c834acf978fe4356a89321dc96908ed4f",
+  "intake_commit": "00ff011dd98d99bc049e2b60e9fe88b331942d4f",
+  "schema_valid": true,
+  "all_16_inputs_verified": true,
+  "inputs": [
+    {
+      "repository_path": "project.godot",
+      "git_blob_sha": "ccdc3ce8f922b6a5af5299bac3526e2fc7c0c23e",
+      "sha256": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd",
+      "bytes": 808,
+      "role": "Immutable formal public-v30 project/distribution provenance or existing source-only restore helper; no production launch.",
+      "provenance_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+      "verified": true
+    },
+    {
+      "repository_path": "distribution_manifest.json",
+      "git_blob_sha": "1544dcc4b608a63bfc8fe8fe0875d7019a37183e",
+      "sha256": "7ec9feaa531147819801a907688d6483c0accfe7fe23d57fffa6dc2f07dc2075",
+      "bytes": 207017,
+      "role": "Immutable formal public-v30 project/distribution provenance or existing source-only restore helper; no production launch.",
+      "provenance_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+      "verified": true
+    },
+    {
+      "repository_path": "tools/restore_v30.py",
+      "git_blob_sha": "08728f5819b8f1517ebc68bd7c439cd14942bb9c",
+      "sha256": "0c7250e549bc6f7ab500a6570ad099c7b43a09a84b74d3d29a78c1d37ba7e75f",
+      "bytes": 22861,
+      "role": "Immutable formal public-v30 project/distribution provenance or existing source-only restore helper; no production launch.",
+      "provenance_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/focus-location-display/20261009-cloud-v3/CHANGE.patch",
+      "git_blob_sha": "e692e7f77c847c4f27372cbe343adfa6fbcd6ec2",
+      "sha256": "fd5ecc575d4c1f332b8f9d1d34ad9b34e77c323324ba61e9a2a6726cd8582f3e",
+      "bytes": 718,
+      "role": "Frozen independently published production candidate (test-copy materialization only).",
+      "provenance_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/focus-location-display/20261009-cloud-v3/MANIFEST.json",
+      "git_blob_sha": "236c370718a64b91593d753c163ba4a0a60d6f4f",
+      "sha256": "be6ef3ed71815ca19a9f55d8a81a948af111578a7b645cb9a067b22e285d062b",
+      "bytes": 3257,
+      "role": "Frozen independently published production candidate (test-copy materialization only).",
+      "provenance_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/focus-location-display/20261009-cloud-v3/STATIC_CHECKS.json",
+      "git_blob_sha": "c99599565db66575fbe61a8533c310cd4da0fc38",
+      "sha256": "e2b11da0ccf3be064683035ed95379702ffb57645f9cb7ad68bb24b0748d4109",
+      "bytes": 2199,
+      "role": "Frozen independently published production candidate (test-copy materialization only).",
+      "provenance_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/focus-location-display/20261009-cloud-v3/USAGE.txt",
+      "git_blob_sha": "45ca54b2921d7f0b2f47bd399a8391c1d5c6e0a6",
+      "sha256": "be35c4cb9a4d9dfddd6bc218311ce27322daae9e3e1dcef053391ac72fb3868d",
+      "bytes": 2597,
+      "role": "Frozen independently published production candidate (test-copy materialization only).",
+      "provenance_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/focus-location-display/20261009-cloud-v3/check_static.py",
+      "git_blob_sha": "db63984948f87d6cccc96448a1b776fff250a3cd",
+      "sha256": "1bcba772c4bb7106c8b89b3a34c0d49ee3a687fd896f02a9698fc63ad163b4ef",
+      "bytes": 6149,
+      "role": "Frozen independently published production candidate (test-copy materialization only).",
+      "provenance_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/focus-location-display/20261009-cloud-v3/overlay/view/playable_build/player_details.gd",
+      "git_blob_sha": "7f0d138c8028f2120f71e8c50ba9c03da2e26b62",
+      "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+      "bytes": 8409,
+      "role": "Frozen independently published production candidate (test-copy materialization only).",
+      "provenance_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/focus-location-display-tests/20261009-cloud-v3/INPUTS.json",
+      "git_blob_sha": "22f391c788b41ee769570a853612e26b198f8629",
+      "sha256": "ca9816f7eb7928b78427bf5d025a5ff80594dc8e016eeab88927697bdc6d7a26",
+      "bytes": 4595,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades.",
+      "provenance_commit": "c5e317d3f5f48145d464719c2805e2d673189be5",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/focus-location-display-tests/20261009-cloud-v3/README.txt",
+      "git_blob_sha": "b4cd6dc7a009acd37785f185650ce9e55df1c2a9",
+      "sha256": "424af2ccc8d3d178b83c44c44d3d4bdd852a933109489947b7d9392caeb0618a",
+      "bytes": 4128,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades.",
+      "provenance_commit": "c5e317d3f5f48145d464719c2805e2d673189be5",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/focus-location-display-tests/20261009-cloud-v3/STATIC_RESULT.json",
+      "git_blob_sha": "2edf410077f180b11ea76dc1162054bada340ec2",
+      "sha256": "4472d9ef01c6418e6c2c0c69a59b0c20c645badd1a61e89dd591745587859920",
+      "bytes": 6013,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades.",
+      "provenance_commit": "c5e317d3f5f48145d464719c2805e2d673189be5",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/focus-location-display-tests/20261009-cloud-v3/TEST_MANIFEST.json",
+      "git_blob_sha": "bd1a1cb94fa2d657bd8265b32b6a6334c41053b8",
+      "sha256": "87aeb3eb42595976e7b62bc2f8a0fcfdb320219e35eae99926a25af344586be0",
+      "bytes": 1834,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades.",
+      "provenance_commit": "c5e317d3f5f48145d464719c2805e2d673189be5",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/focus-location-display-tests/20261009-cloud-v3/check_static.py",
+      "git_blob_sha": "bb6735a06d8a3549442d75e57363603ac5a95776",
+      "sha256": "cfe7351974a28bc19f1dc91b98a8223b7e4576cfc213cbcb4a41b644c4d6880f",
+      "bytes": 9669,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades.",
+      "provenance_commit": "c5e317d3f5f48145d464719c2805e2d673189be5",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/focus-location-display-tests/20261009-cloud-v3/prepare.py",
+      "git_blob_sha": "8bb0a1c34442f9408ca6373a22353952a18a1b0a",
+      "sha256": "eeec76df1e38930227f1d3a33108ed18e4b6ee336456ec82bfec0f9ecd57495b",
+      "bytes": 7164,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades.",
+      "provenance_commit": "c5e317d3f5f48145d464719c2805e2d673189be5",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/focus-location-display-tests/20261009-cloud-v3/test_focus_location.gd",
+      "git_blob_sha": "5dd3de50a070a59f3fe7a1446d6baf26146a85a7",
+      "sha256": "87c99370865600ebc48e616c2b9f17fa9e62bf267277085462aba48f6a8be4da",
+      "bytes": 5952,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades.",
+      "provenance_commit": "c5e317d3f5f48145d464719c2805e2d673189be5",
+      "verified": true
+    }
+  ],
+  "activation_receipts": [
+    {
+      "commit": "3126d2eafcdd407788875d4f6909ca14ebf1a397",
+      "repository_path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/ACCEPTANCE.json",
+      "bytes": 3772,
+      "sha256": "cc89e53a90eb85e0f21831883d7a2d836a3b03c0912405b4742280d486f5083f",
+      "git_blob_sha": "77aca05ebb158d939becf20efd87dac0b91f7b1b",
+      "exact_local_remote_receipt_match": true
+    },
+    {
+      "commit": "3126d2eafcdd407788875d4f6909ca14ebf1a397",
+      "repository_path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/CONFIG_READBACK.json",
+      "bytes": 717,
+      "sha256": "2c3eea9bda528523257333f6c9436b533330dce6d10881fc2b8f6e0e8797892d",
+      "git_blob_sha": "ad969d52068a53dc5de5821887c5698f41b8b513",
+      "exact_local_remote_receipt_match": true
+    },
+    {
+      "commit": "3126d2eafcdd407788875d4f6909ca14ebf1a397",
+      "repository_path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/NATIVE_SCHEDULE_READBACK.json",
+      "bytes": 615,
+      "sha256": "2bb6890d14648562bcfdf90186fdaed27ab59fb095b6883a1d7a06141970106e",
+      "git_blob_sha": "22032638636b6dba4fa0640ddb57a73f0a55cb32",
+      "exact_local_remote_receipt_match": true
+    }
+  ],
+  "local_scope_acceptance_verified": true,
+  "source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e",
+  "formal_source_report": {
+    "source_files": 1466,
+    "literal_scripts": 347,
+    "final_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e"
+  },
+  "runtime_resources_verified": 876,
+  "host_map_files": 2324,
+  "readonly_formal_host_validation": true,
+  "restoration_invoked": false,
+  "source_host_role": "read-only authority; generated formatter host is independent, not formal v30 config",
+  "production_edits": 0,
+  "engine_runs": 0
+}

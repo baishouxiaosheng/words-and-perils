@@ -1,0 +1,9 @@
+{
+  "task_id": "WP-FOCUS-LOCATION-FOCUSED-20261009-009",
+  "task_sha256": "c62be06d83ca87290323b9bbf00a538c834acf978fe4356a89321dc96908ed4f",
+  "origin_io_sha256": "699f2008314a6cc29d65ad41d6a3b4c1967496c3087fabd55a721f517333032f",
+  "bound_io_sha256": "c04aeaf5a139613c676a9e5b32a7381a1a32520dbda210d800110fd8798db705",
+  "guard_launcher_sha256": "2ecc0cccc4cffba123fe1785ec021c3f13bd01e146d93987f9e7a376b4c57bf7",
+  "historical_scripts_unchanged": true,
+  "new_task_specific_bindings": true
+}

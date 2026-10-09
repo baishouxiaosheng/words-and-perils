@@ -1,0 +1,14 @@
+{
+  "commit": "0d3d2c7ef99422cefc620d724ad81078eddfd9c3",
+  "all_match": true,
+  "files": [
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-009/CLAIM.json",
+      "bytes": 503,
+      "sha256": "0d99aebe1afd5e21fc76c17f0cd7b0a3b82d6e1d76384cc56ffada938c80bc08",
+      "git_blob_sha": "b408caa7c8e76d79299f0de6de6f0d9a1d6cc6f9",
+      "actual_http_bytes_match": true
+    }
+  ],
+  "verified_utc": "2026-10-09T10:04:05.813301+00:00"
+}

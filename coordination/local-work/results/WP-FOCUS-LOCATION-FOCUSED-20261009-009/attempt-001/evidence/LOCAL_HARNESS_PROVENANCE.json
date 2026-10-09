@@ -1,0 +1,8 @@
+{
+  "task_id": "WP-FOCUS-LOCATION-FOCUSED-20261009-009",
+  "runner_sha256": "2498c2b06ca80314537e9bf21aac0a10a57b39ebd37993b1b17dc4977bc4a69d",
+  "known_privilege_block_not_bypassed": true,
+  "bound_package_will_not_be_reinvoked": "cfe7351974a28bc19f1dc91b98a8223b7e4576cfc213cbcb4a41b644c4d6880f",
+  "production_driver_assertion_changes": 0,
+  "earlier_results_preserved": true
+}

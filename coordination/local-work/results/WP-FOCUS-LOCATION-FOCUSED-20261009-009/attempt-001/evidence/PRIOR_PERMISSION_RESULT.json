@@ -1,0 +1,11 @@
+{
+  "label": "package_static",
+  "exit_code": 1,
+  "pid": 45112,
+  "owned_process_exited": true,
+  "stdout_bytes": 0,
+  "stderr_bytes": 1052,
+  "script_sha256": "cfe7351974a28bc19f1dc91b98a8223b7e4576cfc213cbcb4a41b644c4d6880f",
+  "engine_runs": 0,
+  "runtime_counts_not_inherited": true
+}

@@ -1,0 +1,26 @@
+{
+  "blocked_stage": "package_static",
+  "package_checker_invoked": false,
+  "bound_checker_sha256": "cfe7351974a28bc19f1dc91b98a8223b7e4576cfc213cbcb4a41b644c4d6880f",
+  "prior_real_permission_rejection_task": "WP-STATUS-CLOCK-FOCUSED-20261009-008",
+  "prior_rejection": "WinError1314 at link.symlink_to",
+  "same_bound_script_requires_unavailable_privilege": true,
+  "candidate_static_actual_result": {
+    "label": "candidate_static",
+    "exit_code": 0,
+    "pid": 55848,
+    "owned_process_exited": true,
+    "stdout_bytes": 2288,
+    "stderr_bytes": 0,
+    "script_sha256": "1bcba772c4bb7106c8b89b3a34c0d49ee3a687fd896f02a9698fc63ad163b4ef",
+    "engine_runs": 0,
+    "runtime_counts_not_inherited": true,
+    "static_count": 20,
+    "preparation_status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE"
+  },
+  "all_later_stages": "NOT_RUN",
+  "engine_invocations": 0,
+  "no_denied_operation_retry_or_alternative_route": true,
+  "no_privilege_security_assertion_changes": true,
+  "utc": "2026-10-09T10:04:12.389196+00:00"
+}

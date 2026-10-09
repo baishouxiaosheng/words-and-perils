@@ -1,0 +1,13 @@
+{
+  "task_id": "WP-GUI-GUARD-MANAGED-VERIFY-20261009-011",
+  "task_sha256": "981d78f5d0ee5051a96756a560c1ed0c91905c0e15acc4926226bc85abe97afa",
+  "phase": "blocked_preclaim_preflight",
+  "intake_commit": "40f46f55ef86acc104e0f3b6a9eec07892006175",
+  "new_test_hosts": 0,
+  "compile": "NOT_RUN",
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  },
+  "utc": "2026-10-09T11:59:34.376493+00:00"
+}

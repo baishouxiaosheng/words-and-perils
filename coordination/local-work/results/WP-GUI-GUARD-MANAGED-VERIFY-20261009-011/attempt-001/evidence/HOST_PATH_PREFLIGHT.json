@@ -1,0 +1,39 @@
+{
+  "status": "blocked",
+  "reason_code": "blocked_existing_bounded_source_only_host_entry",
+  "task_requirement": "Existing owned-process path with wall <=120s, aggregate stdout/stderr <=65536 bytes, physical budget/reserve; no Guard.Run/wrapper and no invented runner",
+  "reviewed_existing_paths": [
+    {
+      "path": "local-queue-bootstrap-20261008/native-wake-20261008-155545/Canary.ps1",
+      "sha256": "4d6dc5144dc7ea968086c1ae1e9d1484817b76bc5a4b07d3e8b88157b23fe450",
+      "timeout_seconds": 120,
+      "aggregate_output_bound_enforced": false,
+      "physical_admission_or_runtime_bound_enforced": false,
+      "usable_for_011": false
+    },
+    {
+      "path": "task010/REUSED_VERIFICATION_FUNCTIONS.py:run_python",
+      "sha256": "9c862d9cc0915eddc53a35fbbbb1fb573dcbf16cbaf00b2f728c071ebb5cb145",
+      "aggregate_output_bound_enforced": false,
+      "physical_admission_or_runtime_bound_enforced": false,
+      "usable_for_011": false
+    },
+    {
+      "path": "windows-guard-v3/Invoke-WindowsGuard.ps1",
+      "sha256": "f831a84e71f692fc851945b001cfc98092b7049fb3b48d0f5099fa49e016c5f8",
+      "uses_Guard_Run": true,
+      "task_explicitly_forbids": true,
+      "usable_for_011": false
+    }
+  ],
+  "exec_command_output_budget": "max_output_tokens truncates tool output; it does not enforce a child-process aggregate byte limit or physical budget",
+  "compile": "NOT_RUN",
+  "managed_assertions": "NOT_RUN",
+  "engine_invocations": 0,
+  "native_guard_run_calls": 0,
+  "win32_equivalence": "NOT_TESTED",
+  "new_runner_created": false,
+  "source_or_catch_modified": false,
+  "same_task_retry": false,
+  "scope_note": "Managed source-only auxiliary is accepted as project guard work under direct owner ordinary-development authority; blocker is execution path, not missing owner permission."
+}

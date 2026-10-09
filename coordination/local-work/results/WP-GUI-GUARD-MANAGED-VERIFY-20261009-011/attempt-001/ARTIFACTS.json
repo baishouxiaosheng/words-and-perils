@@ -1,0 +1,53 @@
+{
+  "task_id": "WP-GUI-GUARD-MANAGED-VERIFY-20261009-011",
+  "task_sha256": "981d78f5d0ee5051a96756a560c1ed0c91905c0e15acc4926226bc85abe97afa",
+  "base_commit": "69ba3dfda055fbf55a5b7a31eb19b2a5c70f3c32",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/evidence/TASK.json",
+      "bytes": 9845,
+      "sha256": "981d78f5d0ee5051a96756a560c1ed0c91905c0e15acc4926226bc85abe97afa"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/evidence/INPUT_VERIFICATION.json",
+      "bytes": 2232,
+      "sha256": "2727df090f25e93b656e0d992498240241d1b15b08d6dc0fb55e6fea9e43dc5d"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/evidence/SOURCE_AUTHENTICATION.json",
+      "bytes": 362,
+      "sha256": "2fb8ec4ec9094955d48b5ce6928ebe125eb8c2ef91b6c5a7c64113667c526498"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/evidence/HOST_PATH_PREFLIGHT.json",
+      "bytes": 1852,
+      "sha256": "2b30d1cd823c31270d88a253007f20553f94796c59a81e5d0e0ad78ce8bafd4c"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/evidence/PREPARATION_CHECKPOINT.json",
+      "bytes": 429,
+      "sha256": "07ba5b736d687a5b4b61978083e95de7541a904dc9e319547c7a15146cb6a5f0"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/evidence/PREDECESSOR_RECONCILIATION.json",
+      "bytes": 297,
+      "sha256": "1b4dfa13077d95e5bb7c09aea0191518f587dcf77a1f8047ca59621bc75c4c8c"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/evidence/GATE_A.json",
+      "bytes": 680,
+      "sha256": "5077ea1b8c6d16a983f7610d665aace71c900d288536b746f07655a2819128be"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/evidence/LOCK_OWNER.json",
+      "bytes": 170,
+      "sha256": "9e0a40c94911a8b1c19121e9e5eb14475e540c9e4b7ca371faaa5f0c5b3fc8c7"
+    }
+  ],
+  "compile": "NOT_RUN",
+  "managed_assertions": "NOT_RUN",
+  "source_only_host_invocations": 0,
+  "engine_invocations": 0,
+  "candidate_adopted": false
+}

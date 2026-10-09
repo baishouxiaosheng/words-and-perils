@@ -1,0 +1,21 @@
+{
+  "boundary": "A",
+  "head": "40f46f55ef86acc104e0f3b6a9eec07892006175",
+  "local_stop_absent": true,
+  "remote_stop_absent": true,
+  "control": {
+    "protocol": "words-and-perils-local-work/v1",
+    "kind": "control",
+    "queue_enabled": true,
+    "stop": false,
+    "resume_generation": 0,
+    "reason": "First bounded Natural write-result task is prepared. This control does not prove local automation is enabled."
+  },
+  "trusted_pins_verified": true,
+  "exclusive_lock_held": true,
+  "task_bytes_unchanged": true,
+  "no_other_claim": true,
+  "publication_only": true,
+  "execution_admission": "BLOCKED",
+  "utc": "2026-10-09T12:02:03.628137+00:00"
+}

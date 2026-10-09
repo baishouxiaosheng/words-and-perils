@@ -1,0 +1,8 @@
+{
+  "task010_terminal": true,
+  "task010_not_rerun": true,
+  "task010_cleanup_previous_verified": true,
+  "current_exclusive_lock_acquired": true,
+  "task011_claim_created": false,
+  "reason": "Blocked execution preflight; protocol permits independent blocked reports before claim/ACK."
+}

@@ -1,0 +1,8 @@
+{
+  "original_failure_preserved": true,
+  "change": "Read immutable commit tree blob ID then git cat-file blob, avoiding Windows revision-path filename ambiguity",
+  "prior_engine_runs": 0,
+  "prior_claim_created": false,
+  "same_source_objects": true,
+  "source_or_assertion_changes": false
+}

@@ -1,0 +1,11 @@
+{
+  "label": "candidate_static",
+  "exit_code": 1,
+  "pid": 25592,
+  "owned_process_exited": true,
+  "stdout_bytes": 0,
+  "stderr_bytes": 676,
+  "script_sha256": "33b0fc16c97be739ce883da61848fbfff0282bab2b673ddc67a52a1bbe051f08",
+  "engine_runs": 0,
+  "runtime_counts_not_inherited": true
+}

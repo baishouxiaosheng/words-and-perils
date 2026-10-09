@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "E:\WordsAndPerils-Tasks\candidate-20261008-ea04d75a\evidence\WP-STATUS-CLOCK-FOCUSED-20261009-004\run-02\inputs\candidates\status-clock-display\20261009-cloud-v1\check_static.py", line 44, in <module>
+    check(target.read_bytes() == after, "actual patch replay equals candidate")
+  File "E:\WordsAndPerils-Tasks\candidate-20261008-ea04d75a\evidence\WP-STATUS-CLOCK-FOCUSED-20261009-004\run-02\inputs\candidates\status-clock-display\20261009-cloud-v1\check_static.py", line 11, in check
+    if not ok: raise AssertionError(label)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: actual patch replay equals candidate

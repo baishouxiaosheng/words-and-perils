@@ -1,0 +1,6 @@
+{
+  "error": "Python candidate_static failed exit 1; preserve actual logs and stop later stages",
+  "completed_engine_runs": 0,
+  "no_stage_retry": true,
+  "utc": "2026-10-09T07:43:47.949523+00:00"
+}

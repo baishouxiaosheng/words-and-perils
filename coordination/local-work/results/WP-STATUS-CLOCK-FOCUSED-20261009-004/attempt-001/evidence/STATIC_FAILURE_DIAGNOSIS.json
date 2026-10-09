@@ -1,0 +1,19 @@
+{
+  "static_result": "FAILED",
+  "failed_assertion": "actual patch replay equals candidate",
+  "engine_runs": 0,
+  "later_stages": "NOT_RUN",
+  "same_task_retry": false,
+  "source_original_sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+  "candidate_sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+  "patch_sha256": "3467106b110e666e95704aaa5542b2d6feec45d374f7b190847527200a5863f4",
+  "source_CRLF_count": 0,
+  "candidate_CRLF_count": 0,
+  "patch_CRLF_count": 0,
+  "readonly_in_memory_patch_hunk_reconstruction_matches_candidate": true,
+  "readonly_in_memory_reconstruction_is_not_replacement_for_failed_git_runtime": true,
+  "git_newline_config_stdout": "file:C:/Program Files/Git/etc/gitconfig\tcore.autocrlf true\n",
+  "git_newline_config_stderr": "",
+  "git_newline_config_exit": 0,
+  "reason_inference": "If in-memory hunks match and core.autocrlf=true, Git working-tree conversion is a suspected cause; failed checker temporary replay output was not retained, so exact produced bytes are unavailable. No settings changed or rerun performed."
+}

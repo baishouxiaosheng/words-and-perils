@@ -1,0 +1,6 @@
+{
+  "error": "fatal: failed to stat '3126d2eafcdd407788875d4f6909ca14ebf1a397:coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/ACCEPTANCE.json': Filename too long\n",
+  "engine_runs": 0,
+  "no_retry_or_unknown_changes": true,
+  "utc": "2026-10-09T07:36:30.458168+00:00"
+}

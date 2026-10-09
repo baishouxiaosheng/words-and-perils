@@ -1,0 +1,24 @@
+{
+  "task_id": "WP-STATUS-CLOCK-FOCUSED-20261009-004",
+  "task_sha256": "e119a50952a87807b80613a2d0ba220d0b848a5272d20931a3e436cfddff3f14",
+  "status": "blocked",
+  "claim_commit": "851f59dd87bf47e455d27cafc3ba85d10820178c",
+  "ack_commit": "f01b107be6a585e140633c6f60edb5b291d76ffa",
+  "completed_runs": [],
+  "static_runs": [
+    {
+      "label": "candidate_static",
+      "exit_code": 1,
+      "pid": 25592,
+      "owned_process_exited": true,
+      "stdout_bytes": 0,
+      "stderr_bytes": 676,
+      "script_sha256": "33b0fc16c97be739ce883da61848fbfff0282bab2b673ddc67a52a1bbe051f08",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true
+    }
+  ],
+  "maximum_engine_invocations": 2,
+  "same_task_rerun_forbidden": true,
+  "automation_enabled": true
+}

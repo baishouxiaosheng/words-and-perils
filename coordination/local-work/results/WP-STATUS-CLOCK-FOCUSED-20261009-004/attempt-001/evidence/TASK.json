@@ -1,0 +1,367 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "task",
+  "task_id": "WP-STATUS-CLOCK-FOCUSED-20261009-004",
+  "status": "ready",
+  "title": "Independent clock-display formatter parse and source-bound unit verification",
+  "base_commit": "5afe30c3be18bf686860cb4a7e98111dc52b984a",
+  "candidate_root": "candidates/clock-display-focused-verification/20261009-local-004",
+  "inputs": [
+    {
+      "repository_path": "project.godot",
+      "git_blob_sha": "ccdc3ce8f922b6a5af5299bac3526e2fc7c0c23e",
+      "sha256": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd",
+      "bytes": 808,
+      "role": "Immutable formal public-v30 project/distribution provenance or existing source-only restore helper; no production launch."
+    },
+    {
+      "repository_path": "distribution_manifest.json",
+      "git_blob_sha": "1544dcc4b608a63bfc8fe8fe0875d7019a37183e",
+      "sha256": "7ec9feaa531147819801a907688d6483c0accfe7fe23d57fffa6dc2f07dc2075",
+      "bytes": 207017,
+      "role": "Immutable formal public-v30 project/distribution provenance or existing source-only restore helper; no production launch."
+    },
+    {
+      "repository_path": "tools/restore_v30.py",
+      "git_blob_sha": "08728f5819b8f1517ebc68bd7c439cd14942bb9c",
+      "sha256": "0c7250e549bc6f7ab500a6570ad099c7b43a09a84b74d3d29a78c1d37ba7e75f",
+      "bytes": 22861,
+      "role": "Immutable formal public-v30 project/distribution provenance or existing source-only restore helper; no production launch."
+    },
+    {
+      "repository_path": "candidates/status-clock-display/20261009-cloud-v1/CHANGE.patch",
+      "git_blob_sha": "c557427a75688f976e55f7a729ca256b0ba2ca16",
+      "sha256": "3467106b110e666e95704aaa5542b2d6feec45d374f7b190847527200a5863f4",
+      "bytes": 1140,
+      "role": "Frozen independently published production candidate (test-copy materialization only)."
+    },
+    {
+      "repository_path": "candidates/status-clock-display/20261009-cloud-v1/MANIFEST.json",
+      "git_blob_sha": "2c3d09088d0460c2eb5e853d93912860a9d13a93",
+      "sha256": "d1db5571176b2c597f4b0cd063acb7b653b3c295baf8e33336c06ac94d37fb9a",
+      "bytes": 3429,
+      "role": "Frozen independently published production candidate (test-copy materialization only)."
+    },
+    {
+      "repository_path": "candidates/status-clock-display/20261009-cloud-v1/STATIC_CHECKS.json",
+      "git_blob_sha": "cb7acf8a5dfc5672fbcd9678fc9a9ce3b6d0370d",
+      "sha256": "dfd079c1652f0237faef5c6f37b87a41aa31e5482be89fa7f56197c8cd06949e",
+      "bytes": 2516,
+      "role": "Frozen independently published production candidate (test-copy materialization only)."
+    },
+    {
+      "repository_path": "candidates/status-clock-display/20261009-cloud-v1/USAGE.txt",
+      "git_blob_sha": "2a45aa817fef54681c6cca92e9f8e4c4dba57593",
+      "sha256": "e28f98cae14ff5dbe579f508e21a16070ca10ba6429d6b22d2b8e4b0334e29a3",
+      "bytes": 1832,
+      "role": "Frozen independently published production candidate (test-copy materialization only)."
+    },
+    {
+      "repository_path": "candidates/status-clock-display/20261009-cloud-v1/check_static.py",
+      "git_blob_sha": "12dfb580a0ed1ef8f54731dfe38d8de03349e923",
+      "sha256": "33b0fc16c97be739ce883da61848fbfff0282bab2b673ddc67a52a1bbe051f08",
+      "bytes": 3201,
+      "role": "Frozen independently published production candidate (test-copy materialization only)."
+    },
+    {
+      "repository_path": "candidates/status-clock-display/20261009-cloud-v1/overlay/view/playable_build/player_details.gd",
+      "git_blob_sha": "4ae0fe8b7b0780620cab4290747a6da8e71c5025",
+      "sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+      "bytes": 8902,
+      "role": "Frozen independently published production candidate (test-copy materialization only)."
+    },
+    {
+      "repository_path": "candidates/status-clock-display-tests/20261009-cloud-v1/INPUTS.json",
+      "git_blob_sha": "8a9c5bcefaf66b76657d8aea8e8677ed3e0f9472",
+      "sha256": "b9403277dc1e441999fe3426d79466f912d5de55aff0691cbe611a42be0fa454",
+      "bytes": 4782,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades."
+    },
+    {
+      "repository_path": "candidates/status-clock-display-tests/20261009-cloud-v1/README.txt",
+      "git_blob_sha": "fc2c2060cb325ef7ccaabad05421e89e242facc9",
+      "sha256": "c05c59451a7e3e08e81871b0fb229234aa04f42f8c8fda1efb4de0aab166409a",
+      "bytes": 3265,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades."
+    },
+    {
+      "repository_path": "candidates/status-clock-display-tests/20261009-cloud-v1/STATIC_RESULT.json",
+      "git_blob_sha": "07a1d3fa8810f793544e10044ebe26987a97961c",
+      "sha256": "7c1162177837d5189d89b88cbac595633f0531f586aabe5063bb641df80526a3",
+      "bytes": 6356,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades."
+    },
+    {
+      "repository_path": "candidates/status-clock-display-tests/20261009-cloud-v1/TEST_MANIFEST.json",
+      "git_blob_sha": "9078f34878bde10aa8496c4898c9964ac1e579d9",
+      "sha256": "f26ffae586d579026baaae22a013dff2ee0e0859a157cef7ec6df2417fbe384b",
+      "bytes": 1877,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades."
+    },
+    {
+      "repository_path": "candidates/status-clock-display-tests/20261009-cloud-v1/check_static.py",
+      "git_blob_sha": "bb6735a06d8a3549442d75e57363603ac5a95776",
+      "sha256": "cfe7351974a28bc19f1dc91b98a8223b7e4576cfc213cbcb4a41b644c4d6880f",
+      "bytes": 9669,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades."
+    },
+    {
+      "repository_path": "candidates/status-clock-display-tests/20261009-cloud-v1/prepare.py",
+      "git_blob_sha": "8bb0a1c34442f9408ca6373a22353952a18a1b0a",
+      "sha256": "eeec76df1e38930227f1d3a33108ed18e4b6ee336456ec82bfec0f9ecd57495b",
+      "bytes": 7164,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades."
+    },
+    {
+      "repository_path": "candidates/status-clock-display-tests/20261009-cloud-v1/test_clock_display.gd",
+      "git_blob_sha": "0295c0e2f7009dde3cca3aba1e767daf50959cef",
+      "sha256": "c0d8ca00ca919792e164150d8d4bf70aeb8321e1579c322095e30d4ea2b82486",
+      "bytes": 8643,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades."
+    }
+  ],
+  "baseline_project_pins": {
+    "core/ai_gm_rebuilt/canonical.gd": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c",
+    "core/ai_gm_rebuilt/hooks.gd": "2afc8ba22cc4cb9a4df81ce8f8779193a652f8cd5ff49b2156f6899674ee84ec",
+    "core/status_foundation/canonical.gd": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c",
+    "core/status_foundation/catalog.gd": "8effb5d5e6094cdb0f5413a697ae3adb4e7d86429c31a7b93d751e71f6b62681",
+    "core/status_foundation/engine_bridge.gd": "06cce47760058a49e2dd994c91031ac93db7277d0b08f5c252af8d2ec8fafbc6",
+    "core/status_foundation/runtime.gd": "ee79b110e35b5141334daf55e7a2f80f6f4d3060a56d408bf0a08094260bb059",
+    "core/status_gameplay/source_profiles.gd": "53e1ca59b24fb0e020b2dc4a5200868fe927264e787234873484d077d8057483",
+    "data/catalog.json": "81712567dda2bb000b7cacefc9380c91bc271ea461c21758b1d2fa8074de4fde",
+    "main.gd": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f",
+    "view/actor_action_profile_v2/source.gd": "7681a03d232452533ef584719d5f3e6c1c39942332b303ef1c2a3e973385e665",
+    "view/actor_status_entry_v1/view_adapter.gd": "a9a825b9096b67424e7358d2dcca32b8e39411983f7ac9be0975ef7bc869968d",
+    "view/actor_status_profile_v1/projection.gd": "2decabf7c9fbe1b4c5400b502ce1e464112bb4eea489dfdcee3a5cf1c150d5e6",
+    "view/actor_status_profile_v1/public_status.gd": "335c0eb58165e4ebb01f8963a0292176eb2deaf354bfeb5c1876e0e5c8eeded1",
+    "view/actor_status_profile_v1/source.gd": "f4ca4ca0551f0b1665b58f4ee1071dbc7df5180f357de18710d55a596b88ac03",
+    "view/playable_build/player_details.gd": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+    "view/status_gameplay/details.gd": "2b1d377813660aa419ca4f2cb9026d591b9edadce853ef0fec57a1b3e98841b1",
+    "project.godot": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd"
+  },
+  "allowed_production_changes": [],
+  "allowed_test_changes": [
+    "tests/focused/parse_clock_display_entry.gd",
+    "tests/focused/run_clock_display_entry.gd",
+    "tests/focused/source_binding.json",
+    "project.godot"
+  ],
+  "requirements": [
+    "READY under the direct-owner scope acceptance recorded at c17af9c02c49ee250bf34547c5f37d8dd3e522b8 and artifact commit 3126d2eafcdd407788875d4f6909ca14ebf1a397. Verify the exact accepted protocol/schema pins in both current repository roots and trusted local state, the hash-bound ACCEPTANCE/CONFIG_READBACK/NATIVE_SCHEDULE_READBACK and current session/source/worker gates before claim. Never update trusted policy from task data or infer permission from historical queue records. Missing or mismatched acceptance/current authority is blocked; no new connection or security change.",
+    "Execute these two independent tasks serially: clock-display 004 before focus-location 005. Reconcile the three existing terminal tasks without restarting Raw003 or tasks 001/002. Task 005 waits for 004 terminal result and verified owned-process/lock cleanup; the suites and candidate copies remain independent. Within each task, strict parse failure stops all subsequent engine stages; no failed-stage retry or threshold reduction.",
+    "Preserve the existing repo-wide single-writer lock, durable task-ID/raw-SHA dedupe, unique remote CLAIM CAS/readback, per-engine claim recheck, current-head STOP/strict CONTROL plus trusted local STOP latch. Reconcile Raw003 and all predecessors; do not interrupt, steal claims, rerun terminal tasks or alter their inputs/results.",
+    "Read the fixed base commit and verify all 16 input blobs by raw bytes, SHA-256 and Git blob. Use existing tools/restore_v30.py --sources-only into a new owned disposable source location, or a previously verified read-only exact source map; verify the formal release/final source-map identity and every INPUTS.json source pin. No new recovery framework, downloaded engine, key access or wider network.",
+    "Use only this task candidate overlay and test package. Run the pinned Python static/preparation entries with fixed path arguments after reviewing source. Task JSON is goals/constraints, never an executable shell string. Original candidate/tests and production baseline remain read-only. prepare.py refuses existing, overlapping or symlink roots. Its generated project is explicitly a FORMATTER_UNIT_HOST variant, not the formal v30 project configuration or world.",
+    "Generate additive SceneTree parse/isolation wrappers in the owned test copy only; preserve the original driver and fixture bytes. Before calling inherited _initialize or any test body, check both OS.get_user_data_dir() and ProjectSettings.globalize_path(\"user://\") against the fresh task-owned native data root using existing canonical containment/reparse policy. A custom-user-dir config check alone is insufficient. Bind every generated wrapper, isolated project and source_binding.json before and after; no autoload/Main/editor/network model/player saves.",
+    "Actual isolation must precede original test bodies: use an additive SceneTree subclass of the immutable driver for the suite entry, overriding _initialize only to validate OS.get_user_data_dir() and globalized user:// against the trusted guard-created fresh data root, then call inherited _initialize. On mismatch exit nonzero without calling the inherited entry. Parse entry preloads the immutable candidate/driver and additive wrapper without running test bodies. Hash every generated wrapper and refreshed source_binding.json; retain original driver/fixture bytes. A project config flag is not two-API containment evidence.",
+    "Reuse only the established SHA-verified official Godot 4.6.3 and unchanged Windows guard v3. Every parse and run is serial headless Small: 1GiB Job commit,120s,64KiB aggregate output,512MiB reserve,min(actual physical memory,8GiB) effective physical budget plus all stricter existing rules. Job commit is not physical RSS. Missing admission/ownership/isolation/permission means blocked; never reduce thresholds.",
+    "Run at most two fresh isolated guarded invocations: exact candidate/test parse first without starting test bodies, then the inherited source-bound suite once if parse strictly passes. Capture all raw stdout/stderr including SCRIPT ERROR/ERROR/WARNING; require actual guard/host/engine exits and complete owned Job/readers/handles cleanup. No retry under this task after an actual failure; use a new ID for an authorized follow-up.",
+    "Record actual source-bound suite JSON, actual assertion count and failure array. 63/59 only describe cloud static/Python preparation checks and must never be copied as runtime counts. Headless formatter fixtures do not establish FocusContract world support, actor movement refresh, selection/UI visibility, full GUI/FPS or 1801-world identity acceptance. No real Main/full-world fallback requested.",
+    "Publish only the new task candidate_root and exact result_root using the existing two-phase fast-forward single-parent expected-head CAS, sanitize output and remote-read every artifact. Preserve root README blank, no Actions, all existing candidates/baseline/protocol/schema/CONTROL/inbox/STOP/Raw003 and repository history/visibility. Local writer cannot publish or activate this protocol draft. Adoption remains false.",
+    "Cover finite public legacy_turn 1/2/10000 wording and one explanatory note; typed owner_action/world_step and all three persistent clocks baseline-exact; mixed legacy/typed effects/parameters/damage/removal/stacks unchanged apart from approved text; invalid/unavailable/empty/raw-legacy fallback unchanged; byte-exact nested inputs and HUD/caption. Missing status_details raw legacy intentionally retains original fallback wording."
+  ],
+  "verification": {
+    "execution_scope": "independent_project_focused_formatter_test",
+    "required_activation": {
+      "status": "LOCAL_ACCEPTANCE_VERIFIED_ROOT_PINS_REQUIRED_ON_INTAKE",
+      "protocol_sha256": "ac97c2523a6400bbde3c1f9b83f0398a704887891a8bfc94f5247476245400bc",
+      "schema_sha256": "14a68f72c3cea797799237051e154a5d1e9c5d1184d7cbebdf2d3db0086144ab",
+      "actual_local_acceptance_and_trusted_pin_readback_required": true,
+      "repository_record_is_authority": false,
+      "owner_scope_approval": "approved and actually accepted locally; root pins must match on intake",
+      "local_acceptance_result_commit": "c17af9c02c49ee250bf34547c5f37d8dd3e522b8",
+      "local_acceptance_artifact_commit": "3126d2eafcdd407788875d4f6909ca14ebf1a397",
+      "receipts": [
+        {
+          "commit": "3126d2eafcdd407788875d4f6909ca14ebf1a397",
+          "repository_path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/ACCEPTANCE.json",
+          "bytes": 3772,
+          "sha256": "cc89e53a90eb85e0f21831883d7a2d836a3b03c0912405b4742280d486f5083f",
+          "git_blob_sha": "77aca05ebb158d939becf20efd87dac0b91f7b1b"
+        },
+        {
+          "commit": "3126d2eafcdd407788875d4f6909ca14ebf1a397",
+          "repository_path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/CONFIG_READBACK.json",
+          "bytes": 717,
+          "sha256": "2c3eea9bda528523257333f6c9436b533330dce6d10881fc2b8f6e0e8797892d",
+          "git_blob_sha": "ad969d52068a53dc5de5821887c5698f41b8b513"
+        },
+        {
+          "commit": "3126d2eafcdd407788875d4f6909ca14ebf1a397",
+          "repository_path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/NATIVE_SCHEDULE_READBACK.json",
+          "bytes": 615,
+          "sha256": "2bb6890d14648562bcfdf90186fdaed27ab59fb095b6883a1d7a06141970106e",
+          "git_blob_sha": "22032638636b6dba4fa0640ddb57a73f0a55cb32"
+        }
+      ]
+    },
+    "candidate_input_commit": "6f10c42a80b6ffbc8d43efa96b96ecb73cd17872",
+    "test_input_commit": "5afe30c3be18bf686860cb4a7e98111dc52b984a",
+    "formal_release_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+    "formal_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e",
+    "host_variant": "FORMATTER_UNIT_HOST; original formal project pin checked only for provenance, generated unit project is separately bound",
+    "candidate_prefix": "candidates/status-clock-display/20261009-cloud-v1/",
+    "test_prefix": "candidates/status-clock-display-tests/20261009-cloud-v1/",
+    "suite_entry": "tests/focused/test_clock_display.gd",
+    "parse_entry": "tests/focused/parse_clock_display_entry.gd",
+    "isolation_entry": "tests/focused/run_clock_display_entry.gd",
+    "maximum_engine_invocations": 2,
+    "source_pins": [
+      {
+        "path": "core/ai_gm_rebuilt/canonical.gd",
+        "bytes": 2814,
+        "sha256": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c"
+      },
+      {
+        "path": "core/ai_gm_rebuilt/hooks.gd",
+        "bytes": 3111,
+        "sha256": "2afc8ba22cc4cb9a4df81ce8f8779193a652f8cd5ff49b2156f6899674ee84ec"
+      },
+      {
+        "path": "core/status_foundation/canonical.gd",
+        "bytes": 2814,
+        "sha256": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c"
+      },
+      {
+        "path": "core/status_foundation/catalog.gd",
+        "bytes": 10981,
+        "sha256": "8effb5d5e6094cdb0f5413a697ae3adb4e7d86429c31a7b93d751e71f6b62681"
+      },
+      {
+        "path": "core/status_foundation/engine_bridge.gd",
+        "bytes": 10674,
+        "sha256": "06cce47760058a49e2dd994c91031ac93db7277d0b08f5c252af8d2ec8fafbc6"
+      },
+      {
+        "path": "core/status_foundation/runtime.gd",
+        "bytes": 23309,
+        "sha256": "ee79b110e35b5141334daf55e7a2f80f6f4d3060a56d408bf0a08094260bb059"
+      },
+      {
+        "path": "core/status_gameplay/source_profiles.gd",
+        "bytes": 2571,
+        "sha256": "53e1ca59b24fb0e020b2dc4a5200868fe927264e787234873484d077d8057483"
+      },
+      {
+        "path": "data/catalog.json",
+        "bytes": 218084,
+        "sha256": "81712567dda2bb000b7cacefc9380c91bc271ea461c21758b1d2fa8074de4fde"
+      },
+      {
+        "path": "main.gd",
+        "bytes": 203707,
+        "sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f"
+      },
+      {
+        "path": "view/actor_action_profile_v2/source.gd",
+        "bytes": 12173,
+        "sha256": "7681a03d232452533ef584719d5f3e6c1c39942332b303ef1c2a3e973385e665"
+      },
+      {
+        "path": "view/actor_status_entry_v1/view_adapter.gd",
+        "bytes": 28301,
+        "sha256": "a9a825b9096b67424e7358d2dcca32b8e39411983f7ac9be0975ef7bc869968d"
+      },
+      {
+        "path": "view/actor_status_profile_v1/projection.gd",
+        "bytes": 3231,
+        "sha256": "2decabf7c9fbe1b4c5400b502ce1e464112bb4eea489dfdcee3a5cf1c150d5e6"
+      },
+      {
+        "path": "view/actor_status_profile_v1/public_status.gd",
+        "bytes": 6400,
+        "sha256": "335c0eb58165e4ebb01f8963a0292176eb2deaf354bfeb5c1876e0e5c8eeded1"
+      },
+      {
+        "path": "view/actor_status_profile_v1/source.gd",
+        "bytes": 10327,
+        "sha256": "f4ca4ca0551f0b1665b58f4ee1071dbc7df5180f357de18710d55a596b88ac03"
+      },
+      {
+        "path": "view/playable_build/player_details.gd",
+        "bytes": 8199,
+        "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3"
+      },
+      {
+        "path": "view/status_gameplay/details.gd",
+        "bytes": 13184,
+        "sha256": "2b1d377813660aa419ca4f2cb9026d591b9edadce853ef0fec57a1b3e98841b1"
+      }
+    ],
+    "host_dependency_paths": [
+      "view/playable_build/player_details.gd",
+      "view/status_gameplay/details.gd",
+      "core/status_gameplay/source_profiles.gd",
+      "core/status_foundation/runtime.gd",
+      "core/status_foundation/canonical.gd",
+      "core/status_foundation/catalog.gd",
+      "core/ai_gm_rebuilt/canonical.gd",
+      "data/catalog.json"
+    ],
+    "original_driver_sha256": "c0d8ca00ca919792e164150d8d4bf70aeb8321e1579c322095e30d4ea2b82486",
+    "candidate_overlay_sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+    "source_coverage_blocks": [
+      "legacy_finite",
+      "typed_owner",
+      "typed_world",
+      "persistent",
+      "mixed_once",
+      "invalid_fallback",
+      "unavailable_empty_raw",
+      "description_no_mutation"
+    ],
+    "expected_suite_name": "clock_display_formatter_unit",
+    "expected_summary_status": "UNIT_PASSED",
+    "expected_failure_count": 0,
+    "assertion_count": "Report actual bound driver count, never cloud static 63/59",
+    "guard_provenance": {
+      "guard_source_sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+      "guard_wrapper_sha256": "f831a84e71f692fc851945b001cfc98092b7049fb3b48d0f5099fa49e016c5f8"
+    },
+    "required_evidence": [
+      "actual_scope_acceptance_and_local_trusted_pins",
+      "current_connection_source_worker_STOP_and_claim_gates",
+      "existing_engine_and_guard_hashes",
+      "per_run_two_API_user_isolation",
+      "before_after_source_and_generated_wrapper_maps",
+      "complete_stdout_stderr_ERROR_WARNING_classification",
+      "actual_suite_summary_and_assertion_count",
+      "actual_guard_host_engine_exit_and_Job_readers_owned_cleanup",
+      "two_phase_artifact_remote_readback"
+    ],
+    "main_ui_visibility_verified": false,
+    "insufficient_outcome": "blocked for prerequisite gaps; failed for actual parse/suite/guard failure; stopped for STOP; INCONCLUSIVE is a check outcome, never a runtime pass",
+    "execution_order": [
+      "validate_current_pins_acceptance_STOP_CONTROL_lock_dedupe",
+      "claim_CAS_and_exact_owner_readback",
+      "verify_all_source_test_and_generated_host_hashes",
+      "guarded_isolated_parse_without_test_bodies",
+      "guarded_isolated_suite_only_after_strict_parse_pass",
+      "verify_original_sources_and_owned_Job_reader_handle_host_exit",
+      "two_phase_nonforce_publication_and_remote_readback"
+    ],
+    "dispatch_order": 1,
+    "predecessor_terminal_task_id": null,
+    "failure_rule": "A parse/guard/isolation/source/suite failure stops later engine stages for this task; keep failed evidence and publish the actual terminal result. No inherited runtime grade or same-task rerun."
+  },
+  "preserve": [
+    "Both independently published candidate/test packages",
+    "Formal v30 production project/source and actual player saves",
+    "Existing Raw003 and predecessor lock/claims/ledger/results",
+    "Unchanged guard/safety policy, trusted STOP and publication boundary",
+    "Blank README, no Actions, history/visibility, no formal adoption"
+  ],
+  "out_of_scope": [
+    "Automatic Main/full GUI/FPS/full-game/liveAI execution",
+    "Formal adoption or combining clock/location/Raw/Natural/status-death candidates",
+    "Changing trusted pins via task, connection permissions, system security, services or credentials",
+    "Queue CONTROL/STOP/inbox/protocol/schema writes by local writer",
+    "Replacing test fixtures/assertions/tolerances, lowering guard thresholds or engine installation"
+  ],
+  "publication": {
+    "result_root": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004",
+    "adopted": false,
+    "phases": "A: new task candidate/evidence plus ARTIFACTS.json, expected-head non-force CAS and exact remote readback. B: schema-valid RESULT/SUMMARY referring to phase-A commit/manifest hash; no self-referential receipt."
+  },
+  "supersedes": "WP-STATUS-CLOCK-FOCUSED-20261009-D01"
+}

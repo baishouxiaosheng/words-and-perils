@@ -44,4 +44,27 @@ void fragment(){
  ALBEDO=vec3(1.0);ROUGHNESS=1.0;
 }
 
-void light(){DIFFUSE_LIGHT+=decode(shade_once(palette_lit,palette_shade,form_mask,1.0-ATTENUATION));}
+// Water-only projection AA candidate. Original ripple/geometry/palette unchanged.
+// Filtered real visibility retains two exact endpoints; threshold footprint is
+// approximately one raster pixel instead of the shared .020 scalar cap.
+uniform bool water_projection_antialiasing=false;
+vec3 shade_water_projection_once(vec3 lit,vec3 shade,float form,float cast){
+ float mask=clamp(max(form,cast),0.0,1.0);
+ if(shadow_debug==1)return vec3(form,cast,mask);
+ if(shadow_debug==2)return vec3(1.0-cast);
+ if(shadow_debug==3)return vec3(form);
+ float derivative=max(fwidth(mask),1.0/255.0);
+ float aa=clamp(.5*derivative,1.0/255.0,.5);
+ float two_band=smoothstep(.5-aa,.5+aa,mask);
+ vec3 base=mix(lit,shade,two_band);
+ // Preserve the original once-unioned coloured narrow contour expression.
+ float edge_distance=(mask-.5)/derivative;
+ float band=smoothstep(.0,.15,edge_distance)*(1.0-smoothstep(.85,1.25,edge_distance));
+ vec3 edge=saturated(shade,1.45);
+ return clamp(mix(base,edge,band),vec3(0.0),vec3(1.0));
+}
+void light(){
+ vec3 c=water_projection_antialiasing ? shade_water_projection_once(palette_lit,palette_shade,form_mask,1.0-ATTENUATION) : shade_once(palette_lit,palette_shade,form_mask,1.0-ATTENUATION);
+ DIFFUSE_LIGHT+=decode(c);
+}
+

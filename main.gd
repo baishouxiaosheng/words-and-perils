@@ -279,6 +279,9 @@ func _ready() -> void:
 	history_motion=ui_presenter;popup_motion=ui_presenter
 	for popup:Window in [tools_menu.get_popup(),adventure_menu,advanced_menu,display_menu,focus_choice_popup,advanced_dialog,runtime_connection_panel.settings_dialog,playtest_reset_dialog,scene_test_confirm_dialog,inventory_dialog,focus_details_dialog,effects_dialog,world_dialog,help_dialog,import_dialog,demo_confirm_dialog,restart_confirm_dialog,journal_drawer,v3_setup_dialog,npc_notes_dialog]:popup_motion.watch(popup)
 	add_child(preload("res://view/tabletop_interaction/offline_move_demo.gd").new(self))
+	var hud_motion := preload("res://view/ui_motion/hud_panel_motion.gd").new()
+	add_child(hud_motion)
+	hud_motion.bind_control(self, action_panel)
 	# Default startup replaces this initial legacy board before the first frame.
 	# Build its terrain only when requested, or if the coast cannot be opened.
 	var legacy_start := startup_legacy or OS.has_environment("FOGBANK_LEGACY_START") or "--legacy-start" in OS.get_cmdline_user_args()
@@ -733,7 +736,11 @@ func toggle_overview() -> void:
 
 func set_map_dialogue_hidden(hidden: bool) -> void:
 	dialogue_hidden_for_map=hidden
-	action_panel.visible=not hidden
+	if has_node("HUDPanelMotion"):
+		get_node("HUDPanelMotion").call("set_hidden", hidden)
+	else:
+		# build_ui runs before motion adapters are bound.
+		action_panel.visible=not hidden
 	# History visibility is committed by the motion seam after responsive layout.
 	dialogue_restore_button.visible=hidden
 	apply_responsive_layout()
@@ -829,6 +836,7 @@ func toggle_journal() -> void:
 
 func apply_responsive_layout() -> void:
 	if not is_instance_valid(action_panel): return
+	if has_node("HUDPanelMotion"): get_node("HUDPanelMotion").call("before_layout")
 	preload("res://view/fullscreen_hud/readability.gd").configure(self)
 	preload("res://view/ui_typography/style.gd").prepare_scene(self)
 	if is_instance_valid(history_motion):history_motion.before_layout()
@@ -836,6 +844,7 @@ func apply_responsive_layout() -> void:
 	preload("res://view/ui_typography/style.gd").finish_layout(self)
 	if is_instance_valid(history_motion):history_motion.after_layout()
 	update_journal_toggle()
+	if has_node("HUDPanelMotion"): get_node("HUDPanelMotion").call("after_layout")
 	_update_feedback_safe_rect()
 
 func _update_feedback_safe_rect() -> void:

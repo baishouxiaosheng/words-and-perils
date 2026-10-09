@@ -28,7 +28,7 @@ const ActorEntryPanel=preload("res://view/actor_action_entry/panel.gd")
 const VillageRuntimeSession=preload("res://view/runtime_ai/village_session.gd")
 const RuntimeConnectionPanel = preload("res://view/dual_api_settings/panel.gd")
 const WorldBundle = preload("res://view/playable_build/world_bundle.gd")
-const CoastBoard = preload("res://view/playable_build/board.gd")
+const CoastBoard = preload("res://private_main_visual/coast_board.gd")
 const CoastPanel = preload("res://view/playable_build/panel.gd")
 const GeneratedAdventure = preload("res://view/generated_adventure/adapter.gd")
 const SeededAdventure = preload("res://view/generated_adventure/seeded_adapter.gd")
@@ -139,6 +139,9 @@ var middle_row: HBoxContainer
 var tools_menu: MenuButton
 var intent_expand_button: Button
 var journal_open := false
+var ui_presenter:Node
+var history_motion:Node
+var popup_motion:Node
 var compact_layout := false
 var intent_expanded := false
 var actor_action_mode:=false
@@ -220,7 +223,7 @@ var stamina_bar: ProgressBar
 var health_text: Label
 var stamina_text: Label
 var advanced_scroll: ScrollContainer
-var advanced_dialog: AcceptDialog
+var advanced_dialog
 var advanced_menu: PopupMenu
 var adventure_menu: PopupMenu
 var display_menu: PopupMenu
@@ -252,6 +255,9 @@ var _export_epoch := -1
 var _world_build_epoch := 0
 var _mode_ui_snapshots: Dictionary = {}
 
+var private_main_visual:Node
+const PRIVATE_VISUAL_MENU_ID=9801
+const PrivateMainVisual=preload("res://private_main_visual/controller.gd")
 func _ready() -> void:
 	# Responsive UI uses actual pixels, never a scaled-down 1440px canvas.
 	get_window().content_scale_mode = Window.CONTENT_SCALE_MODE_DISABLED
@@ -266,9 +272,16 @@ func _ready() -> void:
 	runtime_ai.intention_ready.connect(_on_actor_intention_ready)
 	make_theme()
 	build_ui()
+	private_main_visual=PrivateMainVisual.new();private_main_visual.name="PrivateMainVisualBridge";add_child(private_main_visual)
 	add_child(preload("res://view/tabletop_interaction/wasd_camera_pan.gd").new(self))
 	add_child(preload("res://view/tabletop_interaction/selection_motion.gd").new(self))
+	ui_presenter=preload("res://view/ui_motion/presenter.gd").new();ui_presenter.name="UIPresenter";add_child(ui_presenter);ui_presenter.bind(self)
+	history_motion=ui_presenter;popup_motion=ui_presenter
+	for popup:Window in [tools_menu.get_popup(),adventure_menu,advanced_menu,display_menu,focus_choice_popup,advanced_dialog,runtime_connection_panel.settings_dialog,playtest_reset_dialog,scene_test_confirm_dialog,inventory_dialog,focus_details_dialog,effects_dialog,world_dialog,help_dialog,import_dialog,demo_confirm_dialog,restart_confirm_dialog,journal_drawer,v3_setup_dialog,npc_notes_dialog]:popup_motion.watch(popup)
 	add_child(preload("res://view/tabletop_interaction/offline_move_demo.gd").new(self))
+	var hud_motion := preload("res://view/ui_motion/hud_panel_motion.gd").new()
+	add_child(hud_motion)
+	hud_motion.bind_control(self, action_panel, dialogue_restore_button)
 	# Default startup replaces this initial legacy board before the first frame.
 	# Build its terrain only when requested, or if the coast cannot be opened.
 	var legacy_start := startup_legacy or OS.has_environment("FOGBANK_LEGACY_START") or "--legacy-start" in OS.get_cmdline_user_args()
@@ -504,11 +517,15 @@ func build_ui() -> void:
 	advanced_menu.add_item("行动状态测试 · 以当前地图新开",ACTOR_STATUS_ENTRY_NEW)
 	advanced_menu.add_item("继续行动状态测试（独立存档）",ACTOR_STATUS_ENTRY_CONTINUE)
 	advanced_menu.add_item("新场景往返测试（会重置）",25); advanced_menu.add_item("演出测试",4); advanced_menu.add_item("已记录回合",5); advanced_menu.id_pressed.connect(on_tool_selected)
+	advanced_menu.add_separator("界面预设示例")
+	for example_id:int in preload("res://view/ui_motion/examples.gd").WINDOWS:
+		advanced_menu.add_item(preload("res://view/ui_motion/examples.gd").WINDOWS[example_id].title,example_id)
 	display_menu=PopupMenu.new(); display_menu.name="Display"; menu.add_child(display_menu)
 	display_menu.add_check_item("全屏  ·  F11",22)
 	display_menu.add_radio_check_item("低负载 · 无抗锯齿",6)
 	display_menu.add_radio_check_item("均衡 · 2× MSAA",26)
 	display_menu.add_radio_check_item("精细 · 4× MSAA",7)
+	display_menu.add_check_item("有色硬影实验（可撤回）",PRIVATE_VISUAL_MENU_ID)
 	display_menu.id_pressed.connect(on_tool_selected)
 	menu.add_submenu_item("冒险", "Adventure")
 	menu.add_item("主持手记",23)
@@ -563,7 +580,7 @@ func build_ui() -> void:
 	goal.text_changed.connect(invalidate_sample_draft)
 	goal.text_set.connect(invalidate_sample_draft)
 	goal.lines_edited_from.connect(func(_from: int, _to: int): invalidate_sample_draft())
-	submit_button=button("结束\n回合",end_turn,true); submit_button.name="EndTurn"; style_round_button(submit_button,true); submit_button.custom_minimum_size=Vector2(88,88); submit_button.tooltip_text="提交你的意图；取得有效裁定后，完成一次回合"; input_row.add_child(submit_button)
+	submit_button=button("提交\n意图",end_turn,true); submit_button.name="EndTurn"; style_round_button(submit_button,true); submit_button.custom_minimum_size=Vector2(88,88); submit_button.tooltip_text="提交你的意图；取得有效裁定后，完成一次回合"; input_row.add_child(submit_button)
 	var footer:=HBoxContainer.new(); turn_footer=footer; footer.add_theme_constant_override("separation",12); speech_col.add_child(footer)
 	phase_label=label("等待你的行动",14,Color("4e7153")); footer.add_child(phase_label)
 	next_step_label=label("",14,MUTED); next_step_label.size_flags_horizontal=Control.SIZE_EXPAND_FILL; next_step_label.text_overrun_behavior=TextServer.OVERRUN_TRIM_ELLIPSIS; next_step_label.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT; footer.add_child(next_step_label)
@@ -593,7 +610,7 @@ func build_ui() -> void:
 	dialogue_restore_button.name="RestoreDialogue"; add_child(dialogue_restore_button); dialogue_restore_button.hide()
 
 	# Low-frequency transport, regressions and numerical traces live off the map.
-	advanced_dialog=AcceptDialog.new(); advanced_dialog.name="AdvancedTools"; advanced_dialog.title="连接与高级"; advanced_dialog.ok_button_text="返回冒险"; advanced_dialog.size=Vector2i(760,650); add_child(advanced_dialog)
+	advanced_dialog=preload("res://view/ui_motion/modal_window.gd").new(); advanced_dialog.configure(&"large",{"preferred":Vector2(800,660)}); advanced_dialog.name="AdvancedTools"; advanced_dialog.title="连接与高级"; advanced_dialog.ok_button_text="返回冒险"; advanced_dialog.size=Vector2i(760,650); add_child(advanced_dialog)
 	advanced_scroll=ScrollContainer.new(); advanced_scroll.custom_minimum_size=Vector2(700,540); advanced_scroll.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED; advanced_dialog.add_child(advanced_scroll)
 	var advanced_col:=VBoxContainer.new(); advanced_col.size_flags_horizontal=Control.SIZE_EXPAND_FILL; advanced_col.add_theme_constant_override("separation",14); advanced_scroll.add_child(advanced_col)
 	relay_note=label("当前为离线模式，尚未连接 AI。
@@ -719,8 +736,12 @@ func toggle_overview() -> void:
 
 func set_map_dialogue_hidden(hidden: bool) -> void:
 	dialogue_hidden_for_map=hidden
-	action_panel.visible=not hidden
-	journal_panel.visible=journal_open and not hidden
+	if has_node("HUDPanelMotion"):
+		get_node("HUDPanelMotion").call("set_hidden", hidden)
+	else:
+		# build_ui runs before motion adapters are bound.
+		action_panel.visible=not hidden
+	# History visibility is committed by the motion seam after responsive layout.
 	dialogue_restore_button.visible=hidden
 	apply_responsive_layout()
 
@@ -730,10 +751,12 @@ func toggle_fullscreen() -> void:
 	display_menu.set_item_checked(display_menu.get_item_index(22),get_window().mode==Window.MODE_FULLSCREEN)
 
 func show_advanced() -> void:
-	advanced_dialog.popup_centered(Vector2i(mini(800,get_viewport_rect().size.x-64),mini(660,get_viewport_rect().size.y-64)))
+	if is_instance_valid(popup_motion):popup_motion.prepare_reopen(advanced_dialog)
+	advanced_dialog.popup_centered(advanced_dialog.adapted_extent(get_viewport_rect().size))
 	advanced_scroll.scroll_vertical=0
 
 func show_ai_connection() -> void:
+	if is_instance_valid(popup_motion):popup_motion.prepare_reopen(runtime_connection_panel.settings_dialog)
 	runtime_connection_panel.open_settings()
 
 func close_tool_menus() -> void:
@@ -744,8 +767,16 @@ func close_tool_menus() -> void:
 	if is_instance_valid(tools_menu): tools_menu.get_popup().hide()
 
 func on_tool_selected(id: int) -> void:
+	if preload("res://view/ui_motion/examples.gd").WINDOWS.has(id):
+		close_tool_menus();preload("res://view/ui_motion/examples.gd").show_window(self,ui_presenter,id);return
+	if id!=PRIVATE_VISUAL_MENU_ID and is_instance_valid(private_main_visual):private_main_visual.before_world_change()
+	if id!=PRIVATE_VISUAL_MENU_ID and is_instance_valid(private_main_visual):private_main_visual.after_world_change.call_deferred()
 	close_tool_menus()
 	match id:
+		PRIVATE_VISUAL_MENU_ID:
+			private_main_visual.toggle(self)
+			display_menu.set_item_checked(display_menu.get_item_index(PRIVATE_VISUAL_MENU_ID),private_main_visual.requested)
+			set_status("这幅地图还未完成表现登记，原来的显示已保留" if not private_main_visual.last_error.is_empty() else ("有色硬影实验已启用" if private_main_visual.requested else "实验表现已撤回"))
 		0: show_help()
 		1: save_game()
 		2: load_game()
@@ -800,17 +831,20 @@ func toggle_journal() -> void:
 		journal_open=true
 	else:
 		journal_open = not journal_open
-	journal_panel.visible = journal_open
 	update_journal_toggle()
 	apply_responsive_layout()
 
 func apply_responsive_layout() -> void:
 	if not is_instance_valid(action_panel): return
+	if has_node("HUDPanelMotion"): get_node("HUDPanelMotion").call("before_layout")
 	preload("res://view/fullscreen_hud/readability.gd").configure(self)
 	preload("res://view/ui_typography/style.gd").prepare_scene(self)
+	if is_instance_valid(history_motion):history_motion.before_layout()
 	preload("res://view/fullscreen_hud/responsive_layout.gd").apply(self)
 	preload("res://view/ui_typography/style.gd").finish_layout(self)
+	if is_instance_valid(history_motion):history_motion.after_layout()
 	update_journal_toggle()
+	if has_node("HUDPanelMotion"): get_node("HUDPanelMotion").call("after_layout")
 	_update_feedback_safe_rect()
 
 func _update_feedback_safe_rect() -> void:
@@ -1120,6 +1154,8 @@ func build_selected_world() -> void:
 	set_status(MAP_PREVIEW_NOTICE+" · 实际种子 %d · %d 格 · %s"%[generated.seed,generated.hexes.size(),generation_notice])
 
 func clear_target() -> void:
+	if is_instance_valid(private_main_visual):private_main_visual.before_world_change()
+	if is_instance_valid(private_main_visual):private_main_visual.after_world_change.call_deferred()
 	selected_focus.clear();resolved_focus.clear();focus_choices.clear()
 	if is_instance_valid(focus_details_dialog): focus_details_dialog.hide()
 	if is_instance_valid(focus_choice_popup):focus_choice_popup.hide()
@@ -1160,6 +1196,8 @@ func append_journal(speaker: String, text: String, update_latest: bool = true) -
 	latest_dialogue.tooltip_text = text
 
 func refresh_world(animate_changes: bool = false) -> void:
+	if is_instance_valid(private_main_visual):private_main_visual.before_world_change()
+	if is_instance_valid(private_main_visual):private_main_visual.after_world_change.call_deferred()
 	if has_node("SelectionMotion"): get_node("SelectionMotion").cancel()
 	if playtest_mode:
 		refresh_playtest_world(animate_changes)
@@ -1328,6 +1366,8 @@ func update_movement_preview() -> void:
 		route_preview_label.tooltip_text=route_preview_label.text
 
 func _apply_focus(reference:Dictionary)->void:
+	if is_instance_valid(private_main_visual):private_main_visual.before_world_change()
+	if is_instance_valid(private_main_visual):private_main_visual.after_world_change.call_deferred()
 	if playtest_mode:
 		var resolved_new: Dictionary = playtest.attention(reference)
 		if not resolved_new.ok: set_status("关注失效：" + str(resolved_new)); return
@@ -1911,6 +1951,7 @@ func _switch_mode_to(mode: String, replacement_v3:RefCounted=null) -> void:
 	runtime_ai.bind_adapter(_runtime_adapter())
 	actor_action_panel.reset_consent()
 	# Separate rendering parents prevent duplicate worlds, lights and input handlers.
+	if is_instance_valid(private_main_visual):private_main_visual.before_world_change()
 	viewport.remove_child(board); board.free()
 	if previous_v3_source!=null and (not generated_v3_mode or previous_v3_source!=playtest.source):V3RenderResidency.suspend(previous_v3_source)
 	board = next_board
@@ -2015,7 +2056,10 @@ func _create_scene_board(state: Dictionary) -> Node3D:
 	var descriptor: Dictionary=SceneAdapters.descriptor(state,scene_id)
 	if not descriptor.get("ok",false):
 		show_world_load_error(str(descriptor));return null
-	var script: Script=load(str(descriptor.script_path))
+	# Preserve the public scene/resolver descriptor; opt-in preparation only
+	# substitutes its exact Coast rendering factory in this private candidate.
+	var path:String=str(descriptor.script_path)
+	var script:Script=CoastBoard if path=="res://view/playable_build/board.gd" else load(path)
 	if script==null:show_world_load_error("已注册场景显示文件未能载入。");return null
 	var next: Node3D=script.new()
 	next.set_meta("active_scene_id",scene_id);next.set_meta("renderer_id",descriptor.renderer_id)
@@ -2030,6 +2074,7 @@ func _ensure_scene_board(state: Dictionary) -> Dictionary:
 	next.attention_ui_mode=true;viewport.add_child(next)
 	if not next.load_error.is_empty():
 		var error: String=next.load_error;viewport.remove_child(next);next.free();show_world_load_error(error);return {"ok":false,"changed":false}
+	if is_instance_valid(private_main_visual):private_main_visual.before_world_change()
 	viewport.remove_child(board);board.free();board=next
 	board.focus_candidates.connect(on_focus_candidates);board.hex_hovered.connect(on_hex_hovered)
 	selected_focus.clear();resolved_focus.clear();focus_choices.clear();selected=Vector2i(99,99)
@@ -2199,7 +2244,11 @@ func apply_playtest_reply(decision: Dictionary) -> bool:
 	var result: Dictionary = _runtime_adapter().import_narration(decision) if (actor_action_mode or generated_v3_npc_mode) and decision.get("schema_version")=="ai_gm_narration/v1" else playtest.import_reply(decision)
 	if not result.ok: set_status("评估未应用，数值保留：" + _assessment_error_text(result)); return false
 	if decision.get("schema_version") == "ai_gm_narration/v1":
-		if not result.get("already_recorded",false): append_journal("叙事记录", result.narration)
+		if not result.get("already_recorded",false):
+			var action_id:String=str(decision.get("action_id",""))
+			var caption:String="叙事记录 · 第%d回合"%int(playtest.committed(action_id).turn) if actor_action_mode else "叙事记录"
+			var promote_latest:bool=not actor_action_mode or (action_id==playtest.last_action and playtest.phase()=="idle")
+			append_journal(caption,result.narration,promote_latest)
 		set_status("叙事仅显示文字，不能改数值、重掷或阻塞提交")
 	else:
 		set_status("人工离线评估通过结构校验，演示规则已准备；下一步结算一次")
@@ -2347,14 +2396,14 @@ func update_playtest_controls() -> void:
 	submit_button.visible = true
 	var runtime_pending: bool=_runtime_supported() and is_instance_valid(runtime_ai) and runtime_ai.busy() and phase!="idle"
 	submit_button.disabled = phase == "awaiting_assessment" or end_turn_busy or runtime_pending
-	submit_button.text = "等待\n裁定" if phase == "awaiting_assessment" else ("完成\n回合" if pending else "结束\n回合")
+	submit_button.text = "等待\n裁定" if phase == "awaiting_assessment" else ("完成\n回合" if pending else "提交\n意图")
 	cancel_button.visible = pending
 	cancel_button.disabled = not playtest.can_cancel()
 	cancel_button.text = "取消等待" if playtest.can_cancel() else "结果已锁定，不能取消"
 	roll_button.visible = phase in ["ready_roll","rolled","staged"]
 	roll_button.disabled = not roll_button.visible
 	roll_button.text = {"ready_roll":"调试：结算一次","rolled":"调试：暂存结果","staged":"调试：提交结果"}.get(phase,"等待裁定")
-	phase_label.text = {"idle":"等待你的行动","awaiting_assessment":"离线 · 等待裁定","ready_roll":"裁定已就绪","rolled":"结果已锁定","staged":"结果待提交"}.get(phase,phase)
+	phase_label.text = {"idle":"你的回合 · 等待行动","awaiting_assessment":"离线 · 等待行动评估","ready_roll":"评估已就绪 · 等待完成回合","rolled":"结算已锁定 · 等待完成回合","staged":"行动结果就绪 · 等待完成回合"}.get(phase,phase)
 	next_step_label.text = {"idle":"写下行动后结束回合","awaiting_assessment":"菜单 → 连接与高级 → 导入裁定","ready_roll":"可完成本回合","rolled":"可继续完成本回合","staged":"可继续完成本回合"}.get(phase,"")
 	if generated_v3_mode:
 		if phase=="idle":next_step_label.text="连接与高级 → 选择行动示例"
@@ -2367,10 +2416,10 @@ func update_playtest_controls() -> void:
 	elif _runtime_supported() and phase=="awaiting_assessment" and runtime_ai.last_result.get("action_id","")==playtest.active_action and not runtime_ai.last_result.get("ok",true):
 		phase_label.text="评估未完成 · 世界未改变"; next_step_label.text="连接与高级 → 重试、导入或取消"
 	if enemy_pending:
-		phase_label.text="敌方 · "+phase_label.text
+		phase_label.text="敌方回合 · "+phase_label.text
 		if phase=="awaiting_assessment": submit_button.text="等待\n敌方"; next_step_label.text="连接与高级 → 提供敌方评估"
 	elif enemy_waiting:
-		phase_label.text="敌方回合 · 等待裁定"; next_step_label.text="继续敌方回合后才能开始你的下一次行动"; submit_button.text="继续\n敌方"
+		phase_label.text="敌方回合 · 尚未开始行动"; next_step_label.text="点击“继续敌方”处理它的行动，完成后再轮到你"; submit_button.text="继续\n敌方"
 	if (actor_action_mode or coast_mode or generated_v3_enemy_mode) and not pending and int(playtest.state_copy().actors.actor_player.health.current)<=0:
 		turn_footer.show();goal.editable=false;submit_button.disabled=true;submit_button.text="已经\n倒下";phase_label.text="旅人已经倒下";next_step_label.text="可从冒险菜单读取存档或重新开始"
 	relay_row.visible = true
@@ -2386,7 +2435,7 @@ func update_playtest_controls() -> void:
 		target_label.tooltip_text=_focus_details_description()+( "\n当前行动的目标已经确定；新点击只改变下一次目标。" if pending else "")
 	if actor_action_mode:
 		if playtest.decision_pending():
-			phase_label.text="敌方 · 等待外部意图候选";next_step_label.text="连接与高级 → 导出候选请求 / 人工导入 / 明确启用接口"
+			phase_label.text="敌方回合 · 等待它决定做什么";next_step_label.text="连接与高级 → 导出意图请求 / 导入回复 / 明确启用接口"
 			cancel_button.visible=true;cancel_button.disabled=false
 		if runtime_ai.busy():submit_button.disabled=true
 	if actor_action_mode and not actor_render_error.is_empty():
@@ -2438,6 +2487,8 @@ func complete_requested_turn() -> void:
 	update_playtest_controls()
 
 func refresh_playtest_world(animate_changes: bool = false) -> void:
+	if is_instance_valid(private_main_visual):private_main_visual.before_world_change()
+	if is_instance_valid(private_main_visual):private_main_visual.after_world_change.call_deferred()
 	if has_node("SelectionMotion"): get_node("SelectionMotion").cancel()
 	var state: Dictionary = playtest.state_copy()
 	if not state.get("actors") is Dictionary or not state.actors.has("actor_player"):
@@ -2530,7 +2581,7 @@ func _input(event: InputEvent) -> void:
 		if world_dialog.visible:
 			world_dialog.hide(); get_viewport().set_input_as_handled(); return
 		if is_instance_valid(board) and board.has_method("_cancel_committed_camera"):board._cancel_committed_camera()
-		if advanced_dialog.visible: advanced_dialog.hide()
+		if advanced_dialog.visible: advanced_dialog.request_motion_close()
 		elif journal_open: toggle_journal()
 		elif intent_expanded: toggle_intent()
 		elif get_window().mode == Window.MODE_FULLSCREEN: toggle_fullscreen()

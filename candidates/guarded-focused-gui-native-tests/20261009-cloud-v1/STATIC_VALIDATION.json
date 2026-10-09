@@ -1,0 +1,99 @@
+{
+  "status": "PASSED_STATIC_SOURCE_ONLY",
+  "run_id": "WP-NATIVE-013-PREP-a609ec4ca378463685309c4e88b7d87f",
+  "owned_pid": 10110,
+  "exit_code": 0,
+  "checks_passed": 21,
+  "checks": [
+    {
+      "name": "exact inverse transform preserves every case/assertion/catch/threshold: Test-WindowsGuard.ps1",
+      "passed": true
+    },
+    {
+      "name": "all native cases retain small: Test-WindowsGuard.ps1",
+      "passed": true
+    },
+    {
+      "name": "commands remain fixed original case strings: Test-WindowsGuard.ps1",
+      "passed": true
+    },
+    {
+      "name": "exact inverse transform preserves every case/assertion/catch/threshold: Test-OutputGuard.ps1",
+      "passed": true
+    },
+    {
+      "name": "all native cases retain small: Test-OutputGuard.ps1",
+      "passed": true
+    },
+    {
+      "name": "commands remain fixed original case strings: Test-OutputGuard.ps1",
+      "passed": true
+    },
+    {
+      "name": "exact inverse transform preserves every case/assertion/catch/threshold: Test-TerminalGuard.ps1",
+      "passed": true
+    },
+    {
+      "name": "all native cases retain small: Test-TerminalGuard.ps1",
+      "passed": true
+    },
+    {
+      "name": "commands remain fixed original case strings: Test-TerminalGuard.ps1",
+      "passed": true
+    },
+    {
+      "name": "fixed candidate C# unchanged",
+      "passed": true
+    },
+    {
+      "name": "single compile in suite entry",
+      "passed": true
+    },
+    {
+      "name": "headless default checked",
+      "passed": true
+    },
+    {
+      "name": "no focused GUI mode invocation",
+      "passed": true
+    },
+    {
+      "name": "no original child guard or engine invocation",
+      "passed": true
+    },
+    {
+      "name": "bounded 19 original case reports and 2 original precreation validation calls",
+      "passed": true
+    },
+    {
+      "name": "three fixed original suites executed serially",
+      "passed": true
+    },
+    {
+      "name": "existing target signature and before/after SHA gate",
+      "passed": true
+    },
+    {
+      "name": "no install/eval/network primitive in suite entry",
+      "passed": true
+    },
+    {
+      "name": "derived suite SHA embedded in entry: Test-WindowsGuard.ps1",
+      "passed": true
+    },
+    {
+      "name": "derived suite SHA embedded in entry: Test-OutputGuard.ps1",
+      "passed": true
+    },
+    {
+      "name": "derived suite SHA embedded in entry: Test-TerminalGuard.ps1",
+      "passed": true
+    }
+  ],
+  "powershell_parse": "NOT_RUN",
+  "powershell_compile": "NOT_RUN",
+  "native_run": "NOT_RUN",
+  "engine_invocations": 0,
+  "gui_invocations": 0,
+  "limitations": "Cloud static transform and fixed-input checks only; no Win32 or PowerShell execution evidence."
+}

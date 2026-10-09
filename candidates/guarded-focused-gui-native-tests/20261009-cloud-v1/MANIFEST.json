@@ -1,0 +1,81 @@
+{
+  "schema": "words-and-perils-native-guard-equivalence-tests/v1",
+  "id": "WP-GUI-GUARD-NATIVE-EQUIVALENCE-20261009-013",
+  "source_commit": "09ca0e724d98d8ec9febda1bfeb722b0b6c61785",
+  "candidate_csharp": {
+    "repository_path": "candidates/guarded-focused-gui/20261009-cloud-v1/WindowsGuard.FocusedGui.cs",
+    "bytes": 38365,
+    "sha256": "eb642e9b4092098614be6c9b5aff0becf96728a3a47bbe9f54dc12f13fb7ea4b"
+  },
+  "entry": "Test-NativeGuardEquivalence.ps1",
+  "transformation": "Existing original v3 suites retained byte-for-byte after inverse of source filename/namespace substitutions and delegating one Add-Type per suite to the fixed suite entry. No assertion, catch, test case or limit changed.",
+  "original_suite_bindings": [
+    {
+      "original_repository_path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/guard-v3/Test-WindowsGuard.ps1",
+      "original_bytes": 11313,
+      "original_sha256": "9393cb10524439cc6fdbd5d0ab7df276452b1f749cc4ae6b6c65a91aabd48e48",
+      "derived_path": "Test-WindowsGuard.ps1",
+      "derived_bytes": 11444,
+      "derived_sha256": "2083175f14585b5977e6a72fa12d8a0c5749013f853ae7897f0871cf314191d6"
+    },
+    {
+      "original_repository_path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/guard-v3/Test-OutputGuard.ps1",
+      "original_bytes": 7901,
+      "original_sha256": "71647a58cfbed0259f4f6634e433a5023edb8845f2e7510402bf7c7db1502110",
+      "derived_path": "Test-OutputGuard.ps1",
+      "derived_bytes": 8032,
+      "derived_sha256": "7fcdb0fdcf2027a425552d7edcf3885ef8a9d5f6a59dec1b8027b1e7a855385c"
+    },
+    {
+      "original_repository_path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/guard-v3/Test-TerminalGuard.ps1",
+      "original_bytes": 7827,
+      "original_sha256": "d862e1da8048cb79b3918a485c048a01fe4176e2394daf3783933f03e86cfe32",
+      "derived_path": "Test-TerminalGuard.ps1",
+      "derived_bytes": 7890,
+      "derived_sha256": "382b13651f0ca8942a95ad5b251d74f9ee0bf32aa89c76b8b30c6de583d9d085"
+    }
+  ],
+  "maximum_original_parent_guard_runs": 1,
+  "maximum_candidate_guard_run_calls": 21,
+  "native_case_reports": 19,
+  "maximum_started_target_program_runs": 17,
+  "all_native_cases_serial": true,
+  "outer_profile": "small",
+  "outer_wall_seconds": 120,
+  "outer_aggregate_output_bytes": 65536,
+  "job_limit_bytes": 1073741824,
+  "reserve_bytes": 536870912,
+  "physical_budget_cap_bytes": 8589934592,
+  "candidate_case_limits": "Original stricter 1/6/10 second case deadlines and 256-byte test output cap retained; production maximum remains 120 seconds/65536 bytes. Full profile is evaluated only with synthetic numbers; no Full process.",
+  "new_owner_authorization_required": "One-time native equivalence only, independently accepted in current supported trusted local owner session before execution. Ready/manifest cannot self-authorize or change global trusted pins.",
+  "gui_allowed_by_this_task": false,
+  "native_tested": false,
+  "adopted": false,
+  "files": [
+    {
+      "path": "STATIC_VALIDATION.json",
+      "bytes": 2727,
+      "sha256": "60c740b8e5b3e4cb86d8629949c0c35a0d53a813e26d741077b8b2007b42524c"
+    },
+    {
+      "path": "Test-NativeGuardEquivalence.ps1",
+      "bytes": 5495,
+      "sha256": "7865f26c48108a57221e363abead2945ab25907cc0b0d09a58ce0a10a3e6e4d6"
+    },
+    {
+      "path": "Test-OutputGuard.ps1",
+      "bytes": 8032,
+      "sha256": "7fcdb0fdcf2027a425552d7edcf3885ef8a9d5f6a59dec1b8027b1e7a855385c"
+    },
+    {
+      "path": "Test-TerminalGuard.ps1",
+      "bytes": 7890,
+      "sha256": "382b13651f0ca8942a95ad5b251d74f9ee0bf32aa89c76b8b30c6de583d9d085"
+    },
+    {
+      "path": "Test-WindowsGuard.ps1",
+      "bytes": 11444,
+      "sha256": "2083175f14585b5977e6a72fa12d8a0c5749013f853ae7897f0871cf314191d6"
+    }
+  ]
+}

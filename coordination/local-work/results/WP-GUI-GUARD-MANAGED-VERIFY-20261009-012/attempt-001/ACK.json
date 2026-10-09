@@ -1,0 +1,29 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "ack",
+  "task_id": "WP-GUI-GUARD-MANAGED-VERIFY-20261009-012",
+  "task_sha256": "aacd0ae952b07ece581193600691cb97ce9a1ebe3f80ab1c33c5915a1dce4c6c",
+  "attempt_id": "attempt-001",
+  "intake_commit": "fa2aad27cda4e7e7215c2e6ffc61a90e03ddd932",
+  "status": "acknowledged",
+  "automation_enabled": true,
+  "summary": "Four fixed inputs and predecessor verified; unchanged installed v3 guardian protects one fixed official PowerShell source-only child.",
+  "source_hashes": {
+    "candidates/guarded-focused-gui/20261009-cloud-v1/WindowsGuard.FocusedGui.cs": "eb642e9b4092098614be6c9b5aff0becf96728a3a47bbe9f54dc12f13fb7ea4b",
+    "candidates/guarded-focused-gui/20261009-cloud-v1/baseline/WindowsGuard.cs": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+    "candidates/guarded-focused-gui/20261009-cloud-v2/Test-FocusedGui.SourceOnly.ps1": "4fae6c4ede96f228c9066f406d3331d2d8c8c9efd7a5793c2ad384e5aba7a382",
+    "candidates/guarded-focused-gui/20261009-cloud-v2/MANIFEST.json": "fbb3c161b68acba5e3d544d01715cdfb391032fb5994dff94622fe8d06f1b078"
+  },
+  "checks": [
+    {
+      "stage": "inputs_schema_predecessor",
+      "status": "passed",
+      "inputs": 4
+    }
+  ],
+  "blockers": [],
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  }
+}

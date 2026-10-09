@@ -92,6 +92,8 @@ python -B tools/check_focused_paths.py --clock-v2 candidates/status-clock-displa
 
 ## 保存、远端核对与回退
 
+PowerShell多命令必须逐步检查 `$LASTEXITCODE`，或以 `subprocess.run(..., check=True)` 串行控制；不能依赖分号在失败后自动停止。原始Windows输出保留CRLF，差异检查使用 `core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol` 识别其行尾，不为清诊断重写证据。
+
 只 stage 明确列出的本任务文件，先审 `git diff --cached --name-status`，不执行宽目录全量提交。独立候选分支只普通push，不force、不自动合main、不改变可见性、不启用Actions。需要main发布时由协调者按当前head、单亲提交、expected-head CAS/快进规则处理；main变化先重核任务输入，不能覆盖别人工作。
 
 发布后核远端分支commit，并按该commit逐字节回读每个本任务文件，结果记文件数/字节/hash。先提交产物，再另存发布回读凭据，避免自引用hash。空状态不产生空提交。

@@ -86,5 +86,12 @@
     "candidates/status-clock-display/20261009-cloud-v3/overlay/view/playable_build/player_details.gd",
     "candidates/focus-location-display/20261009-cloud-v3/overlay/view/playable_build/player_details.gd",
     "candidates/player-details-clock-location/20261009-cloud-v1/overlay/view/playable_build/player_details.gd"
-  ]
+  ],
+  "validation_note": {
+    "default_diff_check_exit": 2,
+    "cause": "CRLF in preserved raw Windows test JSON/logs flagged as trailing whitespace; raw bytes retained",
+    "corrected_diff_check": "git -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol diff <base> HEAD --check",
+    "corrected_exit": 0,
+    "publication_note": "Initial PowerShell command sequence continued to candidate commit/push after the default whitespace check failed; no main change. Corrected whitespace-aware check passed; subsequent commit/push is explicitly gated with subprocess check=True."
+  }
 }

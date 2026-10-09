@@ -1,0 +1,77 @@
+{
+  "commit": "270d500066b0d17cfc5449535683fe1b819c8ee3",
+  "all_match": true,
+  "files": [
+    {
+      "path": "candidates/player-details-local-verification/20261009-local-010/PORTABLE_USAGE.txt",
+      "bytes": 1091,
+      "sha256": "471336aad55b320a179caf3776213113257fb3ec029b398381ec58ecef9d0668",
+      "git_blob_sha": "4035c7018de9c863b4636ac723d4a828c72e1a06",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "candidates/player-details-local-verification/20261009-local-010/MANIFEST.json",
+      "bytes": 1696,
+      "sha256": "107b4b6e87e116fa58921a26039bbe22676463d810c97367ad69e9e7aedbd86a",
+      "git_blob_sha": "0040be34bfe7968b4ceabdc9bd895aed925d9f56",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/closeout-001/evidence/TOOLS_PUBLIC.json",
+      "bytes": 506,
+      "sha256": "201ff141a7578c44d0a20d5189df5645ff09275690cfd7196fbb3828bbca2551",
+      "git_blob_sha": "575d07987c5fe507db1e9fddea0b02f15b9f114e",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/closeout-001/evidence/PATH_REDACTION_ERRATUM.json",
+      "bytes": 557,
+      "sha256": "84de50bf5816b1e6b480a230cd0fdbfba2b244ebe814f6cd520c97ec950405b8",
+      "git_blob_sha": "488dce0bd2eaa9cc5d8e534ca0e4a78003599165",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/closeout-001/evidence/NATIVE_CLEANUP_VERIFIED.json",
+      "bytes": 277,
+      "sha256": "94365f5f36f16b340630b5e40b93c02caad660df583bdec2bf140042388e2838",
+      "git_blob_sha": "102e58bab439241db4ef3319064c05a7c39491e2",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/closeout-001/evidence/CLOSEOUT_READONLY_FETCH.json",
+      "bytes": 210,
+      "sha256": "6a742d819e3ce5aa0e5ded3fcfa21bb605e663a49b7954c1541ee6ce9ab749f8",
+      "git_blob_sha": "42a33614bfc4cd8933dc7e3ce726803dfc39407c",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/closeout-001/evidence/CLOSEOUT_READONLY_GATE.json",
+      "bytes": 692,
+      "sha256": "8f15b98348ddfdebb3b5d53adb034ff6f6ae37ead93b1732bb7aaac811edea02",
+      "git_blob_sha": "da9acb8ff8477c0b60d947dec483089140731928",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/closeout-001/evidence/FINAL_CHECKPOINT.json",
+      "bytes": 1757,
+      "sha256": "0ea9768e05e8ef67bb93d0065d5ac72caefa6101f8b2b0d6f8d4e9afbd2aca68",
+      "git_blob_sha": "508254ed34764784cef9d44e39c405174c55bd08",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/closeout-001/evidence/PUBLICATION_CHECKPOINT.json",
+      "bytes": 285,
+      "sha256": "7113367bea093ac163e379221c6da4b2de46d4ce81c89d0f9e6005453a7f2ab5",
+      "git_blob_sha": "d71259ecec91f841c10d02391d7f329174a526c6",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/closeout-001/ARTIFACTS.json",
+      "bytes": 3136,
+      "sha256": "5dda84ef8c87cccc53e181e635ad653b811fa18b795e2cc3bc41984420c768e9",
+      "git_blob_sha": "40a459583a2cbdde8f901937820f363ba2475eb3",
+      "actual_http_bytes_match": true
+    }
+  ],
+  "verified_utc": "2026-10-09T10:48:03.319525+00:00"
+}

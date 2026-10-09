@@ -1,0 +1,14 @@
+{
+  "commit": "ba272de0451a1fdc498e96661a939114804cf430",
+  "all_match": true,
+  "files": [
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/CLAIM.json",
+      "bytes": 501,
+      "sha256": "d9f9834938b1c871a99b0a307422190ba6f5e3911e5ae7c38c5ec45daa133224",
+      "git_blob_sha": "23e95e5f3094680bf574c31ed5c9b2da0fe4f44e",
+      "actual_http_bytes_match": true
+    }
+  ],
+  "verified_utc": "2026-10-09T08:31:13.742878+00:00"
+}

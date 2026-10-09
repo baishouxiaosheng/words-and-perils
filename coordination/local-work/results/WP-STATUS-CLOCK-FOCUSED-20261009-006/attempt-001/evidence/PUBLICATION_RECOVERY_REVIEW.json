@@ -1,0 +1,10 @@
+{
+  "head_read_only_reconciled": "09457b51e3cbf455b330aca0670a970ede717c77",
+  "artifact_preparation_or_push_absent": true,
+  "first_failure_preserved": true,
+  "repair": "Exclude own privacy scanner source with literal credential-marker tokens from artifact set; keep unchanged sanitizer and full actual task logs/replay bytes",
+  "new_owned_stage": true,
+  "no_engine_or_static_retry": true,
+  "claim_unchanged": true,
+  "utc": "2026-10-09T08:32:47.714226+00:00"
+}

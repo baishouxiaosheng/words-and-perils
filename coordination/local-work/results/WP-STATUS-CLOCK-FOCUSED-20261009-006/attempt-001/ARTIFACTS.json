@@ -1,0 +1,221 @@
+{
+  "task_id": "WP-STATUS-CLOCK-FOCUSED-20261009-006",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/TASK.json",
+      "bytes": 24766,
+      "sha256": "ba85b7431decbc8b6c59b4f788cf3da27945b058c6c5dbc171cc85a1fc06b810"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/PROTOCOL.json",
+      "bytes": 12065,
+      "sha256": "ac97c2523a6400bbde3c1f9b83f0398a704887891a8bfc94f5247476245400bc"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/TASK_SCHEMA.json",
+      "bytes": 7110,
+      "sha256": "14a68f72c3cea797799237051e154a5d1e9c5d1184d7cbebdf2d3db0086144ab"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/INPUT_VERIFICATION.json",
+      "bytes": 10136,
+      "sha256": "02003552ae0ebcd04538087b184f34b558b269b4dc1ae67d9b3ee34119212a8f"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/HOST_SOURCE_RESOURCE_MAP.json",
+      "bytes": 441374,
+      "sha256": "5ff2e4cbcf62b8dda38f9559756f76a849560850e7ba5073c4ff5e9f1816fbd3"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/HARNESS_BINDING.json",
+      "bytes": 502,
+      "sha256": "ccb6a276da5bd8dd1a02b4d88bb1f7f0bec997552c2605fb850862e570107576"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/EXECUTION_OUTCOME.json",
+      "bytes": 794,
+      "sha256": "ec02cf2814bfc9ad9dc10e727cab223bf4d2623a635b4a8f07cf1391c3292cdf"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/EXECUTION_EXCEPTION.json",
+      "bytes": 206,
+      "sha256": "b320b9d353cfc78aa394b1933eaf774d9dcd8a60b6dc4958f03e2c1d908baf3b"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/EXECUTION_LOCK_RELEASED.json",
+      "bytes": 143,
+      "sha256": "fd5b91c53fcd2418166b862c794b863ac1a902f199b2a175d9163313e7e84ca0"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/EXECUTION_LOCK_OWNER.json",
+      "bytes": 247,
+      "sha256": "3ab490ab5688e983c29f305f9a07899661172bcad493da9bbdfe648aa951b091"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/CLAIM_READBACK.json",
+      "bytes": 483,
+      "sha256": "837999b2d2bb12cf49c27ab0ed42e677ded0d73b65e545a9a5f9bc77cf450826"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/ACK_READBACK.json",
+      "bytes": 494,
+      "sha256": "bfb40d13a9415360754b9f558a7d0a066499caf77b538ec0a42b5d2372384550"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/CHECKPOINT_LOCAL.json",
+      "bytes": 964,
+      "sha256": "464d26709d077bf24ee14bfed0d698c5a7607e80ad660fbfa1be6f742bc17627"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/ORIGINAL_INPUTS_PRESERVED.json",
+      "bytes": 165,
+      "sha256": "fd2d7eba0c265f4ca5d5db4eb3d7fa5a4568c07f7171eea47bcc041ba28f64a0"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/TEST_SUMMARY.json",
+      "bytes": 1236,
+      "sha256": "023b5d234600650311b1c744947b2297bef9319cb203977db6c7c7823df91fe6"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/VERIFICATION_MANIFEST.json",
+      "bytes": 2307,
+      "sha256": "4e3d3cb2769c67842e89af8f8fe51eecd987307d7e2cc92548bdf091d5700d6c"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/LOCAL_HARNESS_PROVENANCE.json",
+      "bytes": 291,
+      "sha256": "cc0c8dcbd6697c024159f59f13fc736ecb1fbf9b3469adb742bb83de9116a3e8"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/PUBLICATION_FIRST_PUBLICATION_EXCEPTION.json",
+      "bytes": 183,
+      "sha256": "c17cae2ab920a694d84308bbff3558961af14c03207aaa0d587e31036a0d2df8"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/PUBLICATION_FIRST_PUBLICATION_LOCK_RELEASED.json",
+      "bytes": 143,
+      "sha256": "285d9476e8bec00e166c3270fbb86728e40f98fea713b362f8ef21ed3bebb25b"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/PUBLICATION_FIRST_LOCK_OWNER.json",
+      "bytes": 247,
+      "sha256": "3ab490ab5688e983c29f305f9a07899661172bcad493da9bbdfe648aa951b091"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/PUBLICATION_RECOVERY_REVIEW.json",
+      "bytes": 477,
+      "sha256": "c8a1a371b6397ab8b71760de422d3ccf5dc5ff7da6e21f9cc4611cc5491d6b96"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/STATIC_FAILURE_DIAGNOSIS.json",
+      "bytes": 4062,
+      "sha256": "3096433cee279da514c5d4ab46fd553f22e4ec88c9590e3e584cbb8108dc7357"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/gates/GATE-ack.json",
+      "bytes": 681,
+      "sha256": "c41ce0a6d95c1c08091d2508b73328ea81be59a487d77ad78e35ccbdc03b2d03"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/gates/GATE-preclaim.json",
+      "bytes": 687,
+      "sha256": "95db1503b6cbea3222c03d260369c7c22dca28946930331ed710173c677a7529"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/gates/GATE-publication_A.json",
+      "bytes": 691,
+      "sha256": "ec52339d246c3610606d29f6703584ebd34298bc80603ab71d789513754741f3"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/gates/GATE-python_candidate_static.json",
+      "bytes": 701,
+      "sha256": "c423e42dce1c814e42a156710c12009f04b85dec94038f429fb352a9e78ba5f6"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/python-runs/candidate_static/PID.json",
+      "bytes": 141,
+      "sha256": "6ef61ef130ea131470b9ddb845e68a58cf654b98fcaad32093354bb5b1ecffd3"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/python-runs/candidate_static/RESULT.json",
+      "bytes": 302,
+      "sha256": "f39cc9a6f32c13a5e5c3aef9847988f17e5a31ba20ff8d4758b198dcfe4754de"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/python-runs/candidate_static/stderr.log",
+      "bytes": 889,
+      "sha256": "925b09fceb2207427401b0c2311b153b294b99b35bb1c7efe6babbcac59e52ca"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/python-runs/candidate_static/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/replay-evidence/git-replay-failure-516iha84/actual.gd",
+      "bytes": 8902,
+      "sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/replay-evidence/git-replay-failure-516iha84/before.gd",
+      "bytes": 8199,
+      "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/replay-evidence/git-replay-failure-516iha84/CHANGE.patch",
+      "bytes": 1140,
+      "sha256": "3467106b110e666e95704aaa5542b2d6feec45d374f7b190847527200a5863f4"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/replay-evidence/git-replay-failure-516iha84/DIAGNOSIS.json",
+      "bytes": 1155,
+      "sha256": "5b5de5c00aa6c794c4ec5d38dbffeb1a3532bbe542e3791b24d758d7a64fbe99"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/replay-evidence/git-replay-failure-516iha84/expected.gd",
+      "bytes": 8902,
+      "sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/harness/task_io.py",
+      "bytes": 8827,
+      "sha256": "4b57c1eb055b2ad233b1a2e2232a914e603635cffadf2a86cf3f5e3d13cc73b8"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/harness/Run-Test.ps1",
+      "bytes": 1846,
+      "sha256": "2ecc0cccc4cffba123fe1785ec021c3f13bd01e146d93987f9e7a376b4c57bf7"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/harness/focused_queue_run.py",
+      "bytes": 16609,
+      "sha256": "c5161aef75021b847b22f2eedacfb334b7c6130943837cd015a1ab65c7619ca3"
+    },
+    {
+      "path": "candidates/clock-display-focused-verification/20261009-local-006/MANIFEST.json",
+      "bytes": 2307,
+      "sha256": "4e3d3cb2769c67842e89af8f8fe51eecd987307d7e2cc92548bdf091d5700d6c"
+    },
+    {
+      "path": "candidates/clock-display-focused-verification/20261009-local-006/frozen-candidate/CHANGE.patch",
+      "bytes": 1140,
+      "sha256": "3467106b110e666e95704aaa5542b2d6feec45d374f7b190847527200a5863f4"
+    },
+    {
+      "path": "candidates/clock-display-focused-verification/20261009-local-006/frozen-candidate/MANIFEST.json",
+      "bytes": 3620,
+      "sha256": "d616ad4362ad74c2f076d84db1f8756163be2a8c53fafe47963249acc1ba14e3"
+    },
+    {
+      "path": "candidates/clock-display-focused-verification/20261009-local-006/frozen-candidate/overlay/view/playable_build/player_details.gd",
+      "bytes": 8902,
+      "sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c"
+    },
+    {
+      "path": "candidates/clock-display-focused-verification/20261009-local-006/frozen-test/test_clock_display.gd",
+      "bytes": 8643,
+      "sha256": "c0d8ca00ca919792e164150d8d4bf70aeb8321e1579c322095e30d4ea2b82486"
+    }
+  ]
+}

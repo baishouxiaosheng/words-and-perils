@@ -1,0 +1,6 @@
+{
+  "owner_run_id": "focused-006-run-01",
+  "pid": 32620,
+  "process_created_utc": "2026-10-09T08:32:06.995755+00:00",
+  "mechanism": "foreground publication same verified task checkpoint; execution lock released and free lock reacquired"
+}

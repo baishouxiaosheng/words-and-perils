@@ -1,0 +1,31 @@
+{
+  "task_id": "WP-ENGINEERING-NORMALIZATION-20261009",
+  "owner": "codex-engineering-normalization",
+  "base_commit": "6fc4bf5ad6290b73a71f3ac795f7b64138127624",
+  "branch": "candidate/engineering-normalization-20261009",
+  "scope": "Direct owner-authorized bounded engineering work, not a queued task",
+  "allowed_paths": [
+    ".gitignore",
+    "docs/development/WORKFLOW.md",
+    "docs/development/evidence/WP-ENGINEERING-NORMALIZATION-20261009/AUDIT.json",
+    "docs/development/evidence/WP-ENGINEERING-NORMALIZATION-20261009/EVIDENCE_INDEX.json",
+    "docs/development/evidence/WP-ENGINEERING-NORMALIZATION-20261009/RESULT.json",
+    "docs/development/evidence/WP-ENGINEERING-NORMALIZATION-20261009/SUMMARY.md",
+    "docs/development/evidence/WP-ENGINEERING-NORMALIZATION-20261009/TASK.json",
+    "docs/development/evidence/WP-ENGINEERING-NORMALIZATION-20261009/audit_repository.py",
+    "docs/development/evidence/WP-ENGINEERING-NORMALIZATION-20261009/path-regression.json",
+    "docs/development/evidence/WP-ENGINEERING-NORMALIZATION-20261009/unittest.stderr.log",
+    "docs/development/evidence/WP-ENGINEERING-NORMALIZATION-20261009/unittest.stdout.log",
+    "tools/build_evidence_index.py",
+    "tools/check_focused_paths.py",
+    "tools/tests/test_engineering_tools.py"
+  ],
+  "forbidden": [
+    "shared STOP/CONTROL and worker changes",
+    "main merge or formal adoption",
+    "gameplay additions",
+    "private credentials and player saves",
+    "rewriting historical candidates and evidence"
+  ],
+  "rollback": "Use unchanged public v30; revert candidate commits if needed, no history rewrite."
+}

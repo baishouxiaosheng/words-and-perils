@@ -1,0 +1,4 @@
+# Local caches only. Evidence logs, manifests and Godot .uid files remain visible.
+.godot/
+__pycache__/
+*.py[cod]

@@ -1,0 +1,1251 @@
+{
+  "source_commit": "6fc4bf5ad6290b73a71f3ac795f7b64138127624",
+  "formal_release": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+  "method": "Top-level GDScript function boundaries, spans include trailing blank/comment lines; body strips declaration and outer whitespace, includes inline body. Heuristic privacy scan, not a secret-free certification.",
+  "metrics": [
+    {
+      "path": "main.gd",
+      "sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f",
+      "lines": 2900,
+      "functions": 175,
+      "top_level_variables": 181,
+      "largest": [
+        {
+          "name": "build_ui",
+          "line": 452,
+          "span": 203
+        },
+        {
+          "name": "_switch_mode_to",
+          "line": 1827,
+          "span": 186
+        },
+        {
+          "name": "build_dialogs",
+          "line": 860,
+          "span": 89
+        },
+        {
+          "name": "refresh_playtest_world",
+          "line": 2440,
+          "span": 67
+        },
+        {
+          "name": "update_playtest_controls",
+          "line": 2337,
+          "span": 61
+        }
+      ]
+    },
+    {
+      "path": "view/actor_action_entry/view_adapter.gd",
+      "sha256": "e2d2cc438b00b3d933a267df73e760f108fc4b89ac5334053615fd88c3454cc6",
+      "lines": 403,
+      "functions": 71,
+      "top_level_variables": 15,
+      "largest": [
+        {
+          "name": "import_reply",
+          "line": 112,
+          "span": 21
+        },
+        {
+          "name": "movement_preview",
+          "line": 242,
+          "span": 17
+        },
+        {
+          "name": "_is_public_request",
+          "line": 370,
+          "span": 17
+        },
+        {
+          "name": "accept_narration",
+          "line": 183,
+          "span": 15
+        },
+        {
+          "name": "frozen_movement_preview",
+          "line": 259,
+          "span": 15
+        }
+      ]
+    },
+    {
+      "path": "view/actor_status_entry_v1/view_adapter.gd",
+      "sha256": "a9a825b9096b67424e7358d2dcca32b8e39411983f7ac9be0975ef7bc869968d",
+      "lines": 428,
+      "functions": 74,
+      "top_level_variables": 15,
+      "largest": [
+        {
+          "name": "import_reply",
+          "line": 115,
+          "span": 21
+        },
+        {
+          "name": "movement_preview",
+          "line": 251,
+          "span": 21
+        },
+        {
+          "name": "_is_public_request",
+          "line": 395,
+          "span": 17
+        },
+        {
+          "name": "accept_narration",
+          "line": 186,
+          "span": 15
+        },
+        {
+          "name": "frozen_movement_preview",
+          "line": 272,
+          "span": 15
+        }
+      ]
+    }
+  ],
+  "same_named_bodies": 60,
+  "same_body_lines": 190,
+  "identical_whole_functions": 60,
+  "identical_whole_function_lines": 226,
+  "duplicates": [
+    {
+      "function": "_has_profile_facts",
+      "action_line": 387,
+      "status_line": 412
+    },
+    {
+      "function": "_init",
+      "action_line": 37,
+      "status_line": 39
+    },
+    {
+      "function": "_now",
+      "action_line": 403,
+      "status_line": 428
+    },
+    {
+      "function": "_read_json",
+      "action_line": 397,
+      "status_line": 422
+    },
+    {
+      "function": "_valid_hash",
+      "action_line": 392,
+      "status_line": 417
+    },
+    {
+      "function": "accept_assessment",
+      "action_line": 102,
+      "status_line": 105
+    },
+    {
+      "function": "accept_decision",
+      "action_line": 84,
+      "status_line": 87
+    },
+    {
+      "function": "accept_narration",
+      "action_line": 183,
+      "status_line": 186
+    },
+    {
+      "function": "action_copy",
+      "action_line": 70,
+      "status_line": 73
+    },
+    {
+      "function": "actor_reference",
+      "action_line": 231,
+      "status_line": 240
+    },
+    {
+      "function": "authoritative_result",
+      "action_line": 172,
+      "status_line": 175
+    },
+    {
+      "function": "begin_intent",
+      "action_line": 92,
+      "status_line": 95
+    },
+    {
+      "function": "can_cancel",
+      "action_line": 75,
+      "status_line": 78
+    },
+    {
+      "function": "cancel",
+      "action_line": 155,
+      "status_line": 158
+    },
+    {
+      "function": "commit",
+      "action_line": 141,
+      "status_line": 144
+    },
+    {
+      "function": "committed",
+      "action_line": 174,
+      "status_line": 177
+    },
+    {
+      "function": "current_actor_id",
+      "action_line": 72,
+      "status_line": 75
+    },
+    {
+      "function": "current_slot",
+      "action_line": 73,
+      "status_line": 76
+    },
+    {
+      "function": "decision_pending",
+      "action_line": 74,
+      "status_line": 77
+    },
+    {
+      "function": "decision_request",
+      "action_line": 78,
+      "status_line": 81
+    },
+    {
+      "function": "decision_request_copy",
+      "action_line": 83,
+      "status_line": 86
+    },
+    {
+      "function": "default_intention_request_path",
+      "action_line": 319,
+      "status_line": 344
+    },
+    {
+      "function": "default_request_path",
+      "action_line": 318,
+      "status_line": 343
+    },
+    {
+      "function": "default_save_path",
+      "action_line": 317,
+      "status_line": 342
+    },
+    {
+      "function": "enemy_reference",
+      "action_line": 237,
+      "status_line": 246
+    },
+    {
+      "function": "enemy_response_available",
+      "action_line": 76,
+      "status_line": 79
+    },
+    {
+      "function": "fixture_available",
+      "action_line": 287,
+      "status_line": 308
+    },
+    {
+      "function": "has_recorded_narration",
+      "action_line": 207,
+      "status_line": 210
+    },
+    {
+      "function": "import_narration",
+      "action_line": 198,
+      "status_line": 201
+    },
+    {
+      "function": "invalidate_transport",
+      "action_line": 107,
+      "status_line": 110
+    },
+    {
+      "function": "issue_assessment_ticket",
+      "action_line": 99,
+      "status_line": 102
+    },
+    {
+      "function": "item_reference",
+      "action_line": 238,
+      "status_line": 247
+    },
+    {
+      "function": "journal_entries",
+      "action_line": 308,
+      "status_line": 333
+    },
+    {
+      "function": "learned_notes",
+      "action_line": 290,
+      "status_line": 311
+    },
+    {
+      "function": "load_data",
+      "action_line": 341,
+      "status_line": 366
+    },
+    {
+      "function": "load_file",
+      "action_line": 334,
+      "status_line": 359
+    },
+    {
+      "function": "load_sidecar",
+      "action_line": 213,
+      "status_line": 216
+    },
+    {
+      "function": "narration_entries",
+      "action_line": 208,
+      "status_line": 211
+    },
+    {
+      "function": "narration_request",
+      "action_line": 176,
+      "status_line": 179
+    },
+    {
+      "function": "phase",
+      "action_line": 71,
+      "status_line": 74
+    },
+    {
+      "function": "prepare_fixture",
+      "action_line": 288,
+      "status_line": 309
+    },
+    {
+      "function": "profile_id",
+      "action_line": 41,
+      "status_line": 43
+    },
+    {
+      "function": "public_facts",
+      "action_line": 170,
+      "status_line": 173
+    },
+    {
+      "function": "ready",
+      "action_line": 42,
+      "status_line": 45
+    },
+    {
+      "function": "receipt_binding",
+      "action_line": 179,
+      "status_line": 182
+    },
+    {
+      "function": "record_narration",
+      "action_line": 199,
+      "status_line": 202
+    },
+    {
+      "function": "refresh_runtime_state",
+      "action_line": 65,
+      "status_line": 68
+    },
+    {
+      "function": "render_state",
+      "action_line": 274,
+      "status_line": 287
+    },
+    {
+      "function": "request",
+      "action_line": 165,
+      "status_line": 168
+    },
+    {
+      "function": "restarted",
+      "action_line": 350,
+      "status_line": 375
+    },
+    {
+      "function": "roll_once",
+      "action_line": 133,
+      "status_line": 136
+    },
+    {
+      "function": "sample_goal",
+      "action_line": 289,
+      "status_line": 310
+    },
+    {
+      "function": "save_data",
+      "action_line": 320,
+      "status_line": 345
+    },
+    {
+      "function": "save_sidecar",
+      "action_line": 209,
+      "status_line": 212
+    },
+    {
+      "function": "stage",
+      "action_line": 137,
+      "status_line": 140
+    },
+    {
+      "function": "start_source",
+      "action_line": 45,
+      "status_line": 48
+    },
+    {
+      "function": "state_copy",
+      "action_line": 69,
+      "status_line": 72
+    },
+    {
+      "function": "status_details",
+      "action_line": 275,
+      "status_line": 288
+    },
+    {
+      "function": "supported_focus_kinds",
+      "action_line": 221,
+      "status_line": 224
+    },
+    {
+      "function": "tile_reference",
+      "action_line": 225,
+      "status_line": 234
+    }
+  ],
+  "tracked_files": 1730,
+  "findings": [
+    {
+      "path": "candidates/focused-display-path-regression/20261009-cloud-v3/RESULT.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "candidates/focused-display-path-regression/20261009-cloud-v3/regression.py",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "candidates/guarded-focused-gui-native-tests/20261009-cloud-v1/Test-NativeGuardEquivalence.ps1",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "candidates/guarded-focused-gui-native-tests/20261009-cloud-v1/Test-OutputGuard.ps1",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "candidates/guarded-focused-gui-native-tests/20261009-cloud-v1/Test-TerminalGuard.ps1",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "candidates/guarded-focused-gui-native-tests/20261009-cloud-v1/Test-WindowsGuard.ps1",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "candidates/guarded-focused-gui/20261009-cloud-v1/Invoke-FocusedGuiGuard.ps1",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "candidates/guarded-focused-gui/20261009-cloud-v1/baseline/Invoke-WindowsGuard.ps1",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "candidates/t03-local-runtime/20261008-sol-a1b40/ARCHIVE_RECEIPT.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "candidates/t03-local-runtime/20261008-sol-a1b40/DELIVERY_RESULT.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "candidates/t03-local-runtime/20261008-sol-a1b40/natural-test-type-fix/FIX_MANIFEST.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/native-wake-20261008-155545/evidence/CANARY.stdout.log",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/run-01a1b40-02/evidence/CANARY.stdout.log",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-005/attempt-001/evidence/gates/GATE-ack.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-005/attempt-001/evidence/gates/GATE-preclaim.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-005/attempt-001/evidence/gates/GATE-publication_A.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-005/attempt-001/evidence/gates/GATE-python_candidate_static.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/STATIC_FAILURE_DIAGNOSIS.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/gates/GATE-ack.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/gates/GATE-preclaim.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/gates/GATE-publication_A.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/gates/GATE-python_candidate_static.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-009/attempt-001/evidence/PRIOR_REAL_PERMISSION_FAILURE.stderr.log",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-009/attempt-001/evidence/gates/GATE-ack.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-009/attempt-001/evidence/gates/GATE-preclaim.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-009/attempt-001/evidence/gates/GATE-publication_A.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-009/attempt-001/evidence/gates/GATE-python_candidate_static.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/gates/GATE-ack.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/gates/GATE-artifact_publication.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/gates/GATE-before_guarded_child.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/gates/GATE-preclaim.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/guarded-run/HOST_START.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/guarded-run/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/NETWORK_PAUSE.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/TOOLS_REDACTED.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-ack.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-artifact_publication.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-engine_clock-revision3_parse.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-engine_clock-revision3_suite.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-engine_clock_parse.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-engine_combined-revision3_parse.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-engine_combined-revision3_suite.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-engine_gui-capture.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-engine_gui-parse.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-engine_location-revision3_parse.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-engine_location-revision3_suite.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-gui_prepare.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-location_network_recovery_full_admission.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-preclaim.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-prepare_clock-revision3_parse.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-prepare_clock-revision3_suite.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-prepare_clock_parse.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-prepare_combined-revision3_parse.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-prepare_combined-revision3_suite.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-prepare_location-revision3_parse.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-prepare_location-revision3_suite.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-python_clock_candidate_static.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-python_clock_package_static.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-python_clock_package_static_revision2.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-python_combined_candidate_static.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-python_location_candidate_static-FAILED.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-python_location_candidate_static.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-python_location_package_static_revision2.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-python_prepare_clock-revision3_parse.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-python_prepare_clock-revision3_suite.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-python_prepare_clock_parse.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-python_prepare_combined-revision3_parse.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-python_prepare_combined-revision3_suite.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-python_prepare_location-revision3_parse.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-python_prepare_location-revision3_suite.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-revision2_resume.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/gates/GATE-revision3_resume.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/policy/CONFIG_BEFORE.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/policy/LEDGER_BEFORE.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/policy/ORIGINAL_NETWORK_LATCH.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/python-runs/prepare_clock-revision3_parse/PARSED_RESULT.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/python-runs/prepare_clock-revision3_parse/stdout.log",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/python-runs/prepare_clock-revision3_suite/PARSED_RESULT.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/python-runs/prepare_clock-revision3_suite/stdout.log",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/python-runs/prepare_clock_parse/PARSED_RESULT.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/python-runs/prepare_clock_parse/stdout.log",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/python-runs/prepare_combined-revision3_parse/PARSED_RESULT.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/python-runs/prepare_combined-revision3_parse/stdout.log",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/python-runs/prepare_combined-revision3_suite/PARSED_RESULT.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/python-runs/prepare_combined-revision3_suite/stdout.log",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/python-runs/prepare_location-revision3_parse/PARSED_RESULT.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/python-runs/prepare_location-revision3_parse/stdout.log",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/python-runs/prepare_location-revision3_suite/PARSED_RESULT.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/python-runs/prepare_location-revision3_suite/stdout.log",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/retained-location-network-pause/NETWORK_PAUSE.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/runs/clock-revision3/parse/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/runs/clock-revision3/suite/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/runs/clock/parse/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/runs/combined-revision3/parse/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/runs/combined-revision3/suite/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/runs/gui-capture/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/runs/gui-parse/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/runs/location-revision3/parse/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/runs/location-revision3/suite/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/closeout-001/evidence/FINAL_CHECKPOINT.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/EXISTING_BINARY_BINDING.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-ack.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-engine_task002-adapter-coastal_range-01.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-engine_task002-adapter-plateau_hinterland-01.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-engine_task002-compile-01.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-engine_task002-diagnostic-01.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-engine_task002-focused-01.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-engine_task002-mkdir-01.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-engine_task002-owned-01.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-engine_task002-parse-01.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-preclaim.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-prepare_task002-adapter-coastal_range-01.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-prepare_task002-adapter-plateau_hinterland-01.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-prepare_task002-compile-01.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-prepare_task002-diagnostic-01.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-prepare_task002-focused-01.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-prepare_task002-mkdir-01.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-prepare_task002-owned-01.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-prepare_task002-parse-01.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/gates/GATE-stage_candidate.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/guard-v3/Invoke-WindowsGuard.ps1",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/guard-v3/Test-OutputGuard.ps1",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/guard-v3/Test-OutputGuard.ps1.stdout.log",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/guard-v3/Test-TerminalGuard.ps1",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/guard-v3/Test-TerminalGuard.ps1.stdout.log",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/guard-v3/Test-WindowsGuard.ps1",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/guard-v3/Test-WindowsGuard.ps1.stdout.log",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/guard-v3/production-wrapper-spec.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/runs/task002-adapter-coastal_range-01/PREPARATION.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/runs/task002-adapter-coastal_range-01/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/runs/task002-adapter-plateau_hinterland-01/PREPARATION.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/runs/task002-adapter-plateau_hinterland-01/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/runs/task002-compile-01/PREPARATION.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/runs/task002-compile-01/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/runs/task002-diagnostic-01/PREPARATION.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/runs/task002-diagnostic-01/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/runs/task002-focused-01/PREPARATION.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/runs/task002-focused-01/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/runs/task002-mkdir-01/PREPARATION.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/runs/task002-mkdir-01/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/runs/task002-owned-01/PREPARATION.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/runs/task002-owned-01/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/runs/task002-parse-01/PREPARATION.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-OWNED-STAGING-VERIFY-20261008-002/attempt-001/evidence/runs/task002-parse-01/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/INPUT_VERIFICATION.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/LOCK_OWNER.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/STOP_LATCH_FALSE_POSITIVE.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-ack_publication-bae0574fc12c4535ade69635325e7c20.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-all_tests_verified-1231d47235e64cfab82280e477bed6bf.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-before_candidate_copy-d06907119dbb4b17b67a44dc7998ab6d.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-claim_cas-bbe1f732f5004b4cabe75029d56c8011.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-claim_cas_retry-0baf73cacb514273bb2e7b44c2f9940f.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-claim_readback-869bef8939574fe593bb76175f11b023.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-coastal_verified-a745a13672cb4019aec9f31d340ea753.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-compile_verified-8aede6ebe02a49c58f1936b223cea48e.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-engine_natural-coastal-01-6becc4d6c3564f78969c5b559e0c5b6d.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-engine_natural-coastal-01-8714f53a6b9d4c99b60f9584b066c487.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-engine_natural-compile-01-c9e9d69c4e204cd9840964b6f6e89a3d.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-engine_natural-focused-01-21540cc23c974fbca1924cea094c3718.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-engine_natural-focused-02-6c0e402fa8eb44449c6a4d861463ec64.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-engine_natural-plateau-01-61f6d9a7762341139648d0c9c58a1988.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-focused_fixture_fix-47a8d4d175b643cc839fe5f1ee9d5492.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-focused_verified-a37be901ebdc4bb0823805a79253dd5b.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/gates/GATE-preclaim-efc9acd688a84a8ebfa3fe0859bad8df.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/guard/Invoke-WindowsGuard.ps1",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/PREPARATION.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-coastal-01/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/PREPARATION.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-compile-01/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/PREPARATION.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-01/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/PREPARATION.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-focused-02/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/PREPARATION.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/evidence/runs/natural-plateau-01/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-NATURAL-SAVE-BOOL-20261008-001/attempt-001/publication/GATE-result_publication-57fc3f96946343dd84a75de3912d3578.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/gates/GATE-ack.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/gates/GATE-engine_parse.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/gates/GATE-engine_suite.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/gates/GATE-preclaim.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/gates/GATE-prepare_parse.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/gates/GATE-prepare_suite.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/gates/GATE-publication_A.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/guard-v3/Invoke-WindowsGuard.ps1",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/guard-v3/Test-OutputGuard.ps1",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/guard-v3/Test-OutputGuard.ps1.stdout.log",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/guard-v3/Test-TerminalGuard.ps1",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/guard-v3/Test-TerminalGuard.ps1.stdout.log",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/guard-v3/Test-WindowsGuard.ps1",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/guard-v3/Test-WindowsGuard.ps1.stdout.log",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/guard-v3/production-wrapper-spec.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/runs/parse/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/runs/suite/SPEC.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/gates/GATE-ack.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/gates/GATE-preclaim.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/gates/GATE-publication_A.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-004/attempt-001/evidence/gates/GATE-python_candidate_static.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/STATIC_FAILURE_DIAGNOSIS.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/gates/GATE-ack.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/gates/GATE-preclaim.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/gates/GATE-publication_A.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-006/attempt-001/evidence/gates/GATE-python_candidate_static.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-008/attempt-001/evidence/gates/GATE-ack.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-008/attempt-001/evidence/gates/GATE-preclaim.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-008/attempt-001/evidence/gates/GATE-publication_A.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-008/attempt-001/evidence/gates/GATE-python_candidate_static.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-008/attempt-001/evidence/gates/GATE-python_package_static.json",
+      "type": "machine_path_review"
+    },
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-008/attempt-001/evidence/python-runs/package_static/stderr.log",
+      "type": "machine_path_review"
+    }
+  ],
+  "scan_limits": "Tracked files only; content scan limited to listed text extensions <=2 MiB, no credentials or unrelated directories read, no values printed."
+}

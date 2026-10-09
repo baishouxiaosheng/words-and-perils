@@ -1,0 +1,90 @@
+{
+  "task_id": "WP-ENGINEERING-NORMALIZATION-20261009",
+  "source_commit": "6fc4bf5ad6290b73a71f3ac795f7b64138127624",
+  "status": "passed_bounded_offline_scope",
+  "tools": {
+    "python": "3.12.8",
+    "git": "2.44.0.windows.1",
+    "powershell": "7.6.5",
+    "godot": "4.6.3.stable.official.7d41c59c4",
+    "godot_sha256": "ef90e929ba1a6a4322860285d97f40f4aa349c90329a91b0e8b55b8df0f4cb00",
+    "absolute_paths": "Retained in local-only LOCAL_ENVIRONMENT.json; private user directories not published"
+  },
+  "tests": [
+    {
+      "command": "python -B -m unittest discover -s tools/tests -v",
+      "cwd": "candidate checkout root",
+      "exit_code": 0,
+      "tests": 7,
+      "result": "passed"
+    },
+    {
+      "command": "tools/check_focused_paths.py with six pinned candidate/test arguments; exact command in WORKFLOW.md",
+      "baseline_script": "candidates/focused-display-path-regression/20261009-cloud-v3/regression.py",
+      "baseline_sha256": "66369c3bc855da2018ee67bf3f291ddde6cc4c066ca1e8b83b505101338f3e7d",
+      "checks": 230,
+      "cases": 32,
+      "exit_code": 0,
+      "whole_result_bytes_equal_before_after": true,
+      "result_sha256": "15e51d553f5c28fc5cc659716194b79b71c3df8d07b2920c2c8e5d0e6cf117a5"
+    },
+    {
+      "command": "python tools/restore_v30.py --project <existing isolated formal v30> --check",
+      "binding_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+      "exit_code": 0,
+      "source_files": 1466,
+      "literal_scripts": 347,
+      "source_writes": 0,
+      "final_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e",
+      "binary_verification": "not_requested"
+    },
+    {
+      "command": "python -B tools/build_evidence_index.py --ref 6fc4bf5ad6290b73a71f3ac795f7b64138127624 --output <new index.json>",
+      "exit_code": 0,
+      "candidates": 58,
+      "metadata_records": 225,
+      "issues": 0
+    }
+  ],
+  "engine_accounting": {
+    "version_only_invocations": 1,
+    "version_only_guard": "not used; probe preceded repository AGENTS discovery",
+    "gameplay_or_parse_invocations": 0
+  },
+  "not_run": [
+    "Godot parser/headless/gameplay: STOP preserved; offline tool change",
+    "GUI/FPS/IME/full journey",
+    "C# managed 012 rerun or Win32 guard equivalence",
+    "old 013",
+    "binary restoration and player saves"
+  ],
+  "preserved": {
+    "CONTROL_stop": true,
+    "CONTROL_sha256": "1dda946db19eadbe73738803324ca0d52a14d9f78d2cfe0a8ae71ebb9bf41bb2",
+    "root_main_sha256": "e346071dd0149805f96ed53d18fda4f28223354b121fb6831f66c1c7b862eec4",
+    "README_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "old_queue_dirty_entries": 690
+  },
+  "failures_retained": [
+    {
+      "kind": "environment",
+      "action": "initial long-path worktree checkout",
+      "result": "Filename too long; Git rolled back unsuccessful worktree creation; explicit short worktree and core.longpaths=true succeeded; original projects untouched"
+    }
+  ],
+  "adopted": false,
+  "changed_tool_hashes": {
+    "tools/build_evidence_index.py": "5bf3efb039ce69b878aadb6f673e0b5920cd74281d9eb1653fd18c8c878c7e5b",
+    "tools/check_focused_paths.py": "fb56eb4230872b37ff4737f5add08302b15d77d8a3f8aa617d970d51e3861725",
+    "tools/tests/test_engineering_tools.py": "44ded14b06f50e22e5ffc0dcf43268f9b4f836de6e77473c80fb0eb42aa58375"
+  },
+  "historical_bound_sources_checked": [
+    "candidates/guarded-focused-gui/20261009-cloud-v1/WindowsGuard.FocusedGui.cs",
+    "candidates/guarded-focused-gui/20261009-cloud-v1/baseline/WindowsGuard.cs",
+    "candidates/guarded-focused-gui/20261009-cloud-v2/Test-FocusedGui.SourceOnly.ps1",
+    "candidates/guarded-focused-gui/20261009-cloud-v2/MANIFEST.json",
+    "candidates/status-clock-display/20261009-cloud-v3/overlay/view/playable_build/player_details.gd",
+    "candidates/focus-location-display/20261009-cloud-v3/overlay/view/playable_build/player_details.gd",
+    "candidates/player-details-clock-location/20261009-cloud-v1/overlay/view/playable_build/player_details.gd"
+  ]
+}

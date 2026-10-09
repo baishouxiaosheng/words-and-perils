@@ -1,0 +1,10 @@
+{
+  "commit": "9d43f653a92d785738b6d905799b8508df2219a2",
+  "expected": 75,
+  "actual_remote_returns_matching": 72,
+  "missing": [
+    "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/EXECUTION_OUTCOME.json",
+    "candidates/t03-raw-readback-verification/20261009-local-003/MANIFEST.json",
+    "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/ARTIFACTS.json"
+  ]
+}

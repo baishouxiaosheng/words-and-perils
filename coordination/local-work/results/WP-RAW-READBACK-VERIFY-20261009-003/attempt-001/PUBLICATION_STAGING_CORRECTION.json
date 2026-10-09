@@ -1,0 +1,7 @@
+{
+  "cause": "Publisher helper includes literal PRIVATE KEY and ghp_ strings used by its own scanner; self-inclusion caused a staging false positive.",
+  "actual_secret_detected": false,
+  "remote_phase_A_commit_created": false,
+  "engine_reruns": 0,
+  "correction": "Preserve helper and failure locally; omit publisher helper from public test evidence, keep existing credential scanner and all test/source/guard evidence."
+}

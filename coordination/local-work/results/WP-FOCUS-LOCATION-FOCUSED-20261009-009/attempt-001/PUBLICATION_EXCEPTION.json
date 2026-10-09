@@ -1,0 +1,6 @@
+{
+  "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>",
+  "utc": "2026-10-09T10:05:23.541504+00:00",
+  "no_engine_retry": true,
+  "next_action": "Read-only reconcile before any same-owner publication continuation"
+}

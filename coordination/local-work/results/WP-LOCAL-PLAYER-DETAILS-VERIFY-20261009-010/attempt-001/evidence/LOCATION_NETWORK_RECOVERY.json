@@ -1,0 +1,7 @@
+{
+  "prior_failed_gate_retained": true,
+  "single_readonly_recovery_succeeded": true,
+  "all_admission_and_same_claim_reverified": true,
+  "completed_clock_runs_not_repeated": true,
+  "utc": "2026-10-09T10:31:26.530168+00:00"
+}

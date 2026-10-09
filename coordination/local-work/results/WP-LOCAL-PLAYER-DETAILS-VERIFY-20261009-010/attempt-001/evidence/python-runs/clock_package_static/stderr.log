@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\WordsAndPerils-Tasks\candidate-20261008-ea04d75a\evidence\WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010\run-01\portable-packages\clock\check_static.py", line 133, in <module>
+    main()
+  File "E:\WordsAndPerils-Tasks\candidate-20261008-ea04d75a\evidence\WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010\run-01\portable-packages\clock\check_static.py", line 38, in main
+    check(len(data) == pin["bytes"] and hashlib.sha256(data).hexdigest() == pin["sha256"], "exact test package " + pin["path"])
+  File "E:\WordsAndPerils-Tasks\candidate-20261008-ea04d75a\evidence\WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010\run-01\portable-packages\clock\check_static.py", line 30, in check
+    raise AssertionError(label)
+AssertionError: exact test package check_static.py

@@ -1,0 +1,57 @@
+{
+  "schema": "focused-formatter-test/v1",
+  "suite": "focus-location",
+  "status": "TEST_SOURCE_NOT_PARSED_NOT_RUN_NOT_ADOPTED",
+  "candidate_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+  "formal_release_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+  "formal_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e",
+  "test_entry": "test_focus_location.gd",
+  "coverage": [
+    "actor_tile_settlement",
+    "invalid_hex",
+    "static_early_return",
+    "passage_original_only",
+    "empty_and_independent"
+  ],
+  "package_files": [
+    {
+      "path": "INPUTS.json",
+      "bytes": 4595,
+      "sha256": "ca9816f7eb7928b78427bf5d025a5ff80594dc8e016eeab88927697bdc6d7a26"
+    },
+    {
+      "path": "README.txt",
+      "bytes": 4128,
+      "sha256": "424af2ccc8d3d178b83c44c44d3d4bdd852a933109489947b7d9392caeb0618a"
+    },
+    {
+      "path": "check_static.py",
+      "bytes": 10495,
+      "sha256": "f6bb6be28e4ff7ac80c67b1e3427f8f1b9c76d5f381b7b50f5dfbcdbedd6d0a9"
+    },
+    {
+      "path": "prepare.py",
+      "bytes": 7326,
+      "sha256": "ead99b974c91d3c5e6524d8adf02209fb614ae14c7223d6582b80e3af911b8ba"
+    },
+    {
+      "path": "test_focus_location.gd",
+      "bytes": 5952,
+      "sha256": "87c99370865600ebc48e616c2b9f17fa9e62bf267277085462aba48f6a8be4da"
+    }
+  ],
+  "production_changes": 0,
+  "candidate_merge": false,
+  "source_input_role": "verified read-only per-file excerpt; not complete restore or runnable Main",
+  "host_role": "isolated SceneTree formatter unit only",
+  "godot_parse": "NOT_RUN",
+  "unit_runtime": "NOT_RUN",
+  "main_ui_visibility": "NOT_RUN",
+  "adopted": false,
+  "publication_confirmation": "Publication is confirmed by the containing Git commit; static check publication field records the check-time state, not current publication status",
+  "local_test_revision": {
+    "task_id": "WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010",
+    "change": "Refuse all Windows reparse components; no privilege changes; explicit unavailable symlink fixtures only",
+    "original_prepare_sha256": "eeec76df1e38930227f1d3a33108ed18e4b6ee336456ec82bfec0f9ecd57495b"
+  }
+}

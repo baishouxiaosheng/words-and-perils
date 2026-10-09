@@ -1,0 +1,582 @@
+{
+  "task_id": "WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010",
+  "task_sha256": "c7b4729ce5803e76a4e09977e4bd59126caf7bcac9d870f40d0de2b9e757277a",
+  "status": "reviewable",
+  "claim_commit": "cf8aac4888e1a1adcb606f6606dd9d5ccaf687d8",
+  "ack_commit": "0db2e07dab6a4ccee89481ee9fdb53bddce8ac91",
+  "completed_runs": [
+    {
+      "kind": "clock_parse",
+      "strict_pass": false,
+      "actual_engine_pid": 61660,
+      "host_pid": 58708,
+      "host_exit_code": 1,
+      "host_exited": true,
+      "guard_exit_code": 1,
+      "engine_exit_code": 1,
+      "job_empty": true,
+      "readers_finished": true,
+      "recorded_handles_exited": true,
+      "diagnostics": [
+        "SCRIPT ERROR: Parse Error: Cannot call non-static function \"can_instantiate()\" on the class \"res://view/playable_build/player_details.gd\" directly. Make an instance instead.",
+        "SCRIPT ERROR: Parse Error: Cannot call non-static function \"can_instantiate()\" on the class \"res://tests/focused/baseline_player_details.gd\" directly. Make an instance instead.",
+        "SCRIPT ERROR: Parse Error: Cannot call non-static function \"can_instantiate()\" on the class \"res://tests/focused/test_clock_display.gd\" directly. Make an instance instead.",
+        "SCRIPT ERROR: Parse Error: Cannot call non-static function \"can_instantiate()\" on the class \"res://tests/focused/local_isolated.gd\" directly. Make an instance instead.",
+        "ERROR: Failed to load script \"res://tests/focused/local_parse.gd\" with error \"Parse error\"."
+      ],
+      "isolation": [],
+      "source_before_after_unchanged": true,
+      "original_driver_sha256": "c0d8ca00ca919792e164150d8d4bf70aeb8321e1579c322095e30d4ea2b82486",
+      "candidate_overlay_sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+      "entry_sha256": "197639dc1540fa085d22e23b53cdaaaf84dbeed9fb01f137a156d6d469ff3b8f",
+      "binding_sha256": "41f26138c8595ba60dd034e4988c55062642f8460c13cf2e918f0649a3a8bfca",
+      "before_map_sha256": "202c7343055528a4a82e7b77491983b166ba54edf4853f41b6eb14cfced2c16d",
+      "after_map_sha256": "202c7343055528a4a82e7b77491983b166ba54edf4853f41b6eb14cfced2c16d",
+      "job_peak_commit_bytes": 38383616,
+      "physical_rss_measured": false,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 11051749376,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "elapsed_seconds": 0.4631,
+      "output_bytes": 1173,
+      "suite": {}
+    },
+    {
+      "kind": "clock-revision3_parse",
+      "strict_pass": true,
+      "actual_engine_pid": 62160,
+      "host_pid": 52780,
+      "host_exit_code": 0,
+      "host_exited": true,
+      "guard_exit_code": 0,
+      "engine_exit_code": 0,
+      "job_empty": true,
+      "readers_finished": true,
+      "recorded_handles_exited": true,
+      "diagnostics": [],
+      "isolation": [
+        {
+          "autoloads": [],
+          "expected": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/clock-revision3/parse/data/appdata/WPFocused-clock-display-69ad4a1c15ae1afa",
+          "globalized_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/clock-revision3/parse/data/appdata/WPFocused-clock-display-69ad4a1c15ae1afa",
+          "isolated": true,
+          "os_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/clock-revision3/parse/data/appdata/WPFocused-clock-display-69ad4a1c15ae1afa"
+        }
+      ],
+      "source_before_after_unchanged": true,
+      "original_driver_sha256": "c0d8ca00ca919792e164150d8d4bf70aeb8321e1579c322095e30d4ea2b82486",
+      "candidate_overlay_sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+      "entry_sha256": "693cea0bf7c186ae63f7fc1d68b9a73f9dd2650a434d0331d3fae9e0cc2efacb",
+      "binding_sha256": "db73cad147a205a70e504c0c24c037edae60ecc03fcd2d274563bc35d070f737",
+      "before_map_sha256": "f25e2a5970ec9dcc1404da12adbd87e7911280721fcc6c536ca0f4392e51c2a8",
+      "after_map_sha256": "f25e2a5970ec9dcc1404da12adbd87e7911280721fcc6c536ca0f4392e51c2a8",
+      "job_peak_commit_bytes": 49733632,
+      "physical_rss_measured": false,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 10907754496,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "elapsed_seconds": 0.3451,
+      "output_bytes": 1425,
+      "suite": {
+        "entry_sha256": "693cea0bf7c186ae63f7fc1d68b9a73f9dd2650a434d0331d3fae9e0cc2efacb",
+        "loaded": [
+          {
+            "path": "view/playable_build/player_details.gd",
+            "sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c"
+          },
+          {
+            "path": "tests/focused/baseline_player_details.gd",
+            "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3"
+          },
+          {
+            "path": "tests/focused/test_clock_display.gd",
+            "sha256": "c0d8ca00ca919792e164150d8d4bf70aeb8321e1579c322095e30d4ea2b82486"
+          },
+          {
+            "path": "tests/focused/local_isolated.gd",
+            "sha256": "af0671fc3fa81101d07022d7ade696d3123e994fb8ed995e4a21d87386330aa0"
+          }
+        ],
+        "ok": true,
+        "pid": 62160,
+        "test_bodies_started": false
+      }
+    },
+    {
+      "kind": "clock-revision3_suite",
+      "strict_pass": true,
+      "actual_engine_pid": 30160,
+      "host_pid": 2772,
+      "host_exit_code": 0,
+      "host_exited": true,
+      "guard_exit_code": 0,
+      "engine_exit_code": 0,
+      "job_empty": true,
+      "readers_finished": true,
+      "recorded_handles_exited": true,
+      "diagnostics": [],
+      "isolation": [
+        {
+          "autoloads": [],
+          "expected": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/clock-revision3/suite/data/appdata/WPFocused-clock-display-ded4174b60d5d7ce",
+          "globalized_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/clock-revision3/suite/data/appdata/WPFocused-clock-display-ded4174b60d5d7ce",
+          "isolated": true,
+          "os_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/clock-revision3/suite/data/appdata/WPFocused-clock-display-ded4174b60d5d7ce"
+        }
+      ],
+      "source_before_after_unchanged": true,
+      "original_driver_sha256": "c0d8ca00ca919792e164150d8d4bf70aeb8321e1579c322095e30d4ea2b82486",
+      "candidate_overlay_sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+      "entry_sha256": "af0671fc3fa81101d07022d7ade696d3123e994fb8ed995e4a21d87386330aa0",
+      "binding_sha256": "85811d3dc40fb86eea7d39d5639231294a49aceeff85bf681975f5ba59d59241",
+      "before_map_sha256": "eedd27aa99e58b1f0eb8e50ee55fed237a8aa754dcd369d3a581c3cf485b971c",
+      "after_map_sha256": "eedd27aa99e58b1f0eb8e50ee55fed237a8aa754dcd369d3a581c3cf485b971c",
+      "job_peak_commit_bytes": 50114560,
+      "physical_rss_measured": false,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 10870968320,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "elapsed_seconds": 0.3551,
+      "output_bytes": 891,
+      "suite": {
+        "checks": 165,
+        "failures": [],
+        "main_ui_visibility_verified": false,
+        "status": "UNIT_PASSED",
+        "suite": "clock_display_formatter_unit"
+      }
+    },
+    {
+      "kind": "location-revision3_parse",
+      "strict_pass": true,
+      "actual_engine_pid": 38176,
+      "host_pid": 24308,
+      "host_exit_code": 0,
+      "host_exited": true,
+      "guard_exit_code": 0,
+      "engine_exit_code": 0,
+      "job_empty": true,
+      "readers_finished": true,
+      "recorded_handles_exited": true,
+      "diagnostics": [],
+      "isolation": [
+        {
+          "autoloads": [],
+          "expected": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/location-revision3/parse/data/appdata/WPFocused-focus-location-f0156be2af91b0cd",
+          "globalized_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/location-revision3/parse/data/appdata/WPFocused-focus-location-f0156be2af91b0cd",
+          "isolated": true,
+          "os_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/location-revision3/parse/data/appdata/WPFocused-focus-location-f0156be2af91b0cd"
+        }
+      ],
+      "source_before_after_unchanged": true,
+      "original_driver_sha256": "87c99370865600ebc48e616c2b9f17fa9e62bf267277085462aba48f6a8be4da",
+      "candidate_overlay_sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+      "entry_sha256": "7b59d30566f9fb9c848fb9788bdd136a9ffb97d72b050f76ed6bc44dda780827",
+      "binding_sha256": "a3cf1feff4e04cbd89dd30a16f6d6738ddd99d5f5836d22da4b79a1df3478eb3",
+      "before_map_sha256": "85fd96aa9654eaa7457b809d86ac1389e838b1104a75439b1c36c39139fbf153",
+      "after_map_sha256": "85fd96aa9654eaa7457b809d86ac1389e838b1104a75439b1c36c39139fbf153",
+      "job_peak_commit_bytes": 49389568,
+      "physical_rss_measured": false,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 10321895424,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "elapsed_seconds": 0.3561,
+      "output_bytes": 1438,
+      "suite": {
+        "entry_sha256": "7b59d30566f9fb9c848fb9788bdd136a9ffb97d72b050f76ed6bc44dda780827",
+        "loaded": [
+          {
+            "path": "view/playable_build/player_details.gd",
+            "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5"
+          },
+          {
+            "path": "tests/focused/baseline_player_details.gd",
+            "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3"
+          },
+          {
+            "path": "tests/focused/test_focus_location.gd",
+            "sha256": "87c99370865600ebc48e616c2b9f17fa9e62bf267277085462aba48f6a8be4da"
+          },
+          {
+            "path": "tests/focused/local_isolated.gd",
+            "sha256": "b8732453c37ea0781b5b69921656471c745f20a15902bb694851e391dfa537bd"
+          }
+        ],
+        "ok": true,
+        "pid": 38176,
+        "test_bodies_started": false
+      }
+    },
+    {
+      "kind": "location-revision3_suite",
+      "strict_pass": true,
+      "actual_engine_pid": 38088,
+      "host_pid": 28968,
+      "host_exit_code": 0,
+      "host_exited": true,
+      "guard_exit_code": 0,
+      "engine_exit_code": 0,
+      "job_empty": true,
+      "readers_finished": true,
+      "recorded_handles_exited": true,
+      "diagnostics": [],
+      "isolation": [
+        {
+          "autoloads": [],
+          "expected": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/location-revision3/suite/data/appdata/WPFocused-focus-location-46d2e5438fffab7b",
+          "globalized_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/location-revision3/suite/data/appdata/WPFocused-focus-location-46d2e5438fffab7b",
+          "isolated": true,
+          "os_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/location-revision3/suite/data/appdata/WPFocused-focus-location-46d2e5438fffab7b"
+        }
+      ],
+      "source_before_after_unchanged": true,
+      "original_driver_sha256": "87c99370865600ebc48e616c2b9f17fa9e62bf267277085462aba48f6a8be4da",
+      "candidate_overlay_sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+      "entry_sha256": "b8732453c37ea0781b5b69921656471c745f20a15902bb694851e391dfa537bd",
+      "binding_sha256": "e1048a454360dd10430d76a6eb175cbd77545bb5a1486550367e626ac4bfce51",
+      "before_map_sha256": "76fc463c438e86419b150e759f388ecf328b0dac327943acb23267dc2a9aeb01",
+      "after_map_sha256": "76fc463c438e86419b150e759f388ecf328b0dac327943acb23267dc2a9aeb01",
+      "job_peak_commit_bytes": 49885184,
+      "physical_rss_measured": false,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 10280992768,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "elapsed_seconds": 0.3466,
+      "output_bytes": 904,
+      "suite": {
+        "checks": 234,
+        "failures": [],
+        "main_ui_visibility_verified": false,
+        "status": "UNIT_PASSED",
+        "suite": "focus_location_formatter_unit"
+      }
+    },
+    {
+      "kind": "combined-revision3_parse",
+      "strict_pass": true,
+      "actual_engine_pid": 45472,
+      "host_pid": 53476,
+      "host_exit_code": 0,
+      "host_exited": true,
+      "guard_exit_code": 0,
+      "engine_exit_code": 0,
+      "job_empty": true,
+      "readers_finished": true,
+      "recorded_handles_exited": true,
+      "diagnostics": [],
+      "isolation": [
+        {
+          "autoloads": [],
+          "expected": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/combined-revision3/parse/data/appdata/WPFocused-combined-player-details-af937915680046d4",
+          "globalized_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/combined-revision3/parse/data/appdata/WPFocused-combined-player-details-af937915680046d4",
+          "isolated": true,
+          "os_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/combined-revision3/parse/data/appdata/WPFocused-combined-player-details-af937915680046d4"
+        }
+      ],
+      "source_before_after_unchanged": true,
+      "original_driver_sha256": "8b12348f54733ca74b8ce1b469ae243945574d2ecce485c77f328c75034af037",
+      "candidate_overlay_sha256": "e4e20fc6fb269238d3a6116634b6593f92078c5dafbbd055b237eb123b49d883",
+      "entry_sha256": "4e61803afe4ca1862b4f066ff18803e8a977ec55ca6a850b6205dac7fe4a4869",
+      "binding_sha256": "5b6ab5445ccc89ac7457e7e53ad79889d0c85b22c57fcd78f6d11d4b55730e8b",
+      "before_map_sha256": "2452fec6d717d6c9682c46989e89629a4101022bbc63efc7c939800bcea6e391",
+      "after_map_sha256": "2452fec6d717d6c9682c46989e89629a4101022bbc63efc7c939800bcea6e391",
+      "job_peak_commit_bytes": 50499584,
+      "physical_rss_measured": false,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 10233122816,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "elapsed_seconds": 0.3497,
+      "output_bytes": 1474,
+      "suite": {
+        "entry_sha256": "4e61803afe4ca1862b4f066ff18803e8a977ec55ca6a850b6205dac7fe4a4869",
+        "loaded": [
+          {
+            "path": "view/playable_build/player_details.gd",
+            "sha256": "e4e20fc6fb269238d3a6116634b6593f92078c5dafbbd055b237eb123b49d883"
+          },
+          {
+            "path": "tests/focused/baseline_player_details.gd",
+            "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3"
+          },
+          {
+            "path": "tests/focused/test_combined_player_details.gd",
+            "sha256": "8b12348f54733ca74b8ce1b469ae243945574d2ecce485c77f328c75034af037"
+          },
+          {
+            "path": "tests/focused/local_isolated.gd",
+            "sha256": "47ae2345e20c8bfc833dbbf85389c1f4fafac43af5c9a5decb96e76f9f952220"
+          }
+        ],
+        "ok": true,
+        "pid": 45472,
+        "test_bodies_started": false
+      }
+    },
+    {
+      "kind": "combined-revision3_suite",
+      "strict_pass": true,
+      "actual_engine_pid": 34708,
+      "host_pid": 57536,
+      "host_exit_code": 0,
+      "host_exited": true,
+      "guard_exit_code": 0,
+      "engine_exit_code": 0,
+      "job_empty": true,
+      "readers_finished": true,
+      "recorded_handles_exited": true,
+      "diagnostics": [],
+      "isolation": [
+        {
+          "autoloads": [],
+          "expected": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/combined-revision3/suite/data/appdata/WPFocused-combined-player-details-0c5b3b9efdf901e2",
+          "globalized_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/combined-revision3/suite/data/appdata/WPFocused-combined-player-details-0c5b3b9efdf901e2",
+          "isolated": true,
+          "os_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/combined-revision3/suite/data/appdata/WPFocused-combined-player-details-0c5b3b9efdf901e2"
+        }
+      ],
+      "source_before_after_unchanged": true,
+      "original_driver_sha256": "8b12348f54733ca74b8ce1b469ae243945574d2ecce485c77f328c75034af037",
+      "candidate_overlay_sha256": "e4e20fc6fb269238d3a6116634b6593f92078c5dafbbd055b237eb123b49d883",
+      "entry_sha256": "47ae2345e20c8bfc833dbbf85389c1f4fafac43af5c9a5decb96e76f9f952220",
+      "binding_sha256": "0f1cdc35031ad24a771bfc37ed3463a225965feafc868d2760ba6ea545dba80e",
+      "before_map_sha256": "2f28ac455b487a27f98f72fd56d0d1d95fe8f081b68544f68dd3f959cda324d8",
+      "after_map_sha256": "2f28ac455b487a27f98f72fd56d0d1d95fe8f081b68544f68dd3f959cda324d8",
+      "job_peak_commit_bytes": 52133888,
+      "physical_rss_measured": false,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 10250895360,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "elapsed_seconds": 0.4485,
+      "output_bytes": 940,
+      "suite": {
+        "checks": 305,
+        "failures": [],
+        "main_ui_visibility_verified": false,
+        "status": "UNIT_PASSED",
+        "suite": "combined_player_details_formatter_unit"
+      }
+    }
+  ],
+  "static_runs": [
+    {
+      "label": "clock_candidate_static",
+      "exit_code": 0,
+      "pid": 48256,
+      "owned_process_exited": true,
+      "stdout_bytes": 2621,
+      "stderr_bytes": 0,
+      "script_sha256": "6e9427b85484248078e8589f995fe0dce61d008e5fb7eedd34e6cb216c54a4ce",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true,
+      "static_count": 24,
+      "preparation_status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE"
+    },
+    {
+      "label": "clock_package_static",
+      "exit_code": 1,
+      "pid": 4680,
+      "owned_process_exited": true,
+      "stdout_bytes": 0,
+      "stderr_bytes": 808,
+      "script_sha256": "f6bb6be28e4ff7ac80c67b1e3427f8f1b9c76d5f381b7b50f5dfbcdbedd6d0a9",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true
+    },
+    {
+      "label": "clock_package_static_revision2",
+      "exit_code": 0,
+      "pid": 7052,
+      "owned_process_exited": true,
+      "stdout_bytes": 6925,
+      "stderr_bytes": 0,
+      "script_sha256": "f6bb6be28e4ff7ac80c67b1e3427f8f1b9c76d5f381b7b50f5dfbcdbedd6d0a9",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true,
+      "static_count": 61,
+      "preparation_status": "PASSED_AVAILABLE_STATIC_AND_PREPARATION_WITH_NOT_RUN_NEGATIVES"
+    },
+    {
+      "label": "prepare_clock_parse",
+      "exit_code": 0,
+      "pid": 5488,
+      "owned_process_exited": true,
+      "stdout_bytes": 3218,
+      "stderr_bytes": 0,
+      "script_sha256": "ead99b974c91d3c5e6524d8adf02209fb614ae14c7223d6582b80e3af911b8ba",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true,
+      "static_count": null,
+      "preparation_status": "PREPARED_NOT_PARSED_NOT_RUN"
+    },
+    {
+      "label": "prepare_clock-revision3_parse",
+      "exit_code": 0,
+      "pid": 46784,
+      "owned_process_exited": true,
+      "stdout_bytes": 3238,
+      "stderr_bytes": 0,
+      "script_sha256": "ead99b974c91d3c5e6524d8adf02209fb614ae14c7223d6582b80e3af911b8ba",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true,
+      "static_count": null,
+      "preparation_status": "PREPARED_NOT_PARSED_NOT_RUN"
+    },
+    {
+      "label": "prepare_clock-revision3_suite",
+      "exit_code": 0,
+      "pid": 38400,
+      "owned_process_exited": true,
+      "stdout_bytes": 3238,
+      "stderr_bytes": 0,
+      "script_sha256": "ead99b974c91d3c5e6524d8adf02209fb614ae14c7223d6582b80e3af911b8ba",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true,
+      "static_count": null,
+      "preparation_status": "PREPARED_NOT_PARSED_NOT_RUN"
+    },
+    {
+      "label": "location_candidate_static",
+      "exit_code": 0,
+      "pid": 23708,
+      "owned_process_exited": true,
+      "stdout_bytes": 2288,
+      "stderr_bytes": 0,
+      "script_sha256": "1bcba772c4bb7106c8b89b3a34c0d49ee3a687fd896f02a9698fc63ad163b4ef",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true,
+      "static_count": 20,
+      "preparation_status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE"
+    },
+    {
+      "label": "location_package_static_revision2",
+      "exit_code": 0,
+      "pid": 58116,
+      "owned_process_exited": true,
+      "stdout_bytes": 6566,
+      "stderr_bytes": 0,
+      "script_sha256": "f6bb6be28e4ff7ac80c67b1e3427f8f1b9c76d5f381b7b50f5dfbcdbedd6d0a9",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true,
+      "static_count": 57,
+      "preparation_status": "PASSED_AVAILABLE_STATIC_AND_PREPARATION_WITH_NOT_RUN_NEGATIVES"
+    },
+    {
+      "label": "prepare_location-revision3_parse",
+      "exit_code": 0,
+      "pid": 60832,
+      "owned_process_exited": true,
+      "stdout_bytes": 3248,
+      "stderr_bytes": 0,
+      "script_sha256": "ead99b974c91d3c5e6524d8adf02209fb614ae14c7223d6582b80e3af911b8ba",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true,
+      "static_count": null,
+      "preparation_status": "PREPARED_NOT_PARSED_NOT_RUN"
+    },
+    {
+      "label": "prepare_location-revision3_suite",
+      "exit_code": 0,
+      "pid": 600,
+      "owned_process_exited": true,
+      "stdout_bytes": 3248,
+      "stderr_bytes": 0,
+      "script_sha256": "ead99b974c91d3c5e6524d8adf02209fb614ae14c7223d6582b80e3af911b8ba",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true,
+      "static_count": null,
+      "preparation_status": "PREPARED_NOT_PARSED_NOT_RUN"
+    },
+    {
+      "label": "combined_candidate_static",
+      "exit_code": 0,
+      "pid": 61636,
+      "owned_process_exited": true,
+      "stdout_bytes": 6089,
+      "stderr_bytes": 0,
+      "script_sha256": "d868d34a6d472fc98f70dda8e8d8e186e2cca60b4168dcb9af86ea95cc002723",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true,
+      "static_count": 56,
+      "preparation_status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE"
+    },
+    {
+      "label": "prepare_combined-revision3_parse",
+      "exit_code": 0,
+      "pid": 60616,
+      "owned_process_exited": true,
+      "stdout_bytes": 3642,
+      "stderr_bytes": 0,
+      "script_sha256": "1a0015f2f3421094ac0b8add23700529228650df004aeb4ef72655f2bc33c6c9",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true,
+      "static_count": null,
+      "preparation_status": "PREPARED_NOT_PARSED_NOT_RUN"
+    },
+    {
+      "label": "prepare_combined-revision3_suite",
+      "exit_code": 0,
+      "pid": 7448,
+      "owned_process_exited": true,
+      "stdout_bytes": 3642,
+      "stderr_bytes": 0,
+      "script_sha256": "1a0015f2f3421094ac0b8add23700529228650df004aeb4ef72655f2bc33c6c9",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true,
+      "static_count": null,
+      "preparation_status": "PREPARED_NOT_PARSED_NOT_RUN"
+    }
+  ],
+  "test_revision": 3,
+  "gui": "NOT_RUN_YET",
+  "symlink_negatives": "NOT_RUN explicit; no privileged attempts",
+  "candidate_adopted": false
+}

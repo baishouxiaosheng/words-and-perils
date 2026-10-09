@@ -1,0 +1,9 @@
+config_version=5
+
+[application]
+config/name="Focused formatter unit"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="WPFocused-focus-location-46d2e5438fffab7b"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"

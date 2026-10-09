@@ -1,0 +1,156 @@
+{
+  "Schema": "wordsandperils_windows_native_guard/v3",
+  "Status": "completed",
+  "StopReason": null,
+  "ErrorOperation": null,
+  "StartedUtc": "2026-10-09T10:32:01.4119846Z",
+  "EndedUtc": "2026-10-09T10:32:01.8604551Z",
+  "Stdout": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org\r\n\r\nLOCAL_SUITE_ISOLATION {\"autoloads\":[],\"expected\":\"E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/combined-revision3/suite/data/appdata/WPFocused-combined-player-details-0c5b3b9efdf901e2\",\"globalized_user_dir\":\"E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/combined-revision3/suite/data/appdata/WPFocused-combined-player-details-0c5b3b9efdf901e2\",\"isolated\":true,\"os_user_dir\":\"E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/combined-revision3/suite/data/appdata/WPFocused-combined-player-details-0c5b3b9efdf901e2\"}\r\n{\"checks\":305,\"failures\":[],\"main_ui_visibility_verified\":false,\"status\":\"UNIT_PASSED\",\"suite\":\"combined_player_details_formatter_unit\"}\r\n",
+  "Stderr": "",
+  "Started": true,
+  "WorkloadResumed": true,
+  "JobAssignedBeforeResume": true,
+  "KillOnCloseVerified": true,
+  "BreakawayDisabledVerified": true,
+  "JobEmptyAfterRun": true,
+  "AllRecordedHandlesExited": true,
+  "PhysicalMemoryWasActuallyRead": true,
+  "EnvironmentInherited": false,
+  "SyntheticFault": false,
+  "EngineStarted": true,
+  "OutputLimitExceeded": false,
+  "OutputLimitTerminationRequested": false,
+  "OutputLimitTerminationSucceeded": false,
+  "OutputReadersFinished": true,
+  "OutputLimitBytes": 65536,
+  "StdoutRetainedBytes": 940,
+  "StderrRetainedBytes": 0,
+  "OutputTerminationNativeError": 0,
+  "OutputObservedBytes": 940,
+  "NativeError": 0,
+  "GuardExitCode": 0,
+  "TimeoutSeconds": 120,
+  "RootPid": 34708,
+  "RootExitCode": 0,
+  "JobCommitLimitBytes": 1073741824,
+  "QueriedJobCommitLimitBytes": 1073741824,
+  "PeakJobCommitBytes": 52133888,
+  "LowestActualAvailPhysBytes": 10177761280,
+  "AffinityMask": 3,
+  "ElapsedSeconds": 0.4485,
+  "MemoryScope": "Win32 physical availability independently; kernel job-wide committed-memory peak/limit includes descendants; guardian host outside job covered by reserve",
+  "Admission": {
+    "Allowed": true,
+    "Reason": "admitted",
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 10250895360,
+    "BudgetBytes": 8589934592,
+    "ReserveBytes": 536870912,
+    "AdditionalBytes": 1073741824,
+    "ProfileTimeoutSeconds": 120
+  },
+  "AdmissionNativeReading": {
+    "Success": true,
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 10250895360,
+    "NativeError": 0
+  },
+  "CompletionNativeReading": {
+    "Success": true,
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 10247397376,
+    "NativeError": 0
+  },
+  "CompletionDeadlineExceeded": false,
+  "PriorityClassBeforeResume": 16384,
+  "CreatedSuspended": true,
+  "NoWindowFlagRequested": true,
+  "OwnedProcesses": [
+    {
+      "Pid": 34708,
+      "CreatedUtc": "2026-10-09T10:32:01.4209025Z",
+      "JobMembershipVerified": true,
+      "Exited": true
+    }
+  ],
+  "Samples": [
+    {
+      "ElapsedSeconds": 0.0455,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 10241462272,
+      "EffectiveAvailPhysBytes": 10241462272,
+      "PeakJobCommitBytes": 3624960,
+      "JobPids": [
+        34708
+      ]
+    },
+    {
+      "ElapsedSeconds": 0.1458,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 10177761280,
+      "EffectiveAvailPhysBytes": 10177761280,
+      "PeakJobCommitBytes": 37257216,
+      "JobPids": [
+        34708
+      ]
+    },
+    {
+      "ElapsedSeconds": 0.2464,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 10179948544,
+      "EffectiveAvailPhysBytes": 10179948544,
+      "PeakJobCommitBytes": 52133888,
+      "JobPids": [
+        34708
+      ]
+    },
+    {
+      "ElapsedSeconds": 0.3469,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 10250280960,
+      "EffectiveAvailPhysBytes": 10250280960,
+      "PeakJobCommitBytes": 52133888,
+      "JobPids": [
+        34708
+      ]
+    },
+    {
+      "ElapsedSeconds": 0.448,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": true,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 10247380992,
+      "EffectiveAvailPhysBytes": 10247380992,
+      "PeakJobCommitBytes": 52133888,
+      "JobPids": []
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "checks": 305,
+  "failures": [],
+  "main_ui_visibility_verified": false,
+  "status": "UNIT_PASSED",
+  "suite": "combined_player_details_formatter_unit"
+}

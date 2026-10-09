@@ -1,0 +1,1 @@
+{"failed_stage": "read-only preclaim fetch", "previous_claim": null, "engine_launches": 0, "single_readonly_fetch_recovery_succeeded": true, "full_admission_still_required": true, "utc": "2026-10-09T10:23:43.931847+00:00"}

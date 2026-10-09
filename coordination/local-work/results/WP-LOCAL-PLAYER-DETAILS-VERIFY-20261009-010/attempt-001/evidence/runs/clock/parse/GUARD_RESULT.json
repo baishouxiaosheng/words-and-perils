@@ -1,0 +1,140 @@
+{
+  "Schema": "wordsandperils_windows_native_guard/v3",
+  "Status": "workload_failed",
+  "StopReason": null,
+  "ErrorOperation": null,
+  "StartedUtc": "2026-10-09T10:26:10.5539672Z",
+  "EndedUtc": "2026-10-09T10:26:11.0171129Z",
+  "Stdout": "Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org\r\n\r\n",
+  "Stderr": "SCRIPT ERROR: Parse Error: Cannot call non-static function \"can_instantiate()\" on the class \"res://view/playable_build/player_details.gd\" directly. Make an instance instead.\r\n   at: GDScript::reload (res://tests/focused/local_parse.gd:28)\r\nSCRIPT ERROR: Parse Error: Cannot call non-static function \"can_instantiate()\" on the class \"res://tests/focused/baseline_player_details.gd\" directly. Make an instance instead.\r\n   at: GDScript::reload (res://tests/focused/local_parse.gd:30)\r\nSCRIPT ERROR: Parse Error: Cannot call non-static function \"can_instantiate()\" on the class \"res://tests/focused/test_clock_display.gd\" directly. Make an instance instead.\r\n   at: GDScript::reload (res://tests/focused/local_parse.gd:32)\r\nSCRIPT ERROR: Parse Error: Cannot call non-static function \"can_instantiate()\" on the class \"res://tests/focused/local_isolated.gd\" directly. Make an instance instead.\r\n   at: GDScript::reload (res://tests/focused/local_parse.gd:34)\r\nERROR: Failed to load script \"res://tests/focused/local_parse.gd\" with error \"Parse error\".\r\n   at: load (modules/gdscript/gdscript.cpp:2907)\r\n",
+  "Started": true,
+  "WorkloadResumed": true,
+  "JobAssignedBeforeResume": true,
+  "KillOnCloseVerified": true,
+  "BreakawayDisabledVerified": true,
+  "JobEmptyAfterRun": true,
+  "AllRecordedHandlesExited": true,
+  "PhysicalMemoryWasActuallyRead": true,
+  "EnvironmentInherited": false,
+  "SyntheticFault": false,
+  "EngineStarted": true,
+  "OutputLimitExceeded": false,
+  "OutputLimitTerminationRequested": false,
+  "OutputLimitTerminationSucceeded": false,
+  "OutputReadersFinished": true,
+  "OutputLimitBytes": 65536,
+  "StdoutRetainedBytes": 75,
+  "StderrRetainedBytes": 1098,
+  "OutputTerminationNativeError": 0,
+  "OutputObservedBytes": 1173,
+  "NativeError": 0,
+  "GuardExitCode": 1,
+  "TimeoutSeconds": 120,
+  "RootPid": 61660,
+  "RootExitCode": 1,
+  "JobCommitLimitBytes": 1073741824,
+  "QueriedJobCommitLimitBytes": 1073741824,
+  "PeakJobCommitBytes": 38383616,
+  "LowestActualAvailPhysBytes": 10960089088,
+  "AffinityMask": 3,
+  "ElapsedSeconds": 0.4631,
+  "MemoryScope": "Win32 physical availability independently; kernel job-wide committed-memory peak/limit includes descendants; guardian host outside job covered by reserve",
+  "Admission": {
+    "Allowed": true,
+    "Reason": "admitted",
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 11051749376,
+    "BudgetBytes": 8589934592,
+    "ReserveBytes": 536870912,
+    "AdditionalBytes": 1073741824,
+    "ProfileTimeoutSeconds": 120
+  },
+  "AdmissionNativeReading": {
+    "Success": true,
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 11051749376,
+    "NativeError": 0
+  },
+  "CompletionNativeReading": {
+    "Success": true,
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 11017891840,
+    "NativeError": 0
+  },
+  "CompletionDeadlineExceeded": false,
+  "PriorityClassBeforeResume": 16384,
+  "CreatedSuspended": true,
+  "NoWindowFlagRequested": true,
+  "OwnedProcesses": [
+    {
+      "Pid": 61660,
+      "CreatedUtc": "2026-10-09T10:26:10.6792747Z",
+      "JobMembershipVerified": true,
+      "Exited": true
+    }
+  ],
+  "Samples": [
+    {
+      "ElapsedSeconds": 0.1602,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 11023278080,
+      "EffectiveAvailPhysBytes": 11023278080,
+      "PeakJobCommitBytes": 3600384,
+      "JobPids": [
+        61660
+      ]
+    },
+    {
+      "ElapsedSeconds": 0.2613,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 10974306304,
+      "EffectiveAvailPhysBytes": 10974306304,
+      "PeakJobCommitBytes": 32284672,
+      "JobPids": [
+        61660
+      ]
+    },
+    {
+      "ElapsedSeconds": 0.3615,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": false,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 10960089088,
+      "EffectiveAvailPhysBytes": 10960089088,
+      "PeakJobCommitBytes": 38383616,
+      "JobPids": [
+        61660
+      ]
+    },
+    {
+      "ElapsedSeconds": 0.4626,
+      "NativeReadSuccess": true,
+      "EffectiveReadSuccess": true,
+      "Injected": false,
+      "TerminalJobAndRootExited": true,
+      "DeadlineExceeded": false,
+      "DeadlineInjected": false,
+      "TotalPhysBytes": 34038341632,
+      "ActualAvailPhysBytes": 11017891840,
+      "EffectiveAvailPhysBytes": 11017891840,
+      "PeakJobCommitBytes": 38383616,
+      "JobPids": []
+    }
+  ]
+}

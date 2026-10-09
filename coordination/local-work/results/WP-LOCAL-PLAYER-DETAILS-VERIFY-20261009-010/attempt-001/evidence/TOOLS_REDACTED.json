@@ -1,0 +1,9 @@
+{
+  "python_version": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\baishou_xiaosheng\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "git_version": "git version 2.44.0.windows.1",
+  "Godot_version": "4.6.3.stable.official.7d41c59c4 from already-passed evidence, not rerun",
+  "engine_sha256": "ef90e929ba1a6a4322860285d97f40f4aa349c90329a91b0e8b55b8df0f4cb00",
+  "native_context_usage_percent": null,
+  "native_compact": "unavailable"
+}

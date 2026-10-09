@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "started": false,
+  "root_pid": 0,
+  "guard_exit_code": 3,
+  "root_exit_code": 0,
+  "stop_reason": null,
+  "job_empty": false,
+  "all_recorded_handles_exited": false,
+  "engine_started": false
+}

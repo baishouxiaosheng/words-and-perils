@@ -1,0 +1,10 @@
+SCRIPT ERROR: Parse Error: Cannot call non-static function "can_instantiate()" on the class "res://view/playable_build/player_details.gd" directly. Make an instance instead.
+   at: GDScript::reload (res://tests/focused/local_parse.gd:28)
+SCRIPT ERROR: Parse Error: Cannot call non-static function "can_instantiate()" on the class "res://tests/focused/baseline_player_details.gd" directly. Make an instance instead.
+   at: GDScript::reload (res://tests/focused/local_parse.gd:30)
+SCRIPT ERROR: Parse Error: Cannot call non-static function "can_instantiate()" on the class "res://tests/focused/test_clock_display.gd" directly. Make an instance instead.
+   at: GDScript::reload (res://tests/focused/local_parse.gd:32)
+SCRIPT ERROR: Parse Error: Cannot call non-static function "can_instantiate()" on the class "res://tests/focused/local_isolated.gd" directly. Make an instance instead.
+   at: GDScript::reload (res://tests/focused/local_parse.gd:34)
+ERROR: Failed to load script "res://tests/focused/local_parse.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:2907)

@@ -1,0 +1,23 @@
+{
+  "direct_owner_authorized": true,
+  "accepted_utc": "2026-10-09T10:23:45.441275+00:00",
+  "network_failure": "Pause affected task, do not launch new tasks this round; bounded read-only recovery; on later network restoration verify ALL admissions before resuming",
+  "protected_stops": [
+    "user STOP",
+    "cancel",
+    "real approval or operation rejection",
+    "source/identity failure"
+  ],
+  "network_return_never_clears_protected_stop": true,
+  "unchanged_old_terminal_results": true,
+  "cleared_exact_network_latch_sha256": "212e353c8a056e236f0ee9dd511221f507ac86f67342b0710b4a9a7ebc2b5db2",
+  "fresh_head": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+  "control": {
+    "protocol": "words-and-perils-local-work/v1",
+    "kind": "control",
+    "queue_enabled": true,
+    "stop": false,
+    "resume_generation": 0,
+    "reason": "First bounded Natural write-result task is prepared. This control does not prove local automation is enabled."
+  }
+}

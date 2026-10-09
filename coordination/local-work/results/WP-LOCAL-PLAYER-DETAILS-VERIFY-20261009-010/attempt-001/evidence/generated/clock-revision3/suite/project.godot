@@ -1,0 +1,9 @@
+config_version=5
+
+[application]
+config/name="Focused formatter unit"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="WPFocused-clock-display-ded4174b60d5d7ce"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"

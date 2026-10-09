@@ -1,0 +1,17 @@
+{
+  "executable": "E:\\WordsAndPerils-Test\\Godot\\4.6.3\\Godot_v4.6.3-stable_win64.exe",
+  "arguments": [
+    "--headless",
+    "--path",
+    "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010\\run-01\\runs\\combined-revision3\\suite\\project",
+    "--script",
+    "res://tests/focused/local_isolated.gd",
+    "--",
+    "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010\\run-01\\runs\\combined-revision3\\suite\\data"
+  ],
+  "working_directory": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010\\run-01\\runs\\combined-revision3\\suite\\project",
+  "isolated_data_root": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010\\run-01\\runs\\combined-revision3\\suite\\data",
+  "profile": "small",
+  "timeout_seconds": 120,
+  "log_path": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010\\run-01\\runs\\combined-revision3\\suite\\GUARD_RESULT.json"
+}

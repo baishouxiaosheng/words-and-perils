@@ -1,0 +1,43 @@
+{
+  "kind": "clock_parse",
+  "strict_pass": false,
+  "actual_engine_pid": 61660,
+  "host_pid": 58708,
+  "host_exit_code": 1,
+  "host_exited": true,
+  "guard_exit_code": 1,
+  "engine_exit_code": 1,
+  "job_empty": true,
+  "readers_finished": true,
+  "recorded_handles_exited": true,
+  "diagnostics": [
+    "SCRIPT ERROR: Parse Error: Cannot call non-static function \"can_instantiate()\" on the class \"res://view/playable_build/player_details.gd\" directly. Make an instance instead.",
+    "SCRIPT ERROR: Parse Error: Cannot call non-static function \"can_instantiate()\" on the class \"res://tests/focused/baseline_player_details.gd\" directly. Make an instance instead.",
+    "SCRIPT ERROR: Parse Error: Cannot call non-static function \"can_instantiate()\" on the class \"res://tests/focused/test_clock_display.gd\" directly. Make an instance instead.",
+    "SCRIPT ERROR: Parse Error: Cannot call non-static function \"can_instantiate()\" on the class \"res://tests/focused/local_isolated.gd\" directly. Make an instance instead.",
+    "ERROR: Failed to load script \"res://tests/focused/local_parse.gd\" with error \"Parse error\"."
+  ],
+  "isolation": [],
+  "source_before_after_unchanged": true,
+  "original_driver_sha256": "c0d8ca00ca919792e164150d8d4bf70aeb8321e1579c322095e30d4ea2b82486",
+  "candidate_overlay_sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+  "entry_sha256": "197639dc1540fa085d22e23b53cdaaaf84dbeed9fb01f137a156d6d469ff3b8f",
+  "binding_sha256": "41f26138c8595ba60dd034e4988c55062642f8460c13cf2e918f0649a3a8bfca",
+  "before_map_sha256": "202c7343055528a4a82e7b77491983b166ba54edf4853f41b6eb14cfced2c16d",
+  "after_map_sha256": "202c7343055528a4a82e7b77491983b166ba54edf4853f41b6eb14cfced2c16d",
+  "job_peak_commit_bytes": 38383616,
+  "physical_rss_measured": false,
+  "admission": {
+    "Allowed": true,
+    "Reason": "admitted",
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 11051749376,
+    "BudgetBytes": 8589934592,
+    "ReserveBytes": 536870912,
+    "AdditionalBytes": 1073741824,
+    "ProfileTimeoutSeconds": 120
+  },
+  "elapsed_seconds": 0.4631,
+  "output_bytes": 1173,
+  "suite": {}
+}

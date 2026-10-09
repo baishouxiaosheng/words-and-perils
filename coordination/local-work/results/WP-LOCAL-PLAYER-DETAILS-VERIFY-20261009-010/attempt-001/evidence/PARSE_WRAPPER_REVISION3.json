@@ -1,0 +1,8 @@
+{
+  "failure": "Preloaded GDScript class cannot call non-static Script.can_instantiate directly",
+  "fix": "After double-API isolation, load each existing script as typed Script object and call can_instantiate without creating test instances",
+  "new_disposable_parse_copy": true,
+  "original_failed_logs_retained": true,
+  "assertions_weakened": false,
+  "production_or_driver_changes": false
+}

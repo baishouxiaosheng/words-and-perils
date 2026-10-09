@@ -1,0 +1,68 @@
+{
+  "kind": "location-revision3_parse",
+  "strict_pass": true,
+  "actual_engine_pid": 38176,
+  "host_pid": 24308,
+  "host_exit_code": 0,
+  "host_exited": true,
+  "guard_exit_code": 0,
+  "engine_exit_code": 0,
+  "job_empty": true,
+  "readers_finished": true,
+  "recorded_handles_exited": true,
+  "diagnostics": [],
+  "isolation": [
+    {
+      "autoloads": [],
+      "expected": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/location-revision3/parse/data/appdata/WPFocused-focus-location-f0156be2af91b0cd",
+      "globalized_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/location-revision3/parse/data/appdata/WPFocused-focus-location-f0156be2af91b0cd",
+      "isolated": true,
+      "os_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/location-revision3/parse/data/appdata/WPFocused-focus-location-f0156be2af91b0cd"
+    }
+  ],
+  "source_before_after_unchanged": true,
+  "original_driver_sha256": "87c99370865600ebc48e616c2b9f17fa9e62bf267277085462aba48f6a8be4da",
+  "candidate_overlay_sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+  "entry_sha256": "7b59d30566f9fb9c848fb9788bdd136a9ffb97d72b050f76ed6bc44dda780827",
+  "binding_sha256": "a3cf1feff4e04cbd89dd30a16f6d6738ddd99d5f5836d22da4b79a1df3478eb3",
+  "before_map_sha256": "85fd96aa9654eaa7457b809d86ac1389e838b1104a75439b1c36c39139fbf153",
+  "after_map_sha256": "85fd96aa9654eaa7457b809d86ac1389e838b1104a75439b1c36c39139fbf153",
+  "job_peak_commit_bytes": 49389568,
+  "physical_rss_measured": false,
+  "admission": {
+    "Allowed": true,
+    "Reason": "admitted",
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 10321895424,
+    "BudgetBytes": 8589934592,
+    "ReserveBytes": 536870912,
+    "AdditionalBytes": 1073741824,
+    "ProfileTimeoutSeconds": 120
+  },
+  "elapsed_seconds": 0.3561,
+  "output_bytes": 1438,
+  "suite": {
+    "entry_sha256": "7b59d30566f9fb9c848fb9788bdd136a9ffb97d72b050f76ed6bc44dda780827",
+    "loaded": [
+      {
+        "path": "view/playable_build/player_details.gd",
+        "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5"
+      },
+      {
+        "path": "tests/focused/baseline_player_details.gd",
+        "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3"
+      },
+      {
+        "path": "tests/focused/test_focus_location.gd",
+        "sha256": "87c99370865600ebc48e616c2b9f17fa9e62bf267277085462aba48f6a8be4da"
+      },
+      {
+        "path": "tests/focused/local_isolated.gd",
+        "sha256": "b8732453c37ea0781b5b69921656471c745f20a15902bb694851e391dfa537bd"
+      }
+    ],
+    "ok": true,
+    "pid": 38176,
+    "test_bodies_started": false
+  }
+}

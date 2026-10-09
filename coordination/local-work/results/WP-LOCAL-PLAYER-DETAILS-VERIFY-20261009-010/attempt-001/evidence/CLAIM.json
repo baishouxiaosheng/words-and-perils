@@ -1,0 +1,13 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "claim",
+  "task_id": "WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010",
+  "task_sha256": "c7b4729ce5803e76a4e09977e4bd59126caf7bcac9d870f40d0de2b9e757277a",
+  "attempt_id": "attempt-001",
+  "owner_run_id": "direct-owner-local-010",
+  "owner_account_id": 128279531,
+  "intake_commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+  "base_commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+  "claimed_utc": "2026-10-09T10:23:46.676922+00:00",
+  "authority": "direct current human instruction; this is not an inbox policy expansion"
+}

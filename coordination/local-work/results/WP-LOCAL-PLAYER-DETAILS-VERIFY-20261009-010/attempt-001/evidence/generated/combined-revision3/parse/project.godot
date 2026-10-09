@@ -1,0 +1,9 @@
+config_version=5
+
+[application]
+config/name="Focused formatter unit"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="WPFocused-combined-player-details-af937915680046d4"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"

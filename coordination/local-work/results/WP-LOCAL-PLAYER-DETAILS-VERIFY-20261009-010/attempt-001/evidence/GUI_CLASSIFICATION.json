@@ -1,0 +1,83 @@
+{
+  "status": "blocked",
+  "runs": [
+    {
+      "label": "gui-parse",
+      "strict_pass": true,
+      "engine_pid": 33488,
+      "engine_exit": 0,
+      "guard_exit": 0,
+      "host_pid": 57196,
+      "host_exit": 0,
+      "host_exited": true,
+      "source_unchanged": true,
+      "diagnostics": [],
+      "isolation": [
+        {
+          "autoloads": [],
+          "expected": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/gui-parse/data/appdata/WPFocused-combined-player-details-afacc258f418e1d1",
+          "globalized_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/gui-parse/data/appdata/WPFocused-combined-player-details-afacc258f418e1d1",
+          "isolated": true,
+          "os_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/gui-parse/data/appdata/WPFocused-combined-player-details-afacc258f418e1d1"
+        }
+      ],
+      "job_empty": true,
+      "readers_finished": true,
+      "handles_exited": true,
+      "peak_job_commit_bytes": 49942528,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 9705136128,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "headless": true,
+      "production_sha256": "e4e20fc6fb269238d3a6116634b6593f92078c5dafbbd055b237eb123b49d883",
+      "gui_entry_sha256": "8f68ab3b130d4326cc2c2a5e4fd3b80981f52f241320ae4cd1b942e469464bb7"
+    },
+    {
+      "label": "gui-capture",
+      "strict_pass": false,
+      "engine_pid": 0,
+      "engine_exit": 0,
+      "guard_exit": 3,
+      "host_pid": 32096,
+      "host_exit": 3,
+      "host_exited": true,
+      "source_unchanged": true,
+      "diagnostics": [],
+      "isolation": [],
+      "job_empty": false,
+      "readers_finished": false,
+      "handles_exited": false,
+      "peak_job_commit_bytes": 0,
+      "admission": {
+        "Allowed": true,
+        "Reason": "admitted",
+        "TotalPhysBytes": 34038341632,
+        "AvailPhysBytes": 9737515008,
+        "BudgetBytes": 8589934592,
+        "ReserveBytes": 536870912,
+        "AdditionalBytes": 1073741824,
+        "ProfileTimeoutSeconds": 120
+      },
+      "headless": false,
+      "production_sha256": "e4e20fc6fb269238d3a6116634b6593f92078c5dafbbd055b237eb123b49d883",
+      "gui_entry_sha256": "8f68ab3b130d4326cc2c2a5e4fd3b80981f52f241320ae4cd1b942e469464bb7",
+      "gui": {}
+    }
+  ],
+  "error": "Guarded gui-capture failed; preserve raw result and stop",
+  "utc": "2026-10-09T10:33:40.560256+00:00",
+  "failure_class": "guard_mode_unsupported",
+  "error_operation": "ArgumentException: godot_requires_explicit_headless",
+  "actual_graphical_engine_started": false,
+  "actual_graphical_engine_pid": 0,
+  "screenshots": "NOT_RUN",
+  "video": "NOT_RUN",
+  "guard_source_modified": false
+}

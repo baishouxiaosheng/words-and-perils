@@ -1,0 +1,51 @@
+{
+  "kind": "clock-revision3_suite",
+  "strict_pass": true,
+  "actual_engine_pid": 30160,
+  "host_pid": 2772,
+  "host_exit_code": 0,
+  "host_exited": true,
+  "guard_exit_code": 0,
+  "engine_exit_code": 0,
+  "job_empty": true,
+  "readers_finished": true,
+  "recorded_handles_exited": true,
+  "diagnostics": [],
+  "isolation": [
+    {
+      "autoloads": [],
+      "expected": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/clock-revision3/suite/data/appdata/WPFocused-clock-display-ded4174b60d5d7ce",
+      "globalized_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/clock-revision3/suite/data/appdata/WPFocused-clock-display-ded4174b60d5d7ce",
+      "isolated": true,
+      "os_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/clock-revision3/suite/data/appdata/WPFocused-clock-display-ded4174b60d5d7ce"
+    }
+  ],
+  "source_before_after_unchanged": true,
+  "original_driver_sha256": "c0d8ca00ca919792e164150d8d4bf70aeb8321e1579c322095e30d4ea2b82486",
+  "candidate_overlay_sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+  "entry_sha256": "af0671fc3fa81101d07022d7ade696d3123e994fb8ed995e4a21d87386330aa0",
+  "binding_sha256": "85811d3dc40fb86eea7d39d5639231294a49aceeff85bf681975f5ba59d59241",
+  "before_map_sha256": "eedd27aa99e58b1f0eb8e50ee55fed237a8aa754dcd369d3a581c3cf485b971c",
+  "after_map_sha256": "eedd27aa99e58b1f0eb8e50ee55fed237a8aa754dcd369d3a581c3cf485b971c",
+  "job_peak_commit_bytes": 50114560,
+  "physical_rss_measured": false,
+  "admission": {
+    "Allowed": true,
+    "Reason": "admitted",
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 10870968320,
+    "BudgetBytes": 8589934592,
+    "ReserveBytes": 536870912,
+    "AdditionalBytes": 1073741824,
+    "ProfileTimeoutSeconds": 120
+  },
+  "elapsed_seconds": 0.3551,
+  "output_bytes": 891,
+  "suite": {
+    "checks": 165,
+    "failures": [],
+    "main_ui_visibility_verified": false,
+    "status": "UNIT_PASSED",
+    "suite": "clock_display_formatter_unit"
+  }
+}

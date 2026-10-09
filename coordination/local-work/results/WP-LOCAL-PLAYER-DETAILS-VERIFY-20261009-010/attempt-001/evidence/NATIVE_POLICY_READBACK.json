@@ -1,0 +1,8 @@
+{
+  "id": "words-and-perils-github",
+  "status": "ACTIVE",
+  "rrule": "FREQ=MINUTELY;INTERVAL=5",
+  "target_thread_id": "01a11b40-22df-7ec2-9731-f1b27c005303",
+  "new_network_rule_present": true,
+  "prompt_sha256": "f6bf70409979f0d254241d571e6c0cba06670d65aca5a5c8e6c23892c3856931"
+}

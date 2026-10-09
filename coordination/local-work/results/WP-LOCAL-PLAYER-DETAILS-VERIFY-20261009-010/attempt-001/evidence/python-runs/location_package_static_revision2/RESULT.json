@@ -1,0 +1,13 @@
+{
+  "label": "location_package_static_revision2",
+  "exit_code": 0,
+  "pid": 58116,
+  "owned_process_exited": true,
+  "stdout_bytes": 6566,
+  "stderr_bytes": 0,
+  "script_sha256": "f6bb6be28e4ff7ac80c67b1e3427f8f1b9c76d5f381b7b50f5dfbcdbedd6d0a9",
+  "engine_runs": 0,
+  "runtime_counts_not_inherited": true,
+  "static_count": 57,
+  "preparation_status": "PASSED_AVAILABLE_STATIC_AND_PREPARATION_WITH_NOT_RUN_NEGATIVES"
+}

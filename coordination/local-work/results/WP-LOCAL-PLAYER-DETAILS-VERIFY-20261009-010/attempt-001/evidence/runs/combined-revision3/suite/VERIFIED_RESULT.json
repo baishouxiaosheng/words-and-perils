@@ -1,0 +1,51 @@
+{
+  "kind": "combined-revision3_suite",
+  "strict_pass": true,
+  "actual_engine_pid": 34708,
+  "host_pid": 57536,
+  "host_exit_code": 0,
+  "host_exited": true,
+  "guard_exit_code": 0,
+  "engine_exit_code": 0,
+  "job_empty": true,
+  "readers_finished": true,
+  "recorded_handles_exited": true,
+  "diagnostics": [],
+  "isolation": [
+    {
+      "autoloads": [],
+      "expected": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/combined-revision3/suite/data/appdata/WPFocused-combined-player-details-0c5b3b9efdf901e2",
+      "globalized_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/combined-revision3/suite/data/appdata/WPFocused-combined-player-details-0c5b3b9efdf901e2",
+      "isolated": true,
+      "os_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/combined-revision3/suite/data/appdata/WPFocused-combined-player-details-0c5b3b9efdf901e2"
+    }
+  ],
+  "source_before_after_unchanged": true,
+  "original_driver_sha256": "8b12348f54733ca74b8ce1b469ae243945574d2ecce485c77f328c75034af037",
+  "candidate_overlay_sha256": "e4e20fc6fb269238d3a6116634b6593f92078c5dafbbd055b237eb123b49d883",
+  "entry_sha256": "47ae2345e20c8bfc833dbbf85389c1f4fafac43af5c9a5decb96e76f9f952220",
+  "binding_sha256": "0f1cdc35031ad24a771bfc37ed3463a225965feafc868d2760ba6ea545dba80e",
+  "before_map_sha256": "2f28ac455b487a27f98f72fd56d0d1d95fe8f081b68544f68dd3f959cda324d8",
+  "after_map_sha256": "2f28ac455b487a27f98f72fd56d0d1d95fe8f081b68544f68dd3f959cda324d8",
+  "job_peak_commit_bytes": 52133888,
+  "physical_rss_measured": false,
+  "admission": {
+    "Allowed": true,
+    "Reason": "admitted",
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 10250895360,
+    "BudgetBytes": 8589934592,
+    "ReserveBytes": 536870912,
+    "AdditionalBytes": 1073741824,
+    "ProfileTimeoutSeconds": 120
+  },
+  "elapsed_seconds": 0.4485,
+  "output_bytes": 940,
+  "suite": {
+    "checks": 305,
+    "failures": [],
+    "main_ui_visibility_verified": false,
+    "status": "UNIT_PASSED",
+    "suite": "combined_player_details_formatter_unit"
+  }
+}

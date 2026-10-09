@@ -1,0 +1,37 @@
+{
+  "task_id": "WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010",
+  "task_sha256": "c7b4729ce5803e76a4e09977e4bd59126caf7bcac9d870f40d0de2b9e757277a",
+  "status": "failed",
+  "claim_commit": "cf8aac4888e1a1adcb606f6606dd9d5ccaf687d8",
+  "ack_commit": "0db2e07dab6a4ccee89481ee9fdb53bddce8ac91",
+  "completed_runs": [],
+  "static_runs": [
+    {
+      "label": "clock_candidate_static",
+      "exit_code": 0,
+      "pid": 48256,
+      "owned_process_exited": true,
+      "stdout_bytes": 2621,
+      "stderr_bytes": 0,
+      "script_sha256": "6e9427b85484248078e8589f995fe0dce61d008e5fb7eedd34e6cb216c54a4ce",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true,
+      "static_count": 24,
+      "preparation_status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE"
+    },
+    {
+      "label": "clock_package_static",
+      "exit_code": 1,
+      "pid": 4680,
+      "owned_process_exited": true,
+      "stdout_bytes": 0,
+      "stderr_bytes": 808,
+      "script_sha256": "f6bb6be28e4ff7ac80c67b1e3427f8f1b9c76d5f381b7b50f5dfbcdbedd6d0a9",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true
+    }
+  ],
+  "gui": "NOT_RUN_YET",
+  "symlink_negative_cases": "NOT_RUN; no privileged operation retried",
+  "formal_adoption": false
+}

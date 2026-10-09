@@ -1,0 +1,85 @@
+{
+  "status": "PREPARED_NOT_PARSED_NOT_RUN",
+  "suite": "clock-display",
+  "candidate_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+  "candidate_overlay_sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+  "before_sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+  "source_pins_verified": 16,
+  "candidate_files_verified": 6,
+  "host_dependencies": 8,
+  "unit_project": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010\\run-01\\runs\\clock\\parse\\project",
+  "isolated_user_dir_leaf": "WPFocused-clock-display-4cf59ac8ccadc1c6",
+  "files": [
+    {
+      "path": "core/ai_gm_rebuilt/canonical.gd",
+      "bytes": 2814,
+      "sha256": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c"
+    },
+    {
+      "path": "core/status_foundation/canonical.gd",
+      "bytes": 2814,
+      "sha256": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c"
+    },
+    {
+      "path": "core/status_foundation/catalog.gd",
+      "bytes": 10981,
+      "sha256": "8effb5d5e6094cdb0f5413a697ae3adb4e7d86429c31a7b93d751e71f6b62681"
+    },
+    {
+      "path": "core/status_foundation/runtime.gd",
+      "bytes": 23309,
+      "sha256": "ee79b110e35b5141334daf55e7a2f80f6f4d3060a56d408bf0a08094260bb059"
+    },
+    {
+      "path": "core/status_gameplay/source_profiles.gd",
+      "bytes": 2571,
+      "sha256": "53e1ca59b24fb0e020b2dc4a5200868fe927264e787234873484d077d8057483"
+    },
+    {
+      "path": "data/catalog.json",
+      "bytes": 218084,
+      "sha256": "81712567dda2bb000b7cacefc9380c91bc271ea461c21758b1d2fa8074de4fde"
+    },
+    {
+      "path": "project.godot",
+      "bytes": 230,
+      "sha256": "72b5f95aace3919c38d62a2b0c9fbec699b174f48400d9deec2d3ee3191d7be8"
+    },
+    {
+      "path": "tests/focused/baseline_player_details.gd",
+      "bytes": 8199,
+      "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3"
+    },
+    {
+      "path": "tests/focused/candidate_manifest.json",
+      "bytes": 3643,
+      "sha256": "cae8b4799c77789485bbd4fd9e97d7a42e02d734e152ce2514bc497ef85602bf"
+    },
+    {
+      "path": "tests/focused/test_clock_display.gd",
+      "bytes": 8643,
+      "sha256": "c0d8ca00ca919792e164150d8d4bf70aeb8321e1579c322095e30d4ea2b82486"
+    },
+    {
+      "path": "view/playable_build/player_details.gd",
+      "bytes": 8902,
+      "sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c"
+    },
+    {
+      "path": "view/status_gameplay/details.gd",
+      "bytes": 13184,
+      "sha256": "2b1d377813660aa419ca4f2cb9026d591b9edadce853ef0fec57a1b3e98841b1"
+    }
+  ],
+  "binding_sha256": "a5a37b435cbd1fa565971f2a4a14958175d2ef17ef4f1223f29e96fb2b866c4c",
+  "godot_invocations": 0,
+  "main_ui_visibility_verified": false,
+  "engine_argv_template": [
+    "APPROVED_GODOT",
+    "--headless",
+    "--path",
+    "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010\\run-01\\runs\\clock\\parse\\project",
+    "--script",
+    "res://tests/focused/test_clock_display.gd"
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "component": "clock",
+    "overlay_sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+    "original_driver_sha256": "c0d8ca00ca919792e164150d8d4bf70aeb8321e1579c322095e30d4ea2b82486",
+    "runtime_checks": 165,
+    "runtime_pid": 30160,
+    "strict_pass": true
+  },
+  {
+    "component": "location",
+    "overlay_sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+    "original_driver_sha256": "87c99370865600ebc48e616c2b9f17fa9e62bf267277085462aba48f6a8be4da",
+    "runtime_checks": 234,
+    "runtime_pid": 38088,
+    "strict_pass": true
+  },
+  {
+    "component": "combined",
+    "overlay_sha256": "e4e20fc6fb269238d3a6116634b6593f92078c5dafbbd055b237eb123b49d883",
+    "original_driver_sha256": "8b12348f54733ca74b8ce1b469ae243945574d2ecce485c77f328c75034af037",
+    "runtime_checks": 305,
+    "runtime_pid": 34708,
+    "strict_pass": true
+  }
+]

@@ -1,0 +1,4 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+LOCAL_SUITE_ISOLATION {"autoloads":[],"expected":"E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/combined-revision3/suite/data/appdata/WPFocused-combined-player-details-0c5b3b9efdf901e2","globalized_user_dir":"E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/combined-revision3/suite/data/appdata/WPFocused-combined-player-details-0c5b3b9efdf901e2","isolated":true,"os_user_dir":"E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/combined-revision3/suite/data/appdata/WPFocused-combined-player-details-0c5b3b9efdf901e2"}
+{"checks":305,"failures":[],"main_ui_visibility_verified":false,"status":"UNIT_PASSED","suite":"combined_player_details_formatter_unit"}

@@ -1,0 +1,31 @@
+{
+  "label": "gui-capture",
+  "strict_pass": false,
+  "engine_pid": 0,
+  "engine_exit": 0,
+  "guard_exit": 3,
+  "host_pid": 32096,
+  "host_exit": 3,
+  "host_exited": true,
+  "source_unchanged": true,
+  "diagnostics": [],
+  "isolation": [],
+  "job_empty": false,
+  "readers_finished": false,
+  "handles_exited": false,
+  "peak_job_commit_bytes": 0,
+  "admission": {
+    "Allowed": true,
+    "Reason": "admitted",
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 9737515008,
+    "BudgetBytes": 8589934592,
+    "ReserveBytes": 536870912,
+    "AdditionalBytes": 1073741824,
+    "ProfileTimeoutSeconds": 120
+  },
+  "headless": false,
+  "production_sha256": "e4e20fc6fb269238d3a6116634b6593f92078c5dafbbd055b237eb123b49d883",
+  "gui_entry_sha256": "8f68ab3b130d4326cc2c2a5e4fd3b80981f52f241320ae4cd1b942e469464bb7",
+  "gui": {}
+}

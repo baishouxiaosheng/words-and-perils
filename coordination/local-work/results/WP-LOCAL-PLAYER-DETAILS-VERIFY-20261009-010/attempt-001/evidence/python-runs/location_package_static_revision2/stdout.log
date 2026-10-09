@@ -1,0 +1,253 @@
+{
+  "status": "PASSED_AVAILABLE_STATIC_AND_PREPARATION_WITH_NOT_RUN_NEGATIVES",
+  "not_run": [
+    {
+      "name": "symlink output refused",
+      "status": "NOT_RUN",
+      "reason": "Previously observed WinError1314; owner forbids repeating privileged fixture creation"
+    },
+    {
+      "name": "symlink source refused before output creation",
+      "status": "NOT_RUN",
+      "reason": "Previously observed WinError1314; owner forbids repeating privileged fixture creation"
+    }
+  ],
+  "all_negative_cases_executed": false,
+  "suite": "focus-location",
+  "count": 57,
+  "checks": [
+    {
+      "name": "suite binding",
+      "passed": true
+    },
+    {
+      "name": "exact test package INPUTS.json",
+      "passed": true
+    },
+    {
+      "name": "exact test package README.txt",
+      "passed": true
+    },
+    {
+      "name": "exact test package check_static.py",
+      "passed": true
+    },
+    {
+      "name": "exact test package prepare.py",
+      "passed": true
+    },
+    {
+      "name": "exact test package test_focus_location.gd",
+      "passed": true
+    },
+    {
+      "name": "Python syntax prepare.py",
+      "passed": true
+    },
+    {
+      "name": "Python syntax check_static.py",
+      "passed": true
+    },
+    {
+      "name": "preparer has no process/network/engine modules",
+      "passed": true
+    },
+    {
+      "name": "preparer no dynamic source execution",
+      "passed": true
+    },
+    {
+      "name": "standalone SceneTree entry",
+      "passed": true
+    },
+    {
+      "name": "actual candidate and exact baseline peer",
+      "passed": true
+    },
+    {
+      "name": "runtime source bytes/SHA guard written",
+      "passed": true
+    },
+    {
+      "name": "typed input nonmutation assertions written",
+      "passed": true
+    },
+    {
+      "name": "explicit exit and honest unit boundary",
+      "passed": true
+    },
+    {
+      "name": "test entry has no Main/network/save/RNG/process side effects",
+      "passed": true
+    },
+    {
+      "name": "coverage source block actor_tile_settlement",
+      "passed": true
+    },
+    {
+      "name": "coverage source block invalid_hex",
+      "passed": true
+    },
+    {
+      "name": "coverage source block static_early_return",
+      "passed": true
+    },
+    {
+      "name": "coverage source block passage_original_only",
+      "passed": true
+    },
+    {
+      "name": "coverage source block empty_and_independent",
+      "passed": true
+    },
+    {
+      "name": "valid kinds and distinct invalid hex types covered",
+      "passed": true
+    },
+    {
+      "name": "static and passage original exact output assertions",
+      "passed": true
+    },
+    {
+      "name": "actual RefCounted dependency closure core/ai_gm_rebuilt/canonical.gd",
+      "passed": true
+    },
+    {
+      "name": "actual RefCounted dependency closure core/status_foundation/canonical.gd",
+      "passed": true
+    },
+    {
+      "name": "actual RefCounted dependency closure core/status_foundation/catalog.gd",
+      "passed": true
+    },
+    {
+      "name": "actual RefCounted dependency closure core/status_foundation/runtime.gd",
+      "passed": true
+    },
+    {
+      "name": "actual RefCounted dependency closure core/status_gameplay/source_profiles.gd",
+      "passed": true
+    },
+    {
+      "name": "actual RefCounted dependency closure view/playable_build/player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "actual RefCounted dependency closure view/status_gameplay/details.gd",
+      "passed": true
+    },
+    {
+      "name": "Catalog real data path bound",
+      "passed": true
+    },
+    {
+      "name": "actual Python preparation exit 0: ",
+      "passed": true
+    },
+    {
+      "name": "prepared unit never claims engine/UI run",
+      "passed": true
+    },
+    {
+      "name": "all original candidate/source pins actually verified",
+      "passed": true
+    },
+    {
+      "name": "actual prepared readback core/ai_gm_rebuilt/canonical.gd",
+      "passed": true
+    },
+    {
+      "name": "actual prepared readback core/status_foundation/canonical.gd",
+      "passed": true
+    },
+    {
+      "name": "actual prepared readback core/status_foundation/catalog.gd",
+      "passed": true
+    },
+    {
+      "name": "actual prepared readback core/status_foundation/runtime.gd",
+      "passed": true
+    },
+    {
+      "name": "actual prepared readback core/status_gameplay/source_profiles.gd",
+      "passed": true
+    },
+    {
+      "name": "actual prepared readback data/catalog.json",
+      "passed": true
+    },
+    {
+      "name": "actual prepared readback project.godot",
+      "passed": true
+    },
+    {
+      "name": "actual prepared readback tests/focused/baseline_player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "actual prepared readback tests/focused/candidate_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "actual prepared readback tests/focused/test_focus_location.gd",
+      "passed": true
+    },
+    {
+      "name": "actual prepared readback view/playable_build/player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "actual prepared readback view/status_gameplay/details.gd",
+      "passed": true
+    },
+    {
+      "name": "only selected candidate overlay installed",
+      "passed": true
+    },
+    {
+      "name": "unchanged baseline peer installed",
+      "passed": true
+    },
+    {
+      "name": "unit host exact closure; no Main or editor cache",
+      "passed": true
+    },
+    {
+      "name": "existing output refused without mutation",
+      "passed": true
+    },
+    {
+      "name": "traversal name refused",
+      "passed": true
+    },
+    {
+      "name": "overlap refused source",
+      "passed": true
+    },
+    {
+      "name": "overlap refused candidate",
+      "passed": true
+    },
+    {
+      "name": "overlap refused package",
+      "passed": true
+    },
+    {
+      "name": "tampered source refused before output creation",
+      "passed": true
+    },
+    {
+      "name": "wrong candidate refused before output creation",
+      "passed": true
+    },
+    {
+      "name": "source and published candidate unchanged after all replays",
+      "passed": true
+    }
+  ],
+  "gdscript_parse": "NOT_RUN",
+  "godot_invocations": 0,
+  "unit_runtime": "NOT_RUN",
+  "main_ui_visibility_verified": false,
+  "publication": "NOT_UPLOADED"
+}

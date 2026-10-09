@@ -1,0 +1,9 @@
+{
+  "prior_failure": "Revised checker pin was not refreshed in new test manifest",
+  "fix": "Refresh exact bytes/SHA for changed checker after all source edits; Windows reparse inspection uses portable getattr",
+  "assertions_weakened": false,
+  "original_manifest_changed": false,
+  "old_logs_retained": true,
+  "production_source_changes": 0,
+  "godot_runs_before_fix": 0
+}

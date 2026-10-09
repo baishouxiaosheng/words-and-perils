@@ -1,0 +1,7 @@
+{
+  "checks": 234,
+  "failures": [],
+  "main_ui_visibility_verified": false,
+  "status": "UNIT_PASSED",
+  "suite": "focus_location_formatter_unit"
+}

@@ -1,0 +1,28 @@
+--- original/prepare.py
++++ portable/prepare.py
+@@ -4,6 +4,7 @@
+ import hashlib
+ import json
+ import re
++import os
+ 
+ PACKAGE = Path(__file__).resolve().parent
+ 
+@@ -21,7 +22,7 @@
+ 
+ def directory(value):
+     path = Path(value).absolute()
+-    if any(p.is_symlink() for p in (path, *path.parents)):
++    if any(p.is_symlink() or (p.exists() and (getattr(os.lstat(p), "st_file_attributes", 0) & 0x400)) for p in (path, *path.parents)):
+         raise ValueError("Symlink directory refused")
+     if not path.is_dir():
+         raise ValueError("Expected existing directory")
+@@ -34,7 +35,7 @@
+ 
+ def read_pin(root, pin):
+     path = root / relative(pin["path"])
+-    if any(p.is_symlink() for p in (path, *path.parents)) or not path.is_file():
++    if any(p.is_symlink() or (p.exists() and (getattr(os.lstat(p), "st_file_attributes", 0) & 0x400)) for p in (path, *path.parents)) or not path.is_file():
+         raise ValueError("Missing or symlink pinned input: " + pin["path"])
+     data = path.read_bytes()
+     if len(data) != pin["bytes"] or digest(data) != pin["sha256"]:

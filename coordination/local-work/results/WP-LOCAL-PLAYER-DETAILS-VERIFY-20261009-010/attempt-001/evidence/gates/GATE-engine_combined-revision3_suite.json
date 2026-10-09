@@ -1,0 +1,19 @@
+{
+  "boundary": "engine_combined-revision3_suite",
+  "started_utc": "2026-10-09T10:31:58.580446+00:00",
+  "passed": true,
+  "local_stop": "E:\\WordsAndPerils-Tasks\\.local-work-state\\repo-1403552519\\STOP",
+  "local_lock_held": true,
+  "head": "0db2e07dab6a4ccee89481ee9fdb53bddce8ac91",
+  "remote_stop_absent": true,
+  "control": {
+    "protocol": "words-and-perils-local-work/v1",
+    "kind": "control",
+    "queue_enabled": true,
+    "stop": false,
+    "resume_generation": 0,
+    "reason": "First bounded Natural write-result task is prepared. This control does not prove local automation is enabled."
+  },
+  "claim_verified": true,
+  "ended_utc": "2026-10-09T10:31:59.978087+00:00"
+}

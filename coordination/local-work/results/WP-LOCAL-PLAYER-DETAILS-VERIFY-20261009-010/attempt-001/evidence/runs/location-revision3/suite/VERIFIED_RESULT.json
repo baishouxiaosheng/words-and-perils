@@ -1,0 +1,51 @@
+{
+  "kind": "location-revision3_suite",
+  "strict_pass": true,
+  "actual_engine_pid": 38088,
+  "host_pid": 28968,
+  "host_exit_code": 0,
+  "host_exited": true,
+  "guard_exit_code": 0,
+  "engine_exit_code": 0,
+  "job_empty": true,
+  "readers_finished": true,
+  "recorded_handles_exited": true,
+  "diagnostics": [],
+  "isolation": [
+    {
+      "autoloads": [],
+      "expected": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/location-revision3/suite/data/appdata/WPFocused-focus-location-46d2e5438fffab7b",
+      "globalized_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/location-revision3/suite/data/appdata/WPFocused-focus-location-46d2e5438fffab7b",
+      "isolated": true,
+      "os_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/run-01/runs/location-revision3/suite/data/appdata/WPFocused-focus-location-46d2e5438fffab7b"
+    }
+  ],
+  "source_before_after_unchanged": true,
+  "original_driver_sha256": "87c99370865600ebc48e616c2b9f17fa9e62bf267277085462aba48f6a8be4da",
+  "candidate_overlay_sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+  "entry_sha256": "b8732453c37ea0781b5b69921656471c745f20a15902bb694851e391dfa537bd",
+  "binding_sha256": "e1048a454360dd10430d76a6eb175cbd77545bb5a1486550367e626ac4bfce51",
+  "before_map_sha256": "76fc463c438e86419b150e759f388ecf328b0dac327943acb23267dc2a9aeb01",
+  "after_map_sha256": "76fc463c438e86419b150e759f388ecf328b0dac327943acb23267dc2a9aeb01",
+  "job_peak_commit_bytes": 49885184,
+  "physical_rss_measured": false,
+  "admission": {
+    "Allowed": true,
+    "Reason": "admitted",
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 10280992768,
+    "BudgetBytes": 8589934592,
+    "ReserveBytes": 536870912,
+    "AdditionalBytes": 1073741824,
+    "ProfileTimeoutSeconds": 120
+  },
+  "elapsed_seconds": 0.3466,
+  "output_bytes": 904,
+  "suite": {
+    "checks": 234,
+    "failures": [],
+    "main_ui_visibility_verified": false,
+    "status": "UNIT_PASSED",
+    "suite": "focus_location_formatter_unit"
+  }
+}

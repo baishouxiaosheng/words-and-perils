@@ -1,0 +1,15 @@
+未解析、未运行、未采用的独立源码候选。仅修复对象详情中的旧式状态计时说明。
+
+基线：Git332a1f5f7025792d34e181f3e79690205498f5ab，正式 public-v30 e8ec5db0341f8b4a8aaa0a933e5968c33440c9da。使用现有 tools/restore_v30.py 恢复到已获准的可弃副本，再核 MANIFEST 的 before_sha256。仅应用 overlay/view/playable_build/player_details.gd，或在恢复项目根执行 git apply --check CHANGE.patch 后 git apply CHANGE.patch。两种方式择一。
+
+原显示“中毒 · 剩余1回合”未解释敌方行动也会扣减。现在仅在对象详情中，把已验证公开包里 legacy_turn 的有限状态显示为“剩余1次已提交行动”，并加入“计时说明：之后每次行动提交成功时结算；自身和其他角色的行动均计入”。typed owner_action、world_step、永久状态以及不可用/无状态情况仍交给原格式器。显示只修改深复制的局部字典；不重写原公开包或历史快照。
+
+未改变 HUD 的 status_lines/status_caption、Main、状态来源、投影、规则、数值、随机分支、HTTP、存档或 profile identity。该 UI 文件不在 actor_status source 的签名依赖清单中。没有增加任何能力按钮或目录动作。
+
+轻量核查入口：python check_static.py --restored-root RESTORED_ROOT。显式传入精确恢复的 public-v30 源码根；只读校验原始输入哈希、单函数差异、签名依赖排除和 patch 应用，结果输出 stdout，不运行 Godot。静态检查不证明 GDScript 解析、运行或视觉正确。
+
+待原生观察：选择 legacy poison 剩余2/1的角色，对照每次双方提交后倒计时；确认 typed owner 状态、混合状态、不可用/历史快照与原 HUD 行为保持正确。不在本候选中启动引擎或派发任务。
+
+v2仅修测试工具：临时Git回放的check/apply均使用命令级 -c core.autocrlf=false -c core.eol=lf，不改全局Git设置。严格字节相等仍是通过条件；失败在新的持久可弃诊断目录保存before/expected/actual/patch和DIAGNOSIS，自动删除回放目录前已保存。可传 --replay-evidence-root EXISTING_OWNED_PARENT；调用者归档该子目录，失败不原样重跑。
+
+v3 仅将回放文件清单的相对路径转为 as_posix()，与仓库 manifest 路径同一表达；仍要求清单精确等于唯一许可文件，拒绝额外/错误/缺失文件。v2 LF 参数、精确字节断言和 task-owned 失败证据保留不变。006/007 冻结，不在本版本重试或派发新 ready。

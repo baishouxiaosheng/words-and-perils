@@ -1,0 +1,236 @@
+{
+  "status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE",
+  "count": 56,
+  "checks": [
+    {
+      "name": "exact immutable input core/ai_gm_rebuilt/canonical.gd",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input core/ai_gm_rebuilt/hooks.gd",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input core/ai_gm_rebuilt/model_view.gd",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input core/focus_contract.gd",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input core/status_foundation/canonical.gd",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input core/status_foundation/catalog.gd",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input core/status_foundation/engine_bridge.gd",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input core/status_foundation/runtime.gd",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input core/status_gameplay/source_profiles.gd",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input data/catalog.json",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input main.gd",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input view/actor_action_profile_v2/source.gd",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input view/actor_status_entry_v1/view_adapter.gd",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input view/actor_status_profile_v1/projection.gd",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input view/actor_status_profile_v1/public_status.gd",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input view/actor_status_profile_v1/source.gd",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input view/playable_build/player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "exact immutable input view/status_gameplay/details.gd",
+      "passed": true
+    },
+    {
+      "name": "fixed original source commit",
+      "passed": true
+    },
+    {
+      "name": "one changed production file",
+      "passed": true
+    },
+    {
+      "name": "only allowed view file",
+      "passed": true
+    },
+    {
+      "name": "exact formal baseline",
+      "passed": true
+    },
+    {
+      "name": "exact combined candidate",
+      "passed": true
+    },
+    {
+      "name": "fixed clock candidate",
+      "passed": true
+    },
+    {
+      "name": "fixed location candidate",
+      "passed": true
+    },
+    {
+      "name": "UTF8 LF output",
+      "passed": true
+    },
+    {
+      "name": "four existing function boundaries",
+      "passed": true
+    },
+    {
+      "name": "clock has only its original function change",
+      "passed": true
+    },
+    {
+      "name": "location preserves original status function",
+      "passed": true
+    },
+    {
+      "name": "combined preserves whole original clock function",
+      "passed": true
+    },
+    {
+      "name": "location exactly its original coordinate insertion",
+      "passed": true
+    },
+    {
+      "name": "remove coordinate yields exact clock-only candidate",
+      "passed": true
+    },
+    {
+      "name": "restore status function yields exact location-only candidate",
+      "passed": true
+    },
+    {
+      "name": "coordinate follows unchanged static early return",
+      "passed": true
+    },
+    {
+      "name": "dedicated passage support coordinate excluded",
+      "passed": true
+    },
+    {
+      "name": "validated deep display copy retained",
+      "passed": true
+    },
+    {
+      "name": "only finite legacy wording changes",
+      "passed": true
+    },
+    {
+      "name": "view remains outside authority dependencies view/actor_status_profile_v1/source.gd",
+      "passed": true
+    },
+    {
+      "name": "view remains outside authority dependencies view/actor_action_profile_v2/source.gd",
+      "passed": true
+    },
+    {
+      "name": "authored focused regression simultaneous_actor_coordinates_clocks",
+      "passed": true
+    },
+    {
+      "name": "authored focused regression persistent_coordinate",
+      "passed": true
+    },
+    {
+      "name": "authored focused regression nonactor_coordinate",
+      "passed": true
+    },
+    {
+      "name": "authored focused regression invalid_hex_retains_clock",
+      "passed": true
+    },
+    {
+      "name": "authored focused regression invalid_status_retains_coordinates",
+      "passed": true
+    },
+    {
+      "name": "authored focused regression static_and_passage_unchanged",
+      "passed": true
+    },
+    {
+      "name": "authored focused regression unchanged_source_identity",
+      "passed": true
+    },
+    {
+      "name": "independent original candidates used as comparison oracles",
+      "passed": true
+    },
+    {
+      "name": "full input immutability and single note checks authored",
+      "passed": true
+    },
+    {
+      "name": "test package pin INPUTS.json",
+      "passed": true
+    },
+    {
+      "name": "test package pin prepare.py",
+      "passed": true
+    },
+    {
+      "name": "test package pin test_combined_player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "actual Git patch check",
+      "passed": true
+    },
+    {
+      "name": "actual Git patch apply",
+      "passed": true
+    },
+    {
+      "name": "actual patch replay byte-exact combined output",
+      "passed": true
+    },
+    {
+      "name": "strict one-file replay allowlist",
+      "passed": true
+    },
+    {
+      "name": "all original source inputs unchanged after checks",
+      "passed": true
+    }
+  ],
+  "combined_overlay_sha256": "e4e20fc6fb269238d3a6116634b6593f92078c5dafbbd055b237eb123b49d883",
+  "godot_invocations": 0,
+  "single_item_runtime": "PENDING_008_009_RESULTS",
+  "combined_runtime": "NOT_RUN",
+  "main_ui_visibility": "NOT_RUN",
+  "adopted": false
+}

@@ -1,0 +1,15 @@
+{
+  "task_id": "WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010",
+  "task_sha256": "c7b4729ce5803e76a4e09977e4bd59126caf7bcac9d870f40d0de2b9e757277a",
+  "stage": "Engine phase blocked",
+  "claim_commit": null,
+  "ack_commit": null,
+  "completed_engine_runs": [],
+  "static_checks": [],
+  "utc": "2026-10-09T10:22:57.977088+00:00",
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  },
+  "do_not_repeat_recorded_launch": true
+}

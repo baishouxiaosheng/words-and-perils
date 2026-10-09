@@ -1,0 +1,13 @@
+{
+  "label": "prepare_clock_parse",
+  "exit_code": 0,
+  "pid": 5488,
+  "owned_process_exited": true,
+  "stdout_bytes": 3218,
+  "stderr_bytes": 0,
+  "script_sha256": "ead99b974c91d3c5e6524d8adf02209fb614ae14c7223d6582b80e3af911b8ba",
+  "engine_runs": 0,
+  "runtime_counts_not_inherited": true,
+  "static_count": null,
+  "preparation_status": "PREPARED_NOT_PARSED_NOT_RUN"
+}

@@ -1,0 +1,12 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "claim",
+  "task_id": "WP-STATUS-CLOCK-FOCUSED-20261009-004",
+  "task_sha256": "e119a50952a87807b80613a2d0ba220d0b848a5272d20931a3e436cfddff3f14",
+  "attempt_id": "attempt-001",
+  "owner_run_id": "focused-004-run-02",
+  "owner_account_id": 128279531,
+  "intake_commit": "f2a28954fe060ab2ede1fe1d2c463f540b5a991b",
+  "base_commit": "5afe30c3be18bf686860cb4a7e98111dc52b984a",
+  "claimed_utc": "2026-10-09T07:43:37.946813+00:00"
+}

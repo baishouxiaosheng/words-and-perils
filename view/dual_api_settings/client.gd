@@ -1,9 +1,11 @@
 extends "res://core/ai_gm_http/client.gd"
 signal connection_changed
-## Two independent memory-only role configurations; one existing serial HTTP owner.
-## No persistent credentials, provider inference, automatic test call or retry.
+## Two independent role configurations; one existing serial HTTP owner. They can
+## be remembered on this machine through settings_store.gd (opt-out in the panel).
+## No provider inference, automatic test call or retry.
 const ROLES := ["narration", "decision"]
 const Presets = preload("res://view/dual_api_settings/provider_presets.gd")
+const Store = preload("res://view/dual_api_settings/settings_store.gd")
 const ValidationClient = preload("res://core/ai_gm_http/client.gd")
 var _roles: Dictionary = {}
 var _selected_role := "decision"
@@ -118,7 +120,18 @@ func configure_roles(edits: Dictionary) -> Dictionary:
 	for role in ROLES: _role_status.erase(role)
 	_activate(_selected_role)
 	connection_changed.emit()
-	return {"ok": true, "message": "已保存到本次运行内存；关闭游戏后需重输。未联网验证，空白密钥保留原值。"}
+	return {"ok": true, "message": "已保存。未联网验证，空白密钥保留原值。"}
+
+## Writes the current roles (with keys) to the machine store; the key never leaves this object otherwise.
+func remember(prefs: Dictionary) -> bool:
+	return Store.write(_roles, prefs)
+
+## Loads remembered roles. Returns the remembered prefs, or {} when nothing usable was stored.
+func restore() -> Dictionary:
+	var saved: Dictionary = Store.read()
+	if saved.is_empty() or saved.roles.is_empty(): return {}
+	var result: Dictionary = configure_roles(saved.roles)
+	return saved.prefs if result.get("ok", false) else {}
 
 func _activate(role: String) -> void:
 	_selected_role = role

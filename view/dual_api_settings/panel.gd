@@ -4,6 +4,7 @@ extends "res://view/runtime_ai/connection_panel.gd"
 signal modal_visibility_changed(open: bool)
 const TypeStyle = preload("res://view/ui_typography/style.gd")
 const Presets = preload("res://view/dual_api_settings/provider_presets.gd")
+const Store = preload("res://view/dual_api_settings/settings_store.gd")
 var dialog_scroll: ScrollContainer
 var dialog_content: VBoxContainer
 var settings_dialog: ConfirmationDialog
@@ -12,6 +13,7 @@ var role_fields: Dictionary = {}
 var enable_input: CheckBox
 var assessment_draft_input: CheckBox
 var narration_draft_input: CheckBox
+var remember_input: CheckBox
 var _request_preferences_saved := false
 var dialog_status: Label
 var summary_label: Label
@@ -257,6 +259,22 @@ func open_settings() -> void:
 	dialog_scroll.scroll_vertical = 0
 	_refresh()
 
+func bind_runtime(controller: Node) -> void:
+	super.bind_runtime(controller)
+	var prefs: Dictionary = runtime.client.restore()
+	if prefs.is_empty(): return
+	runtime.connection_enabled = bool(prefs.get("connection_enabled", true)) and runtime.client.any_role_configured()
+	runtime.automatic_assessment = bool(prefs.get("automatic_assessment", true))
+	runtime.automatic_narration = bool(prefs.get("automatic_narration", true))
+	_request_preferences_saved = true
+	automatic_assessment_input.set_pressed_no_signal(runtime.automatic_assessment)
+	automatic_narration_input.set_pressed_no_signal(runtime.automatic_narration)
+	consent_input.set_pressed_no_signal(runtime.connection_enabled)
+	set_status("已载入本机记住的API设置。"); _refresh()
+
+func _prefs() -> Dictionary:
+	return {"connection_enabled": runtime.connection_enabled, "automatic_assessment": runtime.automatic_assessment, "automatic_narration": runtime.automatic_narration}
+
 func _resize_api_window() -> void:
 	if not is_instance_valid(settings_dialog) or not settings_dialog.visible: return
 	var bounds: Vector2 = settings_dialog.get_parent().get_viewport().get_visible_rect().size
@@ -292,7 +310,12 @@ func _save_settings() -> void:
 	automatic_assessment_input.set_pressed_no_signal(runtime.automatic_assessment)
 	automatic_narration_input.set_pressed_no_signal(runtime.automatic_narration)
 	consent_input.set_pressed_no_signal(runtime.connection_enabled); _dirty = false
-	set_status(String(result.message)); configuration_applied.emit(result)
+	var message := String(result.message)
+	if remember_input.button_pressed:
+		message += " 已记在本机。" if runtime.client.remember(_prefs()) else " 本机记忆写入失败，仅本次有效。"
+	else:
+		Store.forget(); message += " 未在本机保留。"
+	set_status(message); configuration_applied.emit(result)
 	settings_dialog.hide(); _refresh()
 
 func _focus_validation_error() -> void:

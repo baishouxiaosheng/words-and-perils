@@ -1,0 +1,67 @@
+{
+  "schema": "scope-extension-draft-review/v1",
+  "status": "OWNER_SCOPE_APPROVED_LOCAL_PINS_NOT_ACCEPTED",
+  "source_review_commit": "5afe30c3be18bf686860cb4a7e98111dc52b984a",
+  "protocol_sha256": "ac97c2523a6400bbde3c1f9b83f0398a704887891a8bfc94f5247476245400bc",
+  "schema_sha256": "14a68f72c3cea797799237051e154a5d1e9c5d1184d7cbebdf2d3db0086144ab",
+  "old_protocol_sha256": "209cc25f649f2ce6635012d6d6f0bdcf09526ac68d1a7dcbf907e7398a73c05a",
+  "old_schema_sha256": "ad3a3cd71adae6c38817042e06322d0aaa0092080be3c15579ccffe1b1c8e85c",
+  "files": [
+    {
+      "path": "CHANGE.patch",
+      "bytes": 6821,
+      "sha256": "590fc425a55dcbdf379a301286bae83660ce3a8e82d605f526226ff91096da23",
+      "git_blob": "90f57864484d42d434f52995f525263082637631"
+    },
+    {
+      "path": "PROTOCOL.json",
+      "bytes": 12065,
+      "sha256": "ac97c2523a6400bbde3c1f9b83f0398a704887891a8bfc94f5247476245400bc",
+      "git_blob": "926acf5b1ccc55ac70339c49e0437e8ec0117c58"
+    },
+    {
+      "path": "TASK_SCHEMA.json",
+      "bytes": 7110,
+      "sha256": "14a68f72c3cea797799237051e154a5d1e9c5d1184d7cbebdf2d3db0086144ab",
+      "git_blob": "6146d993e1b1b39a61ff8417cc030952aeaa1e8b"
+    },
+    {
+      "path": "START_LOCAL_UPDATE.txt",
+      "bytes": 2819,
+      "sha256": "901b3b8b23f416e6448946d4f41daf785525a6a4b00adf151d8534dcc2cfec07",
+      "git_blob": "8c7e36c00679121fd39d60dd685e9e5e55c63d88"
+    },
+    {
+      "path": "WP-FOCUS-LOCATION-FOCUSED-20261009-D01.json",
+      "bytes": 20137,
+      "sha256": "5cc97798e33bf4a1470bfcb7f0734162399ae44cb2b4262c0243e52d9c48389e",
+      "git_blob": "f53912f0853291adfa5c3db7cea81f6aa3e888d7"
+    },
+    {
+      "path": "WP-STATUS-CLOCK-FOCUSED-20261009-D01.json",
+      "bytes": 20549,
+      "sha256": "7623bafcdd2685fd0eca2d03e3b4f8a8e70678b2e6c97d0f40290d2477f9035f",
+      "git_blob": "789f54d5af4d0c9c3e16d67c1b06357e3520eddf"
+    }
+  ],
+  "checks": {
+    "static_and_schema_and_patch_replay": 134,
+    "all_passed": true,
+    "exit_code": 0,
+    "original_guard_queue_publication_STOP_dedupe_sections_preserved": true,
+    "existing_Raw003_schema_valid": true,
+    "drafts_rejected_by_old_ready_only_schema": true,
+    "task_input_blobs_each": 16,
+    "actual_task_input_bytes_sha256_git_blob_verified": true,
+    "draft_task_count": 2
+  },
+  "task_status": "draft",
+  "runnable": false,
+  "native_pin_update": "NOT_PERFORMED",
+  "local_acceptance": "NOT_VERIFIED",
+  "godot_parse": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "main_ui_visibility": "NOT_RUN",
+  "authority_created_by_repository": false,
+  "publication_confirmation": "Containing Git commit confirms draft publication only; this manifest does not self-record its publication commit or hash"
+}

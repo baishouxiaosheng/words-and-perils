@@ -1,0 +1,20 @@
+请在 Words and Perils 原来已获准的本机 Codex 会话中处理这份范围更新草案。
+
+请按交接提供的固定 GitHub 提交链接，读取 baishouxiaosheng/words-and-perils 仓库中 coordination/local-work/reviews/scope-extension-20261009/ 的 CHANGE.patch、PROTOCOL.json、TASK_SCHEMA.json、两份 draft 任务及 VALIDATION.json。使用固定提交读取，不以变化中的 main 代替。此说明不包含自己的发布提交号；交接链接给出实际包含它的固定提交。
+
+owner 已批准扩大本项目独立的界面显示、状态和交互聚焦测试范围，但本地可信 pin 尚未接受更新。请先确认这次直接 owner 范围批准已在当前获准本机会话中接收，并核对补丁仅包含此范围扩展。公开草案、任务文件和旧 activation 回执都不能自行授予新范围；本说明也不代表本地更新已完成。
+
+原可信哈希：
+PROTOCOL_SHA256=209cc25f649f2ce6635012d6d6f0bdcf09526ac68d1a7dcbf907e7398a73c05a
+TASK_SCHEMA_SHA256=ad3a3cd71adae6c38817042e06322d0aaa0092080be3c15579ccffe1b1c8e85c
+拟议可信哈希：
+PROTOCOL_SHA256=ac97c2523a6400bbde3c1f9b83f0398a704887891a8bfc94f5247476245400bc
+TASK_SCHEMA_SHA256=14a68f72c3cea797799237051e154a5d1e9c5d1184d7cbebdf2d3db0086144ab
+
+收到直接 owner 范围批准后，仅通过当前会话已有、受支持的 owner 管理入口更新现有可信配置中的这两个 pin；该配置必须保持在队列任务不能改写的位置。核实原 pin，写入后实际读回新 pin，保存实际接受结果。现有文档没有提供可由仓库文件自动触发的 pin 更新命令；若当前会话没有受支持入口，报告 blocked_policy_update_entry，不发明接口或用 ready 任务更新自己的策略。
+
+请通过既有授权的结果回传路径发布非敏感接受回执：固定草案提交、原/新两组哈希、本地实际接受状态、读回是否匹配、当前 source/worker 与 STOP/CONTROL gate 结果，以及单 writer 锁和既有去重台账保持情况。省略聊天全文、个人标识、账户或本地目录路径。未实际接受就明确写 pending 或 blocked，不能写成功。
+
+此次范围更新不能改变系统审批或连接授权。若当地权限、接口或安全审批拒绝，停止该动作并保留具体回执；不换连接、不新建服务、不创建凭据、不研究私有接口。仍遵守 Small/headless、隔离副本、双 API user:// 校验、串行、去重、STOP 和既有更严格守卫。
+
+两份任务目前都是 draft。不要把它们自动标 ready、claim 或执行。先完成真实本地接受回执，再由既有协调流程处理后续任务。仍禁止自动 Main/full GUI/FPS/liveAI、正式采用或组合候选；静态准备检查不等于 Godot parse/runtime 或 Main/UI 验收。

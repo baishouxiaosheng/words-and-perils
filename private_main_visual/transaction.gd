@@ -179,7 +179,7 @@ func install(root:Node3D,mountain_shadow_meshes:Dictionary={},required_roles:Arr
 ## Small settlement trim and shrubs (about 0.13 tall) cast only speckle-sized,
 ## detached shadows; they still receive shadows but do not cast.
 func _tiny_detail(row:Dictionary)->bool:
-	if row.kind=="vegetation":return str(row.node.name).begins_with("shrub_")
+	if row.kind=="vegetation":return str(row.node.name).begins_with("shrub_") or str(row.node.name).begins_with("sapling_")
 	if row.kind not in ["city","settlement_solid"]:return false
 	var mesh:Mesh=Audit.mesh_of(row.node)
 	if mesh==null:return false

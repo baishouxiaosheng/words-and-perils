@@ -3,6 +3,7 @@ extends RefCounted
 ## Sparse world overrides preserve consequences without copying 7k meshes/facts into saves.
 const Settlement = preload("res://view/playable_build/settlement_content.gd")
 const Bundle = preload("res://view/playable_build/world_bundle.gd")
+const SaplingClash = preload("res://view/playable_build/sapling_clash.gd")
 const VERSION := "active-scene-entities/v1"
 const SCENE := "scene_coast"
 const PUBLIC_FIELDS := ["id", "kind", "name", "hex", "scene_id", "catalog_version", "bundle_id", "source", "public_facts", "state"]
@@ -47,6 +48,7 @@ static func ready() -> bool:
 	var cells: Dictionary = {}
 	for cell in catalog.cells: cells["%d,%d" % [cell.q, cell.r]] = cell
 	var identity := str(bundle.bundle_id).trim_prefix("natural-shore-v03-")
+	var clashing := SaplingClash.rows(rows, canopy.runtime.kinds)
 	for i in range(int(canopy.instances)):
 		var update: Dictionary = bindings.updates[i]
 		if update.get("hide", true) or update.get("row") != i: continue
@@ -60,13 +62,13 @@ static func ready() -> bool:
 		var key := "%d,%d" % hex
 		if not cells.has(key): continue # Halo artwork has no playable cell or gameplay identity.
 		var kind: String = canopy.runtime.kinds[int(rows[j+7])]
-		if kind == "sapling": continue # Saplings are not part of the displayed map.
 		var id := "tree:"+identity+":"+str(i)
 		var rendered_root := Vector3(rows[j], float(update.height), rows[j+2])
 		var position := [rendered_root.x, rendered_root.y, rendered_root.z]
 		_entities[id] = {"id": id, "kind": "tree", "name": {"temperate": "林木", "tropical": "热带树", "sapling": "幼树", "shrub": "灌木"}.get(kind, "树"), "hex": hex, "scene_id": SCENE, "catalog_version": VERSION, "bundle_id": bundle.bundle_id,
 			"source": {"instance_row": i, "instance_sha256": canopy.runtime.sha256, "source_mesh_sha256": bundle.source_identity.mesh_sha256, "new_source_face_index": int(update.new_source_face_index), "legacy_parent_face_index": int(rows[j+8])},
 			"public_facts": {"vegetation_type": kind, "position": position, "height": rows[j+4], "crown_radius": rows[j+3], "visible_form": "standing_vegetation"}}
+		if clashing.has(i): continue # Identity only: not displayed or selectable.
 		_tree_rows[i] = id
 		_tree_transforms[i] = Transform3D(Basis(Vector3.UP,-rows[j+5]).scaled(Vector3(rows[j+3],rows[j+4],rows[j+3])),rendered_root)
 	var mountain_manifest: Dictionary = Bundle.document("mountain_manifest")

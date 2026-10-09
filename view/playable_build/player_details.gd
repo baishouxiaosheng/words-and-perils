@@ -12,7 +12,20 @@ static func status_lines(actor: Dictionary) -> Array[String]:
 	return StatusDetails.status_lines(actor)
 
 static func focus_status_lines(actor: Dictionary) -> Array[String]:
-	return StatusDetails.focus_status_lines(actor)
+	var details: Variant = actor.get("status_details")
+	if not StatusDetails.valid_public_details(details):
+		return StatusDetails.focus_status_lines(actor)
+	# Wording-only copy: keep the frozen public packet and its clock untouched.
+	var display: Dictionary = details.duplicate(true)
+	var legacy_clock := false
+	for row in display.rows:
+		if row.duration.clock == "legacy_turn" and not row.duration.persistent:
+			row.duration.text = "剩余%d次已提交行动" % int(row.duration.remaining)
+			legacy_clock = true
+	var lines: Array[String] = StatusDetails.focus_status_lines({"status_details": display})
+	if legacy_clock:
+		lines.append("计时说明：之后每次行动提交成功时结算；自身和其他角色的行动均计入")
+	return lines
 
 static func status_caption(actor: Dictionary) -> String:
 	return StatusDetails.status_caption(actor)
@@ -61,6 +74,9 @@ static func description(focus: Dictionary) -> String:
 		lines.append("可以选择查看并描述行动；暂无人物、进屋、交易、城门或拆建能力。")
 		lines.append("点击只选择目标，不会移动或改变世界。")
 		return "\n".join(lines)
+	var hex: Variant = focus.get("hex")
+	if focus.kind != "passage_edge" and hex is Array and hex.size() == 2 and hex[0] is int and hex[1] is int:
+		lines.append("选中地格：（%d，%d）" % [hex[0], hex[1]])
 	if focus.kind == "item":
 		var item: Dictionary = facts.get("item", {}); var physical: Dictionary = item.get("physical_traits", {})
 		lines.append(str(item.get("description", "")))

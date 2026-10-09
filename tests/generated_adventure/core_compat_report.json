@@ -1,0 +1,67 @@
+{
+	"assertions_passed": 132,
+	"assertions_total": 132,
+	"boundaries": {
+		"fixture_rule_final_balance": false,
+		"live_api_connected": false,
+		"new_rebuilt_source": true,
+		"real_model_quality_evaluated": false,
+		"restored_old_source": false,
+		"ui_connected": false
+	},
+	"cases": [
+		{
+			"case": "01_default_calculator_missing",
+			"passed": true
+		},
+		{
+			"case": "02_attention_readonly_text_priority",
+			"passed": true
+		},
+		{
+			"case": "03_true_fact_numbers",
+			"passed": true
+		},
+		{
+			"case": "04_factref_type_and_version_rejections",
+			"passed": true
+		},
+		{
+			"case": "05_candidate_plans_freeze_before_roll",
+			"passed": true
+		},
+		{
+			"case": "06_partial_and_direct_outcomes_narration",
+			"passed": true
+		},
+		{
+			"case": "07_save_reload_every_stage_real_rng",
+			"passed": true
+		},
+		{
+			"case": "08_atomic_commit_tamper_and_repeat",
+			"passed": true
+		},
+		{
+			"case": "09_actor_order_status_poison_patrol_once",
+			"passed": true
+		},
+		{
+			"case": "10_unified_ground_flight_all_air_blocks",
+			"passed": true
+		},
+		{
+			"case": "11_semantic_retry_requires_material_change",
+			"passed": true
+		},
+		{
+			"case": "12_story_model_view_secret_allowlist_file_roundtrip",
+			"passed": true
+		}
+	],
+	"cases_passed": 12,
+	"cases_total": 12,
+	"failures": [],
+	"schema": "ai_gm_rebuilt_test_report/v1",
+	"test_only": true
+}

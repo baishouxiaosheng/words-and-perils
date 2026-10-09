@@ -1,0 +1,69 @@
+{
+	"checks": 112,
+	"failures": [],
+	"records": [
+		{
+			"actual_damage": 0,
+			"outcome": "miss",
+			"receipt_hash": "87c157c6aa86d15e80f31caa448d6690ef62844c54e11fbaf38a7fc6583b8c2b",
+			"seed": 1,
+			"style": "melee"
+		},
+		{
+			"actual_damage": 1,
+			"outcome": "graze",
+			"receipt_hash": "5136636cc84ec75678c2b9a71b3c11d62ac1252a7bc6287afa535736ac3bfefc",
+			"seed": 2,
+			"style": "melee"
+		},
+		{
+			"actual_damage": 3,
+			"outcome": "hit",
+			"receipt_hash": "d43ae8d61d0e008212be757e09bb243846b027c0a765b9e8e714308740024d4a",
+			"seed": 3,
+			"style": "melee"
+		},
+		{
+			"actual_damage": 0,
+			"outcome": "miss",
+			"receipt_hash": "4730ec4758d8bd97d3dee8abc5f50add91c0bbd0c6bfe722e13cc3bd1fc3a6fc",
+			"seed": 1,
+			"style": "ranged"
+		},
+		{
+			"actual_damage": 1,
+			"outcome": "graze",
+			"receipt_hash": "15fe901b303e7d189cac5f3a771316756c1d3976b659c88a0ee3a359adbbbb46",
+			"seed": 2,
+			"style": "ranged"
+		},
+		{
+			"actual_damage": 3,
+			"outcome": "hit",
+			"receipt_hash": "69d7e86d8ca3c8dd0c2e6b8692d839dba16ea0dcee70ecf679186b9fc2ebe83c",
+			"seed": 3,
+			"style": "ranged"
+		},
+		{
+			"actual_damage": 0,
+			"outcome": "miss",
+			"receipt_hash": "28e1c85129c8273462e38c57d51ec2c16ee8f6f7807e1922bbabf27efd129b1d",
+			"seed": 1,
+			"style": "magic"
+		},
+		{
+			"actual_damage": 1,
+			"outcome": "graze",
+			"receipt_hash": "cb8223b6d72f0707d669268b182b2618c8fdabcfdf5197647d353be07b8b1d3c",
+			"seed": 2,
+			"style": "magic"
+		},
+		{
+			"actual_damage": 3,
+			"outcome": "hit",
+			"receipt_hash": "3835c375f92e1d0fa81aef8cfead5ced2b9971d1211d4acbd00fb167da084165",
+			"seed": 3,
+			"style": "magic"
+		}
+	]
+}

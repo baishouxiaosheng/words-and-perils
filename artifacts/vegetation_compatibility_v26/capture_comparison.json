@@ -1,0 +1,35 @@
+{
+  "checks_passed": 98,
+  "checks_total": 98,
+  "failures": 0,
+  "reference": "v24 accepted C UI native capture",
+  "images": {
+    "1920x1080_ui_long_history.png": {
+      "size": [
+        1920,
+        1080
+      ],
+      "same_png": true,
+      "same_rgba": true,
+      "sha256": "4af008c23d20091042722ccff995060cbfb171828465d13ce06445c29def7b69"
+    },
+    "1920x1080_ui_default.png": {
+      "size": [
+        1920,
+        1080
+      ],
+      "same_png": true,
+      "same_rgba": true,
+      "sha256": "335d986d27c98b861eb69de087babd1228867a09a535cc992ab3b628539e7175"
+    },
+    "1920x1080_ui_expanded_input.png": {
+      "size": [
+        1920,
+        1080
+      ],
+      "same_png": true,
+      "same_rgba": true,
+      "sha256": "5cb3c22b3a139bdaff8c9fc541bef477f39592b504d51a5afa2ae073e5abbf7d"
+    }
+  }
+}

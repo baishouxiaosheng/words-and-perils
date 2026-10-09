@@ -1,0 +1,403 @@
+{
+  "base": "wordsandperils_v26",
+  "files": [
+    {
+      "path": "core/ai_gm_http/openai_chat_codec.gd",
+      "base_sha256": "e209d086f561a20101090d3a2ceaa3e8e5e780af891be5e335afafb0ac42ab7e",
+      "merged_sha256": "12a078df16f9a8be0de7639284692ad9936de40f10a245b75a978ef1bf972514"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/basic_actions.gd",
+      "base_sha256": "6eee6fc51bd88f7688a9751bcb9c48454e0b95d4271cdb270c269bd33b1e7afd",
+      "merged_sha256": "6eee6fc51bd88f7688a9751bcb9c48454e0b95d4271cdb270c269bd33b1e7afd"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/engine.gd",
+      "base_sha256": "c74e7a70d24e3f411fd2905f86a994d4903fc7603ae8e9cffce4007d28d5fef0",
+      "merged_sha256": "3d41f2fc4e52459d5df01732fbacc9e849f0e4a9260094220426001ef236002d"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/hooks.gd",
+      "base_sha256": "1250f63ca7e0dc92ba3ce12078647f303f811b8abc13b305c261303cf16d703f",
+      "merged_sha256": "2afc8ba22cc4cb9a4df81ce8f8779193a652f8cd5ff49b2156f6899674ee84ec"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/model_view.gd",
+      "base_sha256": "c32a43b8c5d5baced6d288f2ee76ce4e477d5996bc04d65e5273ef403c87e97a",
+      "merged_sha256": "971508f8ccc88179a78c390323eae7b814572e4115b63254aabe2294a92a9f4c"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/traversal.gd",
+      "base_sha256": "e31b4020a0e4a90ca11c8318809dd52f7668de14a39f6f44eb24c62b1bf0478e",
+      "merged_sha256": "0e0230dd61250941291ae313f54842cf6ff94470310ab20b28febd177db99b41"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/traversal_policy.gd",
+      "base_sha256": "377bbeaab5a441100e11757df4bfba835e81eae064fec84a70ad3fbe9d21c592",
+      "merged_sha256": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/world.gd",
+      "base_sha256": "ac6517786ac129699632af82c1a7a21160022c2785d2cf549a119321bdbc15c0",
+      "merged_sha256": "5eb1bb8008c6b3dc6b0954d8789e9712eaedddecd9dba2cbbbe947a74bf77523"
+    },
+    {
+      "path": "core/focus_contract.gd",
+      "base_sha256": "93e621593d6fdc476f8294f061b3806832e2e9863ba57ccafd761f9be5a7c779",
+      "merged_sha256": "b8daf8124f80b8f474937caf25a3e446277636b28d08626d419d4da4336e9cd1"
+    },
+    {
+      "path": "core/generated_v3_rivers/layout.gd",
+      "base_sha256": null,
+      "merged_sha256": "a75190e4f2dc0e8d40aea0cfeb7f66a3b836e5e8284df334b5258d931e25031b"
+    },
+    {
+      "path": "core/status_foundation/canonical.gd",
+      "base_sha256": null,
+      "merged_sha256": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c"
+    },
+    {
+      "path": "core/status_foundation/catalog.gd",
+      "base_sha256": null,
+      "merged_sha256": "8effb5d5e6094cdb0f5413a697ae3adb4e7d86429c31a7b93d751e71f6b62681"
+    },
+    {
+      "path": "core/status_foundation/engine_bridge.gd",
+      "base_sha256": null,
+      "merged_sha256": "06cce47760058a49e2dd994c91031ac93db7277d0b08f5c252af8d2ec8fafbc6"
+    },
+    {
+      "path": "core/status_foundation/runtime.gd",
+      "base_sha256": null,
+      "merged_sha256": "ee79b110e35b5141334daf55e7a2f80f6f4d3060a56d408bf0a08094260bb059"
+    },
+    {
+      "path": "core/status_gameplay/action.gd",
+      "base_sha256": null,
+      "merged_sha256": "5da4a78055a70b832cee399f64cc1bd46582a1f47585007249dd9b14c5c5d813"
+    },
+    {
+      "path": "core/status_gameplay/basic_actions.gd",
+      "base_sha256": null,
+      "merged_sha256": "dbbdf69d9694f02f67f20e15f523b3e4e3bd223d5f095b3f00a4743e4e0927d9"
+    },
+    {
+      "path": "core/status_gameplay/composite_actions.gd",
+      "base_sha256": null,
+      "merged_sha256": "69260a976da56c299cfe8e3ca2ff6dc5b1ba01b8eec4b6534e49e0ae04c632d4"
+    },
+    {
+      "path": "core/status_gameplay/content.gd",
+      "base_sha256": null,
+      "merged_sha256": "3c31d687682994658bf8504cf96bb28cb58e8662046039c58e103e11e6f00d6e"
+    },
+    {
+      "path": "core/status_gameplay/movement.gd",
+      "base_sha256": null,
+      "merged_sha256": "6c3a5225d9c39dd9ae6a3ae705998aab26d4a4eaec8c4fc4d6e2e04cfaea8855"
+    },
+    {
+      "path": "core/status_gameplay/public_dictionary.gd",
+      "base_sha256": null,
+      "merged_sha256": "13ca209ce6f83ee78d113ed648c47f36dd30bd1959c4470eca487104ae727404"
+    },
+    {
+      "path": "core/status_gameplay/source_profiles.gd",
+      "base_sha256": null,
+      "merged_sha256": "53e1ca59b24fb0e020b2dc4a5200868fe927264e787234873484d077d8057483"
+    },
+    {
+      "path": "core/status_gameplay/weapon_poison_plan.gd",
+      "base_sha256": null,
+      "merged_sha256": "5c1261055166595e95b74c49c534535323dd8b9f14eaed3554356513036aa77b"
+    },
+    {
+      "path": "data/catalog.json",
+      "base_sha256": null,
+      "merged_sha256": "81712567dda2bb000b7cacefc9380c91bc271ea461c21758b1d2fa8074de4fde"
+    },
+    {
+      "path": "main.gd",
+      "base_sha256": "e346071dd0149805f96ed53d18fda4f28223354b121fb6831f66c1c7b862eec4",
+      "merged_sha256": "1db6386f9c53f7f0946f84dae0b81a61b35420447b3b1035896678d86e367c4c"
+    },
+    {
+      "path": "tests/generated_v3_river_entry/expected_default_world.json",
+      "base_sha256": null,
+      "merged_sha256": "6c9e73c448a566c8080049e453720fbafb4b18bff479ec37e331374c27ef510c"
+    },
+    {
+      "path": "tests/generated_v3_river_entry/test_identity.gd",
+      "base_sha256": null,
+      "merged_sha256": "d5455957e753de1f0b998178c825af02bbf48cb106daac9673506536ea8c1b3a"
+    },
+    {
+      "path": "tests/generated_v3_river_entry/test_main_roundtrip.gd",
+      "base_sha256": null,
+      "merged_sha256": "566e6fc5af84ceab08a50bcbe6feb42b34f9408ab040fc2b6985fb3aa76f30da"
+    },
+    {
+      "path": "tests/generated_v3_river_entry/test_pointer.gd",
+      "base_sha256": null,
+      "merged_sha256": "3a0c37262250275ea38961bfecb6f50dce202a13120fc6df0645f080ca5bf3d7"
+    },
+    {
+      "path": "tests/generated_v3_river_entry/test_residency.gd",
+      "base_sha256": null,
+      "merged_sha256": "237dd8fb00a002eb51bff64d6e35b0b4abbe1a56c1547ac24f87c6a5c681ad25"
+    },
+    {
+      "path": "tests/generated_v3_river_entry/test_session.gd",
+      "base_sha256": null,
+      "merged_sha256": "9b7275bc19dbfa83b0c03d7819e6c191fe1a65877095515bfb38ad081e6d48bb"
+    },
+    {
+      "path": "tests/status_compatibility/pre_fix_basic.gd",
+      "base_sha256": null,
+      "merged_sha256": "6a46e24cb1dbfde6e22340f79733a48359c48ae6dfa322d7029c486ce67bc36a"
+    },
+    {
+      "path": "tests/status_compatibility/pre_fix_composite.gd",
+      "base_sha256": null,
+      "merged_sha256": "457106da42b5e7f82726e41d495ee84e1701561132d41047e8f351822ccc5437"
+    },
+    {
+      "path": "tests/status_compatibility/test_weapon_plan_compatibility.gd",
+      "base_sha256": null,
+      "merged_sha256": "b9629aa2106e216f30272bb393e23767fd3ac830b346f56231df97cd5c5538e5"
+    },
+    {
+      "path": "tests/status_dictionary/test_public_dictionary.gd",
+      "base_sha256": null,
+      "merged_sha256": "2c54d39b4f7bbfe403ab9ff21df793d5c76523deba135c40fcc69f9e5a7dde73"
+    },
+    {
+      "path": "tests/status_gameplay/fixture.gd",
+      "base_sha256": null,
+      "merged_sha256": "b56d35891e52caed04344ba8853ef2d49fcba22c337426497038cecd8dfac20d"
+    },
+    {
+      "path": "tests/status_gameplay/test_closed_loop.gd",
+      "base_sha256": null,
+      "merged_sha256": "758e7efc0a86d305f826d36f607a5dfca8dde04a8c7ee0ee53604750af47325c"
+    },
+    {
+      "path": "tests/status_gameplay/test_details.gd",
+      "base_sha256": null,
+      "merged_sha256": "e645879651f0cef607ea297ab5aaf50a166608c96c83b41cb4b309b097b7966a"
+    },
+    {
+      "path": "tests/status_gameplay/test_historical_focus.gd",
+      "base_sha256": null,
+      "merged_sha256": "08d8b8b78dd00b7db081fec45b3e6cce481ad99996b424b20a4c0d1e90a525c7"
+    },
+    {
+      "path": "tests/status_gameplay/tiny_adapter.gd",
+      "base_sha256": null,
+      "merged_sha256": "2c455f028a1709cbaf5176133f5128e3489fc4c45c337481ca23c48ca497a199"
+    },
+    {
+      "path": "tests/status_river_gate_b/expected_default_world.json",
+      "base_sha256": null,
+      "merged_sha256": "6c9e73c448a566c8080049e453720fbafb4b18bff479ec37e331374c27ef510c"
+    },
+    {
+      "path": "tests/status_river_gate_b/fixture.gd",
+      "base_sha256": null,
+      "merged_sha256": "5f56d9561b1f457cb397b5d0ee90316284000e9edeb6a6dfaa04d6e08e8199c2"
+    },
+    {
+      "path": "tests/status_river_gate_b/harness.gd",
+      "base_sha256": null,
+      "merged_sha256": "5ac9e9b670c0a7ed74e1c618c6ce63446542ad7a279d5afc97a672d5c7b07780"
+    },
+    {
+      "path": "tests/status_river_gate_b/request_budget_probe.gd",
+      "base_sha256": null,
+      "merged_sha256": "e5052ec0788d5b40d6d25e374c6811bcd073a0df68794d6a0ea6f6122d73c673"
+    },
+    {
+      "path": "tests/status_river_gate_b/test_adapter.gd",
+      "base_sha256": null,
+      "merged_sha256": "1387e2723ae9b5b2cc07c7691a19f90d272cdd2e0fe9bbaf7ce669502327e665"
+    },
+    {
+      "path": "tests/status_river_gate_b/test_budget_full_history.gd",
+      "base_sha256": null,
+      "merged_sha256": "ce3317d6ef20d792e54c9e50c1fd365016917c16f53186c556ce5dce6f5c27cd"
+    },
+    {
+      "path": "tests/status_river_gate_b/test_budget_matrix.gd",
+      "base_sha256": null,
+      "merged_sha256": "310fd6c131ec9ea84c5c1c28f25ddad324c18d720a23b853b3e9c3108d33499a"
+    },
+    {
+      "path": "tests/status_river_gate_b/test_effect_events.gd",
+      "base_sha256": null,
+      "merged_sha256": "c35f1d7959ab83ce877b9de1d8ac2d33dcb3dcb6aba7620d763d9e496d18b2a4"
+    },
+    {
+      "path": "tests/status_river_gate_b/test_main.gd",
+      "base_sha256": null,
+      "merged_sha256": "3605e635c21cecb7d4a87d02c113e56e8455de1688048533fc8e06958ac48e5b"
+    },
+    {
+      "path": "tests/status_river_gate_b/test_weapon_commit.gd",
+      "base_sha256": null,
+      "merged_sha256": "0f459c6fee0e0d720095827f7706ac45c34f11f5e91a4e87909ececd7f19a45d"
+    },
+    {
+      "path": "view/generated_v3_river_entry/adapter.gd",
+      "base_sha256": null,
+      "merged_sha256": "6a01ad5bc4da1b0187b7325c1204df3bd199f4b0af00a7b072ab51f325bcfc4c"
+    },
+    {
+      "path": "view/generated_v3_river_entry/controller.gd",
+      "base_sha256": null,
+      "merged_sha256": "f5a449518d7285fcfb78fa761b689e22847e85898ad2f30ab9ff88f29bedc2c0"
+    },
+    {
+      "path": "view/generated_v3_river_entry/host_custody.gd",
+      "base_sha256": null,
+      "merged_sha256": "edebbb365c581b29e0e1d51355c36f9fd702f2f466e7ca5306acae0812124851"
+    },
+    {
+      "path": "view/generated_v3_river_entry/session.gd",
+      "base_sha256": null,
+      "merged_sha256": "9951b63d6bcc4ea8e766f045166dbed705c7f0d3550e4a276b0f3b6b40dea192"
+    },
+    {
+      "path": "view/generated_v3_river_entry/view.gd",
+      "base_sha256": null,
+      "merged_sha256": "d91b4ef3c0253992e8daa6d06b4714bf27fd6d46ad2281fd72c09058779b2895"
+    },
+    {
+      "path": "view/generated_v3_rivers/adapter.gd",
+      "base_sha256": null,
+      "merged_sha256": "4f4a9d436a4a4b4c4bf202e9cae171c90710731383a0cd640d6d7e1ca30d3015"
+    },
+    {
+      "path": "view/generated_v3_rivers/assessments.gd",
+      "base_sha256": null,
+      "merged_sha256": "06c9c4f42410b3def733bbee168ab4236c41abbcb48211ab02df64d8a402c9c8"
+    },
+    {
+      "path": "view/generated_v3_rivers/board.gd",
+      "base_sha256": null,
+      "merged_sha256": "776b26f079362fbec94dff11586341b84bf6e426e9dfad2743bd88780c680c80"
+    },
+    {
+      "path": "view/generated_v3_rivers/geometry.gd",
+      "base_sha256": null,
+      "merged_sha256": "c754f4aaf5becfa5a964a6d84ea56baf57a2b976e163e0f9ce3019fabee9afff"
+    },
+    {
+      "path": "view/generated_v3_rivers/ground.gdshader",
+      "base_sha256": null,
+      "merged_sha256": "67b4dea1d5f38cf3cf1fa71a80ea8434a61a42c5792cd1d60e0c9f3a4e6de92e"
+    },
+    {
+      "path": "view/generated_v3_rivers/main.gd",
+      "base_sha256": null,
+      "merged_sha256": "1449d8fd71a688164aef4b4c62567ca46881822f788a96d90b905861d8ece2eb"
+    },
+    {
+      "path": "view/generated_v3_rivers/navigation.gd",
+      "base_sha256": null,
+      "merged_sha256": "5c0dadaf9f060bea9cc57f02c2edccd9c1ee6a108ad6938e910196313cfbcc5c"
+    },
+    {
+      "path": "view/generated_v3_rivers/projection.gd",
+      "base_sha256": null,
+      "merged_sha256": "ac9dc65df45e63781827accc531a22afb958b6cf85c11e582c79b65606284ba0"
+    },
+    {
+      "path": "view/generated_v3_rivers/resolver.gd",
+      "base_sha256": null,
+      "merged_sha256": "d79fcb1d13bafb833f7986a0919f4b1f34012b5cbfa759cf78fc364f56c1923b"
+    },
+    {
+      "path": "view/generated_v3_rivers/rule.gd",
+      "base_sha256": null,
+      "merged_sha256": "d1c6860cf087b0f879e0c4bdb7d86d649921b1c5af229baa1decf797873f6b41"
+    },
+    {
+      "path": "view/generated_v3_rivers/source.gd",
+      "base_sha256": null,
+      "merged_sha256": "8aab61a4c002d394eaec46ee65528b7967c1d9e6eafc261ed01acd659ddc1379"
+    },
+    {
+      "path": "view/generated_v3_rivers/structured_builder.gd",
+      "base_sha256": null,
+      "merged_sha256": "1fb780aa17ea423fa8ac897b1b6db13fd6b2f6b8912f4ed60794947dfd5b8af7"
+    },
+    {
+      "path": "view/generated_v3_rivers/water_queries.gd",
+      "base_sha256": null,
+      "merged_sha256": "8f28c4bf55ca1f239a3ed31dc1764eeda6480e401d1b856020f25da421498b45"
+    },
+    {
+      "path": "view/playable_build/adapter.gd",
+      "base_sha256": "00e02172948fbe6068f8b60fac38ed43e0ec5af3ceb7bfbebbe3bf2420ea6437",
+      "merged_sha256": "d7a49926e11846735492c24d790e9c1b6c677b2df841231510667ae79387ad5e"
+    },
+    {
+      "path": "view/playable_build/committed_effect_router.gd",
+      "base_sha256": "ea6dfc0998d5ae7b36d1e7035b7ecff9bfc117bf0ac6a05380bbab2a6270f0e1",
+      "merged_sha256": "a1a3e4760c878f75af5c43b48b0b3851060039cbe3130552d4aa194419b0719a"
+    },
+    {
+      "path": "view/playable_build/navigation.gd",
+      "base_sha256": "333a8921a677828230f5f886900ef07ef1ddeb0521e45bbc2a9d2d88d8f8e512",
+      "merged_sha256": "1b9390fd14d93b278d3441b928a5e36163bee00c5d8cdd64a4911f69e7d05add"
+    },
+    {
+      "path": "view/playable_build/player_details.gd",
+      "base_sha256": "e859f18174fa74720c90c224876fe4373f700beebb7363fc1614ac28ab3cc387",
+      "merged_sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3"
+    },
+    {
+      "path": "view/playable_build/story.gd",
+      "base_sha256": "2c2918428f68a60e4f4b15a8c9cdad5aa9d48673a62d0e857086fcda95862ffc",
+      "merged_sha256": "4452bb43cf279b55380664cd1a3a5233e6e96c3b3ab349eacb0c61a8f82ef0c5"
+    },
+    {
+      "path": "view/playable_build/weighted_movement_resolver.gd",
+      "base_sha256": "5aea2ea1bd8b7be27436029426439b877e546a9d174b1e8f1eed9cafd87e3532",
+      "merged_sha256": "36dfe94a7f3bac072c2469dd11cb366f7c9ebe702dd4797efb80b07a6cbd8e7e"
+    },
+    {
+      "path": "view/runtime_ai/scoped_engine.gd",
+      "base_sha256": "63a4055080337d797d8c28351738fc2fb138c6f17b8a44c71c7f7756148af108",
+      "merged_sha256": "08eca5ccc7d8377ed8bea7b7929db4b11903e776e4ae7477f314f83a4621d44a"
+    },
+    {
+      "path": "view/status_gameplay/details.gd",
+      "base_sha256": null,
+      "merged_sha256": "2b1d377813660aa419ca4f2cb9026d591b9edadce853ef0fec57a1b3e98841b1"
+    },
+    {
+      "path": "view/status_gameplay/save.gd",
+      "base_sha256": null,
+      "merged_sha256": "812381620ab5a405442b9f6ac1a0d2248378c229f2aa9124ffc06e11f87f0957"
+    }
+  ],
+  "support": {
+    "tests/run_dictionary_gate.sh": "2d72b31c05616bc1b0f3092cf41b1d4b1b548a755b1185dd80a6362ae47c072b",
+    "tests/run_small_gate.sh": "6f5c2db396452503328c92654cc6c776b682f48cd9b4fa435dc962390eb85514",
+    "tests/run_full_gate.sh": "616bf9f01364c29811c84b5913bac4d3d25f3db7050e6fcefeb7e130896039e9",
+    "tests/check_merge_inputs.py": "7d784b1baef88e0dfb68ec2a973ad680fce1fbcb9ddd92d1db524853e0ac1b64",
+    "runtime_closure_gate.py": "b1752f37929a31f8bf4c05021975b51a8dba9970cd250d24355d0d93694873c7",
+    "BASE_PINS.json": "e323e7cf8a4e701015cfd2c41fcb40bcb3b3c9e477411a99fba233f3f55f206d",
+    "RUNTIME_INPUTS.json": "e91cc787a7c1d31d977a6e398b8e8e0fc07dee33cfdf16732f60b1a00822ec08",
+    "EQUIPMENT_INPUT_PROVENANCE.json": "579a453bd4ae1b1824b0b8f38d0659d4372be976e87f77c3910a28803e8a2a21",
+    "small_project/artifacts/public_witness.json": "847462d0375289ed0a0bf7e6c4bd161303a611759a1d52dccf61ace1c37d31f2",
+    "artifacts/PUBLIC_WITNESS_PROVENANCE.json": "07cf434d364d917afd3d484613cbe05cf4fa99f5d959747c8c2a815f0a01b30b"
+  },
+  "utc": "2026-10-05T23:07:49.921444+00:00",
+  "canonical_modified": false,
+  "production_delta_from_v2_final": [
+    "view/generated_v3_river_entry/view.gd"
+  ],
+  "test_only_render_mode": "actual Main and guest subtree in native1920x1080 SubViewport, no upscaling"
+}

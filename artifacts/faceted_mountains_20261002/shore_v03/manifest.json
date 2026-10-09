@@ -1,0 +1,1885 @@
+{
+  "schema": "faceted-mountain-visual-layer/v1",
+  "status": "RECLIPPED_ORIGINAL_ARTISTIC_MOUNTAINS_NEW_DRY_SOURCE",
+  "source_height_mutation": false,
+  "collision_added": false,
+  "mountain_mask": "zone_masks rawrelief=mountain domain=dry",
+  "support_inset": 0.045,
+  "river_exclusion_margin": 0.12,
+  "base_manifest_sha256": "8616eb10c32f38899120b89417546e9befe675a4b3e2f6dde2b088755024e325",
+  "ecology_sha256": "e6219347d90c5d4c8de5d61aaa9436542fd254810d17eff7afeb3d3ae22b8318",
+  "river_contract_sha256": "36100c440584b482146c99a355f595b0548eb50744f65d16313d39f89c71f7ef",
+  "binary": "mountains.vertices_f32.gz",
+  "binary_sha256": "3478ff666f9efaf175e16ec53da5df70b13f9710e63cfde15fd3f0345c88464a",
+  "stride_f32": 8,
+  "vertices": 54678,
+  "triangles": 18226,
+  "groups": [
+    {
+      "region": "mountain:face:11705:component:896",
+      "part": 0,
+      "first_vertex": 0,
+      "vertices": 1764,
+      "triangles": 588,
+      "support_area": 9.028846068386455,
+      "summits": 8,
+      "ridge_seeds": 3,
+      "bounds_xz": [
+        -27.319704692890838,
+        13.223037446671697,
+        -19.12484745486686,
+        17.703643884296685
+      ]
+    },
+    {
+      "region": "mountain:face:13581:component:1048",
+      "part": 0,
+      "first_vertex": 1764,
+      "vertices": 1434,
+      "triangles": 478,
+      "support_area": 6.847238530791327,
+      "summits": 6,
+      "ridge_seeds": 2,
+      "bounds_xz": [
+        -34.0066033333,
+        5.2616640309,
+        -27.8342363684,
+        7.7681335008
+      ]
+    },
+    {
+      "region": "mountain:face:18805:component:1331",
+      "part": 0,
+      "first_vertex": 3198,
+      "vertices": 1839,
+      "triangles": 613,
+      "support_area": 8.9439018112877,
+      "summits": 8,
+      "ridge_seeds": 3,
+      "bounds_xz": [
+        -38.41670824849255,
+        9.421083810707945,
+        -30.703997403868232,
+        11.94803935333678
+      ]
+    },
+    {
+      "region": "mountain:face:38628:component:2430",
+      "part": 0,
+      "first_vertex": 5037,
+      "vertices": 1710,
+      "triangles": 570,
+      "support_area": 9.22088642014332,
+      "summits": 5,
+      "ridge_seeds": 2,
+      "bounds_xz": [
+        6.441710759749839,
+        -11.578916189290196,
+        11.731247436286676,
+        -5.752941316469366
+      ]
+    },
+    {
+      "region": "mountain:face:38676:component:2437",
+      "part": 0,
+      "first_vertex": 6747,
+      "vertices": 663,
+      "triangles": 221,
+      "support_area": 1.3003139405157695,
+      "summits": 1,
+      "ridge_seeds": 1,
+      "bounds_xz": [
+        8.705253149189986,
+        -13.710772932870178,
+        10.768179493066686,
+        -11.077942080626736
+      ]
+    },
+    {
+      "region": "mountain:face:40836:component:2538",
+      "part": 0,
+      "first_vertex": 7410,
+      "vertices": 15465,
+      "triangles": 5155,
+      "support_area": 94.50558011091458,
+      "summits": 55,
+      "ridge_seeds": 20,
+      "bounds_xz": [
+        9.571278556611503,
+        -38.44803937179822,
+        24.203712300468972,
+        -17.427941322516435
+      ]
+    },
+    {
+      "region": "mountain:face:43525:component:2721",
+      "part": 0,
+      "first_vertex": 22875,
+      "vertices": 924,
+      "triangles": 308,
+      "support_area": 4.3535894214185005,
+      "summits": 2,
+      "ridge_seeds": 1,
+      "bounds_xz": [
+        15.967989179695056,
+        -17.057283562654238,
+        19.310668769685876,
+        -13.577942078648984
+      ]
+    },
+    {
+      "region": "mountain:face:52627:component:3441",
+      "part": 0,
+      "first_vertex": 23799,
+      "vertices": 3168,
+      "triangles": 1056,
+      "support_area": 20.539045055080756,
+      "summits": 11,
+      "ridge_seeds": 4,
+      "bounds_xz": [
+        8.173761502855779,
+        -5.922058644841539,
+        11.511128977970314,
+        9.210772512435854
+      ]
+    },
+    {
+      "region": "mountain:face:7383:component:394",
+      "part": 0,
+      "first_vertex": 26967,
+      "vertices": 2403,
+      "triangles": 801,
+      "support_area": 10.609837821559141,
+      "summits": 9,
+      "ridge_seeds": 3,
+      "bounds_xz": [
+        -18.4446433639,
+        10.2529413857,
+        -13.5982966384,
+        19.7107732887
+      ]
+    },
+    {
+      "region": "mountain:face:900:component:0",
+      "part": 0,
+      "first_vertex": 29370,
+      "vertices": 18582,
+      "triangles": 6194,
+      "support_area": 139.52959841567483,
+      "summits": 79,
+      "ridge_seeds": 26,
+      "bounds_xz": [
+        -16.409483633824316,
+        -11.948039353311245,
+        18.991026018183803,
+        29.88577289203442
+      ]
+    },
+    {
+      "region": "mountain:face:913:component:9",
+      "part": 0,
+      "first_vertex": 47952,
+      "vertices": 6726,
+      "triangles": 2242,
+      "support_area": 34.87186122608425,
+      "summits": 24,
+      "ridge_seeds": 9,
+      "bounds_xz": [
+        -12.480945510200314,
+        7.577942078648984,
+        8.052338520488172,
+        20.293423442257694
+      ]
+    }
+  ],
+  "summits": [
+    {
+      "position": [
+        -20.98991584777832,
+        1.9471449851989746,
+        16.104270935058594
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -25.317262649536133,
+        2.0472397804260254,
+        13.918353080749512
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -24.731054306030273,
+        1.6694202423095703,
+        14.008818626403809
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -20.341768264770508,
+        2.0387558937072754,
+        16.58464813232422
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -22.559703826904297,
+        2.5517241954803467,
+        14.943037033081055
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -21.692834854125977,
+        2.074215888977051,
+        15.596539497375488
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -20.659704208374023,
+        2.0897412300109863,
+        16.463037490844727
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -26.359704971313477,
+        2.5617241859436035,
+        13.803037643432617
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -31.885082244873047,
+        1.9148472547531128,
+        7.084537029266357
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -30.1534481048584,
+        2.5257577896118164,
+        6.918509006500244
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -29.536785125732422,
+        2.1787798404693604,
+        6.89598274230957
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -28.84511375427246,
+        1.641789436340332,
+        6.804933547973633
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -30.766603469848633,
+        3.001819372177124,
+        6.981664180755615
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -33.04660415649414,
+        2.1207964420318604,
+        5.841663837432861
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -31.946203231811523,
+        1.9192442893981934,
+        11.059845924377441
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -34.07413864135742,
+        1.7468974590301514,
+        10.19719123840332
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -35.17670822143555,
+        2.936863660812378,
+        10.761083602905273
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -32.77705764770508,
+        2.044192314147949,
+        10.47556209564209
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -36.27817153930664,
+        2.590070962905884,
+        10.207395553588867
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -36.97559356689453,
+        2.2376294136047363,
+        10.080353736877441
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -37.45670700073242,
+        2.187009334564209,
+        10.001083374023438
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -32.51670837402344,
+        2.1955556869506836,
+        10.761083602905273
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        8.517905235290527,
+        2.546360969543457,
+        -8.921905517578125
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        8.842864036560059,
+        2.1257128715515137,
+        -10.124939918518066
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        8.54171085357666,
+        3.0679337978363037,
+        -7.578916072845459
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        8.54171085357666,
+        2.2329351902008057,
+        -10.238916397094727
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        8.69051456451416,
+        2.1709024906158447,
+        -10.471367835998535
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        9.285253524780273,
+        2.4630110263824463,
+        -11.99077320098877
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        13.352174758911133,
+        2.6856062412261963,
+        -27.01300811767578
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        13.473533630371094,
+        2.2450478076934814,
+        -26.40798568725586
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        23.602327346801758,
+        1.429652214050293,
+        -32.348655700683594
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        17.708724975585938,
+        1.220443606376648,
+        -37.40077209472656
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        12.366454124450684,
+        2.5266573429107666,
+        -22.707157135009766
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        13.972929000854492,
+        2.621581554412842,
+        -23.756181716918945
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        13.229881286621094,
+        2.2122347354888916,
+        -23.478300094604492
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        20.552654266357422,
+        2.3929641246795654,
+        -27.920644760131836
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        19.91517448425293,
+        2.8680477142333984,
+        -24.96221351623535
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        17.279996871948242,
+        2.197357416152954,
+        -20.87784194946289
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        13.191278457641602,
+        2.686279058456421,
+        -27.60803985595703
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        17.13091278076172,
+        2.167781352996826,
+        -21.012392044067383
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.503661155700684,
+        2.527909517288208,
+        -24.440162658691406
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        20.411277770996094,
+        2.9563090801239014,
+        -25.328039169311523
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        20.968017578125,
+        1.849642276763916,
+        -26.43423843383789
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        20.323028564453125,
+        2.753751039505005,
+        -26.446964263916016
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        23.071279525756836,
+        1.585471272468567,
+        -30.26803970336914
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        17.751277923583984,
+        1.1093097925186157,
+        -37.868038177490234
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        17.98381996154785,
+        2.203524112701416,
+        -36.18859100341797
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        13.650545120239258,
+        2.4283792972564697,
+        -27.634002685546875
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        12.051279067993164,
+        2.624807834625244,
+        -22.288040161132812
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        12.46690845489502,
+        2.5216541290283203,
+        -21.953405380249023
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        18.744535446166992,
+        3.1375811100006104,
+        -24.488283157348633
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        20.739503860473633,
+        2.2106945514678955,
+        -24.60813331604004
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        18.51127815246582,
+        3.5846664905548096,
+        -23.42803955078125
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        21.985267639160156,
+        1.6129205226898193,
+        -31.01525115966797
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        23.83127784729004,
+        1.5627074241638184,
+        -32.548038482666016
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        23.905235290527344,
+        1.4833612442016602,
+        -32.726524353027344
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        22.520925521850586,
+        1.9065440893173218,
+        -27.22621726989746
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        15.823469161987305,
+        2.4484798908233643,
+        -31.773048400878906
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        16.539093017578125,
+        2.2764225006103516,
+        -34.78582000732422
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        16.99127769470215,
+        2.940096616744995,
+        -18.488039016723633
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        20.411277770996094,
+        2.5136897563934326,
+        -28.368040084838867
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        15.802506446838379,
+        1.8845270872116089,
+        -34.36955261230469
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        17.3102970123291,
+        2.303373098373413,
+        -21.594696044921875
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        22.311279296875,
+        2.224431276321411,
+        -26.848039627075195
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        17.751277923583984,
+        3.082888126373291,
+        -35.58803939819336
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        18.089263916015625,
+        3.032756805419922,
+        -35.050697326660156
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        17.55860137939453,
+        2.736384153366089,
+        -35.09043884277344
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        19.58540916442871,
+        2.8258516788482666,
+        -34.79969024658203
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        21.17127799987793,
+        3.309060573577881,
+        -35.208038330078125
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        15.471278190612793,
+        1.8189072608947754,
+        -34.44804000854492
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        11.043506622314453,
+        2.1355209350585938,
+        -19.208545684814453
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        10.91127872467041,
+        2.1460325717926025,
+        -19.24803924560547
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        20.297622680664062,
+        2.2905514240264893,
+        -28.72770881652832
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        21.437320709228516,
+        2.193284749984741,
+        -32.06826400756836
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        21.17127799987793,
+        2.6018173694610596,
+        -31.788040161132812
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        19.14712142944336,
+        2.353271722793579,
+        -33.44154357910156
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.286498069763184,
+        2.6373963356018066,
+        -30.694957733154297
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        17.371278762817383,
+        2.3325741291046143,
+        -21.148038864135742
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        17.482059478759766,
+        2.920611619949341,
+        -35.68217086791992
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        13.951278686523438,
+        2.7738611698150635,
+        -30.26803970336914
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.331656455993652,
+        2.5170512199401855,
+        -29.94847297668457
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        19.271278381347656,
+        2.5503416061401367,
+        -33.68803787231445
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        16.99127769470215,
+        3.179906129837036,
+        -32.16804122924805
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        17.24620819091797,
+        3.019531011581421,
+        -15.078149795532227
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        16.927989959716797,
+        3.244478225708008,
+        -14.957283973693848
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        10.104217529296875,
+        2.0018110275268555,
+        3.2103981971740723
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        10.507646560668945,
+        2.6935718059539795,
+        2.3162429332733154
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        10.443305969238281,
+        2.1764118671417236,
+        0.5454846024513245
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        10.273761749267578,
+        3.088977336883545,
+        1.877941370010376
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        9.78283977508545,
+        2.2346532344818115,
+        4.847838878631592
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        10.501544952392578,
+        2.5258302688598633,
+        -1.0090943574905396
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        9.825302124023438,
+        1.9520069360733032,
+        5.9032769203186035
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        10.273761749267578,
+        1.9616867303848267,
+        7.577941417694092
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        10.273761749267578,
+        2.6990773677825928,
+        -1.5420585870742798
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        9.513761520385742,
+        2.142832040786743,
+        5.297941207885742
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        10.33918285369873,
+        1.7735272645950317,
+        7.2345170974731445
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -16.942546844482422,
+        1.8235822916030884,
+        16.142534255981445
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -17.47571563720703,
+        2.4611685276031494,
+        15.350485801696777
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -16.93349838256836,
+        1.9992692470550537,
+        12.073955535888672
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -17.496776580810547,
+        2.457157850265503,
+        13.657816886901855
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -16.344642639160156,
+        1.9696300029754639,
+        16.912940979003906
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -17.484643936157227,
+        2.901428699493408,
+        14.632941246032715
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -17.69602394104004,
+        2.8556742668151855,
+        14.642570495605469
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -16.50850486755371,
+        1.7439709901809692,
+        11.695413589477539
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -16.72464370727539,
+        2.162240743637085,
+        11.592941284179688
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -15.930730819702148,
+        0.9816347360610962,
+        28.684267044067383
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -11.26948356628418,
+        2.4174933433532715,
+        27.011960983276367
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -11.53532886505127,
+        2.370410442352295,
+        26.538719177246094
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.286242485046387,
+        2.376105546951294,
+        -4.9466376304626465
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.594271659851074,
+        2.362131118774414,
+        -11.410783767700195
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.120820045471191,
+        1.950013279914856,
+        -7.706941604614258
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        16.795772552490234,
+        2.3464584350585938,
+        -10.3242826461792
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.058040618896484,
+        2.634007453918457,
+        3.648984909057617
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -12.545463562011719,
+        2.663813352584839,
+        25.740245819091797
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        15.385580062866211,
+        2.332188129425049,
+        -11.147871971130371
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.950516700744629,
+        2.3197929859161377,
+        -9.08803939819336
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.268646240234375,
+        2.2000415325164795,
+        -8.765281677246094
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        16.2089786529541,
+        2.3506228923797607,
+        7.613834381103516
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        13.9677734375,
+        2.3484256267547607,
+        4.656222343444824
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        16.25206756591797,
+        1.6177377700805664,
+        4.593530178070068
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -15.449483871459961,
+        1.2402064800262451,
+        28.151960372924805
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -14.109564781188965,
+        1.692226529121399,
+        22.328527450561523
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -10.74512004852295,
+        2.206700563430786,
+        27.018136978149414
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -13.364884376525879,
+        2.19164776802063,
+        26.027847290039062
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        13.990398406982422,
+        2.222912311553955,
+        -6.660882472991943
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        16.342525482177734,
+        2.128009796142578,
+        5.1666693687438965
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        15.830605506896973,
+        2.035642385482788,
+        -10.947970390319824
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.847465515136719,
+        2.21303129196167,
+        -8.573864936828613
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        13.810516357421875,
+        2.3039398193359375,
+        0.4119606018066406
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.203892707824707,
+        2.3413822650909424,
+        4.4477314949035645
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        16.218246459960938,
+        2.1851751804351807,
+        6.253780841827393
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -6.564998149871826,
+        2.019956111907959,
+        26.18556022644043
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.563451766967773,
+        1.8467466831207275,
+        -5.987185001373291
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.749588966369629,
+        2.292025089263916,
+        -0.9248055815696716
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.950516700744629,
+        2.596747636795044,
+        -11.36803913116455
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        13.656037330627441,
+        2.293475866317749,
+        0.8744431734085083
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -15.090154647827148,
+        1.0744757652282715,
+        27.94634246826172
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -13.448274612426758,
+        2.720052480697632,
+        23.003555297851562
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -9.915040969848633,
+        2.677644729614258,
+        26.902921676635742
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -8.989483833312988,
+        2.9886796474456787,
+        27.771961212158203
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        17.23051643371582,
+        2.4884607791900635,
+        -10.228039741516113
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.659539222717285,
+        2.340484380722046,
+        -1.6028263568878174
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.506816864013672,
+        2.106879711151123,
+        5.390230178833008
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.190516471862793,
+        2.6216182708740234,
+        4.971960544586182
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.232283592224121,
+        2.8090317249298096,
+        2.5249924659729004
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        13.208760261535645,
+        1.8318670988082886,
+        8.952054977416992
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        8.83927059173584,
+        2.0807368755340576,
+        12.8363676071167
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        0.7162991762161255,
+        2.5534162521362305,
+        22.260108947753906
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        2.978923797607422,
+        2.1332030296325684,
+        21.400285720825195
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        6.769166946411133,
+        2.1873741149902344,
+        18.818466186523438
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        6.893549919128418,
+        2.7442774772644043,
+        17.849178314208984
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        5.649673938751221,
+        2.383201837539673,
+        19.811992645263672
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -13.168700218200684,
+        2.500103235244751,
+        24.148761749267578
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -13.929483413696289,
+        2.437762498855591,
+        23.211959838867188
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -6.709483623504639,
+        2.035693883895874,
+        26.631959915161133
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        0.08755840361118317,
+        2.8593697547912598,
+        22.15141487121582
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -7.598197937011719,
+        1.7753812074661255,
+        26.933259963989258
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -8.491388320922852,
+        2.8600571155548096,
+        27.682872772216797
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -12.944395065307617,
+        2.8464574813842773,
+        25.444683074951172
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        16.470516204833984,
+        2.1872384548187256,
+        5.731960773468018
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.950516700744629,
+        2.618906021118164,
+        -1.4880393743515015
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.380244255065918,
+        2.4791719913482666,
+        -4.398824214935303
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        15.330516815185547,
+        2.981370210647583,
+        8.771960258483887
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        7.73051643371582,
+        2.8595035076141357,
+        16.75196075439453
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        2.9226324558258057,
+        2.158525228500366,
+        20.588956832885742
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        6.210516452789307,
+        2.359360933303833,
+        19.791959762573242
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -4.620611190795898,
+        3.2145509719848633,
+        24.309804916381836
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -1.0996286869049072,
+        2.5771725177764893,
+        22.371095657348633
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -2.8262786865234375,
+        2.247852087020874,
+        22.916263580322266
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        14.570516586303711,
+        2.8432161808013916,
+        2.691960573196411
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        7.611330509185791,
+        2.750586748123169,
+        16.33631134033203
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        9.315526962280273,
+        1.9298768043518066,
+        11.655445098876953
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        4.4542555809021,
+        1.6494799852371216,
+        19.835491180419922
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -5.444653034210205,
+        3.2771177291870117,
+        24.65404510498047
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -5.148920059204102,
+        2.560755968093872,
+        25.227102279663086
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        9.250515937805176,
+        2.395231246948242,
+        13.331960678100586
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        9.48672866821289,
+        2.1416752338409424,
+        13.255106925964355
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        3.1705164909362793,
+        2.3036367893218994,
+        20.931961059570312
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -13.610282897949219,
+        2.2304201126098633,
+        23.69574546813965
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -5.189483642578125,
+        3.336805820465088,
+        24.73196029663086
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        10.39051628112793,
+        2.4196109771728516,
+        11.051960945129395
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        12.622031211853027,
+        1.9788886308670044,
+        9.269603729248047
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -3.0734825134277344,
+        2.338367223739624,
+        23.405393600463867
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        12.263410568237305,
+        1.6989318132400513,
+        9.607196807861328
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        7.593177795410156,
+        1.7002838850021362,
+        8.88216495513916
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        7.4790544509887695,
+        1.7344939708709717,
+        8.91794204711914
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        4.756211757659912,
+        2.358473062515259,
+        16.36874008178711
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -11.779641151428223,
+        1.3861995935440063,
+        19.789127349853516
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -1.0289442539215088,
+        2.740145206451416,
+        18.649574279785156
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        1.8472342491149902,
+        2.833155632019043,
+        17.818897247314453
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        4.81905460357666,
+        2.6365442276000977,
+        16.137941360473633
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        2.860811233520508,
+        2.4944283962249756,
+        17.241352081298828
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -6.042986869812012,
+        1.8926095962524414,
+        17.195209503173828
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        6.789687633514404,
+        1.9333223104476929,
+        12.558048248291016
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -10.636136054992676,
+        2.372809648513794,
+        19.320972442626953
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -8.116539001464844,
+        1.6836119890213013,
+        17.275650024414062
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -2.9955224990844727,
+        2.870468854904175,
+        18.447830200195312
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -0.25913840532302856,
+        1.948227882385254,
+        18.5181884765625
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -4.839293956756592,
+        2.2299678325653076,
+        17.450471878051758
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -0.5369675159454346,
+        1.77547287940979,
+        18.014928817749023
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        6.719054698944092,
+        2.0210704803466797,
+        12.717942237854004
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -10.380945205688477,
+        2.668288469314575,
+        19.177942276000977
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -7.318472862243652,
+        1.9465898275375366,
+        17.48101043701172
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -5.032112121582031,
+        2.474083423614502,
+        17.9046630859375
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        1.7790545225143433,
+        2.861027479171753,
+        17.657941818237305
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        0.6972976922988892,
+        2.490295171737671,
+        18.07453155517578
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -2.4009454250335693,
+        3.261418104171753,
+        18.797941207885742
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    },
+    {
+      "position": [
+        -7.720945358276367,
+        1.9262405633926392,
+        17.277942657470703
+      ],
+      "source_region": "retained_artistic_ridge_reclipped_to_new_dry_source"
+    }
+  ],
+  "max_triangle_outside_actual_dry_mountain_area": 9.421792327770045e-15,
+  "max_triangle_river_corridor_overlap_area": 0.0,
+  "build_seconds": 26.824041125000804,
+  "builder_sha256": "a9b231b98c950c253026b0b9edfecf24265d149a48e3d11399808aa3b106b4cb",
+  "seed": "SHA256 of frozen mountain region ID and component index",
+  "geometry_recipe": "EIGHT_OR_NINE_SPOKE_BROKEN_CROWN_SHOULDER_BUTTRESS_SECONDARY_CRAG_CONTROL_MESH",
+  "revision": "2-shore-v03",
+  "byte_size": 670821,
+  "claimed_scientific_acceptance": false,
+  "source_identity_mutation": false,
+  "new_source_cache_manifest_sha256": "aeb2d12e83a974bf6a98b1ddc4033395f3264ca57611f50ad5300e02108adacb",
+  "new_source_mesh_sha256": "68931983818b291b07022477029d4ad4761aceac0c670463fbe742b6a2ac986c",
+  "new_source_drainage_sha256": "2b77b89e7b4716cf524dcce836071d4d38c3e6356ffcfc1bbdb58eaca918b3d6",
+  "new_source_dry_support_sha256": "ba9e14f14c0786df597fc460f9445cab63b0c01844d76c025ac8bfd24e3631ec",
+  "parent_artistic_manifest_sha256": "007d36ea4b65e695712a8e161e51fbe42596216cefe03eece81776898dca0b66",
+  "artistic_regeneration": false,
+  "source_rebase": true,
+  "new_dry_boundary_inset": 0.016,
+  "max_triangle_outside_new_dry_mountain_area": 5.59833296384027e-17,
+  "max_new_source_base_height_delta": 0.1728266566818215,
+  "original_visual_area": 339.7506994021196,
+  "reclipped_visual_area": 339.38131110981226,
+  "clipped_triangles": 217,
+  "reclip_script_sha256": "30582ed2755a5d3419106dc93fa383aa6814ade4eb8b9401e7e50b8fb2d48a6a"
+}

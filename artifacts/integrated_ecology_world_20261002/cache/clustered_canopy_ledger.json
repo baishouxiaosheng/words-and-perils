@@ -1,0 +1,111 @@
+{
+  "schema": "integrated-r24-clustered-canopy-layout-diagnostic-0.1.0",
+  "status": "PASS_DIAGNOSTIC_LEGAL_CANOPY_POSTPROCESS_ONLY",
+  "source_zone_sha256": "e6219347d90c5d4c8de5d61aaa9436542fd254810d17eff7afeb3d3ae22b8318",
+  "source_mesh_sha256": "0be0975d95f4d7ea7577c41fdbf2588cb23b0574e4d40c906e190ff309f4160e",
+  "source_manifest_sha256_before_cluster": "47cb2a97f20f17546a405ea6803814f7271460b17c29333437eb3c90ab5993de",
+  "producer_sha256": "e4b72e066c2be896298d4fdbb03856cbd0dece3ae78d361be65e43ec3ee75b8b",
+  "baseline_reference": {
+    "artifact_path": "artifacts/integrated_ecology_world_20261002/vegetation_anchors_BASELINE.json.gz",
+    "sha256": "55f65b555f2cec9cb6f75bc793cdfd74752e53ba33d2ad4f06073c4a1d965d29",
+    "bytes": 311093
+  },
+  "active_file": {
+    "name": "vegetation_anchors_clustered.json.gz",
+    "sha256": "de0b43ac7d32698bb5a977d7a42afe93ecaec64b72e5ef4a3869a65d9f28d936",
+    "bytes": 309442,
+    "decoded_bytes": 1048237,
+    "encoding": "gzip/utf8-json",
+    "count": 934,
+    "stride": 0
+  },
+  "checks": {
+    "all_active_anchors_subset_of_baseline": true,
+    "active_instance_count_not_increased": true,
+    "all_source_cover_eligible": true,
+    "all_full_heptagons_in_same_source_pure_fragment": true,
+    "max_source_PL_slope": 0.5445143974701292,
+    "max_anchor_PL_abs_error": 0.0,
+    "max_crown_support_area_error_xz": 0.0,
+    "all_radius_and_height_not_expanded": true,
+    "all_actual_unions_recomputed": true
+  },
+  "layout": {
+    "schema": "integrated-r24-clustered-canopy-layout-diagnostic-0.1.0",
+    "scientific_status": "DIAGNOSTIC_ONLY_NOT_COVER_OR_ZONE_ACCEPTANCE",
+    "seed": "real-r24-canopy-clusters-20261002-810",
+    "shared_world_field": {
+      "value_noise_cell_sides": [
+        3.1,
+        1.15,
+        0.43
+      ],
+      "weights": [
+        0.55,
+        0.3,
+        0.15
+      ],
+      "cutoff": 0.4,
+      "smoothstep_lattice_interpolation": true,
+      "same_field_for_all_ecologies_and_scopes": true
+    },
+    "radius_range_of_baseline": [
+      0.86,
+      1.0
+    ],
+    "height_range_of_baseline": [
+      0.82,
+      1.0
+    ],
+    "root_jitter": "18 deterministic bounded attempts; every full heptagon inside same source pure fragment",
+    "root_jitter_max_by_ecology": {
+      "forest": 0.11,
+      "jungle": 0.13,
+      "grass": 0.045,
+      "arid": 0.065
+    },
+    "baseline_instances": 1232,
+    "active_instances": 934,
+    "retained_by_ecology": {
+      "jungle": 358,
+      "grass": 43,
+      "forest": 457,
+      "arid": 76
+    },
+    "removed_by_ecology": {
+      "forest": 209,
+      "grass": 17,
+      "jungle": 29,
+      "arid": 43
+    },
+    "roots_jittered": 876,
+    "root_jitter_fallbacks": 58,
+    "mean_root_jitter_world": 0.040910299794864914,
+    "actual_total_heptagon_crown_union_area_xz": 10.398466269348294,
+    "summed_crown_area_xz": 10.398466269348294,
+    "positive_area_overlap_pairs": 0,
+    "source_per_hex_gate_values_modified": false,
+    "density_gate": "NOT_EVALUATED_NOT_PASS",
+    "whole_hex_80_gate": "NOT_EVALUATED_NOT_PASS"
+  },
+  "scope_actual_cover": {
+    "coastal": {
+      "retained_instances": 692,
+      "baseline_source_eligible_pure_scope_area_xz": 90.91677551251537,
+      "actual_heptagon_crown_union_area_xz": 8.306992453302396,
+      "summed_crown_area_xz": 8.306992453302396,
+      "positive_area_overlap_pairs": 0,
+      "density_on_baseline_sampled_source_support": 0.09136919349013732
+    },
+    "ecotone": {
+      "retained_instances": 242,
+      "baseline_source_eligible_pure_scope_area_xz": 125.0642460533339,
+      "actual_heptagon_crown_union_area_xz": 2.091473816045895,
+      "summed_crown_area_xz": 2.091473816045895,
+      "positive_area_overlap_pairs": 0,
+      "density_on_baseline_sampled_source_support": 0.016723195333972443
+    }
+  },
+  "actual_density_gate": "NOT_EVALUATED_NOT_PASS",
+  "runtime_seconds": 10.468794376000005
+}

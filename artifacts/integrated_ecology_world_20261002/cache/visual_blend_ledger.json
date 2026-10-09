@@ -1,0 +1,37 @@
+{
+  "schema": "independent-visual-B2-material-blend-0.1.0",
+  "scientific_status": "DIAGNOSTIC_ONLY_NOT_80_SUPPORT_OR_COVER",
+  "source_manifest_sha256_before_visual_addition": "87caaeaa3047c5ca7e0a61568354a9fd8911ada2eaf02f17df862cc9624ed5fc",
+  "producer_sha256": "60892ad3956e339484fda2ce1f99b1ccb81f3ae08fed518bf31cbcd613c589f2",
+  "resolution": [
+    2048,
+    1785
+  ],
+  "world_pixel_step": [
+    0.04313212460254528,
+    0.043137254901960784
+  ],
+  "sigma_world": 0.09363661191525886,
+  "approximate_10_90_width_world": 0.24,
+  "coordinate_warp_world": 0,
+  "wet_and_exterior_coordinate_warp": 0,
+  "dry_inside_pixels": 2372899,
+  "exterior_weights_max": 0.0,
+  "normalized_float_max_error": 1.1920928955078125e-07,
+  "ground_triangles_rasterized": 211703,
+  "source_geometry_modified": false,
+  "source_ecology_modified": false,
+  "actual_canopy_coverage_claim": "NONE",
+  "runtime_uses_actual_dry_ground_geometry_only": true,
+  "seconds": 19.648379680002108,
+  "files": {
+    "visual_weights.png": {
+      "sha256": "cd666add9d0e3567ba576cb030e7089203257c728ce187ff773c36e1ec112119",
+      "bytes": 301418
+    },
+    "visual_dry_inside.png": {
+      "sha256": "dcd100b7ca666ff53ea274c281d590868e283e9d95cf1f5dd3dd8845e3be2283",
+      "bytes": 20040
+    }
+  }
+}

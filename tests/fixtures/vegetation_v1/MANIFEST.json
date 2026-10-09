@@ -1,0 +1,32 @@
+{
+  "schema": "frozen_legacy_vegetation_fixture/v1",
+  "source": "Exact four previously accepted native equipment/enemy saves; no regeneration or schema changes",
+  "files": [
+    {
+      "fixture": "generated_v3_village_equipment_v1.json",
+      "bytes": 278558,
+      "sha256": "bf0815e9b3ee265c8df90a0ace21840c02600708c9e9b669ff608e010788e3d3"
+    },
+    {
+      "fixture": "equipment_poisoned_history.json",
+      "bytes": 298765,
+      "sha256": "19269f461ffc5147a2eb80a4f3f7a74ee83a6e8c92fa798dd57aecbc7dc998ca"
+    },
+    {
+      "fixture": "generated_v3_village_enemy_v1.json",
+      "bytes": 162417,
+      "sha256": "9a236f96cc773c1a85d11a2fef5a3dce7fbaf0500e456f99df11fbaf68171f79"
+    },
+    {
+      "fixture": "terminal_presentation_save.json",
+      "bytes": 273069,
+      "sha256": "2946c7f1af5597e6741ee690612ba8b1390b1d9436632d00d44121d76ed19135"
+    }
+  ],
+  "asset_baseline": {
+    "fixture": "asset_catalog_v24.json",
+    "bytes": 7819,
+    "sha256": "fdc5901bd445985c9d906cdf093c62703d23b1beaa7d7d45f55b23de02577361",
+    "source": "Native strict v24 Assets.build; matching full catalog and thirty raw buffer hashes"
+  }
+}

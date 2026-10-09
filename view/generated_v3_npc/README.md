@@ -1,0 +1,21 @@
+# Village adventure with assessed conversation
+
+This is an explicit composed profile, `generated_v3_village_npc/v1`, over the accepted V18 village and inventory authority. It has its own world ID, save schema and request paths. No old exploration, inventory or village save is migrated or populated with a new actor.
+
+One source-bound roadside villager offers one registered topic: directions to the actual village and its entry road. Every conversation starts with a text intent and requires a valid model assessment, or the exact visibly labelled offline preset. Clicking, inspecting and opening travel notes are read-only. The cooperative `safe_direct` rule means deterministic completion after an admissible assessment, not arbitrary AI conversation. It uses the unchanged release calculator and consumes no random draw.
+
+A completed talk costs one stamina and one turn. The typed conversation effect increments contact revision/count and persists catalog-derived information. A repeat is a legitimate paid turn but preserves the first acquisition's action ID, start turn and evidence hash. Model replies cannot add topics, manufacture information payloads, move the villager or create arbitrary patches. Learned information is visible in “旅途笔记”. Before acquisition, the finite private answer registry is absent from model projection; after staging, narration explicitly remains provisional until commit.
+
+The logical NPC ID binds source/village identity and role slot. Catalog identity binds the exact placement; contact and location revisions are distinct. Pending context freezes the exact NPC witness. Historical projection reads frozen witnesses only, while Source replay proves them against reconstructed pre-action state. NPC typed effects are never accepted as turn hooks.
+
+Physical placement uses one fixed quarter-scale procedural pawn. Its actual full plinth radius is .095 world units; raw surface arrays, not Godot's snapped TriangleMesh proxy, determine bounds. A finite deterministic entry-cell corner search proves full-area dry support and reserves .38 world units for the traveler's full plinth around every admitted corridor. It does not change terrain, navigation, the original traveler spawn or the scale per seed. If no location fits, admission fails. The selected candidate and exact support evidence are catalog-bound. Visual and finite motion tests are separate acceptance gates; they are not a claim of arbitrary continuous collision simulation.
+
+Optional sparse biome vegetation is a saved explicit feature of this new profile. Its manifest, catalog and NPC reservation binding are reproduced on load. It adds selection and observation context, not harvesting, cutting, loot or terrain effects. The active whole-mesh terrain renderer and original geometry/nav identities remain unchanged.
+
+The new public context keeps radius-four cells plus one exact selected supporting cell. Nearby static objects use labelled compact summaries; the selected full physical witness is emitted once. Vegetation uses its bounded compact projection and honest omission/pagination fields. The 64KiB request limit and 4096-byte goal limit remain unchanged and require actual serialized max-request checks before acceptance.
+
+Player menus use “探索” and “村庄冒险”. Older continuation paths remain discoverable under the advanced menu; older drafts and in-memory sessions remain separate. Current model choices are unchanged. The delivered demo is offline until an authorized live provider route is deliberately connected.
+
+Not included: unrestricted conversation, new NPC pathfinding, combat, relationships, trading, economy, interiors, physical rivers or bridges. Future topics/NPCs must extend a versioned admitted catalog/profile and its history/budget gates rather than treating model prose as authority.
+
+Intent text preserves ordinary Unicode, newline, tab and carriage return. Other C0 control characters are rejected before action creation and during pending/history save admission because the engine serializer cannot produce standard JSON for them. Goals are never silently sanitized. Exact64KiB/64KiB+1 request cancellation is exercised by a labelled synthetic transport-padding fixture separately from real source-backed maximum-goal requests.

@@ -1,0 +1,7 @@
+Words and Perils — original C fieldbook UI artwork
+
+All artwork in this directory was authored for this project as editable SVG geometry and vector patterns, then rasterized at2× for native Godot display. Source includes paper fibers, leather stitching, brass fasteners, compass stamps, leaf brackets, feather/inkwell and enamel medallion geometry. The traveler portrait is derived only from this project's own original programmatic portrait.
+
+No pixels, fonts, icons or ornaments from Baldur's Gate3, Totally Accurate Battle Simulator, or the generated concept images are embedded in these production assets. Those images informed general shape/material/color direction only. Font files are the project's existing Noto-based fonts and retain their separate SIL OFL license and provenance.
+
+No third-party artwork license is required for this original UI geometry. Preserve this provenance statement with source distribution.

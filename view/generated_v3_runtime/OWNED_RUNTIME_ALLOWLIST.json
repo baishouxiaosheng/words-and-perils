@@ -1,0 +1,43 @@
+{
+  "status": "Frozen after independent pixel acceptance and one-file shader adoption",
+  "runtime_files": {
+    "core/world_generation_v3/generator.gd": "53e1ba12da6597025d25d882eea001173b26718560399463fec333e77a3d140a",
+    "core/world_generation_v3/tiny_remnant_cleanup.gd": "d743725fbbd7e8c96c2cc5931fdf2b03375a51292f0f51afb3968ac8b14acbbb",
+    "view/generated_v3_runtime/structured_hex_builder.gd": "8e6918434f6ce4462704dd3f32940a661f457d0b1feae67828d59db623e9a06a",
+    "view/generated_v3_runtime/appearance.gd": "f2b29ff5048645467d15a3b429e0a1dbe23cb21651ae04e483e05bb46fc1d0bd",
+    "view/generated_v3_runtime/geometry.gd": "b4419352165c52e021dc288807cfee301e669498551da56ede9c84c0de2c76db",
+    "view/generated_v3_runtime/navigation.gd": "1cffb15cc08733dedf6af58a62306bbbe98ff8f16bc6ad424cbfe4c80dfff689",
+    "view/generated_v3_runtime/ground.gdshader": "a8cc0932dc71e821ec692677ef74be9b501a7bb3581eabab530525b57b7bb231",
+    "view/generated_v3_runtime/water.gdshader": "3be224e6c43383dc3cdd5c712169f50fd03dd334669d9c74b863aed2b9b6dc65"
+  },
+  "documentation_and_license_files": {
+    "core/world_generation_v3/README.md": "93e3317e0b2f90ab38f488656ec22ad998a1621160fcaa4b0132cd3a08525dc6",
+    "core/world_generation_v3/VERIFICATION.md": "05dd6805ef3f0b0d81c4baab3f3d2cf9c91bd46ecb08931d8bd19505daef4a5b",
+    "view/generated_v3_runtime/ATTRIBUTION.md": "eef280b99223d7a777521008fd46cf2c1417456df663431b63b433672bd8c27e",
+    "view/generated_v3_runtime/OWNED_RUNTIME_VERIFICATION.md": "c267cfd6d231841721903f31cb7f0376824a942598d5c801f600ba3ebd30d726",
+    "view/generated_v3_runtime/README.md": "3613bbe1b21de568fdcd29c26f245e1656939b99bf769fd9a2598161cbdb1267",
+    "view/generated_v3_runtime/provenance/PYTHON_PORT_ATTRIBUTION.md": "a1fd855cc84ede0ac77e794aa79d1a1e41d415d1d955ce092400d00edba921b0",
+    "view/generated_v3_runtime/provenance/frozen_python_builder.py.txt": "e87f56f4eb83868852c324e5b66dc690bd141c1509d65c51c0f9067042dc9f33",
+    "view/generated_v3_runtime/provenance/upstream/LICENSE.md.txt": "d0e16a0420ab914014045fb009c8b36eaeee63932a741f0374bc8f3d1ff82ab6",
+    "view/generated_v3_runtime/provenance/upstream/edge_vertices.gd.txt": "bb596cd2a6e0bd3e5e932cdeac45433f3f856b8fc012ecb473cee6315e511534",
+    "view/generated_v3_runtime/provenance/upstream/hex_directions.gd.txt": "49c32c6bf89eea2c416395bd52051d45819df6532c10098bbb856db845ec9274",
+    "view/generated_v3_runtime/provenance/upstream/hex_grid_chunk.gd.txt": "cdfb94420fbbbc2993166378037b0dbfe94bba585815c00639bd5b1b10a6055c",
+    "view/generated_v3_runtime/provenance/upstream/hex_mesh_primitive.gd.txt": "97f86909c23e83a9706ae0dbd29cab291dabbece12f3dfb89dd00ee80163bca1",
+    "view/generated_v3_runtime/provenance/upstream/hex_metrics.gd.txt": "7a3f65903baa576f1d71ba99e511c39c6d7a23a9d2ed3e690bd942b14332ea3d"
+  },
+  "existing_dependencies": [
+    "core/world_generation_contract.gd",
+    "core/ai_gm_rebuilt/canonical.gd",
+    "core/ai_gm_rebuilt/traversal_policy.gd",
+    "view/mesh_chunks.gd"
+  ],
+  "excluded": [
+    "core/world_generation_v3/geometry/** (historical diagnostic)",
+    "tests/** and artifacts/** (evidence, not production)",
+    "optional contour B",
+    "optional chunk optimization acceptance"
+  ],
+  "canonical_edited": false,
+  "final_ground_shader_sha256": "a8cc0932dc71e821ec692677ef74be9b501a7bb3581eabab530525b57b7bb231",
+  "save_pipeline_files_unchanged": true
+}

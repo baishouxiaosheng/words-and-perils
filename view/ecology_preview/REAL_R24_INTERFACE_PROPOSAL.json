@@ -1,0 +1,19 @@
+{
+  "schema": "ecology-local-r24-interface-proposal-0.1.0",
+  "status": "PROPOSAL_NOT_IMPLEMENTED",
+  "generic_whole_consumer_enabled": false,
+  "default_geometry_scale": 1.0,
+  "read_only": true,
+  "required_identity_keys": ["mesh", "drainage", "climate", "dry_support", "classification", "river_reserve", "zones", "zone_config", "upstream_acceptance_receipt"],
+  "identity_fields": ["actual_byte_sha256", "schema_version", "semantic_hash_if_supplied", "source_binding"],
+  "mesh_fields": ["seed", "radius", "geometry_version", "vertices.id", "vertices.xz", "vertices.designed_height", "faces.id", "faces.vertices_ordered", "cells.id", "cells.polygon"],
+  "water_fields": ["mesh_binding", "face_id", "face_index", "actual_wet_polygon", "source_level", "source_water_type", "shore_or_depth_if_available"],
+  "zone_fields": ["face_index", "face_id", "original_hex_id", "domain", "ecology", "cover_eligible", "local_detail_weights", "vertices.barycentric", "shell.vertices.weights", "protected_core_masks", "palette_linear_rgb", "cover_proposal", "density_domain_definition"],
+  "scope_fields": ["original_hex_ids", "original_face_ids", "bounds_xz", "neighbor_halo", "fixed_camera"],
+  "derived_caches": ["original_PL_render_patches", "true_shore_material_distance_depth", "actual_cover_transforms_and_union_ledger", "optional_separate_visual_ground_field"],
+  "physical_geometry_change_allowed": false,
+  "source_ecology_ownership_change_allowed": false,
+  "current_blockers": ["independently_accepted_whole_zone_receipt_not_available", "true_river_footprint_not_substitutable_by_fixture"],
+  "current_fixture_admission_is_not_generic_semantic_validation": true,
+  "current_B3_is_not_real_water_or_exterior_zero_field_proof": true
+}

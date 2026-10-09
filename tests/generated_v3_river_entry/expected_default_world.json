@@ -1,0 +1,9 @@
+{
+  "world_id": "natural_coast_shore_v03_adventure",
+  "hex_count": 1801,
+  "scene_id": "scene_coast",
+  "bundle_id": "natural-shore-v03-2f6a1a215a0d44a374f01c4a",
+  "source_mesh_sha256": "68931983818b291b07022477029d4ad4761aceac0c670463fbe742b6a2ac986c",
+  "source_drainage_sha256": "2b77b89e7b4716cf524dcce836071d4d38c3e6356ffcfc1bbdb58eaca918b3d6",
+  "catalog_sha256": "c982975994b5043cd05d1e11b3cfe6840c889c1122524f6b12412bd306f4aa52"
+}

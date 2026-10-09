@@ -1,0 +1,31 @@
+{
+  "scope": "exact production vegetation recipe/source/material/license pins before generated profile admission",
+  "passed": false,
+  "pins": [
+    {
+      "path": "res://view/ecology_preview/vegetation_meshes.gd",
+      "expected": "90f29e8c844d9f0094186c5a61060a831de50ef37ca35da36881c24a4c0c56bb",
+      "actual": "90f29e8c844d9f0094186c5a61060a831de50ef37ca35da36881c24a4c0c56bb",
+      "passed": true
+    },
+    {
+      "path": "res://view/ecology_preview/vegetation_surface.gdshader",
+      "expected": "e7bc8bdf45017df68daf059c818778f1638a21f3d1f5859a2536d8ffacd8fafb",
+      "actual": "e7bc8bdf45017df68daf059c818778f1638a21f3d1f5859a2536d8ffacd8fafb",
+      "passed": true
+    },
+    {
+      "path": "res://view/ecology_preview/LICENSE.txt",
+      "expected": "8f2f09db1ebceff3581d6016eb2c4154c60d15b01709a9add27d83d88b716251",
+      "actual": "8f2f09db1ebceff3581d6016eb2c4154c60d15b01709a9add27d83d88b716251",
+      "passed": true
+    },
+    {
+      "path": "res://view/integrated_ecology_world/performance_variant/whole_canopies.gd",
+      "expected": "3426c4617148977022d23226ff858684c5b0a329bf72a24fb8129b106f48a86f",
+      "actual": "519c54c0dd0cd273aa31bb43b2fcd570df654ed1db38ac63c744618e310b7ab0",
+      "passed": false
+    }
+  ],
+  "save_contract_unchanged_required": true
+}

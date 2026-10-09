@@ -1,0 +1,212 @@
+{
+  "authoring": "Original procedural pixel artwork authored for this project, generated with bundled script. No third-party or AI-generated art.",
+  "assets": [
+    {
+      "file": "desk.png",
+      "sha256": "044432901bdab6312030aaa1edd4376b1d9ca464b3bb0cda51490a012601efb1",
+      "bytes": 6317,
+      "dimensions": [
+        192,
+        96
+      ]
+    },
+    {
+      "file": "document.png",
+      "sha256": "e8ef8d086b83433d1101fd7b2bed15beb5745330547fd2931aa40689b8badf78",
+      "bytes": 14421,
+      "dimensions": [
+        192,
+        192
+      ]
+    },
+    {
+      "file": "felt.png",
+      "sha256": "77f73e0520fa156be35f7c01f3b1c6b04ff508e8ba58b7abc85ff9ab1c452131",
+      "bytes": 27704,
+      "dimensions": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "journal.png",
+      "sha256": "2dd7feee088741b1f5002e6098df051fd4690c47d25f5db3e9dc4d92e7bf56d6",
+      "bytes": 14551,
+      "dimensions": [
+        192,
+        192
+      ]
+    },
+    {
+      "file": "journal_seal.png",
+      "sha256": "e817cc83f8b37ac9692685598f9fb6368afa79cef95a1fb08b734af980bcc05c",
+      "bytes": 1748,
+      "dimensions": [
+        192,
+        192
+      ]
+    },
+    {
+      "file": "map_mount.png",
+      "sha256": "192213eda5cefe58755f6a75eebc6b1a8c8ec0024121be2f5b107db5119116d0",
+      "bytes": 3106,
+      "dimensions": [
+        96,
+        96
+      ]
+    },
+    {
+      "file": "primary_disabled.png",
+      "sha256": "39e90e2fbb79e8561699e3ab3edece088dd5158e53146d6ad77677e9787e4a23",
+      "bytes": 1941,
+      "dimensions": [
+        96,
+        48
+      ]
+    },
+    {
+      "file": "primary_hover.png",
+      "sha256": "1a0ba1f1a441b1b9d63288ab24ec16ed15fa4a9cf99cda208678586038b22df1",
+      "bytes": 2015,
+      "dimensions": [
+        96,
+        48
+      ]
+    },
+    {
+      "file": "primary_normal.png",
+      "sha256": "6ce113a43a3b1b0131237ebc8a4cfb062d7b34bbe052c06c79211354dc86ae65",
+      "bytes": 1994,
+      "dimensions": [
+        96,
+        48
+      ]
+    },
+    {
+      "file": "primary_pressed.png",
+      "sha256": "17c4e35dfc5700ccc99d35b3395db13e96175935606fe9e7d4b5bbb03f5cd248",
+      "bytes": 1993,
+      "dimensions": [
+        96,
+        48
+      ]
+    },
+    {
+      "file": "rail.png",
+      "sha256": "c4886871d27338611a170f4b9f78f05412590c68f4d5e7c6cfc77a390adab98c",
+      "bytes": 7986,
+      "dimensions": [
+        256,
+        96
+      ]
+    },
+    {
+      "file": "rubric.png",
+      "sha256": "6f4e70dc4d049889da66b701b420192136fbe388fe4c0dd44d3a4caac9cc0621",
+      "bytes": 124,
+      "dimensions": [
+        128,
+        5
+      ]
+    },
+    {
+      "file": "secondary_disabled.png",
+      "sha256": "b5a0bbcce6fc469cf88134fc777ef787237cc9d06e9a99fd6c2bde9c9fa12568",
+      "bytes": 1870,
+      "dimensions": [
+        96,
+        48
+      ]
+    },
+    {
+      "file": "secondary_hover.png",
+      "sha256": "5c2b3c955d42b9fdb78ed308b93aa73cba0180b9324ee6413da7f17c874b33c2",
+      "bytes": 1899,
+      "dimensions": [
+        96,
+        48
+      ]
+    },
+    {
+      "file": "secondary_normal.png",
+      "sha256": "2f3be01040e8b41ebffa573dc3fdc57d0cf7cdcfb7ab455c30c269b37feb5809",
+      "bytes": 1883,
+      "dimensions": [
+        96,
+        48
+      ]
+    },
+    {
+      "file": "secondary_pressed.png",
+      "sha256": "7824cefdcae2362cadb3c7ab4e8e9d475257cea1bdd719a2afee3a821715e0de",
+      "bytes": 1884,
+      "dimensions": [
+        96,
+        48
+      ]
+    },
+    {
+      "file": "tool_disabled.png",
+      "sha256": "4c4f6487720443b2f75b739d30325e76316fd551955269a498623ac4cfbc5398",
+      "bytes": 1881,
+      "dimensions": [
+        96,
+        48
+      ]
+    },
+    {
+      "file": "tool_hover.png",
+      "sha256": "e81249935b1cc150ccb0cfebfbfd06bb0a1b8ef1999943d6d9d558381f156cbb",
+      "bytes": 1871,
+      "dimensions": [
+        96,
+        48
+      ]
+    },
+    {
+      "file": "tool_normal.png",
+      "sha256": "65225f1dd1226d8aab5f3debbdc9244087baaf353bb3b6e7cf4d5ed78acb782c",
+      "bytes": 1862,
+      "dimensions": [
+        96,
+        48
+      ]
+    },
+    {
+      "file": "tool_pressed.png",
+      "sha256": "af412acee0ab9839cb0e278d3d24412ed7b8d01012d29d62da47fa1ee8a261ea",
+      "bytes": 1880,
+      "dimensions": [
+        96,
+        48
+      ]
+    },
+    {
+      "file": "writing.png",
+      "sha256": "2c0a276e1f4a7d9882991a3093b7a6a2a686ff3d44ee91f1a34ff549afd836ce",
+      "bytes": 5131,
+      "dimensions": [
+        128,
+        96
+      ]
+    },
+    {
+      "file": "writing_focus.png",
+      "sha256": "214445684ba35c09b30228b14c7753efa5359e0da7e7b52a787956acd37313f7",
+      "bytes": 5138,
+      "dimensions": [
+        128,
+        96
+      ]
+    },
+    {
+      "file": "writing_readonly.png",
+      "sha256": "ab9cf52dfabb1fc0efa111425bb4227963bdf8d635236cca443cb2bf2633e0a9",
+      "bytes": 5195,
+      "dimensions": [
+        128,
+        96
+      ]
+    }
+  ]
+}

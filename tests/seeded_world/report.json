@@ -1,0 +1,1937 @@
+{
+	"assertions": 280,
+	"engine": "4.6.3-stable (official)",
+	"failures": [],
+	"measurements": [
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 0,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						3,
+						2,
+						1
+					],
+					"desert": [
+						15
+					],
+					"grassland": [
+						11
+					],
+					"jungle": [
+						11,
+						1
+					],
+					"ocean": [
+						9,
+						1
+					],
+					"temperate_forest": [
+						1
+					],
+					"wetland": [
+						5,
+						1
+					]
+				},
+				"bridge_cells": 1,
+				"cell_count": 61,
+				"coherent_terrestrial_biomes": 5,
+				"land_cells": 51,
+				"largest_conservative_dry_component": 38,
+				"ocean_cells": 10,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 0,
+			"milliseconds": 32.782,
+			"radius": 4,
+			"requested_seed": "0",
+			"source_hash": "07058d41fe495eae18eaa895b784cca0ff057dde0a54f7ab9c970266ea8e45e5"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 1,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						2,
+						2,
+						1,
+						1
+					],
+					"desert": [
+						15
+					],
+					"grassland": [
+						6,
+						4
+					],
+					"jungle": [
+						10
+					],
+					"ocean": [
+						10
+					],
+					"temperate_forest": [
+						4
+					],
+					"wetland": [
+						6
+					]
+				},
+				"bridge_cells": 0,
+				"cell_count": 61,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 51,
+				"largest_conservative_dry_component": 36,
+				"ocean_cells": 10,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 1,
+			"milliseconds": 31.563,
+			"radius": 4,
+			"requested_seed": "1",
+			"source_hash": "0385bc35adf52a0cebac1a69c7f295f7f2f17b603ddbaf913380a5c1ac60484d"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": -91,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						5,
+						2
+					],
+					"desert": [
+						16
+					],
+					"grassland": [
+						5,
+						4
+					],
+					"jungle": [
+						8,
+						1
+					],
+					"ocean": [
+						10
+					],
+					"temperate_forest": [
+						3,
+						1
+					],
+					"wetland": [
+						6
+					]
+				},
+				"bridge_cells": 1,
+				"cell_count": 61,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 51,
+				"largest_conservative_dry_component": 26,
+				"ocean_cells": 10,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": -91,
+			"milliseconds": 30.579,
+			"radius": 4,
+			"requested_seed": "-91",
+			"source_hash": "f364b9afb2ff762f93087f76752fe764b21f7437c113ca01f456ad3165bfc322"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 726381,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						6
+					],
+					"desert": [
+						17
+					],
+					"grassland": [
+						6,
+						5
+					],
+					"jungle": [
+						12
+					],
+					"ocean": [
+						11
+					],
+					"temperate_forest": [
+						1,
+						1
+					],
+					"wetland": [
+						2
+					]
+				},
+				"bridge_cells": 2,
+				"cell_count": 61,
+				"coherent_terrestrial_biomes": 5,
+				"land_cells": 50,
+				"largest_conservative_dry_component": 40,
+				"ocean_cells": 11,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 726381,
+			"milliseconds": 30.226,
+			"radius": 4,
+			"requested_seed": "726381",
+			"source_hash": "4b630c9f3e383fa35537c69941a83bc50ce47511b9c211d1f0ba9a63831d1181"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 734408757,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						3,
+						1,
+						1,
+						1
+					],
+					"desert": [
+						14
+					],
+					"grassland": [
+						11,
+						1
+					],
+					"jungle": [
+						11
+					],
+					"ocean": [
+						11
+					],
+					"temperate_forest": [
+						1,
+						1,
+						1,
+						1
+					],
+					"wetland": [
+						3
+					]
+				},
+				"bridge_cells": 0,
+				"cell_count": 61,
+				"coherent_terrestrial_biomes": 5,
+				"land_cells": 50,
+				"largest_conservative_dry_component": 36,
+				"ocean_cells": 11,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 734408757,
+			"milliseconds": 31.64,
+			"radius": 4,
+			"requested_seed": "-2147483648",
+			"source_hash": "5c3bd427f4b8e0493ba2994c2a1b083097b562cf147b3a87638b8a864e065386"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 2147483647,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						5
+					],
+					"desert": [
+						17
+					],
+					"grassland": [
+						5,
+						3,
+						1
+					],
+					"jungle": [
+						12,
+						1
+					],
+					"ocean": [
+						7,
+						1
+					],
+					"temperate_forest": [
+						2,
+						1,
+						1
+					],
+					"wetland": [
+						5
+					]
+				},
+				"bridge_cells": 1,
+				"cell_count": 61,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 53,
+				"largest_conservative_dry_component": 40,
+				"ocean_cells": 8,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 2147483647,
+			"milliseconds": 27.229,
+			"radius": 4,
+			"requested_seed": "2147483647",
+			"source_hash": "419af67724dd695d623933886159786ced449d3c8955e993e4d85c4135d521a1"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 205718372,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						6
+					],
+					"desert": [
+						14
+					],
+					"grassland": [
+						6,
+						6
+					],
+					"jungle": [
+						6,
+						1
+					],
+					"ocean": [
+						11
+					],
+					"temperate_forest": [
+						3,
+						2,
+						1
+					],
+					"wetland": [
+						5
+					]
+				},
+				"bridge_cells": 0,
+				"cell_count": 61,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 50,
+				"largest_conservative_dry_component": 37,
+				"ocean_cells": 11,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 205718372,
+			"milliseconds": 31.595,
+			"radius": 4,
+			"requested_seed": "9223372036854775807",
+			"source_hash": "d5085064ed5d838e215cffef0e8270573b0737cc5f54c494b01ba4920f9e763e"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 1494825587,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						7,
+						1
+					],
+					"desert": [
+						13,
+						1
+					],
+					"grassland": [
+						6,
+						5
+					],
+					"jungle": [
+						10
+					],
+					"ocean": [
+						12
+					],
+					"temperate_forest": [
+						1,
+						1
+					],
+					"wetland": [
+						4
+					]
+				},
+				"bridge_cells": 0,
+				"cell_count": 61,
+				"coherent_terrestrial_biomes": 5,
+				"land_cells": 49,
+				"largest_conservative_dry_component": 34,
+				"ocean_cells": 12,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 1494825587,
+			"milliseconds": 27.39,
+			"radius": 4,
+			"requested_seed": "雾岸-任意种子",
+			"source_hash": "d7d651c8d70cffb9c4a551de515f4b7aed59174a0df35e64edeb203641d9a749"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 0,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						38,
+						2,
+						1
+					],
+					"desert": [
+						84
+					],
+					"grassland": [
+						35,
+						27
+					],
+					"jungle": [
+						57,
+						7
+					],
+					"ocean": [
+						37,
+						3
+					],
+					"temperate_forest": [
+						3,
+						3,
+						2,
+						2,
+						2,
+						1
+					],
+					"wetland": [
+						26,
+						1
+					]
+				},
+				"bridge_cells": 1,
+				"cell_count": 331,
+				"coherent_terrestrial_biomes": 5,
+				"land_cells": 291,
+				"largest_conservative_dry_component": 205,
+				"ocean_cells": 40,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 0,
+			"milliseconds": 144.909,
+			"radius": 10,
+			"requested_seed": "0",
+			"source_hash": "2554bc4a9d58003c9d828a1d81d7b796979aff5567497c843bc0d02f8379757a"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 1,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						36,
+						3,
+						1
+					],
+					"desert": [
+						69
+					],
+					"grassland": [
+						36,
+						29
+					],
+					"jungle": [
+						59,
+						1,
+						1
+					],
+					"ocean": [
+						47
+					],
+					"temperate_forest": [
+						10,
+						9,
+						1,
+						1
+					],
+					"wetland": [
+						28
+					]
+				},
+				"bridge_cells": 4,
+				"cell_count": 331,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 284,
+				"largest_conservative_dry_component": 201,
+				"ocean_cells": 47,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 1,
+			"milliseconds": 156.744,
+			"radius": 10,
+			"requested_seed": "1",
+			"source_hash": "d8c3981cd7d9f3f7cf0ff7eff0ba5dd9a72fe66aee98ab4d2765230bc8c3ea7b"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": -91,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						37,
+						1
+					],
+					"desert": [
+						80
+					],
+					"grassland": [
+						35,
+						31,
+						1
+					],
+					"jungle": [
+						45,
+						7
+					],
+					"ocean": [
+						44
+					],
+					"temperate_forest": [
+						16,
+						7,
+						1,
+						1
+					],
+					"wetland": [
+						25
+					]
+				},
+				"bridge_cells": 2,
+				"cell_count": 331,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 287,
+				"largest_conservative_dry_component": 205,
+				"ocean_cells": 44,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": -91,
+			"milliseconds": 141.621,
+			"radius": 10,
+			"requested_seed": "-91",
+			"source_hash": "d4383150cef68bd50183d9bee9f16204b3c35f02ee048612b3527621ceda0e5f"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 726381,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						35,
+						1
+					],
+					"desert": [
+						101
+					],
+					"grassland": [
+						26,
+						23
+					],
+					"jungle": [
+						58,
+						1
+					],
+					"ocean": [
+						49
+					],
+					"temperate_forest": [
+						11,
+						9,
+						1
+					],
+					"wetland": [
+						16
+					]
+				},
+				"bridge_cells": 1,
+				"cell_count": 331,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 282,
+				"largest_conservative_dry_component": 199,
+				"ocean_cells": 49,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 726381,
+			"milliseconds": 147.783,
+			"radius": 10,
+			"requested_seed": "726381",
+			"source_hash": "2a28deefe92ea57bafbd6f266f1ffe14e03d9e67a3d090791831183ebf97daab"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 734408757,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						33,
+						1,
+						1,
+						1
+					],
+					"desert": [
+						76
+					],
+					"grassland": [
+						38,
+						29,
+						1
+					],
+					"jungle": [
+						65
+					],
+					"ocean": [
+						53
+					],
+					"temperate_forest": [
+						4,
+						2,
+						2,
+						2,
+						1,
+						1,
+						1,
+						1
+					],
+					"wetland": [
+						19
+					]
+				},
+				"bridge_cells": 3,
+				"cell_count": 331,
+				"coherent_terrestrial_biomes": 5,
+				"land_cells": 278,
+				"largest_conservative_dry_component": 188,
+				"ocean_cells": 53,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 734408757,
+			"milliseconds": 167.081,
+			"radius": 10,
+			"requested_seed": "-2147483648",
+			"source_hash": "696946411317e204f93b150ab0219262fe3eee7fbee14b4836022efd896fff6e"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 2147483647,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						35,
+						4,
+						1
+					],
+					"desert": [
+						82
+					],
+					"grassland": [
+						34,
+						23,
+						4,
+						1
+					],
+					"jungle": [
+						69
+					],
+					"ocean": [
+						34,
+						5
+					],
+					"temperate_forest": [
+						6,
+						3,
+						3,
+						2,
+						2,
+						1
+					],
+					"wetland": [
+						22
+					]
+				},
+				"bridge_cells": 1,
+				"cell_count": 331,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 292,
+				"largest_conservative_dry_component": 199,
+				"ocean_cells": 39,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 2147483647,
+			"milliseconds": 149.849,
+			"radius": 10,
+			"requested_seed": "2147483647",
+			"source_hash": "fdd4e345e97ba1a32b6341d77a844cc644249885fc3534464e8afd0456ed9962"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 205718372,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						36,
+						1,
+						1,
+						1
+					],
+					"desert": [
+						79
+					],
+					"grassland": [
+						35,
+						33
+					],
+					"jungle": [
+						51,
+						1
+					],
+					"ocean": [
+						56
+					],
+					"temperate_forest": [
+						10,
+						3,
+						1,
+						1,
+						1,
+						1
+					],
+					"wetland": [
+						20
+					]
+				},
+				"bridge_cells": 1,
+				"cell_count": 331,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 275,
+				"largest_conservative_dry_component": 189,
+				"ocean_cells": 56,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 205718372,
+			"milliseconds": 153.295,
+			"radius": 10,
+			"requested_seed": "9223372036854775807",
+			"source_hash": "bf4f24f3e15b5769247bba29f06ebfbf13a226d4b8bd75a41def1acc27fc78e0"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 1494825587,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						37,
+						1
+					],
+					"desert": [
+						72
+					],
+					"grassland": [
+						33,
+						31,
+						2
+					],
+					"jungle": [
+						55
+					],
+					"ocean": [
+						52
+					],
+					"temperate_forest": [
+						8,
+						8,
+						2,
+						1,
+						1
+					],
+					"wetland": [
+						28
+					]
+				},
+				"bridge_cells": 1,
+				"cell_count": 331,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 279,
+				"largest_conservative_dry_component": 173,
+				"ocean_cells": 52,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 1494825587,
+			"milliseconds": 142.122,
+			"radius": 10,
+			"requested_seed": "雾岸-任意种子",
+			"source_hash": "9f9e7b1dcb4a6a809f5897a920c8e7632e4caa93ae4e26384bba9143da49d1e0"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 0,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						210,
+						9,
+						3,
+						3,
+						1
+					],
+					"desert": [
+						441
+					],
+					"grassland": [
+						190,
+						173
+					],
+					"jungle": [
+						362
+					],
+					"ocean": [
+						194,
+						6
+					],
+					"temperate_forest": [
+						41,
+						31,
+						1
+					],
+					"wetland": [
+						132,
+						4
+					]
+				},
+				"bridge_cells": 6,
+				"cell_count": 1801,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 1601,
+				"largest_conservative_dry_component": 1158,
+				"ocean_cells": 200,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 0,
+			"milliseconds": 943.994,
+			"radius": 24,
+			"requested_seed": "0",
+			"source_hash": "9ba3a885596f7e86af16c2e097ecb3d1da13b19cae88b242d54720b8842776a5"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 1,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						199,
+						9,
+						3,
+						2
+					],
+					"desert": [
+						381
+					],
+					"grassland": [
+						225,
+						163,
+						2
+					],
+					"jungle": [
+						322,
+						4,
+						1
+					],
+					"ocean": [
+						245
+					],
+					"temperate_forest": [
+						54,
+						39,
+						5,
+						3,
+						1,
+						1,
+						1
+					],
+					"wetland": [
+						141
+					]
+				},
+				"bridge_cells": 3,
+				"cell_count": 1801,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 1556,
+				"largest_conservative_dry_component": 1131,
+				"ocean_cells": 245,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 1,
+			"milliseconds": 935.573,
+			"radius": 24,
+			"requested_seed": "1",
+			"source_hash": "ceb5c1971f61d8298ca3161bf1dee953cdd2cf0740511eefd3cadb2bdb5e39c2"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": -91,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						217,
+						4,
+						2,
+						2,
+						2,
+						1
+					],
+					"desert": [
+						439
+					],
+					"grassland": [
+						199,
+						153,
+						2,
+						2
+					],
+					"jungle": [
+						258,
+						2,
+						2,
+						1,
+						1
+					],
+					"ocean": [
+						229
+					],
+					"temperate_forest": [
+						94,
+						45,
+						3,
+						2
+					],
+					"wetland": [
+						141
+					]
+				},
+				"bridge_cells": 4,
+				"cell_count": 1801,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 1572,
+				"largest_conservative_dry_component": 1122,
+				"ocean_cells": 229,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": -91,
+			"milliseconds": 839.568,
+			"radius": 24,
+			"requested_seed": "-91",
+			"source_hash": "a3fe5f28bd23756700f2c72fa65cf876d244dedda5096b7fc7ca58b84fa42865"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 726381,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						210,
+						5,
+						5,
+						4,
+						1
+					],
+					"desert": [
+						516
+					],
+					"grassland": [
+						171,
+						133,
+						1
+					],
+					"jungle": [
+						320
+					],
+					"ocean": [
+						250
+					],
+					"temperate_forest": [
+						52,
+						39,
+						4,
+						2,
+						2
+					],
+					"wetland": [
+						86
+					]
+				},
+				"bridge_cells": 3,
+				"cell_count": 1801,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 1551,
+				"largest_conservative_dry_component": 1122,
+				"ocean_cells": 250,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 726381,
+			"milliseconds": 932.663,
+			"radius": 24,
+			"requested_seed": "726381",
+			"source_hash": "b80ef7fdc90db70ec80f1b63ae17942c95e0fb90f25c9de1475e4c252743f9b2"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 734408757,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						202,
+						19,
+						3
+					],
+					"desert": [
+						407
+					],
+					"grassland": [
+						206,
+						165,
+						6
+					],
+					"jungle": [
+						336
+					],
+					"ocean": [
+						269
+					],
+					"temperate_forest": [
+						23,
+						22,
+						15,
+						15,
+						9,
+						1,
+						1
+					],
+					"wetland": [
+						101,
+						1
+					]
+				},
+				"bridge_cells": 3,
+				"cell_count": 1801,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 1532,
+				"largest_conservative_dry_component": 1087,
+				"ocean_cells": 269,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 734408757,
+			"milliseconds": 913.896,
+			"radius": 24,
+			"requested_seed": "-2147483648",
+			"source_hash": "e2a8bc3ade2c5c863dd2fc9390c71ac721a09e22fe0eb9d1b7cb86d587857c11"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 2147483647,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						218,
+						18,
+						5
+					],
+					"desert": [
+						427
+					],
+					"grassland": [
+						194,
+						131,
+						28,
+						1
+					],
+					"jungle": [
+						362
+					],
+					"ocean": [
+						181,
+						19
+					],
+					"temperate_forest": [
+						59,
+						13,
+						11,
+						8,
+						2,
+						1,
+						1
+					],
+					"wetland": [
+						122
+					]
+				},
+				"bridge_cells": 2,
+				"cell_count": 1801,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 1601,
+				"largest_conservative_dry_component": 1124,
+				"ocean_cells": 200,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 2147483647,
+			"milliseconds": 842.65,
+			"radius": 24,
+			"requested_seed": "2147483647",
+			"source_hash": "c0983c9718751182d04378d90018dbedb9c7452dac48dd848dfc546ba88d20f5"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 205718372,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						200,
+						5,
+						3,
+						3,
+						1
+					],
+					"desert": [
+						419
+					],
+					"grassland": [
+						209,
+						191
+					],
+					"jungle": [
+						273
+					],
+					"ocean": [
+						288
+					],
+					"temperate_forest": [
+						51,
+						35,
+						2,
+						2,
+						2,
+						2,
+						1,
+						1,
+						1
+					],
+					"wetland": [
+						112
+					]
+				},
+				"bridge_cells": 3,
+				"cell_count": 1801,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 1513,
+				"largest_conservative_dry_component": 1099,
+				"ocean_cells": 288,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 205718372,
+			"milliseconds": 962.071,
+			"radius": 24,
+			"requested_seed": "9223372036854775807",
+			"source_hash": "fa679a663d70de4b0de19d908a4449b3d3fa939191b1ac623ceff32ecc7444cc"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 1494825587,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						208,
+						20,
+						1
+					],
+					"desert": [
+						414
+					],
+					"grassland": [
+						172,
+						148,
+						9
+					],
+					"jungle": [
+						287,
+						1
+					],
+					"ocean": [
+						261
+					],
+					"temperate_forest": [
+						73,
+						37,
+						14,
+						1,
+						1
+					],
+					"wetland": [
+						154
+					]
+				},
+				"bridge_cells": 2,
+				"cell_count": 1801,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 1540,
+				"largest_conservative_dry_component": 1113,
+				"ocean_cells": 261,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 1494825587,
+			"milliseconds": 950.347,
+			"radius": 24,
+			"requested_seed": "雾岸-任意种子",
+			"source_hash": "bf2cce83642f4a2e4ded6b948d8f03c8349d6a028af15a22bf010c6c5362def7"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 1745239848,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						6
+					],
+					"desert": [
+						14
+					],
+					"grassland": [
+						6,
+						4
+					],
+					"jungle": [
+						8,
+						4
+					],
+					"ocean": [
+						11
+					],
+					"temperate_forest": [
+						2,
+						1,
+						1,
+						1
+					],
+					"wetland": [
+						3
+					]
+				},
+				"bridge_cells": 1,
+				"cell_count": 61,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 50,
+				"largest_conservative_dry_component": 38,
+				"ocean_cells": 11,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 1745239848,
+			"milliseconds": 39.776,
+			"radius": 4,
+			"requested_seed": "property_0",
+			"source_hash": "f4490c638a13c80dc321b4c71e6b7fb633930db034045d0f01f1baf9346b78af"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 647500922,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						11,
+						1
+					],
+					"desert": [
+						34
+					],
+					"grassland": [
+						11,
+						11
+					],
+					"jungle": [
+						19,
+						1
+					],
+					"ocean": [
+						19
+					],
+					"temperate_forest": [
+						4,
+						4,
+						4
+					],
+					"wetland": [
+						8
+					]
+				},
+				"bridge_cells": 2,
+				"cell_count": 127,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 108,
+				"largest_conservative_dry_component": 73,
+				"ocean_cells": 19,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 647500922,
+			"milliseconds": 66.505,
+			"radius": 6,
+			"requested_seed": "property_1",
+			"source_hash": "e119b36949784fa7296cbe0a38de3ddc7e6ac1021140b5344e35eb55c048fbbb"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 454974091,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						23,
+						1,
+						1
+					],
+					"desert": [
+						52
+					],
+					"grassland": [
+						22,
+						13
+					],
+					"jungle": [
+						43
+					],
+					"ocean": [
+						35
+					],
+					"temperate_forest": [
+						9,
+						5,
+						1
+					],
+					"wetland": [
+						12
+					]
+				},
+				"bridge_cells": 2,
+				"cell_count": 217,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 182,
+				"largest_conservative_dry_component": 124,
+				"ocean_cells": 35,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 454974091,
+			"milliseconds": 96.113,
+			"radius": 8,
+			"requested_seed": "property_2",
+			"source_hash": "a7c27b00870ec19aa0249d0513697862aeaf89de4169951340964bf0e44e18b3"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 939861441,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						37,
+						2
+					],
+					"desert": [
+						90
+					],
+					"grassland": [
+						31,
+						27,
+						1
+					],
+					"jungle": [
+						56
+					],
+					"ocean": [
+						43,
+						4
+					],
+					"temperate_forest": [
+						13,
+						3,
+						2,
+						1,
+						1
+					],
+					"wetland": [
+						19,
+						1
+					]
+				},
+				"bridge_cells": 2,
+				"cell_count": 331,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 284,
+				"largest_conservative_dry_component": 196,
+				"ocean_cells": 47,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 939861441,
+			"milliseconds": 169.262,
+			"radius": 10,
+			"requested_seed": "property_3",
+			"source_hash": "ad222caee15145d0387fa37384724e91287f07409cb0039b9be0d17eb9ba4172"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 395844186,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						51,
+						4,
+						2
+					],
+					"desert": [
+						112
+					],
+					"grassland": [
+						46,
+						40
+					],
+					"jungle": [
+						81,
+						1
+					],
+					"ocean": [
+						69
+					],
+					"temperate_forest": [
+						13,
+						6,
+						6,
+						1,
+						1,
+						1,
+						1
+					],
+					"wetland": [
+						34
+					]
+				},
+				"bridge_cells": 2,
+				"cell_count": 469,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 400,
+				"largest_conservative_dry_component": 190,
+				"ocean_cells": 69,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 395844186,
+			"milliseconds": 245.264,
+			"radius": 12,
+			"requested_seed": "property_4",
+			"source_hash": "9763ab9d64398321ee757837c9507a191f572475be3ec356afb0383e538a7136"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 557591322,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						74,
+						2,
+						1
+					],
+					"desert": [
+						161
+					],
+					"grassland": [
+						44,
+						44,
+						1
+					],
+					"jungle": [
+						144
+					],
+					"ocean": [
+						88
+					],
+					"temperate_forest": [
+						16,
+						7,
+						7,
+						2,
+						1,
+						1,
+						1,
+						1
+					],
+					"wetland": [
+						34,
+						2
+					]
+				},
+				"bridge_cells": 2,
+				"cell_count": 631,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 543,
+				"largest_conservative_dry_component": 260,
+				"ocean_cells": 88,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 557591322,
+			"milliseconds": 282.796,
+			"radius": 14,
+			"requested_seed": "property_5",
+			"source_hash": "3b6453aa8fe1ef5e9d6e4b4626800f0d497495b11c902747e7b5d64bf3b57040"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 2041376376,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						92,
+						4,
+						3,
+						1
+					],
+					"desert": [
+						194
+					],
+					"grassland": [
+						92,
+						72
+					],
+					"jungle": [
+						120
+					],
+					"ocean": [
+						119
+					],
+					"temperate_forest": [
+						30,
+						9,
+						9,
+						4,
+						2,
+						2,
+						1
+					],
+					"wetland": [
+						63
+					]
+				},
+				"bridge_cells": 0,
+				"cell_count": 817,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 698,
+				"largest_conservative_dry_component": 492,
+				"ocean_cells": 119,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 2041376376,
+			"milliseconds": 421.847,
+			"radius": 16,
+			"requested_seed": "property_6",
+			"source_hash": "93a02c53cff92f0173e8290e29cef53ef5bc618952ce8f0754b50b8c7bc0977b"
+		},
+		{
+			"attempts": [
+				{
+					"accepted": true,
+					"attempt": 0,
+					"code": "OK",
+					"effective_seed": 420043553,
+					"errors": []
+				}
+			],
+			"diagnostics": {
+				"biome_component_sizes": {
+					"alpine": [
+						107,
+						5,
+						3,
+						1
+					],
+					"desert": [
+						283
+					],
+					"grassland": [
+						81,
+						65,
+						1
+					],
+					"jungle": [
+						201
+					],
+					"ocean": [
+						156,
+						3
+					],
+					"temperate_forest": [
+						40,
+						34,
+						10
+					],
+					"wetland": [
+						35,
+						1,
+						1
+					]
+				},
+				"bridge_cells": 1,
+				"cell_count": 1027,
+				"coherent_terrestrial_biomes": 6,
+				"land_cells": 868,
+				"largest_conservative_dry_component": 632,
+				"ocean_cells": 159,
+				"renderer_navigation_checked": false,
+				"source_geometry_checked": true,
+				"validator_version": "macro_preset_validation/v1",
+				"visual_quality_checked": false
+			},
+			"effective_seed": 420043553,
+			"milliseconds": 515.457,
+			"radius": 18,
+			"requested_seed": "property_7",
+			"source_hash": "50316ff249b601400f2bbf6c95b4b360dc6442b297d3dac0caad76882edc6577"
+		},
+		{
+			"exact_navigation_radius": 4,
+			"milliseconds": 364.537,
+			"result": {
+				"admission_status": "exact_renderer_navigation_validated",
+				"identity": {
+					"board_radius": 4,
+					"content_hash": "4b630c9f3e383fa35537c69941a83bc50ce47511b9c211d1f0ba9a63831d1181",
+					"generator_version": "macro_hex_biomes_v2",
+					"navigation_id": "macro_render_dry_edges/v1",
+					"pipeline_sha256": "7aab741d6c8e5ce5a811ffad198bf6eb6baa3315a63b75c5df24f51f34659eeb",
+					"projection_id": "generated_public_context/v1",
+					"runtime_hash": "aecdcf7fdf1abd39b85959929ab26efc281900d2aa27c2c47e743f66bd3f0ed4",
+					"seed": 726381,
+					"source_contract": "generated_macro_source/v1"
+				},
+				"navigation": {
+					"clearance_authority": "caller must use generated_adventure/source.gd",
+					"graph_checked": true,
+					"ok": true,
+					"reachable_start_cells": 48
+				},
+				"ok": true,
+				"source_metadata_hash": "a406087c3f829f750573206f863c72823995c5a5dc38304b79832e080aa78fb6",
+				"start": [
+					-2,
+					1
+				],
+				"visual_quality_checked": false
+			},
+			"source_hash": "4b630c9f3e383fa35537c69941a83bc50ce47511b9c211d1f0ba9a63831d1181"
+		}
+	],
+	"scope": "Seed normalization, preset/source invariants, deterministic retry/fail-closed behavior, metadata roundtrip, representative/extreme seeds; exact renderer navigation only where explicitly marked, no visual or target-hardware certification."
+}

@@ -1,0 +1,17 @@
+{
+	"accepted_receipts": 39,
+	"active_effects": 0,
+	"checks": 46,
+	"dropped_effects": 34,
+	"emitted_effects": 43,
+	"failures": [],
+	"gameplay_writes": false,
+	"ignored_receipts": 5,
+	"minimum_movement_root_clearance": -0.00000000536441802090337,
+	"minimum_settle_foot_clearance": 0.000101401805877699,
+	"pending_effects": 0,
+	"pool_cap": 16,
+	"pooled_nodes": 16,
+	"postprocessing": false,
+	"realtime_lights": false
+}

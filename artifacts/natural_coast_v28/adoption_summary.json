@@ -1,0 +1,54 @@
+{
+  "actor_bridge_included": false,
+  "base_version": "v27",
+  "biome_preview_bridge_included": false,
+  "candidate_acceptance": {
+    "coastal_adapter": 157,
+    "compile": 4,
+    "entry_session": 35,
+    "localized_full_scene": 81,
+    "plateau_adapter": 157,
+    "real_os_input": 20
+  },
+  "canonical_v27_unchanged": true,
+  "independent_editable_canonical": true,
+  "main_preimage": "1db6386f9c53f7f0946f84dae0b81a61b35420447b3b1035896678d86e367c4c",
+  "main_sha256": "2b05911a1bcde48b10a54e8d1475ef62c66aea84ff8c7f5b7cdc3052eaf9fc93",
+  "package_scope": "Complete source-project recovery from the verified v27 backup; generated editor caches and differing historical screenshots are not a canonical-machine mirror.",
+  "schema": "fogbank-v28-source-adoption/v1",
+  "smoke": {
+    "checks": 16,
+    "run_id": "20261006T052429_3c92659e",
+    "strict_gate": {
+      "engine_errors": [],
+      "exit_code": 0,
+      "failures": [],
+      "ok": true,
+      "run_id": "20261006T052429_3c92659e"
+    },
+    "unique_ids": [
+      "adopt_commit_coastal_range",
+      "adopt_commit_plateau_hinterland",
+      "adopt_default_1801",
+      "adopt_enter_coastal_range",
+      "adopt_enter_plateau_hinterland",
+      "adopt_exact_identity_coastal_range",
+      "adopt_exact_identity_plateau_hinterland",
+      "adopt_host_custody",
+      "adopt_host_exact_coastal_range",
+      "adopt_host_exact_plateau_hinterland",
+      "adopt_prepare_coastal_range",
+      "adopt_prepare_plateau_hinterland",
+      "adopt_release_coastal_range",
+      "adopt_release_plateau_hinterland",
+      "adopt_return_coastal_range",
+      "adopt_return_plateau_hinterland"
+    ]
+  },
+  "source_base_manifest_sha256": "689da8d501cb78f08d37a84b8bcc3d939fc131d880123cb5f1d0e3ab85826434",
+  "source_delta_sha256": "4d18f9320e6fa57660e93f249b480aadb98b9d32483cc4ad782774714bfd7975",
+  "source_full_manifest_sha256": "22d2e43aef4d75ff13b51b8651447d4c00a1ef86586360d7289beebf338765c5",
+  "source_receipt_sha256": "fc69ee9fa2bc812582ff14d25b03455efc9c1e1583a08332cda4e523004f439c",
+  "status": "adopted_verified_independent_editable",
+  "version": "v28"
+}

@@ -1,0 +1,5 @@
+{
+	"checks": 19,
+	"failures": [],
+	"scope": "Actual main.gd seed input and build methods with renderer/commit lifecycle mocked; no terrain bake, frame-time or visual claim."
+}

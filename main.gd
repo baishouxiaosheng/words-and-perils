@@ -19,9 +19,14 @@ const PlayerDetails = preload("res://view/playable_build/player_details.gd")
 const SceneEntities = preload("res://view/playable_build/entity_catalog.gd")
 const SceneAdapters = preload("res://view/playable_build/scene_adapters.gd")
 const SceneCells = preload("res://core/ai_gm_rebuilt/scene_cells.gd")
-const RuntimeAI = preload("res://view/runtime_ai/controller.gd")
+const RuntimeAI = preload("res://view/dual_api_settings/actor_controller.gd")
+const ActorEntryView=preload("res://view/actor_action_entry/view_adapter.gd")
+const ActorEntryBoard=preload("res://view/actor_action_entry/board.gd")
+const StatusEntryView=preload("res://view/actor_status_entry_v1/view_adapter.gd")
+const StatusEntryBoard=preload("res://view/actor_status_entry_v1/board.gd")
+const ActorEntryPanel=preload("res://view/actor_action_entry/panel.gd")
 const VillageRuntimeSession=preload("res://view/runtime_ai/village_session.gd")
-const RuntimeConnectionPanel = preload("res://view/runtime_ai/connection_panel.gd")
+const RuntimeConnectionPanel = preload("res://view/dual_api_settings/panel.gd")
 const WorldBundle = preload("res://view/playable_build/world_bundle.gd")
 const CoastBoard = preload("res://view/playable_build/board.gd")
 const CoastPanel = preload("res://view/playable_build/panel.gd")
@@ -136,11 +141,26 @@ var intent_expand_button: Button
 var journal_open := false
 var compact_layout := false
 var intent_expanded := false
+var actor_action_mode:=false
+var actor_status_mode:=false
+var actor_render_error:=""
+var actor_entry_restore_requested:=false
+var actor_render_suspended:=false
+var actor_export_hash:=""
+var _enemy_dispatch_generation:=0
+var actor_action_adventure:RefCounted
+var actor_status_adventure:RefCounted
+var actor_action_panel:VBoxContainer
+const ACTOR_ENTRY_NEW:=1101
+const ACTOR_ENTRY_CONTINUE:=1102
+const ACTOR_STATUS_ENTRY_NEW:=1103
+const ACTOR_STATUS_ENTRY_CONTINUE:=1104
 var playtest_mode := false
 var village_runtime_session:RefCounted
 var _village_runtime_sessions:Dictionary={}
 var runtime_ai: Node
 var runtime_connection_panel: VBoxContainer
+var _api_input_snapshot: Dictionary = {}
 var playtest: RefCounted
 var playtest_panel: VBoxContainer
 var playtest_reset_dialog: ConfirmationDialog
@@ -205,6 +225,11 @@ var advanced_menu: PopupMenu
 var adventure_menu: PopupMenu
 var display_menu: PopupMenu
 var end_turn_requested := false
+var river_entry_controller: Node
+const RIVER_EXPERIMENT_MENU_ID := 1001
+var natural_coast_entry_controller: Node
+const NATURAL_COAST_MENU_ID := 1201
+const NATURAL_PLATEAU_MENU_ID := 1202
 var end_turn_busy := false
 var _enemy_runtime_was_busy := false
 var default_window_mode := Window.MODE_MAXIMIZED
@@ -238,8 +263,12 @@ func _ready() -> void:
 	runtime_ai.narration_received.connect(_on_runtime_narration)
 	runtime_ai.status_changed.connect(set_status)
 	runtime_ai.changed.connect(_on_runtime_changed)
+	runtime_ai.intention_ready.connect(_on_actor_intention_ready)
 	make_theme()
 	build_ui()
+	add_child(preload("res://view/tabletop_interaction/wasd_camera_pan.gd").new(self))
+	add_child(preload("res://view/tabletop_interaction/selection_motion.gd").new(self))
+	add_child(preload("res://view/tabletop_interaction/offline_move_demo.gd").new(self))
 	# Default startup replaces this initial legacy board before the first frame.
 	# Build its terrain only when requested, or if the coast cannot be opened.
 	var legacy_start := startup_legacy or OS.has_environment("FOGBANK_LEGACY_START") or "--legacy-start" in OS.get_cmdline_user_args()
@@ -325,6 +354,7 @@ func make_theme() -> void:
 func label(text: String, size:=16, color: Color=INK) -> Label:
 	var l=Label.new();l.text=text;l.add_theme_font_size_override("font_size",size);l.add_theme_color_override("font_color",color)
 	l.add_theme_font_override("font",hud_font)
+	preload("res://view/ui_typography/style.gd").text(l,20 if size>=19 else (18 if size>=17 else (16 if size==16 else 15)),hud_font,size>=20,color)
 	l.add_theme_constant_override("outline_size",0)
 	l.add_theme_color_override("font_shadow_color",Color(0.04,0.08,0.08,0.50) if color==Color.WHITE else Color.TRANSPARENT)
 	l.add_theme_constant_override("shadow_offset_x",1)
@@ -466,6 +496,13 @@ func build_ui() -> void:
 	advanced_menu.add_item("离线 · 手动 JSON",20); advanced_menu.add_item("高级工具与调试",21); advanced_menu.add_item("AI接口设置（可选）",24)
 	advanced_menu.add_separator("旧进度与测试"); advanced_menu.add_item("继续探索（无行囊）",17); advanced_menu.add_item("继续行囊探索",18); advanced_menu.add_item("继续旧村落行囊探索",19); advanced_menu.add_item("继续原村庄冒险",29); advanced_menu.add_item("继续原近战村庄冒险",30)
 	advanced_menu.add_item("海岸冒险",10); advanced_menu.add_item("旧版测试场",8); advanced_menu.add_item("地图预览（只读）",9)
+	advanced_menu.add_separator("限定实验");advanced_menu.add_item("离线河流测试 · 固定小地图",RIVER_EXPERIMENT_MENU_ID)
+	advanced_menu.add_item("自然海岸 · 基础探索",NATURAL_COAST_MENU_ID)
+	advanced_menu.add_item("自然高原海岸 · 基础探索",NATURAL_PLATEAU_MENU_ID)
+	advanced_menu.add_item("统一行动测试 · 以当前地图新开",ACTOR_ENTRY_NEW)
+	advanced_menu.add_item("继续统一行动测试（独立存档）",ACTOR_ENTRY_CONTINUE)
+	advanced_menu.add_item("行动状态测试 · 以当前地图新开",ACTOR_STATUS_ENTRY_NEW)
+	advanced_menu.add_item("继续行动状态测试（独立存档）",ACTOR_STATUS_ENTRY_CONTINUE)
 	advanced_menu.add_item("新场景往返测试（会重置）",25); advanced_menu.add_item("演出测试",4); advanced_menu.add_item("已记录回合",5); advanced_menu.id_pressed.connect(on_tool_selected)
 	display_menu=PopupMenu.new(); display_menu.name="Display"; menu.add_child(display_menu)
 	display_menu.add_check_item("全屏  ·  F11",22)
@@ -569,6 +606,7 @@ func build_ui() -> void:
 	map_stats_label=label("",14,MUTED); advanced_col.add_child(map_stats_label)
 	mode_legend=label("",14,MUTED); advanced_col.add_child(mode_legend)
 	runtime_connection_panel=RuntimeConnectionPanel.new(); runtime_connection_panel.name="OptionalAIConnection"; runtime_connection_panel.size_flags_horizontal=Control.SIZE_EXPAND_FILL; advanced_col.add_child(runtime_connection_panel); runtime_connection_panel.bind_runtime(runtime_ai)
+	runtime_connection_panel.modal_visibility_changed.connect(_on_api_modal_visibility)
 	# Settings emit before their final refresh. Reflect applied/dirty/consent
 	# state on the next UI frame without issuing a request or changing choices.
 	runtime_connection_panel.configuration_applied.connect(func(_result):_on_runtime_changed.call_deferred())
@@ -595,6 +633,10 @@ func build_ui() -> void:
 	generated_v3_enemy_panel.fixture_pressed.connect(playtest_fixture);generated_v3_enemy_panel.reset_pressed.connect(ask_reset_playtest);generated_v3_enemy_panel.sample_requested.connect(fill_generated_sample);generated_v3_enemy_panel.notes_requested.connect(show_npc_notes)
 	generated_v3_equipment_panel=V3EquipmentPanel.new();advanced_col.add_child(generated_v3_equipment_panel);generated_v3_equipment_panel.hide()
 	generated_v3_equipment_panel.fixture_pressed.connect(playtest_fixture);generated_v3_equipment_panel.reset_pressed.connect(ask_reset_playtest);generated_v3_equipment_panel.sample_requested.connect(fill_generated_sample);generated_v3_equipment_panel.notes_requested.connect(show_npc_notes)
+	actor_action_panel=ActorEntryPanel.new();advanced_col.add_child(actor_action_panel);actor_action_panel.hide()
+	actor_action_panel.decision_requested.connect(_request_actor_decision)
+	actor_action_panel.cancel_requested.connect(cancel_pending)
+	actor_action_panel.consent_changed.connect(func(enabled:bool):runtime_ai.authorize_intention_requests(enabled))
 	npc_notes_dialog=AcceptDialog.new();npc_notes_dialog.title="旅途笔记";npc_notes_dialog.ok_button_text="关闭";add_child(npc_notes_dialog);npc_notes_dialog.get_label().autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
 	build_v3_setup_dialog()
 	playtest_panel.fixture_pressed.connect(playtest_fixture); playtest_panel.reset_pressed.connect(ask_reset_playtest)
@@ -634,9 +676,10 @@ func resource_text(parent: Control) -> Label:
 	var text_=label("",13,Color("253e37")); text_.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER; text_.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT); parent.add_child(text_); return text_
 
 func update_character_status(actor: Dictionary, turn: int, state: Dictionary) -> void:
+	var status_actor:Dictionary={"status_details":playtest.status_payload(str(actor.id))} if actor_action_mode else PlayerDetails.adapt_actor(state,actor)
 	hero_label.text=actor.name
-	hero_subtitle.text=PlayerDetails.status_caption(actor).replace(" · ","\n") if not actor.get("statuses", {}).is_empty() else ("新地形旅人" if generated_v3_mode else "河岸探路者")
-	hero_subtitle.tooltip_text="\n".join(PlayerDetails.status_lines(actor))
+	hero_subtitle.text=PlayerDetails.status_caption(status_actor).replace(" · ","\n") if PlayerDetails.has_statuses(status_actor) else ("新地形旅人" if generated_v3_mode else "河岸探路者")
+	hero_subtitle.tooltip_text="\n".join(PlayerDetails.status_lines(status_actor))
 	health_bar.max_value=actor.health.max; health_bar.value=actor.health.current
 	stamina_bar.max_value=actor.stamina.max; stamina_bar.value=actor.stamina.current
 	health_text.text="生命  %d / %d" % [actor.health.current,actor.health.max]
@@ -659,6 +702,8 @@ func update_character_status(actor: Dictionary, turn: int, state: Dictionary) ->
 		quest_label.tooltip_text="靠近守路村民，写下交谈意图；登记信息会保存。点击只查看。"
 	if generated_v3_enemy_mode:
 		quest_label.text="村庄冒险 · 探索 / 交谈 / 近战";quest_label.tooltip_text="固定拦路者；双方分别评估。敌人倒下仍占格，中毒按每次已提交行动结算。"
+	if actor_action_mode:
+		quest_label.text="行动状态测试 · 普通行动 / 公开状态" if actor_status_mode else "统一行动测试 · 普通行动 / 原子回合";quest_label.tooltip_text="双方按已登记能力行动；无武器不取消普通行动资格，倒下仍占格。"
 	minimap.set_world(SceneAdapters.projection(state,actor.scene_id) if coast_mode else state)
 
 func focus_player_view() -> void:
@@ -689,9 +734,7 @@ func show_advanced() -> void:
 	advanced_scroll.scroll_vertical=0
 
 func show_ai_connection() -> void:
-	show_advanced()
-	await get_tree().process_frame
-	advanced_scroll.scroll_vertical=int(runtime_connection_panel.position.y)
+	runtime_connection_panel.open_settings()
 
 func close_tool_menus() -> void:
 	# Child popups can otherwise outlive their parent when a command opens a
@@ -733,6 +776,13 @@ func on_tool_selected(id: int) -> void:
 		24: show_ai_connection()
 		25: ask_scene_framework_test()
 		26: set_quality(2)
+		RIVER_EXPERIMENT_MENU_ID: open_river_experiment()
+		NATURAL_COAST_MENU_ID: open_natural_coast_experiment("coastal_range")
+		NATURAL_PLATEAU_MENU_ID: open_natural_coast_experiment("plateau_hinterland")
+		ACTOR_ENTRY_NEW: start_actor_action_test()
+		ACTOR_ENTRY_CONTINUE: continue_actor_action_test()
+		ACTOR_STATUS_ENTRY_NEW: start_actor_status_test()
+		ACTOR_STATUS_ENTRY_CONTINUE: continue_actor_status_test()
 
 func toggle_intent() -> void:
 	intent_expanded = not intent_expanded
@@ -756,7 +806,10 @@ func toggle_journal() -> void:
 
 func apply_responsive_layout() -> void:
 	if not is_instance_valid(action_panel): return
+	preload("res://view/fullscreen_hud/readability.gd").configure(self)
+	preload("res://view/ui_typography/style.gd").prepare_scene(self)
 	preload("res://view/fullscreen_hud/responsive_layout.gd").apply(self)
+	preload("res://view/ui_typography/style.gd").finish_layout(self)
 	update_journal_toggle()
 	_update_feedback_safe_rect()
 
@@ -916,6 +969,10 @@ func show_effects() -> void:
 	if coast_mode:set_status("海岸演出只来自已提交的行动；可通过高级行动样例验证。");return
 	effects_dialog.popup_centered()
 func show_help() -> void:
+	if actor_status_mode:
+		append_journal("行动状态测试指南","双方的普通行动、登记物品与状态能力都先提交意图，再取得独立有效评估。点击只关注，不会使用物品或改变状态；敌方意图候选也需另行评估。状态只显示当前观察者可见的信息，移动以冻结路线和实际支撑校验为准。默认不发送意图请求；独立存档保留待处理阶段和已锁定结果。")
+		if not journal_open:toggle_journal()
+		return
 	if generated_v3_equipment_mode:
 		append_journal("取走与换装","敌人倒下后，可从真实干地连通的相邻格取走现有苦叶短刃，原格仍被占据。拾取与装备是两个分别评估的行动，点击示例只填入意图；换装后原武器仍在行囊里。两种操作不扣体力，但都提交一个行动，已有中毒会结算一次。不能从活着的敌人手里取走武器，也不能丢弃、转交或复制武器。当前只有这一个敌人，取走之后没有新的攻击目标；短刃的中毒能力会作为登记属性保留。")
 		if not journal_open:toggle_journal()
@@ -1092,16 +1149,18 @@ func set_status(text: String) -> void:
 	if coast_mode and OS.has_environment("FOGBANK_QA_CAPTURE") and DisplayServer.get_name() != "headless":
 		screenshot_serial += 1
 		capture_board("playable_build_20261002/native_%03d.png" % screenshot_serial)
-func append_journal(speaker: String, text: String) -> void:
+func append_journal(speaker: String, text: String, update_latest: bool = true) -> void:
 	if speaker.begins_with("你"): text=DisplayText.player_intent(text)
 	var paragraph_gap := "\n\n" if not journal.get_parsed_text().is_empty() else ""
 	journal.append_text(paragraph_gap+"[color=#77543c][b]"+speaker+"[/b][/color]\n"+text.replace("[","［").replace("]","］")+"")
+	if not update_latest: return
 	if speaker.contains("夹具") or speaker.contains("评估"): return
 	dialogue_speaker.text = speaker
 	latest_dialogue.text = text
 	latest_dialogue.tooltip_text = text
 
 func refresh_world(animate_changes: bool = false) -> void:
+	if has_node("SelectionMotion"): get_node("SelectionMotion").cancel()
 	if playtest_mode:
 		refresh_playtest_world(animate_changes)
 		return
@@ -1115,7 +1174,7 @@ func refresh_world(animate_changes: bool = false) -> void:
 	turn_counter.text="只读预览 · 尚未接入当前行动规则"
 	hero_label.tooltip_text = hero_label.text + " · " + hero_subtitle.text
 	for child in inventory_box.get_children(): child.queue_free()
-	var statuses: Array[String]=PlayerDetails.status_lines(actor)
+	var statuses: Array[String]=PlayerDetails.status_lines(PlayerDetails.adapt_actor(game.state,actor))
 	inventory_box.add_child(label("当前状态",18))
 	if statuses.is_empty(): inventory_box.add_child(label("没有持续状态",15,MUTED))
 	for line in statuses:
@@ -1190,6 +1249,10 @@ func _focus_caption(focus:Dictionary,prefix:String="关注")->String:
 func show_focus_details() -> void:
 	if resolved_focus.is_empty(): return
 	focus_details_text.text=_focus_details_description()
+	# Read-only text inset: preserve the current C paper style and give prose air.
+	var detail_surface:StyleBox=focus_details_text.get_theme_stylebox("normal").duplicate()
+	for side in [SIDE_LEFT,SIDE_RIGHT,SIDE_TOP,SIDE_BOTTOM]:detail_surface.set_content_margin(side,16)
+	focus_details_text.add_theme_stylebox_override("normal",detail_surface)
 	var expanded_item:bool=resolved_focus.get("catalog_version") in ["source-entity-focus/v1","source-static-focus/v1","source-npc-focus/v1","source-vegetation-focus/v1"]
 	var extent:Vector2i=focus_details_extent(Vector2i(get_viewport_rect().size),expanded_item)
 	focus_details_text.custom_minimum_size=Vector2(maxi(120,extent.x-60),maxi(120,extent.y-100)) if expanded_item else Vector2(480,230)
@@ -1202,6 +1265,7 @@ static func focus_details_extent(viewport_size:Vector2i,expanded_item:bool) -> V
 	return Vector2i(mini(540,maxi(160,viewport_size.x-48)),mini(420,maxi(180,viewport_size.y-80)))
 
 func _focus_details_description() -> String:
+	if actor_action_mode:return PlayerDetails.description(resolved_focus)+("\n行动状态测试：只显示当前角色可见对象与公开状态，行动能力以请求目录为准。" if actor_status_mode else "\n统一行动测试：只显示当前角色可见对象，行动能力以请求目录为准。")
 	if resolved_focus.get("catalog_version")=="source-npc-focus/v1":
 		var f:Dictionary=resolved_focus.facts
 		return "守路村民\n"+str(f.descriptor.description)+"\n位置：（%d，%d）\n已交谈：%d次\n话题：询问村落入口\n交谈需要同格或实际连通的相邻地格，耗费1点体力和1回合。\n点击只查看；自由意图需要有效评估。"%[resolved_focus.hex[0],resolved_focus.hex[1],f.public_state.conversation_count]
@@ -1251,7 +1315,7 @@ func update_movement_preview() -> void:
 	if board.has_method("set_route_preview"): board.set_route_preview(route)
 	route_preview_label.visible=not movement_preview.is_empty()
 	if not route_preview_label.visible: return
-	var flying: bool=state.actors.actor_player.get("statuses",{}).values().any(func(status):return status.get("kind","")=="flight")
+	var flying: bool=playtest.movement_is_flight(str(movement_preview.get("actor_id",""))) if actor_status_mode else preload("res://core/ai_gm_rebuilt/traversal.gd").flight(state.actors.actor_player,state)
 	if movement_preview.get("ok",false):
 		route_preview_label.text="%s：%d格 · %d体力 · 整段1回合%s" % ["本回合路线" if frozen else ("飞行参考" if flying else "步行参考"),maxi(0,route.size()-1),int(movement_preview.cost),"（成功后扣除）" if frozen else "（尚未行动）"]
 		route_preview_label.tooltip_text="体力消耗以当前路线的实际地面代价为准；整段只推进1回合，巡逻和持续状态只结算一次。路线显示不等于行动，仍须写下意图并取得有效裁定。"
@@ -1362,14 +1426,17 @@ func auto_export() -> void:
 
 func export_request() -> void:
 	if _block_preview_action(): return
+	if actor_action_mode:current_request=playtest.request()
 	if current_request.is_empty(): set_status("还没有待处理请求，先提交意图");return
 	_export_epoch = _mode_epoch
-	file_dialog.current_file="turn_request_%s.json" % current_request.phase
+	actor_export_hash=ActorEntryView.C.digest(current_request) if actor_action_mode else ""
+	file_dialog.current_file=playtest.default_request_path().get_file() if actor_action_mode else "turn_request_%s.json" % current_request.phase
 	advanced_dialog.hide()
 	file_dialog.popup_centered_ratio(0.7)
 
 func on_file_selected(path: String) -> void:
 	if _block_preview_action() or _export_epoch != _mode_epoch: return
+	if actor_action_mode and ActorEntryView.C.digest(playtest.request())!=actor_export_hash:set_status("请求已取消或改变，请重新打开导出；没有导出其他回合。");return
 	if playtest_mode:
 		var exported: Dictionary = playtest.export_request(path)
 		set_status("测试请求已导出：" + path if exported.ok else "导出失败：" + str(exported))
@@ -1461,7 +1528,7 @@ func save_game() -> void:
 	last_save_result={"ok":false,"code":"NOT_ATTEMPTED"}
 	if playtest_mode:
 		var saved: Dictionary = playtest.save_file()
-		if saved.ok and generated_v3_npc_mode:
+		if saved.ok and (actor_action_mode or generated_v3_npc_mode):
 			var prose:Dictionary=_runtime_adapter().save_sidecar(playtest.default_save_path())
 			saved["narration_log_saved"]=prose.ok
 			if not prose.ok:saved["narration_warning"]="核心进度已保存，可选叙事这次未能保存。"
@@ -1494,7 +1561,7 @@ func load_game() -> void:
 			if loaded.get("code","") in ["BUNDLE_MISMATCH","WORLD_MISMATCH","LOAD_FAILED"] and not loaded.get("errors",[]).is_empty(): reason=String(loaded.errors[0])
 			append_journal("读取未完成",reason)
 			set_status("读取失败，当前状态保留："+str(loaded)); return
-		if generated_v3_npc_mode:
+		if actor_action_mode or generated_v3_npc_mode:
 			var prose:Dictionary=_runtime_adapter().load_sidecar(playtest.default_save_path())
 			loaded["narration_log_status"]=prose.status;loaded["narration_warning"]=prose.get("warning","")
 			last_load_result=loaded.duplicate(true)
@@ -1503,21 +1570,23 @@ func load_game() -> void:
 			board.admitted_source=playtest.source
 			if previous_renderer_source!=playtest.source:V3RenderResidency.suspend(previous_renderer_source)
 		if is_instance_valid(runtime_ai): runtime_ai.bind_adapter(_runtime_adapter())
+		if actor_action_mode:actor_action_panel.reset_consent()
 		end_turn_requested = playtest.phase() != "idle"
 		clear_target()
-		set_player_intent(String(playtest.action_copy().get("goal", "")),coast_mode)
+		if not actor_action_mode or playtest.action_copy().get("actor_id","actor_player")=="actor_player":set_player_intent(String(playtest.action_copy().get("goal", "")),coast_mode)
 		sync_playtest_request(); refresh_world(); board.focus_player()
 		journal.clear()
 		if (coast_mode or generated_mode) and playtest.has_method("journal_entries"):
 			for entry in playtest.journal_entries():
 				append_journal(String(entry.get("title","冒险记录")),String(entry.get("text","")))
-		if generated_v3_npc_mode:
+		if actor_action_mode or generated_v3_npc_mode:
 			for entry in _runtime_adapter().narration_entries():append_journal("叙事记录 · 第%d回合"%int(entry.turn),str(entry.narration))
-		if playtest.phase()!="idle" and not goal.text.is_empty(): append_journal("敌方 · 待完成的行动" if playtest.action_copy().get("actor_id","actor_player")!="actor_player" else "你 · 待完成的行动",goal.text)
+		if actor_action_mode and playtest.phase()!="idle":append_journal("敌方 · 待完成的行动" if playtest.action_copy().get("actor_id")!="actor_player" else "你 · 待完成的行动",str(playtest.action_copy().goal))
+		elif playtest.phase()!="idle" and not goal.text.is_empty(): append_journal("敌方 · 待完成的行动" if playtest.action_copy().get("actor_id","actor_player")!="actor_player" else "你 · 待完成的行动",goal.text)
 		append_journal("冒险继续", "已恢复保存的冒险。未完成的回合可以继续，已锁定的结果保持不变。")
 		if not str(loaded.get("narration_warning","")).is_empty():append_journal("部分文字未恢复",str(loaded.narration_warning))
-		set_status("存档已读取 · 已锁定的结果保持不变")
-		if _waiting_enemy_phase(): _begin_required_enemy_turn.call_deferred()
+		if not actor_action_mode or actor_render_error.is_empty():set_status("存档已读取 · 已锁定的结果保持不变")
+		if _waiting_enemy_phase(): _queue_required_enemy_turn()
 		return
 
 func load_legacy_preview(path: String = "user://savegame.json") -> void:
@@ -1684,7 +1753,7 @@ func _update_map_preview_controls() -> void:
 		adventure_menu.set_item_text(adventure_menu.get_item_index(3),"选择多地貌预览")
 
 func _can_leave_current_adventure() -> bool:
-	if end_turn_busy or not active_action.is_empty() or (playtest_mode and playtest != null and playtest.phase() != "idle"):
+	if (actor_action_mode and playtest!=null and playtest.decision_pending()) or end_turn_busy or not active_action.is_empty() or (playtest_mode and playtest != null and playtest.phase() != "idle"):
 		set_status("当前行动尚未完成；请先完成回合，或在结果锁定前取消，再查看地图预览。")
 		return false
 	return true
@@ -1698,6 +1767,7 @@ func return_from_map_preview() -> void:
 	if is_map_preview() or generated_mode: _switch_mode("coast")
 
 func _invalidate_mode_dialogs() -> void:
+	if is_instance_valid(runtime_connection_panel): runtime_connection_panel.close_settings()
 	_mode_epoch += 1
 	_import_epoch=-1; _import_file_epoch=-1; _export_epoch=-1
 	for dialog in [import_dialog,import_file_dialog,file_dialog,demo_confirm_dialog,restart_confirm_dialog,world_dialog,playtest_reset_dialog,scene_test_confirm_dialog,v3_setup_dialog,npc_notes_dialog]:
@@ -1745,7 +1815,8 @@ func switch_playtest(enabled: bool) -> void:
 	_switch_mode("laboratory" if enabled else "legacy")
 
 func new_coast_adventure() -> RefCounted:
-	return Coast.new()
+	# Explicit new-world opt-in; no UI control mutates a status directly.
+	return Coast.new(null,false,"--status-gameplay" in OS.get_cmdline_user_args())
 
 func switch_coast() -> void:
 	_switch_mode("coast")
@@ -1754,19 +1825,19 @@ func _switch_mode(mode: String) -> void:
 	_switch_mode_to(mode)
 
 func _switch_mode_to(mode: String, replacement_v3:RefCounted=null) -> void:
-	if mode not in ["coast","laboratory","legacy","generated","generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]: return
-	if replacement_v3!=null and mode not in ["generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]:return
+	if mode not in ["coast","laboratory","legacy","generated","generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment","actor_actions_v2","actor_status_v1"]: return
+	if replacement_v3!=null and mode not in ["generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment","actor_actions_v2","actor_status_v1"]:return
 	if world_build_busy:
 		if is_map_preview() and mode != "legacy": cancel_world_build()
 		else: return
 	var previous_v3_source:RefCounted=playtest.source if generated_v3_mode and playtest!=null else null
-	var current := "generated_v3_equipment" if generated_v3_equipment_mode else ("generated_v3_enemy" if generated_v3_enemy_mode else ("generated_v3_npc" if generated_v3_npc_mode else ("generated_v3_village" if generated_v3_village_mode else ("generated_v3_inventory" if generated_v3_inventory_mode else ("generated_v3" if generated_v3_mode else ("generated" if generated_mode else ("coast" if coast_mode else ("laboratory" if playtest_mode else "legacy"))))))))
+	var current := "actor_status_v1" if actor_status_mode else "actor_actions_v2" if actor_action_mode else "generated_v3_equipment" if generated_v3_equipment_mode else ("generated_v3_enemy" if generated_v3_enemy_mode else ("generated_v3_npc" if generated_v3_npc_mode else ("generated_v3_village" if generated_v3_village_mode else ("generated_v3_inventory" if generated_v3_inventory_mode else ("generated_v3" if generated_v3_mode else ("generated" if generated_mode else ("coast" if coast_mode else ("laboratory" if playtest_mode else "legacy"))))))))
 	if mode == current and replacement_v3==null: return
 	if not _can_leave_current_adventure(): return
 	if mode=="generated" and (generated_adventure==null or not generated_adventure.ready().ok): return
-	var next_v3:RefCounted=replacement_v3 if replacement_v3!=null else (generated_v3_equipment_adventure if mode=="generated_v3_equipment" else (generated_v3_enemy_adventure if mode=="generated_v3_enemy" else (generated_v3_npc_adventure if mode=="generated_v3_npc" else (generated_v3_village_adventure if mode=="generated_v3_village" else (generated_v3_inventory_adventure if mode=="generated_v3_inventory" else generated_v3_adventure)))))
-	if mode in ["generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"] and (next_v3==null or not next_v3.ready().ok):return
-	if mode in ["generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]:
+	var next_v3:RefCounted=replacement_v3 if replacement_v3!=null else actor_status_adventure if mode=="actor_status_v1" else actor_action_adventure if mode=="actor_actions_v2" else (generated_v3_equipment_adventure if mode=="generated_v3_equipment" else (generated_v3_enemy_adventure if mode=="generated_v3_enemy" else (generated_v3_npc_adventure if mode=="generated_v3_npc" else (generated_v3_village_adventure if mode=="generated_v3_village" else (generated_v3_inventory_adventure if mode=="generated_v3_inventory" else generated_v3_adventure)))))
+	if mode in ["generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment","actor_actions_v2","actor_status_v1"] and (next_v3==null or not next_v3.ready().ok):return
+	if mode in ["generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment","actor_actions_v2","actor_status_v1"]:
 		V3RenderResidency.reuse(previous_v3_source,next_v3.source)
 		var resident:Dictionary=V3RenderResidency.ensure(next_v3.source)
 		if not resident.ok:show_world_load_error(str(resident));return
@@ -1780,11 +1851,12 @@ func _switch_mode_to(mode: String, replacement_v3:RefCounted=null) -> void:
 			coast_adventure=candidate
 	# Prepare the new renderer before removing the current valid scene. A missing
 	# or corrupt bundle must never publish an empty world or clear current history.
-	var next_board=V3EquipmentBoard.new(next_v3.source) if mode=="generated_v3_equipment" else (V3EnemyBoard.new(next_v3.source) if mode=="generated_v3_enemy" else (V3NPCBoard.new(next_v3.source) if mode=="generated_v3_npc" else (V3VillageBoard.new(next_v3.source) if mode=="generated_v3_village" else (V3InventoryBoard.new(next_v3.source) if mode=="generated_v3_inventory" else (V3Board.new(next_v3.source) if mode=="generated_v3" else (GeneratedBoard.new(generated_adventure.source) if mode=="generated" else (_create_scene_board(coast_adventure.state_copy()) if mode=="coast" else Board.new())))))))
+	var next_board=StatusEntryBoard.new(next_v3.source) if mode=="actor_status_v1" else ActorEntryBoard.new(next_v3.source) if mode=="actor_actions_v2" else V3EquipmentBoard.new(next_v3.source) if mode=="generated_v3_equipment" else (V3EnemyBoard.new(next_v3.source) if mode=="generated_v3_enemy" else (V3NPCBoard.new(next_v3.source) if mode=="generated_v3_npc" else (V3VillageBoard.new(next_v3.source) if mode=="generated_v3_village" else (V3InventoryBoard.new(next_v3.source) if mode=="generated_v3_inventory" else (V3Board.new(next_v3.source) if mode=="generated_v3" else (GeneratedBoard.new(generated_adventure.source) if mode=="generated" else (_create_scene_board(coast_adventure.state_copy()) if mode=="coast" else Board.new())))))))
 	if next_board==null: return
 	next_board.attention_ui_mode=true
 	viewport.add_child(next_board)
-	if mode in ["coast","generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"] and not next_board.load_error.is_empty():
+	if mode in ["actor_actions_v2","actor_status_v1"]:next_board.set_world(next_v3.state_copy())
+	if mode in ["coast","generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment","actor_actions_v2","actor_status_v1"] and not next_board.load_error.is_empty():
 		var render_error:String=next_board.load_error
 		viewport.remove_child(next_board);next_board.free()
 		show_world_load_error(render_error);return
@@ -1793,43 +1865,51 @@ func _switch_mode_to(mode: String, replacement_v3:RefCounted=null) -> void:
 	_invalidate_mode_dialogs()
 	reset_world_controls()
 	if playtest_mode:
-		if generated_v3_equipment_mode: generated_v3_equipment_adventure=playtest
+		if actor_status_mode: actor_status_adventure=playtest
+		elif actor_action_mode: actor_action_adventure=playtest
+		elif generated_v3_equipment_mode: generated_v3_equipment_adventure=playtest
 		elif generated_v3_enemy_mode: generated_v3_enemy_adventure=playtest
 		elif generated_v3_npc_mode: generated_v3_npc_adventure=playtest
 		elif generated_v3_village_mode: generated_v3_village_adventure=playtest
-		elif generated_v3_inventory_mode: generated_v3_inventory_adventure=playtest
-		elif generated_v3_mode: generated_v3_adventure=playtest
+		elif generated_v3_inventory_mode and not actor_action_mode: generated_v3_inventory_adventure=playtest
+		elif generated_v3_mode and not actor_action_mode: generated_v3_adventure=playtest
 		elif generated_mode: generated_adventure=playtest
 		elif coast_mode: coast_adventure = playtest
 		else: laboratory = playtest
 	if replacement_v3!=null:
-		if mode=="generated_v3_equipment":generated_v3_equipment_adventure=replacement_v3
+		if mode=="actor_status_v1":actor_status_adventure=replacement_v3
+		elif mode=="actor_actions_v2":actor_action_adventure=replacement_v3
+		elif mode=="generated_v3_equipment":generated_v3_equipment_adventure=replacement_v3
 		elif mode=="generated_v3_enemy":generated_v3_enemy_adventure=replacement_v3
 		elif mode=="generated_v3_npc":generated_v3_npc_adventure=replacement_v3
 		elif mode=="generated_v3_village":generated_v3_village_adventure=replacement_v3
 		elif mode=="generated_v3_inventory":generated_v3_inventory_adventure=replacement_v3
 		else:generated_v3_adventure=replacement_v3
 		_mode_ui_snapshots.erase(mode)
-	coast_mode = mode == "coast"; generated_v3_equipment_mode=mode=="generated_v3_equipment"; generated_v3_enemy_mode=mode in ["generated_v3_enemy","generated_v3_equipment"]; generated_v3_npc_mode=mode in ["generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]; generated_v3_village_mode=mode in ["generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]; generated_v3_inventory_mode=mode in ["generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]; generated_v3_mode=mode in ["generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]; generated_mode=mode in ["generated","generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]; playtest_mode = mode != "legacy"
+	actor_render_error="";actor_render_suspended=false;actor_status_mode=mode=="actor_status_v1";actor_action_mode=mode in ["actor_actions_v2","actor_status_v1"]; coast_mode = mode == "coast"; generated_v3_equipment_mode=mode=="generated_v3_equipment"; generated_v3_enemy_mode=mode in ["generated_v3_enemy","generated_v3_equipment"]; generated_v3_npc_mode=mode in ["generated_v3_npc","generated_v3_enemy","generated_v3_equipment"]; generated_v3_village_mode=mode in ["generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment","actor_actions_v2","actor_status_v1"]; generated_v3_inventory_mode=mode in ["generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment","actor_actions_v2","actor_status_v1"]; generated_v3_mode=mode in ["generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment","actor_actions_v2","actor_status_v1"]; generated_mode=mode in ["generated","generated_v3","generated_v3_inventory","generated_v3_village","generated_v3_npc","generated_v3_enemy","generated_v3_equipment","actor_actions_v2","actor_status_v1"]; playtest_mode = mode != "legacy"
 	mode_legend.text = "文字决定意图 · 点击只关注 · 离线评估，固定程序结算" if playtest_mode else MAP_PREVIEW_NOTICE
 	action_base.visible=playtest_mode
 	demo_button.disabled=not playtest_mode
-	if generated_v3_equipment_mode: playtest=generated_v3_equipment_adventure
+	if actor_status_mode: playtest=actor_status_adventure
+	elif actor_action_mode: playtest=actor_action_adventure
+	elif generated_v3_equipment_mode: playtest=generated_v3_equipment_adventure
 	elif generated_v3_enemy_mode: playtest=generated_v3_enemy_adventure
 	elif generated_v3_npc_mode: playtest=generated_v3_npc_adventure
 	elif generated_v3_village_mode: playtest=generated_v3_village_adventure
-	elif generated_v3_inventory_mode: playtest=generated_v3_inventory_adventure
-	elif generated_v3_mode: playtest=generated_v3_adventure
+	elif generated_v3_inventory_mode and not actor_action_mode: playtest=generated_v3_inventory_adventure
+	elif generated_v3_mode and not actor_action_mode: playtest=generated_v3_adventure
 	elif generated_mode: playtest=generated_adventure
 	elif coast_mode: playtest = coast_adventure
 	elif playtest_mode:
 		if laboratory == null: laboratory = Playtest.new()
 		playtest = laboratory
-	laboratory_panel.visible = mode == "laboratory"; coast_panel.visible = coast_mode; generated_panel.visible=generated_mode and not generated_v3_mode; generated_v3_panel.visible=generated_v3_mode and not generated_v3_inventory_mode; generated_v3_inventory_panel.visible=generated_v3_inventory_mode and not generated_v3_npc_mode; generated_v3_npc_panel.visible=generated_v3_npc_mode and not generated_v3_enemy_mode; generated_v3_enemy_panel.visible=generated_v3_enemy_mode and not generated_v3_equipment_mode; generated_v3_equipment_panel.visible=generated_v3_equipment_mode
+	laboratory_panel.visible = mode == "laboratory"; coast_panel.visible = coast_mode; generated_panel.visible=generated_mode and not generated_v3_mode; generated_v3_panel.visible=generated_v3_mode and not generated_v3_inventory_mode; generated_v3_inventory_panel.visible=generated_v3_inventory_mode and not generated_v3_npc_mode and not actor_action_mode; generated_v3_npc_panel.visible=generated_v3_npc_mode and not generated_v3_enemy_mode; generated_v3_enemy_panel.visible=generated_v3_enemy_mode and not generated_v3_equipment_mode; generated_v3_equipment_panel.visible=generated_v3_equipment_mode
+	actor_action_panel.visible=actor_action_mode
 	runtime_connection_panel.visible=_runtime_supported()
 	# Binding emits synchronous UI refreshes; publish the matching panel first.
-	playtest_panel = generated_v3_equipment_panel if generated_v3_equipment_mode else (generated_v3_enemy_panel if generated_v3_enemy_mode else (generated_v3_npc_panel if generated_v3_npc_mode else (generated_v3_inventory_panel if generated_v3_inventory_mode else (generated_v3_panel if generated_v3_mode else (generated_panel if generated_mode else (coast_panel if coast_mode else laboratory_panel))))))
+	playtest_panel = actor_action_panel if actor_action_mode else generated_v3_equipment_panel if generated_v3_equipment_mode else (generated_v3_enemy_panel if generated_v3_enemy_mode else (generated_v3_npc_panel if generated_v3_npc_mode else (generated_v3_inventory_panel if generated_v3_inventory_mode else (generated_v3_panel if generated_v3_mode else (generated_panel if generated_mode else (coast_panel if coast_mode else laboratory_panel))))))
 	runtime_ai.bind_adapter(_runtime_adapter())
+	actor_action_panel.reset_consent()
 	# Separate rendering parents prevent duplicate worlds, lights and input handlers.
 	viewport.remove_child(board); board.free()
 	if previous_v3_source!=null and (not generated_v3_mode or previous_v3_source!=playtest.source):V3RenderResidency.suspend(previous_v3_source)
@@ -1878,7 +1958,7 @@ func _switch_mode_to(mode: String, replacement_v3:RefCounted=null) -> void:
 			set_player_intent(str(playtest.action_copy().get("goal","")),true)
 			end_turn_requested=true
 		set_status("多地貌玩法原型 · 移动 / 观察 / 休息"+(" / 行囊放下与拾回" if with_inventory else ""))
-	if generated_v3_mode:
+	if generated_v3_mode and not actor_action_mode:
 		for entry in [[1,"保存新地形探索"],[2,"读取此新地形探索"],[3,"重新开始这张地图"]]:mode_menu.set_item_text(mode_menu.get_item_index(entry[0]),entry[1])
 		journal.clear();journal_drawer.title="主持手记 · 新地形探索"
 		append_journal("新地形探索","你来到一片陌生的土地。先看看脚下，再选一处干燥的落脚点。点击只关注；行动需文字描述与裁定。可在“连接与高级”中选择移动、观察或休息示例。")
@@ -1888,14 +1968,14 @@ func _switch_mode_to(mode: String, replacement_v3:RefCounted=null) -> void:
 		if playtest.phase()!="idle":
 			set_player_intent(str(playtest.action_copy().get("goal","")),true);end_turn_requested=true
 		set_status("新地形探索 · 离线预设裁定 · 独立存档")
-	if generated_v3_inventory_mode:
+	if generated_v3_inventory_mode and not actor_action_mode:
 		for entry in [[1,"保存新地形行囊探索"],[2,"读取此行囊探索"]]:mode_menu.set_item_text(mode_menu.get_item_index(entry[0]),entry[1])
 		journal_drawer.title="主持手记 · 新地形行囊探索"
 		append_journal("行礼包",generated_inventory_intro(playtest.state_copy()))
 		relay_note.text="离线演示，尚未接入实时AI。行动示例可应用预设裁定，自由文字需导入评估。行礼包可整件放下、拾回；没有使用、拆分、装备或转交能力。河流、城镇与战斗尚未开放。"
 		import_text.placeholder_text="移动、观察、休息、整件放下或拾回行礼包；字段见此行囊版本的独立请求。"
 		set_status("新地形行囊探索 · 点击只查看 · 独立存档")
-	if generated_v3_village_mode and not generated_v3_npc_mode:
+	if generated_v3_village_mode and not generated_v3_npc_mode and not actor_action_mode:
 		for entry in [[1,"保存村落行囊探索"],[2,"读取此村落探索"]]:mode_menu.set_item_text(mode_menu.get_item_index(entry[0]),entry[1])
 		journal_drawer.title="主持手记 · 村落行囊探索"
 		append_journal("沿途村落","远处有一座小村落。房屋会挡住实际占据的路线，可以沿空出的路口绕行。可点击村落、建筑和道路查看；尚无人物、进屋、交易或城门行动。")
@@ -1916,6 +1996,16 @@ func _switch_mode_to(mode: String, replacement_v3:RefCounted=null) -> void:
 	if generated_v3_equipment_mode:
 		append_journal("武器归属与装备","击倒后可取走原来的苦叶短刃，再另行评估换装。原武器仍在行囊中，归属与装备会保存；两件武器不能丢弃或转交。当前没有新的攻击目标。")
 		set_status("村庄冒险 · 取走和换装分别评估 · 旧进度保留")
+	if actor_action_mode:
+		journal.clear();journal_drawer.title="主持手记 · 行动状态测试" if actor_status_mode else "主持手记 · 统一行动测试"
+		import_dialog.title="人工离线意图 / 评估 / 只读叙事 JSON"
+		import_text.placeholder_text=_actor_entry_proposal_schema()+" 或 ai_gm_assessment/v1；人工导入始终标为离线。"
+		append_journal("行动状态测试" if actor_status_mode else "统一行动测试","相同来源的新独立进度。双方按现有单敌顺序使用普通行动；外部意图候选仍需普通评估与固定规则。没有自动攻击或自动换装。")
+		if actor_status_mode:
+			for entry in [[1,"保存行动状态测试"],[2,"读取行动状态测试"],[3,"重置行动状态测试"]]:mode_menu.set_item_text(mode_menu.get_item_index(entry[0]),entry[1])
+			playtest_reset_dialog.title="重置行动状态测试？";playtest_reset_dialog.ok_button_text="重新开始"
+		if actor_entry_restore_requested:_restore_actor_entry_history()
+		_on_runtime_changed()
 	refresh_world(); board.focus_player()
 	if playtest_mode and _mode_ui_snapshots.has(mode): _restore_mode_ui(_mode_ui_snapshots[mode])
 	if coast_mode and not board.load_error.is_empty(): set_status("地理呈现异常："+board.load_error)
@@ -2022,7 +2112,10 @@ func reset_playtest() -> void:
 	playtest=candidate
 	if previous_renderer_source!=null and previous_renderer_source!=playtest.source:V3RenderResidency.suspend(previous_renderer_source)
 	runtime_ai.bind_adapter(_runtime_adapter())
-	if generated_v3_equipment_mode: generated_v3_equipment_adventure=playtest; board.admitted_source=playtest.source
+	if actor_action_mode:actor_action_panel.reset_consent()
+	if actor_status_mode: actor_status_adventure=playtest; board.admitted_source=playtest.source
+	elif actor_action_mode: actor_action_adventure=playtest; board.admitted_source=playtest.source
+	elif generated_v3_equipment_mode: generated_v3_equipment_adventure=playtest; board.admitted_source=playtest.source
 	elif generated_v3_enemy_mode: generated_v3_enemy_adventure=playtest; board.admitted_source=playtest.source
 	elif generated_v3_npc_mode: generated_v3_npc_adventure=playtest; board.admitted_source=playtest.source
 	elif generated_v3_village_mode: generated_v3_village_adventure=playtest; board.admitted_source=playtest.source
@@ -2033,7 +2126,7 @@ func reset_playtest() -> void:
 	else: laboratory = playtest
 	reset_world_controls(); sync_playtest_request(); refresh_world(); board.focus_player()
 	append_journal("冒险重置", "同一生成来源的起点与数值已恢复；独立存档未覆盖。" if generated_mode else ("真实海岸初始位置与数值已恢复。" if coast_mode else "初始19格渡口恢复。果酒3份，体力8；可使用指定署名夹具。"))
-	set_status("多地貌冒险已重置 · 独立存档不会自动覆盖" if generated_mode else ("海岸冒险已重置 · 独立存档不会自动覆盖" if coast_mode else "测试渡口已重置 · 单独存档不会自动覆盖"))
+	if not actor_action_mode or actor_render_error.is_empty():set_status("多地貌冒险已重置 · 独立存档不会自动覆盖" if generated_mode else ("海岸冒险已重置 · 独立存档不会自动覆盖" if coast_mode else "测试渡口已重置 · 单独存档不会自动覆盖"))
 
 func sync_playtest_request() -> void:
 	if _block_preview_action(): return
@@ -2053,6 +2146,7 @@ func sync_playtest_request() -> void:
 
 func submit_playtest() -> void:
 	if _block_preview_action(): return
+	if actor_action_mode and not actor_render_error.is_empty():set_status("当前显示未通过校验，请读取或重新开始。");return
 	if is_instance_valid(runtime_ai): runtime_ai.invalidate_context()
 	var raw: String=submitted_player_intent()
 	if is_instance_valid(runtime_ai) and runtime_ai.client.contains_current_credential(raw):
@@ -2061,7 +2155,8 @@ func submit_playtest() -> void:
 	if not result.ok: set_status("意图未创建：" + str(result)); return
 	append_journal("你 · 明确意图", goal.text)
 	sync_playtest_request()
-	set_status("行动已记录，尚未执行；可请求或导入有效评估，行动示例可用预设裁定。" if generated_v3_npc_mode else ("行动已记录，尚未执行；示例可应用预设裁定，自由文字需导入离线评估。" if generated_v3_mode else "ai_gm_assessment/v1请求已生成 · 明确署名样例可用；任意自由文本须人工离线DecisionModel评估"))
+	if actor_action_mode:set_status("普通行动等待评估；数值尚未改变。测试入口没有预设AI意图。")
+	else:set_status("行动已记录，尚未执行；可请求或导入有效评估，行动示例可用预设裁定。" if generated_v3_npc_mode else ("行动已记录，尚未执行；示例可应用预设裁定，自由文字需导入离线评估。" if generated_v3_mode else "ai_gm_assessment/v1请求已生成 · 明确署名样例可用；任意自由文本须人工离线DecisionModel评估"))
 	if _runtime_supported() and not DisplayText.is_signed_sample(raw) and not (generated_v3_npc_mode and playtest.fixture_available()) and runtime_ai.automatic_assessment_enabled(): runtime_ai.request_assessment()
 
 func playtest_fixture() -> void:
@@ -2089,10 +2184,19 @@ func _assessment_error_text(result: Dictionary) -> String:
 
 func apply_playtest_reply(decision: Dictionary) -> bool:
 	if _block_preview_action(): return false
+	if actor_action_mode and decision.get("schema_version")==_actor_entry_proposal_schema():
+		# Cancel only transport ownership; preserve the grant being answered.
+		runtime_ai.cancel_transport_for_manual()
+		if runtime_ai.client.contains_current_credential(JSON.stringify(decision)):set_status("导入内容包含连接凭据，未记录或应用。");return false
+		var accepted:Dictionary=playtest.accept_decision(decision)
+		if not accepted.get("ok",false):set_status("意图候选未接纳："+str(accepted));return false
+		_on_actor_intention_ready(str(playtest.action_copy().get("actor_id","")),str(playtest.action_copy().get("goal","")))
+		set_status("人工离线意图候选已接纳；仍需普通行动评估，尚未行动。")
+		return true
 	if is_instance_valid(runtime_ai) and runtime_ai.client.contains_current_credential(JSON.stringify(decision)):
 		set_status("导入内容包含当前连接密钥，未显示、保存或应用。");return false
 	if is_instance_valid(runtime_ai) and decision.get("schema_version")=="ai_gm_assessment/v1": runtime_ai.invalidate_context()
-	var result: Dictionary = _runtime_adapter().import_narration(decision) if generated_v3_npc_mode and decision.get("schema_version")=="ai_gm_narration/v1" else playtest.import_reply(decision)
+	var result: Dictionary = _runtime_adapter().import_narration(decision) if (actor_action_mode or generated_v3_npc_mode) and decision.get("schema_version")=="ai_gm_narration/v1" else playtest.import_reply(decision)
 	if not result.ok: set_status("评估未应用，数值保留：" + _assessment_error_text(result)); return false
 	if decision.get("schema_version") == "ai_gm_narration/v1":
 		if not result.get("already_recorded",false): append_journal("叙事记录", result.narration)
@@ -2105,6 +2209,7 @@ func apply_playtest_reply(decision: Dictionary) -> bool:
 
 func advance_playtest() -> void:
 	if _block_preview_action(): return
+	if actor_action_mode and not actor_render_error.is_empty():set_status("当前显示未通过校验，请读取或重新开始。");return
 	var phase: String = playtest.phase()
 	var result: Dictionary
 	match phase:
@@ -2118,29 +2223,37 @@ func advance_playtest() -> void:
 			var before_state: Dictionary=playtest.state_copy()
 			result = playtest.commit()
 			if result.ok:
-				if generated_v3_npc_mode:_runtime_adapter().committed()
+				if actor_action_mode or generated_v3_npc_mode:_runtime_adapter().committed()
 				end_turn_requested = false
 				append_journal("回合结束", readable_turn_feedback())
-				goal.text = ""
+				if not actor_action_mode or result.get("receipt",{}).get("actor_id")=="actor_player":goal.text = ""
 				refresh_world(true); _refresh_transient_focus()
-				if (coast_mode or generated_v3_enemy_mode) and not result.get("already_committed",false) and board.has_method("present_committed_receipt"):
+				if (actor_action_mode or coast_mode or generated_v3_enemy_mode) and actor_render_error.is_empty() and not result.get("already_committed",false) and (board.has_method("present_status_receipt") if actor_status_mode else board.has_method("present_committed_receipt")):
 					_update_feedback_safe_rect()
-					board.present_committed_receipt(result.get("receipt",{}),before_state)
-				set_status("这一回合已完成，可以继续探索。" if generated_v3_mode else "数值已原子提交一次 · 可继续意图；可选叙事失败不影响数值")
+					if actor_status_mode:
+						var receipt:Dictionary=result.get("receipt",{})
+						board.present_status_receipt(receipt,before_state,playtest.public_receipt_record(str(receipt.get("action_id",""))))
+					else:board.present_committed_receipt(result.get("receipt",{}),before_state)
+				if not actor_action_mode or actor_render_error.is_empty():set_status("这一回合已完成，可以继续探索。" if generated_v3_mode else "数值已原子提交一次 · 可继续意图；可选叙事失败不影响数值")
 		_:
 			set_status("先导入有效评估，或使用指定署名夹具")
 			return
 	if not result.ok: set_status("阶段未推进，状态保留：" + str(result))
 	sync_playtest_request()
-	if phase=="staged" and result.ok and _runtime_supported():
-		if _waiting_enemy_phase(): _begin_required_enemy_turn.call_deferred()
+	if phase=="staged" and result.ok and _runtime_supported() and actor_render_error.is_empty():
+		if _waiting_enemy_phase(): _queue_required_enemy_turn()
 		else: runtime_ai.committed()
 
 func _waiting_enemy_phase() -> bool:
-	return (coast_mode or generated_v3_enemy_mode) and playtest!=null and playtest.phase()=="idle" and playtest.has_method("enemy_response_available") and playtest.enemy_response_available()
+	return actor_render_error.is_empty() and (actor_action_mode or coast_mode or generated_v3_enemy_mode) and playtest!=null and playtest.phase()=="idle" and playtest.has_method("enemy_response_available") and playtest.enemy_response_available()
 
 func _begin_required_enemy_turn() -> void:
+	# Explicit input supersedes any earlier scheduled request as well.
+	_enemy_dispatch_generation+=1
+	if _api_settings_open() or process_mode==Node.PROCESS_MODE_DISABLED:return
 	if not _waiting_enemy_phase(): return
+	if actor_action_mode:
+		_prepare_actor_decision();return
 	runtime_ai.invalidate_context()
 	var result: Dictionary=playtest.begin_enemy_response()
 	if not result.get("ok",false): set_status("敌方行动尚未就绪："+str(result)); return
@@ -2152,9 +2265,10 @@ func _begin_required_enemy_turn() -> void:
 	if runtime_ai.automatic_assessment_enabled(): runtime_ai.request_assessment()
 
 func _runtime_supported()->bool:
-	return coast_mode or generated_v3_npc_mode
+	return actor_action_mode or coast_mode or generated_v3_npc_mode
 func _runtime_adapter()->RefCounted:
 	if coast_mode:return playtest
+	if actor_action_mode:return playtest
 	if not generated_v3_npc_mode or playtest==null:return null
 	# Each preserved profile owns its unsaved optional prose as well as its
 	# adapter/draft. Replacing that profile's adapter starts a fresh facade.
@@ -2170,14 +2284,20 @@ func _on_runtime_assessment(action_id: String) -> void:
 	sync_playtest_request(); complete_requested_turn()
 
 func _on_runtime_narration(action_id: String, text: String) -> void:
-	if not _runtime_supported() or playtest==null or playtest.phase()!="idle" or playtest.last_action!=action_id: return
-	var recorded: Dictionary=_runtime_adapter().record_narration(action_id,text,"provider")
+	if not _runtime_supported() or playtest==null or (not actor_action_mode and (playtest.phase()!="idle" or playtest.last_action!=action_id)): return
+	var recorded: Dictionary=_runtime_adapter().record_narration(action_id,text,"manual" if actor_action_mode and not runtime_ai.client.provider_info().live else "provider")
 	if is_instance_valid(runtime_connection_panel): runtime_connection_panel.set_action_state(runtime_ai.phase())
 	if not recorded.get("ok",false):
+		if actor_action_mode: return
 		append_journal("叙事记录 · 暂未保存",text)
 		set_status("叙事未能加入历史，已提交事实保持不变："+str(recorded));return
-	playtest.narration=str(recorded.get("narration",text))
-	if not recorded.get("already_recorded",false): append_journal("叙事记录",playtest.narration)
+	var recorded_text:String=str(recorded.get("narration",text))
+	if not actor_action_mode or action_id==playtest.last_action:playtest.narration=recorded_text
+	if not recorded.get("already_recorded",false):
+		var caption:String="叙事记录 · 第%d回合"%int(playtest.committed(action_id).turn) if actor_action_mode else "叙事记录"
+		# A delayed committed receipt belongs in history while a newer action owns the current display.
+		var promote_latest:bool=not actor_action_mode or (action_id==playtest.last_action and playtest.phase()=="idle")
+		append_journal(caption,recorded_text,promote_latest)
 
 func _on_runtime_changed() -> void:
 	if not is_instance_valid(demo_button) or not is_instance_valid(playtest_panel):return
@@ -2200,6 +2320,10 @@ func _on_runtime_changed() -> void:
 			caption.text="村庄冒险 · "+connection_text
 			if generated_v3_enemy_mode:generated_v3_enemy_panel.get_child(0).get_child(0).text=caption.text
 			if generated_v3_equipment_mode:generated_v3_equipment_panel.get_child(0).get_child(0).text=caption.text
+	if actor_action_mode:
+		if is_instance_valid(runtime_ai) and is_instance_valid(actor_action_panel) and not runtime_ai.intention_consent:actor_action_panel.reset_consent()
+		mode_legend.text="行动状态测试 · 双方普通行动 / 公开状态 · 独立存档" if actor_status_mode else "统一行动测试 · 双方普通行动 · 旧存档独立"
+		relay_note.text="敌方每步：一次意图候选请求，再一次普通行动评估；可选叙事另一次，均可能计费。默认不请求意图；人工 JSON 明确离线。"
 	update_turn_controls()
 
 func readable_turn_feedback() -> String:
@@ -2247,7 +2371,7 @@ func update_playtest_controls() -> void:
 		if phase=="awaiting_assessment": submit_button.text="等待\n敌方"; next_step_label.text="连接与高级 → 提供敌方评估"
 	elif enemy_waiting:
 		phase_label.text="敌方回合 · 等待裁定"; next_step_label.text="继续敌方回合后才能开始你的下一次行动"; submit_button.text="继续\n敌方"
-	if (coast_mode or generated_v3_enemy_mode) and not pending and int(playtest.state_copy().actors.actor_player.health.current)<=0:
+	if (actor_action_mode or coast_mode or generated_v3_enemy_mode) and not pending and int(playtest.state_copy().actors.actor_player.health.current)<=0:
 		turn_footer.show();goal.editable=false;submit_button.disabled=true;submit_button.text="已经\n倒下";phase_label.text="旅人已经倒下";next_step_label.text="可从冒险菜单读取存档或重新开始"
 	relay_row.visible = true
 	export_button.disabled = current_request.is_empty()
@@ -2260,10 +2384,20 @@ func update_playtest_controls() -> void:
 	if not resolved_focus.is_empty():
 		target_label.text=_focus_caption(resolved_focus,"下一次目标" if pending else "目标")
 		target_label.tooltip_text=_focus_details_description()+( "\n当前行动的目标已经确定；新点击只改变下一次目标。" if pending else "")
+	if actor_action_mode:
+		if playtest.decision_pending():
+			phase_label.text="敌方 · 等待外部意图候选";next_step_label.text="连接与高级 → 导出候选请求 / 人工导入 / 明确启用接口"
+			cancel_button.visible=true;cancel_button.disabled=false
+		if runtime_ai.busy():submit_button.disabled=true
+	if actor_action_mode and not actor_render_error.is_empty():
+		turn_footer.show();goal.editable=false;submit_button.disabled=true;roll_button.disabled=true
+		phase_label.text="棋盘显示未通过校验 · 行动已暂停";next_step_label.text="数值进度保留；可保存、读取或重新开始"
 	playtest_panel.update_adapter(playtest)
 	update_movement_preview()
 
 func end_turn() -> void:
+	if _api_settings_open(): return
+	if has_node("OfflineMoveDemo") and get_node("OfflineMoveDemo").handle_end_turn(): return
 	if _block_preview_action(): return
 	# The player's single primary action submits the intent, then waits honestly
 	# for an accepted assessment. Existing advanced stage controls remain intact.
@@ -2304,6 +2438,7 @@ func complete_requested_turn() -> void:
 	update_playtest_controls()
 
 func refresh_playtest_world(animate_changes: bool = false) -> void:
+	if has_node("SelectionMotion"): get_node("SelectionMotion").cancel()
 	var state: Dictionary = playtest.state_copy()
 	if not state.get("actors") is Dictionary or not state.actors.has("actor_player"):
 		show_world_load_error(WorldBundle.last_error if not WorldBundle.last_error.is_empty() else "Invalid adventure state");return
@@ -2314,6 +2449,16 @@ func refresh_playtest_world(animate_changes: bool = false) -> void:
 	if generated_mode and animate_changes: board.set_world(render_state,true,playtest.authoritative_result().get("public_effects",[]))
 	elif source_coast and animate_changes and not renderer.changed: board.set_world(render_state,true,playtest.authoritative_result().get("public_effects",[]))
 	else: board.set_world(render_state,animate_changes and not renderer.changed)
+	if actor_action_mode:
+		actor_render_error=str(board.load_error)
+		if not actor_render_error.is_empty():
+			board.hide();board.set_process_input(false);end_turn_requested=false
+			actor_render_suspended=true;runtime_ai.bind_adapter(null);actor_action_panel.reset_consent()
+			set_status("数值进度已保留，但当前棋盘显示未通过支撑校验。后续行动已暂停；可保存、读取或重新开始。"+actor_render_error)
+			return
+		board.show();board.set_process_input(not _api_settings_open())
+		if actor_render_suspended:
+			actor_render_suspended=false;runtime_ai.bind_adapter(playtest);actor_action_panel.reset_consent()
 	if renderer.changed:board.focus_player()
 	if coast_mode:adventure_menu.set_item_disabled(adventure_menu.get_item_index(11),state.actors.actor_player.scene_id!="scene_coast")
 	_route_preview_key=""
@@ -2326,11 +2471,12 @@ func refresh_playtest_world(animate_changes: bool = false) -> void:
 		map_stats_label.text="%d格 / 固定规则探索第一阶段"%state.hexes.size()
 		if generated_v3_npc_mode:map_title.text="村庄冒险 · "+str(state.generated_world.seed_token)
 		elif generated_v3_village_mode:map_title.text="村落行囊探索 · "+str(state.generated_world.seed_token)
+		if actor_status_mode:map_title.text="行动状态测试 · "+str(state.generated_world.seed_token)
 	hero_subtitle.text = "框架测试 · 回合%d" % state.turn
 	update_character_status(actor,state.turn,state)
 	hero_label.tooltip_text = hero_label.text
 	for child in inventory_box.get_children(): child.queue_free()
-	var statuses: Array[String]=PlayerDetails.status_lines(actor)
+	var statuses: Array[String]=playtest.status_details("actor_player") if actor_action_mode else PlayerDetails.status_lines(PlayerDetails.adapt_actor(state,actor))
 	inventory_box.add_child(label("当前状态",18))
 	if statuses.is_empty(): inventory_box.add_child(label("没有持续状态",15,MUTED))
 	for line in statuses:
@@ -2340,7 +2486,7 @@ func refresh_playtest_world(animate_changes: bool = false) -> void:
 		if not state.items.has(id): continue
 		var item: Dictionary = state.items[id]
 		inventory_box.add_child(label("%s ×%d%s" % [item.name, item.quantity," · 已装备" if id in actor.get("equipment",{}).values() else ""], 18))
-		if generated_mode and playtest.has_method("item_reference") and (not generated_v3_enemy_mode or id=="item_travel_bundle"):
+		if generated_mode and playtest.has_method("item_reference") and (not generated_v3_enemy_mode or id=="item_travel_bundle") and (not actor_action_mode or not playtest.item_reference(str(id)).is_empty()):
 			var select_button=button("查看"+str(item.name),select_generated_item.bind(str(id)));select_button.tooltip_text="只选择和查看，不会放下或使用";inventory_box.add_child(select_button)
 		var description := label(String(item.description), 15, MUTED)
 		description.custom_minimum_size.x = 420; description.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -2353,7 +2499,7 @@ func refresh_playtest_world(animate_changes: bool = false) -> void:
 	for item in ground_items:
 		inventory_box.add_child(label("%s ×%d" % [item.name,item.quantity],18))
 		if generated_mode and item.get("hex",[])!=actor.hex:inventory_box.add_child(label("留在（%d，%d），尚未拾回"%item.hex,15,MUTED))
-		if generated_mode and playtest.has_method("item_reference"):
+		if generated_mode and playtest.has_method("item_reference") and (not actor_action_mode or not playtest.item_reference(str(item.id)).is_empty()):
 			var select_button=button("查看"+str(item.name),select_generated_item.bind(str(item.id)));select_button.tooltip_text="只选择和查看，不会自动拾取";inventory_box.add_child(select_button)
 		var description=label(str(item.get("description","")),15,MUTED);description.custom_minimum_size.x=420;description.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;inventory_box.add_child(description)
 	update_playtest_controls()
@@ -2374,6 +2520,7 @@ func select_generated_item(id: String) -> void:
 	show_focus_details()
 
 func _input(event: InputEvent) -> void:
+	if _api_settings_open(): return
 	if not event is InputEventKey or not event.pressed or event.echo: return
 	if event.keycode == KEY_F11:
 		toggle_fullscreen(); get_viewport().set_input_as_handled()
@@ -2581,3 +2728,173 @@ func continue_v3_equipment_adventure()->void:
 			for entry in _runtime_adapter().narration_entries():append_journal("叙事记录 · 第%d回合"%int(entry.turn),str(entry.narration))
 			if not str(prose.get("warning","")).is_empty():append_journal("部分文字未恢复",str(prose.warning))
 	else:_switch_mode("generated_v3_equipment")
+
+
+func _river_entry_ui_snapshot() -> Dictionary:
+	return {"selected_focus":selected_focus.duplicate(true),"selected_hex":[selected.x,selected.y],"goal":goal.text,"signed_goal":_signed_sample_goal,"signed_display":_signed_sample_display,"mode_epoch":_mode_epoch,"board_instance":str(board.get_instance_id()),"playtest_instance":str(playtest.get_instance_id()) if playtest!=null else "none"}
+
+func _river_entry_modal_visible(node: Node) -> bool:
+	for child in node.get_children():
+		if child is Window and child.visible:return true
+		if _river_entry_modal_visible(child):return true
+	return false
+
+func open_river_experiment() -> void:
+	if not playtest_mode or playtest==null:
+		set_status("请先进入正式旅程，再显式打开限定河流实验。");return
+	if not _can_leave_current_adventure():return
+	var status_:Dictionary={"world_build_busy":world_build_busy,"generated_start_busy":generated_start_busy,"end_turn_busy":end_turn_busy or end_turn_requested,"runtime_busy":(is_instance_valid(runtime_ai) and runtime_ai.busy()) or _river_entry_modal_visible(self),"active_action":active_action}
+	# No eager river preload/mesh at startup; keep the accepted default untouched.
+	if not is_instance_valid(river_entry_controller):
+		var script:Script=load("res://view/generated_v3_river_entry/controller.gd")
+		if script==null:set_status("实验入口未能载入；原旅程保持不变。");return
+		river_entry_controller=script.new();add_child(river_entry_controller)
+		river_entry_controller.returned.connect(func(result:Dictionary):set_status("已返回原旅程；实验使用独立进度。" if result.get("ok",false) else str(result.get("errors",[]))))
+	var opened:Dictionary=river_entry_controller.open(self,playtest,status_,viewport,_river_entry_ui_snapshot)
+	if not opened.get("ok",false):set_status("实验未打开："+str(opened.get("errors",[])))
+
+
+func start_actor_action_test()->void:
+	if world_build_busy or generated_start_busy or not _can_leave_current_adventure():return
+	if not generated_v3_mode or playtest==null:
+		set_status("先打开已有新地形村庄地图，再以同一来源新开统一行动测试；不会读取或迁移旧进度。");return
+	var candidate:RefCounted=ActorEntryView.new(playtest.source.data)
+	if not candidate.ready().ok:set_status("统一行动测试未建立："+str(candidate.ready()));return
+	_switch_mode_to("actor_actions_v2",candidate)
+
+func continue_actor_action_test()->void:
+	if world_build_busy or generated_start_busy or not _can_leave_current_adventure():return
+	if actor_action_adventure!=null:_switch_mode("actor_actions_v2");return
+	var candidate:RefCounted=ActorEntryView.new()
+	var checked:Dictionary=candidate.load_file()
+	if not checked.get("ok",false):set_status("独立测试存档未读取，当前旅程保留："+str(checked));return
+	actor_entry_restore_requested=true
+	_switch_mode_to("actor_actions_v2",candidate)
+	actor_entry_restore_requested=false
+
+func start_actor_status_test()->void:
+	if world_build_busy or generated_start_busy or not _can_leave_current_adventure():return
+	if not generated_v3_mode or playtest==null:
+		set_status("先打开已有新地形村庄地图，再以同一来源新开行动状态测试；不会读取或迁移旧进度。");return
+	var candidate:RefCounted=StatusEntryView.new(playtest.source.data)
+	if not candidate.ready().ok:set_status("行动状态测试未建立："+str(candidate.ready()));return
+	_switch_mode_to("actor_status_v1",candidate)
+
+func continue_actor_status_test()->void:
+	if world_build_busy or generated_start_busy or not _can_leave_current_adventure():return
+	if actor_status_adventure!=null:_switch_mode("actor_status_v1");return
+	var candidate:RefCounted=StatusEntryView.new()
+	var checked:Dictionary=candidate.load_file()
+	if not checked.get("ok",false):set_status("独立状态存档未读取，当前旅程保留："+str(checked));return
+	actor_entry_restore_requested=true
+	_switch_mode_to("actor_status_v1",candidate)
+	actor_entry_restore_requested=false
+
+func _actor_entry_proposal_schema()->String:
+	return playtest.proposal_schema() if actor_status_mode else "actor_intent_proposal/v1"
+
+func _prepare_actor_decision()->void:
+	if not actor_action_mode or not _waiting_enemy_phase():return
+	if not playtest.decision_pending():
+		var grant:Dictionary=playtest.decision_request()
+		if not grant.get("ok",false):set_status("意图候选请求未建立："+str(grant));return
+	sync_playtest_request()
+	set_status("敌方等待外部意图候选；没有预设攻击。可导出请求并人工导入，或明确启用接口。")
+
+func _request_actor_decision()->void:
+	if not actor_render_error.is_empty() or not actor_action_mode or not _waiting_enemy_phase():return
+	_prepare_actor_decision()
+	var result:Dictionary=runtime_ai.request_intention()
+	if not result.get("ok",false):set_status("意图请求尚未发送："+str(result))
+
+func _on_actor_intention_ready(actor_id:String,accepted_goal:String)->void:
+	if not actor_action_mode or playtest==null or playtest.action_copy().get("actor_id")!=actor_id:return
+	# Never replace the player's editor with a hostile goal.
+	append_journal("敌方 · 外部意图候选",accepted_goal)
+	end_turn_requested=true;sync_playtest_request()
+	if not _api_settings_open() and runtime_ai.automatic_assessment_enabled():runtime_ai.request_assessment()
+
+
+func _restore_actor_entry_history()->void:
+	journal.clear()
+	for entry in playtest.journal_entries():append_journal(str(entry.get("title","冒险记录")),str(entry.get("text","")))
+	var prose:Dictionary=playtest.load_sidecar(playtest.default_save_path())
+	for entry in playtest.narration_entries():append_journal("叙事记录 · 第%d回合"%int(entry.turn),str(entry.narration))
+	end_turn_requested=playtest.phase()!="idle"
+	var pending:Dictionary=playtest.action_copy()
+	if not pending.is_empty():
+		if pending.get("actor_id")=="actor_player":set_player_intent(str(pending.goal))
+		append_journal("敌方 · 待完成的行动" if pending.get("actor_id")!="actor_player" else "你 · 待完成的行动",str(pending.goal))
+	append_journal("行动状态测试 · 继续" if actor_status_mode else "统一行动测试 · 继续","原 pending 阶段、结果和回执已恢复；没有重新选意图或重掷。")
+	if not str(prose.get("warning","")).is_empty():append_journal("部分文字未恢复",str(prose.warning))
+
+
+func open_natural_coast_experiment(recipe: String) -> void:
+	if not playtest_mode or playtest==null:
+		set_status("请先进入正式旅程，再显式打开自然海岸基础探索。");return
+	if not _can_leave_current_adventure():return
+	var status_:Dictionary={"world_build_busy":world_build_busy,"generated_start_busy":generated_start_busy,"end_turn_busy":end_turn_busy or end_turn_requested,"runtime_busy":(is_instance_valid(runtime_ai) and runtime_ai.busy()) or _river_entry_modal_visible(self),"active_action":active_action}
+	# No eager river preload/mesh at startup; keep the accepted default untouched.
+	if not is_instance_valid(natural_coast_entry_controller):
+		var script:Script=load("res://view/generated_natural_coast_entry/controller.gd")
+		if script==null:set_status("实验入口未能载入；原旅程保持不变。");return
+		natural_coast_entry_controller=script.new();add_child(natural_coast_entry_controller)
+		natural_coast_entry_controller.returned.connect(func(result:Dictionary):set_status("已返回原旅程；实验使用独立进度。" if result.get("ok",false) else str(result.get("errors",[]))))
+	var opened:Dictionary=natural_coast_entry_controller.open(self,playtest,status_,viewport,_river_entry_ui_snapshot,recipe)
+	if not opened.get("ok",false):set_status("实验未打开："+str(opened.get("errors",[])))
+
+func _api_settings_open() -> bool:
+	return not _api_input_snapshot.is_empty() or (is_instance_valid(runtime_connection_panel) and is_instance_valid(runtime_connection_panel.settings_dialog) and runtime_connection_panel.settings_dialog.visible)
+
+func _on_api_modal_visibility(open: bool) -> void:
+	if open:
+		if not _api_input_snapshot.is_empty(): return
+		_enemy_dispatch_generation+=1
+		_api_input_snapshot = {"board": board}
+		if is_instance_valid(board):
+			_api_input_snapshot.merge({"input": board.is_processing_input(), "unhandled": board.is_processing_unhandled_input(), "keys": board.is_processing_unhandled_key_input()})
+			board.set_process_input(false); board.set_process_unhandled_input(false); board.set_process_unhandled_key_input(false)
+			for field in ["orbit_dragging", "dragging", "panning"]:
+				if field in board: board.set(field, false)
+	else: _restore_api_input()
+
+func _restore_api_input() -> void:
+	# Consume the closing Enter/Escape/click before allowing background input.
+	await get_tree().process_frame
+	if is_instance_valid(runtime_connection_panel) and is_instance_valid(runtime_connection_panel.settings_dialog) and runtime_connection_panel.settings_dialog.visible: return
+	var previous: Variant = _api_input_snapshot.get("board")
+	if is_instance_valid(previous) and previous == board:
+		previous.set_process_input(bool(_api_input_snapshot.get("input", false)))
+		previous.set_process_unhandled_input(bool(_api_input_snapshot.get("unhandled", false)))
+		previous.set_process_unhandled_key_input(bool(_api_input_snapshot.get("keys", false)))
+	_api_input_snapshot.clear()
+
+
+
+func _queue_required_enemy_turn()->void:
+	if _api_settings_open() or process_mode==Node.PROCESS_MODE_DISABLED or not _waiting_enemy_phase() or not is_instance_valid(runtime_ai):return
+	if actor_action_mode and playtest.decision_pending():return
+	var runtime_epoch:Variant=runtime_ai.get("_epoch")
+	if not ActorEntryView.C.integer(runtime_epoch):return
+	var state:Dictionary=playtest.state_copy()
+	_enemy_dispatch_generation+=1
+	var ticket:Dictionary={"generation":_enemy_dispatch_generation,"mode_epoch":_mode_epoch,"runtime_epoch":runtime_epoch,"view_instance":str(playtest.get_instance_id()),"engine_instance":str(playtest.engine.get_instance_id()),"world_id":str(state.get("world_id","")),"state_version":state.get("state_version"),"turn_hash":ActorEntryView.C.digest(state.get("combat_turn",{}))}
+	if not ActorEntryView.C.safe(ticket):return
+	_dispatch_required_enemy_turn.call_deferred(weakref(playtest),ticket)
+
+func _dispatch_required_enemy_turn(receiver_ref:WeakRef,ticket:Dictionary)->void:
+	if not ActorEntryView.C.exact_fields(ticket,["generation","mode_epoch","runtime_epoch","view_instance","engine_instance","world_id","state_version","turn_hash"]) or not ActorEntryView.C.safe(ticket):return
+	for field in ["generation","mode_epoch","runtime_epoch","state_version"]:
+		if not ActorEntryView.C.integer(ticket[field]):return
+	for field in ["view_instance","engine_instance","world_id","turn_hash"]:
+		if not ticket[field] is String:return
+	if ticket.generation!=_enemy_dispatch_generation:return
+	# Consume even a dropped callback. Returning from a guest cannot replay it.
+	_enemy_dispatch_generation+=1
+	if _api_settings_open() or process_mode==Node.PROCESS_MODE_DISABLED or not is_instance_valid(runtime_ai) or receiver_ref==null:return
+	var receiver:RefCounted=receiver_ref.get_ref()
+	if receiver==null or receiver!=playtest or _mode_epoch!=ticket.mode_epoch or runtime_ai.get("_epoch")!=ticket.runtime_epoch:return
+	if str(playtest.get_instance_id())!=ticket.view_instance or str(playtest.engine.get_instance_id())!=ticket.engine_instance or not _waiting_enemy_phase():return
+	var state:Dictionary=playtest.state_copy()
+	if state.get("world_id")!=ticket.world_id or state.get("state_version")!=ticket.state_version or ActorEntryView.C.digest(state.get("combat_turn",{}))!=ticket.turn_hash:return
+	_begin_required_enemy_turn()

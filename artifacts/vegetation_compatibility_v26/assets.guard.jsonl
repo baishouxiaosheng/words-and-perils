@@ -1,0 +1,4 @@
+{"event": "baseline", "elapsed_s": 0.0001, "utc_epoch": 1791228331.9287941, "cgroup_current": 6375460864, "cgroup_limit": 8589934592, "stop_threshold": 8053063680, "reserve_bytes": 536870912, "timeout_s": 15.0, "executable": "/opt/godot/4.6.3/Godot_v4.6.3-stable_linux.x86_64"}
+{"event": "owned_launched", "elapsed_s": 0.0006, "utc_epoch": 1791228331.9292502}
+{"event": "sample", "elapsed_s": 0.0007, "utc_epoch": 1791228331.9293916, "cgroup_current": 6375342080, "process_cpu_seconds": 0.0, "VmRSS_kib": 92, "VmHWM_kib": 92, "VmSize_kib": 138412}
+{"event": "exited", "elapsed_s": 0.2523, "utc_epoch": 1791228332.181028, "child_exit": 0, "cgroup_current": 6375817216}

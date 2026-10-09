@@ -1,0 +1,72 @@
+{
+  "checks": 47,
+  "failures": [],
+  "inputs": [
+    {
+      "filename": "generated_v3_village_equipment_v1.json",
+      "input_sha256": "bf0815e9b3ee265c8df90a0ace21840c02600708c9e9b669ff608e010788e3d3",
+      "profile": "generated_v3_village_equipment/v1",
+      "turn": 8
+    },
+    {
+      "filename": "equipment_poisoned_history.json",
+      "input_sha256": "19269f461ffc5147a2eb80a4f3f7a74ee83a6e8c92fa798dd57aecbc7dc998ca",
+      "profile": "generated_v3_village_equipment/v1",
+      "turn": 12
+    },
+    {
+      "filename": "generated_v3_village_enemy_v1.json",
+      "input_sha256": "9a236f96cc773c1a85d11a2fef5a3dce7fbaf0500e456f99df11fbaf68171f79",
+      "profile": "generated_v3_village_enemy/v1",
+      "turn": 5
+    },
+    {
+      "filename": "terminal_presentation_save.json",
+      "input_sha256": "2946c7f1af5597e6741ee690612ba8b1390b1d9436632d00d44121d76ed19135",
+      "profile": "generated_v3_village_enemy/v1",
+      "turn": 7
+    }
+  ],
+  "mock_only": true,
+  "network_calls": 0,
+  "ok": true,
+  "scope": "actual adopted-copy Main parse, exact prior pickup/equip/poison history and JSON/disk, one additional assessed ordinary swap, no RNG reselection, two genuine V21 files unchanged",
+  "snapshots": [
+    {
+      "disk_exact": true,
+      "health": 12,
+      "json_exact": true,
+      "label": "loaded_0",
+      "phase": "idle",
+      "turn": 8,
+      "weapon": "item_coast_staff"
+    },
+    {
+      "disk_exact": true,
+      "health": 12,
+      "json_exact": true,
+      "label": "new_swap_pending",
+      "phase": "awaiting_assessment",
+      "turn": 8,
+      "weapon": "item_coast_staff"
+    },
+    {
+      "disk_exact": true,
+      "health": 12,
+      "json_exact": true,
+      "label": "new_swap_committed",
+      "phase": "idle",
+      "turn": 9,
+      "weapon": "item_raider_blade"
+    },
+    {
+      "disk_exact": true,
+      "health": 0,
+      "json_exact": true,
+      "label": "loaded_1",
+      "phase": "idle",
+      "turn": 12,
+      "weapon": "item_coast_staff"
+    }
+  ]
+}

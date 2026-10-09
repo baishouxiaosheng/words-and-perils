@@ -1,0 +1,485 @@
+{
+  "utc": "2026-10-05T23:11:42.623510+00:00",
+  "source_freeze": "artifacts/FINAL_SOURCE_FREEZE.json",
+  "source_freeze_sha256": "c27cb5d203d1a350a46a5f6de64a4a4bf30a09fcb2073166f8b94c30977ae716",
+  "production_manifest_sha256": "20a0f20212a59e580f2a96df1e97e8de108f67e7f7689a169f8dba5de8c9031a",
+  "gates": [
+    {
+      "log": "artifacts/dictionary_native/attempt4/test.log",
+      "log_sha256": "8ebffb2a7258982db4dacd4fdf95d6405da41451e50da79f266d79a2d7609705",
+      "guard": "artifacts/dictionary_native/attempt4/guard.jsonl",
+      "guard_sha256": "31b089f8e3714419c1ee4f37e2c10039eab6500c225dd02a32e609108b5b1428",
+      "exit": 0,
+      "elapsed_s": 1.8651,
+      "assertions": 140,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/small_ordinary_native/details.log",
+      "log_sha256": "ff0efac3e5b8bfa81c85f228791c96e95b841410fc8a68f2c9383e201d85d63a",
+      "guard": "artifacts/small_ordinary_native/details_guard.jsonl",
+      "guard_sha256": "3507038d7c3e9e91c2b3139a25d790d2527c6efc9d42a52599c82ad81e802ca1",
+      "exit": 0,
+      "elapsed_s": 0.3532,
+      "assertions": 76,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/small_ordinary_native/history.log",
+      "log_sha256": "ea47e973b02866bc1b9e4c6b211eca2c84e84d85476d77c991f234b86c4ef92e",
+      "guard": "artifacts/small_ordinary_native/history_guard.jsonl",
+      "guard_sha256": "aa0e965ac72183746a8ba771bc7ed933d6560f07bb01ad152826f2502cf2f74d",
+      "exit": 0,
+      "elapsed_s": 1.0077,
+      "assertions": 22,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/small_ordinary_native/legacy.log",
+      "log_sha256": "ee4ff1095906ead00b8c1e5cb8d29a14f1a4b934fa52733ad40207fa9421d5bd",
+      "guard": "artifacts/small_ordinary_native/legacy_guard.jsonl",
+      "guard_sha256": "39b60f5b0f5ffd3792cf5506e544be6bda42e5fca070f931111c0ff36ca7b215",
+      "exit": 0,
+      "elapsed_s": 0.9071,
+      "assertions": 132,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/small_ordinary_native/loop.log",
+      "log_sha256": "5cd6bd359843e2299fc285deb5b6a7eb65e8e8279e3bc075b3a0a8e58eac2268",
+      "guard": "artifacts/small_ordinary_native/loop_guard.jsonl",
+      "guard_sha256": "c4b26383823f07445bfdc23cd7b58ca122a7be6d66e7b27f8ec46ca2264f1cf0",
+      "exit": 0,
+      "elapsed_s": 1.8635,
+      "assertions": 52,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/small_ordinary_native/restart.log",
+      "log_sha256": "6adfe1e87bd69e0a008f1d1915a28f359382d31e58d196f118a45dd5fbd35af3",
+      "guard": "artifacts/small_ordinary_native/restart_guard.jsonl",
+      "guard_sha256": "f92ea2a6eba2dec0b5c6e6c6ea682362c9fdc0221232c7e5db3f02fc5f2b62a1",
+      "exit": 0,
+      "elapsed_s": 0.8566,
+      "assertions": 3,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/adapter_legacy.log",
+      "log_sha256": "7e42494f34d2be65c8fa97841b1bba2af2a5848b942464f05fd6f5f64e2833da",
+      "guard": "artifacts/full_dictionary_native/adapter_legacy_guard.jsonl",
+      "guard_sha256": "d7b10cb6b542868e6cf7c42e9352734904c99b61926faa27ae663e9b86b0d4ae",
+      "exit": 0,
+      "elapsed_s": 3.0718,
+      "assertions": 11,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/adapter_legacy_reopen.log",
+      "log_sha256": "aad6948a9244b5a21786d43c42c4eb088ba0bd038e4f3656ac642cea7a5ed9b9",
+      "guard": "artifacts/full_dictionary_native/adapter_legacy_reopen_guard.jsonl",
+      "guard_sha256": "dfbc4378f5b92ccc8697e2b80d5f927465c8e77eb993776051d3237ce91dcbb2",
+      "exit": 0,
+      "elapsed_s": 2.6189,
+      "assertions": 10,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/adapter_pending.log",
+      "log_sha256": "537ffaa19d1208f331677a804ca7791e037c3135395f81c7ece90378ba1f7a1d",
+      "guard": "artifacts/full_dictionary_native/adapter_pending_guard.jsonl",
+      "guard_sha256": "8c9b52227edb761e444420884c9295a6e7179a4092e17b3ae023b9e4befc416e",
+      "exit": 0,
+      "elapsed_s": 4.9361,
+      "assertions": 16,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/adapter_poison.log",
+      "log_sha256": "b5353dda18433bf6505d7eb01b42f4a937bf62d45dcd17c87091d9caa5189bec",
+      "guard": "artifacts/full_dictionary_native/adapter_poison_guard.jsonl",
+      "guard_sha256": "bde5ea25bafaa018e433680687a7b11fd67c6daf05adf634f5c31dff0efc189e",
+      "exit": 0,
+      "elapsed_s": 5.0369,
+      "assertions": 21,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/adapter_poison_reopen.log",
+      "log_sha256": "30f2d30442f78e75f6b28a2d588a45a4b187bb15c929303c625f69ae99e4f36c",
+      "guard": "artifacts/full_dictionary_native/adapter_poison_reopen_guard.jsonl",
+      "guard_sha256": "60fbcfd0313d10b18e92084ad27c08d3d5ef166e32403df959d61cb3d385e1c5",
+      "exit": 0,
+      "elapsed_s": 3.9301,
+      "assertions": 15,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/adapter_prepared_reopen.log",
+      "log_sha256": "563a5d041faa139d6cad3ad91a0f8909cb6f34207a0bb03c45e75b1380b1ba2f",
+      "guard": "artifacts/full_dictionary_native/adapter_prepared_reopen_guard.jsonl",
+      "guard_sha256": "fc47b37e8e9d45c40d851fb79911d5d36648a8e23b351862bb1baf0ef5048c71",
+      "exit": 0,
+      "elapsed_s": 3.1717,
+      "assertions": 13,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/adapter_reject_legacy.log",
+      "log_sha256": "e9f236a922d2c475a405de8efa31d6af756402de88c04e27625f60eea8c283e0",
+      "guard": "artifacts/full_dictionary_native/adapter_reject_legacy_guard.jsonl",
+      "guard_sha256": "6d9ef1592dcc0328b83365b373ce8462bd6a1ba37a24f43dbb8222641fd0d07e",
+      "exit": 0,
+      "elapsed_s": 1.863,
+      "assertions": 13,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/adapter_staged_reopen.log",
+      "log_sha256": "cf207a064aff9c8417d45d7d4d209558bf8eab5129e33605ba723123dd01a37d",
+      "guard": "artifacts/full_dictionary_native/adapter_staged_reopen_guard.jsonl",
+      "guard_sha256": "c2f5549a9234dcba2d279104c484803742527a55555ad4513b4f10314c8e3517",
+      "exit": 0,
+      "elapsed_s": 4.6825,
+      "assertions": 15,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/budget_matrix_equipment.log",
+      "log_sha256": "be83469e9e976afbfb70fc23df16940bfc7742c449b11907ca1279bf948115ed",
+      "guard": "artifacts/full_dictionary_native/budget_matrix_equipment_guard.jsonl",
+      "guard_sha256": "e8e93b2683c39014891745a3a09fdd6f4fbee56cb39677151566688a0d24a67e",
+      "exit": 0,
+      "elapsed_s": 6.1412,
+      "assertions": 25,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/budget_matrix_status.log",
+      "log_sha256": "d588ec4d7933ac358270a254e4d8a1fd6071451e2c6faf2f4c258d3f3b1d6485",
+      "guard": "artifacts/full_dictionary_native/budget_matrix_status_guard.jsonl",
+      "guard_sha256": "12b3b77498b4f09eb91f33702f9243acae1c29d8726b594b9644d1d4ea52d12b",
+      "exit": 0,
+      "elapsed_s": 22.5172,
+      "assertions": 234,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/effect_events.log",
+      "log_sha256": "967a49586c29f9ce367f5a3e0843bb25742756f0f193cc06a00d6ad0b7349e0f",
+      "guard": "artifacts/full_dictionary_native/effect_events_guard.jsonl",
+      "guard_sha256": "03c9fc3b3b2ff433799d591f8718d00dd85334ae9bc0379b7c6ce3a7506d6818",
+      "exit": 0,
+      "elapsed_s": 1.0103,
+      "assertions": 18,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/equipment.log",
+      "log_sha256": "b8962c037fd1b807c0eb98dfaceeb7b8310ae1b17d4b9aeac6b06fed31ed8e2e",
+      "guard": "artifacts/full_dictionary_native/equipment_guard.jsonl",
+      "guard_sha256": "00ea5065f2ea5b4bcefe2f73c087c05a4e5f4ba6ee54ac485a8fb89f6ff97209",
+      "exit": 0,
+      "elapsed_s": 23.6394,
+      "assertions": 44,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/main_antidote.log",
+      "log_sha256": "18173a0e880592a5c51ef4569338231cc1b96bf27b93dfc0c54685e6a442acbb",
+      "guard": "artifacts/full_dictionary_native/main_antidote_guard.jsonl",
+      "guard_sha256": "5bf48615b2835d2b00c11936606f95deabd5954934793232d4100c0c6bbecea2",
+      "exit": 0,
+      "elapsed_s": 22.1752,
+      "assertions": 45,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/main_antidote_history.log",
+      "log_sha256": "df4d89a37f317a400ceb39e63b014bc9ae4f55329d7319ef70708649555d2d59",
+      "guard": "artifacts/full_dictionary_native/main_antidote_history_guard.jsonl",
+      "guard_sha256": "1c1b607bd1cf9a9fd3da453c53b9a647635ab1bae0e398b6b755bb437ac31788",
+      "exit": 0,
+      "elapsed_s": 1.8638,
+      "assertions": 14,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/main_flight.log",
+      "log_sha256": "1e4df30a706272923e612a03f274a8d2559a30dc8eb6b42e3e0fed0e297c9974",
+      "guard": "artifacts/full_dictionary_native/main_flight_guard.jsonl",
+      "guard_sha256": "d38e9b7dd5a140cb4416212e42e3f5bb31e3c2a20c9445c6cefa828bebad44b9",
+      "exit": 0,
+      "elapsed_s": 26.4329,
+      "assertions": 71,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/main_flight_history.log",
+      "log_sha256": "42f8abc0354b7a9c10cab534b8e9b52fa939421295d60a80f228d7c3c800642a",
+      "guard": "artifacts/full_dictionary_native/main_flight_history_guard.jsonl",
+      "guard_sha256": "18c0a4025f59885832a763d9444470003d938b583a0561b384f576dd22588846",
+      "exit": 0,
+      "elapsed_s": 1.8645,
+      "assertions": 14,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/main_flight_reopen.log",
+      "log_sha256": "df718c5a189d5ec56a69676fea4c19cacf39432bb14a5cc9a7d6035f6b8cd512",
+      "guard": "artifacts/full_dictionary_native/main_flight_reopen_guard.jsonl",
+      "guard_sha256": "42a458eb93ab77eb016110af11742016371a03ba4509d10610016f83d794571f",
+      "exit": 0,
+      "elapsed_s": 32.042,
+      "assertions": 74,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/main_poison.log",
+      "log_sha256": "5334a21496e3d98f2594a0cd92cd5b92f5c4c54b78f524b40ca2aa05bdb9ef93",
+      "guard": "artifacts/full_dictionary_native/main_poison_guard.jsonl",
+      "guard_sha256": "dae3e55c8f03e8e8ce25c80edce33b864574bc40b560c847b4d2882098463df4",
+      "exit": 0,
+      "elapsed_s": 26.1027,
+      "assertions": 67,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/main_poison_history.log",
+      "log_sha256": "aa66f49c593ee51cc56b10b7e780c6a3dace39c6164b9d85aaf8c2f2d76397f7",
+      "guard": "artifacts/full_dictionary_native/main_poison_history_guard.jsonl",
+      "guard_sha256": "f577c4f8f3ab248f5b7a3444fe191d0661c4b40c8d88faffd47f34b47951d0ca",
+      "exit": 0,
+      "elapsed_s": 1.8634,
+      "assertions": 14,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/main_poison_reopen.log",
+      "log_sha256": "d18534262a91d9bec4dbd3e8db3fada41059cdf12d0b6ac01ca68fd10f0c666e",
+      "guard": "artifacts/full_dictionary_native/main_poison_reopen_guard.jsonl",
+      "guard_sha256": "29d348ad2b34b08b56c8a20d9cd1510c06bb24d974bfea884a7fea8324c0c46e",
+      "exit": 0,
+      "elapsed_s": 21.6108,
+      "assertions": 53,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_dictionary_native/visual_poison.log",
+      "log_sha256": "59141a045304db294272ee936acb5f48f17da38c85d924e31b7714d766b992f7",
+      "guard": "artifacts/full_dictionary_native/visual_poison_guard.jsonl",
+      "guard_sha256": "2d51f68da976b04fe778cd0694b9c5f3d6b28e20df058a84daad548e0c8c9e0a",
+      "exit": 0,
+      "elapsed_s": 32.6701,
+      "assertions": 70,
+      "warnings": [
+        "WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver."
+      ],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_v2_final_native/budget_full_history.log",
+      "log_sha256": "9e52d101e746dc37bdc57f4f5c351dad1f4882b663cdb550aac79779d0d50fdb",
+      "guard": "artifacts/full_v2_final_native/budget_full_history_guard.jsonl",
+      "guard_sha256": "8eeb22dda39fc8f6e8208f253ca483ea2e27b01e26a214df59c0dc7bc3e6f8b6",
+      "exit": 0,
+      "elapsed_s": 49.3156,
+      "assertions": 457,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_v2_final_native/budget_matrix_equipment.log",
+      "log_sha256": "e77c0e80ede7a5d7837e955fd6d0b0a9916326f4a4d4ec8c7fd8d548a1174537",
+      "guard": "artifacts/full_v2_final_native/budget_matrix_equipment_guard.jsonl",
+      "guard_sha256": "eec1a9d8dee1a8d2ffc0591ade236b6a8cea841212ff15aef11d5e490055e044",
+      "exit": 0,
+      "elapsed_s": 6.5054,
+      "assertions": 25,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_v2_final_native/budget_matrix_status.log",
+      "log_sha256": "294f54cb470f1846338dc1a3512ccb545824f2250908f567febc9e1acfb25f07",
+      "guard": "artifacts/full_v2_final_native/budget_matrix_status_guard.jsonl",
+      "guard_sha256": "d3745a46cb5830f1431df02229edcfad7213d776cf9e5279f9aa63de19882fed",
+      "exit": 0,
+      "elapsed_s": 22.9655,
+      "assertions": 226,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_v2_final_native/main_flight.log",
+      "log_sha256": "2d601bee00c107bd2ca97830b910910385f932d9d647bedc44ea1878a0c7d186",
+      "guard": "artifacts/full_v2_final_native/main_flight_guard.jsonl",
+      "guard_sha256": "88179568e1aeec920b47acd65605f8b0443ff16d763800197c09ab796c443b4e",
+      "exit": 0,
+      "elapsed_s": 26.6161,
+      "assertions": 89,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_v2_final_native/main_flight_history.log",
+      "log_sha256": "7c81253416729e0ea04324d734da89a911587d6bbb7b9d264ab50d57c71e1640",
+      "guard": "artifacts/full_v2_final_native/main_flight_history_guard.jsonl",
+      "guard_sha256": "cac4badd720b3a59e5e103135cf1e3692175b0f331269cc53e6ba4d2abf7d640",
+      "exit": 0,
+      "elapsed_s": 1.8637,
+      "assertions": 14,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_v2_final_native/main_flight_reopen.log",
+      "log_sha256": "318f7f505c2b98536f61897a50b1192459e3e86e8469327a78cc6eb6d74be4ac",
+      "guard": "artifacts/full_v2_final_native/main_flight_reopen_guard.jsonl",
+      "guard_sha256": "1b0db8f91624bba613e9a1602eb1aa04b9179c51c109f149d0972c1527f57413",
+      "exit": 0,
+      "elapsed_s": 33.667,
+      "assertions": 92,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_v2_final_native/visual_poison.log",
+      "log_sha256": "cd68dcda629e668aa9d5206747ef1efae71809970615153c17687f02ad6ce1b5",
+      "guard": "artifacts/full_v2_final_native/visual_poison_guard.jsonl",
+      "guard_sha256": "b8b0ac8acde5ccf1b0fe3adc75d0b9ad161287a10917e484cf1f65768c1776b3",
+      "exit": 0,
+      "elapsed_s": 32.8267,
+      "assertions": 96,
+      "warnings": [
+        "WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver."
+      ],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/full_v2_final_native/weapon_commit.log",
+      "log_sha256": "d38de5b92bdf5a57dcbbd19bc01a7de1d405483cc86369a0dd77a8f07915ad80",
+      "guard": "artifacts/full_v2_final_native/weapon_commit_guard.jsonl",
+      "guard_sha256": "5ea49201b7fb8e9e7b4dd9e386a301588d51fbc3e6fcdb1e837d1f126b218ce3",
+      "exit": 0,
+      "elapsed_s": 103.6888,
+      "assertions": 397,
+      "warnings": [],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    },
+    {
+      "log": "artifacts/presentation_final_native/visual_poison.log",
+      "log_sha256": "7f6bc98f87a74bb18d91e9974d3fa05781b1346a2dfc6c3ed4f5fa56faf78bd4",
+      "guard": "artifacts/presentation_final_native/visual_poison_guard.jsonl",
+      "guard_sha256": "afd6be2d6f82b01ec8b3391457d8d98533f5526155f4021e9a01c389b536b600",
+      "exit": 0,
+      "elapsed_s": 35.9232,
+      "assertions": 104,
+      "warnings": [
+        "WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver."
+      ],
+      "scope": "delta-specific; see evidence map, never pooled as one source-identical run"
+    }
+  ],
+  "images": [
+    {
+      "path": "game/artifacts/status_river_gate/main_poison_host_status_calculation_scrolled.png",
+      "sha256": "b71e8772d4114bceecb558d5e66f931d435b7c0a3b9af4ae55d7895954bc07e7",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "game/artifacts/status_river_gate/main_poison_host_status_details.png",
+      "sha256": "1c8634a929dd1c50cfb1453f7136428e0493122db1fd18f34717fa223585d4df",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "game/artifacts/status_river_gate/main_poison_river_assessed.png",
+      "sha256": "7a54f678fa95a7df20503644a9b81c3476cfd27938c545840ec72c3d225aedc3",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "game/artifacts/status_river_gate/main_poison_river_controls_scrolled.png",
+      "sha256": "39866a38a1727fe0335a1edd7323e20c35a5c95d6534aa872a4afbc76db29c65",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "game/artifacts/status_river_gate/main_poison_river_diagnostics_open.png",
+      "sha256": "47edd0e4728ada4d822f7035ae1c8df356384b1cc456dfcb97b7c4f843aadc24",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "game/artifacts/status_river_gate/main_poison_river_idle.png",
+      "sha256": "e15ff43034842ee546f0ce560db3710fb5fe68d12c37797eed4c65f91842e647",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "model_calls": 0,
+  "native_input_claim": "final1080 images are actual offscreen viewport rendering with method-driven test actions; prior river OS input evidence is separate",
+  "canonical_modified": false,
+  "final_cgroup_current": 6121021440,
+  "guard_8GiB_reserve512MiB_unchanged": true,
+  "ordinary_budget": {
+    "public_cap": 65536,
+    "wrapper_cap": 4194304,
+    "short": 63771,
+    "100_chinese": 64027,
+    "300_chinese": 64627,
+    "300_margin": 909,
+    "largest_accepted_wrapper": 76591,
+    "whole_history_receipts": 8,
+    "selected_memory_records": 5,
+    "record_bytes": 3636,
+    "record_budget": 4096,
+    "long_4KiB_intents_supported": false
+  },
+  "previous_failures_retained": [
+    "full_native/equipment (VEGETATION_REPRODUCE, fixed by actual legacy Basic restoration)",
+    "full_native/budget_matrix_status (four ordinary requests over budget)",
+    "full_supplement_native/weapon_commit (two incorrect private-event fixture expectations)",
+    "full_ordinary_native/budget_full_history (300-character overflow)",
+    "full_exact_native/budget_full_history (300-character overflow by69B)",
+    "full_v2_native/budget_full_history (seven stale v1-message fixture assertions)"
+  ],
+  "independent_final_review": {
+    "accepted": true,
+    "path": "artifacts/FINAL_INDEPENDENT_ACCEPTANCE.md",
+    "sha256": "80b28b8e778eaef52c763af9afdb3e2d8e8c9b709b3ab53904c6fe5c2dded424"
+  },
+  "full_gameplay_scope": "poison/flight real sources, normal assessment/commit, focused details, traversal and new saves; other166 definitions remain library mechanisms without all source/action adapters",
+  "actual_adopted_copy_review": {
+    "path": "artifacts/INDEPENDENT_V27_MAPPING_REVIEW.md",
+    "sha256": "c791a4980bdc8c5e0f020099b9b21f4dc6c320f7744f11fa2ae902ca3e2d5edd"
+  }
+}

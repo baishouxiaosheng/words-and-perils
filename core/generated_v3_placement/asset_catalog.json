@@ -1,0 +1,128 @@
+{
+  "asset_root": "res://assets/city_districts/",
+  "assets": {
+    "village_barn": {
+      "aabb_max_xyz": [
+        0.2676660120487213,
+        1.1200000047683716,
+        0.27000001072883606
+      ],
+      "aabb_min_xyz": [
+        -0.2676660120487213,
+        0.0,
+        -0.27000001072883606
+      ],
+      "district": "village",
+      "footprint_radius": 0.3801908728515689,
+      "footprint_xz": [
+        0.5353320240974426,
+        0.5400000214576721
+      ],
+      "forward": "-Z",
+      "glb": "models/village_barn.glb",
+      "ground_collision": "none; footprint is advisory, not an authored rule blocker",
+      "height": 1.1200000047683716,
+      "id": "village_barn",
+      "lod0": {
+        "faces_authored": 251,
+        "materials": 1,
+        "triangles": 524,
+        "vertices_authored": 342
+      },
+      "lod1": {
+        "faces_authored": 155,
+        "materials": 1,
+        "triangles": 332,
+        "vertices_authored": 214
+      },
+      "lod1_glb": "lod1/village_barn_lod1.glb",
+      "lod1_sha256": "e5c72cafadb51e91daa2c2fe966067918336d79f3a1a944ed25ab58b2de7e72d",
+      "pivot": "ground center, Y=0",
+      "sha256": "9dd1ed588a033c00f19147f88cb0fbbf7257cbb0b06a8dfd1ad1ecf0619183f4"
+    },
+    "village_cottage_a": {
+      "aabb_max_xyz": [
+        0.2515140771865845,
+        1.1200000047683716,
+        0.2549999952316284
+      ],
+      "aabb_min_xyz": [
+        -0.2515140771865845,
+        0.0,
+        -0.2549999952316284
+      ],
+      "district": "village",
+      "footprint_radius": 0.35816801726445324,
+      "footprint_xz": [
+        0.503028154373169,
+        0.5099999904632568
+      ],
+      "forward": "-Z",
+      "glb": "models/village_cottage_a.glb",
+      "ground_collision": "none; footprint is advisory, not an authored rule blocker",
+      "height": 1.1200000047683716,
+      "id": "village_cottage_a",
+      "lod0": {
+        "faces_authored": 429,
+        "materials": 1,
+        "triangles": 936,
+        "vertices_authored": 598
+      },
+      "lod1": {
+        "faces_authored": 267,
+        "materials": 1,
+        "triangles": 564,
+        "vertices_authored": 366
+      },
+      "lod1_glb": "lod1/village_cottage_a_lod1.glb",
+      "lod1_sha256": "554b76fd6e05de78efa28b55c4ca3757b4000b786cf3db93e1383d751d63f541",
+      "pivot": "ground center, Y=0",
+      "sha256": "59c96f8cf19abd469e6cdb79e70d3241bafa9be36647dbad8d2373734676346b"
+    },
+    "village_cottage_b": {
+      "aabb_max_xyz": [
+        0.2515140771865845,
+        1.1200000047683716,
+        0.2549999952316284
+      ],
+      "aabb_min_xyz": [
+        -0.2515140771865845,
+        0.0,
+        -0.2549999952316284
+      ],
+      "district": "village",
+      "footprint_radius": 0.35816801726445324,
+      "footprint_xz": [
+        0.503028154373169,
+        0.5099999904632568
+      ],
+      "forward": "-Z",
+      "glb": "models/village_cottage_b.glb",
+      "ground_collision": "none; footprint is advisory, not an authored rule blocker",
+      "height": 1.1200000047683716,
+      "id": "village_cottage_b",
+      "lod0": {
+        "faces_authored": 429,
+        "materials": 1,
+        "triangles": 936,
+        "vertices_authored": 598
+      },
+      "lod1": {
+        "faces_authored": 267,
+        "materials": 1,
+        "triangles": 564,
+        "vertices_authored": 366
+      },
+      "lod1_glb": "lod1/village_cottage_b_lod1.glb",
+      "lod1_sha256": "97274055c8d4d78cf9ac3eaee69d83ee536679017a1be25aa9208599a18af8bc",
+      "pivot": "ground center, Y=0",
+      "sha256": "e119ac541c3de4007dcba668af7535a11728f7ef93daf91ba27e8413f485ef18"
+    }
+  },
+  "authorship": "Original mesh and palette. No third-party geometry, textures, or code copied.",
+  "material_path": "res://assets/city_districts/city_vertex_color.tres",
+  "material_sha256": "e2dfd83f08b41f22bc765f8297ad2c464b3c6e89fa5d3e23302f22f36fcaf3fb",
+  "material_shader_path": "res://assets/city_districts/city_vertex_color.gdshader",
+  "material_shader_sha256": "30728f437eff7976defcd946cf325253be29763d727125fcd5b99b27b571ddf5",
+  "schema_version": "generated_v3_placement_assets/v1"
+}

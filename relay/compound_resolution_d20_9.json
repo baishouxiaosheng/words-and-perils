@@ -1,0 +1,474 @@
+{
+  "recorded_example": true,
+  "label": "实际 Luna 模型中继记录 · 固定 D20=9 的测试回放",
+  "source": "LunaLOW assistant relay, externally authored during prototype construction; recorded test die 9, not a fresh live model call",
+  "phase": "resolution",
+  "goal": "喝下雾行药剂，穿过浅水走到那里，再试着说服守卫放下武器。",
+  "expected_state_version": 0,
+  "expected_target_hex": [
+    1,
+    -1
+  ],
+  "expected_snapshot": {
+    "actors": {
+      "actor_player": {
+        "health": {
+          "current": 20,
+          "max": 20
+        },
+        "hex": [
+          -2,
+          1
+        ],
+        "id": "actor_player",
+        "inventory": [
+          "item_mist_draught",
+          "item_ember_tonic",
+          "item_hemp_rope"
+        ],
+        "name": "旅人",
+        "stamina": {
+          "current": 10,
+          "max": 10
+        }
+      },
+      "actor_sentinel": {
+        "health": {
+          "current": 12,
+          "max": 12
+        },
+        "hex": [
+          2,
+          -1
+        ],
+        "id": "actor_sentinel",
+        "inventory": [],
+        "name": "遗迹守卫",
+        "stamina": {
+          "current": 8,
+          "max": 8
+        }
+      }
+    },
+    "board_radius": 4,
+    "events": [],
+    "flags": {},
+    "hexes": {
+      "-1,-1": {
+        "id": "hex_-1_-1",
+        "q": -1,
+        "r": -1,
+        "terrain": "swamp"
+      },
+      "-1,-2": {
+        "id": "hex_-1_-2",
+        "q": -1,
+        "r": -2,
+        "terrain": "swamp"
+      },
+      "-1,-3": {
+        "id": "hex_-1_-3",
+        "q": -1,
+        "r": -3,
+        "terrain": "swamp"
+      },
+      "-1,0": {
+        "id": "hex_-1_0",
+        "q": -1,
+        "r": 0,
+        "terrain": "plain"
+      },
+      "-1,1": {
+        "id": "hex_-1_1",
+        "q": -1,
+        "r": 1,
+        "terrain": "plain"
+      },
+      "-1,2": {
+        "id": "hex_-1_2",
+        "q": -1,
+        "r": 2,
+        "terrain": "wall"
+      },
+      "-1,3": {
+        "id": "hex_-1_3",
+        "q": -1,
+        "r": 3,
+        "terrain": "plain"
+      },
+      "-1,4": {
+        "id": "hex_-1_4",
+        "q": -1,
+        "r": 4,
+        "terrain": "plain"
+      },
+      "-2,-1": {
+        "id": "hex_-2_-1",
+        "q": -2,
+        "r": -1,
+        "terrain": "plain"
+      },
+      "-2,-2": {
+        "id": "hex_-2_-2",
+        "q": -2,
+        "r": -2,
+        "terrain": "plain"
+      },
+      "-2,0": {
+        "id": "hex_-2_0",
+        "q": -2,
+        "r": 0,
+        "terrain": "plain"
+      },
+      "-2,1": {
+        "id": "hex_-2_1",
+        "q": -2,
+        "r": 1,
+        "terrain": "plain"
+      },
+      "-2,2": {
+        "id": "hex_-2_2",
+        "q": -2,
+        "r": 2,
+        "terrain": "plain"
+      },
+      "-2,3": {
+        "id": "hex_-2_3",
+        "q": -2,
+        "r": 3,
+        "terrain": "plain"
+      },
+      "-2,4": {
+        "id": "hex_-2_4",
+        "q": -2,
+        "r": 4,
+        "terrain": "plain"
+      },
+      "-3,-1": {
+        "id": "hex_-3_-1",
+        "q": -3,
+        "r": -1,
+        "terrain": "plain"
+      },
+      "-3,0": {
+        "id": "hex_-3_0",
+        "q": -3,
+        "r": 0,
+        "terrain": "plain"
+      },
+      "-3,1": {
+        "id": "hex_-3_1",
+        "q": -3,
+        "r": 1,
+        "terrain": "plain"
+      },
+      "-3,2": {
+        "id": "hex_-3_2",
+        "q": -3,
+        "r": 2,
+        "terrain": "plain"
+      },
+      "-3,3": {
+        "id": "hex_-3_3",
+        "q": -3,
+        "r": 3,
+        "terrain": "plain"
+      },
+      "-3,4": {
+        "id": "hex_-3_4",
+        "q": -3,
+        "r": 4,
+        "terrain": "plain"
+      },
+      "-4,0": {
+        "id": "hex_-4_0",
+        "q": -4,
+        "r": 0,
+        "terrain": "plain"
+      },
+      "-4,1": {
+        "id": "hex_-4_1",
+        "q": -4,
+        "r": 1,
+        "terrain": "plain"
+      },
+      "-4,2": {
+        "id": "hex_-4_2",
+        "q": -4,
+        "r": 2,
+        "terrain": "plain"
+      },
+      "-4,3": {
+        "id": "hex_-4_3",
+        "q": -4,
+        "r": 3,
+        "terrain": "plain"
+      },
+      "-4,4": {
+        "id": "hex_-4_4",
+        "q": -4,
+        "r": 4,
+        "terrain": "plain"
+      },
+      "0,-1": {
+        "id": "hex_0_-1",
+        "q": 0,
+        "r": -1,
+        "terrain": "river"
+      },
+      "0,-2": {
+        "id": "hex_0_-2",
+        "q": 0,
+        "r": -2,
+        "terrain": "river"
+      },
+      "0,-3": {
+        "id": "hex_0_-3",
+        "q": 0,
+        "r": -3,
+        "terrain": "river"
+      },
+      "0,-4": {
+        "id": "hex_0_-4",
+        "q": 0,
+        "r": -4,
+        "terrain": "river"
+      },
+      "0,0": {
+        "id": "hex_0_0",
+        "q": 0,
+        "r": 0,
+        "terrain": "bridge"
+      },
+      "0,1": {
+        "id": "hex_0_1",
+        "q": 0,
+        "r": 1,
+        "terrain": "river"
+      },
+      "0,2": {
+        "id": "hex_0_2",
+        "q": 0,
+        "r": 2,
+        "terrain": "wall"
+      },
+      "0,3": {
+        "id": "hex_0_3",
+        "q": 0,
+        "r": 3,
+        "terrain": "river"
+      },
+      "0,4": {
+        "id": "hex_0_4",
+        "q": 0,
+        "r": 4,
+        "terrain": "river"
+      },
+      "1,-1": {
+        "id": "hex_1_-1",
+        "q": 1,
+        "r": -1,
+        "terrain": "plain"
+      },
+      "1,-2": {
+        "id": "hex_1_-2",
+        "q": 1,
+        "r": -2,
+        "terrain": "plain"
+      },
+      "1,-3": {
+        "id": "hex_1_-3",
+        "q": 1,
+        "r": -3,
+        "terrain": "plain"
+      },
+      "1,-4": {
+        "id": "hex_1_-4",
+        "q": 1,
+        "r": -4,
+        "terrain": "plain"
+      },
+      "1,0": {
+        "id": "hex_1_0",
+        "q": 1,
+        "r": 0,
+        "terrain": "plain"
+      },
+      "1,1": {
+        "id": "hex_1_1",
+        "q": 1,
+        "r": 1,
+        "terrain": "wall"
+      },
+      "1,2": {
+        "id": "hex_1_2",
+        "q": 1,
+        "r": 2,
+        "terrain": "plain"
+      },
+      "1,3": {
+        "id": "hex_1_3",
+        "q": 1,
+        "r": 3,
+        "terrain": "plain"
+      },
+      "2,-1": {
+        "id": "hex_2_-1",
+        "q": 2,
+        "r": -1,
+        "terrain": "plain"
+      },
+      "2,-2": {
+        "id": "hex_2_-2",
+        "q": 2,
+        "r": -2,
+        "terrain": "plain"
+      },
+      "2,-3": {
+        "id": "hex_2_-3",
+        "q": 2,
+        "r": -3,
+        "terrain": "plain"
+      },
+      "2,-4": {
+        "id": "hex_2_-4",
+        "q": 2,
+        "r": -4,
+        "terrain": "plain"
+      },
+      "2,0": {
+        "id": "hex_2_0",
+        "q": 2,
+        "r": 0,
+        "terrain": "mountain"
+      },
+      "2,1": {
+        "id": "hex_2_1",
+        "q": 2,
+        "r": 1,
+        "terrain": "mountain"
+      },
+      "2,2": {
+        "id": "hex_2_2",
+        "q": 2,
+        "r": 2,
+        "terrain": "mountain"
+      },
+      "3,-1": {
+        "id": "hex_3_-1",
+        "q": 3,
+        "r": -1,
+        "terrain": "plain"
+      },
+      "3,-2": {
+        "id": "hex_3_-2",
+        "q": 3,
+        "r": -2,
+        "terrain": "plain"
+      },
+      "3,-3": {
+        "id": "hex_3_-3",
+        "q": 3,
+        "r": -3,
+        "terrain": "plain"
+      },
+      "3,-4": {
+        "id": "hex_3_-4",
+        "q": 3,
+        "r": -4,
+        "terrain": "plain"
+      },
+      "3,0": {
+        "id": "hex_3_0",
+        "q": 3,
+        "r": 0,
+        "terrain": "mountain"
+      },
+      "3,1": {
+        "id": "hex_3_1",
+        "q": 3,
+        "r": 1,
+        "terrain": "mountain"
+      },
+      "4,-1": {
+        "id": "hex_4_-1",
+        "q": 4,
+        "r": -1,
+        "terrain": "plain"
+      },
+      "4,-2": {
+        "id": "hex_4_-2",
+        "q": 4,
+        "r": -2,
+        "terrain": "plain"
+      },
+      "4,-3": {
+        "id": "hex_4_-3",
+        "q": 4,
+        "r": -3,
+        "terrain": "plain"
+      },
+      "4,-4": {
+        "id": "hex_4_-4",
+        "q": 4,
+        "r": -4,
+        "terrain": "plain"
+      },
+      "4,0": {
+        "id": "hex_4_0",
+        "q": 4,
+        "r": 0,
+        "terrain": "mountain"
+      }
+    },
+    "items": {
+      "item_ember_tonic": {
+        "description": "一小瓶温热的琥珀色液体，闻起来像燃尽的木柴与香草。标签写着：为疲惫的旅人留下一点火种。具体作用由 GM 根据当前情境裁定。",
+        "id": "item_ember_tonic",
+        "name": "余烬酊剂",
+        "quantity": 1
+      },
+      "item_hemp_rope": {
+        "description": "一捆结实的麻绳，约十米长，末端打了活结。",
+        "id": "item_hemp_rope",
+        "name": "麻绳",
+        "quantity": 1
+      },
+      "item_mist_draught": {
+        "description": "瓶中有缓缓翻涌的银灰雾气。标签写着：让脚步像晨雾一样轻。具体作用由 GM 根据当前情境裁定。",
+        "id": "item_mist_draught",
+        "name": "雾行药剂",
+        "quantity": 1
+      }
+    },
+    "recent_dialogue": [],
+    "schema_version": 1,
+    "state_version": 0,
+    "world_id": "world_recorded_fogbank_001",
+    "world_time": 0
+  },
+  "decision": {
+    "schema_version": 1,
+    "action_id": "action_recorded_fogbank_001",
+    "state_version": 0,
+    "phase": "resolution",
+    "narration": "你已饮下药剂并涉水来到 (1,-1)，但面对守卫的恳求未能打动它。它仍警惕地握着武器，没有放下。",
+    "outcome": "说服失败；移动与药剂消耗已发生。",
+    "patches": [
+      {
+        "op": "set",
+        "path": "/actors/actor_player/hex",
+        "value": [
+          1,
+          -1
+        ]
+      },
+      {
+        "op": "set",
+        "path": "/items/item_mist_draught/quantity",
+        "value": 0
+      }
+    ]
+  },
+  "expected_roll": 9
+}

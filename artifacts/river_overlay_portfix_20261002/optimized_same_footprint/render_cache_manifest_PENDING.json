@@ -1,0 +1,209 @@
+{
+  "status": "DIAGNOSTIC_PENDING_LOCAL_RENDER_CACHE",
+  "accepted_mode_allowed": false,
+  "source_mesh_sha256": "0be0975d95f4d7ea7577c41fdbf2588cb23b0574e4d40c906e190ff309f4160e",
+  "source_drainage_sha256": "2f0c6594d72d69d8b9bf1c96b4daa2a0628d02dd89e06ccf36ac1219682841ab",
+  "source_climate_sha256": "689669d28e78fec350944260e6bf611069e22bea59fa2412078e9f38c3f3cc89",
+  "candidate_sha256": "67846dad7766df69850fd16651231da07d783a271f3734f292a7f613a1b96b1a",
+  "source_crop_sha256": "f3f795db877cb16b9933dcc9382f608d101e93ccbe0b313005d12e80ae75d32e",
+  "exporter_code_sha256": "605f5f30dd849c347d6a52c5b4a81596fdff375cec28ec99cdfde9d7c269309e",
+  "source_identity": {
+    "phase1_acceptance_sha256": "0d434463377b8098b6a075c40678a6a18905b72b5c1976aa3d985176825c6a4c",
+    "climate_acceptance_sha256": "afce6b4bd59b7e2cd349bf9b282d2b63548a5caa6ed6fd5b409d33f485b19a69",
+    "ecology_pending_sha256": "e6219347d90c5d4c8de5d61aaa9436542fd254810d17eff7afeb3d3ae22b8318",
+    "source_mesh_sha256": "0be0975d95f4d7ea7577c41fdbf2588cb23b0574e4d40c906e190ff309f4160e",
+    "source_drainage_sha256": "2f0c6594d72d69d8b9bf1c96b4daa2a0628d02dd89e06ccf36ac1219682841ab",
+    "source_climate_sha256": "689669d28e78fec350944260e6bf611069e22bea59fa2412078e9f38c3f3cc89",
+    "source_normalized_sha256": "56f5af5b738e2d805bee51910238e1ef943978c51e57e6afe81fe7ab2e769b2d",
+    "source_dry_support_sha256": "b54ce4c80f657a833d0f928ebf099103415fc23ea88b4951e08793de53242f82"
+  },
+  "XYZ_scale": 1,
+  "source_vertices_original_world_coordinates": true,
+  "attributes": [
+    "position3",
+    "normal3",
+    "COLOR_grass_forest_jungle_arid4",
+    "UV_rock_sand2",
+    "UV2_unavailable_actualshore_minus1_slope2"
+  ],
+  "ground_surface": "original affected triangles replaced once by exact partition; crop context unchanged",
+  "water_surface": "existing body polygons once plus new river minus all old wet polygons",
+  "collision_and_picking": "same exported indices and f32 vertices; ground layer1, water pick layer2; movement/flying NOT_ADDED",
+  "collision_probes": [
+    {
+      "xz": [
+        -3.616322291657812,
+        12.654364761859858
+      ],
+      "water_y_from_packed_triangles": 0.5165777811008585,
+      "ground_y_from_same_packed_collision_triangles": 0.4967434302833554,
+      "water_depth_to_actual_composite": 0.01983435081750312
+    },
+    {
+      "xz": [
+        -3.859587246298595,
+        12.710543885607855
+      ],
+      "water_y_from_packed_triangles": 0.520875455831156,
+      "ground_y_from_same_packed_collision_triangles": 0.5008404750120621,
+      "water_depth_to_actual_composite": 0.02003498081909394
+    },
+    {
+      "xz": [
+        -3.4941000000047415,
+        12.845747004746082
+      ],
+      "water_y_from_packed_triangles": 0.5120164154179415,
+      "ground_y_from_same_packed_collision_triangles": 0.49203659912051134,
+      "water_depth_to_actual_composite": 0.019979816297430175
+    }
+  ],
+  "stitching": {
+    "input_polygons": 1921,
+    "sewn_polygons": 1918,
+    "boundary_unique_vertices": 1637,
+    "maximum_shared_XZ_height_difference": 3.452793606584237e-14,
+    "dropped_encoded_sliver_area_xz": 3.839937485413375e-08,
+    "maximum_boundary_normalization_area_change_xz": 6.449024903894738e-08,
+    "boundary_method": "ALL_COLLINEAR_KNOWN_POINTS_INSERTED_CENTROID_FAN"
+  },
+  "maximum_emitted_same_XZ_height_seam": 9.254819133275305e-13,
+  "meshes": [
+    {
+      "kind": "bank",
+      "vertex_stride_f32": 14,
+      "vertices": 2574,
+      "indices": 2574,
+      "triangles": 858,
+      "vertex_file": "bank.vertices_f32.gz",
+      "index_file": "bank.indices_u32.gz",
+      "vertex_provenance_file": "bank.vertex_source_u32_3f32.gz",
+      "triangle_provenance_file": "bank.triangle_source.json.gz",
+      "file_sha256": {
+        "bank.vertices_f32.gz": "97b854952cedd552a5ca6072e65e62806aef2998d68b73a09ec8128606cb4b9a",
+        "bank.indices_u32.gz": "4c43da0521f8362aac75c3d687d1db4f5f434e65c4f93e965bde9d5fb9b9c63b",
+        "bank.vertex_source_u32_3f32.gz": "c3d2f57c06cee0f536cb77e3a8a7ca6d343f785235bc71c462fc52d7c0e99cf0",
+        "bank.triangle_source.json.gz": "1b512dd2c9768fad9430f6f04bd631d555299ae0bc6ed9bf41fefa12b345ff56"
+      },
+      "collision_same_packed_triangles": true,
+      "picking_same_packed_triangles": true
+    },
+    {
+      "kind": "bed",
+      "vertex_stride_f32": 14,
+      "vertices": 5796,
+      "indices": 5796,
+      "triangles": 1932,
+      "vertex_file": "bed.vertices_f32.gz",
+      "index_file": "bed.indices_u32.gz",
+      "vertex_provenance_file": "bed.vertex_source_u32_3f32.gz",
+      "triangle_provenance_file": "bed.triangle_source.json.gz",
+      "file_sha256": {
+        "bed.vertices_f32.gz": "3665a428659f3d0ceb20c3497c51565b04a8e698ec5d63573cae2487002f3dad",
+        "bed.indices_u32.gz": "ec715254cea337543e31fcbf5255fc75fe3fa11ff342649d916315aa038f62af",
+        "bed.vertex_source_u32_3f32.gz": "b67c8f183975162648a60a5fccb8ad65ae4deea15adc6f989157eebd4f663f54",
+        "bed.triangle_source.json.gz": "9c3e0a144e40e5464ac524ce7470eab4d186f0f23fd1fd616119bc3c781cdaf8"
+      },
+      "collision_same_packed_triangles": true,
+      "picking_same_packed_triangles": true
+    },
+    {
+      "kind": "ground",
+      "vertex_stride_f32": 14,
+      "vertices": 2550,
+      "indices": 2550,
+      "triangles": 850,
+      "vertex_file": "ground.vertices_f32.gz",
+      "index_file": "ground.indices_u32.gz",
+      "vertex_provenance_file": "ground.vertex_source_u32_3f32.gz",
+      "triangle_provenance_file": "ground.triangle_source.json.gz",
+      "file_sha256": {
+        "ground.vertices_f32.gz": "3c44a26eeac6d956b9d9f88d7ed7a0bcbf4e341bba5bac4cd24c6317045261ec",
+        "ground.indices_u32.gz": "a1223bea1e905b52e5de5891742d1610eed7b622f733ef4f1b3471fe586a2323",
+        "ground.vertex_source_u32_3f32.gz": "8ce120a7e7cb0edd5e77568cac8a4abe3f320d078c83e32a56bfc3b67108ec18",
+        "ground.triangle_source.json.gz": "5a1de573fdabf79e5234e4cd66f26f81d70f607f240f102c7af2be5cd64e0481"
+      },
+      "collision_same_packed_triangles": true,
+      "picking_same_packed_triangles": true
+    },
+    {
+      "kind": "water",
+      "vertex_stride_f32": 14,
+      "vertices": 1485,
+      "indices": 1485,
+      "triangles": 495,
+      "vertex_file": "water.vertices_f32.gz",
+      "index_file": "water.indices_u32.gz",
+      "vertex_provenance_file": "water.vertex_source_u32_3f32.gz",
+      "triangle_provenance_file": "water.triangle_source.json.gz",
+      "file_sha256": {
+        "water.vertices_f32.gz": "35e9d35eb2c8ee49b375ecb4ed99f92198757ddf6d8e989eb7b97f54fc2dfcbe",
+        "water.indices_u32.gz": "f1a729495f68bac229ec77e2f87545535530e444d11b56a2873da02dc7940907",
+        "water.vertex_source_u32_3f32.gz": "dd95b33606c90ca0665380c4b1646b18defd8924d48422d57d3d591bea1cbc79",
+        "water.triangle_source.json.gz": "4c76abc04b36a0519c496c8e3216db06fa54239cdd865ea8ad5da625040c18a4"
+      },
+      "collision_same_packed_triangles": false,
+      "picking_same_packed_triangles": true
+    }
+  ],
+  "total_triangles": 4135,
+  "renderer": "Compatibility no compute no Decal no generated texture",
+  "upstream_lake": "lake:28127",
+  "downstream_lake": "lake:31",
+  "camera_target_world": [
+    -3.6320131092480583,
+    0.5153173054602737,
+    12.830553380171269
+  ],
+  "performance": {
+    "seconds": 0.5454708750003192,
+    "binary_compressed_bytes": 261764
+  },
+  "not_done": [
+    "independent review",
+    "integrated accepted world",
+    "real GPU target benchmark"
+  ],
+  "lod_scope": "SAME_AUTHORITATIVE_XZ_FOOTPRINT_AND_INTERFACE_VERTICES; WATER_LEVELS_UNCHANGED; GROUND_INTERIOR_HEIGHT_WITHIN_1PX",
+  "baseline_manifest_sha256": "03abf8d73a5adb9c1b1839ef899be91161c4a3f0b0cfb91357c18c659a7aa0ae",
+  "LOD_comparison_summary": {
+    "status": "DIAGNOSTIC_PENDING_SAME_FOOTPRINT_LOD_COMPARISON",
+    "candidate_sha256_unchanged": "67846dad7766df69850fd16651231da07d783a271f3734f292a7f613a1b96b1a",
+    "baseline_manifest_sha256_unchanged": "03abf8d73a5adb9c1b1839ef899be91161c4a3f0b0cfb91357c18c659a7aa0ae",
+    "camera_assumption": {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "projection": "ORTHOGRAPHIC",
+      "nearest_vertical_world_size": 3.8,
+      "maximum_ground_height_projection_error_px": 1,
+      "conservative_world_error_bound": 0.0035185185185185185
+    },
+    "actual_max_ground_or_water_height_error_world": 0.003506275201426934,
+    "actual_conservative_projected_error_px": 0.9965203204055496,
+    "maximum_group_XZ_area_change": 7.806255641895632e-17,
+    "width_world_unchanged": 0.12,
+    "water_level_profile_unchanged": true,
+    "original_candidate_trueunion_ledger_unchanged": true,
+    "baseline_counts": {
+      "bank": 1544,
+      "bed": 2716,
+      "ground": 2792,
+      "water": 1099
+    },
+    "optimized_counts": {
+      "bank": 858,
+      "bed": 1932,
+      "ground": 850,
+      "water": 495
+    },
+    "baseline_total": 8151,
+    "optimized_total": 4135,
+    "curve_authority_stations_unchanged": 84,
+    "source_proof_scope": "high-precision candidate unchanged; local renderer LOD only",
+    "seconds": 11.428962362002494
+  },
+  "overlay_contract_file": "overlay_contract.json",
+  "overlay_contract_sha256": "36100c440584b482146c99a355f595b0548eb50744f65d16313d39f89c71f7ef"
+}

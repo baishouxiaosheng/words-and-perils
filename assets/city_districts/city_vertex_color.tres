@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://assets/city_districts/city_vertex_color.gdshader" id="1_palette"]
+
+[resource]
+resource_name = "City Districts / Linear Vertex Palette"
+shader = ExtResource("1_palette")

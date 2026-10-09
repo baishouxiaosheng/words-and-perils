@@ -1,0 +1,36 @@
+{
+  "checks": 123,
+  "evidence": {
+    "environment": {
+      "assessed_flight_bypass": true,
+      "entity_id": "tree:2f6a1a215a0d44a374f01c4a:7",
+      "groundblock_persistent": true,
+      "owner_hex": [
+        -20,
+        -4
+      ],
+      "positioning": "explicit test setup on actual source geography",
+      "source": {
+        "instance_row": 7,
+        "instance_sha256": "da2e93e0a0313f2d82dc0e856915c7fb635104ca6cf0d08c1d062ab286d19051",
+        "legacy_parent_face_index": 16833,
+        "new_source_face_index": 28264,
+        "source_mesh_sha256": "68931983818b291b07022477029d4ad4761aceac0c670463fbe742b6a2ac986c"
+      },
+      "test_actor_start": [
+        -21,
+        -3
+      ]
+    },
+    "poison": {
+      "duration": 2,
+      "hp_after_apply": 12,
+      "hp_after_expiry": 10,
+      "hp_after_tick_save_load_replay": 11,
+      "live": false
+    }
+  },
+  "failures": [],
+  "passed": 123,
+  "scope": "typed effects offline integration; no live model, full combat or universal arbitrary action execution"
+}

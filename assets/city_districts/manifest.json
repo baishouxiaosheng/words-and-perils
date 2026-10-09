@@ -1,0 +1,522 @@
+{
+  "schema": "city_district_kit/v1",
+  "generator": "Blender 4.3.2",
+  "authorship": "Original mesh and palette. No third-party geometry, textures, or code copied.",
+  "scale_contract": "pointy hex radius1; village/city-state one hex, largest city initially3; compact district pockets",
+  "material": "one rough opaque vertex-color material per mesh; COLOR_0 uses scene-linear values",
+  "physics_nodes": 0,
+  "textures": 0,
+  "assets": [
+    {
+      "id": "village_cottage_a",
+      "district": "village",
+      "glb": "models/village_cottage_a.glb",
+      "lod1_glb": "lod1/village_cottage_a_lod1.glb",
+      "aabb_min_xyz": [
+        -0.2515140771865845,
+        0.0,
+        -0.2549999952316284
+      ],
+      "aabb_max_xyz": [
+        0.2515140771865845,
+        1.1200000047683716,
+        0.2549999952316284
+      ],
+      "footprint_xz": [
+        0.503028154373169,
+        0.5099999904632568
+      ],
+      "footprint_radius": 0.35816801726445324,
+      "height": 1.1200000047683716,
+      "pivot": "ground center, Y=0",
+      "forward": "-Z",
+      "ground_collision": "none; footprint is advisory, not an authored rule blocker",
+      "lod0": {
+        "triangles": 936,
+        "vertices_authored": 598,
+        "faces_authored": 429,
+        "materials": 1
+      },
+      "lod1": {
+        "triangles": 564,
+        "vertices_authored": 366,
+        "faces_authored": 267,
+        "materials": 1
+      },
+      "sha256": "59c96f8cf19abd469e6cdb79e70d3241bafa9be36647dbad8d2373734676346b",
+      "lod1_sha256": "554b76fd6e05de78efa28b55c4ca3757b4000b786cf3db93e1383d751d63f541"
+    },
+    {
+      "id": "village_cottage_b",
+      "district": "village",
+      "glb": "models/village_cottage_b.glb",
+      "lod1_glb": "lod1/village_cottage_b_lod1.glb",
+      "aabb_min_xyz": [
+        -0.2515140771865845,
+        0.0,
+        -0.2549999952316284
+      ],
+      "aabb_max_xyz": [
+        0.2515140771865845,
+        1.1200000047683716,
+        0.2549999952316284
+      ],
+      "footprint_xz": [
+        0.503028154373169,
+        0.5099999904632568
+      ],
+      "footprint_radius": 0.35816801726445324,
+      "height": 1.1200000047683716,
+      "pivot": "ground center, Y=0",
+      "forward": "-Z",
+      "ground_collision": "none; footprint is advisory, not an authored rule blocker",
+      "lod0": {
+        "triangles": 936,
+        "vertices_authored": 598,
+        "faces_authored": 429,
+        "materials": 1
+      },
+      "lod1": {
+        "triangles": 564,
+        "vertices_authored": 366,
+        "faces_authored": 267,
+        "materials": 1
+      },
+      "sha256": "e119ac541c3de4007dcba668af7535a11728f7ef93daf91ba27e8413f485ef18",
+      "lod1_sha256": "97274055c8d4d78cf9ac3eaee69d83ee536679017a1be25aa9208599a18af8bc"
+    },
+    {
+      "id": "village_barn",
+      "district": "village",
+      "glb": "models/village_barn.glb",
+      "lod1_glb": "lod1/village_barn_lod1.glb",
+      "aabb_min_xyz": [
+        -0.2676660120487213,
+        0.0,
+        -0.27000001072883606
+      ],
+      "aabb_max_xyz": [
+        0.2676660120487213,
+        1.1200000047683716,
+        0.27000001072883606
+      ],
+      "footprint_xz": [
+        0.5353320240974426,
+        0.5400000214576721
+      ],
+      "footprint_radius": 0.3801908728515689,
+      "height": 1.1200000047683716,
+      "pivot": "ground center, Y=0",
+      "forward": "-Z",
+      "ground_collision": "none; footprint is advisory, not an authored rule blocker",
+      "lod0": {
+        "triangles": 524,
+        "vertices_authored": 342,
+        "faces_authored": 251,
+        "materials": 1
+      },
+      "lod1": {
+        "triangles": 332,
+        "vertices_authored": 214,
+        "faces_authored": 155,
+        "materials": 1
+      },
+      "sha256": "9dd1ed588a033c00f19147f88cb0fbbf7257cbb0b06a8dfd1ad1ecf0619183f4",
+      "lod1_sha256": "e5c72cafadb51e91daa2c2fe966067918336d79f3a1a944ed25ab58b2de7e72d"
+    },
+    {
+      "id": "shared_well",
+      "district": "shared",
+      "glb": "models/shared_well.glb",
+      "lod1_glb": "lod1/shared_well_lod1.glb",
+      "aabb_min_xyz": [
+        -0.17000000178813934,
+        0.0,
+        -0.13939504325389862
+      ],
+      "aabb_max_xyz": [
+        0.17000000178813934,
+        0.5299999713897705,
+        0.13939504325389862
+      ],
+      "footprint_xz": [
+        0.3400000035762787,
+        0.27879008650779724
+      ],
+      "footprint_radius": 0.2198430774250662,
+      "height": 0.5299999713897705,
+      "pivot": "ground center, Y=0",
+      "forward": "-Z",
+      "ground_collision": "none; footprint is advisory, not an authored rule blocker",
+      "lod0": {
+        "triangles": 496,
+        "vertices_authored": 312,
+        "faces_authored": 220,
+        "materials": 1
+      },
+      "lod1": {
+        "triangles": 408,
+        "vertices_authored": 256,
+        "faces_authored": 180,
+        "materials": 1
+      },
+      "sha256": "d1a6c3a46b65782bce4d5941307b26f1e9e6f38754c8591afdfd0e705234eb95",
+      "lod1_sha256": "2ed0db762ed610bbcf766bf0aa4020fcd9417b3d5cd88062aad3841f06d9595a"
+    },
+    {
+      "id": "rich_manor",
+      "district": "rich",
+      "glb": "models/rich_manor.glb",
+      "lod1_glb": "lod1/rich_manor_lod1.glb",
+      "aabb_min_xyz": [
+        -0.2750000059604645,
+        0.0,
+        -0.2532352805137634
+      ],
+      "aabb_max_xyz": [
+        0.2750000059604645,
+        1.2899999618530273,
+        0.2532352805137634
+      ],
+      "footprint_xz": [
+        0.550000011920929,
+        0.5064705610275269
+      ],
+      "footprint_radius": 0.3738356732243994,
+      "height": 1.2899999618530273,
+      "pivot": "ground center, Y=0",
+      "forward": "-Z",
+      "ground_collision": "none; footprint is advisory, not an authored rule blocker",
+      "lod0": {
+        "triangles": 1328,
+        "vertices_authored": 862,
+        "faces_authored": 629,
+        "materials": 1
+      },
+      "lod1": {
+        "triangles": 940,
+        "vertices_authored": 614,
+        "faces_authored": 451,
+        "materials": 1
+      },
+      "sha256": "f1e5fd9c477118b4ff13ea26a7b439e83c3eee49ae6458c0f3e940b40fd1fb5f",
+      "lod1_sha256": "c1a73cfa84204dd87b301526884b9a000234d9b21d9fa5c20baef43f4930b800"
+    },
+    {
+      "id": "rich_townhouse",
+      "district": "rich",
+      "glb": "models/rich_townhouse.glb",
+      "lod1_glb": "lod1/rich_townhouse_lod1.glb",
+      "aabb_min_xyz": [
+        -0.23218214511871338,
+        0.0,
+        -0.26499998569488525
+      ],
+      "aabb_max_xyz": [
+        0.23218214511871338,
+        1.3600000143051147,
+        0.26499998569488525
+      ],
+      "footprint_xz": [
+        0.46436429023742676,
+        0.5299999713897705
+      ],
+      "footprint_radius": 0.3523259015885955,
+      "height": 1.3600000143051147,
+      "pivot": "ground center, Y=0",
+      "forward": "-Z",
+      "ground_collision": "none; footprint is advisory, not an authored rule blocker",
+      "lod0": {
+        "triangles": 940,
+        "vertices_authored": 614,
+        "faces_authored": 451,
+        "materials": 1
+      },
+      "lod1": {
+        "triangles": 724,
+        "vertices_authored": 470,
+        "faces_authored": 343,
+        "materials": 1
+      },
+      "sha256": "dc4e999959b5b7d1998dfb394a1df7583ca7efd1f7b2a3487dd39b2431d29ef4",
+      "lod1_sha256": "5d80428ebc0b810aee6c0e0ba8a87863ba85eed448cde35b78cbbeeb32eeee6a"
+    },
+    {
+      "id": "industrial_forge",
+      "district": "industrial",
+      "glb": "models/industrial_forge.glb",
+      "lod1_glb": "lod1/industrial_forge_lod1.glb",
+      "aabb_min_xyz": [
+        -0.21176618337631226,
+        0.0,
+        -0.2750000059604645
+      ],
+      "aabb_max_xyz": [
+        0.21176618337631226,
+        1.25,
+        0.2750000059604645
+      ],
+      "footprint_xz": [
+        0.4235323667526245,
+        0.550000011920929
+      ],
+      "footprint_radius": 0.34708776944747766,
+      "height": 1.25,
+      "pivot": "ground center, Y=0",
+      "forward": "-Z",
+      "ground_collision": "none; footprint is advisory, not an authored rule blocker",
+      "lod0": {
+        "triangles": 1018,
+        "vertices_authored": 655,
+        "faces_authored": 474,
+        "materials": 1
+      },
+      "lod1": {
+        "triangles": 592,
+        "vertices_authored": 382,
+        "faces_authored": 277,
+        "materials": 1
+      },
+      "sha256": "b5637bc28915fad2f1152dfd554ea13c5d64ea25da38e9b88c77344f17b8ba32",
+      "lod1_sha256": "bdd2bb3a223e05e44861a6c5473f7d618dd995569eed517cf7f4fa99f8bc3b03"
+    },
+    {
+      "id": "industrial_workshop",
+      "district": "industrial",
+      "glb": "models/industrial_workshop.glb",
+      "lod1_glb": "lod1/industrial_workshop_lod1.glb",
+      "aabb_min_xyz": [
+        -0.21176618337631226,
+        0.0,
+        -0.2750000059604645
+      ],
+      "aabb_max_xyz": [
+        0.21176618337631226,
+        1.2799999713897705,
+        0.2750000059604645
+      ],
+      "footprint_xz": [
+        0.4235323667526245,
+        0.550000011920929
+      ],
+      "footprint_radius": 0.34708776944747766,
+      "height": 1.2799999713897705,
+      "pivot": "ground center, Y=0",
+      "forward": "-Z",
+      "ground_collision": "none; footprint is advisory, not an authored rule blocker",
+      "lod0": {
+        "triangles": 1018,
+        "vertices_authored": 655,
+        "faces_authored": 474,
+        "materials": 1
+      },
+      "lod1": {
+        "triangles": 592,
+        "vertices_authored": 382,
+        "faces_authored": 277,
+        "materials": 1
+      },
+      "sha256": "03385efad88a0284eeb8df0e78c26eac94f6e919e8040ffeccfb43235619b58b",
+      "lod1_sha256": "c7ebc31ffff7ddd76141e9475542058db570605429f89340ec71ed73f2edf403"
+    },
+    {
+      "id": "poor_home_a",
+      "district": "poor",
+      "glb": "models/poor_home_a.glb",
+      "lod1_glb": "lod1/poor_home_a_lod1.glb",
+      "aabb_min_xyz": [
+        -0.25,
+        0.0,
+        -0.23348429799079895
+      ],
+      "aabb_max_xyz": [
+        0.25,
+        1.1299999952316284,
+        0.23348429799079895
+      ],
+      "footprint_xz": [
+        0.5,
+        0.4669685959815979
+      ],
+      "footprint_radius": 0.3420744325556299,
+      "height": 1.1299999952316284,
+      "pivot": "ground center, Y=0",
+      "forward": "-Z",
+      "ground_collision": "none; footprint is advisory, not an authored rule blocker",
+      "lod0": {
+        "triangles": 1044,
+        "vertices_authored": 674,
+        "faces_authored": 489,
+        "materials": 1
+      },
+      "lod1": {
+        "triangles": 648,
+        "vertices_authored": 422,
+        "faces_authored": 309,
+        "materials": 1
+      },
+      "sha256": "2bfd7d522c1200dcf1f7edeaeb9e87fabea3ffb1639550164c54c9500b5ccd16",
+      "lod1_sha256": "3426eef6d2124a40c197e3c33e968108e743d26f70dac333f03d0d52ccdd685a"
+    },
+    {
+      "id": "poor_home_b",
+      "district": "poor",
+      "glb": "models/poor_home_b.glb",
+      "lod1_glb": "lod1/poor_home_b_lod1.glb",
+      "aabb_min_xyz": [
+        -0.25,
+        0.0,
+        -0.23348429799079895
+      ],
+      "aabb_max_xyz": [
+        0.25,
+        1.1299999952316284,
+        0.23348429799079895
+      ],
+      "footprint_xz": [
+        0.5,
+        0.4669685959815979
+      ],
+      "footprint_radius": 0.3420744325556299,
+      "height": 1.1299999952316284,
+      "pivot": "ground center, Y=0",
+      "forward": "-Z",
+      "ground_collision": "none; footprint is advisory, not an authored rule blocker",
+      "lod0": {
+        "triangles": 1044,
+        "vertices_authored": 674,
+        "faces_authored": 489,
+        "materials": 1
+      },
+      "lod1": {
+        "triangles": 648,
+        "vertices_authored": 422,
+        "faces_authored": 309,
+        "materials": 1
+      },
+      "sha256": "c62064c42a544f6ca8f68ff89c4890347f4bbe2778aa1da4ba4acbda46585635",
+      "lod1_sha256": "9e0b8ffda1741e081b23f036957506600ea791bd9bd1d77b08124b656d64ad10"
+    },
+    {
+      "id": "civic_hall",
+      "district": "civic",
+      "glb": "models/civic_hall.glb",
+      "lod1_glb": "lod1/civic_hall_lod1.glb",
+      "aabb_min_xyz": [
+        -0.2750000059604645,
+        0.0,
+        -0.24184009432792664
+      ],
+      "aabb_max_xyz": [
+        0.2750000059604645,
+        1.5,
+        0.24184009432792664
+      ],
+      "footprint_xz": [
+        0.550000011920929,
+        0.48368018865585327
+      ],
+      "footprint_radius": 0.3662125537209176,
+      "height": 1.5,
+      "pivot": "ground center, Y=0",
+      "forward": "-Z",
+      "ground_collision": "none; footprint is advisory, not an authored rule blocker",
+      "lod0": {
+        "triangles": 844,
+        "vertices_authored": 554,
+        "faces_authored": 409,
+        "materials": 1
+      },
+      "lod1": {
+        "triangles": 676,
+        "vertices_authored": 442,
+        "faces_authored": 325,
+        "materials": 1
+      },
+      "sha256": "64bde95971f1f50687bad0256e4b9316c8f7f2bc8a81601de14f83f7315e056a",
+      "lod1_sha256": "442e672f5d14e0cfc61039e5f4b8e5f67ffa4fd681c81ae2321e3bb64d9d944b"
+    },
+    {
+      "id": "garden_court",
+      "district": "rich",
+      "glb": "models/garden_court.glb",
+      "lod1_glb": "lod1/garden_court_lod1.glb",
+      "aabb_min_xyz": [
+        -0.19499999284744263,
+        0.0,
+        -0.1798543632030487
+      ],
+      "aabb_max_xyz": [
+        0.19499999284744263,
+        0.2199999988079071,
+        0.1798543632030487
+      ],
+      "footprint_xz": [
+        0.38999998569488525,
+        0.3597087264060974
+      ],
+      "footprint_radius": 0.2652783239800735,
+      "height": 0.2199999988079071,
+      "pivot": "ground center, Y=0",
+      "forward": "-Z",
+      "ground_collision": "none; footprint is advisory, not an authored rule blocker",
+      "lod0": {
+        "triangles": 456,
+        "vertices_authored": 264,
+        "faces_authored": 168,
+        "materials": 1
+      },
+      "lod1": {
+        "triangles": 264,
+        "vertices_authored": 152,
+        "faces_authored": 96,
+        "materials": 1
+      },
+      "sha256": "86d7e3a14f6881ebac7281509aa6b92db2be0e80de0ccaa9d1b0653f68cfffb4",
+      "lod1_sha256": "c4a72c32a2bb294c4ff801d837758ccc255d2a8b630d6c8f74e085262a68a1ed"
+    },
+    {
+      "id": "workyard",
+      "district": "industrial",
+      "glb": "models/workyard.glb",
+      "lod1_glb": "lod1/workyard_lod1.glb",
+      "aabb_min_xyz": [
+        -0.1899999976158142,
+        0.0,
+        -0.15770000219345093
+      ],
+      "aabb_max_xyz": [
+        0.1899999976158142,
+        0.23999999463558197,
+        0.15770000219345093
+      ],
+      "footprint_xz": [
+        0.3799999952316284,
+        0.31540000438690186
+      ],
+      "footprint_radius": 0.24691960186632375,
+      "height": 0.23999999463558197,
+      "pivot": "ground center, Y=0",
+      "forward": "-Z",
+      "ground_collision": "none; footprint is advisory, not an authored rule blocker",
+      "lod0": {
+        "triangles": 412,
+        "vertices_authored": 260,
+        "faces_authored": 184,
+        "materials": 1
+      },
+      "lod1": {
+        "triangles": 196,
+        "vertices_authored": 124,
+        "faces_authored": 88,
+        "materials": 1
+      },
+      "sha256": "d2f35d4ec2908dd797d349dc244c42af2a49fdc776d39a54d0092c1e62ef01f7",
+      "lod1_sha256": "cbde42cc0a57be6f9ccbc10cabc8f9d314452f39313788505886d5239450762f"
+    }
+  ],
+  "totals": {
+    "lod0_triangles": 10996,
+    "lod1_triangles": 7148
+  }
+}

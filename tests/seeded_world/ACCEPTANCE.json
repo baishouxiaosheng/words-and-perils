@@ -1,0 +1,57 @@
+{
+  "status": "implemented_source_contract_and_preview_integration",
+  "source_assertions": 280,
+  "controller_assertions": 19,
+  "representative_sources": 32,
+  "exact_navigation_samples": 1,
+  "exact_navigation_radius": 4,
+  "exact_navigation_reachable_cells": 48,
+  "visual_certification": false,
+  "npc_content_implemented": false,
+  "local_map_content_implemented": false,
+  "generated_adventure_start_and_save_changed": false,
+  "files": {
+    "core/world_generation_contract.gd": {
+      "sha256": "15389d4486766af22198fa5e07a42fdfe55f74e0a5011a74505b99e586faef94",
+      "bytes": 12085
+    },
+    "core/world_generation_validation.gd": {
+      "sha256": "b0d35286f65644d486d6e2443b77e9f24e25106969d9b71dfad872c36a276d96",
+      "bytes": 12804
+    },
+    "main.gd": {
+      "sha256": "3803293126e5d92e8d3214ecbe28b38a16af5833d620d75ec08a7733c26bbe5a",
+      "bytes": 128168
+    },
+    "tests/test_world_generation_contract.gd": {
+      "sha256": "416a11561068a31e4094a4661bf0e851dd3642bb6735510e9e3ca0121b19a290",
+      "bytes": 11013
+    },
+    "tests/seeded_world/test_preview_controller.gd": {
+      "sha256": "dee40f7ba88394c98f58d228e33ef4fdb33b603232713afdc8e4731a5901c97d",
+      "bytes": 5884
+    },
+    "docs/seeded_world_contract_20261003.md": {
+      "sha256": "b38dc2fc611ae02e7a02e593005532d426da9c7cb123c5f7e59f023b9dd64faa",
+      "bytes": 9921
+    }
+  },
+  "preserved_sources": {
+    "core/world_generator.gd": {
+      "sha256": "704220719ee5cf19e8e3aa3448fda57f4d977b4fed6c2b0d2fd4eee2e3371bf2",
+      "matches_original_package": true
+    },
+    "view/generated_adventure/source.gd": {
+      "sha256": "6a8ca2e7fbaf0d5525f793e7e5dfa28260762a228e0b7531030376125e69154b",
+      "matches_original_package": true
+    },
+    "view/generated_adventure/navigation.gd": {
+      "sha256": "70d43326947c4884d63ad3bf485d8efeafb99e6621c39524c2e2daf4b8e6eb7b",
+      "matches_original_package": true
+    },
+    "artifacts/world_bundle_20261002/manifest.json": {
+      "sha256": "8fc1dcaad2c3331b23b6ee6789a50a40826e1c3cb8d8851aa00fe793211bf413",
+      "matches_original_package": true
+    }
+  }
+}

@@ -1,0 +1,4842 @@
+{
+  "schema_version": "integrated-real-r24-diagnostic-render-cache-0.1.0",
+  "status": "DIAGNOSTIC_PENDING",
+  "scientific_acceptance": "NOT_CLAIMED_SOURCE_ZONE_IS_PENDING",
+  "source_zone_status": "PRE_RIVER_ECOLOGY_PROPOSAL_PENDING_INDEPENDENT_RELOAD",
+  "source_complete_terrain_zone_acceptance": "NOT_DONE_RELIEF_ENVELOPES_AND_RENDERER_PENDING",
+  "source_current_whole_independent_gate": "PENDING_NEW_WORLD_RELOAD",
+  "real_river_present": false,
+  "source_identity": {
+    "mesh": {
+      "path": "artifacts/natural_coast_chain_v02_20261002/mesh_12_r24.json",
+      "sha256": "0be0975d95f4d7ea7577c41fdbf2588cb23b0574e4d40c906e190ff309f4160e",
+      "bytes": 52946594
+    },
+    "drainage": {
+      "path": "artifacts/natural_coast_chain_v02_20261002/drainage_12_r24.json",
+      "sha256": "2f0c6594d72d69d8b9bf1c96b4daa2a0628d02dd89e06ccf36ac1219682841ab",
+      "bytes": 18918242
+    },
+    "ecology_pending": {
+      "path": "artifacts/natural_coast_ecology_v02_20261002/natural_coast_ecology_v02_WHOLE_PENDING.json",
+      "sha256": "e6219347d90c5d4c8de5d61aaa9436542fd254810d17eff7afeb3d3ae22b8318",
+      "bytes": 147203567
+    },
+    "transport": {
+      "path": "artifacts/natural_coast_chain_v02_20261002/transport_geometry_12_r24.json",
+      "sha256": "2fffa075e75444a4b7bc8b4a6af6b893f5bc3cbb19094a050725165e687729ca",
+      "bytes": 11309732
+    },
+    "climate": {
+      "path": "artifacts/natural_coast_chain_v02_20261002/climate/climate_base.json",
+      "sha256": "689669d28e78fec350944260e6bf611069e22bea59fa2412078e9f38c3f3cc89",
+      "bytes": 36685301
+    },
+    "dry_support": {
+      "path": "artifacts/natural_coast_chain_v02_20261002/climate/dry_face_support.json",
+      "sha256": "b54ce4c80f657a833d0f928ebf099103415fc23ea88b4951e08793de53242f82",
+      "bytes": 13752095
+    },
+    "normalized_input": {
+      "path": "artifacts/natural_coast_chain_v02_20261002/climate/normalized_input.json",
+      "sha256": "56f5af5b738e2d805bee51910238e1ef943978c51e57e6afe81fe7ab2e769b2d",
+      "bytes": 26383222
+    },
+    "classification_authority": {
+      "path": "artifacts/natural_coast_chain_v02_20261002/independent_policy_gate.json",
+      "sha256": "607cd39e78edf086b771040a432cd059cabd9cd540d3f512ddc41b2c854cb119",
+      "bytes": 730627
+    },
+    "classification": {
+      "path": "artifacts/natural_coast_ecology_v02_20261002/classification_per_hex.json",
+      "sha256": "53347355055490a8aa47c2cb4b05cf63056348c8ef11364e04677be4ef87afed",
+      "bytes": 597166
+    },
+    "river_reserve_authority": {
+      "path": "artifacts/natural_coast_chain_v02_20261002/river_footprint_reserve.json",
+      "sha256": "35724bd488c4535c53e92a13de0bb628511f4272415a447fe0f6c71a34dbb1e6",
+      "bytes": 155987
+    },
+    "river_reserve": {
+      "path": "artifacts/natural_coast_ecology_v02_20261002/river_reserve_build_adapter.json",
+      "sha256": "33fdcfff81daaabfda71d18c7689440f85839ab1e82616be258b001d4a7258f3",
+      "bytes": 157571
+    },
+    "lake_gate": {
+      "path": "artifacts/natural_coast_chain_v02_20261002/final_acceptance.json",
+      "sha256": "0d434463377b8098b6a075c40678a6a18905b72b5c1976aa3d985176825c6a4c",
+      "bytes": 4622
+    },
+    "climate_gate": {
+      "path": "artifacts/natural_coast_chain_v02_20261002/climate/final_climate_acceptance.json",
+      "sha256": "afce6b4bd59b7e2cd349bf9b282d2b63548a5caa6ed6fd5b409d33f485b19a69",
+      "bytes": 5764
+    }
+  },
+  "source_dependencies": {
+    "export_world_cache.py": "fffd9869c2f788594e12b90ea419d6c2f4c32d94598d245b3b66c98c364b93a3",
+    "render_geometry.py": "4ba69645edd671055372913f450b0cc649b0cc279f417f9f513d63891857f462",
+    "cluster_canopies.py": "e4b72e066c2be896298d4fdbb03856cbd0dece3ae78d361be65e43ec3ee75b8b"
+  },
+  "source_face_table": "source_topology.json.gz",
+  "source_mask_owner_registry": "source_mask_owner_registry.json.gz",
+  "local_scope_ledger": "local_scope_ledger.json.gz",
+  "actual_shore_segments": "actual_shore_segments.json.gz",
+  "bounds_min": [
+    -44.167295593006365,
+    -0.3730891328305006,
+    -38.5
+  ],
+  "bounds_max": [
+    44.167295593006365,
+    2.102730213808623,
+    38.5
+  ],
+  "chunk_side": 12,
+  "chunks": [
+    {
+      "key": "-1_-1",
+      "ground": {
+        "vertices": "chunk_-1_-1_ground_vertices.bin.gz",
+        "indices": "chunk_-1_-1_ground_indices.bin.gz",
+        "faces": "chunk_-1_-1_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-1_-1_ground_bary.bin.gz",
+        "vertex_count": 17600,
+        "triangle_count": 10964
+      },
+      "water": {
+        "vertices": "chunk_-1_-1_water_vertices.bin.gz",
+        "indices": "chunk_-1_-1_water_indices.bin.gz",
+        "faces": "chunk_-1_-1_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-1_-1_water_bary.bin.gz",
+        "vertex_count": 362,
+        "triangle_count": 132
+      },
+      "bounds_min": [
+        -12.12435565298214,
+        0.4991636340275744,
+        -12.325
+      ],
+      "bounds_max": [
+        0.0,
+        0.7928425915105602,
+        0.0
+      ]
+    },
+    {
+      "key": "-1_-2",
+      "ground": {
+        "vertices": "chunk_-1_-2_ground_vertices.bin.gz",
+        "indices": "chunk_-1_-2_ground_indices.bin.gz",
+        "faces": "chunk_-1_-2_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-1_-2_ground_bary.bin.gz",
+        "vertex_count": 12468,
+        "triangle_count": 7906
+      },
+      "water": {
+        "vertices": "chunk_-1_-2_water_vertices.bin.gz",
+        "indices": "chunk_-1_-2_water_indices.bin.gz",
+        "faces": "chunk_-1_-2_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-1_-2_water_bary.bin.gz",
+        "vertex_count": 1692,
+        "triangle_count": 632
+      },
+      "bounds_min": [
+        -12.124355652982143,
+        0.40096574963241133,
+        -24.325
+      ],
+      "bounds_max": [
+        0.0,
+        0.6945953040169096,
+        -12.0
+      ]
+    },
+    {
+      "key": "-1_-3",
+      "ground": {
+        "vertices": "chunk_-1_-3_ground_vertices.bin.gz",
+        "indices": "chunk_-1_-3_ground_indices.bin.gz",
+        "faces": "chunk_-1_-3_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-1_-3_ground_bary.bin.gz",
+        "vertex_count": 12161,
+        "triangle_count": 8203
+      },
+      "water": {
+        "vertices": "chunk_-1_-3_water_vertices.bin.gz",
+        "indices": "chunk_-1_-3_water_indices.bin.gz",
+        "faces": "chunk_-1_-3_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-1_-3_water_bary.bin.gz",
+        "vertex_count": 1036,
+        "triangle_count": 384
+      },
+      "bounds_min": [
+        -12.12435565298214,
+        0.34828955552830665,
+        -36.325
+      ],
+      "bounds_max": [
+        0.0,
+        0.6653753015951812,
+        -24.0
+      ]
+    },
+    {
+      "key": "-1_-4",
+      "ground": {
+        "vertices": "chunk_-1_-4_ground_vertices.bin.gz",
+        "indices": "chunk_-1_-4_ground_indices.bin.gz",
+        "faces": "chunk_-1_-4_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-1_-4_ground_bary.bin.gz",
+        "vertex_count": 2330,
+        "triangle_count": 1543
+      },
+      "water": {
+        "vertices": "chunk_-1_-4_water_vertices.bin.gz",
+        "indices": "chunk_-1_-4_water_indices.bin.gz",
+        "faces": "chunk_-1_-4_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-1_-4_water_bary.bin.gz",
+        "vertex_count": 107,
+        "triangle_count": 41
+      },
+      "bounds_min": [
+        -12.12435565298214,
+        0.33927345618300403,
+        -38.5
+      ],
+      "bounds_max": [
+        0.0,
+        0.8081077941598548,
+        -36.0
+      ]
+    },
+    {
+      "key": "-1_0",
+      "ground": {
+        "vertices": "chunk_-1_0_ground_vertices.bin.gz",
+        "indices": "chunk_-1_0_ground_indices.bin.gz",
+        "faces": "chunk_-1_0_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-1_0_ground_bary.bin.gz",
+        "vertex_count": 16225,
+        "triangle_count": 9306
+      },
+      "water": {
+        "vertices": "chunk_-1_0_water_vertices.bin.gz",
+        "indices": "chunk_-1_0_water_indices.bin.gz",
+        "faces": "chunk_-1_0_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-1_0_water_bary.bin.gz",
+        "vertex_count": 535,
+        "triangle_count": 195
+      },
+      "bounds_min": [
+        -12.12435565298214,
+        0.5094339872366845,
+        -0.325
+      ],
+      "bounds_max": [
+        0.0,
+        0.7810782392856899,
+        12.0
+      ]
+    },
+    {
+      "key": "-1_1",
+      "ground": {
+        "vertices": "chunk_-1_1_ground_vertices.bin.gz",
+        "indices": "chunk_-1_1_ground_indices.bin.gz",
+        "faces": "chunk_-1_1_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-1_1_ground_bary.bin.gz",
+        "vertex_count": 17284,
+        "triangle_count": 10145
+      },
+      "water": {
+        "vertices": "chunk_-1_1_water_vertices.bin.gz",
+        "indices": "chunk_-1_1_water_indices.bin.gz",
+        "faces": "chunk_-1_1_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-1_1_water_bary.bin.gz",
+        "vertex_count": 484,
+        "triangle_count": 176
+      },
+      "bounds_min": [
+        -12.12435565298214,
+        0.5094339872366844,
+        11.675
+      ],
+      "bounds_max": [
+        0.0,
+        1.8944942036167112,
+        24.0
+      ]
+    },
+    {
+      "key": "-1_2",
+      "ground": {
+        "vertices": "chunk_-1_2_ground_vertices.bin.gz",
+        "indices": "chunk_-1_2_ground_indices.bin.gz",
+        "faces": "chunk_-1_2_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-1_2_ground_bary.bin.gz",
+        "vertex_count": 17676,
+        "triangle_count": 10214
+      },
+      "water": {
+        "vertices": "chunk_-1_2_water_vertices.bin.gz",
+        "indices": "chunk_-1_2_water_indices.bin.gz",
+        "faces": "chunk_-1_2_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-1_2_water_bary.bin.gz",
+        "vertex_count": 229,
+        "triangle_count": 85
+      },
+      "bounds_min": [
+        -12.12435565298214,
+        0.11175609834099838,
+        23.675
+      ],
+      "bounds_max": [
+        0.0,
+        1.856146057360866,
+        36.0
+      ]
+    },
+    {
+      "key": "-1_3",
+      "ground": {
+        "vertices": "chunk_-1_3_ground_vertices.bin.gz",
+        "indices": "chunk_-1_3_ground_indices.bin.gz",
+        "faces": "chunk_-1_3_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-1_3_ground_bary.bin.gz",
+        "vertex_count": 2855,
+        "triangle_count": 1559
+      },
+      "water": {
+        "vertices": "chunk_-1_3_water_vertices.bin.gz",
+        "indices": "chunk_-1_3_water_indices.bin.gz",
+        "faces": "chunk_-1_3_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-1_3_water_bary.bin.gz",
+        "vertex_count": 101,
+        "triangle_count": 35
+      },
+      "bounds_min": [
+        -12.12435565298214,
+        0.08489465904832691,
+        35.675
+      ],
+      "bounds_max": [
+        0.0,
+        0.4842464324586392,
+        38.5
+      ]
+    },
+    {
+      "key": "-2_-1",
+      "ground": {
+        "vertices": "chunk_-2_-1_ground_vertices.bin.gz",
+        "indices": "chunk_-2_-1_ground_indices.bin.gz",
+        "faces": "chunk_-2_-1_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-2_-1_ground_bary.bin.gz",
+        "vertex_count": 15133,
+        "triangle_count": 10303
+      },
+      "water": {
+        "vertices": "chunk_-2_-1_water_vertices.bin.gz",
+        "indices": "chunk_-2_-1_water_indices.bin.gz",
+        "faces": "chunk_-2_-1_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-2_-1_water_bary.bin.gz",
+        "vertex_count": 307,
+        "triangle_count": 109
+      },
+      "bounds_min": [
+        -24.24871130596428,
+        0.5569456978026757,
+        -12.325
+      ],
+      "bounds_max": [
+        -11.821246761657587,
+        0.9422115847354949,
+        0.0
+      ]
+    },
+    {
+      "key": "-2_-2",
+      "ground": {
+        "vertices": "chunk_-2_-2_ground_vertices.bin.gz",
+        "indices": "chunk_-2_-2_ground_indices.bin.gz",
+        "faces": "chunk_-2_-2_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-2_-2_ground_bary.bin.gz",
+        "vertex_count": 15232,
+        "triangle_count": 10044
+      },
+      "water": {
+        "vertices": "chunk_-2_-2_water_vertices.bin.gz",
+        "indices": "chunk_-2_-2_water_indices.bin.gz",
+        "faces": "chunk_-2_-2_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-2_-2_water_bary.bin.gz",
+        "vertex_count": 436,
+        "triangle_count": 164
+      },
+      "bounds_min": [
+        -24.24871130596428,
+        0.3993061005423894,
+        -24.325
+      ],
+      "bounds_max": [
+        -11.821246761657587,
+        0.75069206613717,
+        -12.0
+      ]
+    },
+    {
+      "key": "-2_-3",
+      "ground": {
+        "vertices": "chunk_-2_-3_ground_vertices.bin.gz",
+        "indices": "chunk_-2_-3_ground_indices.bin.gz",
+        "faces": "chunk_-2_-3_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-2_-3_ground_bary.bin.gz",
+        "vertex_count": 14246,
+        "triangle_count": 9872
+      },
+      "water": {
+        "vertices": "chunk_-2_-3_water_vertices.bin.gz",
+        "indices": "chunk_-2_-3_water_indices.bin.gz",
+        "faces": "chunk_-2_-3_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-2_-3_water_bary.bin.gz",
+        "vertex_count": 216,
+        "triangle_count": 82
+      },
+      "bounds_min": [
+        -24.24871130596428,
+        0.18990995051134374,
+        -36.325
+      ],
+      "bounds_max": [
+        -11.821246761657587,
+        0.8458110981772402,
+        -24.0
+      ]
+    },
+    {
+      "key": "-2_-4",
+      "ground": {
+        "vertices": "chunk_-2_-4_ground_vertices.bin.gz",
+        "indices": "chunk_-2_-4_ground_indices.bin.gz",
+        "faces": "chunk_-2_-4_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-2_-4_ground_bary.bin.gz",
+        "vertex_count": 2496,
+        "triangle_count": 1634
+      },
+      "water": {
+        "vertices": "chunk_-2_-4_water_vertices.bin.gz",
+        "indices": "chunk_-2_-4_water_indices.bin.gz",
+        "faces": "chunk_-2_-4_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-2_-4_water_bary.bin.gz",
+        "vertex_count": 42,
+        "triangle_count": 16
+      },
+      "bounds_min": [
+        -23.38268590217984,
+        0.14257308968926097,
+        -38.5
+      ],
+      "bounds_max": [
+        -11.821246761657799,
+        0.8649986531971388,
+        -36.0
+      ]
+    },
+    {
+      "key": "-2_0",
+      "ground": {
+        "vertices": "chunk_-2_0_ground_vertices.bin.gz",
+        "indices": "chunk_-2_0_ground_indices.bin.gz",
+        "faces": "chunk_-2_0_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-2_0_ground_bary.bin.gz",
+        "vertex_count": 17339,
+        "triangle_count": 10189
+      },
+      "water": {
+        "vertices": "chunk_-2_0_water_vertices.bin.gz",
+        "indices": "chunk_-2_0_water_indices.bin.gz",
+        "faces": "chunk_-2_0_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-2_0_water_bary.bin.gz",
+        "vertex_count": 78,
+        "triangle_count": 26
+      },
+      "bounds_min": [
+        -24.24871130596428,
+        0.6087251680009083,
+        -0.325
+      ],
+      "bounds_max": [
+        -11.821246761657587,
+        1.6103692552398523,
+        12.0
+      ]
+    },
+    {
+      "key": "-2_1",
+      "ground": {
+        "vertices": "chunk_-2_1_ground_vertices.bin.gz",
+        "indices": "chunk_-2_1_ground_indices.bin.gz",
+        "faces": "chunk_-2_1_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-2_1_ground_bary.bin.gz",
+        "vertex_count": 16310,
+        "triangle_count": 9338
+      },
+      "water": {
+        "vertices": "chunk_-2_1_water_vertices.bin.gz",
+        "indices": "chunk_-2_1_water_indices.bin.gz",
+        "faces": "chunk_-2_1_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-2_1_water_bary.bin.gz",
+        "vertex_count": 567,
+        "triangle_count": 209
+      },
+      "bounds_min": [
+        -24.24871130596428,
+        0.28483794124617223,
+        11.675
+      ],
+      "bounds_max": [
+        -11.821246761657587,
+        1.746813646139765,
+        24.0
+      ]
+    },
+    {
+      "key": "-2_2",
+      "ground": {
+        "vertices": "chunk_-2_2_ground_vertices.bin.gz",
+        "indices": "chunk_-2_2_ground_indices.bin.gz",
+        "faces": "chunk_-2_2_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-2_2_ground_bary.bin.gz",
+        "vertex_count": 16273,
+        "triangle_count": 9316
+      },
+      "water": {
+        "vertices": "chunk_-2_2_water_vertices.bin.gz",
+        "indices": "chunk_-2_2_water_indices.bin.gz",
+        "faces": "chunk_-2_2_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-2_2_water_bary.bin.gz",
+        "vertex_count": 320,
+        "triangle_count": 112
+      },
+      "bounds_min": [
+        -24.24871130596428,
+        0.0,
+        23.675
+      ],
+      "bounds_max": [
+        -11.821246761657587,
+        1.746813646139765,
+        36.0
+      ]
+    },
+    {
+      "key": "-2_3",
+      "ground": {
+        "vertices": "chunk_-2_3_ground_vertices.bin.gz",
+        "indices": "chunk_-2_3_ground_indices.bin.gz",
+        "faces": "chunk_-2_3_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-2_3_ground_bary.bin.gz",
+        "vertex_count": 1408,
+        "triangle_count": 836
+      },
+      "water": {
+        "vertices": "chunk_-2_3_water_vertices.bin.gz",
+        "indices": "chunk_-2_3_water_indices.bin.gz",
+        "faces": "chunk_-2_3_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-2_3_water_bary.bin.gz",
+        "vertex_count": 564,
+        "triangle_count": 188
+      },
+      "bounds_min": [
+        -23.38268590217984,
+        0.0,
+        35.675
+      ],
+      "bounds_max": [
+        -11.821246761657587,
+        0.12444803363561925,
+        38.5
+      ]
+    },
+    {
+      "key": "-3_-1",
+      "ground": {
+        "vertices": "chunk_-3_-1_ground_vertices.bin.gz",
+        "indices": "chunk_-3_-1_ground_indices.bin.gz",
+        "faces": "chunk_-3_-1_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-3_-1_ground_bary.bin.gz",
+        "vertex_count": 14362,
+        "triangle_count": 10128
+      },
+      "water": {
+        "vertices": "chunk_-3_-1_water_vertices.bin.gz",
+        "indices": "chunk_-3_-1_water_indices.bin.gz",
+        "faces": "chunk_-3_-1_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-3_-1_water_bary.bin.gz",
+        "vertex_count": 140,
+        "triangle_count": 48
+      },
+      "bounds_min": [
+        -36.373066958946424,
+        0.38214784769210486,
+        -12.325
+      ],
+      "bounds_max": [
+        -23.685794793504396,
+        0.9130091555705931,
+        0.0
+      ]
+    },
+    {
+      "key": "-3_-2",
+      "ground": {
+        "vertices": "chunk_-3_-2_ground_vertices.bin.gz",
+        "indices": "chunk_-3_-2_ground_indices.bin.gz",
+        "faces": "chunk_-3_-2_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-3_-2_ground_bary.bin.gz",
+        "vertex_count": 11104,
+        "triangle_count": 7900
+      },
+      "water": {
+        "vertices": "chunk_-3_-2_water_vertices.bin.gz",
+        "indices": "chunk_-3_-2_water_indices.bin.gz",
+        "faces": "chunk_-3_-2_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-3_-2_water_bary.bin.gz",
+        "vertex_count": 245,
+        "triangle_count": 87
+      },
+      "bounds_min": [
+        -36.06995806762187,
+        0.3860348326772778,
+        -24.325
+      ],
+      "bounds_max": [
+        -23.685794793504396,
+        0.603393566614908,
+        -12.0
+      ]
+    },
+    {
+      "key": "-3_-3",
+      "ground": {
+        "vertices": "chunk_-3_-3_ground_vertices.bin.gz",
+        "indices": "chunk_-3_-3_ground_indices.bin.gz",
+        "faces": "chunk_-3_-3_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-3_-3_ground_bary.bin.gz",
+        "vertex_count": 3357,
+        "triangle_count": 2391
+      },
+      "water": {
+        "vertices": "chunk_-3_-3_water_vertices.bin.gz",
+        "indices": "chunk_-3_-3_water_indices.bin.gz",
+        "faces": "chunk_-3_-3_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-3_-3_water_bary.bin.gz",
+        "vertex_count": 67,
+        "triangle_count": 25
+      },
+      "bounds_min": [
+        -30.31088913245535,
+        0.22008032510490871,
+        -35.125
+      ],
+      "bounds_max": [
+        -23.685794793504396,
+        0.5825461924076081,
+        -24.0
+      ]
+    },
+    {
+      "key": "-3_0",
+      "ground": {
+        "vertices": "chunk_-3_0_ground_vertices.bin.gz",
+        "indices": "chunk_-3_0_ground_indices.bin.gz",
+        "faces": "chunk_-3_0_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-3_0_ground_bary.bin.gz",
+        "vertex_count": 16562,
+        "triangle_count": 10219
+      },
+      "bounds_min": [
+        -36.373066958946424,
+        0.5431887721102074,
+        -0.325
+      ],
+      "bounds_max": [
+        -23.685794793504396,
+        1.7217617807195384,
+        12.0
+      ]
+    },
+    {
+      "key": "-3_1",
+      "ground": {
+        "vertices": "chunk_-3_1_ground_vertices.bin.gz",
+        "indices": "chunk_-3_1_ground_indices.bin.gz",
+        "faces": "chunk_-3_1_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-3_1_ground_bary.bin.gz",
+        "vertex_count": 13680,
+        "triangle_count": 8392
+      },
+      "water": {
+        "vertices": "chunk_-3_1_water_vertices.bin.gz",
+        "indices": "chunk_-3_1_water_indices.bin.gz",
+        "faces": "chunk_-3_1_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-3_1_water_bary.bin.gz",
+        "vertex_count": 271,
+        "triangle_count": 103
+      },
+      "bounds_min": [
+        -36.373066958946424,
+        0.3827165571528116,
+        11.675
+      ],
+      "bounds_max": [
+        -23.685794793504396,
+        1.6518290826023951,
+        24.0
+      ]
+    },
+    {
+      "key": "-3_2",
+      "ground": {
+        "vertices": "chunk_-3_2_ground_vertices.bin.gz",
+        "indices": "chunk_-3_2_ground_indices.bin.gz",
+        "faces": "chunk_-3_2_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-3_2_ground_bary.bin.gz",
+        "vertex_count": 3979,
+        "triangle_count": 2580
+      },
+      "water": {
+        "vertices": "chunk_-3_2_water_vertices.bin.gz",
+        "indices": "chunk_-3_2_water_indices.bin.gz",
+        "faces": "chunk_-3_2_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-3_2_water_bary.bin.gz",
+        "vertex_count": 57,
+        "triangle_count": 21
+      },
+      "bounds_min": [
+        -30.31088913245535,
+        0.05067345536839933,
+        23.675
+      ],
+      "bounds_max": [
+        -23.685794793504396,
+        0.527340736714446,
+        35.125
+      ]
+    },
+    {
+      "key": "-4_-1",
+      "ground": {
+        "vertices": "chunk_-4_-1_ground_vertices.bin.gz",
+        "indices": "chunk_-4_-1_ground_indices.bin.gz",
+        "faces": "chunk_-4_-1_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-4_-1_ground_bary.bin.gz",
+        "vertex_count": 5527,
+        "triangle_count": 3893
+      },
+      "water": {
+        "vertices": "chunk_-4_-1_water_vertices.bin.gz",
+        "indices": "chunk_-4_-1_water_indices.bin.gz",
+        "faces": "chunk_-4_-1_water_faces.bin.gz",
+        "vertex_provenance": "chunk_-4_-1_water_bary.bin.gz",
+        "vertex_count": 24,
+        "triangle_count": 8
+      },
+      "bounds_min": [
+        -44.167295593006365,
+        0.21960863108086048,
+        -12.325
+      ],
+      "bounds_max": [
+        -35.81015044648654,
+        0.6222932656475504,
+        0.0
+      ]
+    },
+    {
+      "key": "-4_-2",
+      "ground": {
+        "vertices": "chunk_-4_-2_ground_vertices.bin.gz",
+        "indices": "chunk_-4_-2_ground_indices.bin.gz",
+        "faces": "chunk_-4_-2_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-4_-2_ground_bary.bin.gz",
+        "vertex_count": 148,
+        "triangle_count": 106
+      },
+      "bounds_min": [
+        -37.23909236273086,
+        0.34680561802568177,
+        -14.25
+      ],
+      "bounds_max": [
+        -35.81015044648654,
+        0.40114634487795314,
+        -12.0
+      ]
+    },
+    {
+      "key": "-4_0",
+      "ground": {
+        "vertices": "chunk_-4_0_ground_vertices.bin.gz",
+        "indices": "chunk_-4_0_ground_indices.bin.gz",
+        "faces": "chunk_-4_0_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-4_0_ground_bary.bin.gz",
+        "vertex_count": 6443,
+        "triangle_count": 3965
+      },
+      "bounds_min": [
+        -44.167295593006365,
+        0.501176978460407,
+        -0.325
+      ],
+      "bounds_max": [
+        -35.81015044648654,
+        1.676372656765806,
+        12.0
+      ]
+    },
+    {
+      "key": "-4_1",
+      "ground": {
+        "vertices": "chunk_-4_1_ground_vertices.bin.gz",
+        "indices": "chunk_-4_1_ground_indices.bin.gz",
+        "faces": "chunk_-4_1_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_-4_1_ground_bary.bin.gz",
+        "vertex_count": 163,
+        "triangle_count": 117
+      },
+      "bounds_min": [
+        -37.23909236273086,
+        0.5949710693028418,
+        11.675
+      ],
+      "bounds_max": [
+        -35.81015044648654,
+        0.7969542879000144,
+        14.25
+      ]
+    },
+    {
+      "key": "0_-1",
+      "ground": {
+        "vertices": "chunk_0_-1_ground_vertices.bin.gz",
+        "indices": "chunk_0_-1_ground_indices.bin.gz",
+        "faces": "chunk_0_-1_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_0_-1_ground_bary.bin.gz",
+        "vertex_count": 13398,
+        "triangle_count": 8380
+      },
+      "water": {
+        "vertices": "chunk_0_-1_water_vertices.bin.gz",
+        "indices": "chunk_0_-1_water_indices.bin.gz",
+        "faces": "chunk_0_-1_water_faces.bin.gz",
+        "vertex_provenance": "chunk_0_-1_water_bary.bin.gz",
+        "vertex_count": 1907,
+        "triangle_count": 679
+      },
+      "bounds_min": [
+        0.0,
+        0.4928516364471952,
+        -12.325
+      ],
+      "bounds_max": [
+        12.12435565298214,
+        2.0346239869903364,
+        0.0
+      ]
+    },
+    {
+      "key": "0_-2",
+      "ground": {
+        "vertices": "chunk_0_-2_ground_vertices.bin.gz",
+        "indices": "chunk_0_-2_ground_indices.bin.gz",
+        "faces": "chunk_0_-2_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_0_-2_ground_bary.bin.gz",
+        "vertex_count": 16199,
+        "triangle_count": 10135
+      },
+      "water": {
+        "vertices": "chunk_0_-2_water_vertices.bin.gz",
+        "indices": "chunk_0_-2_water_indices.bin.gz",
+        "faces": "chunk_0_-2_water_faces.bin.gz",
+        "vertex_provenance": "chunk_0_-2_water_bary.bin.gz",
+        "vertex_count": 510,
+        "triangle_count": 194
+      },
+      "bounds_min": [
+        0.0,
+        0.4049823117412069,
+        -24.325
+      ],
+      "bounds_max": [
+        12.12435565298214,
+        2.0346239869903364,
+        -12.0
+      ]
+    },
+    {
+      "key": "0_-3",
+      "ground": {
+        "vertices": "chunk_0_-3_ground_vertices.bin.gz",
+        "indices": "chunk_0_-3_ground_indices.bin.gz",
+        "faces": "chunk_0_-3_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_0_-3_ground_bary.bin.gz",
+        "vertex_count": 14149,
+        "triangle_count": 9915
+      },
+      "water": {
+        "vertices": "chunk_0_-3_water_vertices.bin.gz",
+        "indices": "chunk_0_-3_water_indices.bin.gz",
+        "faces": "chunk_0_-3_water_faces.bin.gz",
+        "vertex_provenance": "chunk_0_-3_water_bary.bin.gz",
+        "vertex_count": 220,
+        "triangle_count": 80
+      },
+      "bounds_min": [
+        0.0,
+        0.21294342423143006,
+        -36.325
+      ],
+      "bounds_max": [
+        12.12435565298214,
+        1.0000910302415489,
+        -24.0
+      ]
+    },
+    {
+      "key": "0_-4",
+      "ground": {
+        "vertices": "chunk_0_-4_ground_vertices.bin.gz",
+        "indices": "chunk_0_-4_ground_indices.bin.gz",
+        "faces": "chunk_0_-4_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_0_-4_ground_bary.bin.gz",
+        "vertex_count": 2538,
+        "triangle_count": 1785
+      },
+      "water": {
+        "vertices": "chunk_0_-4_water_vertices.bin.gz",
+        "indices": "chunk_0_-4_water_indices.bin.gz",
+        "faces": "chunk_0_-4_water_faces.bin.gz",
+        "vertex_provenance": "chunk_0_-4_water_bary.bin.gz",
+        "vertex_count": 49,
+        "triangle_count": 17
+      },
+      "bounds_min": [
+        0.0,
+        0.14154920396191936,
+        -38.5
+      ],
+      "bounds_max": [
+        12.12435565298214,
+        0.36619683821989163,
+        -36.0
+      ]
+    },
+    {
+      "key": "0_0",
+      "ground": {
+        "vertices": "chunk_0_0_ground_vertices.bin.gz",
+        "indices": "chunk_0_0_ground_indices.bin.gz",
+        "faces": "chunk_0_0_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_0_0_ground_bary.bin.gz",
+        "vertex_count": 7692,
+        "triangle_count": 4650
+      },
+      "water": {
+        "vertices": "chunk_0_0_water_vertices.bin.gz",
+        "indices": "chunk_0_0_water_indices.bin.gz",
+        "faces": "chunk_0_0_water_faces.bin.gz",
+        "vertex_provenance": "chunk_0_0_water_bary.bin.gz",
+        "vertex_count": 3781,
+        "triangle_count": 1297
+      },
+      "bounds_min": [
+        0.0,
+        0.09711324774797493,
+        -0.325
+      ],
+      "bounds_max": [
+        12.12435565298214,
+        1.7499591914917774,
+        12.0
+      ]
+    },
+    {
+      "key": "0_1",
+      "ground": {
+        "vertices": "chunk_0_1_ground_vertices.bin.gz",
+        "indices": "chunk_0_1_ground_indices.bin.gz",
+        "faces": "chunk_0_1_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_0_1_ground_bary.bin.gz",
+        "vertex_count": 16016,
+        "triangle_count": 9547
+      },
+      "water": {
+        "vertices": "chunk_0_1_water_vertices.bin.gz",
+        "indices": "chunk_0_1_water_indices.bin.gz",
+        "faces": "chunk_0_1_water_faces.bin.gz",
+        "vertex_provenance": "chunk_0_1_water_bary.bin.gz",
+        "vertex_count": 571,
+        "triangle_count": 207
+      },
+      "bounds_min": [
+        0.0,
+        -2.0752523788263083e-16,
+        11.675
+      ],
+      "bounds_max": [
+        12.12435565298214,
+        1.8140238450306627,
+        24.0
+      ]
+    },
+    {
+      "key": "0_2",
+      "ground": {
+        "vertices": "chunk_0_2_ground_vertices.bin.gz",
+        "indices": "chunk_0_2_ground_indices.bin.gz",
+        "faces": "chunk_0_2_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_0_2_ground_bary.bin.gz",
+        "vertex_count": 15397,
+        "triangle_count": 10095
+      },
+      "water": {
+        "vertices": "chunk_0_2_water_vertices.bin.gz",
+        "indices": "chunk_0_2_water_indices.bin.gz",
+        "faces": "chunk_0_2_water_faces.bin.gz",
+        "vertex_provenance": "chunk_0_2_water_bary.bin.gz",
+        "vertex_count": 570,
+        "triangle_count": 216
+      },
+      "bounds_min": [
+        0.0,
+        0.062133821239041695,
+        23.675
+      ],
+      "bounds_max": [
+        12.12435565298214,
+        0.6184648899796797,
+        36.0
+      ]
+    },
+    {
+      "key": "0_3",
+      "ground": {
+        "vertices": "chunk_0_3_ground_vertices.bin.gz",
+        "indices": "chunk_0_3_ground_indices.bin.gz",
+        "faces": "chunk_0_3_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_0_3_ground_bary.bin.gz",
+        "vertex_count": 3338,
+        "triangle_count": 1981
+      },
+      "water": {
+        "vertices": "chunk_0_3_water_vertices.bin.gz",
+        "indices": "chunk_0_3_water_indices.bin.gz",
+        "faces": "chunk_0_3_water_faces.bin.gz",
+        "vertex_provenance": "chunk_0_3_water_bary.bin.gz",
+        "vertex_count": 88,
+        "triangle_count": 32
+      },
+      "bounds_min": [
+        0.0,
+        0.23977842943867272,
+        35.675
+      ],
+      "bounds_max": [
+        12.12435565298214,
+        0.49257067864198173,
+        38.5
+      ]
+    },
+    {
+      "key": "1_-1",
+      "ground": {
+        "vertices": "chunk_1_-1_ground_vertices.bin.gz",
+        "indices": "chunk_1_-1_ground_indices.bin.gz",
+        "faces": "chunk_1_-1_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_1_-1_ground_bary.bin.gz",
+        "vertex_count": 17787,
+        "triangle_count": 10456
+      },
+      "water": {
+        "vertices": "chunk_1_-1_water_vertices.bin.gz",
+        "indices": "chunk_1_-1_water_indices.bin.gz",
+        "faces": "chunk_1_-1_water_faces.bin.gz",
+        "vertex_provenance": "chunk_1_-1_water_bary.bin.gz",
+        "vertex_count": 80,
+        "triangle_count": 30
+      },
+      "bounds_min": [
+        11.821246761657587,
+        0.26129473875315995,
+        -12.325
+      ],
+      "bounds_max": [
+        24.24871130596428,
+        2.0724901104797415,
+        0.0
+      ]
+    },
+    {
+      "key": "1_-2",
+      "ground": {
+        "vertices": "chunk_1_-2_ground_vertices.bin.gz",
+        "indices": "chunk_1_-2_ground_indices.bin.gz",
+        "faces": "chunk_1_-2_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_1_-2_ground_bary.bin.gz",
+        "vertex_count": 17435,
+        "triangle_count": 10269
+      },
+      "water": {
+        "vertices": "chunk_1_-2_water_vertices.bin.gz",
+        "indices": "chunk_1_-2_water_indices.bin.gz",
+        "faces": "chunk_1_-2_water_faces.bin.gz",
+        "vertex_provenance": "chunk_1_-2_water_bary.bin.gz",
+        "vertex_count": 12,
+        "triangle_count": 4
+      },
+      "bounds_min": [
+        11.821246761657587,
+        0.38545257675855754,
+        -24.325
+      ],
+      "bounds_max": [
+        24.24871130596428,
+        2.102730213808623,
+        -12.0
+      ]
+    },
+    {
+      "key": "1_-3",
+      "ground": {
+        "vertices": "chunk_1_-3_ground_vertices.bin.gz",
+        "indices": "chunk_1_-3_ground_indices.bin.gz",
+        "faces": "chunk_1_-3_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_1_-3_ground_bary.bin.gz",
+        "vertex_count": 17351,
+        "triangle_count": 10355
+      },
+      "bounds_min": [
+        11.821246761657587,
+        0.21086115496443755,
+        -36.325
+      ],
+      "bounds_max": [
+        24.24871130596428,
+        2.026151868334576,
+        -24.0
+      ]
+    },
+    {
+      "key": "1_-4",
+      "ground": {
+        "vertices": "chunk_1_-4_ground_vertices.bin.gz",
+        "indices": "chunk_1_-4_ground_indices.bin.gz",
+        "faces": "chunk_1_-4_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_1_-4_ground_bary.bin.gz",
+        "vertex_count": 1927,
+        "triangle_count": 1162
+      },
+      "water": {
+        "vertices": "chunk_1_-4_water_vertices.bin.gz",
+        "indices": "chunk_1_-4_water_indices.bin.gz",
+        "faces": "chunk_1_-4_water_faces.bin.gz",
+        "vertex_provenance": "chunk_1_-4_water_bary.bin.gz",
+        "vertex_count": 216,
+        "triangle_count": 72
+      },
+      "bounds_min": [
+        11.821246761657587,
+        0.0,
+        -38.5
+      ],
+      "bounds_max": [
+        23.38268590217984,
+        0.806360892401325,
+        -36.0
+      ]
+    },
+    {
+      "key": "1_0",
+      "ground": {
+        "vertices": "chunk_1_0_ground_vertices.bin.gz",
+        "indices": "chunk_1_0_ground_indices.bin.gz",
+        "faces": "chunk_1_0_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_1_0_ground_bary.bin.gz",
+        "vertex_count": 16744,
+        "triangle_count": 9688
+      },
+      "water": {
+        "vertices": "chunk_1_0_water_vertices.bin.gz",
+        "indices": "chunk_1_0_water_indices.bin.gz",
+        "faces": "chunk_1_0_water_faces.bin.gz",
+        "vertex_provenance": "chunk_1_0_water_bary.bin.gz",
+        "vertex_count": 281,
+        "triangle_count": 97
+      },
+      "bounds_min": [
+        11.821246761657587,
+        0.0,
+        -0.325
+      ],
+      "bounds_max": [
+        24.24871130596428,
+        1.7499591914917774,
+        12.0
+      ]
+    },
+    {
+      "key": "1_1",
+      "ground": {
+        "vertices": "chunk_1_1_ground_vertices.bin.gz",
+        "indices": "chunk_1_1_ground_indices.bin.gz",
+        "faces": "chunk_1_1_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_1_1_ground_bary.bin.gz",
+        "vertex_count": 2625,
+        "triangle_count": 3340
+      },
+      "water": {
+        "vertices": "chunk_1_1_water_vertices.bin.gz",
+        "indices": "chunk_1_1_water_indices.bin.gz",
+        "faces": "chunk_1_1_water_faces.bin.gz",
+        "vertex_provenance": "chunk_1_1_water_bary.bin.gz",
+        "vertex_count": 5687,
+        "triangle_count": 1907
+      },
+      "bounds_min": [
+        11.821246761657587,
+        -3.380617181143448e-16,
+        11.675
+      ],
+      "bounds_max": [
+        24.24871130596428,
+        0.10562346023596071,
+        24.0
+      ]
+    },
+    {
+      "key": "1_2",
+      "ground": {
+        "vertices": "chunk_1_2_ground_vertices.bin.gz",
+        "indices": "chunk_1_2_ground_indices.bin.gz",
+        "faces": "chunk_1_2_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_1_2_ground_bary.bin.gz",
+        "vertex_count": 10347,
+        "triangle_count": 9457
+      },
+      "water": {
+        "vertices": "chunk_1_2_water_vertices.bin.gz",
+        "indices": "chunk_1_2_water_indices.bin.gz",
+        "faces": "chunk_1_2_water_faces.bin.gz",
+        "vertex_provenance": "chunk_1_2_water_bary.bin.gz",
+        "vertex_count": 3698,
+        "triangle_count": 1238
+      },
+      "bounds_min": [
+        11.821246761657587,
+        -1.830527783288014e-16,
+        23.675
+      ],
+      "bounds_max": [
+        24.24871130596428,
+        0.28559041175068384,
+        36.0
+      ]
+    },
+    {
+      "key": "1_3",
+      "ground": {
+        "vertices": "chunk_1_3_ground_vertices.bin.gz",
+        "indices": "chunk_1_3_ground_indices.bin.gz",
+        "faces": "chunk_1_3_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_1_3_ground_bary.bin.gz",
+        "vertex_count": 2485,
+        "triangle_count": 1573
+      },
+      "water": {
+        "vertices": "chunk_1_3_water_vertices.bin.gz",
+        "indices": "chunk_1_3_water_indices.bin.gz",
+        "faces": "chunk_1_3_water_faces.bin.gz",
+        "vertex_provenance": "chunk_1_3_water_bary.bin.gz",
+        "vertex_count": 228,
+        "triangle_count": 76
+      },
+      "bounds_min": [
+        11.821246761657587,
+        0.0,
+        35.675
+      ],
+      "bounds_max": [
+        23.38268590217984,
+        0.28346728130930055,
+        38.5
+      ]
+    },
+    {
+      "key": "2_-1",
+      "ground": {
+        "vertices": "chunk_2_-1_ground_vertices.bin.gz",
+        "indices": "chunk_2_-1_ground_indices.bin.gz",
+        "faces": "chunk_2_-1_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_2_-1_ground_bary.bin.gz",
+        "vertex_count": 17110,
+        "triangle_count": 10210
+      },
+      "water": {
+        "vertices": "chunk_2_-1_water_vertices.bin.gz",
+        "indices": "chunk_2_-1_water_indices.bin.gz",
+        "faces": "chunk_2_-1_water_faces.bin.gz",
+        "vertex_provenance": "chunk_2_-1_water_bary.bin.gz",
+        "vertex_count": 240,
+        "triangle_count": 88
+      },
+      "bounds_min": [
+        23.685794793504396,
+        0.25910408495400816,
+        -12.325
+      ],
+      "bounds_max": [
+        36.373066958946424,
+        0.7937276794261444,
+        0.0
+      ]
+    },
+    {
+      "key": "2_-2",
+      "ground": {
+        "vertices": "chunk_2_-2_ground_vertices.bin.gz",
+        "indices": "chunk_2_-2_ground_indices.bin.gz",
+        "faces": "chunk_2_-2_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_2_-2_ground_bary.bin.gz",
+        "vertex_count": 12183,
+        "triangle_count": 7713
+      },
+      "water": {
+        "vertices": "chunk_2_-2_water_vertices.bin.gz",
+        "indices": "chunk_2_-2_water_indices.bin.gz",
+        "faces": "chunk_2_-2_water_faces.bin.gz",
+        "vertex_provenance": "chunk_2_-2_water_bary.bin.gz",
+        "vertex_count": 420,
+        "triangle_count": 152
+      },
+      "bounds_min": [
+        23.685794793504396,
+        0.36737574703119696,
+        -24.325
+      ],
+      "bounds_max": [
+        36.06995806762187,
+        0.7837399998660304,
+        -12.0
+      ]
+    },
+    {
+      "key": "2_-3",
+      "ground": {
+        "vertices": "chunk_2_-3_ground_vertices.bin.gz",
+        "indices": "chunk_2_-3_ground_indices.bin.gz",
+        "faces": "chunk_2_-3_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_2_-3_ground_bary.bin.gz",
+        "vertex_count": 3688,
+        "triangle_count": 2557
+      },
+      "water": {
+        "vertices": "chunk_2_-3_water_vertices.bin.gz",
+        "indices": "chunk_2_-3_water_indices.bin.gz",
+        "faces": "chunk_2_-3_water_faces.bin.gz",
+        "vertex_provenance": "chunk_2_-3_water_bary.bin.gz",
+        "vertex_count": 60,
+        "triangle_count": 20
+      },
+      "bounds_min": [
+        23.685794793504396,
+        0.21998482717974407,
+        -35.125
+      ],
+      "bounds_max": [
+        30.31088913245535,
+        0.6409878693184086,
+        -24.0
+      ]
+    },
+    {
+      "key": "2_0",
+      "ground": {
+        "vertices": "chunk_2_0_ground_vertices.bin.gz",
+        "indices": "chunk_2_0_ground_indices.bin.gz",
+        "faces": "chunk_2_0_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_2_0_ground_bary.bin.gz",
+        "vertex_count": 17225,
+        "triangle_count": 9929
+      },
+      "water": {
+        "vertices": "chunk_2_0_water_vertices.bin.gz",
+        "indices": "chunk_2_0_water_indices.bin.gz",
+        "faces": "chunk_2_0_water_faces.bin.gz",
+        "vertex_provenance": "chunk_2_0_water_bary.bin.gz",
+        "vertex_count": 136,
+        "triangle_count": 50
+      },
+      "bounds_min": [
+        23.685794793504396,
+        0.03268685736557618,
+        -0.325
+      ],
+      "bounds_max": [
+        36.373066958946424,
+        0.3956337676356783,
+        12.0
+      ]
+    },
+    {
+      "key": "2_1",
+      "ground": {
+        "vertices": "chunk_2_1_ground_vertices.bin.gz",
+        "indices": "chunk_2_1_ground_indices.bin.gz",
+        "faces": "chunk_2_1_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_2_1_ground_bary.bin.gz",
+        "vertex_count": 1825,
+        "triangle_count": 975
+      },
+      "water": {
+        "vertices": "chunk_2_1_water_vertices.bin.gz",
+        "indices": "chunk_2_1_water_indices.bin.gz",
+        "faces": "chunk_2_1_water_faces.bin.gz",
+        "vertex_provenance": "chunk_2_1_water_bary.bin.gz",
+        "vertex_count": 4059,
+        "triangle_count": 1353
+      },
+      "bounds_min": [
+        23.685794793504396,
+        0.0,
+        11.675
+      ],
+      "bounds_max": [
+        36.373066958946424,
+        0.12218198603427557,
+        24.0
+      ]
+    },
+    {
+      "key": "2_2",
+      "water": {
+        "vertices": "chunk_2_2_water_vertices.bin.gz",
+        "indices": "chunk_2_2_water_indices.bin.gz",
+        "faces": "chunk_2_2_water_faces.bin.gz",
+        "vertex_provenance": "chunk_2_2_water_bary.bin.gz",
+        "vertex_count": 1491,
+        "triangle_count": 497
+      },
+      "bounds_min": [
+        23.685794793504396,
+        0.0,
+        23.675
+      ],
+      "bounds_max": [
+        30.31088913245535,
+        0.0,
+        35.125
+      ]
+    },
+    {
+      "key": "3_-1",
+      "ground": {
+        "vertices": "chunk_3_-1_ground_vertices.bin.gz",
+        "indices": "chunk_3_-1_ground_indices.bin.gz",
+        "faces": "chunk_3_-1_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_3_-1_ground_bary.bin.gz",
+        "vertex_count": 6002,
+        "triangle_count": 4129
+      },
+      "water": {
+        "vertices": "chunk_3_-1_water_vertices.bin.gz",
+        "indices": "chunk_3_-1_water_indices.bin.gz",
+        "faces": "chunk_3_-1_water_faces.bin.gz",
+        "vertex_provenance": "chunk_3_-1_water_bary.bin.gz",
+        "vertex_count": 48,
+        "triangle_count": 16
+      },
+      "bounds_min": [
+        35.81015044648654,
+        0.11571222087513275,
+        -12.325
+      ],
+      "bounds_max": [
+        44.167295593006365,
+        0.5882139585638599,
+        0.0
+      ]
+    },
+    {
+      "key": "3_-2",
+      "ground": {
+        "vertices": "chunk_3_-2_ground_vertices.bin.gz",
+        "indices": "chunk_3_-2_ground_indices.bin.gz",
+        "faces": "chunk_3_-2_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_3_-2_ground_bary.bin.gz",
+        "vertex_count": 151,
+        "triangle_count": 109
+      },
+      "bounds_min": [
+        35.81015044648654,
+        0.4618544538586713,
+        -14.25
+      ],
+      "bounds_max": [
+        37.23909236273086,
+        0.586825129909196,
+        -12.0
+      ]
+    },
+    {
+      "key": "3_0",
+      "ground": {
+        "vertices": "chunk_3_0_ground_vertices.bin.gz",
+        "indices": "chunk_3_0_ground_indices.bin.gz",
+        "faces": "chunk_3_0_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_3_0_ground_bary.bin.gz",
+        "vertex_count": 6493,
+        "triangle_count": 3681
+      },
+      "water": {
+        "vertices": "chunk_3_0_water_vertices.bin.gz",
+        "indices": "chunk_3_0_water_indices.bin.gz",
+        "faces": "chunk_3_0_water_faces.bin.gz",
+        "vertex_provenance": "chunk_3_0_water_bary.bin.gz",
+        "vertex_count": 219,
+        "triangle_count": 81
+      },
+      "bounds_min": [
+        35.81015044648654,
+        0.09688024164282467,
+        -0.325
+      ],
+      "bounds_max": [
+        44.167295593006365,
+        0.35468232678123846,
+        12.0
+      ]
+    },
+    {
+      "key": "3_1",
+      "ground": {
+        "vertices": "chunk_3_1_ground_vertices.bin.gz",
+        "indices": "chunk_3_1_ground_indices.bin.gz",
+        "faces": "chunk_3_1_ground_faces.bin.gz",
+        "vertex_provenance": "chunk_3_1_ground_bary.bin.gz",
+        "vertex_count": 199,
+        "triangle_count": 113
+      },
+      "bounds_min": [
+        35.81015044648654,
+        0.02832883418024266,
+        11.675
+      ],
+      "bounds_max": [
+        37.23909236273086,
+        0.11203097802396936,
+        14.25
+      ]
+    }
+  ],
+  "files": {
+    "chunk_-1_-1_ground_vertices.bin.gz": {
+      "sha256": "0c1bab8d9b602b93334f51326eecc2ba850bd2eaa11d4bafb3bc3225733c13ab",
+      "bytes": 250677,
+      "decoded_bytes": 985600,
+      "encoding": "gzip/little-endian-float32",
+      "count": 17600,
+      "stride": 14
+    },
+    "chunk_-1_-1_ground_indices.bin.gz": {
+      "sha256": "df6fc67fde444d114c449ad6209caa6ab3737cb8d260cdb646717e041e55694d",
+      "bytes": 39690,
+      "decoded_bytes": 131568,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 32892,
+      "stride": 1
+    },
+    "chunk_-1_-1_ground_faces.bin.gz": {
+      "sha256": "2c06b9af42d14ebb7963dab6e634ed672697ec4a9b2996cf43387ca2a569666a",
+      "bytes": 23829,
+      "decoded_bytes": 131568,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 10964,
+      "stride": 3
+    },
+    "chunk_-1_-1_ground_bary.bin.gz": {
+      "sha256": "1b794c0eeae4383902c7b1505ba6a266545da77ce5e0b789a2f726fc60924af4",
+      "bytes": 100643,
+      "decoded_bytes": 281600,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 17600,
+      "stride": 16
+    },
+    "chunk_-1_-1_water_vertices.bin.gz": {
+      "sha256": "b7848d103c800956895e75fa0048214347cfb2b1dcee87f912b8402c25d38422",
+      "bytes": 3083,
+      "decoded_bytes": 20272,
+      "encoding": "gzip/little-endian-float32",
+      "count": 362,
+      "stride": 14
+    },
+    "chunk_-1_-1_water_indices.bin.gz": {
+      "sha256": "aa5d054115a6a8709960c43ba9e9305c554922bc89344afdcffeaa2056ea302e",
+      "bytes": 619,
+      "decoded_bytes": 1584,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 396,
+      "stride": 1
+    },
+    "chunk_-1_-1_water_faces.bin.gz": {
+      "sha256": "a113a5d34f8a21f5da514311b282be13bff97c5d0234dff006c7116cb971efcb",
+      "bytes": 531,
+      "decoded_bytes": 1584,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 132,
+      "stride": 3
+    },
+    "chunk_-1_-1_water_bary.bin.gz": {
+      "sha256": "f05f3511b634db8b84261d4631698d35d84ce18b33202e4c70a577b2d26b68f4",
+      "bytes": 2592,
+      "decoded_bytes": 5792,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 362,
+      "stride": 16
+    },
+    "chunk_-1_-2_ground_vertices.bin.gz": {
+      "sha256": "33f933dd78a5517ca78c821e435393257b0e92bf5bffa2e9015d522ee3fe9c0e",
+      "bytes": 176075,
+      "decoded_bytes": 698208,
+      "encoding": "gzip/little-endian-float32",
+      "count": 12468,
+      "stride": 14
+    },
+    "chunk_-1_-2_ground_indices.bin.gz": {
+      "sha256": "76582788f9522da804d39c02141006907944dd78ad903ab2b9ccbfa03e146f6f",
+      "bytes": 28950,
+      "decoded_bytes": 94872,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 23718,
+      "stride": 1
+    },
+    "chunk_-1_-2_ground_faces.bin.gz": {
+      "sha256": "0a2361cdf056c0e687b029109f189f02c96e978a857375063b2a4343673b1e32",
+      "bytes": 17959,
+      "decoded_bytes": 94872,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 7906,
+      "stride": 3
+    },
+    "chunk_-1_-2_ground_bary.bin.gz": {
+      "sha256": "fc79befb03e98b23742e9af79f8496cf6f719e5f78fdfcd90b45e5f318b2b8c6",
+      "bytes": 67882,
+      "decoded_bytes": 199488,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 12468,
+      "stride": 16
+    },
+    "chunk_-1_-2_water_vertices.bin.gz": {
+      "sha256": "fc9035c671b72c1c3e4ac229d4cc17724623080b8bc084fbc13c0162a4ca8100",
+      "bytes": 8758,
+      "decoded_bytes": 94752,
+      "encoding": "gzip/little-endian-float32",
+      "count": 1692,
+      "stride": 14
+    },
+    "chunk_-1_-2_water_indices.bin.gz": {
+      "sha256": "b7f23f0c3430e8646932706801136341a27aa034feea43c72f7f347ae1fcf202",
+      "bytes": 2641,
+      "decoded_bytes": 7584,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 1896,
+      "stride": 1
+    },
+    "chunk_-1_-2_water_faces.bin.gz": {
+      "sha256": "acf44a205377cd7990f088db1ef73b0889026b3bf6d7ab0b35bc3f9a6d639b0b",
+      "bytes": 2094,
+      "decoded_bytes": 7584,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 632,
+      "stride": 3
+    },
+    "chunk_-1_-2_water_bary.bin.gz": {
+      "sha256": "8858f4448e31d8b863e8fea2fd906c6e180e179dc25d82add471e1376880c52a",
+      "bytes": 6725,
+      "decoded_bytes": 27072,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 1692,
+      "stride": 16
+    },
+    "chunk_-1_-3_ground_vertices.bin.gz": {
+      "sha256": "8cad1a8574568591194ec76eddc113bf9747219c25cba49ca637dfa10db992b8",
+      "bytes": 168752,
+      "decoded_bytes": 681016,
+      "encoding": "gzip/little-endian-float32",
+      "count": 12161,
+      "stride": 14
+    },
+    "chunk_-1_-3_ground_indices.bin.gz": {
+      "sha256": "d6f8c280993d67ad354d02db7ebd9ccc79e61a0076777d6edb196013de9652a9",
+      "bytes": 30088,
+      "decoded_bytes": 98436,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 24609,
+      "stride": 1
+    },
+    "chunk_-1_-3_ground_faces.bin.gz": {
+      "sha256": "cd5f9161f2661c8b0a7f953c02993908c917c2c18deacc72114744079148d183",
+      "bytes": 19193,
+      "decoded_bytes": 98436,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 8203,
+      "stride": 3
+    },
+    "chunk_-1_-3_ground_bary.bin.gz": {
+      "sha256": "25964c462200752075f55b8d4dc94a15225487abce3eeaafd8cbbdc41be68520",
+      "bytes": 66452,
+      "decoded_bytes": 194576,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 12161,
+      "stride": 16
+    },
+    "chunk_-1_-3_water_vertices.bin.gz": {
+      "sha256": "2237efb858f448a675e27b145ca7ca29b1123709f461d4a52496417be89f0da7",
+      "bytes": 6078,
+      "decoded_bytes": 58016,
+      "encoding": "gzip/little-endian-float32",
+      "count": 1036,
+      "stride": 14
+    },
+    "chunk_-1_-3_water_indices.bin.gz": {
+      "sha256": "ebc93722cd649de69cdeb4e71fa10db8a864e4ba3381e9f1efa76e83b63927f7",
+      "bytes": 1641,
+      "decoded_bytes": 4608,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 1152,
+      "stride": 1
+    },
+    "chunk_-1_-3_water_faces.bin.gz": {
+      "sha256": "58743ef0f68a02e3af05c2ec8e8d706a6bd19622cd86229dc4997748ba7c9ae5",
+      "bytes": 1326,
+      "decoded_bytes": 4608,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 384,
+      "stride": 3
+    },
+    "chunk_-1_-3_water_bary.bin.gz": {
+      "sha256": "e51fbcab22e8ab7fc91eb5739c4a275febd44ce34037ca1c0ecc5bc4c2f16dc6",
+      "bytes": 4625,
+      "decoded_bytes": 16576,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 1036,
+      "stride": 16
+    },
+    "chunk_-1_-4_ground_vertices.bin.gz": {
+      "sha256": "ea7a7a7c109c669567330f814b2be4cedf78c1e448d1bdc6d08197ed28b2e555",
+      "bytes": 32870,
+      "decoded_bytes": 130480,
+      "encoding": "gzip/little-endian-float32",
+      "count": 2330,
+      "stride": 14
+    },
+    "chunk_-1_-4_ground_indices.bin.gz": {
+      "sha256": "cc1eefa39c222aebe1382834cea3b9938202e3597e904e5a8b8a9393e05c7150",
+      "bytes": 5715,
+      "decoded_bytes": 18516,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 4629,
+      "stride": 1
+    },
+    "chunk_-1_-4_ground_faces.bin.gz": {
+      "sha256": "404c939c36db79efa04308e094c281d9669881c6fd23e31d566208ce15219f83",
+      "bytes": 3679,
+      "decoded_bytes": 18516,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 1543,
+      "stride": 3
+    },
+    "chunk_-1_-4_ground_bary.bin.gz": {
+      "sha256": "c4b984247c8196b89bbca1196be7427e4c423a59d240bf1874a9ee467d7b97ea",
+      "bytes": 12432,
+      "decoded_bytes": 37280,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 2330,
+      "stride": 16
+    },
+    "chunk_-1_-4_water_vertices.bin.gz": {
+      "sha256": "85140040c3df17d294a64d99ba81e484941cff1b179823332f8194ff82fe32cd",
+      "bytes": 983,
+      "decoded_bytes": 5992,
+      "encoding": "gzip/little-endian-float32",
+      "count": 107,
+      "stride": 14
+    },
+    "chunk_-1_-4_water_indices.bin.gz": {
+      "sha256": "8e51a5cabb6e66a5d86175a857fb720790d6cf0dbd99959915e9cb4745eda65a",
+      "bytes": 194,
+      "decoded_bytes": 492,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 123,
+      "stride": 1
+    },
+    "chunk_-1_-4_water_faces.bin.gz": {
+      "sha256": "c29e62102a097a3c5f8f9a5d2e1b8f8f72352c3df9b73b17c7b4aff95917d3fa",
+      "bytes": 182,
+      "decoded_bytes": 492,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 41,
+      "stride": 3
+    },
+    "chunk_-1_-4_water_bary.bin.gz": {
+      "sha256": "f71711a1a9975c9bc109c0bbca46c93cb02f39599281f9ac1ceafaacbcce5a59",
+      "bytes": 694,
+      "decoded_bytes": 1712,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 107,
+      "stride": 16
+    },
+    "chunk_-1_0_ground_vertices.bin.gz": {
+      "sha256": "8ed8f2b618d780be66f9b0916c5719d2f3d8c44b8f70a1c55ee98f29f426e25e",
+      "bytes": 210790,
+      "decoded_bytes": 908600,
+      "encoding": "gzip/little-endian-float32",
+      "count": 16225,
+      "stride": 14
+    },
+    "chunk_-1_0_ground_indices.bin.gz": {
+      "sha256": "8e5619b486271545d726037840f0cd274484ac62387b3a28f510ee58d9136e28",
+      "bytes": 33996,
+      "decoded_bytes": 111672,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 27918,
+      "stride": 1
+    },
+    "chunk_-1_0_ground_faces.bin.gz": {
+      "sha256": "d64acdf466ce1e120b665327a2888be9b3303f07acf4658e8ea953f5d590c4c5",
+      "bytes": 21298,
+      "decoded_bytes": 111672,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 9306,
+      "stride": 3
+    },
+    "chunk_-1_0_ground_bary.bin.gz": {
+      "sha256": "6ef7eca7bfd81c546429dfe8b1883fb77e1015ed3f648b22d8fb93e558b90229",
+      "bytes": 87249,
+      "decoded_bytes": 259600,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 16225,
+      "stride": 16
+    },
+    "chunk_-1_0_water_vertices.bin.gz": {
+      "sha256": "e95b570b24dc0a6d8a727bb8bcf43b344601237fccb8a9d9cb57f7a49e9a017b",
+      "bytes": 3957,
+      "decoded_bytes": 29960,
+      "encoding": "gzip/little-endian-float32",
+      "count": 535,
+      "stride": 14
+    },
+    "chunk_-1_0_water_indices.bin.gz": {
+      "sha256": "72f6ee44f0473e1c0d2c29ddf3672b52bdb0cfee5d040b69e09f31732aa94d0f",
+      "bytes": 877,
+      "decoded_bytes": 2340,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 585,
+      "stride": 1
+    },
+    "chunk_-1_0_water_faces.bin.gz": {
+      "sha256": "b9bc7039d3b5f2ac67624de945188bfc8579e0793108a92c01aec3d4cee97155",
+      "bytes": 742,
+      "decoded_bytes": 2340,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 195,
+      "stride": 3
+    },
+    "chunk_-1_0_water_bary.bin.gz": {
+      "sha256": "6d2c0f3fb1bb20efc32226ad3b50d535f5bb453178ce7a221561fe38cc874de2",
+      "bytes": 2886,
+      "decoded_bytes": 8560,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 535,
+      "stride": 16
+    },
+    "chunk_-1_1_ground_vertices.bin.gz": {
+      "sha256": "79b21eda914bb581d47c97bf7de3386cdca9b0dd7366274185a965889cdfc617",
+      "bytes": 253062,
+      "decoded_bytes": 967904,
+      "encoding": "gzip/little-endian-float32",
+      "count": 17284,
+      "stride": 14
+    },
+    "chunk_-1_1_ground_indices.bin.gz": {
+      "sha256": "e8f82bef2d50159f56f79ef95cf977d08c5805fe613cf7a5e1f6e4dcab54d4df",
+      "bytes": 36968,
+      "decoded_bytes": 121740,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 30435,
+      "stride": 1
+    },
+    "chunk_-1_1_ground_faces.bin.gz": {
+      "sha256": "32537b8084ef52d02ad58d4005861e9cb0f19dfbd87292d68ed716ba7783124a",
+      "bytes": 22135,
+      "decoded_bytes": 121740,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 10145,
+      "stride": 3
+    },
+    "chunk_-1_1_ground_bary.bin.gz": {
+      "sha256": "6097c30b4f732c63fbf6d4d70292ce16af0e738ecd2c4ee8c2d13238790a1533",
+      "bytes": 85552,
+      "decoded_bytes": 276544,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 17284,
+      "stride": 16
+    },
+    "chunk_-1_1_water_vertices.bin.gz": {
+      "sha256": "7a68b7765b624e5d0f9069f7d3b87225cfc13e8e9a592c6fc58930eee07aab05",
+      "bytes": 3084,
+      "decoded_bytes": 27104,
+      "encoding": "gzip/little-endian-float32",
+      "count": 484,
+      "stride": 14
+    },
+    "chunk_-1_1_water_indices.bin.gz": {
+      "sha256": "026c6d28466b07cf9bc43ac0fd2d03d8edb735bce907956516df365d43df39d3",
+      "bytes": 781,
+      "decoded_bytes": 2112,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 528,
+      "stride": 1
+    },
+    "chunk_-1_1_water_faces.bin.gz": {
+      "sha256": "79ce866207bfc1572da8b69f85e247541b01d909cde1285bf82f1a9eccba0374",
+      "bytes": 633,
+      "decoded_bytes": 2112,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 176,
+      "stride": 3
+    },
+    "chunk_-1_1_water_bary.bin.gz": {
+      "sha256": "8ec8390d84ee8c2257534ff984ffaa65edc81e8eff7047e6318c887bb46ed025",
+      "bytes": 2016,
+      "decoded_bytes": 7744,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 484,
+      "stride": 16
+    },
+    "chunk_-1_2_ground_vertices.bin.gz": {
+      "sha256": "41ab6965130da6cf136cd61f83d30be3f5db34d751be42ce40c8caa70a5ad374",
+      "bytes": 247227,
+      "decoded_bytes": 989856,
+      "encoding": "gzip/little-endian-float32",
+      "count": 17676,
+      "stride": 14
+    },
+    "chunk_-1_2_ground_indices.bin.gz": {
+      "sha256": "64b5247d0820e92ffaf93a5dbdb30e13a5bd1ac61c199ddd4eea6a228b64dcd5",
+      "bytes": 37177,
+      "decoded_bytes": 122568,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 30642,
+      "stride": 1
+    },
+    "chunk_-1_2_ground_faces.bin.gz": {
+      "sha256": "ba3a44597ec3692576eb39dbb080cbe63fca25663ce3ccec3e76ac533a297fb6",
+      "bytes": 22675,
+      "decoded_bytes": 122568,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 10214,
+      "stride": 3
+    },
+    "chunk_-1_2_ground_bary.bin.gz": {
+      "sha256": "0a2f263171ee3f30232d915eae83c28561469c4f42da8e3ec5146a8a4b3be668",
+      "bytes": 92625,
+      "decoded_bytes": 282816,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 17676,
+      "stride": 16
+    },
+    "chunk_-1_2_water_vertices.bin.gz": {
+      "sha256": "1221d6a905a6f730a2d06422d455ce34ce2ad9aab4fa791e6ee6dafb8d7fa905",
+      "bytes": 2064,
+      "decoded_bytes": 12824,
+      "encoding": "gzip/little-endian-float32",
+      "count": 229,
+      "stride": 14
+    },
+    "chunk_-1_2_water_indices.bin.gz": {
+      "sha256": "ac799ac562f8317e85bc5fb7e8a45836659ca30e0a1b18a8e3922865ec8d1124",
+      "bytes": 403,
+      "decoded_bytes": 1020,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 255,
+      "stride": 1
+    },
+    "chunk_-1_2_water_faces.bin.gz": {
+      "sha256": "8aa1cde8b6d23e6b9e2a71b9d8ee64f5e406c91d9851ac68c91c258e5cd1ea8c",
+      "bytes": 348,
+      "decoded_bytes": 1020,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 85,
+      "stride": 3
+    },
+    "chunk_-1_2_water_bary.bin.gz": {
+      "sha256": "9f7c50930634d459b15628ab4e00de493444fafd7cd2b592a16918a2eeeaf8fd",
+      "bytes": 1562,
+      "decoded_bytes": 3664,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 229,
+      "stride": 16
+    },
+    "chunk_-1_3_ground_vertices.bin.gz": {
+      "sha256": "09677925cea225f8ebbc48b5449b59e8ee71b5e71c4ad6820e05ba9dd24fc518",
+      "bytes": 35167,
+      "decoded_bytes": 159880,
+      "encoding": "gzip/little-endian-float32",
+      "count": 2855,
+      "stride": 14
+    },
+    "chunk_-1_3_ground_indices.bin.gz": {
+      "sha256": "18c7c2be4cf4d18b152f78faac80964b110d5ef5f619d1b13f1c2c82ea983683",
+      "bytes": 5841,
+      "decoded_bytes": 18708,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 4677,
+      "stride": 1
+    },
+    "chunk_-1_3_ground_faces.bin.gz": {
+      "sha256": "09944a1daa6c37a37b81972404170c5f7c83711da96b884ff38ab8bbf0b85fef",
+      "bytes": 3790,
+      "decoded_bytes": 18708,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 1559,
+      "stride": 3
+    },
+    "chunk_-1_3_ground_bary.bin.gz": {
+      "sha256": "b076a8f0fab3f7b41ef97dd2eb205844c3eb12eddbe905799d9fed1c0addb734",
+      "bytes": 14825,
+      "decoded_bytes": 45680,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 2855,
+      "stride": 16
+    },
+    "chunk_-1_3_water_vertices.bin.gz": {
+      "sha256": "4346affb20cbc0264536a98c9e592c84db1c5f739abb0ce6cbe4476d0805af37",
+      "bytes": 982,
+      "decoded_bytes": 5656,
+      "encoding": "gzip/little-endian-float32",
+      "count": 101,
+      "stride": 14
+    },
+    "chunk_-1_3_water_indices.bin.gz": {
+      "sha256": "9ec8f43420fc59bf8496314cf12a94c2ae88d83f9d341e19eae5afaf0e286117",
+      "bytes": 183,
+      "decoded_bytes": 420,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 105,
+      "stride": 1
+    },
+    "chunk_-1_3_water_faces.bin.gz": {
+      "sha256": "9c42d02310c82a2b2d2c749280a63292cff534c852762037faed4660c2c045a8",
+      "bytes": 175,
+      "decoded_bytes": 420,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 35,
+      "stride": 3
+    },
+    "chunk_-1_3_water_bary.bin.gz": {
+      "sha256": "9d074bfe5c154beff185feee0f47e4e0e249f1df59c33f9c0f8971f039c4dc99",
+      "bytes": 774,
+      "decoded_bytes": 1616,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 101,
+      "stride": 16
+    },
+    "chunk_-2_-1_ground_vertices.bin.gz": {
+      "sha256": "7c2c752c15f2470722d7b2dc60df49eb070e26d640fcb5e382d534d351321708",
+      "bytes": 222953,
+      "decoded_bytes": 847448,
+      "encoding": "gzip/little-endian-float32",
+      "count": 15133,
+      "stride": 14
+    },
+    "chunk_-2_-1_ground_indices.bin.gz": {
+      "sha256": "a7b5aa688f02dcccde302f6b1218f46bcd54951faa936d888f4059580efc3e13",
+      "bytes": 37537,
+      "decoded_bytes": 123636,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 30909,
+      "stride": 1
+    },
+    "chunk_-2_-1_ground_faces.bin.gz": {
+      "sha256": "345993a7d774ed26e656d4823487212cb52976efe01ddebf4b85dfa5725ffd84",
+      "bytes": 22778,
+      "decoded_bytes": 123636,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 10303,
+      "stride": 3
+    },
+    "chunk_-2_-1_ground_bary.bin.gz": {
+      "sha256": "670603f71f0a42dc000837f3d5186602d8211ee0074128ee3ea8a41c9af163db",
+      "bytes": 85558,
+      "decoded_bytes": 242128,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 15133,
+      "stride": 16
+    },
+    "chunk_-2_-1_water_vertices.bin.gz": {
+      "sha256": "41f2036e4fd9913002fca2b22d2dcf6775e53b1b9d2dcfbeadbb5893ba1857f4",
+      "bytes": 2781,
+      "decoded_bytes": 17192,
+      "encoding": "gzip/little-endian-float32",
+      "count": 307,
+      "stride": 14
+    },
+    "chunk_-2_-1_water_indices.bin.gz": {
+      "sha256": "ac151f02f8056166fa32e781eec6965254d05648d505f82ce13968bd91117c51",
+      "bytes": 543,
+      "decoded_bytes": 1308,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 327,
+      "stride": 1
+    },
+    "chunk_-2_-1_water_faces.bin.gz": {
+      "sha256": "f400c0ce67eb383ecf9b01704785ad89ebdb060c678281e61c2d2417c85ec81d",
+      "bytes": 466,
+      "decoded_bytes": 1308,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 109,
+      "stride": 3
+    },
+    "chunk_-2_-1_water_bary.bin.gz": {
+      "sha256": "07840e779edf242701bf5d27555c69fd276dfb334a7d7616ba1a08b2ee529e97",
+      "bytes": 2173,
+      "decoded_bytes": 4912,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 307,
+      "stride": 16
+    },
+    "chunk_-2_-2_ground_vertices.bin.gz": {
+      "sha256": "268a08e5f0a96d4f336586642111f0082396db56e5e043edd59364b83b781731",
+      "bytes": 219762,
+      "decoded_bytes": 852992,
+      "encoding": "gzip/little-endian-float32",
+      "count": 15232,
+      "stride": 14
+    },
+    "chunk_-2_-2_ground_indices.bin.gz": {
+      "sha256": "7d28165250ea8ead0e1a07e9c2d0d5dce24aa5c4bdb5384d60849e2125e36dd9",
+      "bytes": 36744,
+      "decoded_bytes": 120528,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 30132,
+      "stride": 1
+    },
+    "chunk_-2_-2_ground_faces.bin.gz": {
+      "sha256": "b0707781dd079d4e3a80989c4771da9e1d063ddc9a11255ab5abf163eaeb12b8",
+      "bytes": 22225,
+      "decoded_bytes": 120528,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 10044,
+      "stride": 3
+    },
+    "chunk_-2_-2_ground_bary.bin.gz": {
+      "sha256": "753a5bcbd6c2e128eb7c87af40ba3c7a1ae8f7dfa8ddd65110c51ea858d60a43",
+      "bytes": 83333,
+      "decoded_bytes": 243712,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 15232,
+      "stride": 16
+    },
+    "chunk_-2_-2_water_vertices.bin.gz": {
+      "sha256": "08abfe63bd97188ce114952b7d2e0f836db7fd70d907e73ca2ddd254a00f82ba",
+      "bytes": 3430,
+      "decoded_bytes": 24416,
+      "encoding": "gzip/little-endian-float32",
+      "count": 436,
+      "stride": 14
+    },
+    "chunk_-2_-2_water_indices.bin.gz": {
+      "sha256": "518613715c0c0efc9e47d209a42547beabcc636a7329564e1e656d76ca2b66c1",
+      "bytes": 719,
+      "decoded_bytes": 1968,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 492,
+      "stride": 1
+    },
+    "chunk_-2_-2_water_faces.bin.gz": {
+      "sha256": "8b24b48900bb33da42252cf40b9764db21fe10fb02790aed97675f63a3fe54cc",
+      "bytes": 612,
+      "decoded_bytes": 1968,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 164,
+      "stride": 3
+    },
+    "chunk_-2_-2_water_bary.bin.gz": {
+      "sha256": "a72a573039a5b830f7a02b2dd52bf8544f770ddec9fa9a427c9493c4623400e6",
+      "bytes": 2601,
+      "decoded_bytes": 6976,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 436,
+      "stride": 16
+    },
+    "chunk_-2_-3_ground_vertices.bin.gz": {
+      "sha256": "f11775ebeb2748e6040a80c32694bac7927e0760cf1e6b487eecf70a7e1e7c4a",
+      "bytes": 205636,
+      "decoded_bytes": 797776,
+      "encoding": "gzip/little-endian-float32",
+      "count": 14246,
+      "stride": 14
+    },
+    "chunk_-2_-3_ground_indices.bin.gz": {
+      "sha256": "8400eb82cbc61b2771fbffae28361e2da90d16e1be3fbcbe1aab3fb72d6049a5",
+      "bytes": 36068,
+      "decoded_bytes": 118464,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 29616,
+      "stride": 1
+    },
+    "chunk_-2_-3_ground_faces.bin.gz": {
+      "sha256": "f209e41aaf2418974e212d792f3360b181b7b7709b4ae6d25563575ad2884d88",
+      "bytes": 22477,
+      "decoded_bytes": 118464,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 9872,
+      "stride": 3
+    },
+    "chunk_-2_-3_ground_bary.bin.gz": {
+      "sha256": "ac3de453207605cb17b9f032bb42d5757007b89059ca90743f71df2c3f038281",
+      "bytes": 78029,
+      "decoded_bytes": 227936,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 14246,
+      "stride": 16
+    },
+    "chunk_-2_-3_water_vertices.bin.gz": {
+      "sha256": "46c7f642e0c0896b26c60044bdb5e828d031da15f34878e890c9a0ccf455a197",
+      "bytes": 1992,
+      "decoded_bytes": 12096,
+      "encoding": "gzip/little-endian-float32",
+      "count": 216,
+      "stride": 14
+    },
+    "chunk_-2_-3_water_indices.bin.gz": {
+      "sha256": "f446bebe26dde59976f95617372d2d81961c0e6fd177d2c81e94165a749e8f44",
+      "bytes": 375,
+      "decoded_bytes": 984,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 246,
+      "stride": 1
+    },
+    "chunk_-2_-3_water_faces.bin.gz": {
+      "sha256": "f49e851cf9f29ef36ba26011da1f8a467d50e710e45c6c69ad367b9d3d88a333",
+      "bytes": 339,
+      "decoded_bytes": 984,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 82,
+      "stride": 3
+    },
+    "chunk_-2_-3_water_bary.bin.gz": {
+      "sha256": "21522a21f016b786f7ed1fa1b3576571101dffbeba3cb8540e43262858a17345",
+      "bytes": 1497,
+      "decoded_bytes": 3456,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 216,
+      "stride": 16
+    },
+    "chunk_-2_-4_ground_vertices.bin.gz": {
+      "sha256": "45545df5e6dd3f8eda9a1774861aff96bb1e3192e88280b429d23c63c266b108",
+      "bytes": 35686,
+      "decoded_bytes": 139776,
+      "encoding": "gzip/little-endian-float32",
+      "count": 2496,
+      "stride": 14
+    },
+    "chunk_-2_-4_ground_indices.bin.gz": {
+      "sha256": "2dc51fb6089994d23d223853b51c8a087d0f6a2275055aa14aecbb4bf3a93c7d",
+      "bytes": 6030,
+      "decoded_bytes": 19608,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 4902,
+      "stride": 1
+    },
+    "chunk_-2_-4_ground_faces.bin.gz": {
+      "sha256": "a0933145db3ea47e83157c7275010dfc611da5160f37ef4dbf0bc3fa50d2a72f",
+      "bytes": 3772,
+      "decoded_bytes": 19608,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 1634,
+      "stride": 3
+    },
+    "chunk_-2_-4_ground_bary.bin.gz": {
+      "sha256": "0f762855b30d086800ca9243b9be830ffd21b13a877ebe48b661b6d1bfbf351f",
+      "bytes": 13760,
+      "decoded_bytes": 39936,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 2496,
+      "stride": 16
+    },
+    "chunk_-2_-4_water_vertices.bin.gz": {
+      "sha256": "adbc7e8b5c3f8ddd70a93be1901d567b5261449332cac1f10d1c1b9290620e3c",
+      "bytes": 447,
+      "decoded_bytes": 2352,
+      "encoding": "gzip/little-endian-float32",
+      "count": 42,
+      "stride": 14
+    },
+    "chunk_-2_-4_water_indices.bin.gz": {
+      "sha256": "ffa924e7b389ac3b9c0bc3f5ad9ea153251fedde26c4332e960a7a9dcf68745f",
+      "bytes": 97,
+      "decoded_bytes": 192,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 48,
+      "stride": 1
+    },
+    "chunk_-2_-4_water_faces.bin.gz": {
+      "sha256": "836af3c92cdea1bef50f555f1075463c7f739f46b713cefd89eef4c7b677cbb9",
+      "bytes": 92,
+      "decoded_bytes": 192,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 16,
+      "stride": 3
+    },
+    "chunk_-2_-4_water_bary.bin.gz": {
+      "sha256": "781de2b4acdb6b9d7dfb07fb424a912c77ec22bd4cb19b5c83359ef8667a1655",
+      "bytes": 346,
+      "decoded_bytes": 672,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 42,
+      "stride": 16
+    },
+    "chunk_-2_0_ground_vertices.bin.gz": {
+      "sha256": "344ddd7da4ea5edc0e7390a5874fdb1e2bf07e8f19b14fb02a70d60d4abdc617",
+      "bytes": 234824,
+      "decoded_bytes": 970984,
+      "encoding": "gzip/little-endian-float32",
+      "count": 17339,
+      "stride": 14
+    },
+    "chunk_-2_0_ground_indices.bin.gz": {
+      "sha256": "ff2daaa63d5b5c6c11ed5febdbccafa99176c4814d4d7d630f89b1188e21efb3",
+      "bytes": 37129,
+      "decoded_bytes": 122268,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 30567,
+      "stride": 1
+    },
+    "chunk_-2_0_ground_faces.bin.gz": {
+      "sha256": "5be8c812c88d17f5afc9a8343eba3202276a3a627b33abc805d3a7d5b60de73e",
+      "bytes": 22962,
+      "decoded_bytes": 122268,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 10189,
+      "stride": 3
+    },
+    "chunk_-2_0_ground_bary.bin.gz": {
+      "sha256": "eac419db8af2708a949bf390750f004b91917c2c992085ca95c0903cd4ffaf8e",
+      "bytes": 86734,
+      "decoded_bytes": 277424,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 17339,
+      "stride": 16
+    },
+    "chunk_-2_0_water_vertices.bin.gz": {
+      "sha256": "7ee4d92426fa93ee65f87a987e6ecb900cce00a617b3b99d49c9bb707bcd3cd0",
+      "bytes": 780,
+      "decoded_bytes": 4368,
+      "encoding": "gzip/little-endian-float32",
+      "count": 78,
+      "stride": 14
+    },
+    "chunk_-2_0_water_indices.bin.gz": {
+      "sha256": "6d01160c84f6f76cd507bd00d95b6bad8543ffb6293a04d6d48740290a024648",
+      "bytes": 141,
+      "decoded_bytes": 312,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 78,
+      "stride": 1
+    },
+    "chunk_-2_0_water_faces.bin.gz": {
+      "sha256": "cff243ecef373897a5b44872a2b1b12d80faf607d19a3e101b2075eb21029972",
+      "bytes": 148,
+      "decoded_bytes": 312,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 26,
+      "stride": 3
+    },
+    "chunk_-2_0_water_bary.bin.gz": {
+      "sha256": "ec0177bd1fdd2f6c152363ac7b46245ad79dbe68b5beb55c8b03ae30e46d631e",
+      "bytes": 628,
+      "decoded_bytes": 1248,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 78,
+      "stride": 16
+    },
+    "chunk_-2_1_ground_vertices.bin.gz": {
+      "sha256": "990b28b4fcf51a8a20c3b29626c3369fa7c9393fb596dfdd32475dd9c7f2f3b2",
+      "bytes": 230747,
+      "decoded_bytes": 913360,
+      "encoding": "gzip/little-endian-float32",
+      "count": 16310,
+      "stride": 14
+    },
+    "chunk_-2_1_ground_indices.bin.gz": {
+      "sha256": "a16a2027ddc722248f9594d4e3492a826a5c31c0b04c1f374be2f9011314faca",
+      "bytes": 34098,
+      "decoded_bytes": 112056,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 28014,
+      "stride": 1
+    },
+    "chunk_-2_1_ground_faces.bin.gz": {
+      "sha256": "96c6a51393cd662e980b8b196b900daab345a621f2fc185880f0279e941e528d",
+      "bytes": 21209,
+      "decoded_bytes": 112056,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 9338,
+      "stride": 3
+    },
+    "chunk_-2_1_ground_bary.bin.gz": {
+      "sha256": "d9522adf52898a589d33344be7bc0095f56e1ceba8401e40c8827979bb429fb0",
+      "bytes": 80141,
+      "decoded_bytes": 260960,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 16310,
+      "stride": 16
+    },
+    "chunk_-2_1_water_vertices.bin.gz": {
+      "sha256": "e9ae7f7b3d4882cc0420d2d42c624d0235207b6f11c69cc0737186bf8cc7681d",
+      "bytes": 3471,
+      "decoded_bytes": 31752,
+      "encoding": "gzip/little-endian-float32",
+      "count": 567,
+      "stride": 14
+    },
+    "chunk_-2_1_water_indices.bin.gz": {
+      "sha256": "12ee4b5f618f9c3edfa71192cbcce08cefc101f913d97abcbc142abd9b274c8e",
+      "bytes": 934,
+      "decoded_bytes": 2508,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 627,
+      "stride": 1
+    },
+    "chunk_-2_1_water_faces.bin.gz": {
+      "sha256": "a40f6aa908121cb12ff62b3d313ea4dcda5ac8f975f4de83c5e9d4da87753bda",
+      "bytes": 746,
+      "decoded_bytes": 2508,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 209,
+      "stride": 3
+    },
+    "chunk_-2_1_water_bary.bin.gz": {
+      "sha256": "9eaf06133cf0a3167e102b92f9229c40452e63a168ea4e19b5768c5b4ca43ac2",
+      "bytes": 2401,
+      "decoded_bytes": 9072,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 567,
+      "stride": 16
+    },
+    "chunk_-2_2_ground_vertices.bin.gz": {
+      "sha256": "f8941d59c1c38f207b45f1566ccebf23b86e1f74c329e8f3adcafc0a293761f1",
+      "bytes": 217361,
+      "decoded_bytes": 911288,
+      "encoding": "gzip/little-endian-float32",
+      "count": 16273,
+      "stride": 14
+    },
+    "chunk_-2_2_ground_indices.bin.gz": {
+      "sha256": "4980177c7b9a59b826a7810b73da5176ef4565da7c010d941031da45f22bb985",
+      "bytes": 34067,
+      "decoded_bytes": 111792,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 27948,
+      "stride": 1
+    },
+    "chunk_-2_2_ground_faces.bin.gz": {
+      "sha256": "2bcf5ff0334dc94e41db21021c651774fc63f53dab59b3a496bc1061a82a1e86",
+      "bytes": 21061,
+      "decoded_bytes": 111792,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 9316,
+      "stride": 3
+    },
+    "chunk_-2_2_ground_bary.bin.gz": {
+      "sha256": "28ecadca956916c8ac684cbb3ed93189850812276de1b355674f4f65bb44063b",
+      "bytes": 79400,
+      "decoded_bytes": 260368,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 16273,
+      "stride": 16
+    },
+    "chunk_-2_2_water_vertices.bin.gz": {
+      "sha256": "65d01ddedc186e87ededd7714642d73b96c0ffa2094993608b3fbfc9ddde3524",
+      "bytes": 2535,
+      "decoded_bytes": 17920,
+      "encoding": "gzip/little-endian-float32",
+      "count": 320,
+      "stride": 14
+    },
+    "chunk_-2_2_water_indices.bin.gz": {
+      "sha256": "e86e08e5193911eae7185854e02112e4f8482a716516ce940ea1e4b34285def5",
+      "bytes": 539,
+      "decoded_bytes": 1344,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 336,
+      "stride": 1
+    },
+    "chunk_-2_2_water_faces.bin.gz": {
+      "sha256": "0254f90ecdbab24b11adc5bddeac3ea89d26d2c466845efaa3e408d1c4fb08e3",
+      "bytes": 452,
+      "decoded_bytes": 1344,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 112,
+      "stride": 3
+    },
+    "chunk_-2_2_water_bary.bin.gz": {
+      "sha256": "fbe7ba43f7621fc1f8f7a62d77e0e9508dd03f6f843f832546fd09bff1c70b87",
+      "bytes": 1391,
+      "decoded_bytes": 5120,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 320,
+      "stride": 16
+    },
+    "chunk_-2_3_ground_vertices.bin.gz": {
+      "sha256": "8f9942d459df29094ca8038e481de0ad82525349bb159c0d96188c145005387f",
+      "bytes": 19142,
+      "decoded_bytes": 78848,
+      "encoding": "gzip/little-endian-float32",
+      "count": 1408,
+      "stride": 14
+    },
+    "chunk_-2_3_ground_indices.bin.gz": {
+      "sha256": "6560043da7cff54097f507f48c6fa468ba2a8c3b37765cc5cec40e2a2e7f341b",
+      "bytes": 3107,
+      "decoded_bytes": 10032,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 2508,
+      "stride": 1
+    },
+    "chunk_-2_3_ground_faces.bin.gz": {
+      "sha256": "831539b5b74d4edd9a372acf6edb8382f291f2d63b748858f53b3863e292dd31",
+      "bytes": 1905,
+      "decoded_bytes": 10032,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 836,
+      "stride": 3
+    },
+    "chunk_-2_3_ground_bary.bin.gz": {
+      "sha256": "2786f2afb3f367cee8dea0b708ce7370827b7f0dca76d019f9cadb617e4d93d9",
+      "bytes": 7753,
+      "decoded_bytes": 22528,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 1408,
+      "stride": 16
+    },
+    "chunk_-2_3_water_vertices.bin.gz": {
+      "sha256": "0b0701515beb5abcec0e71c9852aed19ace62fc9970a9826b3cd1a8d6df59982",
+      "bytes": 3625,
+      "decoded_bytes": 31584,
+      "encoding": "gzip/little-endian-float32",
+      "count": 564,
+      "stride": 14
+    },
+    "chunk_-2_3_water_indices.bin.gz": {
+      "sha256": "9a35d0e4bbab456d7723fe63a80123a15f38083d51fcf45240affc250f81d754",
+      "bytes": 846,
+      "decoded_bytes": 2256,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 564,
+      "stride": 1
+    },
+    "chunk_-2_3_water_faces.bin.gz": {
+      "sha256": "a6c05a37208e7727115c93b254c7d503a3a89ae831f0548f043f4e63e8e73c58",
+      "bytes": 746,
+      "decoded_bytes": 2256,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 188,
+      "stride": 3
+    },
+    "chunk_-2_3_water_bary.bin.gz": {
+      "sha256": "b9a9c73f3da67f9749bdd5fb33313c49861ddb0443b6623aa9e8f06b8170bb5d",
+      "bytes": 1280,
+      "decoded_bytes": 9024,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 564,
+      "stride": 16
+    },
+    "chunk_-3_-1_ground_vertices.bin.gz": {
+      "sha256": "51f40ff262564cb0676635282637a8cedb6625ab02b7cafb2cd1a1a23d09d5e0",
+      "bytes": 210244,
+      "decoded_bytes": 804272,
+      "encoding": "gzip/little-endian-float32",
+      "count": 14362,
+      "stride": 14
+    },
+    "chunk_-3_-1_ground_indices.bin.gz": {
+      "sha256": "fd7ea7a44a39ec16cf40e148df3a4d4e9d9c92a947bffb818dce82011b9bcabb",
+      "bytes": 36885,
+      "decoded_bytes": 121536,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 30384,
+      "stride": 1
+    },
+    "chunk_-3_-1_ground_faces.bin.gz": {
+      "sha256": "c58ed039daf15c45d0dd38a0b398a8ca76a3d0a514c1cd6afeae895fd078312c",
+      "bytes": 22415,
+      "decoded_bytes": 121536,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 10128,
+      "stride": 3
+    },
+    "chunk_-3_-1_ground_bary.bin.gz": {
+      "sha256": "6b61a68ac3fc7934a0472472b14f0806ce9278b2c4a8b8bb5b7ada4bb0516ac7",
+      "bytes": 78081,
+      "decoded_bytes": 229792,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 14362,
+      "stride": 16
+    },
+    "chunk_-3_-1_water_vertices.bin.gz": {
+      "sha256": "8020f6896d8bb501d8872764f10c979062d7d4560086f1190de7db34ba135795",
+      "bytes": 1330,
+      "decoded_bytes": 7840,
+      "encoding": "gzip/little-endian-float32",
+      "count": 140,
+      "stride": 14
+    },
+    "chunk_-3_-1_water_indices.bin.gz": {
+      "sha256": "febf414d5707ec8e0a0b325bc65de9bac7c2af0a398357b73d7d5e0023aff6d9",
+      "bytes": 246,
+      "decoded_bytes": 576,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 144,
+      "stride": 1
+    },
+    "chunk_-3_-1_water_faces.bin.gz": {
+      "sha256": "4e5846af49efb76dfe77a2652caa61538d695d80123d0fa392f299c3c11eaf7f",
+      "bytes": 237,
+      "decoded_bytes": 576,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 48,
+      "stride": 3
+    },
+    "chunk_-3_-1_water_bary.bin.gz": {
+      "sha256": "ddd2e149c2300bf0f5782407603aeac87793adaabe1e689a1edfa1fce1381ecb",
+      "bytes": 1052,
+      "decoded_bytes": 2240,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 140,
+      "stride": 16
+    },
+    "chunk_-3_-2_ground_vertices.bin.gz": {
+      "sha256": "8d4e7107b60d544e99b7e38534a89e762bf668299281f2ae49dd25f0cc00c1bc",
+      "bytes": 160021,
+      "decoded_bytes": 621824,
+      "encoding": "gzip/little-endian-float32",
+      "count": 11104,
+      "stride": 14
+    },
+    "chunk_-3_-2_ground_indices.bin.gz": {
+      "sha256": "d6ecc6b08c23240a07ea0fb6d70931a4c1c5980bbe0f2ce3b09be8fc29cfc1b8",
+      "bytes": 28832,
+      "decoded_bytes": 94800,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 23700,
+      "stride": 1
+    },
+    "chunk_-3_-2_ground_faces.bin.gz": {
+      "sha256": "1c3dbd2d8e80c10cdd51d704f0bf6fae3887751da94ef72d21c5cb2d0375a2aa",
+      "bytes": 17905,
+      "decoded_bytes": 94800,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 7900,
+      "stride": 3
+    },
+    "chunk_-3_-2_ground_bary.bin.gz": {
+      "sha256": "b02f843ecfb15de43a6db9a49af7ffb0235cab4b87c92f7478140d2bf6d6b0f3",
+      "bytes": 60793,
+      "decoded_bytes": 177664,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 11104,
+      "stride": 16
+    },
+    "chunk_-3_-2_water_vertices.bin.gz": {
+      "sha256": "a97ac1dd3e6d6fe9d6387de6bf0b7d9f285181b9ba7502cc8d8408b82694ff18",
+      "bytes": 2121,
+      "decoded_bytes": 13720,
+      "encoding": "gzip/little-endian-float32",
+      "count": 245,
+      "stride": 14
+    },
+    "chunk_-3_-2_water_indices.bin.gz": {
+      "sha256": "99d68e1966354cfde2fd78659a9b30775154ec1983cebfc58de2040c4d8a59b6",
+      "bytes": 410,
+      "decoded_bytes": 1044,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 261,
+      "stride": 1
+    },
+    "chunk_-3_-2_water_faces.bin.gz": {
+      "sha256": "05abd7be83a0bb9e64340ec6b5dd7b55db7a18a3501ec902400097b94407bf86",
+      "bytes": 380,
+      "decoded_bytes": 1044,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 87,
+      "stride": 3
+    },
+    "chunk_-3_-2_water_bary.bin.gz": {
+      "sha256": "1b17bcf54fb8a9155fd3fb3c60db554673976112cd1d747b3a1b67595437496d",
+      "bytes": 1707,
+      "decoded_bytes": 3920,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 245,
+      "stride": 16
+    },
+    "chunk_-3_-3_ground_vertices.bin.gz": {
+      "sha256": "d060372dd520f01f7c9be1c9ef6c501464d0eb5cdb1dccb04bdb98007ca2834d",
+      "bytes": 48801,
+      "decoded_bytes": 187992,
+      "encoding": "gzip/little-endian-float32",
+      "count": 3357,
+      "stride": 14
+    },
+    "chunk_-3_-3_ground_indices.bin.gz": {
+      "sha256": "717bba414292759c5058a8b50d26371c44f16239684d5e480fe9f5a8a78c022f",
+      "bytes": 8784,
+      "decoded_bytes": 28692,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 7173,
+      "stride": 1
+    },
+    "chunk_-3_-3_ground_faces.bin.gz": {
+      "sha256": "dc13028a86d0c3c0d93c0d31cc69051fdbd29a977ad2e739acdfe14d84cb05d0",
+      "bytes": 5448,
+      "decoded_bytes": 28692,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 2391,
+      "stride": 3
+    },
+    "chunk_-3_-3_ground_bary.bin.gz": {
+      "sha256": "b31e6c151cba3979d8bc027a36ea5b027feb393708ecb3852e29fb0af8cece9e",
+      "bytes": 18847,
+      "decoded_bytes": 53712,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 3357,
+      "stride": 16
+    },
+    "chunk_-3_-3_water_vertices.bin.gz": {
+      "sha256": "7dbac744e47a735243d22a887efa2f2cdf6d0f02193599224e15d7e529170b41",
+      "bytes": 711,
+      "decoded_bytes": 3752,
+      "encoding": "gzip/little-endian-float32",
+      "count": 67,
+      "stride": 14
+    },
+    "chunk_-3_-3_water_indices.bin.gz": {
+      "sha256": "1acb5970209c5e5417c07659605cb0033632d814cc32b9a649dd176dc916e748",
+      "bytes": 137,
+      "decoded_bytes": 300,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 75,
+      "stride": 1
+    },
+    "chunk_-3_-3_water_faces.bin.gz": {
+      "sha256": "b02ad9d0fc8059534956072104ad4341ba4ce931f82804f0f5ca43e3f807394b",
+      "bytes": 135,
+      "decoded_bytes": 300,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 25,
+      "stride": 3
+    },
+    "chunk_-3_-3_water_bary.bin.gz": {
+      "sha256": "88ab566b8b9477e57ef56167e0e5bddb2060f6a865add55934e8249bab0a07de",
+      "bytes": 545,
+      "decoded_bytes": 1072,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 67,
+      "stride": 16
+    },
+    "chunk_-3_0_ground_vertices.bin.gz": {
+      "sha256": "6ee235a019407f064180b1f3d7bde2b8e30ee1d876d6f0e38148e9cb3feeed5c",
+      "bytes": 241770,
+      "decoded_bytes": 927472,
+      "encoding": "gzip/little-endian-float32",
+      "count": 16562,
+      "stride": 14
+    },
+    "chunk_-3_0_ground_indices.bin.gz": {
+      "sha256": "1f89a3baf15f488b6467fd456c51a2ccbd084112808965ff4512812205c3a102",
+      "bytes": 37308,
+      "decoded_bytes": 122628,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 30657,
+      "stride": 1
+    },
+    "chunk_-3_0_ground_faces.bin.gz": {
+      "sha256": "57319ff872147e94bc4450838bf4043e948e4fc705045bbf4f00454d44efa502",
+      "bytes": 23006,
+      "decoded_bytes": 122628,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 10219,
+      "stride": 3
+    },
+    "chunk_-3_0_ground_bary.bin.gz": {
+      "sha256": "7c219d18e86a6bbc073afba90ca449c21aaab55f1382095e9ee449c750c98a74",
+      "bytes": 78490,
+      "decoded_bytes": 264992,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 16562,
+      "stride": 16
+    },
+    "chunk_-3_1_ground_vertices.bin.gz": {
+      "sha256": "7164e5cda7347c270cd79f37bd0b587c9fa94eae2b461415e6a4c1411cc74398",
+      "bytes": 198264,
+      "decoded_bytes": 766080,
+      "encoding": "gzip/little-endian-float32",
+      "count": 13680,
+      "stride": 14
+    },
+    "chunk_-3_1_ground_indices.bin.gz": {
+      "sha256": "cb6d8c540248d2207a0dce7e995c045fb1e7a8f9193cce6d34baab528a82784b",
+      "bytes": 30488,
+      "decoded_bytes": 100704,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 25176,
+      "stride": 1
+    },
+    "chunk_-3_1_ground_faces.bin.gz": {
+      "sha256": "45b9f13803a271ad643fe9da460e1e1485511b8cd97a39c654680a4c4376a67e",
+      "bytes": 18411,
+      "decoded_bytes": 100704,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 8392,
+      "stride": 3
+    },
+    "chunk_-3_1_ground_bary.bin.gz": {
+      "sha256": "ee14a865877e709f0235ad8657c3eb4aa6539b7918259e56537385b5bf783fd9",
+      "bytes": 72628,
+      "decoded_bytes": 218880,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 13680,
+      "stride": 16
+    },
+    "chunk_-3_1_water_vertices.bin.gz": {
+      "sha256": "151e7b46424bf79b9b1660e5230e112a8bf103be32de9738eba11bee238097af",
+      "bytes": 2241,
+      "decoded_bytes": 15176,
+      "encoding": "gzip/little-endian-float32",
+      "count": 271,
+      "stride": 14
+    },
+    "chunk_-3_1_water_indices.bin.gz": {
+      "sha256": "1db9e37ddcbaddc0fe30cf114d546e37733f966402cc4dfd3c08d3d07894ee51",
+      "bytes": 508,
+      "decoded_bytes": 1236,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 309,
+      "stride": 1
+    },
+    "chunk_-3_1_water_faces.bin.gz": {
+      "sha256": "4e2be9c359a3f203b7e4f1f2c769e1a1f019b7fce5772b18bab2f76c67959ecd",
+      "bytes": 404,
+      "decoded_bytes": 1236,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 103,
+      "stride": 3
+    },
+    "chunk_-3_1_water_bary.bin.gz": {
+      "sha256": "eaf13eb9a4d54cfe9ce74ca175cc913a398dfb700a47883d9a896868ce1e47f4",
+      "bytes": 1745,
+      "decoded_bytes": 4336,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 271,
+      "stride": 16
+    },
+    "chunk_-3_2_ground_vertices.bin.gz": {
+      "sha256": "d2671817d5a0af42a298cf7019d64cf5e1c8063daa7fa1655335c4d951ab5f5f",
+      "bytes": 58216,
+      "decoded_bytes": 222824,
+      "encoding": "gzip/little-endian-float32",
+      "count": 3979,
+      "stride": 14
+    },
+    "chunk_-3_2_ground_indices.bin.gz": {
+      "sha256": "4e4f993bcf9960438034b5c3b3881f04ee5b6b03d39daffe439f731d4792e45b",
+      "bytes": 9455,
+      "decoded_bytes": 30960,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 7740,
+      "stride": 1
+    },
+    "chunk_-3_2_ground_faces.bin.gz": {
+      "sha256": "ea5faa65c38346862a00a1bdb9ac10b1f6103849bb85915cfc5ec7d2b5ce755f",
+      "bytes": 5697,
+      "decoded_bytes": 30960,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 2580,
+      "stride": 3
+    },
+    "chunk_-3_2_ground_bary.bin.gz": {
+      "sha256": "7a9426f91f8b344f32c117f7545c36024f75692b5eb71e3ddc2697a31e8a47d6",
+      "bytes": 21036,
+      "decoded_bytes": 63664,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 3979,
+      "stride": 16
+    },
+    "chunk_-3_2_water_vertices.bin.gz": {
+      "sha256": "7b3f20e96772449e8865e2a2ca99056f163bb6e53b4da31a9a942bce623652b2",
+      "bytes": 575,
+      "decoded_bytes": 3192,
+      "encoding": "gzip/little-endian-float32",
+      "count": 57,
+      "stride": 14
+    },
+    "chunk_-3_2_water_indices.bin.gz": {
+      "sha256": "34d0ca1ee76268f6ed9ab5c3a9a055834b9b465a6fc60120b35dcee3af77d501",
+      "bytes": 114,
+      "decoded_bytes": 252,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 63,
+      "stride": 1
+    },
+    "chunk_-3_2_water_faces.bin.gz": {
+      "sha256": "28fd9ec652d81739ec9bd69d27cb32445a30281d8672c398a0fa1c246a966912",
+      "bytes": 110,
+      "decoded_bytes": 252,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 21,
+      "stride": 3
+    },
+    "chunk_-3_2_water_bary.bin.gz": {
+      "sha256": "99ec7a4ae6cdb208bb2729e37306d3369e8f5c6ed67eba05e0b9e4fc6c2adc8a",
+      "bytes": 462,
+      "decoded_bytes": 912,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 57,
+      "stride": 16
+    },
+    "chunk_-4_-1_ground_vertices.bin.gz": {
+      "sha256": "265efdfd19637c7dd1891125f9affddd4915e5c457a566aade8cdaa4eb8600c8",
+      "bytes": 78467,
+      "decoded_bytes": 309512,
+      "encoding": "gzip/little-endian-float32",
+      "count": 5527,
+      "stride": 14
+    },
+    "chunk_-4_-1_ground_indices.bin.gz": {
+      "sha256": "59468553ee3701fa752cb007ef8d59cf14ffe65bf0a4b9c6564e4f2836d2664a",
+      "bytes": 14227,
+      "decoded_bytes": 46716,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 11679,
+      "stride": 1
+    },
+    "chunk_-4_-1_ground_faces.bin.gz": {
+      "sha256": "07dddb5a4444c7ac738ec0f97d80725efe983a17e726d0a0986723c509e36a71",
+      "bytes": 8832,
+      "decoded_bytes": 46716,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 3893,
+      "stride": 3
+    },
+    "chunk_-4_-1_ground_bary.bin.gz": {
+      "sha256": "ff9339e7fb203262b0bf9760219f118c73ec94c43e2a3c6722deae934d9039fa",
+      "bytes": 27032,
+      "decoded_bytes": 88432,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 5527,
+      "stride": 16
+    },
+    "chunk_-4_-1_water_vertices.bin.gz": {
+      "sha256": "f92f36b7a78f7ce592083aa836f5e6160d779fb2bbfbbc78ee1971910e40d9d9",
+      "bytes": 280,
+      "decoded_bytes": 1344,
+      "encoding": "gzip/little-endian-float32",
+      "count": 24,
+      "stride": 14
+    },
+    "chunk_-4_-1_water_indices.bin.gz": {
+      "sha256": "64319357375d33f5b5a9c2b0814c664edf3f218a0d58503b6cf4660953146564",
+      "bytes": 62,
+      "decoded_bytes": 96,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 24,
+      "stride": 1
+    },
+    "chunk_-4_-1_water_faces.bin.gz": {
+      "sha256": "a89dc917d985f69b0955b0a4e9082031ecf1809b302a5cd0094fcabe3ae9ad51",
+      "bytes": 67,
+      "decoded_bytes": 96,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 8,
+      "stride": 3
+    },
+    "chunk_-4_-1_water_bary.bin.gz": {
+      "sha256": "d5e2e8d5826a3ef0030a6f554ee8bb74a05e81aabcae7dd50b0686983ca63dfd",
+      "bytes": 222,
+      "decoded_bytes": 384,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 24,
+      "stride": 16
+    },
+    "chunk_-4_-2_ground_vertices.bin.gz": {
+      "sha256": "4190121d811ca539053b85ba05d3d5606424238fa1bd38b5f3ca879ba94df8dc",
+      "bytes": 2375,
+      "decoded_bytes": 8288,
+      "encoding": "gzip/little-endian-float32",
+      "count": 148,
+      "stride": 14
+    },
+    "chunk_-4_-2_ground_indices.bin.gz": {
+      "sha256": "458d1cf05d0f721cf7b5574b944adb43ff3691540a8e4c7ce2d613861d9d347f",
+      "bytes": 437,
+      "decoded_bytes": 1272,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 318,
+      "stride": 1
+    },
+    "chunk_-4_-2_ground_faces.bin.gz": {
+      "sha256": "7aab33c5ee61aeb609cc5907174cdb3cedb6ba4f58313c5e1c79ffd4c05e76ca",
+      "bytes": 286,
+      "decoded_bytes": 1272,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 106,
+      "stride": 3
+    },
+    "chunk_-4_-2_ground_bary.bin.gz": {
+      "sha256": "a316824c06b67bf2283b8e1087afc9690f724ebd9779231b2522bb1074621475",
+      "bytes": 891,
+      "decoded_bytes": 2368,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 148,
+      "stride": 16
+    },
+    "chunk_-4_0_ground_vertices.bin.gz": {
+      "sha256": "9ea10937f28e0c756995d9e99c6ecb3d15818c30d5ccd4eddb3c23913c62255e",
+      "bytes": 93534,
+      "decoded_bytes": 360808,
+      "encoding": "gzip/little-endian-float32",
+      "count": 6443,
+      "stride": 14
+    },
+    "chunk_-4_0_ground_indices.bin.gz": {
+      "sha256": "f779f023620836f9dbdfc6f1fd438b4ae80f8af379ad61c5ab3905963ca8ef88",
+      "bytes": 14505,
+      "decoded_bytes": 47580,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 11895,
+      "stride": 1
+    },
+    "chunk_-4_0_ground_faces.bin.gz": {
+      "sha256": "18d1ee7ca9e5614fb31da0a135f499d7e6de29bf1818cea7c8626b8e8764b8c9",
+      "bytes": 9084,
+      "decoded_bytes": 47580,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 3965,
+      "stride": 3
+    },
+    "chunk_-4_0_ground_bary.bin.gz": {
+      "sha256": "1d82d8d97a72c064e98af0cd1201617560dacaab0acc4089ec7eb2812432cd9c",
+      "bytes": 29630,
+      "decoded_bytes": 103088,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 6443,
+      "stride": 16
+    },
+    "chunk_-4_1_ground_vertices.bin.gz": {
+      "sha256": "c524a3b7b0f68b3a02a50b2d96427e6a591daa12eec171c235886704ba04feba",
+      "bytes": 2597,
+      "decoded_bytes": 9128,
+      "encoding": "gzip/little-endian-float32",
+      "count": 163,
+      "stride": 14
+    },
+    "chunk_-4_1_ground_indices.bin.gz": {
+      "sha256": "d51534f6ce415ece254331873db5b905f6da7a92742403cff0fc7eb70c5903ae",
+      "bytes": 474,
+      "decoded_bytes": 1404,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 351,
+      "stride": 1
+    },
+    "chunk_-4_1_ground_faces.bin.gz": {
+      "sha256": "4dcaa20fee258a98931bce0a241c7ecafa03ee753db7c2084577ea02a43928a4",
+      "bytes": 292,
+      "decoded_bytes": 1404,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 117,
+      "stride": 3
+    },
+    "chunk_-4_1_ground_bary.bin.gz": {
+      "sha256": "b138f2b07e2af23f5cfacc5c7d6d3fc668ae488be7bb73975b69c3cdd44d97e9",
+      "bytes": 1039,
+      "decoded_bytes": 2608,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 163,
+      "stride": 16
+    },
+    "chunk_0_-1_ground_vertices.bin.gz": {
+      "sha256": "693fc268a870f57bef140775346c3a57ba25da16d1a01a76582addbf4fa7054b",
+      "bytes": 208218,
+      "decoded_bytes": 750288,
+      "encoding": "gzip/little-endian-float32",
+      "count": 13398,
+      "stride": 14
+    },
+    "chunk_0_-1_ground_indices.bin.gz": {
+      "sha256": "ba270d883ed4291febf256d93aee2f501b708ae9e3cf31bd391e3fe98beecfb1",
+      "bytes": 30654,
+      "decoded_bytes": 100560,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 25140,
+      "stride": 1
+    },
+    "chunk_0_-1_ground_faces.bin.gz": {
+      "sha256": "64e7247fe142605041300a1177f2310f1069e31765dffca9b788fb273379d6be",
+      "bytes": 18324,
+      "decoded_bytes": 100560,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 8380,
+      "stride": 3
+    },
+    "chunk_0_-1_ground_bary.bin.gz": {
+      "sha256": "e4eaddc77cf7ad17c32ec3909bdbca1b1a660e860b0832b5460402251520193e",
+      "bytes": 72280,
+      "decoded_bytes": 214368,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 13398,
+      "stride": 16
+    },
+    "chunk_0_-1_water_vertices.bin.gz": {
+      "sha256": "d18697f004409d0288419502746218a4695fc9efe9a604b7f43399c6ca29cc83",
+      "bytes": 11235,
+      "decoded_bytes": 106792,
+      "encoding": "gzip/little-endian-float32",
+      "count": 1907,
+      "stride": 14
+    },
+    "chunk_0_-1_water_indices.bin.gz": {
+      "sha256": "449623792b8374f0ec5629d153f2c5d19e946c48737afa5af58ab083e34c1cad",
+      "bytes": 2882,
+      "decoded_bytes": 8148,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 2037,
+      "stride": 1
+    },
+    "chunk_0_-1_water_faces.bin.gz": {
+      "sha256": "264139116d4c6a193731d63696cd8db870bdce6205f082c536f3d81fcf845c0b",
+      "bytes": 2346,
+      "decoded_bytes": 8148,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 679,
+      "stride": 3
+    },
+    "chunk_0_-1_water_bary.bin.gz": {
+      "sha256": "9fc4a81cd4aa71b080f10fb895db34ab00ea1ce7d69ac17b83dae4b50947e41d",
+      "bytes": 6479,
+      "decoded_bytes": 30512,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 1907,
+      "stride": 16
+    },
+    "chunk_0_-2_ground_vertices.bin.gz": {
+      "sha256": "fee81203199e0b88640a9975d938bbf64fc53bf7282895eab2652ce910f774ef",
+      "bytes": 244229,
+      "decoded_bytes": 907144,
+      "encoding": "gzip/little-endian-float32",
+      "count": 16199,
+      "stride": 14
+    },
+    "chunk_0_-2_ground_indices.bin.gz": {
+      "sha256": "2e64379ba084c1a026e689bbfb7a11c9daf33f0ab02b0c9897777772ce1f2eaa",
+      "bytes": 36836,
+      "decoded_bytes": 121620,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 30405,
+      "stride": 1
+    },
+    "chunk_0_-2_ground_faces.bin.gz": {
+      "sha256": "e2fd4a234ce97bf0b0383275b99eddbc64a84b6761a45adc04e6d9525544d76c",
+      "bytes": 22335,
+      "decoded_bytes": 121620,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 10135,
+      "stride": 3
+    },
+    "chunk_0_-2_ground_bary.bin.gz": {
+      "sha256": "1da14138dd92b95ad861f2b3e5f44f22384b0521ff392ca9947b39ea44959e87",
+      "bytes": 84961,
+      "decoded_bytes": 259184,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 16199,
+      "stride": 16
+    },
+    "chunk_0_-2_water_vertices.bin.gz": {
+      "sha256": "719abe1846b5d19752561de3c1a67d8324b9cbf4cc2221e55f23e83032ffa3a6",
+      "bytes": 3346,
+      "decoded_bytes": 28560,
+      "encoding": "gzip/little-endian-float32",
+      "count": 510,
+      "stride": 14
+    },
+    "chunk_0_-2_water_indices.bin.gz": {
+      "sha256": "e7a7f1808d1f339a5146a16b99eeaff28c7c6673e9d75fef68b7fae7f918de42",
+      "bytes": 861,
+      "decoded_bytes": 2328,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 582,
+      "stride": 1
+    },
+    "chunk_0_-2_water_faces.bin.gz": {
+      "sha256": "a468b82d8ced6b4af572521b714bbe43a8396dcddd8c0ed9b0eb03f499ac2c89",
+      "bytes": 662,
+      "decoded_bytes": 2328,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 194,
+      "stride": 3
+    },
+    "chunk_0_-2_water_bary.bin.gz": {
+      "sha256": "34d0b4dcc79d3b1f052bf290a3051b13973ff44e8c419f7ad43a56528584fba0",
+      "bytes": 2503,
+      "decoded_bytes": 8160,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 510,
+      "stride": 16
+    },
+    "chunk_0_-3_ground_vertices.bin.gz": {
+      "sha256": "4da8086d9a2dd4b509d100fb6e46d52f36a943e5f2b1deb886c524be071028dc",
+      "bytes": 203614,
+      "decoded_bytes": 792344,
+      "encoding": "gzip/little-endian-float32",
+      "count": 14149,
+      "stride": 14
+    },
+    "chunk_0_-3_ground_indices.bin.gz": {
+      "sha256": "7c0bc56f9f80c893f3e571c2273aa39b2e8bc8d7a7844519cdb7115527c6ab79",
+      "bytes": 36150,
+      "decoded_bytes": 118980,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 29745,
+      "stride": 1
+    },
+    "chunk_0_-3_ground_faces.bin.gz": {
+      "sha256": "53d10c9e510e85cd6038299dcbeeb086a89b293d4565d473275551b438c11a36",
+      "bytes": 23034,
+      "decoded_bytes": 118980,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 9915,
+      "stride": 3
+    },
+    "chunk_0_-3_ground_bary.bin.gz": {
+      "sha256": "54db5ac92b5d42878c3c4bf390b4e425604a80347fac3e8c4854550503edbe60",
+      "bytes": 76360,
+      "decoded_bytes": 226384,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 14149,
+      "stride": 16
+    },
+    "chunk_0_-3_water_vertices.bin.gz": {
+      "sha256": "697eb3c80a3792ecb68a593fd32155eeb91e94765b3df13b7f3f2c48762e7a66",
+      "bytes": 1981,
+      "decoded_bytes": 12320,
+      "encoding": "gzip/little-endian-float32",
+      "count": 220,
+      "stride": 14
+    },
+    "chunk_0_-3_water_indices.bin.gz": {
+      "sha256": "fe9a7d4c4c2c52efd4ab2bab1e06c981d358a5f95630d2e521093cb1ea565636",
+      "bytes": 370,
+      "decoded_bytes": 960,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 240,
+      "stride": 1
+    },
+    "chunk_0_-3_water_faces.bin.gz": {
+      "sha256": "a22632475af9acf6b8ef524e1b9b38a67e1bcc061eaec05d06dbf7c4cabc76bb",
+      "bytes": 339,
+      "decoded_bytes": 960,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 80,
+      "stride": 3
+    },
+    "chunk_0_-3_water_bary.bin.gz": {
+      "sha256": "c1007d292cab0a6297428c8167cf24c62485be4173835407cb024d60a7558ec6",
+      "bytes": 1587,
+      "decoded_bytes": 3520,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 220,
+      "stride": 16
+    },
+    "chunk_0_-4_ground_vertices.bin.gz": {
+      "sha256": "d935a9260c4ab25ae8a54b19c8eb365c33f528784a50b54bbdcc9330d294ce57",
+      "bytes": 35787,
+      "decoded_bytes": 142128,
+      "encoding": "gzip/little-endian-float32",
+      "count": 2538,
+      "stride": 14
+    },
+    "chunk_0_-4_ground_indices.bin.gz": {
+      "sha256": "d199e98fcc9a2b95ccc9444fc8089cc4c96e4440cf9ad26b5e0b9550250c8112",
+      "bytes": 6547,
+      "decoded_bytes": 21420,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 5355,
+      "stride": 1
+    },
+    "chunk_0_-4_ground_faces.bin.gz": {
+      "sha256": "3e42eda8a56d637b57993ea1f1faf21e074421e103f7aa855cafb79189fe762c",
+      "bytes": 4182,
+      "decoded_bytes": 21420,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 1785,
+      "stride": 3
+    },
+    "chunk_0_-4_ground_bary.bin.gz": {
+      "sha256": "534a58423acff4dd826c2e3aebc938058258a59fdfc945750877219bd1b1870f",
+      "bytes": 14164,
+      "decoded_bytes": 40608,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 2538,
+      "stride": 16
+    },
+    "chunk_0_-4_water_vertices.bin.gz": {
+      "sha256": "3afcaebd80fc14a85a422f1387fbd493b5472565270ac300646918fa6120e2e6",
+      "bytes": 549,
+      "decoded_bytes": 2744,
+      "encoding": "gzip/little-endian-float32",
+      "count": 49,
+      "stride": 14
+    },
+    "chunk_0_-4_water_indices.bin.gz": {
+      "sha256": "9411a87d13caa044d89af31c075ebaaa81253f35836d0812f5397ed02c01db50",
+      "bytes": 102,
+      "decoded_bytes": 204,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 51,
+      "stride": 1
+    },
+    "chunk_0_-4_water_faces.bin.gz": {
+      "sha256": "0d18a2b8e50fe6203e54c5afc3d32b407ea1d7d6c259712a7026f88c06bff32f",
+      "bytes": 111,
+      "decoded_bytes": 204,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 17,
+      "stride": 3
+    },
+    "chunk_0_-4_water_bary.bin.gz": {
+      "sha256": "e8e972c4f9401e67d6a364525df1480506660cc5906294a0de323e311766d464",
+      "bytes": 422,
+      "decoded_bytes": 784,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 49,
+      "stride": 16
+    },
+    "chunk_0_0_ground_vertices.bin.gz": {
+      "sha256": "dcc5caa58e53a3b8775bfb85459a446f93e3cd49e4bcc51948ca38cbf97b4602",
+      "bytes": 121325,
+      "decoded_bytes": 430752,
+      "encoding": "gzip/little-endian-float32",
+      "count": 7692,
+      "stride": 14
+    },
+    "chunk_0_0_ground_indices.bin.gz": {
+      "sha256": "5e529b79e294380cdd9f3e5f3f0d9f6b7d08c5ecd892900c4313cdcea533a1dd",
+      "bytes": 17005,
+      "decoded_bytes": 55800,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 13950,
+      "stride": 1
+    },
+    "chunk_0_0_ground_faces.bin.gz": {
+      "sha256": "fe2398942dbdbe67cf928bb7cac8f80063b5669614ae4e715bba9565e7cbcad2",
+      "bytes": 9945,
+      "decoded_bytes": 55800,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 4650,
+      "stride": 3
+    },
+    "chunk_0_0_ground_bary.bin.gz": {
+      "sha256": "4f5c7127024bee3053186e9056a82a345fc6fd0e529cd40fcec57a0b87dc539c",
+      "bytes": 40633,
+      "decoded_bytes": 123072,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 7692,
+      "stride": 16
+    },
+    "chunk_0_0_water_vertices.bin.gz": {
+      "sha256": "1d5ce94e2d8c51ef91d949c66d711031956443f4d578392ba50df96c8528ee80",
+      "bytes": 22813,
+      "decoded_bytes": 211736,
+      "encoding": "gzip/little-endian-float32",
+      "count": 3781,
+      "stride": 14
+    },
+    "chunk_0_0_water_indices.bin.gz": {
+      "sha256": "9a239f2c0a06a514825e9c344b91898745f1fe8e0c494c04e1f92d9563e5d60d",
+      "bytes": 5474,
+      "decoded_bytes": 15564,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 3891,
+      "stride": 1
+    },
+    "chunk_0_0_water_faces.bin.gz": {
+      "sha256": "8a596bab3568c28dbfbe31ce368138ab56b7c24f13e5fff8b083c9fd5bc69646",
+      "bytes": 4613,
+      "decoded_bytes": 15564,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 1297,
+      "stride": 3
+    },
+    "chunk_0_0_water_bary.bin.gz": {
+      "sha256": "efda08572e3e2760aed21089ef57d97b7f4ed89710b9ed6ce43a932b9842d1aa",
+      "bytes": 10264,
+      "decoded_bytes": 60496,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 3781,
+      "stride": 16
+    },
+    "chunk_0_1_ground_vertices.bin.gz": {
+      "sha256": "5aa7daab68cdb2ad04695b246150bd9e6df57b857bc843d6f5502009402bdcd2",
+      "bytes": 243967,
+      "decoded_bytes": 896896,
+      "encoding": "gzip/little-endian-float32",
+      "count": 16016,
+      "stride": 14
+    },
+    "chunk_0_1_ground_indices.bin.gz": {
+      "sha256": "b325215412ec18b162601bdec903bbb8e7c5b281ad3f1539104875e7d038a886",
+      "bytes": 34958,
+      "decoded_bytes": 114564,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 28641,
+      "stride": 1
+    },
+    "chunk_0_1_ground_faces.bin.gz": {
+      "sha256": "a9f71748647d7235c4aa3c218c132e19a293266ef890bd9a88d2570bb020e154",
+      "bytes": 21324,
+      "decoded_bytes": 114564,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 9547,
+      "stride": 3
+    },
+    "chunk_0_1_ground_bary.bin.gz": {
+      "sha256": "49d23d2593b741b6b62149d4eb08b1be9fcb5df1799fb46c1213a6e15910ddac",
+      "bytes": 81252,
+      "decoded_bytes": 256256,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 16016,
+      "stride": 16
+    },
+    "chunk_0_1_water_vertices.bin.gz": {
+      "sha256": "46ee2a7bdd5b6dfd42f24da744bb948f924c531f092987f887c3e9762f6807f3",
+      "bytes": 4146,
+      "decoded_bytes": 31976,
+      "encoding": "gzip/little-endian-float32",
+      "count": 571,
+      "stride": 14
+    },
+    "chunk_0_1_water_indices.bin.gz": {
+      "sha256": "29a27252d477ef8c18ae84fad5e1116725303aa052001c5ad10deee405afa9f4",
+      "bytes": 932,
+      "decoded_bytes": 2484,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 621,
+      "stride": 1
+    },
+    "chunk_0_1_water_faces.bin.gz": {
+      "sha256": "6fab80adcc78c2defe5aa33a3ba48b9155233282996f0d1d0e54f9858aa1db37",
+      "bytes": 764,
+      "decoded_bytes": 2484,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 207,
+      "stride": 3
+    },
+    "chunk_0_1_water_bary.bin.gz": {
+      "sha256": "5e441dc284900bb7436fee4584efbc18daf911f23cefa3c4916b09015468e748",
+      "bytes": 2312,
+      "decoded_bytes": 9136,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 571,
+      "stride": 16
+    },
+    "chunk_0_2_ground_vertices.bin.gz": {
+      "sha256": "e172f6c3e07f02e8433f4c994d928db1f01025d3a80cfc7ead52f4882106eadc",
+      "bytes": 219708,
+      "decoded_bytes": 862232,
+      "encoding": "gzip/little-endian-float32",
+      "count": 15397,
+      "stride": 14
+    },
+    "chunk_0_2_ground_indices.bin.gz": {
+      "sha256": "e9d16544fcf2945a7e6c0cd637d6eccddb33b1f2dde45a132ce502f42d4772a3",
+      "bytes": 36800,
+      "decoded_bytes": 121140,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 30285,
+      "stride": 1
+    },
+    "chunk_0_2_ground_faces.bin.gz": {
+      "sha256": "0164e970afb1c040905e967afffb8c691384c18eb071d19cae9a6c78947ef209",
+      "bytes": 22316,
+      "decoded_bytes": 121140,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 10095,
+      "stride": 3
+    },
+    "chunk_0_2_ground_bary.bin.gz": {
+      "sha256": "458937db2e3906406f126caef21fcf1459e64b7a83b0bb7e4dc5ee368538f985",
+      "bytes": 90936,
+      "decoded_bytes": 246352,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 15397,
+      "stride": 16
+    },
+    "chunk_0_2_water_vertices.bin.gz": {
+      "sha256": "b2b4901fd5faa977abd771d0de8dc08bba59cad3933fd660320b6685d0ba0389",
+      "bytes": 4742,
+      "decoded_bytes": 31920,
+      "encoding": "gzip/little-endian-float32",
+      "count": 570,
+      "stride": 14
+    },
+    "chunk_0_2_water_indices.bin.gz": {
+      "sha256": "2d0c1fb833a90681ef5cf80728be45f2a560361d196e0d0f441d8aec2d2d7ab5",
+      "bytes": 960,
+      "decoded_bytes": 2592,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 648,
+      "stride": 1
+    },
+    "chunk_0_2_water_faces.bin.gz": {
+      "sha256": "3c7e1ddcbfaeb39ea34e9e896a70a033af9fa25701a9c4db6ddee0567f5de3b5",
+      "bytes": 768,
+      "decoded_bytes": 2592,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 216,
+      "stride": 3
+    },
+    "chunk_0_2_water_bary.bin.gz": {
+      "sha256": "4cfb5f8ad265a41d931499bd264cd3bcde16d861b039bf4694c9f0d0827f803a",
+      "bytes": 3722,
+      "decoded_bytes": 9120,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 570,
+      "stride": 16
+    },
+    "chunk_0_3_ground_vertices.bin.gz": {
+      "sha256": "8bfe5fcfcdf8d84c2636ea579ec2edfb0cd0884e8ac18801ff85bae8a7ce6aac",
+      "bytes": 45101,
+      "decoded_bytes": 186928,
+      "encoding": "gzip/little-endian-float32",
+      "count": 3338,
+      "stride": 14
+    },
+    "chunk_0_3_ground_indices.bin.gz": {
+      "sha256": "6d94b01ea8b47c155387148627d59306c143ef003423cb8b6691a3d4b6d55018",
+      "bytes": 7253,
+      "decoded_bytes": 23772,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 5943,
+      "stride": 1
+    },
+    "chunk_0_3_ground_faces.bin.gz": {
+      "sha256": "b19b192b03192da4cbefb36534e63145ec018959d0bac36bae915da442968ab8",
+      "bytes": 4387,
+      "decoded_bytes": 23772,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 1981,
+      "stride": 3
+    },
+    "chunk_0_3_ground_bary.bin.gz": {
+      "sha256": "8a97b3637dad29c46928487353d4a84203fe57038ddc1a81fc0ff0d4722383de",
+      "bytes": 17886,
+      "decoded_bytes": 53408,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 3338,
+      "stride": 16
+    },
+    "chunk_0_3_water_vertices.bin.gz": {
+      "sha256": "5f389bf78820b70ff4a10acefe6cc16b88c3ad409bdd27edf09397e76dd7a6ec",
+      "bytes": 840,
+      "decoded_bytes": 4928,
+      "encoding": "gzip/little-endian-float32",
+      "count": 88,
+      "stride": 14
+    },
+    "chunk_0_3_water_indices.bin.gz": {
+      "sha256": "b9e34275bd0d94be815e5c7f498f5d43582c5f94a89d238097eba80bb7a5b3ee",
+      "bytes": 169,
+      "decoded_bytes": 384,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 96,
+      "stride": 1
+    },
+    "chunk_0_3_water_faces.bin.gz": {
+      "sha256": "c6bd56bcfc348b8e0dd8385e1b11e9c1c12f74afd8f4c2ac31b5be9b2a7bdb29",
+      "bytes": 157,
+      "decoded_bytes": 384,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 32,
+      "stride": 3
+    },
+    "chunk_0_3_water_bary.bin.gz": {
+      "sha256": "f1a15f82ad622e7c35fa6410987c6d539e623b25c4d84f584d3a095fffc965a3",
+      "bytes": 674,
+      "decoded_bytes": 1408,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 88,
+      "stride": 16
+    },
+    "chunk_1_-1_ground_vertices.bin.gz": {
+      "sha256": "8ac7711bff95c1ae4481c731f97431d3dafbb30aec98e682670e102ab4eab4bb",
+      "bytes": 254672,
+      "decoded_bytes": 996072,
+      "encoding": "gzip/little-endian-float32",
+      "count": 17787,
+      "stride": 14
+    },
+    "chunk_1_-1_ground_indices.bin.gz": {
+      "sha256": "8f6b199bb8734537d9a7d2d2e7b10835f259938a52f4d87df4cbf37f2696c8b4",
+      "bytes": 37991,
+      "decoded_bytes": 125472,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 31368,
+      "stride": 1
+    },
+    "chunk_1_-1_ground_faces.bin.gz": {
+      "sha256": "849ed9cd4acaa9b75eb13e67812c1e6d41cd1406d2e6d15b9aa81a15bbff1bcf",
+      "bytes": 24076,
+      "decoded_bytes": 125472,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 10456,
+      "stride": 3
+    },
+    "chunk_1_-1_ground_bary.bin.gz": {
+      "sha256": "2c48184f13a2c8714a88abfc3c41ba2bb5bcf36261cc654dfefceca7964da075",
+      "bytes": 87026,
+      "decoded_bytes": 284592,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 17787,
+      "stride": 16
+    },
+    "chunk_1_-1_water_vertices.bin.gz": {
+      "sha256": "f6958bdcf3366a2f0856171dbfa100ea335ecc8157f8768d1c2b16bdeebafbe6",
+      "bytes": 728,
+      "decoded_bytes": 4480,
+      "encoding": "gzip/little-endian-float32",
+      "count": 80,
+      "stride": 14
+    },
+    "chunk_1_-1_water_indices.bin.gz": {
+      "sha256": "ef6f14990fde74412d0eb3517cac7e50a4d49ae160d4c237ddaa229f8451925e",
+      "bytes": 160,
+      "decoded_bytes": 360,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 90,
+      "stride": 1
+    },
+    "chunk_1_-1_water_faces.bin.gz": {
+      "sha256": "6b363fd589c40d9ec7bb363da6573e10c7c1922106fbb19f36b202ab1cbd1ef4",
+      "bytes": 147,
+      "decoded_bytes": 360,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 30,
+      "stride": 3
+    },
+    "chunk_1_-1_water_bary.bin.gz": {
+      "sha256": "466f8b39af4413c75115c75eba0860339facbbdfe5479f5f9f98ff369f789620",
+      "bytes": 568,
+      "decoded_bytes": 1280,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 80,
+      "stride": 16
+    },
+    "chunk_1_-2_ground_vertices.bin.gz": {
+      "sha256": "554fff16691e19cc1d6cbbb292b8adb44e8b4a2baf7dd394c8d2725a17aea7b4",
+      "bytes": 254423,
+      "decoded_bytes": 976360,
+      "encoding": "gzip/little-endian-float32",
+      "count": 17435,
+      "stride": 14
+    },
+    "chunk_1_-2_ground_indices.bin.gz": {
+      "sha256": "eda72f903b225e9c025b3a8deb806e1f9bf3a58d428d43c658df69c6aaeccd59",
+      "bytes": 37409,
+      "decoded_bytes": 123228,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 30807,
+      "stride": 1
+    },
+    "chunk_1_-2_ground_faces.bin.gz": {
+      "sha256": "abc4addd603ef01c0c716f8654a24b4959954a9e58562005e1a6ed36931322aa",
+      "bytes": 23305,
+      "decoded_bytes": 123228,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 10269,
+      "stride": 3
+    },
+    "chunk_1_-2_ground_bary.bin.gz": {
+      "sha256": "625507fcb9cad48d75cd1daf3de845bf90e536b88a3da58e02a6514fafe3b5d1",
+      "bytes": 82732,
+      "decoded_bytes": 278960,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 17435,
+      "stride": 16
+    },
+    "chunk_1_-2_water_vertices.bin.gz": {
+      "sha256": "d27577ca59e77f9407e47b6f5cd1ea27dae970c0136dc40150eb8e38db85e306",
+      "bytes": 148,
+      "decoded_bytes": 672,
+      "encoding": "gzip/little-endian-float32",
+      "count": 12,
+      "stride": 14
+    },
+    "chunk_1_-2_water_indices.bin.gz": {
+      "sha256": "00ec80da201b0944b00b8ce924a84a95a4978880524244a734d68007e4fab853",
+      "bytes": 45,
+      "decoded_bytes": 48,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 12,
+      "stride": 1
+    },
+    "chunk_1_-2_water_faces.bin.gz": {
+      "sha256": "e582f46916c2e6f5e2f040541894cf9f44bcc726efb978dd14f74ddb75d5ffc9",
+      "bytes": 50,
+      "decoded_bytes": 48,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 4,
+      "stride": 3
+    },
+    "chunk_1_-2_water_bary.bin.gz": {
+      "sha256": "60e2cb89dcb26b20290a60cf8c93a0a9a620f50765b55044be2f68a26187a8c8",
+      "bytes": 111,
+      "decoded_bytes": 192,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 12,
+      "stride": 16
+    },
+    "chunk_1_-3_ground_vertices.bin.gz": {
+      "sha256": "370f737d5ca3501ee0112bfb81b6c086b389498616786d082fc9128d5ea335e6",
+      "bytes": 259740,
+      "decoded_bytes": 971656,
+      "encoding": "gzip/little-endian-float32",
+      "count": 17351,
+      "stride": 14
+    },
+    "chunk_1_-3_ground_indices.bin.gz": {
+      "sha256": "5d145e202e624199da19a96896e561696e043820cad83d9b035c87b14146fea9",
+      "bytes": 37758,
+      "decoded_bytes": 124260,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 31065,
+      "stride": 1
+    },
+    "chunk_1_-3_ground_faces.bin.gz": {
+      "sha256": "2eff33dd5d49257a338a87d7100204bce49a3ff41f978ee260f216cf2a6da369",
+      "bytes": 23317,
+      "decoded_bytes": 124260,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 10355,
+      "stride": 3
+    },
+    "chunk_1_-3_ground_bary.bin.gz": {
+      "sha256": "41dcb8dcf21efb1a4e4bfdd20047a81ab8c44974124647dbf83291d38d354e46",
+      "bytes": 80554,
+      "decoded_bytes": 277616,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 17351,
+      "stride": 16
+    },
+    "chunk_1_-4_ground_vertices.bin.gz": {
+      "sha256": "1a50e3f37c400b21f885925b463b29a54ed08c67f00de5fa1d725b54910c43a0",
+      "bytes": 27688,
+      "decoded_bytes": 107912,
+      "encoding": "gzip/little-endian-float32",
+      "count": 1927,
+      "stride": 14
+    },
+    "chunk_1_-4_ground_indices.bin.gz": {
+      "sha256": "0105ea34ba19905c293d57bbfdfdaeaf8a063a9a4353763035216461c4b29dab",
+      "bytes": 4345,
+      "decoded_bytes": 13944,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 3486,
+      "stride": 1
+    },
+    "chunk_1_-4_ground_faces.bin.gz": {
+      "sha256": "956766842f536cc9d54ab035228a8b16a2cbcc81fceff543ad18fd1702fdb5db",
+      "bytes": 2808,
+      "decoded_bytes": 13944,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 1162,
+      "stride": 3
+    },
+    "chunk_1_-4_ground_bary.bin.gz": {
+      "sha256": "4a080bb1a7ec7855667cd10f8a2649a7ed7a19ade8366c1f1669c03a2c33f501",
+      "bytes": 9224,
+      "decoded_bytes": 30832,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 1927,
+      "stride": 16
+    },
+    "chunk_1_-4_water_vertices.bin.gz": {
+      "sha256": "43276f4a3f23b4eef8eee2046d25263f0a7c49dd9cc3a39d0537606a51ecdf6a",
+      "bytes": 1530,
+      "decoded_bytes": 12096,
+      "encoding": "gzip/little-endian-float32",
+      "count": 216,
+      "stride": 14
+    },
+    "chunk_1_-4_water_indices.bin.gz": {
+      "sha256": "2a2556f6dc0ff4d6b16fb4c0ec858572e39472bdf88915e48803408e63129d09",
+      "bytes": 359,
+      "decoded_bytes": 864,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 216,
+      "stride": 1
+    },
+    "chunk_1_-4_water_faces.bin.gz": {
+      "sha256": "2a464a2bd6cd83e7dfac3b8799deeffdec89af303ec9151671ec940b32c2e059",
+      "bytes": 314,
+      "decoded_bytes": 864,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 72,
+      "stride": 3
+    },
+    "chunk_1_-4_water_bary.bin.gz": {
+      "sha256": "603cf83b5d06312e8ccbc1ab44fce0b959f6124db420b1db3315c3a7bad591b0",
+      "bytes": 495,
+      "decoded_bytes": 3456,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 216,
+      "stride": 16
+    },
+    "chunk_1_0_ground_vertices.bin.gz": {
+      "sha256": "6b98316426d461619737c72c65d947872bd6a6c1e39e00b02b98dc04574d2b0c",
+      "bytes": 236512,
+      "decoded_bytes": 937664,
+      "encoding": "gzip/little-endian-float32",
+      "count": 16744,
+      "stride": 14
+    },
+    "chunk_1_0_ground_indices.bin.gz": {
+      "sha256": "a8fbb3e36f877460f644eaeb2ff31b6ccd3aa27591dffdce6ed61d43774f6c09",
+      "bytes": 35415,
+      "decoded_bytes": 116256,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 29064,
+      "stride": 1
+    },
+    "chunk_1_0_ground_faces.bin.gz": {
+      "sha256": "3c0d86c9eb0e7de4876dee7933b7798675aaac1e457c48b77d7c7c3596ee7e9a",
+      "bytes": 22171,
+      "decoded_bytes": 116256,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 9688,
+      "stride": 3
+    },
+    "chunk_1_0_ground_bary.bin.gz": {
+      "sha256": "f9755439a15006c5c3c625c5d05c5b56dcca5b85e50a042e40893f918994fc39",
+      "bytes": 83745,
+      "decoded_bytes": 267904,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 16744,
+      "stride": 16
+    },
+    "chunk_1_0_water_vertices.bin.gz": {
+      "sha256": "4b9f1692566ed415b775b53c98578f64404776bbcdc5e42616f26f2adc83e3f6",
+      "bytes": 2305,
+      "decoded_bytes": 15736,
+      "encoding": "gzip/little-endian-float32",
+      "count": 281,
+      "stride": 14
+    },
+    "chunk_1_0_water_indices.bin.gz": {
+      "sha256": "90fe39933556237a6554b8737b4ebd35067839f404279b235384f1912f700116",
+      "bytes": 488,
+      "decoded_bytes": 1164,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 291,
+      "stride": 1
+    },
+    "chunk_1_0_water_faces.bin.gz": {
+      "sha256": "1fcef29d91a74ee2778f122a0cfbb4492544000b1bacd6a0db085b6dd95c85cd",
+      "bytes": 421,
+      "decoded_bytes": 1164,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 97,
+      "stride": 3
+    },
+    "chunk_1_0_water_bary.bin.gz": {
+      "sha256": "9c2bc18003bc303dcff51a38d0b7d7764c8bc85260c1d1f39dad2927c6cc42cb",
+      "bytes": 1155,
+      "decoded_bytes": 4496,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 281,
+      "stride": 16
+    },
+    "chunk_1_1_ground_vertices.bin.gz": {
+      "sha256": "6dd901d61b4a18618cca8d1d9cf6717b19298bd81967d03c2a9a201039fea612",
+      "bytes": 57631,
+      "decoded_bytes": 147000,
+      "encoding": "gzip/little-endian-float32",
+      "count": 2625,
+      "stride": 14
+    },
+    "chunk_1_1_ground_indices.bin.gz": {
+      "sha256": "1232878fb72e47dea30421c78734247e75f22d4bb23d64e2aeeccf315cdbc1d3",
+      "bytes": 11662,
+      "decoded_bytes": 40080,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 10020,
+      "stride": 1
+    },
+    "chunk_1_1_ground_faces.bin.gz": {
+      "sha256": "d491d0e4e5e2ed52a3b05e8f0d8c67fa1c544d5b6f8b3571eafac02e04a6175e",
+      "bytes": 6913,
+      "decoded_bytes": 40080,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 3340,
+      "stride": 3
+    },
+    "chunk_1_1_ground_bary.bin.gz": {
+      "sha256": "8361510acbc5b58f717da5bf4f2aac780217e476da6b121c361a5b4325d27a0a",
+      "bytes": 18564,
+      "decoded_bytes": 42000,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 2625,
+      "stride": 16
+    },
+    "chunk_1_1_water_vertices.bin.gz": {
+      "sha256": "56ae0481474e8448e010b2f527ea1b2e2155b4970fcd12369be5b5cd816b58cd",
+      "bytes": 36944,
+      "decoded_bytes": 318472,
+      "encoding": "gzip/little-endian-float32",
+      "count": 5687,
+      "stride": 14
+    },
+    "chunk_1_1_water_indices.bin.gz": {
+      "sha256": "c6e88775de9306e2798f17f798decc0a48416926310166985ed07584783e05de",
+      "bytes": 8033,
+      "decoded_bytes": 22884,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 5721,
+      "stride": 1
+    },
+    "chunk_1_1_water_faces.bin.gz": {
+      "sha256": "3ec8af178e82f79ca37e825edd280533d38a91b23cb560808d21a4265471add5",
+      "bytes": 6899,
+      "decoded_bytes": 22884,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 1907,
+      "stride": 3
+    },
+    "chunk_1_1_water_bary.bin.gz": {
+      "sha256": "941796b73a48d8ef04b2df847fc1bd986f8603f7151e06d72839128e392520c5",
+      "bytes": 13020,
+      "decoded_bytes": 90992,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 5687,
+      "stride": 16
+    },
+    "chunk_1_2_ground_vertices.bin.gz": {
+      "sha256": "9605a7f79ff794540dff019c96e554422c1ccba77e8d7e8a54095ca4958c0b28",
+      "bytes": 185586,
+      "decoded_bytes": 579432,
+      "encoding": "gzip/little-endian-float32",
+      "count": 10347,
+      "stride": 14
+    },
+    "chunk_1_2_ground_indices.bin.gz": {
+      "sha256": "7a237841d1414e4f5964a3d9507b2dfbe54e4b436ea2345f43bd4e4e510d6ce4",
+      "bytes": 33411,
+      "decoded_bytes": 113484,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 28371,
+      "stride": 1
+    },
+    "chunk_1_2_ground_faces.bin.gz": {
+      "sha256": "102500cd9ff0fa48d8277120428e901ddcf538a084738f0a75e9ad418b01ea36",
+      "bytes": 19986,
+      "decoded_bytes": 113484,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 9457,
+      "stride": 3
+    },
+    "chunk_1_2_ground_bary.bin.gz": {
+      "sha256": "63ee6fc9cdadce11d869ad59b256d37a1f0a556e5baf381b4480273d01b177eb",
+      "bytes": 65720,
+      "decoded_bytes": 165552,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 10347,
+      "stride": 16
+    },
+    "chunk_1_2_water_vertices.bin.gz": {
+      "sha256": "38356fb2db2d7ddf25610bb55ae5fd5f7c08f791bafe006bf1660f0d21ae7faf",
+      "bytes": 23881,
+      "decoded_bytes": 207088,
+      "encoding": "gzip/little-endian-float32",
+      "count": 3698,
+      "stride": 14
+    },
+    "chunk_1_2_water_indices.bin.gz": {
+      "sha256": "88c2f3522213de49419573466984e6c36e2bd79316e89d265fe715a88e4982eb",
+      "bytes": 5236,
+      "decoded_bytes": 14856,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 3714,
+      "stride": 1
+    },
+    "chunk_1_2_water_faces.bin.gz": {
+      "sha256": "14c0805925793dd3baa4d833fc0561ae89780ecb0872e7e10be88ebccccbb2ac",
+      "bytes": 4490,
+      "decoded_bytes": 14856,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 1238,
+      "stride": 3
+    },
+    "chunk_1_2_water_bary.bin.gz": {
+      "sha256": "346bd541915ebe4136002cd59979c314e5ee07126951e0a1c1b2010c634ad7af",
+      "bytes": 8488,
+      "decoded_bytes": 59168,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 3698,
+      "stride": 16
+    },
+    "chunk_1_3_ground_vertices.bin.gz": {
+      "sha256": "2bacd67eba4108699011a08d6a4c1ad42c71aecd4ebd1a00ccbbd0886eea94de",
+      "bytes": 36429,
+      "decoded_bytes": 139160,
+      "encoding": "gzip/little-endian-float32",
+      "count": 2485,
+      "stride": 14
+    },
+    "chunk_1_3_ground_indices.bin.gz": {
+      "sha256": "fa768bf5ad785928e81200d3a7d3e725f18f350cf3dc339cb17c6da5160d8b22",
+      "bytes": 5790,
+      "decoded_bytes": 18876,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 4719,
+      "stride": 1
+    },
+    "chunk_1_3_ground_faces.bin.gz": {
+      "sha256": "255d696563a0579b6dc0a98b7bfd65882d039779c54e3c62909c072327efbb68",
+      "bytes": 3372,
+      "decoded_bytes": 18876,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 1573,
+      "stride": 3
+    },
+    "chunk_1_3_ground_bary.bin.gz": {
+      "sha256": "327e6341c10c947c84ee893acd0986df01a3af34c33b6d31c7162c13b93f1da5",
+      "bytes": 13495,
+      "decoded_bytes": 39760,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 2485,
+      "stride": 16
+    },
+    "chunk_1_3_water_vertices.bin.gz": {
+      "sha256": "f835ad2aa612622496e8acd44026df059e0ace613dbcee2fa9715af015671528",
+      "bytes": 1618,
+      "decoded_bytes": 12768,
+      "encoding": "gzip/little-endian-float32",
+      "count": 228,
+      "stride": 14
+    },
+    "chunk_1_3_water_indices.bin.gz": {
+      "sha256": "956dc62eef7aae6cc294418bf3bf0d3223ecdf3ebd852e35bff6065e28c6419c",
+      "bytes": 375,
+      "decoded_bytes": 912,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 228,
+      "stride": 1
+    },
+    "chunk_1_3_water_faces.bin.gz": {
+      "sha256": "efe9cd39cd1d6b5cbec6c4741dc7ccf651a6c3e5e08f1f03396c7a0a8fed4d7a",
+      "bytes": 329,
+      "decoded_bytes": 912,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 76,
+      "stride": 3
+    },
+    "chunk_1_3_water_bary.bin.gz": {
+      "sha256": "80cf19df4bf439ef15cd0071b0e7df511fdcfa4be5c3b057e241533079bee400",
+      "bytes": 504,
+      "decoded_bytes": 3648,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 228,
+      "stride": 16
+    },
+    "chunk_2_-1_ground_vertices.bin.gz": {
+      "sha256": "b357e38d6bf9073845c3a9da24c6c4923e79cd5334e362566d1b20111e92a0f2",
+      "bytes": 232114,
+      "decoded_bytes": 958160,
+      "encoding": "gzip/little-endian-float32",
+      "count": 17110,
+      "stride": 14
+    },
+    "chunk_2_-1_ground_indices.bin.gz": {
+      "sha256": "8fa1c0480019026e1d84faec5d7c58cc1e7206f6eb5b536f31ebbf9535dfeef0",
+      "bytes": 37106,
+      "decoded_bytes": 122520,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 30630,
+      "stride": 1
+    },
+    "chunk_2_-1_ground_faces.bin.gz": {
+      "sha256": "82a3fa6ac7335526092f623b5f7e802387aad7787790976512a05707b88c9f23",
+      "bytes": 23415,
+      "decoded_bytes": 122520,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 10210,
+      "stride": 3
+    },
+    "chunk_2_-1_ground_bary.bin.gz": {
+      "sha256": "d0271c1942807f98c54a46de1fa3734f862ec7ebc7d1de7532890c74cc4383e9",
+      "bytes": 88336,
+      "decoded_bytes": 273760,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 17110,
+      "stride": 16
+    },
+    "chunk_2_-1_water_vertices.bin.gz": {
+      "sha256": "90f396569a9248b5581a103ad6472fd3525b531a1233ecec4cfe8acc49dab5ab",
+      "bytes": 2165,
+      "decoded_bytes": 13440,
+      "encoding": "gzip/little-endian-float32",
+      "count": 240,
+      "stride": 14
+    },
+    "chunk_2_-1_water_indices.bin.gz": {
+      "sha256": "55e299e8626f2a71663a1097825305736e1939b9a66c1dda7db968679cd1016d",
+      "bytes": 413,
+      "decoded_bytes": 1056,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 264,
+      "stride": 1
+    },
+    "chunk_2_-1_water_faces.bin.gz": {
+      "sha256": "329843b1f97621f8289dff686d3d8c69790525dea5b5fa345931dfc09be94152",
+      "bytes": 360,
+      "decoded_bytes": 1056,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 88,
+      "stride": 3
+    },
+    "chunk_2_-1_water_bary.bin.gz": {
+      "sha256": "a1f8aaf4f83e945d1087d05f2a3ed30fc1efa36c58637e52ca192332cbd89448",
+      "bytes": 1700,
+      "decoded_bytes": 3840,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 240,
+      "stride": 16
+    },
+    "chunk_2_-2_ground_vertices.bin.gz": {
+      "sha256": "5ed4b29f2e5ca2ffe36a057df5c72d6168494cc91ed4c14fa312aaed99b38f23",
+      "bytes": 172309,
+      "decoded_bytes": 682248,
+      "encoding": "gzip/little-endian-float32",
+      "count": 12183,
+      "stride": 14
+    },
+    "chunk_2_-2_ground_indices.bin.gz": {
+      "sha256": "1a22b5770a52ba51364b28acd65a44b92f9f187eb5ae228858e2f1dbbbb2b94b",
+      "bytes": 28109,
+      "decoded_bytes": 92556,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 23139,
+      "stride": 1
+    },
+    "chunk_2_-2_ground_faces.bin.gz": {
+      "sha256": "a9aa3d793da517def9af09bebd3b7e1b2a8e3870c1903e3e6c7f18103dc4533c",
+      "bytes": 17450,
+      "decoded_bytes": 92556,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 7713,
+      "stride": 3
+    },
+    "chunk_2_-2_ground_bary.bin.gz": {
+      "sha256": "68e763a9930b2bcc8a5e68f4e9c964cb70006e230f8b15e29be0ed689c508b69",
+      "bytes": 64251,
+      "decoded_bytes": 194928,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 12183,
+      "stride": 16
+    },
+    "chunk_2_-2_water_vertices.bin.gz": {
+      "sha256": "1587fcb3a7bd246e70a973058d7aeef8be2ebdba2be0852c0624a71659afa8f4",
+      "bytes": 2835,
+      "decoded_bytes": 23520,
+      "encoding": "gzip/little-endian-float32",
+      "count": 420,
+      "stride": 14
+    },
+    "chunk_2_-2_water_indices.bin.gz": {
+      "sha256": "3388850a83064b5e4f913ff0917539837855207fd1fe7f4b8a9cc44a509eaf4f",
+      "bytes": 687,
+      "decoded_bytes": 1824,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 456,
+      "stride": 1
+    },
+    "chunk_2_-2_water_faces.bin.gz": {
+      "sha256": "11a8504a79ee028755aff71d059b6eccfd1fa3852fc8c2c4d7ba9c95601a38e0",
+      "bytes": 593,
+      "decoded_bytes": 1824,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 152,
+      "stride": 3
+    },
+    "chunk_2_-2_water_bary.bin.gz": {
+      "sha256": "1c9fdf2800fe6ba49a433ec0203c23579ab8bfa75d04c8e241f55015b4bde534",
+      "bytes": 2120,
+      "decoded_bytes": 6720,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 420,
+      "stride": 16
+    },
+    "chunk_2_-3_ground_vertices.bin.gz": {
+      "sha256": "eccbedc098667610a0e1b5f3687e4dc6109fbd777599c7fd486345f98409ded7",
+      "bytes": 55160,
+      "decoded_bytes": 206528,
+      "encoding": "gzip/little-endian-float32",
+      "count": 3688,
+      "stride": 14
+    },
+    "chunk_2_-3_ground_indices.bin.gz": {
+      "sha256": "b00f6d61e034831e403b2e7a67ba2a0f05a90d707930ed97830ffdfddba65767",
+      "bytes": 9350,
+      "decoded_bytes": 30684,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 7671,
+      "stride": 1
+    },
+    "chunk_2_-3_ground_faces.bin.gz": {
+      "sha256": "7c93a1675d0ed02f538db3ea5afb4b456ebfc9a718e7a5c5b21de71103605553",
+      "bytes": 5623,
+      "decoded_bytes": 30684,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 2557,
+      "stride": 3
+    },
+    "chunk_2_-3_ground_bary.bin.gz": {
+      "sha256": "9e260f2700e88c3e1e8aeceeb2dd420ff313bfbcfba11806b1d5d23b52761e03",
+      "bytes": 19826,
+      "decoded_bytes": 59008,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 3688,
+      "stride": 16
+    },
+    "chunk_2_-3_water_vertices.bin.gz": {
+      "sha256": "1c3ea8685f9dfb368b63c7574283fe66a74a83ad0e74cb0f6ea4601942f4091b",
+      "bytes": 614,
+      "decoded_bytes": 3360,
+      "encoding": "gzip/little-endian-float32",
+      "count": 60,
+      "stride": 14
+    },
+    "chunk_2_-3_water_indices.bin.gz": {
+      "sha256": "7cfa6fdceb849480f5088f273449846f76ff39bd28d452cb7e9e045dffd4cad7",
+      "bytes": 107,
+      "decoded_bytes": 240,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 60,
+      "stride": 1
+    },
+    "chunk_2_-3_water_faces.bin.gz": {
+      "sha256": "da1a3a580ef01b00ba083fb6abde0a8255d392ddf2bf2f2d70359ec4a5f9b096",
+      "bytes": 120,
+      "decoded_bytes": 240,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 20,
+      "stride": 3
+    },
+    "chunk_2_-3_water_bary.bin.gz": {
+      "sha256": "ec3d4f40fbda3a28e5051c3df4d493c386c4bc2fe9e97dfa735bf5d66c377aae",
+      "bytes": 505,
+      "decoded_bytes": 960,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 60,
+      "stride": 16
+    },
+    "chunk_2_0_ground_vertices.bin.gz": {
+      "sha256": "a97d18b5e2792723459600dcaf6d6ea1d6d07967174846a461e27f744f55dc13",
+      "bytes": 222819,
+      "decoded_bytes": 964600,
+      "encoding": "gzip/little-endian-float32",
+      "count": 17225,
+      "stride": 14
+    },
+    "chunk_2_0_ground_indices.bin.gz": {
+      "sha256": "e1434c9dd59b8530d871f9bad56d56f1dfc970e6c6f32851e17147273d49d57b",
+      "bytes": 36188,
+      "decoded_bytes": 119148,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 29787,
+      "stride": 1
+    },
+    "chunk_2_0_ground_faces.bin.gz": {
+      "sha256": "d144086b53203b9720d6fd81de636b5dcedf9c0981143cc4b2a14407b399f8ee",
+      "bytes": 23019,
+      "decoded_bytes": 119148,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 9929,
+      "stride": 3
+    },
+    "chunk_2_0_ground_bary.bin.gz": {
+      "sha256": "bd3985cd768763deedb70621a9695fd3177144845ce3d163847cb387056f68a5",
+      "bytes": 88910,
+      "decoded_bytes": 275600,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 17225,
+      "stride": 16
+    },
+    "chunk_2_0_water_vertices.bin.gz": {
+      "sha256": "760caf436ca2944aaad48cfec0fb19a5d1ceb3775db3763a4feed3f507d2ad6b",
+      "bytes": 1380,
+      "decoded_bytes": 7616,
+      "encoding": "gzip/little-endian-float32",
+      "count": 136,
+      "stride": 14
+    },
+    "chunk_2_0_water_indices.bin.gz": {
+      "sha256": "7c5bc13298f474740f0e35e597b5c0ec9536f38fd907b089bfc6c6575cc0dd69",
+      "bytes": 249,
+      "decoded_bytes": 600,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 150,
+      "stride": 1
+    },
+    "chunk_2_0_water_faces.bin.gz": {
+      "sha256": "e95f9818b66b5a3b4f557444487f15d3df8cd21e46b2fa7e0226e82c0222f662",
+      "bytes": 238,
+      "decoded_bytes": 600,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 50,
+      "stride": 3
+    },
+    "chunk_2_0_water_bary.bin.gz": {
+      "sha256": "6ef6310b02292e1a6ba6b4866e693ec42d3244b329525ebe5e23f388d0746b37",
+      "bytes": 980,
+      "decoded_bytes": 2176,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 136,
+      "stride": 16
+    },
+    "chunk_2_1_ground_vertices.bin.gz": {
+      "sha256": "4a4d59770dc7a7397f4531285e6929f9db115868bc284ba2a7803de35bafd732",
+      "bytes": 22085,
+      "decoded_bytes": 102200,
+      "encoding": "gzip/little-endian-float32",
+      "count": 1825,
+      "stride": 14
+    },
+    "chunk_2_1_ground_indices.bin.gz": {
+      "sha256": "2494056fb4d69ca8cbdfb210b3c94e1cb705434eaac652a7325d2500cfcabcf2",
+      "bytes": 3683,
+      "decoded_bytes": 11700,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 2925,
+      "stride": 1
+    },
+    "chunk_2_1_ground_faces.bin.gz": {
+      "sha256": "bdae87734f4fd92efd4e98e7cb2f29c9c2c1fc3c430a764d474b7ec339b445b6",
+      "bytes": 2614,
+      "decoded_bytes": 11700,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 975,
+      "stride": 3
+    },
+    "chunk_2_1_ground_bary.bin.gz": {
+      "sha256": "b1b3e2439da3411e01eca365c07cbfd8178a4f936eebfbf5a6b2d6eb59853396",
+      "bytes": 8953,
+      "decoded_bytes": 29200,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 1825,
+      "stride": 16
+    },
+    "chunk_2_1_water_vertices.bin.gz": {
+      "sha256": "9bbcc070b3cc6d2eb07d7bf6691be89cfa8b1d4dd18bf0e3088e8114893de4d6",
+      "bytes": 25366,
+      "decoded_bytes": 227304,
+      "encoding": "gzip/little-endian-float32",
+      "count": 4059,
+      "stride": 14
+    },
+    "chunk_2_1_water_indices.bin.gz": {
+      "sha256": "0bad24bcd749c5374c970322f8576de60ad2bbc76e12b36972bb3d7ef13c8be9",
+      "bytes": 5701,
+      "decoded_bytes": 16236,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 4059,
+      "stride": 1
+    },
+    "chunk_2_1_water_faces.bin.gz": {
+      "sha256": "185dff143980159b578da2fbc21f4e6061afe59c5775380049765ad22082f42f",
+      "bytes": 4927,
+      "decoded_bytes": 16236,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 1353,
+      "stride": 3
+    },
+    "chunk_2_1_water_bary.bin.gz": {
+      "sha256": "7647cd9935ad9b9557ca413611684e4dd96ab4359b9c42c1b8d491b6508e5fb9",
+      "bytes": 8855,
+      "decoded_bytes": 64944,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 4059,
+      "stride": 16
+    },
+    "chunk_2_2_water_vertices.bin.gz": {
+      "sha256": "dcd777c84167527afc0f39f2d8906dfc5680f5a581e25df3d47fd7638065296d",
+      "bytes": 9125,
+      "decoded_bytes": 83496,
+      "encoding": "gzip/little-endian-float32",
+      "count": 1491,
+      "stride": 14
+    },
+    "chunk_2_2_water_indices.bin.gz": {
+      "sha256": "afc66e27496ede269f85e79b39fd261c9eb5fdcdc696319d1c3f9f6ba95da08b",
+      "bytes": 2127,
+      "decoded_bytes": 5964,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 1491,
+      "stride": 1
+    },
+    "chunk_2_2_water_faces.bin.gz": {
+      "sha256": "565f4b0ab9ff0b4ea449e934fefc81829c59861a2d44bf82a920c0f7ce5c78ad",
+      "bytes": 1854,
+      "decoded_bytes": 5964,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 497,
+      "stride": 3
+    },
+    "chunk_2_2_water_bary.bin.gz": {
+      "sha256": "cfba2823a2513d557cfec681e9476f2023a6966f57ef88ff6175b341470fed63",
+      "bytes": 3305,
+      "decoded_bytes": 23856,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 1491,
+      "stride": 16
+    },
+    "chunk_3_-1_ground_vertices.bin.gz": {
+      "sha256": "be56f5dc9895df983500a0d829e847bb24111e196e53ee2418f7bcfe5bb89c07",
+      "bytes": 89828,
+      "decoded_bytes": 336112,
+      "encoding": "gzip/little-endian-float32",
+      "count": 6002,
+      "stride": 14
+    },
+    "chunk_3_-1_ground_indices.bin.gz": {
+      "sha256": "cd856ee75c2d2d525502ca3dc1458064711cc8d4b6c4b50a43f44cde214b277d",
+      "bytes": 15062,
+      "decoded_bytes": 49548,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 12387,
+      "stride": 1
+    },
+    "chunk_3_-1_ground_faces.bin.gz": {
+      "sha256": "676ac533ce1e9b11e84666de114ffe83a1a09c4a67c67a3d97344ad22dac3975",
+      "bytes": 9115,
+      "decoded_bytes": 49548,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 4129,
+      "stride": 3
+    },
+    "chunk_3_-1_ground_bary.bin.gz": {
+      "sha256": "db32d70f2016584fe8c3ba819f6c587bb454b362749f9eb9a4f06e9a06e904b1",
+      "bytes": 32348,
+      "decoded_bytes": 96032,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 6002,
+      "stride": 16
+    },
+    "chunk_3_-1_water_vertices.bin.gz": {
+      "sha256": "2491aa287036feef7f70385dc00f0a8afaf103e7f490dbf6f76d79d7258750e0",
+      "bytes": 488,
+      "decoded_bytes": 2688,
+      "encoding": "gzip/little-endian-float32",
+      "count": 48,
+      "stride": 14
+    },
+    "chunk_3_-1_water_indices.bin.gz": {
+      "sha256": "238499d477e8b912661978db49fda54936fa349e97baf38f41208fb7f768dd7f",
+      "bytes": 97,
+      "decoded_bytes": 192,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 48,
+      "stride": 1
+    },
+    "chunk_3_-1_water_faces.bin.gz": {
+      "sha256": "cd53c594f72a1b88fdd0c02dbf9e54997307241c069a0ce6ac928592fe5b5696",
+      "bytes": 102,
+      "decoded_bytes": 192,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 16,
+      "stride": 3
+    },
+    "chunk_3_-1_water_bary.bin.gz": {
+      "sha256": "59f8474eb476346d229ec98bc9d7c8225e76589c756695e57ddc12b565353784",
+      "bytes": 424,
+      "decoded_bytes": 768,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 48,
+      "stride": 16
+    },
+    "chunk_3_-2_ground_vertices.bin.gz": {
+      "sha256": "91e057be1830317686908d24f9e21d1252bc8c54938627927a657e44fcbc7dba",
+      "bytes": 2437,
+      "decoded_bytes": 8456,
+      "encoding": "gzip/little-endian-float32",
+      "count": 151,
+      "stride": 14
+    },
+    "chunk_3_-2_ground_indices.bin.gz": {
+      "sha256": "40323006032162eef097c7b4fb7297453fea3d098ec0338a18292b9b6544b7eb",
+      "bytes": 442,
+      "decoded_bytes": 1308,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 327,
+      "stride": 1
+    },
+    "chunk_3_-2_ground_faces.bin.gz": {
+      "sha256": "9ad39fd2e7a3cbd0ce5c4b6e621727c10d78e780f56bbc03d19d49c9b65a5e99",
+      "bytes": 284,
+      "decoded_bytes": 1308,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 109,
+      "stride": 3
+    },
+    "chunk_3_-2_ground_bary.bin.gz": {
+      "sha256": "d04ec06d690d89dab8129cadfed881fc9bbd1574c7e029c8c14f51d897684fe8",
+      "bytes": 879,
+      "decoded_bytes": 2416,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 151,
+      "stride": 16
+    },
+    "chunk_3_0_ground_vertices.bin.gz": {
+      "sha256": "3cb5fa3addb396499565f8753ae27711424b5a624bc8a1bff491d52614c5c18e",
+      "bytes": 84930,
+      "decoded_bytes": 363608,
+      "encoding": "gzip/little-endian-float32",
+      "count": 6493,
+      "stride": 14
+    },
+    "chunk_3_0_ground_indices.bin.gz": {
+      "sha256": "d0c339125c38ef162a018a8c854d3fe6081b01708c935d8f439a7afacd7910d4",
+      "bytes": 13476,
+      "decoded_bytes": 44172,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 11043,
+      "stride": 1
+    },
+    "chunk_3_0_ground_faces.bin.gz": {
+      "sha256": "517e0ed8999db62249840cc3621788d734aebdb0c47e2d447ced6ca42a03b331",
+      "bytes": 8669,
+      "decoded_bytes": 44172,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 3681,
+      "stride": 3
+    },
+    "chunk_3_0_ground_bary.bin.gz": {
+      "sha256": "9906a2eb8095c64b4b326d7e3bdf4c21bc7286e7737e4fe97ee7e090010d6ce7",
+      "bytes": 35597,
+      "decoded_bytes": 103888,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 6493,
+      "stride": 16
+    },
+    "chunk_3_0_water_vertices.bin.gz": {
+      "sha256": "b1f82aab5236da38bfa1576a76b97ead98a38e06c7c0cb1a42102d6a7045b687",
+      "bytes": 2005,
+      "decoded_bytes": 12264,
+      "encoding": "gzip/little-endian-float32",
+      "count": 219,
+      "stride": 14
+    },
+    "chunk_3_0_water_indices.bin.gz": {
+      "sha256": "b7d32f7358b7a0fcfd09b107e49638c64950eae0a19029ed5dd6a1f1f8623ec3",
+      "bytes": 375,
+      "decoded_bytes": 972,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 243,
+      "stride": 1
+    },
+    "chunk_3_0_water_faces.bin.gz": {
+      "sha256": "3e6b5e354b5d0a6047dd3d7f1368899b36e36c793ac20b4451edb228a255a4a0",
+      "bytes": 336,
+      "decoded_bytes": 972,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 81,
+      "stride": 3
+    },
+    "chunk_3_0_water_bary.bin.gz": {
+      "sha256": "c28a6302c34a829834e2238d20593d77f49a5dfb1ae43a539af8d78ae7976d72",
+      "bytes": 1599,
+      "decoded_bytes": 3504,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 219,
+      "stride": 16
+    },
+    "chunk_3_1_ground_vertices.bin.gz": {
+      "sha256": "32bf37a91e2cc0ab0c84a1fd8c80e7156ad1d63abf2be0f6b3c08bccacf10efd",
+      "bytes": 2734,
+      "decoded_bytes": 11144,
+      "encoding": "gzip/little-endian-float32",
+      "count": 199,
+      "stride": 14
+    },
+    "chunk_3_1_ground_indices.bin.gz": {
+      "sha256": "e13fb815c2fcdab95408e5d4a6304c9908975c465dc9fe662532198b5a4ac33c",
+      "bytes": 467,
+      "decoded_bytes": 1356,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 339,
+      "stride": 1
+    },
+    "chunk_3_1_ground_faces.bin.gz": {
+      "sha256": "ef09ae4e10c4799ed15ff16766d42df298e6c619ae05ceb97cdb820ddacc4998",
+      "bytes": 321,
+      "decoded_bytes": 1356,
+      "encoding": "gzip/little-endian-uint32",
+      "count": 113,
+      "stride": 3
+    },
+    "chunk_3_1_ground_bary.bin.gz": {
+      "sha256": "624ccc664940310d4941a403e1f4ca8c6697db326e1a425d6c5f3604039a2d19",
+      "bytes": 1130,
+      "decoded_bytes": 3184,
+      "encoding": "gzip/little-endian-u32-f32x3",
+      "count": 199,
+      "stride": 16
+    },
+    "source_topology.json.gz": {
+      "sha256": "0617f54fbcf332eb178d595d4b94fe43bd23914acceef9ad28b3878cea9a420d",
+      "bytes": 1199016,
+      "decoded_bytes": 10258672,
+      "encoding": "gzip/utf8-json",
+      "count": 70236,
+      "stride": 0
+    },
+    "original_hex_grid_vertices.bin.gz": {
+      "sha256": "f7d41ad22d2a9ed3516a419cbbd53db33d4585ba624f592b8bdc4b5329102179",
+      "bytes": 186649,
+      "decoded_bytes": 579024,
+      "encoding": "gzip/little-endian-float32",
+      "count": 48252,
+      "stride": 3
+    },
+    "source_mask_owner_registry.json.gz": {
+      "sha256": "c3cff877ea7aa44b0e98909008a7a93316bcac9a00be1af95fc22a8d049ae20d",
+      "bytes": 249063,
+      "decoded_bytes": 2909025,
+      "encoding": "gzip/utf8-json",
+      "count": 190151,
+      "stride": 0
+    },
+    "local_scope_ledger.json.gz": {
+      "sha256": "560cd308e940e78f0f5e39443b76d923073a63c90ab1f0eeffa80fdc4be6d3d5",
+      "bytes": 19223,
+      "decoded_bytes": 105406,
+      "encoding": "gzip/utf8-json",
+      "count": 2,
+      "stride": 0
+    },
+    "actual_shore_segments.json.gz": {
+      "sha256": "db29d6d378589b01a43ef34f1c0d8fb3732ca64abe9cf792f4bd860274723981",
+      "bytes": 91213,
+      "decoded_bytes": 666064,
+      "encoding": "gzip/utf8-json",
+      "count": 3307,
+      "stride": 0
+    },
+    "visual_weights.png": {
+      "sha256": "cd666add9d0e3567ba576cb030e7089203257c728ce187ff773c36e1ec112119",
+      "bytes": 301418,
+      "decoded_bytes": 301418,
+      "encoding": "png"
+    },
+    "visual_dry_inside.png": {
+      "sha256": "dcd100b7ca666ff53ea274c281d590868e283e9d95cf1f5dd3dd8845e3be2283",
+      "bytes": 20040,
+      "decoded_bytes": 20040,
+      "encoding": "png"
+    },
+    "visual_blend_ledger.json": {
+      "sha256": "cced0ff59576ed868c1786d6f96be2bbc799cd55ec93d4f36093c12ef2d0698b",
+      "bytes": 1271,
+      "decoded_bytes": 1271,
+      "encoding": "json"
+    },
+    "vegetation_anchors_clustered.json.gz": {
+      "sha256": "de0b43ac7d32698bb5a977d7a42afe93ecaec64b72e5ef4a3869a65d9f28d936",
+      "bytes": 309442,
+      "decoded_bytes": 1048237,
+      "encoding": "gzip/utf8-json",
+      "count": 934,
+      "stride": 0
+    },
+    "clustered_canopy_ledger.json": {
+      "sha256": "cf7d99b00d13af6e1d5b05209a142e5fb3825912a86eb5a9990eab8216a22793",
+      "bytes": 3891,
+      "decoded_bytes": 3891,
+      "encoding": "utf8-json"
+    }
+  },
+  "ground_format": {
+    "floats_per_vertex": 14,
+    "layout": [
+      "position_xyz",
+      "smooth_visual_normal_xyz",
+      "color_grass_forest_jungle_arid",
+      "uv_rock_sand",
+      "uv2_actual_shore_distance_actual_PL_slope"
+    ],
+    "weights": "normalized source dry labels; cold_open/wetland visually map to grass only",
+    "winding": "upward facing after CCW XZ reversal",
+    "height": "original face designed_height barycentric interpolation; no exaggeration or relief edits"
+  },
+  "water_format": {
+    "floats_per_vertex": 14,
+    "layout": [
+      "position_xyz_at_source_body_level",
+      "up_normal_xyz",
+      "color_ocean_lake_zero_one",
+      "uv_actual_PL_depth_zero",
+      "uv2_actual_shore_distance_actual_PL_slope"
+    ],
+    "geometry": "source footprint triangle fans exactly; float32 GPU precision only"
+  },
+  "provenance_format": {
+    "triangle": "uint32 original_face_index, mask_type(0 zone 1 shell 2 source water), source_mask_or_footprint_row",
+    "vertex": "uint32 original_face_index then float32 bary0,bary1,bary2",
+    "original_face_table": "source_topology faces preserves original array order and ordered source vertex indices"
+  },
+  "grid": {
+    "vertices": "original_hex_grid_vertices.bin.gz",
+    "vertex_count": 48252,
+    "line_pair_count": 24126,
+    "original_complete_hexes": 1951,
+    "source_original_sides_per_hex": 6,
+    "visual_lift_runtime_only": 0.005,
+    "geometry": "complete straight original H sides split at actual source PL face intersections",
+    "outside_mesh_visual_grid_PL_extrapolation_segments": 0
+  },
+  "anchors": {
+    "path": "vegetation_anchors_clustered.json.gz",
+    "count": 934
+  },
+  "cameras": {
+    "whole": {
+      "target": [
+        0,
+        0.75,
+        0
+      ],
+      "ortho_size": 100
+    },
+    "coastal": {
+      "target_xz": [
+        -2.805235048443724,
+        -22.59706345630751
+      ],
+      "bounds_xz": [
+        -9.805235048443723,
+        -27.59706345630751,
+        4.194764951556277,
+        -17.59706345630751
+      ],
+      "source_face_index": 64164,
+      "distance_to_actual_shore": 0.020498677244027222
+    },
+    "ecotone": {
+      "target_xz": [
+        -14.000504982496508,
+        18.972234750802805
+      ],
+      "bounds_xz": [
+        -21.00050498249651,
+        13.972234750802805,
+        -7.000504982496508,
+        23.972234750802805
+      ],
+      "source_face_index": 9353,
+      "owner_labels": [
+        "arid",
+        "forest",
+        "grass",
+        "jungle"
+      ]
+    },
+    "ocean": {
+      "target_xz": [
+        15,
+        20
+      ],
+      "bounds_xz": [
+        10,
+        15,
+        20,
+        25
+      ],
+      "source_body_id": "ocean:1180",
+      "actual_source_ocean_shore_segments_in_bounds": 68,
+      "size": 10,
+      "status": "DIAGNOSTIC_CAMERA_ONLY",
+      "height_exaggeration": 1
+    }
+  },
+  "diagnostics": {
+    "source_dry_area_xz": 4414.784716078523,
+    "render_pure_area_xz": 4358.015534339838,
+    "render_shell_area_xz": 56.76918173855471,
+    "render_dry_area_closure_error_xz": -1.3005774235352874e-10,
+    "source_water_area_xz": 654.0619722717915,
+    "render_water_area_xz": 654.0619722718135,
+    "source_shell_wet_label_occurrences_removed_from_visual_weights": {
+      "ocean": 369
+    },
+    "unknown_shell_labels": {},
+    "tiny_source_negative_weights_visual_clamped": true,
+    "wet_label_conversion_status": "SOURCE_WET_LABEL_ON_DRY_NOT_FORMAL_ACCEPTANCE",
+    "degenerate_source_area_not_rendered": {
+      "zone_area": 3.0956701304471483e-12,
+      "shell_area": 4.944573420084405e-13
+    },
+    "actual_shore_segments": 3307,
+    "cancelled_internal_edges": 14482,
+    "rejected_exterior_non_level_edges": 180,
+    "level_match_absolute_tolerance": 2e-06,
+    "edge_key_round_decimals": 7
+  },
+  "runtime_contract": {
+    "load": "read/decompress/parse once; no per-frame source polygon or JSON parsing",
+    "position_transform": "all geometry uses common source world XYZ at 1x",
+    "cache_bytes": 14769909,
+    "decoded_gpu_vertex_and_index_bytes": 34541072,
+    "cache_budget_bytes": 15000000,
+    "visual_material_atlas": "DIAGNOSTIC_2048_NORMALIZED_SHARED_WORLD_FIELD_NO_COORDINATE_WARP",
+    "actual_density_receipt": "NOT_EVALUATED"
+  },
+  "runtime_seconds": 100.41582469499917,
+  "visual_weights": {
+    "path": "visual_weights.png",
+    "inside": "visual_dry_inside.png",
+    "ledger": "visual_blend_ledger.json",
+    "enabled_default": true,
+    "only_material_weights": true
+  },
+  "display_camera_source_sha256": "3c931e3cc19316da77666394a35332c20c884dfff9ad7dc54319872f19a9b85d",
+  "active_canopy_layout": {
+    "ledger": "clustered_canopy_ledger.json",
+    "schema": "integrated-r24-clustered-canopy-layout-diagnostic-0.1.0",
+    "baseline": {
+      "artifact_path": "artifacts/integrated_ecology_world_20261002/vegetation_anchors_BASELINE.json.gz",
+      "sha256": "55f65b555f2cec9cb6f75bc793cdfd74752e53ba33d2ad4f06073c4a1d965d29",
+      "bytes": 311093
+    },
+    "actual_density_gate": "NOT_EVALUATED_NOT_PASS"
+  }
+}

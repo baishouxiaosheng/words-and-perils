@@ -1,0 +1,435 @@
+{
+	"captures": [
+		{
+			"camera_fov": 40.0,
+			"camera_size": 10.8000001907349,
+			"camera_transform": "[X: (0.815275, 0.0, -0.579074), Y: (-0.336462, 0.813878, -0.473704), Z: (0.471296, 0.581035, 0.663535), O: (3.028036, 6.314693, 18.7017)]",
+			"labels": {
+				"gameplay_writes": false,
+				"hidden_due_density": [
+					"settlement_1"
+				],
+				"hud_obstacles": 4,
+				"max_shift_px": 64.96,
+				"overlap_count": 0,
+				"policy": "selected_actor,player,actors,settlements,landmarks; selected objects only",
+				"visible_labels": [
+					{
+						"id": "actor_player",
+						"kind": "actor",
+						"rect": [
+							515.791320800781,
+							244.954864501953,
+							148.417175292969,
+							48.3594665527344
+						],
+						"shift_px": [
+							0.0,
+							0.0
+						]
+					},
+					{
+						"id": "settlement_0",
+						"kind": "settlement",
+						"rect": [
+							556.346374511719,
+							329.048553466797,
+							67.3069458007812,
+							51.7959289550781
+						],
+						"shift_px": [
+							0.0,
+							0.0
+						]
+					},
+					{
+						"id": "settlement_2",
+						"kind": "settlement",
+						"rect": [
+							448.715148925781,
+							7.99994468688965,
+							39.4293212890625,
+							31.2093372344971
+						],
+						"shift_px": [
+							0.0,
+							15.754695892334
+						]
+					}
+				]
+			},
+			"name": "r12_focus_before",
+			"projection": 0,
+			"root_pixels": [
+				1180,
+				812
+			],
+			"world_msaa": 1,
+			"world_pixels": [
+				1180,
+				812
+			]
+		},
+		{
+			"camera_fov": 40.0,
+			"camera_size": 10.8000001907349,
+			"camera_transform": "[X: (0.815275, 0.0, -0.579074), Y: (-0.336462, 0.813878, -0.473704), Z: (0.471296, 0.581035, 0.663535), O: (3.028036, 6.314693, 18.7017)]",
+			"labels": {
+				"gameplay_writes": false,
+				"hidden_due_density": [
+					"settlement_1"
+				],
+				"hud_obstacles": 4,
+				"max_shift_px": 64.96,
+				"overlap_count": 0,
+				"policy": "selected_actor,player,actors,settlements,landmarks; selected objects only",
+				"visible_labels": [
+					{
+						"id": "actor_player",
+						"kind": "actor",
+						"rect": [
+							515.791320800781,
+							244.954864501953,
+							148.417175292969,
+							48.3594665527344
+						],
+						"shift_px": [
+							0.0,
+							0.0
+						]
+					},
+					{
+						"id": "settlement_0",
+						"kind": "settlement",
+						"rect": [
+							556.346374511719,
+							329.048553466797,
+							67.3069458007812,
+							51.7959289550781
+						],
+						"shift_px": [
+							0.0,
+							0.0
+						]
+					},
+					{
+						"id": "settlement_2",
+						"kind": "settlement",
+						"rect": [
+							448.715148925781,
+							7.99994468688965,
+							39.4293212890625,
+							31.2093372344971
+						],
+						"shift_px": [
+							0.0,
+							15.754695892334
+						]
+					}
+				]
+			},
+			"name": "r12_focus_after",
+			"projection": 0,
+			"root_pixels": [
+				1180,
+				812
+			],
+			"world_msaa": 1,
+			"world_pixels": [
+				1180,
+				812
+			]
+		},
+		{
+			"camera_fov": 40.0,
+			"camera_size": 41.0400009155273,
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, -0.0, -1.0), Z: (0.0, 1.0, -0.0), O: (0.0, 20.3, 0.0)]",
+			"labels": {
+				"gameplay_writes": false,
+				"hidden_due_density": [],
+				"hud_obstacles": 4,
+				"max_shift_px": 64.96,
+				"overlap_count": 0,
+				"policy": "selected_actor,player,actors,settlements,landmarks; selected objects only",
+				"visible_labels": [
+					{
+						"id": "actor_player",
+						"kind": "actor",
+						"rect": [
+							515.199157714844,
+							628.926879882812,
+							81.0625,
+							29.0
+						],
+						"shift_px": [
+							0.0,
+							0.0
+						]
+					},
+					{
+						"id": "settlement_0",
+						"kind": "settlement",
+						"rect": [
+							537.511657714844,
+							591.926879882812,
+							36.4375,
+							29.0
+						],
+						"shift_px": [
+							0.0,
+							-37.0
+						]
+					},
+					{
+						"id": "settlement_1",
+						"kind": "settlement",
+						"rect": [
+							554.646423339844,
+							480.535095214844,
+							36.4375,
+							29.0
+						],
+						"shift_px": [
+							0.0,
+							0.0
+						]
+					},
+					{
+						"id": "settlement_2",
+						"kind": "settlement",
+						"rect": [
+							383.29833984375,
+							480.535095214844,
+							36.4375,
+							29.0
+						],
+						"shift_px": [
+							0.0,
+							0.0
+						]
+					},
+					{
+						"id": "settlement_3",
+						"kind": "settlement",
+						"rect": [
+							263.354766845703,
+							391.499969482422,
+							36.4374694824219,
+							29.0
+						],
+						"shift_px": [
+							0.0,
+							0.0
+						]
+					}
+				]
+			},
+			"name": "r12_overview_before",
+			"projection": 1,
+			"root_pixels": [
+				1180,
+				812
+			],
+			"world_msaa": 1,
+			"world_pixels": [
+				1180,
+				812
+			]
+		},
+		{
+			"camera_fov": 40.0,
+			"camera_size": 41.0400009155273,
+			"camera_transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, -0.0, -1.0), Z: (0.0, 1.0, -0.0), O: (0.0, 20.3, 0.0)]",
+			"labels": {
+				"gameplay_writes": false,
+				"hidden_due_density": [],
+				"hud_obstacles": 4,
+				"max_shift_px": 64.96,
+				"overlap_count": 0,
+				"policy": "selected_actor,player,actors,settlements,landmarks; selected objects only",
+				"visible_labels": [
+					{
+						"id": "actor_player",
+						"kind": "actor",
+						"rect": [
+							515.199157714844,
+							628.926879882812,
+							81.0625,
+							29.0
+						],
+						"shift_px": [
+							0.0,
+							0.0
+						]
+					},
+					{
+						"id": "settlement_0",
+						"kind": "settlement",
+						"rect": [
+							537.511657714844,
+							591.926879882812,
+							36.4375,
+							29.0
+						],
+						"shift_px": [
+							0.0,
+							-37.0
+						]
+					},
+					{
+						"id": "settlement_1",
+						"kind": "settlement",
+						"rect": [
+							554.646423339844,
+							480.535095214844,
+							36.4375,
+							29.0
+						],
+						"shift_px": [
+							0.0,
+							0.0
+						]
+					},
+					{
+						"id": "settlement_2",
+						"kind": "settlement",
+						"rect": [
+							383.29833984375,
+							480.535095214844,
+							36.4375,
+							29.0
+						],
+						"shift_px": [
+							0.0,
+							0.0
+						]
+					},
+					{
+						"id": "settlement_3",
+						"kind": "settlement",
+						"rect": [
+							263.354766845703,
+							391.499969482422,
+							36.4374694824219,
+							29.0
+						],
+						"shift_px": [
+							0.0,
+							0.0
+						]
+					}
+				]
+			},
+			"name": "r12_overview_after",
+			"projection": 1,
+			"root_pixels": [
+				1180,
+				812
+			],
+			"world_msaa": 1,
+			"world_pixels": [
+				1180,
+				812
+			]
+		},
+		{
+			"camera_fov": 40.0,
+			"camera_size": 41.0400009155273,
+			"camera_transform": "[X: (0.815275, 0.0, -0.579074), Y: (-0.336462, 0.813878, -0.473704), Z: (0.471296, 0.581035, 0.663535), O: (3.894062, 6.406159, 17.2017)]",
+			"labels": {
+				"gameplay_writes": false,
+				"hidden_due_density": [
+					"settlement_0"
+				],
+				"hud_obstacles": 4,
+				"max_shift_px": 51.2,
+				"overlap_count": 0,
+				"policy": "selected_actor,player,actors,settlements,landmarks; selected objects only",
+				"visible_labels": [
+					{
+						"id": "actor_player",
+						"kind": "actor",
+						"rect": [
+							390.663146972656,
+							192.22053527832,
+							118.673675537109,
+							39.8104095458984
+						],
+						"shift_px": [
+							0.0,
+							0.0
+						]
+					},
+					{
+						"id": "settlement_1",
+						"kind": "settlement",
+						"rect": [
+							601.001892089844,
+							87.605110168457,
+							41.3572998046875,
+							32.6330642700195
+						],
+						"shift_px": [
+							-51.2000007629395,
+							0.0
+						]
+					},
+					{
+						"id": "settlement_2",
+						"kind": "settlement",
+						"rect": [
+							292.160308837891,
+							8.00004577636719,
+							33.5099182128906,
+							26.8381576538086
+						],
+						"shift_px": [
+							34.8381958007812,
+							0.366985321044922
+						]
+					}
+				]
+			},
+			"name": "r12_narrow_after",
+			"projection": 0,
+			"root_pixels": [
+				900,
+				640
+			],
+			"world_msaa": 1,
+			"world_pixels": [
+				900,
+				640
+			]
+		}
+	],
+	"checks": 53,
+	"display": "X11",
+	"failures": [],
+	"gpu": "llvmpipe (LLVM 19.1.7, 256 bits)",
+	"mesh": {
+		"digest": "34189810328f72b53fe61aa257d8e6860f62bdee2e5cdf6f2f74f78900b31fe4",
+		"meshes": 86,
+		"vertices_including_whole_and_chunks": 1102836
+	},
+	"navigation_and_support_sha256": "9865d713fa562c8074da711dc573157e8c846bfc54b8c09e7e31425bdee08f2c",
+	"profile": {
+		"enabled": true,
+		"faceted_crowns": "existing mesh triangle face normals only",
+		"forest_distinction": "existing source canopy placement and crown palette",
+		"ground_texture_samples": 0,
+		"id": "generated_macro_matte/v1",
+		"materials": 33,
+		"river_shape_changed": false,
+		"source_geometry_changed": false,
+		"source_navigation_changed": false,
+		"source_palette": "original COLOR.rgb and UV2 soil/alpine weights",
+		"styled_mesh_instances": 101,
+		"target_hardware_tested": false,
+		"vertex_displacement": false
+	},
+	"rendered_anchor_heights_sha256": "d6423a2d69939073fb8ffccc6dc5ba3a47351b9e97b685de610963210285f5f2",
+	"renderer": "gl_compatibility",
+	"state_before_actions_sha256": "8103b3b071da5580b8b389a5b256682adbbe3aee843ccc2841479b7309192b48",
+	"target_hardware_tested": false
+}

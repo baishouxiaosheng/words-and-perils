@@ -1,0 +1,392 @@
+{
+  "schema": "city_composition_capacity_advisory/v1",
+  "authority_modified": false,
+  "route_clearance": 0.26,
+  "building_gap": 0.035,
+  "candidate_grid": 0.025,
+  "caveat": "Circles include all overhangs. All village allowed-neighbor spokes included. Open gate leaf exclusion must be checked by runtime. Not runtime or terrain-height QA.",
+  "staged_recipes": {
+    "affluent": [
+      [
+        "rich_manor",
+        0.255
+      ],
+      [
+        "rich_townhouse",
+        0.205
+      ],
+      [
+        "garden_court",
+        0.105
+      ]
+    ],
+    "industrial": [
+      [
+        "industrial_forge",
+        0.235
+      ],
+      [
+        "industrial_workshop",
+        0.2
+      ],
+      [
+        "village_barn",
+        0.17
+      ],
+      [
+        "workyard",
+        0.105
+      ]
+    ],
+    "modest": [
+      [
+        "poor_home_a",
+        0.22
+      ],
+      [
+        "poor_home_b",
+        0.19
+      ],
+      [
+        "poor_home_a",
+        0.165
+      ],
+      [
+        "poor_home_b",
+        0.145
+      ],
+      [
+        "shared_well",
+        0.085
+      ]
+    ],
+    "rural": [
+      [
+        "village_cottage_a",
+        0.18
+      ],
+      [
+        "village_barn",
+        0.15
+      ],
+      [
+        "village_cottage_b",
+        0.13
+      ],
+      [
+        "shared_well",
+        0.075
+      ]
+    ],
+    "civic": [
+      [
+        "civic_hall",
+        0.22
+      ],
+      [
+        "rich_townhouse",
+        0.18
+      ],
+      [
+        "rich_townhouse",
+        0.16
+      ],
+      [
+        "poor_home_a",
+        0.15
+      ],
+      [
+        "garden_court",
+        0.085
+      ]
+    ]
+  },
+  "selection": "capacity descending, x/z ascending; small bounded backtracking for village, staged greedy elsewhere",
+  "sites": [
+    {
+      "site_kind": "large_city",
+      "hex_count": 3,
+      "candidates": 3411,
+      "placed": [
+        {
+          "asset": "rich_manor",
+          "district": "affluent",
+          "position_xz": [
+            9.075,
+            25.775
+          ],
+          "radius": 0.255,
+          "route_clearance_after_footprint": 0.2733194606562196,
+          "uniform_scale": 0.64801,
+          "roof_height": 0.83594
+        },
+        {
+          "asset": "industrial_forge",
+          "district": "industrial",
+          "position_xz": [
+            8.225,
+            24.25
+          ],
+          "radius": 0.235,
+          "route_clearance_after_footprint": 0.3227283101218289,
+          "uniform_scale": 0.64321,
+          "roof_height": 0.80401
+        },
+        {
+          "asset": "poor_home_a",
+          "district": "modest",
+          "position_xz": [
+            10.375,
+            23.65
+          ],
+          "radius": 0.22,
+          "route_clearance_after_footprint": 0.4549999999999972,
+          "uniform_scale": 0.61098,
+          "roof_height": 0.69041
+        },
+        {
+          "asset": "rich_townhouse",
+          "district": "affluent",
+          "position_xz": [
+            9.725,
+            24.825
+          ],
+          "radius": 0.205,
+          "route_clearance_after_footprint": 0.28540294819633283,
+          "uniform_scale": 0.55276,
+          "roof_height": 0.75175
+        },
+        {
+          "asset": "industrial_workshop",
+          "district": "industrial",
+          "position_xz": [
+            9.225,
+            23.8
+          ],
+          "radius": 0.2,
+          "route_clearance_after_footprint": 0.324999999999995,
+          "uniform_scale": 0.54741,
+          "roof_height": 0.70069
+        },
+        {
+          "asset": "poor_home_b",
+          "district": "modest",
+          "position_xz": [
+            10.8,
+            23.8
+          ],
+          "radius": 0.19,
+          "route_clearance_after_footprint": 0.3792537067913205,
+          "uniform_scale": 0.52766,
+          "roof_height": 0.59626
+        },
+        {
+          "asset": "garden_court",
+          "district": "affluent",
+          "position_xz": [
+            9.375,
+            26.075
+          ],
+          "radius": 0.105,
+          "route_clearance_after_footprint": 0.31614795490252745,
+          "uniform_scale": 0.37602,
+          "roof_height": 0.08272
+        },
+        {
+          "asset": "village_barn",
+          "district": "industrial",
+          "position_xz": [
+            8.15,
+            23.8
+          ],
+          "radius": 0.17,
+          "route_clearance_after_footprint": 0.30123708549046113,
+          "uniform_scale": 0.42479,
+          "roof_height": 0.47576
+        },
+        {
+          "asset": "poor_home_a",
+          "district": "modest",
+          "position_xz": [
+            9.95,
+            23.75
+          ],
+          "radius": 0.165,
+          "route_clearance_after_footprint": 0.4099999999999957,
+          "uniform_scale": 0.45823,
+          "roof_height": 0.5178
+        },
+        {
+          "asset": "workyard",
+          "district": "industrial",
+          "position_xz": [
+            8.475,
+            24.55
+          ],
+          "radius": 0.105,
+          "route_clearance_after_footprint": 0.330434702926884,
+          "uniform_scale": 0.40398,
+          "roof_height": 0.09695
+        },
+        {
+          "asset": "poor_home_b",
+          "district": "modest",
+          "position_xz": [
+            9.6,
+            23.875
+          ],
+          "radius": 0.145,
+          "route_clearance_after_footprint": 0.3049999999999957,
+          "uniform_scale": 0.40269,
+          "roof_height": 0.45504
+        },
+        {
+          "asset": "shared_well",
+          "district": "modest",
+          "position_xz": [
+            10.95,
+            24.075
+          ],
+          "radius": 0.085,
+          "route_clearance_after_footprint": 0.3615889360762241,
+          "uniform_scale": 0.36731,
+          "roof_height": 0.19467
+        }
+      ],
+      "missing": [],
+      "roofs": 9,
+      "props": 3
+    },
+    {
+      "site_kind": "village",
+      "hex_count": 1,
+      "candidates": 347,
+      "placed": [
+        {
+          "asset": "village_cottage_a",
+          "district": "rural",
+          "position_xz": [
+            5.45,
+            22.35
+          ],
+          "radius": 0.18,
+          "route_clearance_after_footprint": 0.27516154937480897,
+          "uniform_scale": 0.47743,
+          "roof_height": 0.53472
+        },
+        {
+          "asset": "village_barn",
+          "district": "rural",
+          "position_xz": [
+            6.25,
+            22.0
+          ],
+          "radius": 0.15,
+          "route_clearance_after_footprint": 0.26234122634725787,
+          "uniform_scale": 0.37481,
+          "roof_height": 0.41979
+        },
+        {
+          "asset": "village_cottage_b",
+          "district": "rural",
+          "position_xz": [
+            6.075,
+            21.725
+          ],
+          "radius": 0.13,
+          "route_clearance_after_footprint": 0.26860432799046424,
+          "uniform_scale": 0.34481,
+          "roof_height": 0.38619
+        },
+        {
+          "asset": "shared_well",
+          "district": "rural",
+          "position_xz": [
+            5.4,
+            22.05
+          ],
+          "radius": 0.075,
+          "route_clearance_after_footprint": 0.2734628195640316,
+          "uniform_scale": 0.32409,
+          "roof_height": 0.17177
+        }
+      ],
+      "missing": [],
+      "search_states": 51,
+      "candidate_visits": 449,
+      "all_allowed_neighbor_spokes_reserved": true,
+      "roofs": 3,
+      "props": 1
+    },
+    {
+      "site_kind": "city_state",
+      "hex_count": 1,
+      "candidates": 1112,
+      "placed": [
+        {
+          "asset": "civic_hall",
+          "district": "civic",
+          "position_xz": [
+            3.875,
+            25.775
+          ],
+          "radius": 0.22,
+          "route_clearance_after_footprint": 0.31165156033530084,
+          "uniform_scale": 0.57071,
+          "roof_height": 0.85606
+        },
+        {
+          "asset": "rich_townhouse",
+          "district": "civic",
+          "position_xz": [
+            4.775,
+            25.225
+          ],
+          "radius": 0.18,
+          "route_clearance_after_footprint": 0.3427713030706921,
+          "uniform_scale": 0.48535,
+          "roof_height": 0.66007
+        },
+        {
+          "asset": "rich_townhouse",
+          "district": "civic",
+          "position_xz": [
+            4.5,
+            24.95
+          ],
+          "radius": 0.16,
+          "route_clearance_after_footprint": 0.26211431702997234,
+          "uniform_scale": 0.43142,
+          "roof_height": 0.58673
+        },
+        {
+          "asset": "poor_home_a",
+          "district": "civic",
+          "position_xz": [
+            4.875,
+            25.6
+          ],
+          "radius": 0.15,
+          "route_clearance_after_footprint": 0.271873843449136,
+          "uniform_scale": 0.41658,
+          "roof_height": 0.47073
+        },
+        {
+          "asset": "garden_court",
+          "district": "civic",
+          "position_xz": [
+            3.775,
+            25.425
+          ],
+          "radius": 0.085,
+          "route_clearance_after_footprint": 0.35825410071374575,
+          "uniform_scale": 0.3044,
+          "roof_height": 0.06697
+        }
+      ],
+      "missing": [],
+      "roofs": 4,
+      "props": 1
+    }
+  ]
+}

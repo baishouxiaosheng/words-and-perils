@@ -1,0 +1,545 @@
+{
+  "ok": true,
+  "checks": 26,
+  "blender_source_present": true,
+  "checks_passed": [
+    "GLB2 structure",
+    "manifest hashes",
+    "one mesh / one surface / one material",
+    "no external texture dependency",
+    "flat unit normals / vertex colors",
+    "finite indexed triangles",
+    "zero degenerate triangles",
+    "ground pivot / identity transforms",
+    "compact footprint <=0.55",
+    "declared heights <=1.50",
+    "LOD1 bounded by LOD0"
+  ],
+  "not_claimed": [
+    "Godot integration or in-game placement",
+    "native runtime screenshot",
+    "GTX 1660 Ti frame rate"
+  ],
+  "assets": [
+    {
+      "asset": "village_cottage_a",
+      "lod": "lod0",
+      "triangles": 936,
+      "exported_vertices": 1794,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.2515140771865845,
+        0.0,
+        -0.2549999952316284
+      ],
+      "aabb_max": [
+        0.2515140771865845,
+        1.1200000047683716,
+        0.2549999952316284
+      ],
+      "bytes": 71628
+    },
+    {
+      "asset": "village_cottage_a",
+      "lod": "lod1",
+      "triangles": 564,
+      "exported_vertices": 1098,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.2515140771865845,
+        0.0,
+        -0.24913273751735687
+      ],
+      "aabb_max": [
+        0.2515140771865845,
+        1.1200000047683716,
+        0.2549999952316284
+      ],
+      "bytes": 44208
+    },
+    {
+      "asset": "village_cottage_b",
+      "lod": "lod0",
+      "triangles": 936,
+      "exported_vertices": 1794,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.2515140771865845,
+        0.0,
+        -0.2549999952316284
+      ],
+      "aabb_max": [
+        0.2515140771865845,
+        1.1200000047683716,
+        0.2549999952316284
+      ],
+      "bytes": 71628
+    },
+    {
+      "asset": "village_cottage_b",
+      "lod": "lod1",
+      "triangles": 564,
+      "exported_vertices": 1098,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.2515140771865845,
+        0.0,
+        -0.24913273751735687
+      ],
+      "aabb_max": [
+        0.2515140771865845,
+        1.1200000047683716,
+        0.2549999952316284
+      ],
+      "bytes": 44208
+    },
+    {
+      "asset": "village_barn",
+      "lod": "lod0",
+      "triangles": 524,
+      "exported_vertices": 1026,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.2676660120487213,
+        0.0,
+        -0.27000001072883606
+      ],
+      "aabb_max": [
+        0.2676660120487213,
+        1.1200000047683716,
+        0.27000001072883606
+      ],
+      "bytes": 41492
+    },
+    {
+      "asset": "village_barn",
+      "lod": "lod1",
+      "triangles": 332,
+      "exported_vertices": 642,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.2676660120487213,
+        0.0,
+        -0.27000001072883606
+      ],
+      "aabb_max": [
+        0.2676660120487213,
+        1.1200000047683716,
+        0.27000001072883606
+      ],
+      "bytes": 26384
+    },
+    {
+      "asset": "shared_well",
+      "lod": "lod0",
+      "triangles": 496,
+      "exported_vertices": 936,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.17000000178813934,
+        0.0,
+        -0.13939504325389862
+      ],
+      "aabb_max": [
+        0.17000000178813934,
+        0.5299999713897705,
+        0.13939504325389862
+      ],
+      "bytes": 38080
+    },
+    {
+      "asset": "shared_well",
+      "lod": "lod1",
+      "triangles": 408,
+      "exported_vertices": 768,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.17000000178813934,
+        0.0,
+        -0.13939504325389862
+      ],
+      "aabb_max": [
+        0.17000000178813934,
+        0.5299999713897705,
+        0.13939504325389862
+      ],
+      "bytes": 31376
+    },
+    {
+      "asset": "rich_manor",
+      "lod": "lod0",
+      "triangles": 1328,
+      "exported_vertices": 2586,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.2750000059604645,
+        0.0,
+        -0.2532352805137634
+      ],
+      "aabb_max": [
+        0.2750000059604645,
+        1.2899999618530273,
+        0.2532352805137634
+      ],
+      "bytes": 102468
+    },
+    {
+      "asset": "rich_manor",
+      "lod": "lod1",
+      "triangles": 940,
+      "exported_vertices": 1842,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.2750000059604645,
+        0.0,
+        -0.2532352805137634
+      ],
+      "aabb_max": [
+        0.2750000059604645,
+        1.2899999618530273,
+        0.2532352805137634
+      ],
+      "bytes": 73236
+    },
+    {
+      "asset": "rich_townhouse",
+      "lod": "lod0",
+      "triangles": 940,
+      "exported_vertices": 1842,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.23218214511871338,
+        0.0,
+        -0.26499998569488525
+      ],
+      "aabb_max": [
+        0.23218214511871338,
+        1.3600000143051147,
+        0.26499998569488525
+      ],
+      "bytes": 73372
+    },
+    {
+      "asset": "rich_townhouse",
+      "lod": "lod1",
+      "triangles": 724,
+      "exported_vertices": 1410,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.23218214511871338,
+        0.0,
+        -0.26499998569488525
+      ],
+      "aabb_max": [
+        0.23218214511871338,
+        1.3600000143051147,
+        0.26499998569488525
+      ],
+      "bytes": 56400
+    },
+    {
+      "asset": "industrial_forge",
+      "lod": "lod0",
+      "triangles": 1018,
+      "exported_vertices": 1966,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.21176618337631226,
+        0.0,
+        -0.2750000059604645
+      ],
+      "aabb_max": [
+        0.21176618337631226,
+        1.25,
+        0.2750000059604645
+      ],
+      "bytes": 78300
+    },
+    {
+      "asset": "industrial_forge",
+      "lod": "lod1",
+      "triangles": 592,
+      "exported_vertices": 1146,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.21176618337631226,
+        0.0,
+        -0.2750000059604645
+      ],
+      "aabb_max": [
+        0.21176618337631226,
+        1.25,
+        0.2750000059604645
+      ],
+      "bytes": 46092
+    },
+    {
+      "asset": "industrial_workshop",
+      "lod": "lod0",
+      "triangles": 1018,
+      "exported_vertices": 1966,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.21176618337631226,
+        0.0,
+        -0.2750000059604645
+      ],
+      "aabb_max": [
+        0.21176618337631226,
+        1.2799999713897705,
+        0.2750000059604645
+      ],
+      "bytes": 78320
+    },
+    {
+      "asset": "industrial_workshop",
+      "lod": "lod1",
+      "triangles": 592,
+      "exported_vertices": 1146,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.21176618337631226,
+        0.0,
+        -0.2750000059604645
+      ],
+      "aabb_max": [
+        0.21176618337631226,
+        1.2799999713897705,
+        0.2750000059604645
+      ],
+      "bytes": 46112
+    },
+    {
+      "asset": "poor_home_a",
+      "lod": "lod0",
+      "triangles": 1044,
+      "exported_vertices": 2022,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.25,
+        0.0,
+        -0.23348429799079895
+      ],
+      "aabb_max": [
+        0.25,
+        1.1299999952316284,
+        0.23348429799079895
+      ],
+      "bytes": 80436
+    },
+    {
+      "asset": "poor_home_a",
+      "lod": "lod1",
+      "triangles": 648,
+      "exported_vertices": 1266,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.25,
+        0.0,
+        -0.23348429799079895
+      ],
+      "aabb_max": [
+        0.25,
+        1.1299999952316284,
+        0.23348429799079895
+      ],
+      "bytes": 50724
+    },
+    {
+      "asset": "poor_home_b",
+      "lod": "lod0",
+      "triangles": 1044,
+      "exported_vertices": 2022,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.25,
+        0.0,
+        -0.23348429799079895
+      ],
+      "aabb_max": [
+        0.25,
+        1.1299999952316284,
+        0.23348429799079895
+      ],
+      "bytes": 80436
+    },
+    {
+      "asset": "poor_home_b",
+      "lod": "lod1",
+      "triangles": 648,
+      "exported_vertices": 1266,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.25,
+        0.0,
+        -0.23348429799079895
+      ],
+      "aabb_max": [
+        0.25,
+        1.1299999952316284,
+        0.23348429799079895
+      ],
+      "bytes": 50724
+    },
+    {
+      "asset": "civic_hall",
+      "lod": "lod0",
+      "triangles": 844,
+      "exported_vertices": 1662,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.2750000059604645,
+        0.0,
+        -0.24184009432792664
+      ],
+      "aabb_max": [
+        0.2750000059604645,
+        1.5,
+        0.24184009432792664
+      ],
+      "bytes": 66288
+    },
+    {
+      "asset": "civic_hall",
+      "lod": "lod1",
+      "triangles": 676,
+      "exported_vertices": 1326,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.2750000059604645,
+        0.0,
+        -0.24184009432792664
+      ],
+      "aabb_max": [
+        0.2750000059604645,
+        1.5,
+        0.24184009432792664
+      ],
+      "bytes": 53060
+    },
+    {
+      "asset": "garden_court",
+      "lod": "lod0",
+      "triangles": 456,
+      "exported_vertices": 792,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.19499999284744263,
+        0.0,
+        -0.1798543632030487
+      ],
+      "aabb_max": [
+        0.19499999284744263,
+        0.2199999988079071,
+        0.1798543632030487
+      ],
+      "bytes": 32652
+    },
+    {
+      "asset": "garden_court",
+      "lod": "lod1",
+      "triangles": 264,
+      "exported_vertices": 456,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.19499999284744263,
+        0.0,
+        -0.1798543632030487
+      ],
+      "aabb_max": [
+        0.19499999284744263,
+        0.16238094866275787,
+        0.1798543632030487
+      ],
+      "bytes": 19280
+    },
+    {
+      "asset": "workyard",
+      "lod": "lod0",
+      "triangles": 412,
+      "exported_vertices": 780,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.1899999976158142,
+        0.0,
+        -0.15770000219345093
+      ],
+      "aabb_max": [
+        0.1899999976158142,
+        0.23999999463558197,
+        0.15770000219345093
+      ],
+      "bytes": 31952
+    },
+    {
+      "asset": "workyard",
+      "lod": "lod1",
+      "triangles": 196,
+      "exported_vertices": 372,
+      "surfaces": 1,
+      "vertex_colors": true,
+      "degenerate_triangles": 0,
+      "aabb_min": [
+        -0.1899999976158142,
+        0.0,
+        -0.15770000219345093
+      ],
+      "aabb_max": [
+        0.1899999976158142,
+        0.23999999463558197,
+        0.15770000219345093
+      ],
+      "bytes": 15840
+    }
+  ]
+}

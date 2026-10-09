@@ -1,0 +1,100 @@
+{
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "assets": {
+    "leafy_grass": {
+      "page": "https://polyhaven.com/a/leafy_grass",
+      "author": "Charlotte Baglioni",
+      "physical_width_m": 2
+    },
+    "rock_face": {
+      "page": "https://polyhaven.com/a/rock_face",
+      "authors": [
+        "Dario Barresi",
+        "Greg Zaal"
+      ],
+      "physical_width_m": 2.4
+    }
+  },
+  "maps": [
+    {
+      "asset": "leafy_grass",
+      "map": "diff",
+      "file": "leafy_grass_diff_1k.jpg",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/leafy_grass/leafy_grass_diff_1k.jpg",
+      "bytes": 1195394,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "cfa40bc9d9417d1852db8753a8d5917f110c40101179f63543c382e39bc05e4a"
+    },
+    {
+      "asset": "leafy_grass",
+      "map": "nor_gl",
+      "file": "leafy_grass_nor_gl_1k.png",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/leafy_grass/leafy_grass_nor_gl_1k.png",
+      "bytes": 6111876,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "7cba8d8a3cbd14663fd974b73ecebcbb42e0cc258d912867e9dd67a5582ca4d9"
+    },
+    {
+      "asset": "leafy_grass",
+      "map": "rough",
+      "file": "leafy_grass_rough_1k.jpg",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/leafy_grass/leafy_grass_rough_1k.jpg",
+      "bytes": 511385,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "0c2a1d91aacb8e54a496051b59854e51e456fe858abeade778e308359ef16463"
+    },
+    {
+      "asset": "rock_face",
+      "map": "diff",
+      "file": "rock_face_diff_1k.jpg",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_face/rock_face_diff_1k.jpg",
+      "bytes": 732721,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "cce4b50517161264bdef196f5e247e328ca3739083cd6044ad3cc54d88cb82e2"
+    },
+    {
+      "asset": "rock_face",
+      "map": "nor_gl",
+      "file": "rock_face_nor_gl_1k.png",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/1k/rock_face/rock_face_nor_gl_1k.png",
+      "bytes": 5796887,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "969bafe93574768ba2efc9874c6d96ce8326f8e8908f2b1734eddeca14c8ef10"
+    },
+    {
+      "asset": "rock_face",
+      "map": "rough",
+      "file": "rock_face_rough_1k.jpg",
+      "source_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_face/rock_face_rough_1k.jpg",
+      "bytes": 224371,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "L",
+      "sha256": "70ddfc5d7f292909d18ad56dbb1ff7c3a65809dc031854356c7a6978cb446219"
+    }
+  ],
+  "note": "Original public asset download bytes; no baked scene lighting or bitmap edits. Source albedo is sRGB; normal/roughness are data maps."
+}

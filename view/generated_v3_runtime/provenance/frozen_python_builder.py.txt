@@ -1,0 +1,132 @@
+#!/usr/bin/env python3
+"""Bounded MIT structured-hex adaptation; research only.
+
+Ported construction: EdgeVertices quarter points, fan, four-quad edge strip,
+and once-owned corner patch from David Pruitt's hex_map_godot (2024).
+See ATTRIBUTION.md and upstream/LICENSE.md.txt. Source code is evidence only;
+no upstream project, editor, installer, river/water or terrace system is run.
+"""
+import collections, copy, hashlib, json, math, struct, time
+VERSION='v3_structured_hex/1'
+SOLID=.8
+SQ=math.sqrt(3)
+DIR=[(1,0),(0,1),(-1,1),(-1,0),(0,-1),(1,-1)]
+def f32(x):return struct.unpack('<f',struct.pack('<f',x))[0]+0.
+def point_key(p):return tuple(round(v,7) for v in p)
+def center(q,r):return (SQ*(q+r/2),1.5*r)
+def polygon(q,r):
+ x,z=center(q,r);return [(x+math.cos(math.radians(30+60*i)),z+math.sin(math.radians(30+60*i))) for i in range(6)]
+def lerp(a,b,t):return tuple(x+(y-x)*t for x,y in zip(a,b))
+def edge_vertices(a,b):return [lerp(a,b,t) for t in [0,.25,.5,.75,1]]
+def geometry_hash(tris):return hashlib.sha256(b''.join(struct.pack('<fff',*v) for t in tris for v in t)).hexdigest()
+def digest(d):return hashlib.sha256(json.dumps(d,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()
+
+def adapt_cells(source,original=None):
+ """Small cell-data adapter; geometry consumes final v3 fields, never old faces."""
+ if source['schema_version'] not in ['coastal_source_v3/prototype1','structured_hex_fixture/v1']:raise ValueError('unsupported source schema')
+ cells=copy.deepcopy(source['cells'])
+ if original is not None and set(cells)!=set(original):raise ValueError('incomplete original hex domain')
+ for k,c in cells.items():
+  c['center']=center(c['q'],c['r']);c['polygon']=polygon(c['q'],c['r'])
+  c['sign']=-1 if c['elevation']<=0 else 1
+  if bool(c['ocean'])!=(c['sign']<0):raise ValueError('source class and elevation disagree')
+  c['neighbors']=[f'{c["q"]+dq},{c["r"]+dr}' for dq,dr in DIR if f'{c["q"]+dq},{c["r"]+dr}' in cells]
+ # Float local relief from same-class source cells. Bound its amplitude relative
+ # to each center only to preserve cell class; no global slope threshold.
+ for k,c in cells.items():
+  xx=xz=zz=xy=zy=0.
+  for n in c['neighbors']:
+   o=cells[n]
+   if o['sign']!=c['sign']:continue
+   dx=o['center'][0]-c['center'][0];dz=o['center'][1]-c['center'][1];dy=o['elevation']-c['elevation']
+   xx+=dx*dx;xz+=dx*dz;zz+=dz*dz;xy+=dx*dy;zy+=dz*dy
+  det=xx*zz-xz*xz
+  # Regularization only resolves one-neighbor rank deficiency, in height units.
+  if abs(det)<1e-10:xx+=1.;zz+=1.;det=xx*zz-xz*xz
+  gx=(xy*zz-zy*xz)/det;gz=(zy*xx-xy*xz)/det
+  magnitude=math.hypot(gx,gz);limit=.7*max(abs(c['elevation']),.01)/SOLID
+  factor=min(1,limit/magnitude) if magnitude else 1.
+  c['gradient']=(gx*factor,gz*factor)
+ return cells
+
+def build(source,original=None):
+ start=time.perf_counter();cells=adapt_cells(source,original);corners=collections.defaultdict(list);edges=collections.defaultdict(list)
+ for k in sorted(cells):
+  c=cells[k]
+  for i,p in enumerate(c['polygon']):
+   corners[point_key(p)].append((k,i));edges[tuple(sorted([point_key(p),point_key(c['polygon'][(i+1)%6])]))].append((k,i))
+ core={}
+ for k,c in cells.items():
+  cx,cz=c['center'];core[k]=[]
+  for x,z in c['polygon']:
+   x=cx+SOLID*(x-cx);z=cz+SOLID*(z-cz)
+   y=c['elevation']+c['gradient'][0]*(x-cx)+c['gradient'][1]*(z-cz)
+   # Core support uses a minimum absolute height .003; source centers stay exact.
+   # Thus zero-height water centers have negative support, and very low land
+   # classes remain broad, low islands. This prototype has no component cleanup.
+   y=c['sign']*max(c['sign']*y,.003)
+   core[k].append((x,y,z))
+ vertices=[];lookup={};indices=[];kinds=[];owners=[];shore=[]
+ def vertex(v):
+  key=point_key(v)
+  if key not in lookup:lookup[key]=len(vertices);vertices.append([f32(x) for x in v])
+  return lookup[key]
+ def emit(a,b,c,kind,owner):
+  ids=[vertex(v) for v in (a,b,c)];v=[vertices[i] for i in ids]
+  cross=(v[1][0]-v[0][0])*(v[2][2]-v[0][2])-(v[1][2]-v[0][2])*(v[2][0]-v[0][0])
+  if abs(cross)<1e-14:raise ValueError('degenerate construction '+kind)
+  if cross<0:ids[1],ids[2]=ids[2],ids[1]
+  indices.extend(ids);kinds.append(kind);owners.append(owner)
+ def quad(a,b,c,d,kind,owner):
+  # Same diagonal convention as upstream paired EdgeVertices quads.
+  emit(a,b,c,kind,owner);emit(b,d,c,kind,owner)
+ def strip(a,b,kind,owner):
+  for j in range(4):quad(a[j],a[j+1],b[j],b[j+1],kind,owner)
+ def zero_mid(a,b):
+  v=lerp(a,b,.5);return(v[0],0.,v[2])
+ # Upstream four triangles per direction fan, with continuous local heights.
+ for k,c in sorted(cells.items()):
+  p=(c['center'][0],c['elevation'],c['center'][1])
+  for i in range(6):
+   e=edge_vertices(core[k][i],core[k][(i+1)%6])
+   for j in range(4):emit(p,e[j],e[j+1],'cell_fan',[k])
+ # Once-owned connection strip. At mixed edges the same explicit zero row is
+ # used on both sides, so height and shoreline ownership cannot diverge.
+ for edge,own in sorted(edges.items()):
+  k,i=own[0];a=edge_vertices(core[k][i],core[k][(i+1)%6])
+  if len(own)==2:
+   l,j=own[1]
+   b=edge_vertices(core[l][j],core[l][(j+1)%6])
+   if point_key(cells[l]['polygon'][j])!=point_key(cells[k]['polygon'][i]):b.reverse()
+   if cells[k]['sign']!=cells[l]['sign']:
+    mid=[zero_mid(p,q) for p,q in zip(a,b)]
+    strip(a,mid,'mixed_edge_land' if cells[k]['sign']>0 else 'mixed_edge_water',[k,l]);strip(mid,b,'mixed_edge_land' if cells[l]['sign']>0 else 'mixed_edge_water',[k,l])
+    shore.extend([(vertex(mid[j]),vertex(mid[j+1])) for j in range(4)])
+   else:strip(a,b,'same_class_edge',[k,l])
+  else:
+   rim=[]
+   for p in [cells[k]['polygon'][i],cells[k]['polygon'][(i+1)%6]]:
+    incident=corners[point_key(p)];signs={cells[l]['sign'] for l,j in incident}
+    y=0. if len(signs)>1 else sum(core[l][j][1] for l,j in incident)/len(incident)
+    rim.append((p[0],y,p[1]))
+   strip(a,edge_vertices(*rim),'full_hex_rim_cap',[k])
+ # Corner owner is the canonical original vertex, not height sorting. Mixed
+ # cases split directly into one minority triangle and one majority quad.
+ for p,own in sorted(corners.items()):
+  ps=[core[k][i] for k,i in own];ss=[cells[k]['sign'] for k,i in own];owner=[k for k,i in own]
+  if len(own)==3:
+   if len(set(ss))==1:emit(*ps,'same_class_corner',owner)
+   else:
+    odd=next(i for i in range(3) if ss.count(ss[i])==1);a=ps[odd];b=ps[(odd+1)%3];c=ps[(odd+2)%3];ab=zero_mid(a,b);ac=zero_mid(a,c)
+    emit(a,ab,ac,'mixed_corner_minority',owner);quad(ab,b,ac,c,'mixed_corner_majority',owner);shore.append((vertex(ab),vertex(ac)))
+  elif len(own)==2:
+   a,b=ps;y=0. if ss[0]!=ss[1] else (a[1]+b[1])*.5;v=(p[0],y,p[1])
+   if ss[0]!=ss[1]:
+    mid=zero_mid(a,b);emit(a,mid,v,'mixed_rim_corner',owner);emit(mid,b,v,'mixed_rim_corner',owner);shore.append((vertex(mid),vertex(v)))
+   else:emit(a,b,v,'same_class_rim_corner',owner)
+ triangles=[[vertices[indices[i+j]] for j in range(3)] for i in range(0,len(indices),3)]
+ hexes=copy.deepcopy(original) if original is not None else {k:{'q':c['q'],'r':c['r'],'polygon':c['polygon'],'declared_class':'water' if c['sign']<0 else 'land','crop_boundary':len(c['neighbors'])<6} for k,c in cells.items()}
+ samples={k:{'center_xz':list(c['center']),'before_elevation':c['elevation'],'elevation':c['elevation'],'gradient':c['gradient'],'class_before':'water' if c['sign']<0 else 'land','class_after':'water' if c['sign']<0 else 'land'} for k,c in cells.items()}
+ coasts=[c['center'] for c in cells.values() if c['sign']>0 and any(cells[n]['sign']<0 for n in c['neighbors'])];focus=min(coasts,key=lambda p:p[0]**2+p[1]**2) if coasts else (0,0)
+ result={'schema_version':'v3_actual_arraymesh/v1','geometry_version':VERSION,'water_level':0.,'seed':source.get('seed',726381),'seed_token':source.get('seed_token','726381'),'board_radius':source['board_radius'],'recipe_id':source['recipe']['id'],'source_hash':source.get('content_hash',digest(source)),'canonical_geometry_hash':geometry_hash(triangles),'hexes':hexes,'original_hexes':copy.deepcopy(hexes),'vertices':vertices,'indices':indices,'triangles':triangles,'face_kinds':kinds,'face_owners':owners,'intended_shore_edges':shore,'center_samples':samples,'camera_focus':[focus[0],.2,focus[1]],'parameters':{'solid_radius_fraction':SOLID,'edge_segments':4,'candidate_parameter_sets':1,'core_gradient_amplitude_fraction':.7,'source_triangle_intersections':False,'global_slope_limit':None},'construction':{'vertices':len(vertices),'triangles':len(triangles),'face_kinds':dict(collections.Counter(kinds)),'build_ms':(time.perf_counter()-start)*1000},'scope':{'production_default':False,'gameplay_admitted':False,'navigation_migrated':False,'derived_fields_recomputed':False,'continuous_routes_verified':False}}
+ result['content_hash']=digest({k:v for k,v in result.items() if k!='construction'});return result

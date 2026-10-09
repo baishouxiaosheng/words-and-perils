@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "public_packet_functions_byte_identical": true,
+  "existing_inventory_HUD_status_lines_byte_identical": true,
+  "added_only": "focus_status_lines",
+  "new_module_sha256": "2b1d377813660aa419ca4f2cb9026d591b9edadce853ef0fec57a1b3e98841b1",
+  "baseline_module_sha256": "c4a57fc1f471ddec0df9d4397c324a522bbd028dae13777d5256dcda205af933",
+  "main_change": "duplicate existing normal text paper StyleBox and set four content margins to16; no authoritative state mutation",
+  "world_or_protocol_edits_for_UI": false
+}

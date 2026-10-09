@@ -1,0 +1,99 @@
+{
+  "checks": 44,
+  "coast_entry_status": {
+    "has_controller": true,
+    "host_phase": "idle",
+    "text": "真实地理＋棋子＋回合已接通 · 样例明确署名，任意自由文字需离线评估"
+  },
+  "completed": true,
+  "default_world_identity": {
+    "bundle_id": "natural-shore-v03-2f6a1a215a0d44a374f01c4a",
+    "catalog_sha256": "c982975994b5043cd05d1e11b3cfe6840c889c1122524f6b12412bd306f4aa52",
+    "hex_count": 1801,
+    "scene_hex_count": 1801,
+    "scene_id": "scene_coast",
+    "source_drainage_sha256": "2b77b89e7b4716cf524dcce836071d4d38c3e6356ffcfc1bbdb58eaca918b3d6",
+    "source_mesh_sha256": "68931983818b291b07022477029d4ad4761aceac0c670463fbe742b6a2ac986c",
+    "world_id": "natural_coast_shore_v03_adventure"
+  },
+  "engine": "4.6.3-stable (official)",
+  "equipment_file_sha256": "bf0815e9b3ee265c8df90a0ace21840c02600708c9e9b669ff608e010788e3d3",
+  "equipment_load": {
+    "code": "",
+    "errors": [],
+    "ok": true,
+    "roundtrip_equal": true
+  },
+  "failures": [],
+  "first_return_metrics": {
+    "before_release_static_bytes": 331788767,
+    "before_static_bytes": 315093997,
+    "entered_static_bytes": 330947611,
+    "guest_adapter_released": true,
+    "guest_view_released": true,
+    "native_resource_gate": "pending; viewport suspension is not resource release",
+    "returned_static_bytes": 316158669,
+    "river_geometry_hash": "3125ffe57b29f948b05bfe842bc6a215121320974513c23d584bd288ea98c48d",
+    "river_water_hash": "e97b7dd8a7653ef3230a6f1378739a67560178a378b20b80717ac44eec49aa05"
+  },
+  "full_coast_host_save_hash": "d89f4ec157f526b8988901753b61936c1270566afc311aee610d017b03fb4f4e",
+  "full_coast_return_metrics": {
+    "before_release_static_bytes": 747613907,
+    "before_static_bytes": 724556413,
+    "entered_static_bytes": 745377735,
+    "guest_adapter_released": true,
+    "guest_view_released": true,
+    "native_resource_gate": "pending; viewport suspension is not resource release",
+    "returned_static_bytes": 731989369,
+    "river_geometry_hash": "3125ffe57b29f948b05bfe842bc6a215121320974513c23d584bd288ea98c48d",
+    "river_water_hash": "e97b7dd8a7653ef3230a6f1378739a67560178a378b20b80717ac44eec49aa05"
+  },
+  "full_coast_ui_before": {
+    "board_instance": "310563050492",
+    "goal": "",
+    "mode_epoch": 2,
+    "playtest_instance": "-9223371727382247085",
+    "selected_focus": {},
+    "selected_hex": [
+      99,
+      99
+    ],
+    "signed_display": "",
+    "signed_goal": ""
+  },
+  "host_save_hash": "50b2778bc61c61f1903df0085dc47db1b8dc68c5d163a8d4ac5b81485f569937",
+  "host_ui": {
+    "board_instance": "432600522001",
+    "goal": "保留这段主旅程草稿",
+    "mode_epoch": 4,
+    "playtest_instance": "-9223371851130992964",
+    "selected_focus": {
+      "hex": [
+        -2,
+        0
+      ],
+      "id": "hex_-2_0",
+      "kind": "tile",
+      "scene_id": "scene_generated_v3",
+      "world_id": "generated_v3_village_equipment_v1_410105a4b4084f82f416e916896e31285ea59793c1623e0377d959a33d574dd2"
+    },
+    "selected_hex": [
+      -2,
+      0
+    ],
+    "signed_display": "",
+    "signed_goal": ""
+  },
+  "scope": "actual Main method-driven equipment/river roundtrip and release witnesses; real pointer and cgroup/RSS capture remain separate",
+  "second_return_metrics": {
+    "before_release_static_bytes": 332169793,
+    "before_static_bytes": 316158525,
+    "entered_static_bytes": 331601775,
+    "guest_adapter_released": true,
+    "guest_view_released": true,
+    "native_resource_gate": "pending; viewport suspension is not resource release",
+    "returned_static_bytes": 316538313,
+    "river_geometry_hash": "3125ffe57b29f948b05bfe842bc6a215121320974513c23d584bd288ea98c48d",
+    "river_water_hash": "e97b7dd8a7653ef3230a6f1378739a67560178a378b20b80717ac44eec49aa05"
+  }
+}

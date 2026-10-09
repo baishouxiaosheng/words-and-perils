@@ -1,0 +1,21 @@
+{
+	"camera": {
+		"active": false,
+		"canceled_actions": 1,
+		"framed_actions": 4,
+		"gameplay_writes": false,
+		"last_reason": "preserved_overview",
+		"safe_rect": [
+			252.0,
+			202.0,
+			196.0,
+			216.0
+		],
+		"visible_combat_cues": [
+			"潮滩劫掠者 → 旅人 · 施法 · 命中"
+		]
+	},
+	"checks": 35,
+	"failures": [],
+	"popup_target_identity": ""
+}

@@ -1,0 +1,15 @@
+{"event": "baseline", "elapsed_s": 0.0001, "utc_epoch": 1791228332.237748, "cgroup_current": 6375411712, "cgroup_limit": 8589934592, "stop_threshold": 8053063680, "reserve_bytes": 536870912, "timeout_s": 15.0, "executable": "/opt/godot/4.6.3/Godot_v4.6.3-stable_linux.x86_64"}
+{"event": "owned_launched", "elapsed_s": 0.0005, "utc_epoch": 1791228332.2382073}
+{"event": "sample", "elapsed_s": 0.0007, "utc_epoch": 1791228332.2383525, "cgroup_current": 6375411712, "process_cpu_seconds": 0.0, "VmRSS_kib": 104, "VmHWM_kib": 104, "VmSize_kib": 138412}
+{"event": "sample", "elapsed_s": 0.2524, "utc_epoch": 1791228332.4900784, "cgroup_current": 6424469504, "process_cpu_seconds": 0.24, "VmRSS_kib": 77040, "VmHWM_kib": 77040, "VmSize_kib": 882016}
+{"event": "sample", "elapsed_s": 0.5048, "utc_epoch": 1791228332.7425342, "cgroup_current": 6537986048, "process_cpu_seconds": 0.49, "VmRSS_kib": 188048, "VmHWM_kib": 188048, "VmSize_kib": 994088}
+{"event": "sample", "elapsed_s": 0.7566, "utc_epoch": 1791228332.9942498, "cgroup_current": 6576193536, "process_cpu_seconds": 0.75, "VmRSS_kib": 225244, "VmHWM_kib": 262584, "VmSize_kib": 1031132}
+{"event": "sample", "elapsed_s": 1.0083, "utc_epoch": 1791228333.2459655, "cgroup_current": 6619947008, "process_cpu_seconds": 1.0, "VmRSS_kib": 268008, "VmHWM_kib": 268008, "VmSize_kib": 1073800}
+{"event": "sample", "elapsed_s": 1.26, "utc_epoch": 1791228333.4977145, "cgroup_current": 6632005632, "process_cpu_seconds": 1.24, "VmRSS_kib": 280228, "VmHWM_kib": 280228, "VmSize_kib": 1085636}
+{"event": "sample", "elapsed_s": 1.5118, "utc_epoch": 1791228333.7494493, "cgroup_current": 6652903424, "process_cpu_seconds": 1.51, "VmRSS_kib": 302552, "VmHWM_kib": 302552, "VmSize_kib": 1106344}
+{"event": "sample", "elapsed_s": 1.7635, "utc_epoch": 1791228334.00121, "cgroup_current": 6656573440, "process_cpu_seconds": 1.75, "VmRSS_kib": 306160, "VmHWM_kib": 306160, "VmSize_kib": 1109856}
+{"event": "sample", "elapsed_s": 2.0153, "utc_epoch": 1791228334.2529714, "cgroup_current": 6656286720, "process_cpu_seconds": 2.01, "VmRSS_kib": 306248, "VmHWM_kib": 306248, "VmSize_kib": 1109856}
+{"event": "sample", "elapsed_s": 2.2672, "utc_epoch": 1791228334.5048707, "cgroup_current": 6656524288, "process_cpu_seconds": 2.25, "VmRSS_kib": 306248, "VmHWM_kib": 306248, "VmSize_kib": 1109856}
+{"event": "sample", "elapsed_s": 2.5189, "utc_epoch": 1791228334.7566104, "cgroup_current": 6656319488, "process_cpu_seconds": 2.5, "VmRSS_kib": 306256, "VmHWM_kib": 306256, "VmSize_kib": 1109856}
+{"event": "sample", "elapsed_s": 2.7708, "utc_epoch": 1791228335.0084941, "cgroup_current": 6644232192, "process_cpu_seconds": 2.74, "VmRSS_kib": 294232, "VmHWM_kib": 306008, "VmSize_kib": 1096028}
+{"event": "exited", "elapsed_s": 2.8716, "utc_epoch": 1791228335.1092606, "child_exit": 0, "cgroup_current": 6376800256}

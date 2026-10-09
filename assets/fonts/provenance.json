@@ -1,0 +1,31 @@
+{
+  "license": "SIL Open Font License 1.1",
+  "source_repository": "https://github.com/notofonts/noto-cjk",
+  "subset_character_count": 545,
+  "fonts": [
+    {
+      "file": "MistbankSerifUI-Regular.otf",
+      "bytes": 324972,
+      "sha256": "e87aeef86a6925418fd7d5c86bec67a279d563a0063fd91217b80db521b156ed",
+      "source_file": "NotoSerifCJK-Regular.ttc",
+      "source_face_index": 2,
+      "source_family": "Noto Serif CJK SC Regular",
+      "source_version": "Version 2.003;hotconv 1.1.1;makeotfexe 2.6.0",
+      "source_copyright": "© 2017-2024 Adobe (http://www.adobe.com/).",
+      "source_sha256": "5d9c31a059600193c9d7968a998bde886ccdc77e934006ad243b41794c496a7d",
+      "changes": "SC face extracted, fixed UI subset, family and PostScript names renamed; glyph drawings unchanged"
+    },
+    {
+      "file": "MistbankSerifUI-Bold.otf",
+      "bytes": 331548,
+      "sha256": "288b8afe7cfe06ad3ab749d615e1435bc6f8a4a6ca85b7a82d84a22383bdc715",
+      "source_file": "NotoSerifCJK-Bold.ttc",
+      "source_face_index": 2,
+      "source_family": "Noto Serif CJK SC Bold",
+      "source_version": "Version 2.003;hotconv 1.1.1;makeotfexe 2.6.0",
+      "source_copyright": "© 2017-2024 Adobe (http://www.adobe.com/).",
+      "source_sha256": "1505ee3b9c0890fae6302ee0e9c6fd74d690f4a55a6ace1d9944f3f6352d622d",
+      "changes": "SC face extracted, fixed UI subset, family and PostScript names renamed; glyph drawings unchanged"
+    }
+  ]
+}

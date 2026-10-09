@@ -1,0 +1,44 @@
+{
+  "license": "CC0-1.0",
+  "provenance": "Original deterministic procedural textures, generated from mathematical fields. No copied or downloaded images.",
+  "seed": 465903,
+  "ui_seed": 466003,
+  "maps": {
+    "earth": {
+      "resolution": 1024,
+      "albedo": "sRGB neutral modulation",
+      "normal": "linear OpenGL +Y tangent normal",
+      "roughness": "linear scalar R channel"
+    },
+    "limestone": {
+      "resolution": 1024,
+      "albedo": "sRGB neutral modulation",
+      "normal": "linear OpenGL +Y tangent normal",
+      "roughness": "linear scalar R channel"
+    },
+    "oak": {
+      "resolution": 1024,
+      "albedo": "sRGB neutral modulation",
+      "normal": "linear OpenGL +Y tangent normal",
+      "roughness": "linear scalar R channel"
+    },
+    "marble": {
+      "resolution": 512,
+      "albedo": "sRGB neutral modulation",
+      "normal": "linear OpenGL +Y tangent normal",
+      "roughness": "linear R, 0.93 microvariation multiplier"
+    },
+    "brass": {
+      "resolution": 512,
+      "albedo": "sRGB neutral modulation",
+      "normal": "linear OpenGL +Y tangent normal",
+      "roughness": "linear R, 0.93 microvariation multiplier"
+    }
+  },
+  "ui": {
+    "panels": "192 \u00d7 192 RGBA, 3px visible trim with 12px nine-slice margins",
+    "buttons": "2px visible trim with 4px nine-slice margins",
+    "fields": "1px recessed edge with 3px nine-slice margins",
+    "paper": "512 \u00d7 512 seamless RGB"
+  }
+}

@@ -1,0 +1,659 @@
+{
+  "actual_main": true,
+  "authority_changes": "existing signed offline felling assessment only",
+  "checks": [
+    {
+      "name": "explicit fresh isolated save environment is required",
+      "passed": true
+    },
+    {
+      "name": "actual seeded Main opens complete verified coast and real picker",
+      "passed": true
+    },
+    {
+      "name": "runtime providers have never been configured and remain offline",
+      "passed": true
+    },
+    {
+      "name": "no-network tripwire replaces idle transport without changing authority",
+      "passed": true
+    },
+    {
+      "name": "real source tree 1148 owns the existing nearby route cell",
+      "passed": true
+    },
+    {
+      "name": "actual standing silhouette is selected through source-aware board ray picking",
+      "passed": true
+    },
+    {
+      "name": "real input selects tree and spends no action/RNG/turn",
+      "passed": true
+    },
+    {
+      "name": "existing explicit authored felling sample only fills intent",
+      "passed": true
+    },
+    {
+      "name": "End Turn freezes actual tree focus without executing it",
+      "passed": true
+    },
+    {
+      "name": "later selection cannot rewrite the pending assessed tree",
+      "passed": true
+    },
+    {
+      "name": "existing offline assessed action commits one turn and the real fallen-tree obstruction",
+      "passed": true
+    },
+    {
+      "name": "offline felling makes zero transport requests",
+      "passed": true
+    },
+    {
+      "name": "committed fallen tree remains selectable from actual displayed mesh",
+      "passed": true
+    },
+    {
+      "name": "fallen selection uses current catalog revision one",
+      "passed": true
+    },
+    {
+      "name": "after assessed felling: actual tree remains in renderer identity index",
+      "passed": true
+    },
+    {
+      "name": "after assessed felling: actual near/far meshes retain fallen pose at active support height",
+      "passed": true
+    },
+    {
+      "name": "after assessed felling: picker transform matches fallen geometry at active support height",
+      "passed": true
+    },
+    {
+      "name": "after assessed felling: selected catalog reference is unchanged",
+      "passed": true
+    },
+    {
+      "name": "after assessed felling: displayed fallen silhouette resolves the same real source reference",
+      "passed": true
+    },
+    {
+      "name": "after assessed felling: complete authority/RNG/receipts/state bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "actual Main save callback succeeds",
+      "passed": true
+    },
+    {
+      "name": "saved file is byte-exact complete authority including RNG and receipts",
+      "passed": true
+    },
+    {
+      "name": "actual Main reload preserves exact complete save and state bytes",
+      "passed": true
+    },
+    {
+      "name": "reloaded fallen mesh is selectable without injecting a reference",
+      "passed": true
+    },
+    {
+      "name": "after save/reload and real reselection: actual tree remains in renderer identity index",
+      "passed": true
+    },
+    {
+      "name": "after save/reload and real reselection: actual near/far meshes retain fallen pose at active support height",
+      "passed": true
+    },
+    {
+      "name": "after save/reload and real reselection: picker transform matches fallen geometry at active support height",
+      "passed": true
+    },
+    {
+      "name": "after save/reload and real reselection: selected catalog reference is unchanged",
+      "passed": true
+    },
+    {
+      "name": "after save/reload and real reselection: displayed fallen silhouette resolves the same real source reference",
+      "passed": true
+    },
+    {
+      "name": "after save/reload and real reselection: complete authority/RNG/receipts/state bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "cycle 0: actual legacy source picking is active",
+      "passed": true
+    },
+    {
+      "name": "shore off cycle 0: actual tree remains in renderer identity index",
+      "passed": true
+    },
+    {
+      "name": "shore off cycle 0: actual near/far meshes retain fallen pose at active support height",
+      "passed": true
+    },
+    {
+      "name": "shore off cycle 0: picker transform matches fallen geometry at active support height",
+      "passed": true
+    },
+    {
+      "name": "shore off cycle 0: selected catalog reference is unchanged",
+      "passed": true
+    },
+    {
+      "name": "shore off cycle 0: displayed fallen silhouette resolves the same real source reference",
+      "passed": true
+    },
+    {
+      "name": "shore off cycle 0: complete authority/RNG/receipts/state bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "cycle 0: v03 source picking/trace returns exactly",
+      "passed": true
+    },
+    {
+      "name": "shore on cycle 0: actual tree remains in renderer identity index",
+      "passed": true
+    },
+    {
+      "name": "shore on cycle 0: actual near/far meshes retain fallen pose at active support height",
+      "passed": true
+    },
+    {
+      "name": "shore on cycle 0: picker transform matches fallen geometry at active support height",
+      "passed": true
+    },
+    {
+      "name": "shore on cycle 0: selected catalog reference is unchanged",
+      "passed": true
+    },
+    {
+      "name": "shore on cycle 0: displayed fallen silhouette resolves the same real source reference",
+      "passed": true
+    },
+    {
+      "name": "shore on cycle 0: complete authority/RNG/receipts/state bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: actual legacy source picking is active",
+      "passed": true
+    },
+    {
+      "name": "shore off cycle 1: actual tree remains in renderer identity index",
+      "passed": true
+    },
+    {
+      "name": "shore off cycle 1: actual near/far meshes retain fallen pose at active support height",
+      "passed": true
+    },
+    {
+      "name": "shore off cycle 1: picker transform matches fallen geometry at active support height",
+      "passed": true
+    },
+    {
+      "name": "shore off cycle 1: selected catalog reference is unchanged",
+      "passed": true
+    },
+    {
+      "name": "shore off cycle 1: displayed fallen silhouette resolves the same real source reference",
+      "passed": true
+    },
+    {
+      "name": "shore off cycle 1: complete authority/RNG/receipts/state bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "cycle 1: v03 source picking/trace returns exactly",
+      "passed": true
+    },
+    {
+      "name": "shore on cycle 1: actual tree remains in renderer identity index",
+      "passed": true
+    },
+    {
+      "name": "shore on cycle 1: actual near/far meshes retain fallen pose at active support height",
+      "passed": true
+    },
+    {
+      "name": "shore on cycle 1: picker transform matches fallen geometry at active support height",
+      "passed": true
+    },
+    {
+      "name": "shore on cycle 1: selected catalog reference is unchanged",
+      "passed": true
+    },
+    {
+      "name": "shore on cycle 1: displayed fallen silhouette resolves the same real source reference",
+      "passed": true
+    },
+    {
+      "name": "shore on cycle 1: complete authority/RNG/receipts/state bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "all presentation changes preserve the actual post-felling movement result",
+      "passed": true
+    },
+    {
+      "name": "final Main save after support cycles is byte-identical to first committed save",
+      "passed": true
+    },
+    {
+      "name": "entire actual-Main regression makes zero provider calls",
+      "passed": true
+    }
+  ],
+  "elapsed_ms": 28587,
+  "expected_correction": "Shoreline presentation changes must preserve the assessed fallen pose and matching picking transform. Baseline behavior is unmeasured until this fixture runs; do not demand pixel parity with a reproduced standing-pose reset.",
+  "failures": [],
+  "fixture": "actual_main_fallen_support/v1",
+  "live_provider_calls": false,
+  "network_tripwire_send_count": 0,
+  "same_fixture_for_baseline_and_candidate": true,
+  "seed": 27,
+  "stages": [
+    {
+      "authoritative_save_sha256": "8efd97e0181718ebc4da4c79845f7aadde8e83e223db3b20587817e9b5b57dc7",
+      "expected": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "far": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "geometry_pick": true,
+      "index_matches": true,
+      "indexed": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "near": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "pick_skipped_for_pose_mismatch": false,
+      "rendered_pose_matches": true,
+      "selected_reference_sha256": "69873015bf3b85e5870b8f8a0d28b5cf8097d81e06cbc993b11b3516346416c7",
+      "shoreline_active": true,
+      "stage": "after assessed felling"
+    },
+    {
+      "authoritative_save_sha256": "8efd97e0181718ebc4da4c79845f7aadde8e83e223db3b20587817e9b5b57dc7",
+      "expected": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "far": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "geometry_pick": true,
+      "index_matches": true,
+      "indexed": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "near": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "pick_skipped_for_pose_mismatch": false,
+      "rendered_pose_matches": true,
+      "selected_reference_sha256": "69873015bf3b85e5870b8f8a0d28b5cf8097d81e06cbc993b11b3516346416c7",
+      "shoreline_active": true,
+      "stage": "after save/reload and real reselection"
+    },
+    {
+      "authoritative_save_sha256": "8efd97e0181718ebc4da4c79845f7aadde8e83e223db3b20587817e9b5b57dc7",
+      "expected": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "far": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "geometry_pick": true,
+      "index_matches": true,
+      "indexed": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "near": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "pick_skipped_for_pose_mismatch": false,
+      "rendered_pose_matches": true,
+      "selected_reference_sha256": "69873015bf3b85e5870b8f8a0d28b5cf8097d81e06cbc993b11b3516346416c7",
+      "shoreline_active": false,
+      "stage": "shore off cycle 0"
+    },
+    {
+      "authoritative_save_sha256": "8efd97e0181718ebc4da4c79845f7aadde8e83e223db3b20587817e9b5b57dc7",
+      "expected": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "far": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "geometry_pick": true,
+      "index_matches": true,
+      "indexed": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "near": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "pick_skipped_for_pose_mismatch": false,
+      "rendered_pose_matches": true,
+      "selected_reference_sha256": "69873015bf3b85e5870b8f8a0d28b5cf8097d81e06cbc993b11b3516346416c7",
+      "shoreline_active": true,
+      "stage": "shore on cycle 0"
+    },
+    {
+      "authoritative_save_sha256": "8efd97e0181718ebc4da4c79845f7aadde8e83e223db3b20587817e9b5b57dc7",
+      "expected": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "far": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "geometry_pick": true,
+      "index_matches": true,
+      "indexed": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "near": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "pick_skipped_for_pose_mismatch": false,
+      "rendered_pose_matches": true,
+      "selected_reference_sha256": "69873015bf3b85e5870b8f8a0d28b5cf8097d81e06cbc993b11b3516346416c7",
+      "shoreline_active": false,
+      "stage": "shore off cycle 1"
+    },
+    {
+      "authoritative_save_sha256": "8efd97e0181718ebc4da4c79845f7aadde8e83e223db3b20587817e9b5b57dc7",
+      "expected": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "far": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "geometry_pick": true,
+      "index_matches": true,
+      "indexed": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "near": [
+        -0.00201882212422788,
+        -0.0320882685482502,
+        -0.00877065304666758,
+        -0.148296907544136,
+        0.00933004729449749,
+        0.0,
+        0.000550713681150228,
+        0.0087533462792635,
+        -0.0321517139673233,
+        10.3137874603271,
+        0.152972280979156,
+        19.7075691223145
+      ],
+      "pick_skipped_for_pose_mismatch": false,
+      "rendered_pose_matches": true,
+      "selected_reference_sha256": "69873015bf3b85e5870b8f8a0d28b5cf8097d81e06cbc993b11b3516346416c7",
+      "shoreline_active": true,
+      "stage": "shore on cycle 1"
+    }
+  ],
+  "stopped_at": "shore on cycle 1",
+  "tree_id": "tree:2f6a1a215a0d44a374f01c4a:1148",
+  "tree_row": 1148
+}

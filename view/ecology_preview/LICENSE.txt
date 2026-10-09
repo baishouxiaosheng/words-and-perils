@@ -1,0 +1,6 @@
+Original new procedural vegetation geometry and preview source in this namespace:
+CC0 1.0 Universal Public Domain Dedication, without warranty.
+https://creativecommons.org/publicdomain/zero/1.0/legalcode
+Existing v9 project-owned tree construction recipes are identified in README.md.
+Existing third-party material textures are reused in place, not relicensed:
+../../assets/materials/polyhaven/LICENSE_AND_SOURCES.txt

@@ -1,0 +1,1871 @@
+{
+  "schema": "faceted-mountain-visual-layer/v1",
+  "status": "ORIGINAL_DECORATIVE_VISUAL_MESH_ONLY",
+  "source_height_mutation": false,
+  "collision_added": false,
+  "mountain_mask": "zone_masks rawrelief=mountain domain=dry",
+  "support_inset": 0.045,
+  "river_exclusion_margin": 0.12,
+  "base_manifest_sha256": "8616eb10c32f38899120b89417546e9befe675a4b3e2f6dde2b088755024e325",
+  "ecology_sha256": "e6219347d90c5d4c8de5d61aaa9436542fd254810d17eff7afeb3d3ae22b8318",
+  "river_contract_sha256": "36100c440584b482146c99a355f595b0548eb50744f65d16313d39f89c71f7ef",
+  "binary": "mountains.vertices_f32.gz",
+  "binary_sha256": "e4a8fe2f5c7b7ce3b8026684552958539aaf7e92c07d12d151d4951c51ab3b66",
+  "stride_f32": 8,
+  "vertices": 53898,
+  "triangles": 17966,
+  "groups": [
+    {
+      "region": "mountain:face:11705:component:896",
+      "part": 0,
+      "first_vertex": 0,
+      "vertices": 1809,
+      "triangles": 603,
+      "support_area": 9.028846068386455,
+      "summits": 8,
+      "ridge_seeds": 3,
+      "bounds_xz": [
+        -27.319704692890838,
+        13.223037446671697,
+        -19.12484745486686,
+        17.703643884296685
+      ]
+    },
+    {
+      "region": "mountain:face:13581:component:1048",
+      "part": 0,
+      "first_vertex": 1809,
+      "vertices": 1449,
+      "triangles": 483,
+      "support_area": 6.847238530791327,
+      "summits": 6,
+      "ridge_seeds": 2,
+      "bounds_xz": [
+        -34.0066033333,
+        5.2616640309,
+        -27.8342363684,
+        7.7681335008
+      ]
+    },
+    {
+      "region": "mountain:face:18805:component:1331",
+      "part": 0,
+      "first_vertex": 3258,
+      "vertices": 1878,
+      "triangles": 626,
+      "support_area": 8.9439018112877,
+      "summits": 8,
+      "ridge_seeds": 3,
+      "bounds_xz": [
+        -38.41670824849255,
+        9.421083810707945,
+        -30.703997403868232,
+        11.94803935333678
+      ]
+    },
+    {
+      "region": "mountain:face:38628:component:2430",
+      "part": 0,
+      "first_vertex": 5136,
+      "vertices": 1734,
+      "triangles": 578,
+      "support_area": 9.22088642014332,
+      "summits": 5,
+      "ridge_seeds": 2,
+      "bounds_xz": [
+        6.441710759749839,
+        -11.578916189290196,
+        11.731247436286676,
+        -5.752941316469366
+      ]
+    },
+    {
+      "region": "mountain:face:38676:component:2437",
+      "part": 0,
+      "first_vertex": 6870,
+      "vertices": 672,
+      "triangles": 224,
+      "support_area": 1.3003139405157695,
+      "summits": 1,
+      "ridge_seeds": 1,
+      "bounds_xz": [
+        8.705253149189986,
+        -13.710772932870178,
+        10.768179493066686,
+        -11.077942080626736
+      ]
+    },
+    {
+      "region": "mountain:face:40836:component:2538",
+      "part": 0,
+      "first_vertex": 7542,
+      "vertices": 15324,
+      "triangles": 5108,
+      "support_area": 94.50558011091458,
+      "summits": 55,
+      "ridge_seeds": 20,
+      "bounds_xz": [
+        9.571278556611503,
+        -38.44803937179822,
+        24.203712300468972,
+        -17.427941322516435
+      ]
+    },
+    {
+      "region": "mountain:face:43525:component:2721",
+      "part": 0,
+      "first_vertex": 22866,
+      "vertices": 933,
+      "triangles": 311,
+      "support_area": 4.3535894214185005,
+      "summits": 2,
+      "ridge_seeds": 1,
+      "bounds_xz": [
+        15.967989179695056,
+        -17.057283562654238,
+        19.310668769685876,
+        -13.577942078648984
+      ]
+    },
+    {
+      "region": "mountain:face:52627:component:3441",
+      "part": 0,
+      "first_vertex": 23799,
+      "vertices": 3009,
+      "triangles": 1003,
+      "support_area": 20.539045055080756,
+      "summits": 11,
+      "ridge_seeds": 4,
+      "bounds_xz": [
+        8.173761502855779,
+        -5.922058644841539,
+        11.511128977970314,
+        9.210772512435854
+      ]
+    },
+    {
+      "region": "mountain:face:7383:component:394",
+      "part": 0,
+      "first_vertex": 26808,
+      "vertices": 2043,
+      "triangles": 681,
+      "support_area": 10.609837821559141,
+      "summits": 9,
+      "ridge_seeds": 3,
+      "bounds_xz": [
+        -18.4446433639,
+        10.2529413857,
+        -13.5982966384,
+        19.7107732887
+      ]
+    },
+    {
+      "region": "mountain:face:900:component:0",
+      "part": 0,
+      "first_vertex": 28851,
+      "vertices": 18747,
+      "triangles": 6249,
+      "support_area": 139.52959841567483,
+      "summits": 79,
+      "ridge_seeds": 26,
+      "bounds_xz": [
+        -16.409483633824316,
+        -11.948039353311245,
+        18.991026018183803,
+        29.88577289203442
+      ]
+    },
+    {
+      "region": "mountain:face:913:component:9",
+      "part": 0,
+      "first_vertex": 47598,
+      "vertices": 6300,
+      "triangles": 2100,
+      "support_area": 34.87186122608425,
+      "summits": 24,
+      "ridge_seeds": 9,
+      "bounds_xz": [
+        -12.480945510200314,
+        7.577942078648984,
+        8.052338520488172,
+        20.293423442257694
+      ]
+    }
+  ],
+  "summits": [
+    {
+      "position": [
+        -26.3597047,
+        2.561724396170998,
+        13.8030374
+      ],
+      "source_region": "mountain:face:11705:component:896"
+    },
+    {
+      "position": [
+        -25.3172634,
+        2.0472397578376986,
+        13.9183528
+      ],
+      "source_region": "mountain:face:11705:component:896"
+    },
+    {
+      "position": [
+        -24.7310535,
+        1.669420327583135,
+        14.0088185
+      ],
+      "source_region": "mountain:face:11705:component:896"
+    },
+    {
+      "position": [
+        -22.5597047,
+        2.5517238832759555,
+        14.9430374
+      ],
+      "source_region": "mountain:face:11705:component:896"
+    },
+    {
+      "position": [
+        -21.6928353,
+        2.074215925289235,
+        15.5965394
+      ],
+      "source_region": "mountain:face:11705:component:896"
+    },
+    {
+      "position": [
+        -20.9899166,
+        1.9471450431368444,
+        16.1042703
+      ],
+      "source_region": "mountain:face:11705:component:896"
+    },
+    {
+      "position": [
+        -20.6597047,
+        2.089741231009504,
+        16.4630374
+      ],
+      "source_region": "mountain:face:11705:component:896"
+    },
+    {
+      "position": [
+        -20.3417692,
+        2.0387557058100376,
+        16.5846483
+      ],
+      "source_region": "mountain:face:11705:component:896"
+    },
+    {
+      "position": [
+        -33.0466033,
+        2.120796549221158,
+        5.841664
+      ],
+      "source_region": "mountain:face:13581:component:1048"
+    },
+    {
+      "position": [
+        -31.8850824,
+        1.9148471743570632,
+        7.0845369
+      ],
+      "source_region": "mountain:face:13581:component:1048"
+    },
+    {
+      "position": [
+        -30.7666033,
+        3.0018192659394654,
+        6.981664
+      ],
+      "source_region": "mountain:face:13581:component:1048"
+    },
+    {
+      "position": [
+        -30.1534472,
+        2.525757707152148,
+        6.9185091
+      ],
+      "source_region": "mountain:face:13581:component:1048"
+    },
+    {
+      "position": [
+        -29.5367844,
+        2.1787799268789065,
+        6.8959827
+      ],
+      "source_region": "mountain:face:13581:component:1048"
+    },
+    {
+      "position": [
+        -28.8451137,
+        1.6417895039084047,
+        6.8049337
+      ],
+      "source_region": "mountain:face:13581:component:1048"
+    },
+    {
+      "position": [
+        -37.4567082,
+        2.1870091535674767,
+        10.0010838
+      ],
+      "source_region": "mountain:face:18805:component:1331"
+    },
+    {
+      "position": [
+        -36.9755949,
+        2.2376293049652385,
+        10.0803536
+      ],
+      "source_region": "mountain:face:18805:component:1331"
+    },
+    {
+      "position": [
+        -36.2781732,
+        2.590070640085627,
+        10.2073955
+      ],
+      "source_region": "mountain:face:18805:component:1331"
+    },
+    {
+      "position": [
+        -35.1767082,
+        2.9368635902605584,
+        10.7610838
+      ],
+      "source_region": "mountain:face:18805:component:1331"
+    },
+    {
+      "position": [
+        -34.0741385,
+        1.7468973505188246,
+        10.1971914
+      ],
+      "source_region": "mountain:face:18805:component:1331"
+    },
+    {
+      "position": [
+        -32.7770587,
+        2.044192223888045,
+        10.4755622
+      ],
+      "source_region": "mountain:face:18805:component:1331"
+    },
+    {
+      "position": [
+        -32.5167082,
+        2.1955556348875773,
+        10.7610838
+      ],
+      "source_region": "mountain:face:18805:component:1331"
+    },
+    {
+      "position": [
+        -31.9462023,
+        1.9192444090275456,
+        11.0598462
+      ],
+      "source_region": "mountain:face:18805:component:1331"
+    },
+    {
+      "position": [
+        8.5179053,
+        2.546361178072062,
+        -8.9219052
+      ],
+      "source_region": "mountain:face:38628:component:2430"
+    },
+    {
+      "position": [
+        8.5417108,
+        2.2329350552707297,
+        -10.2389162
+      ],
+      "source_region": "mountain:face:38628:component:2430"
+    },
+    {
+      "position": [
+        8.5417108,
+        3.067933807547794,
+        -7.5789162
+      ],
+      "source_region": "mountain:face:38628:component:2430"
+    },
+    {
+      "position": [
+        8.6905141,
+        2.1709021798004695,
+        -10.4713674
+      ],
+      "source_region": "mountain:face:38628:component:2430"
+    },
+    {
+      "position": [
+        8.8428643,
+        2.12571304836149,
+        -10.12494
+      ],
+      "source_region": "mountain:face:38628:component:2430"
+    },
+    {
+      "position": [
+        9.2852531,
+        2.4630109515696894,
+        -11.9907729
+      ],
+      "source_region": "mountain:face:38676:component:2437"
+    },
+    {
+      "position": [
+        10.9112786,
+        2.1460326195029005,
+        -19.2480394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        11.0435065,
+        2.1355210064761687,
+        -19.2085456
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        12.0512786,
+        2.62480784389322,
+        -22.2880394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        12.3664543,
+        2.526657501139913,
+        -22.707157
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        12.4669087,
+        2.521654488789126,
+        -21.9534045
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        13.1912786,
+        2.6862792202476484,
+        -27.6080394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        13.2298811,
+        2.2122347316163653,
+        -23.4783002
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        13.3521743,
+        2.6856060301520825,
+        -27.0130087
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        13.4735337,
+        2.24504784227224,
+        -26.4079861
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        13.6505453,
+        2.428379475826696,
+        -27.634002
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        13.9512786,
+        2.7738612230238044,
+        -30.2680394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        13.9729288,
+        2.621581547898365,
+        -23.7561817
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        14.2864979,
+        2.637396210805262,
+        -30.6949584
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        14.3316567,
+        2.517051353693283,
+        -29.9484729
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        14.5036607,
+        2.5279094516701393,
+        -24.4401619
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        15.4712786,
+        1.8189074790480102,
+        -34.4480394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        15.8025064,
+        1.8845271630845102,
+        -34.3695519
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        15.8234696,
+        2.4484801876532267,
+        -31.7730483
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        16.5390924,
+        2.276422615812243,
+        -34.785819
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        16.9912786,
+        3.1799066079348512,
+        -32.1680394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        16.9912786,
+        2.9400961217829975,
+        -18.4880394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        17.1309129,
+        2.1677814115463696,
+        -21.0123914
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        17.279996,
+        2.197357661089213,
+        -20.8778422
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        17.3102967,
+        2.3033731395352746,
+        -21.5946957
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        17.3712786,
+        2.332574308440275,
+        -21.1480394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        17.48206,
+        2.9206124094217336,
+        -35.682169
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        17.558602,
+        2.7363836018620287,
+        -35.0904404
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        17.7087243,
+        1.2204434485160083,
+        -37.4007731
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        17.7512786,
+        1.1093093274630343,
+        -37.8680394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        17.7512786,
+        3.082888110696413,
+        -35.5880394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        17.9838193,
+        2.2035249196903477,
+        -36.1885898
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        18.0892642,
+        3.0327567886152744,
+        -35.0506971
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        18.5112786,
+        3.5846662929282727,
+        -23.4280394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        18.7445356,
+        3.137581230214677,
+        -24.4882839
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        19.1471208,
+        2.3532723865454197,
+        -33.4415422
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        19.2712786,
+        2.5503408914555035,
+        -33.6880394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        19.5854083,
+        2.8258516779509995,
+        -34.7996898
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        19.9151739,
+        2.8680476166283455,
+        -24.9622128
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        20.2976229,
+        2.290551472050636,
+        -28.727709
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        20.3230281,
+        2.753751298657007,
+        -26.4469646
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        20.4112786,
+        2.5136895520240365,
+        -28.3680394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        20.4112786,
+        2.9563088822166286,
+        -25.3280394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        20.5526551,
+        2.3929638677169685,
+        -27.9206455
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        20.7395048,
+        2.2106941742982165,
+        -24.6081331
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        20.9680179,
+        1.8496421252895754,
+        -26.4342382
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        21.1712786,
+        3.3090599898656845,
+        -35.2080394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        21.1712786,
+        2.6018171851326173,
+        -31.7880394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        21.4373206,
+        2.1932848867618526,
+        -32.0682653
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        21.9852683,
+        1.6129204265088521,
+        -31.0152506
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        22.3112786,
+        2.2244314306825297,
+        -26.8480394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        22.5209249,
+        1.9065442211263066,
+        -27.2262168
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        23.0712786,
+        1.5854716496518722,
+        -30.2680394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        23.6023269,
+        1.4296522377821088,
+        -32.3486551
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        23.8312786,
+        1.5627073925926829,
+        -32.5480394
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        23.9052361,
+        1.4833608407917396,
+        -32.7265233
+      ],
+      "source_region": "mountain:face:40836:component:2538"
+    },
+    {
+      "position": [
+        16.9279892,
+        3.244478541565902,
+        -14.9572836
+      ],
+      "source_region": "mountain:face:43525:component:2721"
+    },
+    {
+      "position": [
+        17.2462084,
+        3.0195310353729115,
+        -15.0781499
+      ],
+      "source_region": "mountain:face:43525:component:2721"
+    },
+    {
+      "position": [
+        9.5137615,
+        2.1428319411032017,
+        5.2979414
+      ],
+      "source_region": "mountain:face:52627:component:3441"
+    },
+    {
+      "position": [
+        9.7828398,
+        2.234653297722404,
+        4.8478389
+      ],
+      "source_region": "mountain:face:52627:component:3441"
+    },
+    {
+      "position": [
+        9.8253024,
+        1.9520070312528952,
+        5.9032767
+      ],
+      "source_region": "mountain:face:52627:component:3441"
+    },
+    {
+      "position": [
+        10.1042176,
+        2.0007958300814566,
+        3.2103981
+      ],
+      "source_region": "mountain:face:52627:component:3441"
+    },
+    {
+      "position": [
+        10.2737615,
+        2.699077167706105,
+        -1.5420586
+      ],
+      "source_region": "mountain:face:52627:component:3441"
+    },
+    {
+      "position": [
+        10.2737615,
+        3.0889771575696896,
+        1.8779414
+      ],
+      "source_region": "mountain:face:52627:component:3441"
+    },
+    {
+      "position": [
+        10.2737615,
+        1.961686683406961,
+        7.5779414
+      ],
+      "source_region": "mountain:face:52627:component:3441"
+    },
+    {
+      "position": [
+        10.339183,
+        1.7735272849463004,
+        7.2345172
+      ],
+      "source_region": "mountain:face:52627:component:3441"
+    },
+    {
+      "position": [
+        10.4433055,
+        2.176411503142292,
+        0.5454846
+      ],
+      "source_region": "mountain:face:52627:component:3441"
+    },
+    {
+      "position": [
+        10.5015447,
+        2.5258301549209885,
+        -1.0090943
+      ],
+      "source_region": "mountain:face:52627:component:3441"
+    },
+    {
+      "position": [
+        10.5076461,
+        2.693571665045811,
+        2.3162429
+      ],
+      "source_region": "mountain:face:52627:component:3441"
+    },
+    {
+      "position": [
+        -17.6960242,
+        2.8556743383837446,
+        14.6425704
+      ],
+      "source_region": "mountain:face:7383:component:394"
+    },
+    {
+      "position": [
+        -17.4967758,
+        2.4571573774166167,
+        13.6578169
+      ],
+      "source_region": "mountain:face:7383:component:394"
+    },
+    {
+      "position": [
+        -17.4846434,
+        2.9014284374982373,
+        14.6329414
+      ],
+      "source_region": "mountain:face:7383:component:394"
+    },
+    {
+      "position": [
+        -17.4757157,
+        2.4611685698776338,
+        15.3504858
+      ],
+      "source_region": "mountain:face:7383:component:394"
+    },
+    {
+      "position": [
+        -16.942547,
+        1.8230723788501466,
+        16.1425348
+      ],
+      "source_region": "mountain:face:7383:component:394"
+    },
+    {
+      "position": [
+        -16.9334993,
+        1.9992695849544102,
+        12.0739555
+      ],
+      "source_region": "mountain:face:7383:component:394"
+    },
+    {
+      "position": [
+        -16.7246434,
+        2.1622405438662504,
+        11.5929414
+      ],
+      "source_region": "mountain:face:7383:component:394"
+    },
+    {
+      "position": [
+        -16.5085044,
+        1.7439707722998594,
+        11.6954137
+      ],
+      "source_region": "mountain:face:7383:component:394"
+    },
+    {
+      "position": [
+        -16.3446434,
+        1.9675644120157623,
+        16.9129414
+      ],
+      "source_region": "mountain:face:7383:component:394"
+    },
+    {
+      "position": [
+        -15.9307312,
+        0.9816346708116853,
+        28.6842674
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -15.4494836,
+        1.2402066601901842,
+        28.1519606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -15.0901543,
+        1.0744761862336858,
+        27.9463434
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -14.1095644,
+        1.6922266692415127,
+        22.3285279
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -13.9294836,
+        2.437762187435123,
+        23.2119606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -13.6102831,
+        2.230420212492029,
+        23.6957449
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -13.4482742,
+        2.7200527545131292,
+        23.0035552
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -13.3648845,
+        2.191647639349204,
+        26.0278475
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -13.1687004,
+        2.5001034701573506,
+        24.1487609
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -12.9443951,
+        2.846457421204785,
+        25.4446832
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -12.5454638,
+        2.663812946442227,
+        25.7402465
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -11.5353286,
+        2.370410744460864,
+        26.5387184
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -11.2694836,
+        2.417493339555249,
+        27.0119606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -10.74512,
+        2.206700687543117,
+        27.0181366
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -9.9150413,
+        2.677644277001429,
+        26.9029225
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -8.9894836,
+        2.9886799736481944,
+        27.7719606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -8.4913881,
+        2.8600573913995397,
+        27.682872
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -7.5981978,
+        1.7753809158415543,
+        26.9332606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -6.7094836,
+        2.0356935871500856,
+        26.6319606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -6.5649982,
+        2.019956028409726,
+        26.185561
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -5.4446531,
+        3.2771175472504925,
+        24.6540456
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -5.1894836,
+        3.336805657219635,
+        24.7319606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -5.1489199,
+        2.560756173992079,
+        25.2271019
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -4.6206113,
+        3.2145506940489312,
+        24.3098056
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -3.0734824,
+        2.338366928635545,
+        23.4053944
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -2.8262786,
+        2.2478517247661727,
+        22.9162643
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -1.0996287,
+        2.577172366496616,
+        22.3710961
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        0.0875584,
+        2.85936963122153,
+        22.1514152
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        0.7162992,
+        2.55341658825668,
+        22.2601081
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        2.9226324,
+        2.158525280633929,
+        20.5889566
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        2.9789238,
+        2.133203094415721,
+        21.4002856
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        3.1705164,
+        2.303637007083903,
+        20.9319606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        4.4542558,
+        1.6494797071593612,
+        19.8354917
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        5.649674,
+        2.383202165683338,
+        19.8119919
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        6.2105164,
+        2.3593606256539017,
+        19.7919606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        6.7691668,
+        2.187374193688147,
+        18.8184662
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        6.8935498,
+        2.7442774987283034,
+        17.8491785
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        7.6113304,
+        2.7505867547707825,
+        16.3363112
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        7.7305164,
+        2.8595035521724217,
+        16.7519606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        8.8392705,
+        2.0807369726572524,
+        12.8363672
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        9.2505164,
+        2.3952310128541887,
+        13.3319606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        9.315527,
+        1.9298767105357986,
+        11.6554452
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        9.4867283,
+        2.141675518189123,
+        13.2551069
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        10.3905164,
+        2.4196111202931245,
+        11.0519606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        12.2634101,
+        1.6989318719701654,
+        9.6071969
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        12.6220308,
+        1.9788889071072702,
+        9.2696033
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        13.2087604,
+        1.8318671207587345,
+        8.9520548
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        13.6560378,
+        2.2934755626176515,
+        0.8744432
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        13.8105164,
+        2.30393987511686,
+        0.4119606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        13.9677739,
+        2.3484255311055997,
+        4.6562222
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        13.990398,
+        2.22291258060113,
+        -6.6608823
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.0580403,
+        2.634007649950062,
+        3.648985
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.1208202,
+        1.9500132166429058,
+        -7.7069415
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.1905164,
+        2.621618166931193,
+        4.9719606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.2038926,
+        2.341382347771891,
+        4.4477313
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.2322836,
+        2.8090316730935205,
+        2.5249924
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.2686464,
+        2.2000414892829165,
+        -8.7652813
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.2862429,
+        2.376105310069675,
+        -4.9466377
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.3802444,
+        2.4791718456772354,
+        -4.3988241
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.5068167,
+        2.1068798452392046,
+        5.3902302
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.563452,
+        1.8467465537044907,
+        -5.9871852
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.5705164,
+        2.843216314549955,
+        2.6919606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.5942716,
+        2.362131245760299,
+        -11.4107841
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.6595391,
+        2.340484471349162,
+        -1.6028264
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.7495891,
+        2.2920250308188224,
+        -0.9248056
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.8474652,
+        2.213031396579149,
+        -8.5738645
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.9505164,
+        2.5967477980313314,
+        -11.3680394
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.9505164,
+        2.319793094219768,
+        -9.0880394
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        14.9505164,
+        2.618906317792271,
+        -1.4880394
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        15.3305164,
+        2.981370077729923,
+        8.7719606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        15.3855798,
+        2.3321882283309137,
+        -11.1478722
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        15.8306055,
+        2.0356421659108683,
+        -10.9479701
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        16.2089791,
+        2.350622738847633,
+        7.6138345
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        16.2182472,
+        2.1851747935585486,
+        6.2537809
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        16.2520668,
+        1.6177379239899086,
+        4.59353
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        16.342525,
+        2.1280098931334877,
+        5.1666693
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        16.4705164,
+        2.1872383757316443,
+        5.7319606
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        16.7957731,
+        2.3464583653474964,
+        -10.3242828
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        17.2305164,
+        2.4884605728612947,
+        -10.2280394
+      ],
+      "source_region": "mountain:face:900:component:0"
+    },
+    {
+      "position": [
+        -11.7796413,
+        1.3861995499424675,
+        19.7891271
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        -10.636136,
+        2.3728095725275624,
+        19.3209725
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        -10.3809455,
+        2.6682883660327477,
+        19.1779421
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        -8.1165389,
+        1.6836122774442843,
+        17.2756505
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        -7.7209455,
+        1.9262402691680038,
+        17.2779421
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        -7.318473,
+        1.9465895993565203,
+        17.4810099
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        -6.0429868,
+        1.892609230631153,
+        17.1952087
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        -5.0321119,
+        2.474083338949489,
+        17.9046629
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        -4.839294,
+        2.229968236484231,
+        17.4504726
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        -2.9955225,
+        2.870469092873409,
+        18.4478305
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        -2.4009455,
+        3.261418603240423,
+        18.7979421
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        -1.0289443,
+        2.740145418826142,
+        18.649575
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        -0.5369675,
+        1.7754730734367539,
+        18.0149293
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        -0.2591384,
+        1.9482275984426916,
+        18.5181878
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        0.6972977,
+        2.4902952633481226,
+        18.0745316
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        1.7790545,
+        2.8610275426368412,
+        17.6579421
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        1.8472343,
+        2.8331557349898726,
+        17.8188972
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        2.8608113,
+        2.494428545723991,
+        17.2413525
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        4.7562119,
+        2.358472861928481,
+        16.3687395
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        4.8190545,
+        2.6365443298754307,
+        16.1379421
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        6.7190545,
+        2.0206579060547862,
+        12.7179421
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        6.7896876,
+        1.926787797260197,
+        12.5580484
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        7.4790545,
+        1.7344939301499716,
+        8.9179421
+      ],
+      "source_region": "mountain:face:913:component:9"
+    },
+    {
+      "position": [
+        7.5931778,
+        1.7002838442620194,
+        8.8821646
+      ],
+      "source_region": "mountain:face:913:component:9"
+    }
+  ],
+  "max_triangle_outside_actual_dry_mountain_area": 9.421792327770045e-15,
+  "max_triangle_river_corridor_overlap_area": 0.0,
+  "build_seconds": 17.59527618399443,
+  "builder_sha256": "a9b231b98c950c253026b0b9edfecf24265d149a48e3d11399808aa3b106b4cb",
+  "seed": "SHA256 of frozen mountain region ID and component index",
+  "geometry_recipe": "EIGHT_OR_NINE_SPOKE_BROKEN_CROWN_SHOULDER_BUTTRESS_SECONDARY_CRAG_CONTROL_MESH",
+  "revision": 2,
+  "byte_size": 562832,
+  "claimed_scientific_acceptance": false,
+  "source_identity_mutation": false
+}

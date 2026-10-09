@@ -1,0 +1,152 @@
+{
+  "coastal_range": {
+    "base_runtime_hash": "5fe0887cc759f85c58d7fbcf44c1f9652323890258d189e0513da0b70d4d8348",
+    "board_radius": 4,
+    "content_hash": "ddbfb153ea7278c355092f7b3d5daba4d42c4363f126fdcdaba8b59263cc8009",
+    "entity_catalog": {
+      "catalog_hash": "63196246a80e86b7e33f50b51e229a0d8ed05967bc2dbc322de6b31c6fba90a6",
+      "entries": {
+        "item_travel_bundle": {
+          "description": "出发时自带的一件行礼包。可以整件放下或拾回；没有消耗、拆分、装备或特殊效果。",
+          "id": "item_travel_bundle",
+          "interaction_profile": {
+            "equip_slot": "",
+            "movable": true,
+            "schema_version": "coast_item_interaction/v1"
+          },
+          "kind": "item",
+          "name": "行礼包",
+          "quantity": 1
+        }
+      },
+      "profile_id": "natural_coast_basic/v1",
+      "schema_version": "source_entity_catalog/v1",
+      "source_identity": {
+        "content_hash": "ddbfb153ea7278c355092f7b3d5daba4d42c4363f126fdcdaba8b59263cc8009",
+        "geometry_hash": "8cce116942718a9b1d3a69f38867880b32b1b99b43d6370ffdab5763233f9ad6",
+        "source_contract": "natural_coast_source/v1",
+        "source_runtime_hash": "5fe0887cc759f85c58d7fbcf44c1f9652323890258d189e0513da0b70d4d8348"
+      }
+    },
+    "entity_catalog_hash": "63196246a80e86b7e33f50b51e229a0d8ed05967bc2dbc322de6b31c6fba90a6",
+    "entity_profile": "natural_coast_basic/v1",
+    "geometry_hash": "8cce116942718a9b1d3a69f38867880b32b1b99b43d6370ffdab5763233f9ad6",
+    "inventory_profile": "natural_coast_basic/v1",
+    "inventory_profile_hash": "38dba3a29b9c2210f84c67898c7c8091e7f201ef5c7b2f30d46bd8ddcef6d93f",
+    "navigation_content_hash": "2ff63867d8fb6623397f8c64a6c81eee0b8cdf0ac63ae9ed4af1581939087741",
+    "navigation_id": "natural_coast_mesh_sea_navigation/v1",
+    "physical_custody": {
+      "board_radius": 4,
+      "content_hash": "ddbfb153ea7278c355092f7b3d5daba4d42c4363f126fdcdaba8b59263cc8009",
+      "engine_version": "4.6.3-stable (official)",
+      "geometry_hash": "8cce116942718a9b1d3a69f38867880b32b1b99b43d6370ffdab5763233f9ad6",
+      "identity_hash": "2eee177d17c2eb6b5d3831c28435335e3075a4ad751643264cb49fd707263d93",
+      "navigation_content_hash": "2ff63867d8fb6623397f8c64a6c81eee0b8cdf0ac63ae9ed4af1581939087741",
+      "navigation_id": "v3_native_mesh_sea_clearance/v1",
+      "pipeline_sha256": "4f2fd3074008211bc7b7175b99993814e28402ad8e7f065628e62bef07f12c6e",
+      "profile": "natural_coast_source_preview/experimental2",
+      "recipe_id": "coastal_range",
+      "recipe_version": "coastal_recipes/v2_tiny_remnant_cleanup",
+      "renderer_profile": "natural_coast_shared_chain/experimental2",
+      "scope": "detached physical source custody; no gameplay adapter/save admission",
+      "seed": 726381,
+      "seed_token": "726381",
+      "shore_graph_hash": "244982e512df69108e2eb1eaf8915861d17312d2242e97315eb0bb126aa6e64d",
+      "source_contract": "natural_coast_source_custody/experimental2",
+      "source_payload_sha256": "9ec2607dc5bb8a32ddeea29dbc8afd8036b277cab165c29149ee3596a11e433f",
+      "source_schema": "coastal_source_v3/prototype1",
+      "water_clipper_profile": "exact_zero_endpoints_area_1e-12/v1",
+      "water_hash": "78fb447397eb9b71ae7929182c29edb0e434aa28e369aff8d88fdce35de29fd3"
+    },
+    "pipeline_sha256": "4f2fd3074008211bc7b7175b99993814e28402ad8e7f065628e62bef07f12c6e",
+    "profile": "natural_coast_basic/v1",
+    "projection_id": "natural_coast_basic_context/v1",
+    "recipe_id": "coastal_range",
+    "recipe_version": "coastal_recipes/v2_tiny_remnant_cleanup",
+    "renderer_profile": "natural_coast_shared_chain/experimental2",
+    "runtime_hash": "93d2ef58b0468f5c36c29a2a96ddbd368b485b3512de587adaa20533202cbe6c",
+    "seed": 726381,
+    "seed_token": "726381",
+    "shore_graph_hash": "244982e512df69108e2eb1eaf8915861d17312d2242e97315eb0bb126aa6e64d",
+    "source_contract": "natural_coast_source/v1",
+    "source_schema": "coastal_source_v3/prototype1",
+    "spawn_policy": "largest_actual_dry_component_degree_origin_lexical/v1",
+    "terrain_mapping_id": "generated_v3_biome_terrain/v1",
+    "water_hash": "78fb447397eb9b71ae7929182c29edb0e434aa28e369aff8d88fdce35de29fd3"
+  },
+  "plateau_hinterland": {
+    "base_runtime_hash": "3a29448611dc9cbba7d06f3c138c2e0741555e6ace59893edf8c970ae55bb1f2",
+    "board_radius": 4,
+    "content_hash": "a7609ba12b6266f04d0417ce6916eb2b287a869a9e0106d10d8f4bac4c93e875",
+    "entity_catalog": {
+      "catalog_hash": "7b147747b16aed41f7d889970684225ff4b2efb8c783e6006e04a541c73381a8",
+      "entries": {
+        "item_travel_bundle": {
+          "description": "出发时自带的一件行礼包。可以整件放下或拾回；没有消耗、拆分、装备或特殊效果。",
+          "id": "item_travel_bundle",
+          "interaction_profile": {
+            "equip_slot": "",
+            "movable": true,
+            "schema_version": "coast_item_interaction/v1"
+          },
+          "kind": "item",
+          "name": "行礼包",
+          "quantity": 1
+        }
+      },
+      "profile_id": "natural_coast_basic/v1",
+      "schema_version": "source_entity_catalog/v1",
+      "source_identity": {
+        "content_hash": "a7609ba12b6266f04d0417ce6916eb2b287a869a9e0106d10d8f4bac4c93e875",
+        "geometry_hash": "b049b2f60f673e13026b838865b269a7a084c3e91e27f6054755f4ba2262fc5c",
+        "source_contract": "natural_coast_source/v1",
+        "source_runtime_hash": "3a29448611dc9cbba7d06f3c138c2e0741555e6ace59893edf8c970ae55bb1f2"
+      }
+    },
+    "entity_catalog_hash": "7b147747b16aed41f7d889970684225ff4b2efb8c783e6006e04a541c73381a8",
+    "entity_profile": "natural_coast_basic/v1",
+    "geometry_hash": "b049b2f60f673e13026b838865b269a7a084c3e91e27f6054755f4ba2262fc5c",
+    "inventory_profile": "natural_coast_basic/v1",
+    "inventory_profile_hash": "38dba3a29b9c2210f84c67898c7c8091e7f201ef5c7b2f30d46bd8ddcef6d93f",
+    "navigation_content_hash": "6c62eb096ea6a69df4aa04b9fecc85a3f99f1cf392020026bf139502da62aace",
+    "navigation_id": "natural_coast_mesh_sea_navigation/v1",
+    "physical_custody": {
+      "board_radius": 4,
+      "content_hash": "a7609ba12b6266f04d0417ce6916eb2b287a869a9e0106d10d8f4bac4c93e875",
+      "engine_version": "4.6.3-stable (official)",
+      "geometry_hash": "b049b2f60f673e13026b838865b269a7a084c3e91e27f6054755f4ba2262fc5c",
+      "identity_hash": "a83eddb95f41cd7e3f4cf1b4a2fc61df134e13b25e0039168872667c39660c77",
+      "navigation_content_hash": "6c62eb096ea6a69df4aa04b9fecc85a3f99f1cf392020026bf139502da62aace",
+      "navigation_id": "v3_native_mesh_sea_clearance/v1",
+      "pipeline_sha256": "4f2fd3074008211bc7b7175b99993814e28402ad8e7f065628e62bef07f12c6e",
+      "profile": "natural_coast_source_preview/experimental2",
+      "recipe_id": "plateau_hinterland",
+      "recipe_version": "coastal_recipes/v2_tiny_remnant_cleanup",
+      "renderer_profile": "natural_coast_shared_chain/experimental2",
+      "scope": "detached physical source custody; no gameplay adapter/save admission",
+      "seed": 726381,
+      "seed_token": "726381",
+      "shore_graph_hash": "8b866d1340d08f31a147237072715a04a67c072447f375dedb71971c7251fd70",
+      "source_contract": "natural_coast_source_custody/experimental2",
+      "source_payload_sha256": "14d60501e22a385a9751a7916c466d1f5261ae226e241e7ff10d19ee5e992d7b",
+      "source_schema": "coastal_source_v3/prototype1",
+      "water_clipper_profile": "exact_zero_endpoints_area_1e-12/v1",
+      "water_hash": "f94bd5a617b9c8956435dada829a91d20f610518e805b28a8123550e71f1fa0e"
+    },
+    "pipeline_sha256": "4f2fd3074008211bc7b7175b99993814e28402ad8e7f065628e62bef07f12c6e",
+    "profile": "natural_coast_basic/v1",
+    "projection_id": "natural_coast_basic_context/v1",
+    "recipe_id": "plateau_hinterland",
+    "recipe_version": "coastal_recipes/v2_tiny_remnant_cleanup",
+    "renderer_profile": "natural_coast_shared_chain/experimental2",
+    "runtime_hash": "98416ece0d4138720f3bc646177cb70dbf4f1ca0a06630a19069ec9029dc3210",
+    "seed": 726381,
+    "seed_token": "726381",
+    "shore_graph_hash": "8b866d1340d08f31a147237072715a04a67c072447f375dedb71971c7251fd70",
+    "source_contract": "natural_coast_source/v1",
+    "source_schema": "coastal_source_v3/prototype1",
+    "spawn_policy": "largest_actual_dry_component_degree_origin_lexical/v1",
+    "terrain_mapping_id": "generated_v3_biome_terrain/v1",
+    "water_hash": "f94bd5a617b9c8956435dada829a91d20f610518e805b28a8123550e71f1fa0e"
+  }
+}

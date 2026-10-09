@@ -1,0 +1,61 @@
+extends SceneTree
+const Main = preload("res://main.tscn")
+const C = preload("res://core/ai_gm_rebuilt/canonical.gd")
+var scene
+var n := 0
+var failed: Array[String] = []
+func check(value: bool, label_: String) -> void:
+	n+=1
+	if not value: failed.append(label_); printerr("FAIL: "+label_)
+func _initialize() -> void: call_deferred("run")
+func run() -> void:
+	scene = Main.instantiate(); root.add_child(scene)
+	await process_frame
+	check(scene.coast_mode and scene.playtest_mode,"default enters same-main r24 adventure")
+	check(scene.board.tiles.size()==1801 and scene.board.token_nodes.size()==3,"real map and three actors in main")
+	check(scene.board.world_view.total_instances==7261,"worldwide legal-root canopy cache enabled")
+	check(is_instance_valid(scene.board.river_overlay),"river installed in same main world")
+	for h in ["-6,8","-7,9"]: check(not scene.playtest.state_copy().hexes[h].ground_blocked,"river land cell not globally blocked "+h)
+	check(scene.board.load_error.is_empty(),"runtime render cache valid "+scene.board.load_error)
+	check(scene.board.world_view.compact_triangles==65977,"compact source renderer active")
+	check(scene.board.world_view.content_root.scale==Vector3.ONE,"source coordinates unchanged")
+	var original := C.bytes(scene.playtest.state_copy())
+	scene.on_hex_selected(Vector2i(-2,15))
+	check(scene.selected_focus.kind=="tile" and scene.active_action.is_empty() and C.bytes(scene.playtest.state_copy())==original,"real tile attention does not execute")
+	scene._apply_focus({"world_id":scene.playtest.state_copy().world_id,"kind":"actor","id":"actor_keeper","hex":[-1,15]})
+	check(scene.selected_focus.id=="actor_keeper" and scene.active_action.is_empty(),"real actor focus does not execute")
+	scene.fill_coast_sample("move")
+	check(scene.goal.text.begins_with("【署名样例】") and scene.active_action.is_empty(),"sample button only writes text")
+	scene.submit_action()
+	check(scene.playtest.phase()=="awaiting_assessment" and scene.current_request.context.attention_focus.id=="actor_keeper","submitted text and focus frozen")
+	scene.switch_playtest(false)
+	check(scene.coast_mode,"cannot switch away with unfinished action")
+	scene.cancel_pending()
+	check(scene.playtest.phase()=="idle" and C.bytes(scene.playtest.state_copy())==original,"cancel leaves exact world unchanged")
+	for kind in ["move","observe","talk","rest"]:
+		scene.fill_coast_sample(kind); scene.submit_action(); scene.playtest_fixture()
+		check(scene.playtest.phase()=="ready_roll",kind+" main buttons prepare")
+		if scene.playtest.phase()!="ready_roll": break
+		scene.advance_playtest()
+		check(scene.playtest.phase()=="rolled" and scene.cancel_button.disabled,kind+" resolves once and disables cancel")
+		scene.advance_playtest()
+		check(scene.playtest.phase()=="staged" and scene.playtest_panel.authority.text.contains("暂存未提交"),kind+" stage shown separately")
+		var prior: int = scene.playtest.state_copy().turn
+		scene.save_game(); scene.load_game()
+		check(scene.playtest.phase()=="staged",kind+" actual main staged save/load")
+		scene.advance_playtest()
+		check(scene.playtest.phase()=="idle" and scene.playtest.state_copy().turn==prior+1,kind+" commits once in main")
+		check(scene.board.world_state==scene.playtest.state_copy(),kind+" rendered actors share authoritative state")
+	var saved_coast := C.bytes(scene.playtest.state_copy())
+	scene.board.reset_camera()
+	check(scene.board.world_view.overview and scene.board.camera.projection==Camera3D.PROJECTION_ORTHOGONAL and absf(scene.board.camera.global_basis.z.y-1)<0.0001,"whole map exactly vertical orthographic")
+	scene.board.focus_player()
+	check(not scene.board.world_view.overview and scene.board.camera.size>=4,"bounded local camera")
+	scene.switch_playtest(true)
+	check(not scene.coast_mode and scene.playtest_mode and scene.board.tiles.size()==19,"19-cell regression mode retained")
+	scene.switch_playtest(false)
+	check(not scene.playtest_mode and scene.board.tiles.size()==61,"original v9 retained")
+	scene.switch_coast()
+	check(scene.coast_mode and C.bytes(scene.playtest.state_copy())==saved_coast,"coast progress survives mode roundtrip")
+	print("PLAYABLE MAIN ",n-failed.size(),"/",n)
+	scene.free(); quit(0 if failed.is_empty() else 1)

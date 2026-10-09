@@ -1,0 +1,114 @@
+{
+  "schema": "v26_adoption_mapping/v1",
+  "version": "v26",
+  "base": "v24",
+  "status": "adopted",
+  "utc": "2026-10-05T19:44:11.069351+00:00",
+  "withdrawn_v25_remains_withdrawn": true,
+  "production_files": [
+    {
+      "path": "view/playable_build/entity_selection.gd",
+      "before_sha256": "2d9dacd49933e78c0705b1bb84292445910107b82d0739f2482254db301a8f99",
+      "after_sha256": "832d82a08943f0297b384d96332fed466015e3ea0a0d21c30a56c33a482cd010",
+      "bytes": 15827
+    },
+    {
+      "path": "view/integrated_ecology_world/natural_shorelines/shore_layer.gd",
+      "before_sha256": "ee6e1d32c7b09a71e445f6a0d08494140ecc8f84373d1d4ac239184bbb005e0e",
+      "after_sha256": "77037a2762f592c8cb526a2b9851faaae313e9a7288eb12ccffc6c3e1f2bdafe",
+      "bytes": 10471
+    },
+    {
+      "path": "view/integrated_ecology_world/lighting_profile/miniature_profile.gd",
+      "before_sha256": "1a3ad4b20bd5768e9f856082310342ff211ace4e97d33a86533a1b6e351d73a8",
+      "after_sha256": "017af01cd7ecc7ae2309cdec352d58acf7b8a7005c2a7d3b2c4a1942ce39f727",
+      "bytes": 6548
+    },
+    {
+      "path": "view/integrated_ecology_world/performance_variant/whole_canopies_loader.gd",
+      "before_sha256": null,
+      "after_sha256": "476679ce4cff6e7589102e10252433e919279a555897da02e883750ebd3ffd94",
+      "bytes": 876
+    },
+    {
+      "path": "view/integrated_ecology_world/performance_variant/world_view66.gd",
+      "before_sha256": "0b880bd1be6df43a22a241d6fa187681e8dc97c49d4f2b3b7b097de1bd3bd906",
+      "after_sha256": "6a5e7a73f81bb6471d8ffcccab93fc009084bc3119d6d5cfd912fd27afc1a9f8",
+      "bytes": 17338
+    }
+  ],
+  "strict_v1_whole_canopies_sha256": "3426c4617148977022d23226ff858684c5b0a329bf72a24fb8129b106f48a86f",
+  "identity_mapping": "Canonical production bytes exactly equal the independently tested candidate; version label is not a new engine run. All other production/source resources are exact v24 copies.",
+  "source_copy_file_count": 4594,
+  "gates": {
+    "assets": {
+      "passed": 33,
+      "exit": 0,
+      "seconds": 0.2523,
+      "log_sha256": "bb653398ebbf3bd2deb5098dc0da5f1ef1934b327f58ea4bc5cf34981544b889",
+      "guard_sha256": "19ef6bf5d3c82ed6554e5d5c19c5f958eeef1c11bd708b20370d854964b0d562",
+      "warnings": []
+    },
+    "component": {
+      "passed": 63,
+      "exit": 0,
+      "seconds": 2.8716,
+      "log_sha256": "9843691bd6ad5dce5009a2c9ce4b2f2fc9959136955847dcfd65a4f651e79a83",
+      "guard_sha256": "66c34a753da05055c007af99f2d74b19a3bf5d9a3fdd3afdfcbf98211eb5beb3",
+      "warnings": []
+    },
+    "equipment": {
+      "passed": 47,
+      "exit": 0,
+      "seconds": 64.4762,
+      "log_sha256": "713974642dab187205824cf060088f45071df2e903fd2644a580eb3b0b323d9b",
+      "guard_sha256": "fe711936771581a69bd228fd37583da677e3cfeeff0b440846cd192f1a8a39de",
+      "warnings": []
+    },
+    "fallen": {
+      "passed": 61,
+      "exit": 0,
+      "seconds": 32.3664,
+      "log_sha256": "88f1b145f74d690e044ce92c4e856aed6086fac8f8d591a47adc136734489c0d",
+      "guard_sha256": "ea75b194fa421cec65411fb3486202aa39288f3d772ecb1d6823412988ebf792",
+      "warnings": [
+        "WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver."
+      ]
+    },
+    "capture": {
+      "passed": 98,
+      "exit": 0,
+      "seconds": 29.688,
+      "log_sha256": "8c9a341627f5386d3d546a71a782dbaec3b02ea6b3393b81acc959101e7d53eb",
+      "guard_sha256": "47d02dbefa44bfe048b36053ec14567a65e61c79bda7a7a68fcf5a028f973c9b",
+      "warnings": [
+        "WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver."
+      ]
+    },
+    "hud": {
+      "passed": 48,
+      "exit": 0,
+      "seconds": 44.9837,
+      "log_sha256": "3fa74430f2a06f3376b95d4fbda5c2ce49be6d1fdc38905646ca60505373f5ea",
+      "guard_sha256": "4d7fa2c68dff9d1bbc0a302b042eb1eb016421da5e01c8d5d337bce93abd795e",
+      "warnings": []
+    },
+    "permanent_legacy": {
+      "passed": 51,
+      "exit": 0,
+      "seconds": 65.6956,
+      "log_sha256": "65676f4ae4c94cd81d6c4ea8b42202ebcbed2e38cf4bf7d130fef4dad76eded1",
+      "guard_sha256": "67c4a288361d674678a4fb60e877f8b64bbf6aead8e35dc0258f7affb2a8ea56",
+      "warnings": []
+    }
+  },
+  "independent_acceptance_sha256": "b35b099ccf65ab14bcdb1b889ff78d8c2f3ed369f8663efc56002828e70f74fd",
+  "full_original_save_sha256": "bf0815e9b3ee265c8df90a0ace21840c02600708c9e9b669ff608e010788e3d3",
+  "complete_original_save_equal_native_output": true,
+  "asset_catalog_context_ids_layout_unchanged": true,
+  "C_UI_three_png_rgba_pairs_equal_v24": true,
+  "pins_relaxed": false,
+  "saved_data_migrated": false,
+  "no_new_status_or_river_overlay": true,
+  "RAM_or_FPS_gain_claimed_by_this_fix": false
+}

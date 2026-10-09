@@ -1,0 +1,139 @@
+{
+  "assets_hash": "e45d89c49388c1e601e8b09405ad9a183366a2578598b2aa4b2df4c24b19fade",
+  "checks": [
+    {
+      "name": "strict frozen-v1 assets build",
+      "passed": true
+    },
+    {
+      "name": "explicit verified-v24 asset snapshot is available",
+      "passed": true
+    },
+    {
+      "name": "complete prior asset catalog including pins/hash byte-identical",
+      "passed": true
+    },
+    {
+      "name": "temperate full_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "temperate far_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "temperate root_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "temperate solid_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "temperate canopy_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "tropical full_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "tropical far_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "tropical root_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "tropical solid_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "tropical canopy_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "sapling full_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "sapling far_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "sapling root_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "sapling solid_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "sapling canopy_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "shrub full_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "shrub far_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "shrub root_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "shrub solid_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "shrub canopy_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "tuft full_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "tuft far_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "tuft root_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "tuft solid_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "tuft canopy_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "reed full_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "reed far_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "reed root_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "reed solid_vertices raw native bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "reed canopy_vertices raw native bytes unchanged",
+      "passed": true
+    }
+  ],
+  "failures": 0,
+  "result_code": ""
+}

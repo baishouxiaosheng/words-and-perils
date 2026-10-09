@@ -1,0 +1,35 @@
+extends SceneTree
+const Generator=preload("res://core/world_generation_v3/generator.gd")
+const Old=preload("res://view/generated_v3_village/adapter.gd")
+const Adapter=preload("res://view/generated_v3_npc/adapter.gd")
+const Residency=preload("res://view/generated_v3_npc/render_residency.gd")
+const C=preload("res://core/ai_gm_rebuilt/canonical.gd")
+var checks=0
+var failures=[]
+func _initialize():call_deferred("run")
+func check(ok:bool,label:String):
+	checks+=1
+	if not ok:failures.append(label);printerr("RESIDENCY_FAIL ",label)
+func run():
+	var generated:Dictionary=Generator.generate(726381,4,"coastal_range")
+	var old=Old.new(generated.source);var npc=Adapter.new(generated.source)
+	check(old.ready().ok and npc.ready().ok,"both source authorities ready")
+	var old_save=C.bytes(old.save_data());var new_save=C.bytes(npc.save_data())
+	var nav=C.bytes(old.source.navigation.export_data(old.source.world.actors.actor_player.hex))
+	var mesh_id:int=old.source.renderer_bundle.ground_mesh.get_instance_id()
+	check(Residency.reuse(old.source,npc.source),"same exact source native resources shared")
+	check(npc.source.renderer_bundle.ground_mesh.get_instance_id()==mesh_id,"raw mesh resource identity reused")
+	check(C.bytes(old.save_data())==old_save and C.bytes(npc.save_data())==new_save,"sharing preserves both full authorities")
+	check(Residency.suspend(old.source) and old.source.renderer_bundle.is_empty(),"inactive renderer released")
+	check(old.ready().ok and C.bytes(old.save_data())==old_save and C.bytes(old.source.navigation.export_data(old.source.world.actors.actor_player.hex))==nav,"parked readiness serialization navigation remain exact")
+	check(not npc.source.renderer_bundle.is_empty() and npc.source.renderer_bundle.ground_mesh.get_instance_id()==mesh_id,"other source alias remains resident")
+	check(Residency.ensure(old.source).ok and Residency.native_mesh_hash(old.source.renderer_bundle.ground_mesh)==old.source.identity.geometry_hash,"return reproduces actual original native geometry")
+	check(C.bytes(old.save_data())==old_save and C.bytes(npc.save_data())==new_save,"rebuild cannot modify world or RNG")
+	var corrupt:Dictionary=old.source.renderer_bundle.duplicate(false);old.source.renderer_bundle.erase("source_hash")
+	check(not Residency.ensure(old.source).ok and not Residency.reuse(npc.source,old.source),"missing cache identity rejects rather than silently replacing")
+	old.source.renderer_bundle.clear();old.source.renderer_bundle.merge(corrupt,true)
+	var other_generated:Dictionary=Generator.generate(726381,4,"plateau_hinterland");var other=Old.new(other_generated.source)
+	check(not Residency.reuse(other.source,npc.source),"different source never shares wrong geometry")
+	DirAccess.make_dir_recursive_absolute("res://artifacts/generated_v3_npc")
+	FileAccess.open("res://artifacts/generated_v3_npc/residency_report.json",FileAccess.WRITE).store_string(JSON.stringify({"checks":checks,"failures":failures,"ok":failures.is_empty()},"\t"))
+	print("NPC_RESIDENCY ",checks," ",failures);quit(0 if failures.is_empty() else 1)

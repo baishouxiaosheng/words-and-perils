@@ -1,0 +1,10 @@
+{
+  "duration_s": 36.0453,
+  "peak_observed_process_vm_hwm_mib": 1191.578125,
+  "peak_observed_cgroup_mib": 7069.5078125,
+  "stop_threshold_mib": 7680.0,
+  "native_exit": 0,
+  "parse_exit": 0,
+  "native_check_count": 53,
+  "native_failures": []
+}

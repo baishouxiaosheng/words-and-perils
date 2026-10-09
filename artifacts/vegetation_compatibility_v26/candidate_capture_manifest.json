@@ -1,0 +1,849 @@
+{
+  "actual_coast_cells": 1801,
+  "actual_coast_mode": true,
+  "captures": [
+    {
+      "action_safe_rect": [
+        36.0,
+        205.0,
+        1596.0,
+        542.0
+      ],
+      "actual_window_pixels": [
+        1920,
+        1080
+      ],
+      "capture_kind": "native_window_framebuffer_no_resampling",
+      "panels": {
+        "AreaTitle": {
+          "rect": [
+            26.0,
+            26.0,
+            270.0,
+            87.0
+          ],
+          "visible": true
+        },
+        "CharacterStatus": {
+          "rect": [
+            26.0,
+            899.0,
+            264.0,
+            155.0
+          ],
+          "visible": true
+        },
+        "DialogueDock": {
+          "rect": [
+            540.0,
+            779.0,
+            840.0,
+            275.0
+          ],
+          "visible": true
+        },
+        "HistoryPanel": {
+          "rect": [
+            540.0,
+            449.0,
+            840.0,
+            320.0
+          ],
+          "visible": false
+        },
+        "MapControls": {
+          "rect": [
+            1664.0,
+            26.0,
+            230.0,
+            260.0
+          ],
+          "visible": true
+        }
+      },
+      "png_pixels": [
+        1920,
+        1080
+      ],
+      "rendered_image_pixels": [
+        1920,
+        1080
+      ],
+      "requested_pixels": [
+        1920,
+        1080
+      ],
+      "root_viewport_pixels": [
+        1920.0,
+        1080.0
+      ],
+      "scenario": "ui_default",
+      "visible_creative_labels": 0,
+      "world_labels": {
+        "gameplay_writes": false,
+        "hidden_due_density": [
+          "settlement:natural-shore-v03-2f6a1a215a0d44a374f01c4a:south_watch_v1"
+        ],
+        "hud_obstacles": 4,
+        "max_shift_px": 86.4,
+        "overlap_count": 0,
+        "policy": "selected_actor,player,actors,settlements,landmarks; selected objects only",
+        "visible_labels": [
+          {
+            "id": "actor_player",
+            "kind": "actor",
+            "rect": [
+              890.769714355469,
+              425.446380615234,
+              138.460632324219,
+              45.497802734375
+            ],
+            "shift_px": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "actor_keeper",
+            "kind": "actor",
+            "rect": [
+              945.18212890625,
+              692.541442871094,
+              138.460693359375,
+              45.4977416992188
+            ],
+            "shift_px": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "actor_scout",
+            "kind": "actor",
+            "rect": [
+              639.627746582031,
+              608.468383789062,
+              138.460632324219,
+              45.4977416992188
+            ],
+            "shift_px": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "settlement:natural-shore-v03-2f6a1a215a0d44a374f01c4a:ridge_village_v1",
+            "kind": "settlement",
+            "rect": [
+              51.088939666748,
+              511.955932617188,
+              93.3201599121094,
+              50.1201782226562
+            ],
+            "shift_px": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "shore_landmark_lamp",
+            "kind": "landmark",
+            "rect": [
+              1088.01696777344,
+              589.884338378906,
+              148.400024414062,
+              45.8001708984375
+            ],
+            "shift_px": [
+              0.0,
+              -53.8001708984375
+            ]
+          }
+        ]
+      },
+      "world_viewport_pixels": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "action_safe_rect": [
+        36.0,
+        205.0,
+        1596.0,
+        506.0
+      ],
+      "actual_window_pixels": [
+        1920,
+        1080
+      ],
+      "capture_kind": "native_window_framebuffer_no_resampling",
+      "panels": {
+        "AreaTitle": {
+          "rect": [
+            26.0,
+            26.0,
+            270.0,
+            87.0
+          ],
+          "visible": true
+        },
+        "CharacterStatus": {
+          "rect": [
+            26.0,
+            899.0,
+            264.0,
+            155.0
+          ],
+          "visible": true
+        },
+        "DialogueDock": {
+          "rect": [
+            540.0,
+            743.0,
+            840.0,
+            311.0
+          ],
+          "visible": true
+        },
+        "HistoryPanel": {
+          "rect": [
+            540.0,
+            413.0,
+            840.0,
+            320.0
+          ],
+          "visible": false
+        },
+        "MapControls": {
+          "rect": [
+            1664.0,
+            26.0,
+            230.0,
+            260.0
+          ],
+          "visible": true
+        }
+      },
+      "png_pixels": [
+        1920,
+        1080
+      ],
+      "rendered_image_pixels": [
+        1920,
+        1080
+      ],
+      "requested_pixels": [
+        1920,
+        1080
+      ],
+      "root_viewport_pixels": [
+        1920.0,
+        1080.0
+      ],
+      "scenario": "ui_expanded_input",
+      "visible_creative_labels": 0,
+      "world_labels": {
+        "gameplay_writes": false,
+        "hidden_due_density": [
+          "settlement:natural-shore-v03-2f6a1a215a0d44a374f01c4a:south_watch_v1"
+        ],
+        "hud_obstacles": 4,
+        "max_shift_px": 86.4,
+        "overlap_count": 0,
+        "policy": "selected_actor,player,actors,settlements,landmarks; selected objects only",
+        "visible_labels": [
+          {
+            "id": "actor_player",
+            "kind": "actor",
+            "rect": [
+              890.769714355469,
+              425.446380615234,
+              138.460632324219,
+              45.497802734375
+            ],
+            "shift_px": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "actor_keeper",
+            "kind": "actor",
+            "rect": [
+              945.181945800781,
+              639.043518066406,
+              138.460632324219,
+              45.497802734375
+            ],
+            "shift_px": [
+              0.0,
+              -53.4976806640625
+            ]
+          },
+          {
+            "id": "actor_scout",
+            "kind": "actor",
+            "rect": [
+              639.627746582031,
+              608.468383789062,
+              138.460632324219,
+              45.4977416992188
+            ],
+            "shift_px": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "settlement:natural-shore-v03-2f6a1a215a0d44a374f01c4a:ridge_village_v1",
+            "kind": "settlement",
+            "rect": [
+              51.088939666748,
+              511.955932617188,
+              93.3201599121094,
+              50.1201782226562
+            ],
+            "shift_px": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "shore_landmark_lamp",
+            "kind": "landmark",
+            "rect": [
+              1141.8173828125,
+              643.684387207031,
+              148.400024414062,
+              45.8001098632812
+            ],
+            "shift_px": [
+              53.8001708984375,
+              0.0
+            ]
+          }
+        ]
+      },
+      "world_viewport_pixels": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "action_safe_rect": [
+        328.0,
+        96.0,
+        1304.0,
+        257.0
+      ],
+      "actual_window_pixels": [
+        1920,
+        1080
+      ],
+      "capture_kind": "native_window_framebuffer_no_resampling",
+      "panels": {
+        "AreaTitle": {
+          "rect": [
+            26.0,
+            26.0,
+            270.0,
+            87.0
+          ],
+          "visible": true
+        },
+        "CharacterStatus": {
+          "rect": [
+            26.0,
+            899.0,
+            264.0,
+            155.0
+          ],
+          "visible": true
+        },
+        "DialogueDock": {
+          "rect": [
+            540.0,
+            715.0,
+            840.0,
+            339.0
+          ],
+          "visible": true
+        },
+        "HistoryPanel": {
+          "rect": [
+            540.0,
+            385.0,
+            840.0,
+            320.0
+          ],
+          "visible": true
+        },
+        "MapControls": {
+          "rect": [
+            1664.0,
+            26.0,
+            230.0,
+            260.0
+          ],
+          "visible": true
+        }
+      },
+      "png_pixels": [
+        1920,
+        1080
+      ],
+      "rendered_image_pixels": [
+        1920,
+        1080
+      ],
+      "requested_pixels": [
+        1920,
+        1080
+      ],
+      "root_viewport_pixels": [
+        1920.0,
+        1080.0
+      ],
+      "scenario": "ui_long_history",
+      "visible_creative_labels": 0,
+      "world_labels": {
+        "gameplay_writes": false,
+        "hidden_due_density": [
+          "actor_player",
+          "actor_keeper",
+          "actor_scout",
+          "settlement:natural-shore-v03-2f6a1a215a0d44a374f01c4a:south_watch_v1",
+          "shore_landmark_lamp"
+        ],
+        "hud_obstacles": 5,
+        "max_shift_px": 86.4,
+        "overlap_count": 0,
+        "policy": "selected_actor,player,actors,settlements,landmarks; selected objects only",
+        "visible_labels": [
+          {
+            "id": "settlement:natural-shore-v03-2f6a1a215a0d44a374f01c4a:ridge_village_v1",
+            "kind": "settlement",
+            "rect": [
+              51.088939666748,
+              511.955932617188,
+              93.3201599121094,
+              50.1201782226562
+            ],
+            "shift_px": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "world_viewport_pixels": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "native body size follows new type ramp",
+      "passed": true
+    },
+    {
+      "name": "compact history caption contains no compressed arrow ornament",
+      "passed": true
+    },
+    {
+      "name": "default: primary button stays circular",
+      "passed": true
+    },
+    {
+      "name": "default: two-line caption has horizontal inner-face clearance",
+      "passed": true
+    },
+    {
+      "name": "default: two-line caption has vertical inner-face clearance",
+      "passed": true
+    },
+    {
+      "name": "default: primary stays vertically centered beside writing",
+      "passed": true
+    },
+    {
+      "name": "C capture is actual complete1801-cell coast",
+      "passed": true
+    },
+    {
+      "name": "ui_default: action framing retains a useful safe area",
+      "passed": true
+    },
+    {
+      "name": "ui_default: action safe area avoids AreaTitle",
+      "passed": true
+    },
+    {
+      "name": "ui_default: action safe area avoids MapControls",
+      "passed": true
+    },
+    {
+      "name": "ui_default: action safe area avoids CharacterStatus",
+      "passed": true
+    },
+    {
+      "name": "ui_default: action safe area avoids DialogueDock",
+      "passed": true
+    },
+    {
+      "name": "ui_default: rendered and PNG pixels equal requested size",
+      "passed": true
+    },
+    {
+      "name": "ui_default: actual window size matches request",
+      "passed": true
+    },
+    {
+      "name": "ui_default: world renders at 1:1 client pixels",
+      "passed": true
+    },
+    {
+      "name": "ui_default: world fills client without letterbox",
+      "passed": true
+    },
+    {
+      "name": "ui_default: AreaTitle stays inside client",
+      "passed": true
+    },
+    {
+      "name": "ui_default: MapControls stays inside client",
+      "passed": true
+    },
+    {
+      "name": "ui_default: CharacterStatus stays inside client",
+      "passed": true
+    },
+    {
+      "name": "ui_default: DialogueDock stays inside client",
+      "passed": true
+    },
+    {
+      "name": "ui_default: hero and dialogue do not overlap",
+      "passed": true
+    },
+    {
+      "name": "ui_default: writing and submit remain reachable",
+      "passed": true
+    },
+    {
+      "name": "ui_default: EndTurn has at least 32px pointer target",
+      "passed": true
+    },
+    {
+      "name": "ui_default: HistoryToggle has at least 32px pointer target",
+      "passed": true
+    },
+    {
+      "name": "ui_default: HUD_quill has at least 32px pointer target",
+      "passed": true
+    },
+    {
+      "name": "ui_default: AdventureMenu has at least 32px pointer target",
+      "passed": true
+    },
+    {
+      "name": "ui_default: visible world names do not overlap",
+      "passed": true
+    },
+    {
+      "name": "ui_default: unselected small objects add no permanent name clutter",
+      "passed": true
+    },
+    {
+      "name": "expanded_input: primary button stays circular",
+      "passed": true
+    },
+    {
+      "name": "expanded_input: two-line caption has horizontal inner-face clearance",
+      "passed": true
+    },
+    {
+      "name": "expanded_input: two-line caption has vertical inner-face clearance",
+      "passed": true
+    },
+    {
+      "name": "expanded_input: primary stays vertically centered beside writing",
+      "passed": true
+    },
+    {
+      "name": "expanded text field can grow without stretching the turn circle",
+      "passed": true
+    },
+    {
+      "name": "C capture is actual complete1801-cell coast",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: action framing retains a useful safe area",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: action safe area avoids AreaTitle",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: action safe area avoids MapControls",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: action safe area avoids CharacterStatus",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: action safe area avoids DialogueDock",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: rendered and PNG pixels equal requested size",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: actual window size matches request",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: world renders at 1:1 client pixels",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: world fills client without letterbox",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: AreaTitle stays inside client",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: MapControls stays inside client",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: CharacterStatus stays inside client",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: DialogueDock stays inside client",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: hero and dialogue do not overlap",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: writing and submit remain reachable",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: EndTurn has at least 32px pointer target",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: HistoryToggle has at least 32px pointer target",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: HUD_quill has at least 32px pointer target",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: AdventureMenu has at least 32px pointer target",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: visible world names do not overlap",
+      "passed": true
+    },
+    {
+      "name": "ui_expanded_input: unselected small objects add no permanent name clutter",
+      "passed": true
+    },
+    {
+      "name": "history retains the complete long narrative",
+      "passed": true
+    },
+    {
+      "name": "bounded preview preserves the full-text tooltip",
+      "passed": true
+    },
+    {
+      "name": "open history has a concise stable-width action label",
+      "passed": true
+    },
+    {
+      "name": "history: primary button stays circular",
+      "passed": true
+    },
+    {
+      "name": "history: two-line caption has horizontal inner-face clearance",
+      "passed": true
+    },
+    {
+      "name": "history: two-line caption has vertical inner-face clearance",
+      "passed": true
+    },
+    {
+      "name": "history: primary stays vertically centered beside writing",
+      "passed": true
+    },
+    {
+      "name": "C capture is actual complete1801-cell coast",
+      "passed": true
+    },
+    {
+      "name": "C history remains selectable",
+      "passed": true
+    },
+    {
+      "name": "C history exposes a real long-text scrollbar",
+      "passed": true
+    },
+    {
+      "name": "C history reaches later paragraphs",
+      "passed": true
+    },
+    {
+      "name": "C history closes",
+      "passed": true
+    },
+    {
+      "name": "C history reopen keeps exact prose",
+      "passed": true
+    },
+    {
+      "name": "C history has no per-line highlight backgrounds",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: action framing retains a useful safe area",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: action safe area avoids AreaTitle",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: action safe area avoids MapControls",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: action safe area avoids CharacterStatus",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: action safe area avoids DialogueDock",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: action safe area avoids HistoryPanel",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: rendered and PNG pixels equal requested size",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: actual window size matches request",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: world renders at 1:1 client pixels",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: world fills client without letterbox",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: AreaTitle stays inside client",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: MapControls stays inside client",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: CharacterStatus stays inside client",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: DialogueDock stays inside client",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: HistoryPanel stays inside client",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: hero and dialogue do not overlap",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: writing and submit remain reachable",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: history stays above dialogue",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: EndTurn has at least 32px pointer target",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: HistoryToggle has at least 32px pointer target",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: HUD_quill has at least 32px pointer target",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: AdventureMenu has at least 32px pointer target",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: visible world names do not overlap",
+      "passed": true
+    },
+    {
+      "name": "ui_long_history: unselected small objects add no permanent name clutter",
+      "passed": true
+    },
+    {
+      "name": "restored: primary button stays circular",
+      "passed": true
+    },
+    {
+      "name": "restored: two-line caption has horizontal inner-face clearance",
+      "passed": true
+    },
+    {
+      "name": "restored: two-line caption has vertical inner-face clearance",
+      "passed": true
+    },
+    {
+      "name": "restored: primary stays vertically centered beside writing",
+      "passed": true
+    },
+    {
+      "name": "visual review does not change authoritative world facts",
+      "passed": true
+    }
+  ],
+  "display_server": "X11",
+  "failures": 0,
+  "physical_dpi_verified": false,
+  "requested_pixels": [
+    1920,
+    1080
+  ],
+  "scope": "actual_game_HUD_after_typography_revision",
+  "source_bundle_id": "natural-shore-v03-2f6a1a215a0d44a374f01c4a"
+}

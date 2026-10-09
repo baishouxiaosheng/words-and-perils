@@ -1,0 +1,38 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "ack",
+  "task_id": "WP-RAW-READBACK-VERIFY-20261009-003",
+  "task_sha256": "ab7b82befd9ffd776e0fd62ace229f6dd3f1f839691a70391d50881ab8ada078",
+  "attempt_id": "attempt-001",
+  "intake_commit": "6f10c42a80b6ffbc8d43efa96b96ecb73cd17872",
+  "status": "acknowledged",
+  "automation_enabled": true,
+  "summary": "All10 frozen inputs and formal layered public-v30 host/resources verified; unique claim readback verified. Separate Raw test-only task, no original production edits or predecessor rerun.",
+  "source_hashes": {
+    "project.godot": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd",
+    "core/ai_gm_rebuilt/engine.gd": "f609fbf0bf717568c2429578bf4cde3eecf9a7aa806546c1d75c8dabdb0a4ef5",
+    "core/ai_gm_rebuilt/canonical.gd": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c",
+    "tests/experimental/ai_gm_rebuilt/story_fixture.gd": "e187f474d35e5110c2e840c389c35c208fa83e3d81663efccca075826dfd9520",
+    "view/generated_natural_coast_basic/authority_inputs.gd": "23c4872180595c05398dc69909c8d7a4adbf2cbcb7f584f36bac0254c8822669",
+    "view/ai_gm_playtest/adapter.gd": "a0d2149c309c7cbcf002b915bd8084bd9735c4c91ea97da4b78774f23ce7ba76",
+    "view/playable_build/adapter.gd": "d7a49926e11846735492c24d790e9c1b6c677b2df841231510667ae79387ad5e",
+    "core/ai_gm_rebuilt/traversal_policy.gd": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+    "tests/t03_raw_readback/io_probe.gd": "973daa46c3360a06bc1b667a89c15929ddd1ec7f820ea097f12d798f18e0e609",
+    "tests/t03_raw_readback/test_save_file.gd": "6f2f6fadf6bd171e601c89819cb77530ab7c761c714c37fe64d51abf72103492"
+  },
+  "checks": [
+    {
+      "input_rows": 10,
+      "host_files": 2324,
+      "runtime_resource_pins": 876,
+      "baseline_variant": "BASELINE_VARIANT_PUBLIC_V30",
+      "claim_commit": "9ed0a8e32270032a58287d787c08b7229d1b49e4"
+    }
+  ],
+  "blockers": [],
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  },
+  "candidate_adopted": false
+}

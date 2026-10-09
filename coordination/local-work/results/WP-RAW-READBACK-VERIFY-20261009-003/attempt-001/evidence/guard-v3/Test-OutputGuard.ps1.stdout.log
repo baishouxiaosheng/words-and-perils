@@ -1,0 +1,14 @@
+{"case":"exact_stdout","status":"completed","retained":256,"observed":256,"readers_finished":true,"owned_count":2,"elapsed_seconds":0.2278}
+{"case":"exact_combined","status":"completed","retained":256,"observed":256,"readers_finished":true,"owned_count":2,"elapsed_seconds":0.2228}
+{"case":"stdout_one_byte_over","status":"stopped","retained":256,"observed":257,"readers_finished":true,"owned_count":2,"elapsed_seconds":0.2194}
+{"case":"stderr_one_byte_over","status":"stopped","retained":256,"observed":257,"readers_finished":true,"owned_count":2,"elapsed_seconds":0.2141}
+{"case":"combined_over","status":"stopped","retained":256,"observed":400,"readers_finished":true,"owned_count":2,"elapsed_seconds":0.2176}
+{"case":"overflow_owned_descendant","status":"stopped","retained":256,"observed":257,"readers_finished":true,"owned_count":4,"elapsed_seconds":0.618}
+{
+  "status": "passed_v2_tiny_output_selftests",
+  "assertion_count": 45,
+  "summary_path": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\windows-guard-v3\\output-selftest-20261008T064355-7d3a56\\output-selftest-summary.json",
+  "summary_sha256": "2b81d5907607d303d9bfb8fc2d774d69d645a721d2857bd6f181e68e3a75408f",
+  "source_sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+  "engine_started": false
+}

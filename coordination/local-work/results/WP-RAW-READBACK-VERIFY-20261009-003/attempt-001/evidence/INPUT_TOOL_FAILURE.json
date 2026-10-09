@@ -1,0 +1,8 @@
+{
+  "tool": "Task-owned input/host map scanner",
+  "exit_code": 1,
+  "cause": "Publication-only path validator incorrectly applied to read-only formal host map, rejecting a preserved nested README path.",
+  "runtime_engine_invocations": 0,
+  "production_and_original_test_edits": 0,
+  "correction": "Use canonical contained read-only host paths, not publication namespace restrictions. Original task/source/assertions and publication restrictions retained."
+}

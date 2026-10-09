@@ -1,0 +1,19 @@
+{
+  "boundary": "preclaim",
+  "started_utc": "2026-10-09T06:07:26.185290+00:00",
+  "passed": true,
+  "local_stop": "E:\\WordsAndPerils-Tasks\\.local-work-state\\repo-1403552519\\STOP",
+  "local_lock_held": true,
+  "head": "6f10c42a80b6ffbc8d43efa96b96ecb73cd17872",
+  "remote_stop_absent": true,
+  "control": {
+    "protocol": "words-and-perils-local-work/v1",
+    "kind": "control",
+    "queue_enabled": true,
+    "stop": false,
+    "resume_generation": 0,
+    "reason": "First bounded Natural write-result task is prepared. This control does not prove local automation is enabled."
+  },
+  "claim_verified": false,
+  "ended_utc": "2026-10-09T06:07:27.397402+00:00"
+}

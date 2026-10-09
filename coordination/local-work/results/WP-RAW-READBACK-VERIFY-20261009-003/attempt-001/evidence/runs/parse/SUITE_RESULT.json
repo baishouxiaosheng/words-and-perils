@@ -1,0 +1,28 @@
+{
+  "entry_sha256": "aa21fd5ff772efd58a43eb3932fac88951877917a2811f156cf9bcdab71fa12c",
+  "loaded": [
+    {
+      "path": "core/ai_gm_rebuilt/engine.gd",
+      "sha256": "f609fbf0bf717568c2429578bf4cde3eecf9a7aa806546c1d75c8dabdb0a4ef5"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/canonical.gd",
+      "sha256": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c"
+    },
+    {
+      "path": "tests/experimental/ai_gm_rebuilt/story_fixture.gd",
+      "sha256": "e187f474d35e5110c2e840c389c35c208fa83e3d81663efccca075826dfd9520"
+    },
+    {
+      "path": "tests/t03_raw_readback/io_probe.gd",
+      "sha256": "973daa46c3360a06bc1b667a89c15929ddd1ec7f820ea097f12d798f18e0e609"
+    },
+    {
+      "path": "tests/t03_raw_readback/test_save_file.gd",
+      "sha256": "6f2f6fadf6bd171e601c89819cb77530ab7c761c714c37fe64d51abf72103492"
+    }
+  ],
+  "ok": true,
+  "pid": 39736,
+  "test_bodies_started": false
+}

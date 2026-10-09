@@ -1,0 +1,135 @@
+{
+  "kind": "suite",
+  "strict_pass": true,
+  "host_exit_code": 0,
+  "host_exited": true,
+  "guard_exit_code": 0,
+  "engine_exit_code": 0,
+  "actual_engine_pid": 27228,
+  "entry_sha256": "f475de68948d2c24f784ba279e8fec42aafb121bf67b9fe2313225b301ff11bc",
+  "diagnostics": [],
+  "source_mismatches": [],
+  "source_files": 2327,
+  "job_empty": true,
+  "readers_finished": true,
+  "recorded_owned_handles_exited": true,
+  "isolation": [
+    {
+      "autoloads": [],
+      "globalized_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-RAW-READBACK-VERIFY-20261009-003/run-01/runs/suite/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘",
+      "isolated": true,
+      "os_user_dir": "E:/WordsAndPerils-Tasks/candidate-20261008-ea04d75a/evidence/WP-RAW-READBACK-VERIFY-20261009-003/run-01/runs/suite/data/appdata/Godot/app_userdata/雾岸纪事 · AI 沙盘"
+    }
+  ],
+  "job_peak_commit_bytes": 242450432,
+  "physical_rss_measured": false,
+  "admission": {
+    "Allowed": true,
+    "Reason": "admitted",
+    "TotalPhysBytes": 34038341632,
+    "AvailPhysBytes": 15479050240,
+    "BudgetBytes": 8589934592,
+    "ReserveBytes": 536870912,
+    "AdditionalBytes": 1073741824,
+    "ProfileTimeoutSeconds": 120
+  },
+  "output_bytes": 2170,
+  "elapsed_seconds": 1.3527,
+  "suite": {
+    "assertions": 195,
+    "cases": [
+      {
+        "case": "short write returns false with no reported error",
+        "passed": true
+      },
+      {
+        "case": "short write returns false with write error",
+        "passed": true
+      },
+      {
+        "case": "reported write error despite stored true",
+        "passed": true
+      },
+      {
+        "case": "temporary open failure",
+        "passed": true
+      },
+      {
+        "case": "rename failure after successful readback",
+        "passed": true
+      },
+      {
+        "case": "successful source-bound write",
+        "passed": true
+      },
+      {
+        "case": "late flush loss with stored true and stale OK",
+        "passed": true
+      },
+      {
+        "case": "late close loss with stored true and stale OK",
+        "passed": true
+      },
+      {
+        "case": "readback open failure",
+        "passed": true
+      },
+      {
+        "case": "staging truncated before readback",
+        "passed": true
+      },
+      {
+        "case": "readback length query reports error",
+        "passed": true
+      },
+      {
+        "case": "short read with stale OK",
+        "passed": true
+      },
+      {
+        "case": "reported read error despite full bytes",
+        "passed": true
+      },
+      {
+        "case": "same length content corruption",
+        "passed": true
+      },
+      {
+        "case": "length grows during verification",
+        "passed": true
+      },
+      {
+        "case": "bounded multi chunk UTF8 success",
+        "passed": true
+      },
+      {
+        "case": "tiny canonical object success",
+        "passed": true
+      },
+      {
+        "case": "invalid Engine refuses before any I/O",
+        "passed": true
+      },
+      {
+        "case": "native canonical save and load roundtrip",
+        "passed": true
+      },
+      {
+        "case": "native repeated pending save",
+        "passed": true
+      },
+      {
+        "case": "native temporary open failure preserves destination and state",
+        "passed": true
+      }
+    ],
+    "engine_sha256": "f609fbf0bf717568c2429578bf4cde3eecf9a7aa806546c1d75c8dabdb0a4ef5",
+    "failures": [],
+    "fault_scope": "source-extracted in-memory flush/close/readback faults; not actual OS failures, concurrency or power-loss proof",
+    "method_sha256": "30cc3607de346361a8073dc689e8d957281f33cbebe7a79683a4c23f5e44bcc7",
+    "status": "passed"
+  },
+  "before_map_sha256": "cb7dd3b3b58f9ca6762731df8ecfa72b213d63e41e39960b59d94f0eee4f7cca",
+  "after_map_sha256": "6535969b75f296d334b7ddb68cb6cfc03da26da4de049037776e83ce154a9adb",
+  "guard_result_sha256": "40c429a23f258083d922210714cd5e8755867b2522a9c225f5435e7a52cc5b28"
+}

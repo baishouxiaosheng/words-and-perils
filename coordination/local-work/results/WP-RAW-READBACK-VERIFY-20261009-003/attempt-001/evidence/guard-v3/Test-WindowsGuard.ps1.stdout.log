@@ -1,0 +1,19 @@
+{"phase":"pure_logic_boundaries_passed","checks":14,"next":"serial_native_os_program_selftests"}
+{"case":"normal_exit","status":"completed","pid":46064,"owned_count":2,"elapsed_seconds":0.2174}
+{"case":"admission_unreadable_injection","status":"refused","pid":0,"owned_count":0,"elapsed_seconds":0.0}
+{"case":"admission_low_injection","status":"refused","pid":0,"owned_count":0,"elapsed_seconds":0.0}
+{"case":"monitor_unreadable_injection","status":"stopped","pid":29612,"owned_count":2,"elapsed_seconds":0.2607}
+{"case":"monitor_low_injection","status":"stopped","pid":36132,"owned_count":2,"elapsed_seconds":0.256}
+{"case":"timeout_with_owned_descendant","status":"stopped","pid":13544,"owned_count":4,"elapsed_seconds":6.1159}
+{"case":"kill_on_job_close","status":"stopped","pid":24460,"owned_count":2,"elapsed_seconds":0.2573}
+{
+  "status": "passed_windows_native_guard_selftests",
+  "logic_cases": 11,
+  "native_cases": 7,
+  "assertion_count": 50,
+  "source_sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+  "summary_path": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\windows-guard-v3\\selftest-20261008T064347-d61232\\selftest-summary.json",
+  "summary_sha256": "0152acbb350f674853482f0eef94aabb586a386ab0194f47babc1cac9503e115",
+  "engine_started": false,
+  "all_observed_job_processes_exited": true
+}

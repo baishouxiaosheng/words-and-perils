@@ -1,0 +1,5 @@
+{
+  "template_sha256": "699f2008314a6cc29d65ad41d6a3b4c1967496c3087fabd55a721f517333032f",
+  "task_adapter_sha256": "c63f931491d877ffb398ef8228c63f37302994f7dbce7965881f48524fec881f",
+  "changes": "Only immutable task ID/hash and exact candidate publication prefix; guard/test sources not modified."
+}

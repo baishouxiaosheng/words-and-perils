@@ -1,0 +1,118 @@
+{
+  "intake_commit": "6f10c42a80b6ffbc8d43efa96b96ecb73cd17872",
+  "task_sha256": "ab7b82befd9ffd776e0fd62ace229f6dd3f1f839691a70391d50881ab8ada078",
+  "schema_valid": true,
+  "inputs": [
+    {
+      "repository_path": "candidates/t03-raw-readback/20261008-dot-v1/MANIFEST.json",
+      "git_blob_sha": "f71787496939840a44a97964bc153e9ee221a7e7",
+      "sha256": "e786f801e7e0aab59ba21c77c229a4db01acbe795d30756d2fd0e3d74d76115e",
+      "bytes": 4989,
+      "role": "Frozen published Raw readback candidate provenance; not a runtime pass.",
+      "verified": true,
+      "provenance_commit": "8928d7012cb9c7cf42e1cb41f2717143299ebac9"
+    },
+    {
+      "repository_path": "candidates/t03-raw-readback/20261008-dot-v1/RAW_READBACK.patch",
+      "git_blob_sha": "8880fcc10c6b7b0c34c08701daacbae178fd026c",
+      "sha256": "98440b251f3273324f15790ff5c5614614793caf81b75c97e719391f7abebcde",
+      "bytes": 1862,
+      "role": "Frozen published Raw readback candidate provenance; not a runtime pass.",
+      "verified": true,
+      "provenance_commit": "8928d7012cb9c7cf42e1cb41f2717143299ebac9"
+    },
+    {
+      "repository_path": "candidates/t03-raw-readback/20261008-dot-v1/STATIC_CHECK_RECEIPT.json",
+      "git_blob_sha": "641125105ae9cc868a9df7ba539f2c794f0e8b4d",
+      "sha256": "7e70e0a0b304b70214d2c4cbe6547abdc32e473d28480582fd8e2a6e325298d5",
+      "bytes": 4779,
+      "role": "Frozen published Raw readback candidate provenance; not a runtime pass.",
+      "verified": true,
+      "provenance_commit": "8928d7012cb9c7cf42e1cb41f2717143299ebac9"
+    },
+    {
+      "repository_path": "candidates/t03-raw-readback/20261008-dot-v1/SUMMARY.txt",
+      "git_blob_sha": "760e8ed0d2947c7e5ffd1c301dacb0ff59a569fc",
+      "sha256": "13343d1581cec9f287631dba0fab4539784e8460220f0c726b4f17df5d23f272",
+      "bytes": 4888,
+      "role": "Frozen published Raw readback candidate provenance; not a runtime pass.",
+      "verified": true,
+      "provenance_commit": "8928d7012cb9c7cf42e1cb41f2717143299ebac9"
+    },
+    {
+      "repository_path": "candidates/t03-raw-readback/20261008-dot-v1/overlay/core/ai_gm_rebuilt/engine.gd",
+      "git_blob_sha": "1f90b1d99b8bd57123876f952ddfc333c340aa7a",
+      "sha256": "f609fbf0bf717568c2429578bf4cde3eecf9a7aa806546c1d75c8dabdb0a4ef5",
+      "bytes": 52068,
+      "role": "Exact immutable production candidate for test-copy materialization only.",
+      "project_path": "core/ai_gm_rebuilt/engine.gd",
+      "verified": true,
+      "provenance_commit": "8928d7012cb9c7cf42e1cb41f2717143299ebac9"
+    },
+    {
+      "repository_path": "candidates/t03-raw-readback/20261008-dot-v1/overlay/tests/t03_raw_readback/io_probe.gd",
+      "git_blob_sha": "91cce8a386e594f6c6fe63addafff31694a7bc2c",
+      "sha256": "973daa46c3360a06bc1b667a89c15929ddd1ec7f820ea097f12d798f18e0e609",
+      "bytes": 3359,
+      "role": "Exact immutable original 21-case suite source; do not replace its algorithm or assertions.",
+      "project_path": "tests/t03_raw_readback/io_probe.gd",
+      "verified": true,
+      "provenance_commit": "8928d7012cb9c7cf42e1cb41f2717143299ebac9"
+    },
+    {
+      "repository_path": "candidates/t03-raw-readback/20261008-dot-v1/overlay/tests/t03_raw_readback/test_save_file.gd",
+      "git_blob_sha": "dd9d46942dab4c61cbc96ed48a28dfc06e148f52",
+      "sha256": "6f2f6fadf6bd171e601c89819cb77530ab7c761c714c37fe64d51abf72103492",
+      "bytes": 10710,
+      "role": "Exact immutable original 21-case suite source; do not replace its algorithm or assertions.",
+      "project_path": "tests/t03_raw_readback/test_save_file.gd",
+      "verified": true,
+      "provenance_commit": "8928d7012cb9c7cf42e1cb41f2717143299ebac9"
+    },
+    {
+      "repository_path": "candidates/t03-raw-readback/20261008-dot-v1/verify_static.py",
+      "git_blob_sha": "f6e91a1b0727456e20232847202c920ad90f415f",
+      "sha256": "0f86b5ff9d02aea1ffe99de94a9c8ccdbf3bb76338ff566551d39b679bad59c3",
+      "bytes": 7683,
+      "role": "Immutable original static verifier provenance; its old project pin must not be suppressed or represented as matched by the public-v30 host variant.",
+      "verified": true,
+      "provenance_commit": "8928d7012cb9c7cf42e1cb41f2717143299ebac9"
+    },
+    {
+      "repository_path": "project.godot",
+      "git_blob_sha": "ccdc3ce8f922b6a5af5299bac3526e2fc7c0c23e",
+      "sha256": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd",
+      "bytes": 808,
+      "role": "Formal public-v30 test-host project configuration, explicitly distinct from the frozen Raw manifest project pin.",
+      "project_path": "project.godot",
+      "verified": true,
+      "provenance_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da"
+    },
+    {
+      "repository_path": "distribution_manifest.json",
+      "git_blob_sha": "1544dcc4b608a63bfc8fe8fe0875d7019a37183e",
+      "sha256": "7ec9feaa531147819801a907688d6483c0accfe7fe23d57fffa6dc2f07dc2075",
+      "bytes": 207017,
+      "role": "Formal public-v30 host source/resource map; reconstruct or reuse only a validated disposable host at the pinned formal release.",
+      "verified": true,
+      "provenance_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da"
+    }
+  ],
+  "all_10_inputs_verified": true,
+  "host_release_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+  "readonly_host_source_report": {
+    "source_files": 1466,
+    "literal_scripts": 347,
+    "final_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e"
+  },
+  "runtime_resource_pins_verified": 876,
+  "host_map_files": 2324,
+  "restoration_invoked": false,
+  "BASELINE_VARIANT_PUBLIC_V30": {
+    "host_project_sha256": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd",
+    "historical_original_Raw_project_pin": "0b35574f45a5b50307636bb3eee790a9c99be785ce3dc30c2b44e1c666dc0038",
+    "original_manifest_fully_matched": false,
+    "original_static_grades_transferred": false
+  },
+  "original_engine_before_overlay_sha256": "3d41f2fc4e52459d5df01732fbacc9e849f0e4a9260094220426001ef236002d"
+}

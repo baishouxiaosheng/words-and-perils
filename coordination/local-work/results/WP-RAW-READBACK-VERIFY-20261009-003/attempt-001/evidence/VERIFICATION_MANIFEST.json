@@ -1,0 +1,26 @@
+{
+  "task_id": "WP-RAW-READBACK-VERIFY-20261009-003",
+  "base_commit": "332a1f5f7025792d34e181f3e79690205498f5ab",
+  "input_commit": "8928d7012cb9c7cf42e1cb41f2717143299ebac9",
+  "host_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+  "production_source_changes": [],
+  "new_runtime_entries": [
+    "tests/t03_raw_readback_runtime/parse_entry.gd",
+    "tests/t03_raw_readback_runtime/run_entry.gd"
+  ],
+  "candidate_adopted": false,
+  "engine_sha256": "f609fbf0bf717568c2429578bf4cde3eecf9a7aa806546c1d75c8dabdb0a4ef5",
+  "method_sha256": "30cc3607de346361a8073dc689e8d957281f33cbebe7a79683a4c23f5e44bcc7",
+  "baseline_variant": {
+    "host_project_sha256": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd",
+    "historical_original_Raw_project_pin": "0b35574f45a5b50307636bb3eee790a9c99be785ce3dc30c2b44e1c666dc0038",
+    "original_manifest_fully_matched": false,
+    "original_static_grades_transferred": false
+  },
+  "test_groups": {
+    "memory": 17,
+    "unready": 1,
+    "native": 3
+  },
+  "assertions": 195
+}

@@ -1,0 +1,14 @@
+{
+  "commit": "9ed0a8e32270032a58287d787c08b7229d1b49e4",
+  "all_match": true,
+  "files": [
+    {
+      "path": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/CLAIM.json",
+      "bytes": 495,
+      "sha256": "df480d25047edc5c053ff1c1144ebff9fac5b7e65b3fb6f96050ee3cff810dca",
+      "git_blob_sha": "c08726c7ac907d438647a1606bae3a42649de83e",
+      "actual_http_bytes_match": true
+    }
+  ],
+  "verified_utc": "2026-10-09T06:07:32.159894+00:00"
+}

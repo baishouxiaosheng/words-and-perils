@@ -44,7 +44,10 @@
           "pattern": "^[A-Z0-9][A-Z0-9-]{5,79}$"
         },
         "status": {
-          "const": "ready"
+          "enum": [
+            "draft",
+            "ready"
+          ]
         },
         "title": {
           "type": "string",

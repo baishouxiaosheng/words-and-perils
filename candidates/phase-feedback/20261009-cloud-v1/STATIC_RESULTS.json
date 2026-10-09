@@ -1,0 +1,277 @@
+{
+  "status": "PASSED_STATIC_ONLY",
+  "run_id": "WP-PHASE-FEEDBACK-1346679f82164439ac47328ae834c338",
+  "owned_pid": 9669,
+  "exit_code": 0,
+  "checks_passed": 56,
+  "checks": [
+    {
+      "name": "one Main overlay",
+      "passed": true
+    },
+    {
+      "name": "pinned formal Main preimage",
+      "passed": true
+    },
+    {
+      "name": "pinned candidate Main output",
+      "passed": true
+    },
+    {
+      "name": "UTF8 LF output",
+      "passed": true
+    },
+    {
+      "name": "all non-string code, branches, calls and whitespace byte-equivalent",
+      "passed": true
+    },
+    {
+      "name": "exactly four existing UI lines changed",
+      "passed": true
+    },
+    {
+      "name": "all edits inside existing playtest control renderer",
+      "passed": true
+    },
+    {
+      "name": "all resource paths and private save paths unchanged",
+      "passed": true
+    },
+    {
+      "name": "player-facing enemy intent waiting label in edited renderer",
+      "passed": true
+    },
+    {
+      "name": "Git patch check",
+      "passed": true
+    },
+    {
+      "name": "Git patch apply",
+      "passed": true
+    },
+    {
+      "name": "byte-exact Git patch replay",
+      "passed": true
+    },
+    {
+      "name": "one-file replay allowlist",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input main.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_entry/board.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_entry/item_view.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_entry/moving_support.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_entry/panel.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_entry/render_source.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_entry/runtime/actor_scope.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_entry/view_adapter.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_profile_v2/adapter.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_profile_v2/decision.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_profile_v2/engine.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_profile_v2/history.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_profile_v2/hooks.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_profile_v2/policy.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_profile_v2/projection.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_profile_v2/resolver.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_profile_v2/rule.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_profile_v2/scheduler.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_action_profile_v2/source.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_entry_v1/board.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_entry_v1/committed_effect_router.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_entry_v1/public_events.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_entry_v1/render_source.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_entry_v1/runtime/client.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_entry_v1/runtime/controller.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_entry_v1/runtime/intention_codec.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_entry_v1/runtime/status_scope.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_entry_v1/view_adapter.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_profile_v1/adapter.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_profile_v1/decision.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_profile_v1/domain.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_profile_v1/engine.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_profile_v1/history.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_profile_v1/hooks.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_profile_v1/projection.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_profile_v1/public_status.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_profile_v1/resolver.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_profile_v1/rule.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/actor_status_profile_v1/source.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/dual_api_settings/actor_client.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/dual_api_settings/actor_controller.gd",
+      "passed": true
+    },
+    {
+      "name": "unchanged source input view/dual_api_settings/provider_presets.gd",
+      "passed": true
+    },
+    {
+      "name": "formal Main unchanged after replay",
+      "passed": true
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "-c",
+        "core.eol=lf",
+        "apply",
+        "--check",
+        "CHANGE.patch"
+      ],
+      "owned_pid": 9670,
+      "exit_code": 0,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "error_warning_scan": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "-c",
+        "core.eol=lf",
+        "apply",
+        "CHANGE.patch"
+      ],
+      "owned_pid": 9671,
+      "exit_code": 0,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "error_warning_scan": 0
+    }
+  ],
+  "before_sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f",
+  "after_sha256": "22f8f8aeaae20d4ccdc28446aaeb900617087c9f4cac78a97a150a9675c10160",
+  "engine_invocations": 0,
+  "http_requests_during_verification": 0,
+  "gui_acceptance": "NOT_RUN",
+  "godot_parse": "NOT_RUN",
+  "adopted": false,
+  "scope": "42 source archive pins and one-file replay only; not full source/resources closure or runtime proof",
+  "publication_redaction": "Only absolute local patch arguments replaced with candidate-relative CHANGE.patch. Original run ID, owned PIDs, exit codes, diagnostics counts and checks retained."
+}

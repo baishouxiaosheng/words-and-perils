@@ -1,0 +1,48 @@
+{
+  "schema": "words-and-perils-independent-source-candidate/v1",
+  "id": "WP-PHASE-FEEDBACK-20261009-cloud-v1",
+  "owner": "cloud-phase-feedback",
+  "scope": "Authorized T06/E05: player-facing turn phase and waiting instructions; existing Main UI string literals only.",
+  "source_commit": "2663d6df8263f417e493536d93e4fc4bb043c557",
+  "source_tree": "8206c92c3053c9d3352023d56c1784a8f9768426",
+  "base": "public v30 main, archive member verified against frozen adoption manifest",
+  "changed_files": [
+    {
+      "path": "main.gd",
+      "before_sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f",
+      "before_bytes": 203707,
+      "after_sha256": "22f8f8aeaae20d4ccdc28446aaeb900617087c9f4cac78a97a150a9675c10160",
+      "after_bytes": 203813
+    }
+  ],
+  "input_archive_sha256": "3a92d84234c9a0d63aa2362873618ed08aa06b175514e55d424527b9c74795f3",
+  "verified_source_archive_members": 42,
+  "entire_restored_source_closure_verified": false,
+  "adopted": false,
+  "godot_started": false,
+  "runtime_tested": false,
+  "gui_tested": false,
+  "standalone_runnable": false,
+  "apply_policy": "Only a fresh isolated copy of exact public v30 Main; reject every other Main hash. Do not combine by filename with manual-receipt, HUD-motion or intent-label candidates. No formal release change.",
+  "patch_entry": "CHANGE.patch",
+  "payload": "Patch only. Apply to an isolated exact pinned Main preimage; derived output must match after SHA/bytes.",
+  "source_manifest": {
+    "path": "updates/v30/manifest.json",
+    "bytes": 22680,
+    "sha256": "b3d9bed51dafc6a86acdc53b5e5456556d2b262b7bb16dbdef72d69febd5d5b9"
+  },
+  "source_archive_path": "updates/v30/source_delta.zip.b64",
+  "publication_base_commit": "2663d6df8263f417e493536d93e4fc4bb043c557",
+  "package_files": [
+    {
+      "path": "CHANGE.patch",
+      "bytes": 3237,
+      "sha256": "a846d0ce8de4d170fea71d488f2d5cb4933e3e0ddafdb12fa2b38bc669ff5339"
+    },
+    {
+      "path": "STATIC_RESULTS.json",
+      "bytes": 7466,
+      "sha256": "41125f1fb317590c428c8cb4a3fb3994b3e0de7bc22e8f5620286eb19006e8e2"
+    }
+  ]
+}

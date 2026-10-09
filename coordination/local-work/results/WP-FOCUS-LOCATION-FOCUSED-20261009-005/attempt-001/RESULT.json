@@ -1,0 +1,102 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "result",
+  "task_id": "WP-FOCUS-LOCATION-FOCUSED-20261009-005",
+  "task_sha256": "e5ee48b068825115242d431cc955ad061d0356bdbae829b4b8b8590b35daea68",
+  "attempt_id": "attempt-001",
+  "intake_commit": "e455425c00edcee5c34d1dccadc4505b6b039940",
+  "status": "failed",
+  "automation_enabled": true,
+  "summary": "005 frozen candidate static check failed at actual patch replay equals overlay after unique claim/ACK. No package static/preparation/parse/suite or Godot invocation; no failed-stage retry. 004 independently failed at the same byte boundary, so unchanged attempts stopped. All source inputs preserved and failure evidence saved.",
+  "source_hashes": {
+    "core/ai_gm_rebuilt/canonical.gd": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c",
+    "core/ai_gm_rebuilt/model_view.gd": "971508f8ccc88179a78c390323eae7b814572e4115b63254aabe2294a92a9f4c",
+    "core/focus_contract.gd": "b8daf8124f80b8f474937caf25a3e446277636b28d08626d419d4da4336e9cd1",
+    "core/status_foundation/canonical.gd": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c",
+    "core/status_foundation/catalog.gd": "8effb5d5e6094cdb0f5413a697ae3adb4e7d86429c31a7b93d751e71f6b62681",
+    "core/status_foundation/runtime.gd": "ee79b110e35b5141334daf55e7a2f80f6f4d3060a56d408bf0a08094260bb059",
+    "core/status_gameplay/source_profiles.gd": "53e1ca59b24fb0e020b2dc4a5200868fe927264e787234873484d077d8057483",
+    "data/catalog.json": "81712567dda2bb000b7cacefc9380c91bc271ea461c21758b1d2fa8074de4fde",
+    "main.gd": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f",
+    "view/actor_action_profile_v2/source.gd": "7681a03d232452533ef584719d5f3e6c1c39942332b303ef1c2a3e973385e665",
+    "view/actor_status_entry_v1/view_adapter.gd": "a9a825b9096b67424e7358d2dcca32b8e39411983f7ac9be0975ef7bc869968d",
+    "view/actor_status_profile_v1/projection.gd": "2decabf7c9fbe1b4c5400b502ce1e464112bb4eea489dfdcee3a5cf1c150d5e6",
+    "view/actor_status_profile_v1/source.gd": "f4ca4ca0551f0b1665b58f4ee1071dbc7df5180f357de18710d55a596b88ac03",
+    "view/playable_build/player_details.gd": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+    "view/status_gameplay/details.gd": "2b1d377813660aa419ca4f2cb9026d591b9edadce853ef0fec57a1b3e98841b1",
+    "project.godot": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd"
+  },
+  "checks": [
+    {
+      "label": "candidate_static",
+      "exit_code": 1,
+      "pid": 44704,
+      "owned_process_exited": true,
+      "stdout_bytes": 0,
+      "stderr_bytes": 680,
+      "script_sha256": "5c17a7c7a582b9394fbc3889a668cdbed99e37355f5bd4c2fc07dd614203d493",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true
+    },
+    {
+      "engine_runs": 0,
+      "runtime_assertions": null,
+      "later_stages": "NOT_RUN",
+      "strict_pass": false
+    },
+    {
+      "artifact_commit": "6ee483a76b7c0b3270f46efb0b59dd125101f89e",
+      "actual_remote_files_verified": 34,
+      "all_match": true
+    },
+    {
+      "publication_first_TLS_error_retained": true,
+      "previous_valid_returns_verified": 33,
+      "missing_only_once_retry": 1,
+      "retry_succeeded": true,
+      "TLS_security_or_credentials_changed": false
+    },
+    {
+      "original_formal_host_files_unchanged": 2324,
+      "original_16_inputs_unchanged": true
+    },
+    {
+      "failure_family": "frozen_git_patch_replay_byte_mismatch",
+      "separate_items_observed": 2,
+      "stop_unchanged_attempts": true
+    }
+  ],
+  "blockers": [
+    "Actual frozen candidate git-apply output bytes failed overlay equality; exact temporary replay bytes unavailable because original checker removed them. core.autocrlf=true is a suspected cause, not proved by retained replay output."
+  ],
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  },
+  "artifact_commit": "6ee483a76b7c0b3270f46efb0b59dd125101f89e",
+  "artifact_manifest_sha256": "85f200a35aae80d26fc0f48592acfd721d7f693b59cf0f4cf2bc6d0eee0d3d12",
+  "candidate_adopted": false,
+  "remaining_steps": [
+    "Any retry requires a new explicitly revised task/harness that makes patch replay byte-deterministic while preserving assertion strength and immutable candidates; no system Git or security settings changed here."
+  ],
+  "worker_entry_evidence": {
+    "actual_native_heartbeat": true,
+    "scope_acceptance_result_commit": "c17af9c02c49ee250bf34547c5f37d8dd3e522b8",
+    "claim_commit": "12b132e14119345986f50fff59965069f0a34480",
+    "ack_commit": "a7bb2d3e01e094bdd3644ca557704cfa844381a2"
+  },
+  "source_authentication_evidence": {
+    "repo_id": 1403552519,
+    "owner_id": 128279531,
+    "trusted_new_pins_match": true,
+    "existing_authenticated_push_pull": true
+  },
+  "safe_cleanup": {
+    "engines_started": 0,
+    "execution_handle_disposed": true,
+    "prior_publication_handle_disposed": true,
+    "same_claim_free_lock_reacquired": true,
+    "unknown_processes_killed": false,
+    "no_original_file_deleted_or_modified": true
+  }
+}

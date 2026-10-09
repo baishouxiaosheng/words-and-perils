@@ -1,0 +1,20 @@
+{
+  "artifact_commit": "6ee483a76b7c0b3270f46efb0b59dd125101f89e",
+  "current_main": "6ee483a76b7c0b3270f46efb0b59dd125101f89e",
+  "pushed_successfully": true,
+  "claim_unchanged": true,
+  "fresh_STOP_CONTROL_pass": true,
+  "valid_previous_actual_HTTP_returns": 33,
+  "missing_actual_HTTP_returns": [
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-005/attempt-001/evidence/python-runs/candidate_static/PID.json",
+      "bytes": 141,
+      "sha256": "0f3b6768948be2fba9a309f2d4b5dc49cc240c94924f329b5c24fe87edf46b76",
+      "git_blob_sha": "eeb732e977f61eec1377769e770a606075199263"
+    }
+  ],
+  "first_failure": "TLS unexpected EOF",
+  "no_second_read_attempt_yet": true,
+  "no_engine_retry": true,
+  "utc": "2026-10-09T07:53:39.419521+00:00"
+}

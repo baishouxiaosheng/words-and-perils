@@ -1,0 +1,43 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "ack",
+  "task_id": "WP-STATUS-CLOCK-FOCUSED-20261009-004",
+  "task_sha256": "e119a50952a87807b80613a2d0ba220d0b848a5272d20931a3e436cfddff3f14",
+  "attempt_id": "attempt-001",
+  "intake_commit": "f2a28954fe060ab2ede1fe1d2c463f540b5a991b",
+  "status": "acknowledged",
+  "automation_enabled": true,
+  "summary": "Accepted local scope/new root pins,16 immutable inputs,actual acceptance receipts and formal layered source map verified. Only independent formatter host; no Main/UI visibility/adoption or production edits.",
+  "source_hashes": {
+    "core/ai_gm_rebuilt/canonical.gd": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c",
+    "core/ai_gm_rebuilt/hooks.gd": "2afc8ba22cc4cb9a4df81ce8f8779193a652f8cd5ff49b2156f6899674ee84ec",
+    "core/status_foundation/canonical.gd": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c",
+    "core/status_foundation/catalog.gd": "8effb5d5e6094cdb0f5413a697ae3adb4e7d86429c31a7b93d751e71f6b62681",
+    "core/status_foundation/engine_bridge.gd": "06cce47760058a49e2dd994c91031ac93db7277d0b08f5c252af8d2ec8fafbc6",
+    "core/status_foundation/runtime.gd": "ee79b110e35b5141334daf55e7a2f80f6f4d3060a56d408bf0a08094260bb059",
+    "core/status_gameplay/source_profiles.gd": "53e1ca59b24fb0e020b2dc4a5200868fe927264e787234873484d077d8057483",
+    "data/catalog.json": "81712567dda2bb000b7cacefc9380c91bc271ea461c21758b1d2fa8074de4fde",
+    "main.gd": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f",
+    "view/actor_action_profile_v2/source.gd": "7681a03d232452533ef584719d5f3e6c1c39942332b303ef1c2a3e973385e665",
+    "view/actor_status_entry_v1/view_adapter.gd": "a9a825b9096b67424e7358d2dcca32b8e39411983f7ac9be0975ef7bc869968d",
+    "view/actor_status_profile_v1/projection.gd": "2decabf7c9fbe1b4c5400b502ce1e464112bb4eea489dfdcee3a5cf1c150d5e6",
+    "view/actor_status_profile_v1/public_status.gd": "335c0eb58165e4ebb01f8963a0292176eb2deaf354bfeb5c1876e0e5c8eeded1",
+    "view/actor_status_profile_v1/source.gd": "f4ca4ca0551f0b1665b58f4ee1071dbc7df5180f357de18710d55a596b88ac03",
+    "view/playable_build/player_details.gd": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+    "view/status_gameplay/details.gd": "2b1d377813660aa419ca4f2cb9026d591b9edadce853ef0fec57a1b3e98841b1",
+    "project.godot": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd"
+  },
+  "checks": [
+    {
+      "claim_commit": "851f59dd87bf47e455d27cafc3ba85d10820178c",
+      "all_16_inputs_verified": true,
+      "source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e"
+    }
+  ],
+  "blockers": [],
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  },
+  "candidate_adopted": false
+}

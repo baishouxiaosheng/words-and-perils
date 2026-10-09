@@ -3,10 +3,23 @@ extends SceneTree
 const Motion = preload("res://view/ui_motion/hud_panel_motion.gd")
 class Host extends Control:
 	var intents := 0
+	var restores := 0
+	var dialogue_hidden_for_map := false
+	var journal_open := true
+	var api_settings_open := false
+	var journal_panel: Control
+	var dialogue_restore_button: Button
 	var feedback_updates := 0
 	var authority := {"position": [3, 4], "rng": 37, "receipt": {"turn": 9}}
 	func _update_feedback_safe_rect() -> void: feedback_updates += 1
 	func submit() -> void: intents += 1
+	func _api_settings_open() -> bool: return api_settings_open
+	func set_map_dialogue_hidden(hidden: bool) -> void:
+		if dialogue_hidden_for_map and not hidden: restores += 1
+		dialogue_hidden_for_map = hidden
+		get_node("HUDPanelMotion").call("set_hidden", hidden)
+		journal_panel.visible = journal_open and not hidden
+		dialogue_restore_button.visible = hidden
 class Backstop extends Control:
 	var clicks := 0
 	var raw_clicks := 0
@@ -24,6 +37,7 @@ var submit: Button
 var business_disabled: Button
 var backstop: Backstop
 var motion: Motion
+var restore_button: Button
 
 func _init() -> void: call_deferred("run")
 func check(value: bool, label: String) -> void:
@@ -43,7 +57,7 @@ func half() -> Vector2:
 	current.custom_step(Motion.DURATION * 0.5)
 	return panel.position
 
-func click(point: Vector2) -> void:
+func push_click(point: Vector2) -> void:
 	var move := InputEventMouseMotion.new()
 	move.position = point
 	move.global_position = point
@@ -55,6 +69,9 @@ func click(point: Vector2) -> void:
 		event.button_index = MOUSE_BUTTON_LEFT
 		event.pressed = down
 		root.push_input(event, true)
+
+func click(point: Vector2) -> void:
+	push_click(point)
 	await process_frame
 
 func enter_key() -> void:
@@ -109,11 +126,23 @@ func run() -> void:
 	business_disabled.text = "等待裁定"
 	business_disabled.disabled = true
 	row.add_child(business_disabled)
+	host.journal_panel = Control.new()
+	host.journal_panel.position = Vector2(20, 20)
+	host.journal_panel.size = Vector2(40, 40)
+	host.add_child(host.journal_panel)
+	restore_button = Button.new()
+	restore_button.name = "RestoreDialogue"
+	restore_button.custom_minimum_size = Vector2(42, 42)
+	restore_button.size = Vector2(42, 42)
+	restore_button.pressed.connect(func(): host.set_map_dialogue_hidden(false))
+	host.add_child(restore_button)
+	host.dialogue_restore_button = restore_button
+	restore_button.hide()
 	await process_frame
 	await process_frame
 	motion = Motion.new()
 	host.add_child(motion)
-	motion.bind_control(host, panel)
+	motion.bind_control(host, panel, restore_button)
 	var original_position: Vector2 = panel.position
 	var original_size: Vector2 = panel.size
 	var authority_before := JSON.stringify(host.authority)
@@ -248,6 +277,74 @@ func run() -> void:
 	root.push_input(down, true)
 	await process_frame
 	check(host.intents == intent_count + 1, "held accept key cannot activate after reopen")
+	# Real RestoreDialogue geometry and input route, not adapter.set_hidden(false).
+	root.size = Vector2i(1600, 1080)
+	host.size = Vector2(1600, 1080)
+	await process_frame
+	restore_button.position = Vector2(779, 1022)
+	restore_button.size = Vector2(42, 42)
+	layout(Vector2(380, 856), Vector2(840, 198))
+	await finish()
+	var restore_point := restore_button.get_global_rect().get_center()
+	check(restore_point == Vector2(800, 1043) and panel.get_global_rect().has_point(restore_point), "real RestoreDialogue center overlaps resting dock")
+	var before_restore_intents := host.intents
+	var before_restore_gui := backstop.clicks
+	var before_restore_raw := backstop.raw_clicks
+	host.set_map_dialogue_hidden(true)
+	motion.tween.pause()
+	motion.tween.custom_step(Motion.DURATION * 0.35)
+	var before_restore_position: Vector2 = panel.position
+	var before_restore_ticket: int = motion.generation
+	check(host.dialogue_hidden_for_map and not host.journal_panel.visible and restore_button.visible, "Main UI state synchronized before RestoreDialogue input")
+	# API settings veto this route; no UI callback or board event is allowed.
+	host.api_settings_open = true
+	push_click(restore_point)
+	check(host.restores == 0 and host.dialogue_hidden_for_map, "modal API gate blocks RestoreDialogue during close")
+	host.api_settings_open = false
+	# A press on the dock followed by a release on Restore is not a Restore click.
+	var edge := InputEventMouseButton.new()
+	edge.button_index = MOUSE_BUTTON_LEFT
+	edge.position = Vector2(400, 900)
+	edge.pressed = true
+	root.push_input(edge, true)
+	edge.position = restore_point
+	edge.pressed = false
+	root.push_input(edge, true)
+	check(host.restores == 0 and not motion.restore_mouse_down, "dock-to-Restore release cannot trigger recovery")
+	# Restore down then release elsewhere must consume both edges and cancel.
+	edge.position = restore_point
+	edge.pressed = true
+	root.push_input(edge, true)
+	edge.position = Vector2(50, 50)
+	edge.pressed = false
+	root.push_input(edge, true)
+	check(host.restores == 0 and not motion.restore_mouse_down, "Restore drag-out release cancels without leaking")
+	edge.position = restore_point
+	edge.pressed = true
+	root.push_input(edge, true)
+	edge.pressed = false
+	edge.canceled = true
+	root.push_input(edge, true)
+	check(host.restores == 0 and not motion.restore_mouse_down, "canceled Restore release cannot request recovery")
+	edge.canceled = false
+	# Only actual input over the visible sibling button requests the reversal.
+	push_click(restore_point)
+	motion.tween.pause()
+	check(host.restores == 1 and motion.wanted and motion.phase == &"opening", "actual RestoreDialogue click reverses closing exactly once")
+	check(panel.position == before_restore_position, "actual RestoreDialogue reversal starts at displayed position")
+	check(not host.dialogue_hidden_for_map and host.journal_panel.visible and not restore_button.visible, "RestoreDialogue click synchronizes all Main visibility state")
+	check(host.intents == before_restore_intents and backstop.clicks == before_restore_gui and backstop.raw_clicks == before_restore_raw, "RestoreDialogue click neither submits nor reaches board input")
+	motion._completed(before_restore_ticket)
+	check(panel.visible and motion.phase == &"opening", "old close cannot hide RestoreDialogue recovery")
+	push_click(restore_point)
+	push_click(submit.get_global_rect().get_center())
+	await enter_key()
+	check(host.restores == 1 and host.intents == before_restore_intents, "hidden Restore and submission input cannot double dispatch during recovery")
+	check(backstop.clicks == before_restore_gui and backstop.raw_clicks == before_restore_raw, "recovery blocks both GUI and early board input")
+	check(goal.text == draft and not submit.disabled and business_disabled.disabled, "RestoreDialogue recovery preserves draft and business disabled flags")
+	await finish()
+	await click(submit.get_global_rect().get_center())
+	check(host.intents == before_restore_intents + 1 and host.restores == 1, "after actual RestoreDialogue recovery one click yields one intent")
 	check(JSON.stringify(host.authority) == authority_before, "position RNG and receipt remain byte-identical")
 	check(host.feedback_updates > 0 and original_size.x > 0, "feedback bounds updated during presentation")
 	motion.set_hidden(true)

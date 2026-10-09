@@ -5,6 +5,8 @@ const DURATION := 0.28
 const TRAVEL := 24.0
 var host: Control
 var panel: Control
+var restore_button: BaseButton
+var restore_mouse_down := false
 var wanted := true
 var phase := &"open"
 var layout_goal := Vector2.ZERO
@@ -20,9 +22,10 @@ func _init() -> void:
 	name = "HUDPanelMotion"
 	set_process(false)
 
-func bind_control(main: Control, target: Control) -> void:
+func bind_control(main: Control, target: Control, restore: BaseButton = null) -> void:
 	host = main
 	panel = target
+	restore_button = restore
 	wanted = panel.visible
 	phase = &"open" if wanted else &"closed"
 	layout_goal = panel.position
@@ -147,13 +150,51 @@ func _blocked_rect() -> Rect2:
 	var resting := Rect2(panel.global_position + layout_goal - panel.position, panel.size)
 	return panel.get_global_rect().merge(resting)
 
+func _restore_available() -> bool:
+	if wanted or not is_instance_valid(host) or not is_instance_valid(panel): return false
+	if not is_instance_valid(restore_button) or not restore_button.is_visible_in_tree(): return false
+	if restore_button.disabled or not restore_button.can_process(): return false
+	if restore_button.get_mouse_filter_with_override() == Control.MOUSE_FILTER_IGNORE: return false
+	if restore_button.get_viewport() != get_viewport(): return false
+	if not host.has_method("set_map_dialogue_hidden"): return false
+	if host.has_method("_api_settings_open") and bool(host.call("_api_settings_open")): return false
+	return not _has_visible_window(host)
+
+func _has_visible_window(node: Node) -> bool:
+	for child in node.get_children(true):
+		if child is Window and child.visible: return true
+		if not child is Node3D and _has_visible_window(child): return true
+	return false
+
+func _handle_restore_mouse(event: InputEvent) -> bool:
+	# The native GUI cannot see this button while the shield consumes its region.
+	# Capture a complete primary click, consume both edges before board input,
+	# then use Main's existing UI handler so all visibility state stays in sync.
+	if event is InputEventMouseMotion: return restore_mouse_down
+	if not event is InputEventMouseButton: return false
+	var button := event as InputEventMouseButton
+	if button.button_index != MOUSE_BUTTON_LEFT: return false
+	if not button.pressed and restore_mouse_down:
+		restore_mouse_down = false
+		get_viewport().set_input_as_handled()
+		if not button.canceled and not blocked_mouse.has(MOUSE_BUTTON_LEFT) and _restore_available():
+			if restore_button.get_global_rect().has_point(button.position):
+				host.call("set_map_dialogue_hidden", false)
+		return true
+	if button.pressed and not button.canceled and phase == &"closing" and not blocked_mouse.has(MOUSE_BUTTON_LEFT):
+		if _restore_available() and restore_button.get_global_rect().has_point(button.position):
+			restore_mouse_down = true
+			return true
+	return false
+
 func _input(event: InputEvent) -> void:
 	# Runs before older board handlers; STOP at GUI level alone cannot stop a
 	# SubViewport/board _input handler. Consume the moving and resting footprint.
-	if blocks_event(event): get_viewport().set_input_as_handled()
+	if _handle_restore_mouse(event) or blocks_event(event): get_viewport().set_input_as_handled()
 
 func _process(_delta: float) -> void:
 	if not is_instance_valid(panel) or not is_instance_valid(host):
+		restore_mouse_down = false
 		_stop_tween()
 		_restore_input()
 		phase = &"closed"
@@ -164,6 +205,7 @@ func _feedback() -> void:
 		host.call("_update_feedback_safe_rect")
 
 func _exit_tree() -> void:
+	restore_mouse_down = false
 	_stop_tween()
 	_restore_input()
 	if is_instance_valid(panel):

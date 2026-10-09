@@ -281,7 +281,7 @@ func _ready() -> void:
 	add_child(preload("res://view/tabletop_interaction/offline_move_demo.gd").new(self))
 	var hud_motion := preload("res://view/ui_motion/hud_panel_motion.gd").new()
 	add_child(hud_motion)
-	hud_motion.bind_control(self, action_panel)
+	hud_motion.bind_control(self, action_panel, dialogue_restore_button)
 	# Default startup replaces this initial legacy board before the first frame.
 	# Build its terrain only when requested, or if the coast cannot be opened.
 	var legacy_start := startup_legacy or OS.has_environment("FOGBANK_LEGACY_START") or "--legacy-start" in OS.get_cmdline_user_args()

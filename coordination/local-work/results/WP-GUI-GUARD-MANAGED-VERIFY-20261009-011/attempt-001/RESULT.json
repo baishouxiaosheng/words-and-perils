@@ -1,0 +1,67 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "result",
+  "task_id": "WP-GUI-GUARD-MANAGED-VERIFY-20261009-011",
+  "task_sha256": "981d78f5d0ee5051a96756a560c1ed0c91905c0e15acc4926226bc85abe97afa",
+  "attempt_id": "attempt-001",
+  "intake_commit": "40f46f55ef86acc104e0f3b6a9eec07892006175",
+  "status": "blocked",
+  "automation_enabled": true,
+  "summary": "Four fixed inputs/schema verified. Compilation and managed assertions NOT_RUN: existing canary/static paths lack aggregate output and physical safeguards; the compliant v3 runtime path is expressly forbidden by this task. No new runner, Guard.Run, engine, GUI or same-ID retry.",
+  "source_hashes": {
+    "candidates/guarded-focused-gui/20261009-cloud-v1/WindowsGuard.FocusedGui.cs": "eb642e9b4092098614be6c9b5aff0becf96728a3a47bbe9f54dc12f13fb7ea4b",
+    "candidates/guarded-focused-gui/20261009-cloud-v1/baseline/WindowsGuard.cs": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+    "candidates/guarded-focused-gui/20261009-cloud-v2/Test-FocusedGui.SourceOnly.ps1": "4fae6c4ede96f228c9066f406d3331d2d8c8c9efd7a5793c2ad384e5aba7a382",
+    "candidates/guarded-focused-gui/20261009-cloud-v2/MANIFEST.json": "fbb3c161b68acba5e3d544d01715cdfb391032fb5994dff94622fe8d06f1b078"
+  },
+  "checks": [
+    {
+      "stage": "schema",
+      "status": "passed"
+    },
+    {
+      "stage": "input_bytes_size_sha256_git_blob",
+      "status": "passed",
+      "inputs": 4
+    },
+    {
+      "stage": "existing_host_entry",
+      "status": "blocked"
+    },
+    {
+      "stage": "C# Add-Type",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage": "managed_assertions",
+      "status": "NOT_RUN",
+      "checks": null
+    },
+    {
+      "stage": "native_guard_or_engine",
+      "status": "NOT_RUN",
+      "invocations": 0
+    }
+  ],
+  "blockers": [
+    "blocked_existing_bounded_source_only_host_entry"
+  ],
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  },
+  "artifact_commit": "a772856998a97c2ac90037ff6dda66b3eba10f08",
+  "artifact_manifest_sha256": "e6a3780b6784fc0681e1dc5c345eda40b5ae04db3d5d6782acf5c66410c38300",
+  "candidate_adopted": false,
+  "remaining_steps": [
+    "A new task ID must specify a compliant existing non-Godot protected compile-host entry; task011 terminal must not be rerun."
+  ],
+  "safe_cleanup": {
+    "test_host_created": false,
+    "engine_invocations": 0,
+    "native_guard_run_calls": 0,
+    "compiler_readers_or_handles": "NOT_CREATED",
+    "unknown_processes_killed": false,
+    "publication_lock": "Held through result byte readback, released in finally; actual local release receipt follows."
+  }
+}

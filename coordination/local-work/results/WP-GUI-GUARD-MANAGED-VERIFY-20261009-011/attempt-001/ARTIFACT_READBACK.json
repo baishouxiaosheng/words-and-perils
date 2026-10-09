@@ -1,0 +1,70 @@
+{
+  "commit": "a772856998a97c2ac90037ff6dda66b3eba10f08",
+  "all_match": true,
+  "files": [
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/evidence/TASK.json",
+      "bytes": 9845,
+      "sha256": "981d78f5d0ee5051a96756a560c1ed0c91905c0e15acc4926226bc85abe97afa",
+      "git_blob_sha": "a1bc37028c01a048bcd1c1f3b48c759112dcc1bf",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/evidence/INPUT_VERIFICATION.json",
+      "bytes": 2232,
+      "sha256": "2727df090f25e93b656e0d992498240241d1b15b08d6dc0fb55e6fea9e43dc5d",
+      "git_blob_sha": "4feb1cff3a077a1cd165fbd4d772e5c45d3677be",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/evidence/SOURCE_AUTHENTICATION.json",
+      "bytes": 362,
+      "sha256": "2fb8ec4ec9094955d48b5ce6928ebe125eb8c2ef91b6c5a7c64113667c526498",
+      "git_blob_sha": "3267db00f4a1b4e8a656785b226e9198bb998579",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/evidence/HOST_PATH_PREFLIGHT.json",
+      "bytes": 1852,
+      "sha256": "2b30d1cd823c31270d88a253007f20553f94796c59a81e5d0e0ad78ce8bafd4c",
+      "git_blob_sha": "6207d6393d4b10228201d096a9fce19a1af0fa79",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/evidence/PREPARATION_CHECKPOINT.json",
+      "bytes": 429,
+      "sha256": "07ba5b736d687a5b4b61978083e95de7541a904dc9e319547c7a15146cb6a5f0",
+      "git_blob_sha": "a032a75022843d11edfa470a234b93b83932e41f",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/evidence/PREDECESSOR_RECONCILIATION.json",
+      "bytes": 297,
+      "sha256": "1b4dfa13077d95e5bb7c09aea0191518f587dcf77a1f8047ca59621bc75c4c8c",
+      "git_blob_sha": "9ff1470b04ad7c5091c2f953bf072fe3c54f95c6",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/evidence/GATE_A.json",
+      "bytes": 680,
+      "sha256": "5077ea1b8c6d16a983f7610d665aace71c900d288536b746f07655a2819128be",
+      "git_blob_sha": "68cdb55bf400cad835ff90d8515b6d878ed27df8",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/evidence/LOCK_OWNER.json",
+      "bytes": 170,
+      "sha256": "9e0a40c94911a8b1c19121e9e5eb14475e540c9e4b7ca371faaa5f0c5b3fc8c7",
+      "git_blob_sha": "6001e5a32fbc2c54a49df2e60be9d188cc2ad579",
+      "actual_http_bytes_match": true
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/ARTIFACTS.json",
+      "bytes": 2447,
+      "sha256": "e6a3780b6784fc0681e1dc5c345eda40b5ae04db3d5d6782acf5c66410c38300",
+      "git_blob_sha": "b362263c56035af54e51f693d794498117ba4521",
+      "actual_http_bytes_match": true
+    }
+  ],
+  "verified_utc": "2026-10-09T12:02:11.945472+00:00"
+}

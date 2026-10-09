@@ -1,0 +1,48 @@
+{
+  "task_id": "WP-STATUS-CLOCK-FOCUSED-20261009-008",
+  "task_sha256": "1bb12d8c9ff6aaa508e6d0ed2bc81c6e39b35e50fcdb8bba1bd0f01a15c92ee1",
+  "base_commit": "c5e317d3f5f48145d464719c2805e2d673189be5",
+  "candidate_input_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+  "test_input_commit": "c5e317d3f5f48145d464719c2805e2d673189be5",
+  "formal_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e",
+  "terminal_status": "blocked",
+  "actual_new_guarded_invocations": 0,
+  "strict_parse_and_suite_pass": false,
+  "actual_runtime_assertions": null,
+  "static_runs": [
+    {
+      "label": "candidate_static",
+      "exit_code": 0,
+      "pid": 31372,
+      "owned_process_exited": true,
+      "stdout_bytes": 2621,
+      "stderr_bytes": 0,
+      "script_sha256": "6e9427b85484248078e8589f995fe0dce61d008e5fb7eedd34e6cb216c54a4ce",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true,
+      "static_count": 24,
+      "preparation_status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE"
+    },
+    {
+      "label": "package_static",
+      "exit_code": 1,
+      "pid": 45112,
+      "owned_process_exited": true,
+      "stdout_bytes": 0,
+      "stderr_bytes": 1052,
+      "script_sha256": "cfe7351974a28bc19f1dc91b98a8223b7e4576cfc213cbcb4a41b644c4d6880f",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true
+    }
+  ],
+  "engine_runs": [],
+  "production_edits": 0,
+  "original_driver_modified": false,
+  "Main_UI_visibility_verified": false,
+  "candidate_adopted": false,
+  "same_task_retry": false,
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  }
+}

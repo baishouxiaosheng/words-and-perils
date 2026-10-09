@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\WordsAndPerils-Tasks\candidate-20261008-ea04d75a\evidence\WP-STATUS-CLOCK-FOCUSED-20261009-008\run-01\inputs\candidates\status-clock-display-tests\20261009-cloud-v3\check_static.py", line 125, in <module>
+    main()
+  File "E:\WordsAndPerils-Tasks\candidate-20261008-ea04d75a\evidence\WP-STATUS-CLOCK-FOCUSED-20261009-008\run-01\inputs\candidates\status-clock-display-tests\20261009-cloud-v3\check_static.py", line 99, in main
+    link.symlink_to(args.source_root.resolve(), target_is_directory=True)
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1386, in symlink_to
+    os.symlink(target, self, target_is_directory)
+OSError: [WinError 1314] 客户端没有所需的特权。: 'E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\public-v30' -> 'E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-STATUS-CLOCK-FOCUSED-20261009-008\\run-01\\python-runs\\package_static\\temp\\focused-preparation-static-bj0k4d9l\\linked-output'

@@ -1,0 +1,42 @@
+{
+  "task_id": "WP-STATUS-CLOCK-FOCUSED-20261009-008",
+  "task_sha256": "1bb12d8c9ff6aaa508e6d0ed2bc81c6e39b35e50fcdb8bba1bd0f01a15c92ee1",
+  "owner_run_id": "focused-008-run-01",
+  "stage": "Execution failed; publication next",
+  "claim_commit": "f2a0ab629c2eb5dd6e625af0a43d39e2f7351956",
+  "ack_commit": "c5d1002b75449583e399e647b117b37041ec2701",
+  "completed_engine_runs": [],
+  "static_checks": [
+    {
+      "label": "candidate_static",
+      "exit_code": 0,
+      "pid": 31372,
+      "owned_process_exited": true,
+      "stdout_bytes": 2621,
+      "stderr_bytes": 0,
+      "script_sha256": "6e9427b85484248078e8589f995fe0dce61d008e5fb7eedd34e6cb216c54a4ce",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true,
+      "static_count": 24,
+      "preparation_status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE"
+    },
+    {
+      "label": "package_static",
+      "exit_code": 1,
+      "pid": 45112,
+      "owned_process_exited": true,
+      "stdout_bytes": 0,
+      "stderr_bytes": 1052,
+      "script_sha256": "cfe7351974a28bc19f1dc91b98a8223b7e4576cfc213cbcb4a41b644c4d6880f",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true
+    }
+  ],
+  "automation_enabled": true,
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  },
+  "utc": "2026-10-09T09:50:13.888381+00:00",
+  "do_not_repeat_recorded_launch": true
+}

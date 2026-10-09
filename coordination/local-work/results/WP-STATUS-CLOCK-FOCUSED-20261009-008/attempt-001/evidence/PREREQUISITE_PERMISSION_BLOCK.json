@@ -1,0 +1,17 @@
+{
+  "blocked_stage": "package_static",
+  "actual_child_pid": 45112,
+  "actual_exit_code": 1,
+  "permission_failure": "OSError WinError1314 at check_static.py:99 link.symlink_to",
+  "checker_sha256": "cfe7351974a28bc19f1dc91b98a8223b7e4576cfc213cbcb4a41b644c4d6880f",
+  "same_frozen_checker_used_by_009": true,
+  "original_stderr_retained": true,
+  "candidate_static_actual_pass_count": 24,
+  "candidate_static_is_runtime": false,
+  "required_privilege_unavailable": true,
+  "no_permission_or_security_change": true,
+  "no_denied_operation_retry_or_route_change": true,
+  "preparation_parse_suite": "NOT_RUN",
+  "godot_invocations": 0,
+  "utc": "2026-10-09T10:00:22.251578+00:00"
+}

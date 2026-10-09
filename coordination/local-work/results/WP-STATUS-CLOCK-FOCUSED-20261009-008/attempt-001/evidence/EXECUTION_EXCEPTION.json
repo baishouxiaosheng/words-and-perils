@@ -1,0 +1,6 @@
+{
+  "error": "Python package_static failed exit 1; preserve actual logs and stop later stages",
+  "completed_engine_runs": 0,
+  "no_stage_retry": true,
+  "utc": "2026-10-09T09:50:13.887313+00:00"
+}

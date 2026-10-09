@@ -1,0 +1,193 @@
+{
+  "task_id": "WP-STATUS-CLOCK-FOCUSED-20261009-008",
+  "task_sha256": "1bb12d8c9ff6aaa508e6d0ed2bc81c6e39b35e50fcdb8bba1bd0f01a15c92ee1",
+  "intake_commit": "718a308123b97589e716c98a43c37667f35597f5",
+  "schema_valid": true,
+  "all_16_inputs_verified": true,
+  "inputs": [
+    {
+      "repository_path": "project.godot",
+      "git_blob_sha": "ccdc3ce8f922b6a5af5299bac3526e2fc7c0c23e",
+      "sha256": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd",
+      "bytes": 808,
+      "role": "Immutable formal public-v30 project/distribution provenance or existing source-only restore helper; no production launch.",
+      "provenance_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+      "verified": true
+    },
+    {
+      "repository_path": "distribution_manifest.json",
+      "git_blob_sha": "1544dcc4b608a63bfc8fe8fe0875d7019a37183e",
+      "sha256": "7ec9feaa531147819801a907688d6483c0accfe7fe23d57fffa6dc2f07dc2075",
+      "bytes": 207017,
+      "role": "Immutable formal public-v30 project/distribution provenance or existing source-only restore helper; no production launch.",
+      "provenance_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+      "verified": true
+    },
+    {
+      "repository_path": "tools/restore_v30.py",
+      "git_blob_sha": "08728f5819b8f1517ebc68bd7c439cd14942bb9c",
+      "sha256": "0c7250e549bc6f7ab500a6570ad099c7b43a09a84b74d3d29a78c1d37ba7e75f",
+      "bytes": 22861,
+      "role": "Immutable formal public-v30 project/distribution provenance or existing source-only restore helper; no production launch.",
+      "provenance_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/status-clock-display/20261009-cloud-v3/CHANGE.patch",
+      "git_blob_sha": "c557427a75688f976e55f7a729ca256b0ba2ca16",
+      "sha256": "3467106b110e666e95704aaa5542b2d6feec45d374f7b190847527200a5863f4",
+      "bytes": 1140,
+      "role": "Frozen independently published production candidate (test-copy materialization only).",
+      "provenance_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/status-clock-display/20261009-cloud-v3/MANIFEST.json",
+      "git_blob_sha": "9be9060068fd01d57e58166536e2e6e579dbd512",
+      "sha256": "cae8b4799c77789485bbd4fd9e97d7a42e02d734e152ce2514bc497ef85602bf",
+      "bytes": 3643,
+      "role": "Frozen independently published production candidate (test-copy materialization only).",
+      "provenance_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/status-clock-display/20261009-cloud-v3/STATIC_CHECKS.json",
+      "git_blob_sha": "cb7acf8a5dfc5672fbcd9678fc9a9ce3b6d0370d",
+      "sha256": "dfd079c1652f0237faef5c6f37b87a41aa31e5482be89fa7f56197c8cd06949e",
+      "bytes": 2516,
+      "role": "Frozen independently published production candidate (test-copy materialization only).",
+      "provenance_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/status-clock-display/20261009-cloud-v3/USAGE.txt",
+      "git_blob_sha": "859b353bdbd8e53bd33f79219a6cc96e1f41265e",
+      "sha256": "f517224b6b1e0f071f4b13e8882aaa35c5030dd3689fbb44845ede75ef0f1ce5",
+      "bytes": 2564,
+      "role": "Frozen independently published production candidate (test-copy materialization only).",
+      "provenance_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/status-clock-display/20261009-cloud-v3/check_static.py",
+      "git_blob_sha": "57433f45e08e0d0b6e64e2db5514b2c840f513e4",
+      "sha256": "6e9427b85484248078e8589f995fe0dce61d008e5fb7eedd34e6cb216c54a4ce",
+      "bytes": 5389,
+      "role": "Frozen independently published production candidate (test-copy materialization only).",
+      "provenance_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/status-clock-display/20261009-cloud-v3/overlay/view/playable_build/player_details.gd",
+      "git_blob_sha": "4ae0fe8b7b0780620cab4290747a6da8e71c5025",
+      "sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+      "bytes": 8902,
+      "role": "Frozen independently published production candidate (test-copy materialization only).",
+      "provenance_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/status-clock-display-tests/20261009-cloud-v3/INPUTS.json",
+      "git_blob_sha": "886bb20dc50aee1639be05e44f981ffac365aa63",
+      "sha256": "d5dac531e3f08d76b9e8a8152724c156be9c378162586731f31d12d36dfc652a",
+      "bytes": 4782,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades.",
+      "provenance_commit": "c5e317d3f5f48145d464719c2805e2d673189be5",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/status-clock-display-tests/20261009-cloud-v3/README.txt",
+      "git_blob_sha": "bb0a0cd042e13a05687c06cf575fe0ef443970c4",
+      "sha256": "c06a1a1053f2b38e3e3a8f7e7cead53fd4820c38b6b256ee8c7387a78ef787ec",
+      "bytes": 4085,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades.",
+      "provenance_commit": "c5e317d3f5f48145d464719c2805e2d673189be5",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/status-clock-display-tests/20261009-cloud-v3/STATIC_RESULT.json",
+      "git_blob_sha": "07a1d3fa8810f793544e10044ebe26987a97961c",
+      "sha256": "7c1162177837d5189d89b88cbac595633f0531f586aabe5063bb641df80526a3",
+      "bytes": 6356,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades.",
+      "provenance_commit": "c5e317d3f5f48145d464719c2805e2d673189be5",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/status-clock-display-tests/20261009-cloud-v3/TEST_MANIFEST.json",
+      "git_blob_sha": "a1698b7123b35aa9d673f69f70bf0e94a311eb52",
+      "sha256": "f70b27ab9a15afa78e35d6eb558ba75359fc78112e68fde548762bec845f3cfe",
+      "bytes": 1877,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades.",
+      "provenance_commit": "c5e317d3f5f48145d464719c2805e2d673189be5",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/status-clock-display-tests/20261009-cloud-v3/check_static.py",
+      "git_blob_sha": "bb6735a06d8a3549442d75e57363603ac5a95776",
+      "sha256": "cfe7351974a28bc19f1dc91b98a8223b7e4576cfc213cbcb4a41b644c4d6880f",
+      "bytes": 9669,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades.",
+      "provenance_commit": "c5e317d3f5f48145d464719c2805e2d673189be5",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/status-clock-display-tests/20261009-cloud-v3/prepare.py",
+      "git_blob_sha": "8bb0a1c34442f9408ca6373a22353952a18a1b0a",
+      "sha256": "eeec76df1e38930227f1d3a33108ed18e4b6ee336456ec82bfec0f9ecd57495b",
+      "bytes": 7164,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades.",
+      "provenance_commit": "c5e317d3f5f48145d464719c2805e2d673189be5",
+      "verified": true
+    },
+    {
+      "repository_path": "candidates/status-clock-display-tests/20261009-cloud-v3/test_clock_display.gd",
+      "git_blob_sha": "0295c0e2f7009dde3cca3aba1e767daf50959cef",
+      "sha256": "c0d8ca00ca919792e164150d8d4bf70aeb8321e1579c322095e30d4ea2b82486",
+      "bytes": 8643,
+      "role": "Frozen independent test/preparation source; static 63/59 are not Godot/runtime/Main grades.",
+      "provenance_commit": "c5e317d3f5f48145d464719c2805e2d673189be5",
+      "verified": true
+    }
+  ],
+  "activation_receipts": [
+    {
+      "commit": "3126d2eafcdd407788875d4f6909ca14ebf1a397",
+      "repository_path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/ACCEPTANCE.json",
+      "bytes": 3772,
+      "sha256": "cc89e53a90eb85e0f21831883d7a2d836a3b03c0912405b4742280d486f5083f",
+      "git_blob_sha": "77aca05ebb158d939becf20efd87dac0b91f7b1b",
+      "exact_local_remote_receipt_match": true
+    },
+    {
+      "commit": "3126d2eafcdd407788875d4f6909ca14ebf1a397",
+      "repository_path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/CONFIG_READBACK.json",
+      "bytes": 717,
+      "sha256": "2c3eea9bda528523257333f6c9436b533330dce6d10881fc2b8f6e0e8797892d",
+      "git_blob_sha": "ad969d52068a53dc5de5821887c5698f41b8b513",
+      "exact_local_remote_receipt_match": true
+    },
+    {
+      "commit": "3126d2eafcdd407788875d4f6909ca14ebf1a397",
+      "repository_path": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/NATIVE_SCHEDULE_READBACK.json",
+      "bytes": 615,
+      "sha256": "2bb6890d14648562bcfdf90186fdaed27ab59fb095b6883a1d7a06141970106e",
+      "git_blob_sha": "22032638636b6dba4fa0640ddb57a73f0a55cb32",
+      "exact_local_remote_receipt_match": true
+    }
+  ],
+  "local_scope_acceptance_verified": true,
+  "source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e",
+  "formal_source_report": {
+    "source_files": 1466,
+    "literal_scripts": 347,
+    "final_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e"
+  },
+  "runtime_resources_verified": 876,
+  "host_map_files": 2324,
+  "readonly_formal_host_validation": true,
+  "restoration_invoked": false,
+  "source_host_role": "read-only authority; generated formatter host is independent, not formal v30 config",
+  "production_edits": 0,
+  "engine_runs": 0
+}

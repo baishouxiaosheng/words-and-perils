@@ -1,0 +1,9 @@
+{
+  "task_id": "WP-STATUS-CLOCK-FOCUSED-20261009-008",
+  "task_sha256": "1bb12d8c9ff6aaa508e6d0ed2bc81c6e39b35e50fcdb8bba1bd0f01a15c92ee1",
+  "origin_io_sha256": "699f2008314a6cc29d65ad41d6a3b4c1967496c3087fabd55a721f517333032f",
+  "bound_io_sha256": "0e9bfd4d00e1cc348ad8bcbd732485bf9c795b2954a695523e5198d7e2fca18c",
+  "guard_launcher_sha256": "2ecc0cccc4cffba123fe1785ec021c3f13bd01e146d93987f9e7a376b4c57bf7",
+  "historical_scripts_unchanged": true,
+  "new_task_specific_bindings": true
+}

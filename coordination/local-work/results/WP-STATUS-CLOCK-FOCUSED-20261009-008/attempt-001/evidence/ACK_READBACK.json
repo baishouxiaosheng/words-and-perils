@@ -1,0 +1,14 @@
+{
+  "commit": "c5d1002b75449583e399e647b117b37041ec2701",
+  "all_match": true,
+  "files": [
+    {
+      "path": "coordination/local-work/results/WP-STATUS-CLOCK-FOCUSED-20261009-008/attempt-001/ACK.json",
+      "bytes": 2840,
+      "sha256": "a0a0c82076187ba2264f7fd9eb9fe32052d6a14d46946824930f68b1bffd7163",
+      "git_blob_sha": "65e4f17ab8c5066a3b61a5fd4fb27eb993d81609",
+      "actual_http_bytes_match": true
+    }
+  ],
+  "verified_utc": "2026-10-09T09:50:06.915868+00:00"
+}

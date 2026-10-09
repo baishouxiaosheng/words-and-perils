@@ -1,0 +1,27 @@
+{
+  "kind": "direct-owner-network-latch-resume",
+  "authorization": "Direct human: 解除这次网络故障锁存，继续自动接单。",
+  "original_latch_sha256": "cc134424c9ebdcf2d9428b5513125903adf278c3fbd501b7612b19bff0f7fe9e",
+  "original_latch_preserved": true,
+  "fresh_main": "718a308123b97589e716c98a43c37667f35597f5",
+  "fresh_control": {
+    "protocol": "words-and-perils-local-work/v1",
+    "kind": "control",
+    "queue_enabled": true,
+    "stop": false,
+    "resume_generation": 0,
+    "reason": "First bounded Natural write-result task is prepared. This control does not prove local automation is enabled."
+  },
+  "fixed_repository_id": 1403552519,
+  "owner_id": 128279531,
+  "existing_authenticated_push_pull": true,
+  "accepted_root_pins_match": true,
+  "exclusive_shared_lock_held_for_resume": true,
+  "old_terminal_tasks_preserved": 7,
+  "ledger_bytes_unchanged": true,
+  "prior_terminal_tasks_rerun": false,
+  "latch_absent_after_readback": true,
+  "config_readback_matches": true,
+  "rules_security_credentials_unchanged": true,
+  "utc": "2026-10-09T09:47:58.428438+00:00"
+}

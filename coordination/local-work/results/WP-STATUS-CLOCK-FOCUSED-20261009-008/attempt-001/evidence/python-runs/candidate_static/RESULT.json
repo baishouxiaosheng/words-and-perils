@@ -1,0 +1,13 @@
+{
+  "label": "candidate_static",
+  "exit_code": 0,
+  "pid": 31372,
+  "owned_process_exited": true,
+  "stdout_bytes": 2621,
+  "stderr_bytes": 0,
+  "script_sha256": "6e9427b85484248078e8589f995fe0dce61d008e5fb7eedd34e6cb216c54a4ce",
+  "engine_runs": 0,
+  "runtime_counts_not_inherited": true,
+  "static_count": 24,
+  "preparation_status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE"
+}

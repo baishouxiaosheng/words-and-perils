@@ -1,0 +1,120 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "task",
+  "task_id": "WP-GUI-GUARD-MANAGED-VERIFY-20261009-011",
+  "status": "ready",
+  "title": "Compile fixed GUI guard sources and verify managed-only helper behaviour",
+  "base_commit": "69ba3dfda055fbf55a5b7a31eb19b2a5c70f3c32",
+  "candidate_root": "candidates/guarded-focused-gui-source-only/20261009-native-011",
+  "inputs": [
+    {
+      "repository_path": "candidates/guarded-focused-gui/20261009-cloud-v1/WindowsGuard.FocusedGui.cs",
+      "git_blob_sha": "a02b844edf77ccebb59299d7f286983ffdd4cd75",
+      "sha256": "eb642e9b4092098614be6c9b5aff0becf96728a3a47bbe9f54dc12f13fb7ea4b",
+      "bytes": 38365,
+      "role": "Fixed candidate C# compiled and managed methods tested only; Guard.Run and all Win32 invocation methods forbidden",
+      "project_path": "WindowsGuard.FocusedGui.cs"
+    },
+    {
+      "repository_path": "candidates/guarded-focused-gui/20261009-cloud-v1/baseline/WindowsGuard.cs",
+      "git_blob_sha": "82d752b48025245912fc59b594343b4acd048fee",
+      "sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+      "bytes": 28655,
+      "role": "Original v3 source compiled only for pure Evaluate admission parity; never executed as guard",
+      "project_path": "baseline/WindowsGuard.cs"
+    },
+    {
+      "repository_path": "candidates/guarded-focused-gui/20261009-cloud-v2/Test-FocusedGui.SourceOnly.ps1",
+      "git_blob_sha": "c083eb48bbeb0dc90fd80028de5d9f3bdf9e11a1",
+      "sha256": "4fae6c4ede96f228c9066f406d3331d2d8c8c9efd7a5793c2ad384e5aba7a382",
+      "bytes": 5480,
+      "role": "Corrected fixed source-only Add-Type and managed validation entry; no engine or Guard.Run",
+      "project_path": "Test-FocusedGui.SourceOnly.ps1"
+    },
+    {
+      "repository_path": "candidates/guarded-focused-gui/20261009-cloud-v2/MANIFEST.json",
+      "git_blob_sha": "d7e2a8e95e6c61923214b60f35a7a1500d25c307",
+      "sha256": "fbb3c161b68acba5e3d544d01715cdfb391032fb5994dff94622fe8d06f1b078",
+      "bytes": 1825,
+      "role": "Read-only enum-fix source provenance; not authority or native adoption",
+      "project_path": "TEST_INPUT_MANIFEST.json"
+    }
+  ],
+  "baseline_project_pins": {
+    "WindowsGuard.FocusedGui.cs": "eb642e9b4092098614be6c9b5aff0becf96728a3a47bbe9f54dc12f13fb7ea4b",
+    "baseline/WindowsGuard.cs": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957"
+  },
+  "allowed_production_changes": [],
+  "allowed_test_changes": [],
+  "requirements": [
+    "Interpret this task solely as a fixed-source, no-engine interface-acceptance auxiliary test in the already accepted Words and Perils focused scope. It is not GUI deployment or permission to run GUI, and it cannot update trusted policy/pins. If current local accepted scope or session authority does not support this exact managed-only test, publish blocked and do not execute or find another route.",
+    "Before claim and safe substeps use fresh immutable main/strict CONTROL/remote STOP and the existing trusted local STOP latch, repository identity/source/worker permissions, repository-wide exclusive single-writer lock and durable ID/raw-SHA terminal dedupe. Reconcile existing owner/CLAIM/ACK and task010 terminal cleanup; do not steal claims, rerun task010 or clear a protected STOP. Create the existing unique CLAIM by expected-head non-force CAS and verify ownership/readback before work.",
+    "Verify all four fixed inputs at base_commit by raw bytes, size, SHA256 and Git blob SHA. Assemble only the three pinned source files at their project_path inside a newly created owned random disposable tree; keep TEST_INPUT_MANIFEST.json read-only. Verify canonical containment, no overlap/reparse/symlink and original sources unchanged. Review the fixed harness before execution; task JSON never supplies an arbitrary shell string.",
+    "Use the existing installed PowerShell through the established local owner execution tools only. Start one fresh owned source-only PowerShell process with NoProfile/NonInteractive and the fixed File entry, with TEMP/TMP redirected into a verified fresh task-owned temp subtree. The harness itself performs only Add-Type of the two pinned C# files and managed validation. Missing compiler/runtime means blocked; do not install dependencies or change system settings.",
+    "Never call Guard.Run, either guard wrapper, CreateProcessW/ResumeThread, engine guard runtime tests, Godot, Main, GUI, capture, rendering, engine help/version, services or network/model requests. No actual Godot executable is required, opened or created by this harness. Compile-only DLLs are ephemeral test artifacts, never deployed to trusted guard locations.",
+    "Preserve all stricter existing physical budget/reserve and safe host admission requirements; use the established bounded owned-process execution path with at most 120 seconds and 65536 aggregate stdout/stderr bytes. On timeout, output overflow, cancellation or other actual rejection stop, clean only verified owned processes/paths and preserve failed evidence. Do not invent a runner/service or use Guard.Run/wrapper to achieve these bounds. If no compliant existing host path is available, report blocked.",
+    "Capture actual host PID plus process creation time, unique owner runID, lock ownership, start/end, actual exit code, complete retained stdout/stderr and output-limit outcome. Require actual JSON status passed with actual checks count, engine_invocations=0, native_guard_run_calls=0, win32_equivalence=NOT_TESTED. Scan all stdout/stderr for SCRIPT ERROR/ERROR/WARNING and failure text; expected caught negative assertions must not be relabeled as execution evidence. Record actual managed count, never reuse cloud 52/53/154 scores.",
+    "Rehash all compiled/test source files before and after. Confirm host exited and no owned process/reader remains. Keep the repository lock through safe result publication and release in finally. Harness random temp cleanup is allowed only under the task-owned TEMP tree after containment/no-reparse/owned-process checks; preserve diagnostic evidence before removing owned temp paths. Never touch old saves, existing releases/candidates, global temp or unrelated processes.",
+    "Run the source-only harness at most once under this task. On real failure or unsupported scope/permissions, preserve raw evidence and stop; no same-ID retry or source/expectation/catch changes. Compilation/managed success does not establish Win32 Job/AvailPhys/cleanup equivalence, GUI admission, actual frames/screenshots/video, formal adoption, Main or full game acceptance.",
+    "Publish only new task candidate_root and exact result_root with existing two-phase, fresh-main single-parent non-force CAS and exact remote byte/hash readback. Do not change inbox/CONTROL/STOP/protocol/schema/trusted pins, originals, README/Actions/history/visibility/permissions. Sanitize personal paths, account data and secrets from outputs before public upload. Candidate adopted remains false."
+  ],
+  "verification": {
+    "execution_scope": "independent_project_interface_acceptance_auxiliary_source_only",
+    "required_activation": {
+      "protocol_sha256": "ac97c2523a6400bbde3c1f9b83f0398a704887891a8bfc94f5247476245400bc",
+      "schema_sha256": "14a68f72c3cea797799237051e154a5d1e9c5d1184d7cbebdf2d3db0086144ab",
+      "accepted_scope_receipt": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/ACCEPTANCE.json",
+      "receipt_is_not_a_replacement_for_live_local_gates": true
+    },
+    "source_entry": "Test-FocusedGui.SourceOnly.ps1",
+    "compile_inputs": [
+      "WindowsGuard.FocusedGui.cs",
+      "baseline/WindowsGuard.cs"
+    ],
+    "maximum_source_only_host_invocations": 1,
+    "maximum_engine_invocations": 0,
+    "guard_run_calls": 0,
+    "wrappers_permitted": false,
+    "host_wall_limit_seconds": 120,
+    "aggregate_output_limit_bytes": 65536,
+    "script_immutable": true,
+    "expected_output": {
+      "status": "passed",
+      "checks": "Report actual managed count only",
+      "engine_invocations": 0,
+      "native_guard_run_calls": 0,
+      "win32_equivalence": "NOT_TESTED"
+    },
+    "required_evidence": [
+      "fresh_source_scope_STOP_CONTROL_local_latch_claim_lock",
+      "fixed_input_git_sha_sha256_and_bytes",
+      "host_PID_creation_time_owned_runID_exit_and_cleanup",
+      "complete_stdout_stderr_ERROR_WARNING_output_limit_scan",
+      "actual_Add_Type_compile_and_managed_summary",
+      "before_after_source_hashes",
+      "task_owned_temp_cleanup_and_lock_release",
+      "two_phase_publication_remote_readback"
+    ],
+    "gui_deployed": false,
+    "gui_run_authorized": false,
+    "native_equivalence_verified": false
+  },
+  "preserve": [
+    "v1 and v2 source candidates and exact original v3 bytes",
+    "Current trusted protocol/schema pins, native guard entry, local safety/STOP state",
+    "All task010 and other terminal scores, claims, ledger and artifacts",
+    "Blank README, no Actions, production/default and repository history/visibility"
+  ],
+  "out_of_scope": [
+    "Any Guard.Run/wrapper/native guard runtime test or engine/GUI/service invocation",
+    "GUI deployment/adoption or treating compilation as GUI run permission",
+    "OS/security/permission/connection/pin changes, new credentials, dependency installation",
+    "Repeat of task010 or old headless gameplay tests",
+    "Real user data, keys, player saves, arbitrary command execution"
+  ],
+  "publication": {
+    "result_root": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011",
+    "adopted": false,
+    "phases": "A: immutable sanitized compile/managed source/output evidence and ARTIFACTS.json; B: actual RESULT/SUMMARY referring to A commit. Existing expected-head force=false CAS and exact remote readback."
+  }
+}

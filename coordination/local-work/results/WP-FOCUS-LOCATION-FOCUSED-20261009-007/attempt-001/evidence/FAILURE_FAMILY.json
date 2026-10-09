@@ -1,0 +1,14 @@
+{
+  "failure_family": "frozen_path_set_assertion_windows_separator_mismatch",
+  "task_ids": [
+    "WP-STATUS-CLOCK-FOCUSED-20261009-006",
+    "WP-FOCUS-LOCATION-FOCUSED-20261009-007"
+  ],
+  "same_boundary_observed_twice": true,
+  "retained_actual_replay_equals_expected_both": true,
+  "stop_unchanged_attempts": true,
+  "system_settings_changed": false,
+  "engine_runs": 0,
+  "requires_new_explicitly_revised_checker_task_before_retry": true,
+  "utc": "2026-10-09T08:36:37.986432+00:00"
+}

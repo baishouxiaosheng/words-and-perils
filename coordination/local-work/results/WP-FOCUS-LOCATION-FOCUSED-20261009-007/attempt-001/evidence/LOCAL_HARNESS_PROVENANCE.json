@@ -1,0 +1,7 @@
+{
+  "runner_sha256": "c5161aef75021b847b22f2eedacfb334b7c6130943837cd015a1ab65c7619ca3",
+  "new_task_id": "WP-FOCUS-LOCATION-FOCUSED-20261009-007",
+  "historical_harness_unchanged": true,
+  "frozen_checker_per_command_LF": true,
+  "production_driver_assertion_changes": 0
+}

@@ -1,0 +1,29 @@
+{
+  "task_id": "WP-FOCUS-LOCATION-FOCUSED-20261009-007",
+  "task_sha256": "9508a7bff58cf5d69d8a955399cd7db0bf9f25b57089021b5a63d9bb49c6b8df",
+  "owner_run_id": "focused-007-run-01",
+  "stage": "Execution failed; publication next",
+  "claim_commit": "47c7e0bf93e59c8a41a90fc0471dc86a78481ef5",
+  "ack_commit": "4311e1ed16c68a431163bc39d9c3328a68cc2fe9",
+  "completed_engine_runs": [],
+  "static_checks": [
+    {
+      "label": "candidate_static",
+      "exit_code": 1,
+      "pid": 53988,
+      "owned_process_exited": true,
+      "stdout_bytes": 0,
+      "stderr_bytes": 899,
+      "script_sha256": "b47c30376779435610f32b53fb7d93b33eaceb9640aa1610c94a116e8a1e8747",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true
+    }
+  ],
+  "automation_enabled": true,
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  },
+  "utc": "2026-10-09T08:36:05.500172+00:00",
+  "do_not_repeat_recorded_launch": true
+}

@@ -1,0 +1,8 @@
+Replay failure evidence retained: E:\WordsAndPerils-Tasks\candidate-20261008-ea04d75a\evidence\WP-FOCUS-LOCATION-FOCUSED-20261009-007\run-01\replay-evidence\git-replay-failure-vt517pll
+Traceback (most recent call last):
+  File "E:\WordsAndPerils-Tasks\candidate-20261008-ea04d75a\evidence\WP-FOCUS-LOCATION-FOCUSED-20261009-007\run-01\inputs\candidates\focus-location-display\20261009-cloud-v2\check_static.py", line 85, in <module>
+    check([str(p.relative_to(directory)) for p in Path(directory).rglob("*") if p.is_file()] == [change["path"]],
+  File "E:\WordsAndPerils-Tasks\candidate-20261008-ea04d75a\evidence\WP-FOCUS-LOCATION-FOCUSED-20261009-007\run-01\inputs\candidates\focus-location-display\20261009-cloud-v2\check_static.py", line 12, in check
+    if not ok: raise AssertionError(label)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: patch touches only allowed file

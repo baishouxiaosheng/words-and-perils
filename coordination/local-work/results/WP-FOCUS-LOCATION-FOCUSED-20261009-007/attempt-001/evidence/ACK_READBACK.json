@@ -1,0 +1,14 @@
+{
+  "commit": "4311e1ed16c68a431163bc39d9c3328a68cc2fe9",
+  "all_match": true,
+  "files": [
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/ACK.json",
+      "bytes": 2708,
+      "sha256": "840010ec4383b650ac6167795bac34905e0cde934ebe6f5a5bb8a35b108a63bd",
+      "git_blob_sha": "14daef8a0ce7cc1b712b77d71355b03a89e681a7",
+      "actual_http_bytes_match": true
+    }
+  ],
+  "verified_utc": "2026-10-09T08:36:03.600055+00:00"
+}

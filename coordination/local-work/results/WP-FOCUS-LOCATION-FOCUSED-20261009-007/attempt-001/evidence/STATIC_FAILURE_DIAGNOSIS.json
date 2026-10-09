@@ -1,0 +1,98 @@
+{
+  "actual_frozen_checker_exit": 1,
+  "original_stderr": "Replay failure evidence retained: E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-FOCUS-LOCATION-FOCUSED-20261009-007\\run-01\\replay-evidence\\git-replay-failure-vt517pll\r\nTraceback (most recent call last):\r\n  File \"E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-FOCUS-LOCATION-FOCUSED-20261009-007\\run-01\\inputs\\candidates\\focus-location-display\\20261009-cloud-v2\\check_static.py\", line 85, in <module>\r\n    check([str(p.relative_to(directory)) for p in Path(directory).rglob(\"*\") if p.is_file()] == [change[\"path\"]],\r\n  File \"E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-FOCUS-LOCATION-FOCUSED-20261009-007\\run-01\\inputs\\candidates\\focus-location-display\\20261009-cloud-v2\\check_static.py\", line 12, in check\r\n    if not ok: raise AssertionError(label)\r\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: patch touches only allowed file\r\n",
+  "retained_replay_files": [
+    {
+      "path": "replay-evidence/git-replay-failure-vt517pll/actual.gd",
+      "bytes": 8409,
+      "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5"
+    },
+    {
+      "path": "replay-evidence/git-replay-failure-vt517pll/before.gd",
+      "bytes": 8199,
+      "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3"
+    },
+    {
+      "path": "replay-evidence/git-replay-failure-vt517pll/CHANGE.patch",
+      "bytes": 718,
+      "sha256": "fd5ecc575d4c1f332b8f9d1d34ad9b34e77c323324ba61e9a2a6726cd8582f3e"
+    },
+    {
+      "path": "replay-evidence/git-replay-failure-vt517pll/DIAGNOSIS.json",
+      "bytes": 1155,
+      "sha256": "8a8eae7df010a1530cb0ec37be1161ee8905fd4b78f643978360b761c90715f4"
+    },
+    {
+      "path": "replay-evidence/git-replay-failure-vt517pll/expected.gd",
+      "bytes": 8409,
+      "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5"
+    }
+  ],
+  "diagnoses": [
+    {
+      "error_type": "AssertionError",
+      "before": {
+        "bytes": 8199,
+        "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+        "CRLF": 0,
+        "LF": 104
+      },
+      "expected": {
+        "bytes": 8409,
+        "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+        "CRLF": 0,
+        "LF": 107
+      },
+      "actual": {
+        "bytes": 8409,
+        "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+        "CRLF": 0,
+        "LF": 107
+      },
+      "actual_equals_expected": true,
+      "commands": [
+        {
+          "argv": [
+            "git",
+            "-c",
+            "core.autocrlf=false",
+            "-c",
+            "core.eol=lf",
+            "apply",
+            "--check",
+            "HASH_BOUND_PATCH"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "-c",
+            "core.autocrlf=false",
+            "-c",
+            "core.eol=lf",
+            "apply",
+            "HASH_BOUND_PATCH"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "original_bytes_retained": true,
+      "godot_invocations": 0
+    }
+  ],
+  "exact_bytes_retained": true,
+  "no_source_assertion_or_global_config_edit": true,
+  "same_task_retry": false,
+  "engine_runs": 0,
+  "failed_assertion": "patch touches only allowed file",
+  "retained_actual_equals_expected": true,
+  "expected_repository_path": "view/playable_build/player_details.gd",
+  "windows_native_representation": "view\\playable_build\\player_details.gd",
+  "windows_native_representation_equals_repository_path": false,
+  "root_cause": "Frozen checker compares Windows native relative-path string against POSIX repository path; retained real Git replay bytes equal candidate. No assertion changed or rerun."
+}

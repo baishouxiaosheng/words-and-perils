@@ -1,0 +1,206 @@
+{
+  "task_id": "WP-FOCUS-LOCATION-FOCUSED-20261009-007",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/TASK.json",
+      "bytes": 24390,
+      "sha256": "9508a7bff58cf5d69d8a955399cd7db0bf9f25b57089021b5a63d9bb49c6b8df"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/PROTOCOL.json",
+      "bytes": 12065,
+      "sha256": "ac97c2523a6400bbde3c1f9b83f0398a704887891a8bfc94f5247476245400bc"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/TASK_SCHEMA.json",
+      "bytes": 7110,
+      "sha256": "14a68f72c3cea797799237051e154a5d1e9c5d1184d7cbebdf2d3db0086144ab"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/INPUT_VERIFICATION.json",
+      "bytes": 10164,
+      "sha256": "b8f2b4bc346b64c88a6a7c075a7c28e8a1d1b506ba12127ad842642cb518c534"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/HOST_SOURCE_RESOURCE_MAP.json",
+      "bytes": 441374,
+      "sha256": "5ff2e4cbcf62b8dda38f9559756f76a849560850e7ba5073c4ff5e9f1816fbd3"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/HARNESS_BINDING.json",
+      "bytes": 504,
+      "sha256": "897e18f0c547a4daa18f8581532b9a56cf38e9442d655e29db188c21de0419b5"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/EXECUTION_OUTCOME.json",
+      "bytes": 796,
+      "sha256": "04269453284f539f7fc31b916773f54d8aef7b534205f0ff6ffd28471cb8be23"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/EXECUTION_EXCEPTION.json",
+      "bytes": 206,
+      "sha256": "69285434c64a44cbae45db21e1884f3febf144beb78c90480f6544c139bd90e0"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/EXECUTION_LOCK_RELEASED.json",
+      "bytes": 143,
+      "sha256": "ab0b57b7c32f3cca7d6116c6f513906ee550d66383d16624d129c18ef8ef37e9"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/EXECUTION_LOCK_OWNER.json",
+      "bytes": 197,
+      "sha256": "41e4f31ad36b463826cd15cb7a94220e16847c8710bc3282aac854297bb6e128"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/CLAIM_READBACK.json",
+      "bytes": 485,
+      "sha256": "489f925013bb5b16b936da91911294ed7f26f8f15b5da2e32a2955ae61d85269"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/ACK_READBACK.json",
+      "bytes": 496,
+      "sha256": "83d0e8feb93b8580c03d64f994cebea6b805e7680dbcaa0b0c9202cd08163e3f"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/CHECKPOINT_LOCAL.json",
+      "bytes": 966,
+      "sha256": "9486499fa7d1cb462fddbb20dff582874ef2bc0020852384b1ddf6df5743a2b5"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/ORIGINAL_INPUTS_PRESERVED.json",
+      "bytes": 165,
+      "sha256": "fd2d7eba0c265f4ca5d5db4eb3d7fa5a4568c07f7171eea47bcc041ba28f64a0"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/TEST_SUMMARY.json",
+      "bytes": 1238,
+      "sha256": "e5afad21fd94fe140ec648bff84c06f289a6e8ad5dc557b0dc634f02e2d60217"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/VERIFICATION_MANIFEST.json",
+      "bytes": 2175,
+      "sha256": "cff45971359a25ecc8cb3086c2f7ea2735c1ccc04f54628258e5363bf195d305"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/LOCAL_HARNESS_PROVENANCE.json",
+      "bytes": 281,
+      "sha256": "cd74bc41b713788351f52c917d1ebdffcf1c7b67bfed2ed6ea2c779af0ce6e3e"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/FAILURE_FAMILY.json",
+      "bytes": 503,
+      "sha256": "debb493a42ffa43efe00987ad7d4adac9e53fb6e11e5ddbca44d0fc2cf6a640b"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/STATIC_FAILURE_DIAGNOSIS.json",
+      "bytes": 4071,
+      "sha256": "5e2bb1c3e7cfb5fb782ba7952e851e3aefef04c1ae11c859ac6d8ae01678c449"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/gates/GATE-ack.json",
+      "bytes": 681,
+      "sha256": "6f0af5fc22152cbf9abbba40413c057112e96eecdfcceb4f485c729e938cd4db"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/gates/GATE-preclaim.json",
+      "bytes": 687,
+      "sha256": "1b8a1e5f9f9ec5fa3e85d966b61c109070d132d1a631c0d36e1e8583126e6876"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/gates/GATE-publication_A.json",
+      "bytes": 691,
+      "sha256": "cb209172ce82e5a164ebe73a5de7ff81c3f01cbbffa13b96deda2338ccfb589a"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/gates/GATE-python_candidate_static.json",
+      "bytes": 701,
+      "sha256": "45454d307312bcec9372eabbc49cfeaae1d1a350d02d6002f89572e9a0661f8a"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/python-runs/candidate_static/PID.json",
+      "bytes": 141,
+      "sha256": "075b365526995be0140ad0d273c8c1f15da55a5b6386c0a89cb18618abfe0727"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/python-runs/candidate_static/RESULT.json",
+      "bytes": 302,
+      "sha256": "7695af2601a565cd7eb8f0b947e105a7abb31796a18b0ceff216ddbf841b8591"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/python-runs/candidate_static/stderr.log",
+      "bytes": 899,
+      "sha256": "53fb2468cc87764eace756c2f4ba3d91d3cf8d3b3a946507609866bc7c2feafb"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/python-runs/candidate_static/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/replay-evidence/git-replay-failure-vt517pll/actual.gd",
+      "bytes": 8409,
+      "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/replay-evidence/git-replay-failure-vt517pll/before.gd",
+      "bytes": 8199,
+      "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/replay-evidence/git-replay-failure-vt517pll/CHANGE.patch",
+      "bytes": 718,
+      "sha256": "fd5ecc575d4c1f332b8f9d1d34ad9b34e77c323324ba61e9a2a6726cd8582f3e"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/replay-evidence/git-replay-failure-vt517pll/DIAGNOSIS.json",
+      "bytes": 1155,
+      "sha256": "8a8eae7df010a1530cb0ec37be1161ee8905fd4b78f643978360b761c90715f4"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/replay-evidence/git-replay-failure-vt517pll/expected.gd",
+      "bytes": 8409,
+      "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/harness/task_io.py",
+      "bytes": 8830,
+      "sha256": "8facdfe9808b041b80e33b5325673899c1743d28c837e9eb35fd587cb1c73142"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/harness/Run-Test.ps1",
+      "bytes": 1846,
+      "sha256": "2ecc0cccc4cffba123fe1785ec021c3f13bd01e146d93987f9e7a376b4c57bf7"
+    },
+    {
+      "path": "coordination/local-work/results/WP-FOCUS-LOCATION-FOCUSED-20261009-007/attempt-001/evidence/harness/focused_queue_run.py",
+      "bytes": 16609,
+      "sha256": "c5161aef75021b847b22f2eedacfb334b7c6130943837cd015a1ab65c7619ca3"
+    },
+    {
+      "path": "candidates/focus-location-focused-verification/20261009-local-007/MANIFEST.json",
+      "bytes": 2175,
+      "sha256": "cff45971359a25ecc8cb3086c2f7ea2735c1ccc04f54628258e5363bf195d305"
+    },
+    {
+      "path": "candidates/focus-location-focused-verification/20261009-local-007/frozen-candidate/CHANGE.patch",
+      "bytes": 718,
+      "sha256": "fd5ecc575d4c1f332b8f9d1d34ad9b34e77c323324ba61e9a2a6726cd8582f3e"
+    },
+    {
+      "path": "candidates/focus-location-focused-verification/20261009-local-007/frozen-candidate/MANIFEST.json",
+      "bytes": 3234,
+      "sha256": "f65b10eef2d01df82ab1e1644a3d59745b580d3ac96e83b75c9c26fa944decf5"
+    },
+    {
+      "path": "candidates/focus-location-focused-verification/20261009-local-007/frozen-candidate/overlay/view/playable_build/player_details.gd",
+      "bytes": 8409,
+      "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5"
+    },
+    {
+      "path": "candidates/focus-location-focused-verification/20261009-local-007/frozen-test/test_focus_location.gd",
+      "bytes": 5952,
+      "sha256": "87c99370865600ebc48e616c2b9f17fa9e62bf267277085462aba48f6a8be4da"
+    }
+  ]
+}

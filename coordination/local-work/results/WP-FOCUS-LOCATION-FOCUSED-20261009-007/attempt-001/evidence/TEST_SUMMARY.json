@@ -1,0 +1,35 @@
+{
+  "task_id": "WP-FOCUS-LOCATION-FOCUSED-20261009-007",
+  "task_sha256": "9508a7bff58cf5d69d8a955399cd7db0bf9f25b57089021b5a63d9bb49c6b8df",
+  "base_commit": "e46301e512b53d5dc5f3a8fa410f439641edc577",
+  "candidate_input_commit": "e584e8cd3c50fe9c6342235f55ee6522acc5db22",
+  "test_input_commit": "e46301e512b53d5dc5f3a8fa410f439641edc577",
+  "formal_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e",
+  "terminal_status": "failed",
+  "actual_new_guarded_invocations": 0,
+  "strict_parse_and_suite_pass": false,
+  "actual_runtime_assertions": null,
+  "static_runs": [
+    {
+      "label": "candidate_static",
+      "exit_code": 1,
+      "pid": 53988,
+      "owned_process_exited": true,
+      "stdout_bytes": 0,
+      "stderr_bytes": 899,
+      "script_sha256": "b47c30376779435610f32b53fb7d93b33eaceb9640aa1610c94a116e8a1e8747",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true
+    }
+  ],
+  "engine_runs": [],
+  "production_edits": 0,
+  "original_driver_modified": false,
+  "Main_UI_visibility_verified": false,
+  "candidate_adopted": false,
+  "same_task_retry": false,
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  }
+}

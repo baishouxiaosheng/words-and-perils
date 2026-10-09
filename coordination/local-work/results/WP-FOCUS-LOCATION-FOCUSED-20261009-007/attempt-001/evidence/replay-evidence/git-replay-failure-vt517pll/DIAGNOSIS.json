@@ -1,0 +1,55 @@
+{
+  "error_type": "AssertionError",
+  "before": {
+    "bytes": 8199,
+    "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+    "CRLF": 0,
+    "LF": 104
+  },
+  "expected": {
+    "bytes": 8409,
+    "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+    "CRLF": 0,
+    "LF": 107
+  },
+  "actual": {
+    "bytes": 8409,
+    "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+    "CRLF": 0,
+    "LF": 107
+  },
+  "actual_equals_expected": true,
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "-c",
+        "core.eol=lf",
+        "apply",
+        "--check",
+        "HASH_BOUND_PATCH"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "-c",
+        "core.eol=lf",
+        "apply",
+        "HASH_BOUND_PATCH"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "original_bytes_retained": true,
+  "godot_invocations": 0
+}

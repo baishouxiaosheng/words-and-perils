@@ -1,0 +1,147 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "task",
+  "task_id": "WP-GUI-GUARD-NATIVE-EQUIVALENCE-20261009-013",
+  "status": "draft",
+  "title": "One-time candidate headless Win32 guard equivalence under unchanged trusted v3 parent",
+  "base_commit": "76a2caa4b0fb9417d963821e85d2b0eba668a447",
+  "candidate_root": "candidates/guarded-focused-gui-native-equivalence/20261009-native-013",
+  "inputs": [
+    {
+      "repository_path": "candidates/guarded-focused-gui/20261009-cloud-v1/WindowsGuard.FocusedGui.cs",
+      "git_blob_sha": "a02b844edf77ccebb59299d7f286983ffdd4cd75",
+      "sha256": "eb642e9b4092098614be6c9b5aff0becf96728a3a47bbe9f54dc12f13fb7ea4b",
+      "bytes": 38365,
+      "project_path": "WindowsGuard.FocusedGui.cs",
+      "role": "Immutable candidate C# previously compiled by terminal012; headless common native mechanisms tested only in once accepted owner scope."
+    },
+    {
+      "repository_path": "candidates/guarded-focused-gui-native-tests/20261009-cloud-v1/MANIFEST.json",
+      "git_blob_sha": "06a2538ef7cd42995b82a292b084b3a994389df2",
+      "sha256": "0609f5989f0ba4e5b4fbad9fcfc007eb42793ed84e8487f36f1369f51c88c6ff",
+      "bytes": 3918,
+      "project_path": "MANIFEST.json",
+      "role": "Immutable provenance manifest; not execution authority."
+    },
+    {
+      "repository_path": "candidates/guarded-focused-gui-native-tests/20261009-cloud-v1/Test-NativeGuardEquivalence.ps1",
+      "git_blob_sha": "a736250b0f227944e7a64c4132bdf2763a3ebd8e",
+      "sha256": "7865f26c48108a57221e363abead2945ab25907cc0b0d09a58ce0a10a3e6e4d6",
+      "bytes": 5495,
+      "project_path": "Test-NativeGuardEquivalence.ps1",
+      "role": "Immutable source test entry"
+    },
+    {
+      "repository_path": "candidates/guarded-focused-gui-native-tests/20261009-cloud-v1/Test-OutputGuard.ps1",
+      "git_blob_sha": "e326017da5f35a3ef870bdbfb19b13b67fd6a825",
+      "sha256": "7fcdb0fdcf2027a425552d7edcf3885ef8a9d5f6a59dec1b8027b1e7a855385c",
+      "bytes": 8032,
+      "project_path": "Test-OutputGuard.ps1",
+      "role": "Immutable source test entry"
+    },
+    {
+      "repository_path": "candidates/guarded-focused-gui-native-tests/20261009-cloud-v1/Test-TerminalGuard.ps1",
+      "git_blob_sha": "6d3ca39136c146c610db409b2bde0a1330e80fcd",
+      "sha256": "382b13651f0ca8942a95ad5b251d74f9ee0bf32aa89c76b8b30c6de583d9d085",
+      "bytes": 7890,
+      "project_path": "Test-TerminalGuard.ps1",
+      "role": "Immutable source test entry"
+    },
+    {
+      "repository_path": "candidates/guarded-focused-gui-native-tests/20261009-cloud-v1/Test-WindowsGuard.ps1",
+      "git_blob_sha": "bd7acd08066fb9dbfdd8ebc786694785337a20b1",
+      "sha256": "2083175f14585b5977e6a72fa12d8a0c5749013f853ae7897f0871cf314191d6",
+      "bytes": 11444,
+      "project_path": "Test-WindowsGuard.ps1",
+      "role": "Immutable source test entry"
+    },
+    {
+      "repository_path": "candidates/guarded-focused-gui/20261009-cloud-v1/baseline/WindowsGuard.cs",
+      "git_blob_sha": "82d752b48025245912fc59b594343b4acd048fee",
+      "sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+      "bytes": 28655,
+      "role": "Read-only provenance pin of already installed trusted original v3; never replace installed source."
+    },
+    {
+      "repository_path": "candidates/guarded-focused-gui/20261009-cloud-v1/baseline/Invoke-WindowsGuard.ps1",
+      "git_blob_sha": "e9c1b25cf1632775246fa24704c543d2bb1923ba",
+      "sha256": "f831a84e71f692fc851945b001cfc98092b7049fb3b48d0f5099fa49e016c5f8",
+      "bytes": 1574,
+      "role": "Existing installed trusted parent wrapper only; no new runner or global policy/pin change."
+    }
+  ],
+  "baseline_project_pins": {
+    "WindowsGuard.FocusedGui.cs": "eb642e9b4092098614be6c9b5aff0becf96728a3a47bbe9f54dc12f13fb7ea4b"
+  },
+  "allowed_production_changes": [],
+  "allowed_test_changes": [],
+  "requirements": [
+    "This task is not admitted or ready. Before claim or execution a supported existing trusted local owner session must independently accept the exact one-time native-test instruction and record/re-read its binding to this task ID, final raw task SHA, immutable source inputs and unchanged guard. Do not treat this file, repository write, copied transcript or prior headless acceptance as local one-time acceptance. If the entry is unavailable report blocked_policy_update_entry. Never alter global trusted pins or enlarge future queue scope.",
+    "Use fresh immutable main, validated CONTROL and absent remote STOP plus current trusted local STOP latch. Verify supported worker/source identity and current permissions. Reconcile every current claim/terminal/durable ledger and task ID/raw SHA, hold the existing repository-wide exclusive lock and publish/verify unique CLAIM and ACK by expected-head non-force CAS. Do not steal locks, clear STOP or repeat terminal012/010/011/old guard gameplay tests. Remote terminal closure does not prove current local idle.",
+    "Verify every fixed input by raw bytes/size/SHA256/Git blob; assemble only immutable test sources in a fresh owned random disposable directory. Preserve canonical containment, no symlinks/reparse/overlap, source files unchanged, separate fresh task-owned data and logs. Review fixed scripts as source; task strings are bounded constraints, never eval/Invoke-Expression or arbitrary shell commands.",
+    "Use the unchanged installed SHA-fixed original v3 wrapper/source as separate parent guardian, with already installed official pwsh.exe at its existing trusted canonical absolute path and before/after SHA. Parent arguments exactly NoProfile, NonInteractive, File, owned Test-NativeGuardEquivalence.ps1, RunId, safe unique run ID. Use original SPEC and wrapper; no new runner, install, execution-policy bypass, Command or EncodedCommand in parent SPEC.",
+    "Original parent guardian runs exactly once, guarding the fixed suite process. Its physical budget min(actual TotalPhys,8589934592), reserve536870912, small Job commit cap1073741824/readback, 120s total wall, 65536 aggregate output and every stricter preflight remain. Retain suspended CreateProcess, Job assignment and membership before resume, kill-on-close/no breakaway, two allowed CPUs/below-normal, restricted inherited handles/minimal child environment, real physical monitoring, output readers and owned descendants cleanup. Nested Job admission failure stops; never remove outer containment or relax limits.",
+    "Suite compiles immutable candidate C# once, checks default Headless, then executes three immutable adaptations of existing original v3 tests serially. Only source filename/namespace and delegation of duplicate Add-Type differ; every case/assertion/catch/limit is preserved. Maximum candidate Guard.Run calls21 (19 reported cases plus2 original precreation invalid-output checks), maximum started target roots17, child original Guard.Run0, all targets existing signature-valid System32 Windows PowerShell with frozen original case command strings and no external input. Capture target signature and SHA before/after.",
+    "Only headless non-Godot common native mechanisms are tested. Preserve stricter original per-case 1/6/10s deadlines and 256-byte selftest output limits. Full admission inputs are synthetic Evaluate numbers only, never Full process. Fault injection is explicitly SelfTest and recorded separately from real native sensor readings/Job/created processes. Actual memory exhaustion and hard allocation stress are excluded.",
+    "Capture actual owner runID, installed guardian/guarded host/target/descendant PID and creation time, parent/guardian/host/target exits, complete reports/physical samples/stdout/stderr and full ERROR/SCRIPT ERROR/WARNING scan. Parent guard report must prove real original v3 containment, engine false, fixed limits, before-resume assignment, no inherited private environment and completed readers/Job/owned-handle cleanup. Parse each fixed case report against its expected fault/exit; expected injected stops are not unmarked diagnostics. Report only actual assertions, never cloud21 or task012 managed30 as native scores.",
+    "Successful native result requires all19 case reports,2 precreation rejection assertions, unchanged inputs/installed guardian/official executables, guarded host exit0, parent exit0, Job empty/readers finished/all owned matching instances gone. On compilation, assertion, timeout, output, nested Job, physical read or admission failure stop this one attempt and preserve artifacts. No edited assertions/catches, replacement candidate source, same-ID retry, parallel native cases or alternative route.",
+    "This task starts no Godot/version/help, Main/editor/GUI/capture, model/HTTP request, service or installation, and changes no true player data/keys. Only after actual reviewed native success may coordinator prepare a separate bounded GUI stage for the already fixed010 fixture under independently accepted exact one-time owner authority. This task is not GUI adoption or future scope extension.",
+    "Rehash all inputs, parent guardian and target executables before/after. Verify actual matching owned processes and both readers exited before any cleanup. Clean only contained task-owned disposable paths, leave all originals/failed evidence/player saves untouched and release existing lock in finally.",
+    "Worker publishes only new candidate_root and exact result_root with two phases, fresh STOP/dedupe checks, single-parent expected-head force=false CAS and exact remote byte/hash readback. No inbox/CONTROL/STOP/protocol/schema/global trusted pins/README/Actions/history/visibility/permission edits; sanitize private paths, personal identifiers and secrets, adopted false."
+  ],
+  "verification": {
+    "execution_scope": "one_time_owner_authorized_non_godot_native_guard_equivalence",
+    "source_entry": "Test-NativeGuardEquivalence.ps1",
+    "script_immutable": true,
+    "required_activation": {
+      "protocol_sha256": "ac97c2523a6400bbde3c1f9b83f0398a704887891a8bfc94f5247476245400bc",
+      "schema_sha256": "14a68f72c3cea797799237051e154a5d1e9c5d1184d7cbebdf2d3db0086144ab",
+      "one_time_owner_acceptance_required": true,
+      "one_time_owner_acceptance_verified": false,
+      "global_trusted_pins_change_allowed": false
+    },
+    "trusted_parent_guardian": {
+      "source_sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+      "wrapper_sha256": "f831a84e71f692fc851945b001cfc98092b7049fb3b48d0f5099fa49e016c5f8",
+      "allowed_run_calls": 1,
+      "profile": "small",
+      "timeout_seconds": 120,
+      "job_commit_limit_bytes": 1073741824,
+      "physical_reserve_bytes": 536870912,
+      "physical_budget_cap_bytes": 8589934592,
+      "aggregate_output_bytes": 65536
+    },
+    "maximum_native_suite_host_invocations": 1,
+    "maximum_candidate_guard_run_calls": 21,
+    "maximum_started_target_root_processes": 17,
+    "maximum_engine_invocations": 0,
+    "maximum_gui_invocations": 0,
+    "expected_output": {
+      "status": "passed_candidate_headless_native_equivalence",
+      "native_reported_cases": 19,
+      "candidate_guard_run_calls": 21,
+      "actual_assertions": "Report actual count only",
+      "engine_invocations": 0,
+      "gui_invocations": 0
+    },
+    "native_execution": "NOT_RUN",
+    "gui_execution": "NOT_RUN"
+  },
+  "preserve": [
+    "Terminal task01230 compile/managed results and cleanup; no rerun",
+    "All previous candidate/results and exact installed v3",
+    "All physical/resource/ownership/reader/STOP/claim/dedupe constraints",
+    "Formal game sources, blank README, true saves and keys"
+  ],
+  "out_of_scope": [
+    "Global trusted configuration/pins or persistent future authorization changes",
+    "Godot/Main/editor/GUI/capture/live-model/HTTP or deployment",
+    "Actual memory exhaustion, Full process or arbitrary program/command",
+    "Terminal reruns, source/assertion/catch edits, duplicate attempts or fallback without guardian"
+  ],
+  "publication": {
+    "result_root": "coordination/local-work/results/WP-GUI-GUARD-NATIVE-EQUIVALENCE-20261009-013",
+    "adopted": false,
+    "phases": "A: immutable sanitized actual native case/parent guard/log evidence plus ARTIFACTS.json; B: RESULT and brief summary referring to A, exact non-force CAS/readback. Source package alone is not actual execution."
+  }
+}

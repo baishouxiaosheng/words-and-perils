@@ -1,0 +1,42 @@
+{
+  "task_id": "WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010",
+  "task_sha256": "c7b4729ce5803e76a4e09977e4bd59126caf7bcac9d870f40d0de2b9e757277a",
+  "source_base": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+  "combined_fixed_commit": "f0e253db723fb27309bfc0ece1233960ef2bfd24",
+  "artifact_commit": "a52a7e5e12228c0cb47a0254f452dd232c380562",
+  "result_commit": "a3a5b06cd4f9813bf00df99aa5ddd6e3735f6a95",
+  "sources": [
+    {
+      "component": "clock",
+      "overlay_sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+      "original_driver_sha256": "c0d8ca00ca919792e164150d8d4bf70aeb8321e1579c322095e30d4ea2b82486",
+      "runtime_checks": 165,
+      "runtime_pid": 30160,
+      "strict_pass": true
+    },
+    {
+      "component": "location",
+      "overlay_sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+      "original_driver_sha256": "87c99370865600ebc48e616c2b9f17fa9e62bf267277085462aba48f6a8be4da",
+      "runtime_checks": 234,
+      "runtime_pid": 38088,
+      "strict_pass": true
+    },
+    {
+      "component": "combined",
+      "overlay_sha256": "e4e20fc6fb269238d3a6116634b6593f92078c5dafbbd055b237eb123b49d883",
+      "original_driver_sha256": "8b12348f54733ca74b8ce1b469ae243945574d2ecce485c77f328c75034af037",
+      "runtime_checks": 305,
+      "runtime_pid": 34708,
+      "strict_pass": true
+    }
+  ],
+  "test_only_fixture_changes": true,
+  "production_changes": 0,
+  "candidate_adopted": false,
+  "delivery_complete": false,
+  "screenshots": "NOT_RUN",
+  "video": "NOT_RUN",
+  "gui_blocker": "godot_requires_explicit_headless",
+  "original_input_manifests_preserved": true
+}

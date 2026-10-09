@@ -1,0 +1,16 @@
+Portable fixture follow-up for task 010, unadopted.
+
+The frozen original README files retain historical commands. On this Windows host,
+do NOT run their default privileged symlink fixtures. The new clock/location
+check_static.py requires the explicit option --symlink-fixture-mode unavailable
+here. Required is still the default on hosts where symlinks are available.
+Each package records both symlink negatives as NOT_RUN; 61/57 available checks
+must not be reported as complete negative-case coverage. Production preparation
+still refuses symbolic links and Windows reparse components before output creation.
+
+Do not rerun terminal task 010 ID/hash or old 008/009. Any further test must have
+a new authorized task ID, pinned actual inputs, fresh STOP/CONTROL admission,
+an exclusive writer, isolated data, and the verified v3 guarded entry.
+The existing guard rejects graphical Godot: godot_requires_explicit_headless.
+Screenshots/video remain NOT_RUN. Do not remove that gate or use an unguarded
+or alternate launcher to bypass its rejection. No formal adoption occurred.

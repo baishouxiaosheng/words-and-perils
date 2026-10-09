@@ -1,0 +1,20 @@
+{
+  "publication_pid": 58480,
+  "publication_process_exited": true,
+  "owned_handle_disposed": true,
+  "shared_lock_free_verified": true,
+  "owned_https_connections_closed": 6,
+  "unknown_processes_killed": false,
+  "checked_utc": "2026-10-09T10:42:00.073829+00:00",
+  "latest_main": "a3a5b06cd4f9813bf00df99aa5ddd6e3735f6a95",
+  "control": {
+    "protocol": "words-and-perils-local-work/v1",
+    "kind": "control",
+    "queue_enabled": true,
+    "stop": false,
+    "resume_generation": 0,
+    "reason": "First bounded Natural write-result task is prepared. This control does not prove local automation is enabled."
+  },
+  "root_pins_match": true,
+  "stop_absent": true
+}

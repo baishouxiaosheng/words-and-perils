@@ -1,0 +1,37 @@
+{
+  "task_sha256": "c7b4729ce5803e76a4e09977e4bd59126caf7bcac9d870f40d0de2b9e757277a",
+  "status": "reviewable",
+  "terminal_for_deduplication": true,
+  "owner_run_id": "direct-owner-local-010",
+  "claim_commit": "cf8aac4888e1a1adcb606f6606dd9d5ccaf687d8",
+  "base_commit": "e2c7b8cd951aec23314cdf412da30fa3f199d06c",
+  "checkpoint": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010\\run-01\\FINAL_CHECKPOINT.json",
+  "ack_commit": "0db2e07dab6a4ccee89481ee9fdb53bddce8ac91",
+  "execution_outcome": "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010\\run-01\\EXECUTION_OUTCOME.json",
+  "do_not_rerun_same_id_hash": true,
+  "artifact_commit": "a52a7e5e12228c0cb47a0254f452dd232c380562",
+  "result_commit": "a3a5b06cd4f9813bf00df99aa5ddd6e3735f6a95",
+  "artifact_manifest_sha256": "6858141f00d2950cde54205391d63d6c3a124cae4ff10bcb246b93d6f05c0424",
+  "remote_bytes_verified": true,
+  "artifact_files_remote_verified": 373,
+  "result_files_remote_verified": 3,
+  "actual_engine_invocations": 8,
+  "delivery_complete": false,
+  "gui_status": "BLOCKED_GUARD_REQUIRES_HEADLESS",
+  "task_id": "WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010",
+  "completed_utc": "2026-10-09T10:40:03.533246+00:00",
+  "safe_cleanup_pending": false,
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  },
+  "safe_cleanup": {
+    "publication_pid": 58480,
+    "publication_process_exited": true,
+    "owned_handle_disposed": true,
+    "shared_lock_free_verified": true,
+    "owned_https_connections_closed": 6,
+    "unknown_processes_killed": false,
+    "checked_utc": "2026-10-09T10:42:00.073829+00:00"
+  }
+}

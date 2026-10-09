@@ -1,0 +1,7 @@
+{
+  "task_id": "WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010",
+  "original_artifact_commit": "a52a7e5e12228c0cb47a0254f452dd232c380562",
+  "original_path": "coordination/local-work/results/WP-LOCAL-PLAYER-DETAILS-VERIFY-20261009-010/attempt-001/evidence/TOOLS_REDACTED.json",
+  "correction": "Original label overstated path redaction: JSON-escaped local Python user-directory path remained. TOOLS_PUBLIC.json omits that directory. Original immutable artifact is preserved; no credentials or player files are included.",
+  "history_rewritten": false
+}

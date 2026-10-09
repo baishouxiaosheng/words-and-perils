@@ -28,7 +28,7 @@ const ActorEntryPanel=preload("res://view/actor_action_entry/panel.gd")
 const VillageRuntimeSession=preload("res://view/runtime_ai/village_session.gd")
 const RuntimeConnectionPanel = preload("res://view/dual_api_settings/panel.gd")
 const WorldBundle = preload("res://view/playable_build/world_bundle.gd")
-const CoastBoard = preload("res://view/playable_build/board.gd")
+const CoastBoard = preload("res://private_main_visual/coast_board.gd")
 const CoastPanel = preload("res://view/playable_build/panel.gd")
 const GeneratedAdventure = preload("res://view/generated_adventure/adapter.gd")
 const SeededAdventure = preload("res://view/generated_adventure/seeded_adapter.gd")
@@ -252,6 +252,9 @@ var _export_epoch := -1
 var _world_build_epoch := 0
 var _mode_ui_snapshots: Dictionary = {}
 
+var private_main_visual:Node
+const PRIVATE_VISUAL_MENU_ID=9801
+const PrivateMainVisual=preload("res://private_main_visual/controller.gd")
 func _ready() -> void:
 	# Responsive UI uses actual pixels, never a scaled-down 1440px canvas.
 	get_window().content_scale_mode = Window.CONTENT_SCALE_MODE_DISABLED
@@ -266,6 +269,7 @@ func _ready() -> void:
 	runtime_ai.intention_ready.connect(_on_actor_intention_ready)
 	make_theme()
 	build_ui()
+	private_main_visual=PrivateMainVisual.new();private_main_visual.name="PrivateMainVisualBridge";add_child(private_main_visual)
 	add_child(preload("res://view/tabletop_interaction/wasd_camera_pan.gd").new(self))
 	add_child(preload("res://view/tabletop_interaction/selection_motion.gd").new(self))
 	add_child(preload("res://view/tabletop_interaction/offline_move_demo.gd").new(self))
@@ -509,6 +513,7 @@ func build_ui() -> void:
 	display_menu.add_radio_check_item("低负载 · 无抗锯齿",6)
 	display_menu.add_radio_check_item("均衡 · 2× MSAA",26)
 	display_menu.add_radio_check_item("精细 · 4× MSAA",7)
+	display_menu.add_check_item("有色硬影实验（可撤回）",PRIVATE_VISUAL_MENU_ID)
 	display_menu.id_pressed.connect(on_tool_selected)
 	menu.add_submenu_item("冒险", "Adventure")
 	menu.add_item("主持手记",23)
@@ -744,8 +749,14 @@ func close_tool_menus() -> void:
 	if is_instance_valid(tools_menu): tools_menu.get_popup().hide()
 
 func on_tool_selected(id: int) -> void:
+	if id!=PRIVATE_VISUAL_MENU_ID and is_instance_valid(private_main_visual):private_main_visual.before_world_change()
+	if id!=PRIVATE_VISUAL_MENU_ID and is_instance_valid(private_main_visual):private_main_visual.after_world_change.call_deferred()
 	close_tool_menus()
 	match id:
+		PRIVATE_VISUAL_MENU_ID:
+			private_main_visual.toggle(self)
+			display_menu.set_item_checked(display_menu.get_item_index(PRIVATE_VISUAL_MENU_ID),private_main_visual.requested)
+			set_status("这幅地图还未完成表现登记，原来的显示已保留" if not private_main_visual.last_error.is_empty() else ("有色硬影实验已启用" if private_main_visual.requested else "实验表现已撤回"))
 		0: show_help()
 		1: save_game()
 		2: load_game()
@@ -1120,6 +1131,8 @@ func build_selected_world() -> void:
 	set_status(MAP_PREVIEW_NOTICE+" · 实际种子 %d · %d 格 · %s"%[generated.seed,generated.hexes.size(),generation_notice])
 
 func clear_target() -> void:
+	if is_instance_valid(private_main_visual):private_main_visual.before_world_change()
+	if is_instance_valid(private_main_visual):private_main_visual.after_world_change.call_deferred()
 	selected_focus.clear();resolved_focus.clear();focus_choices.clear()
 	if is_instance_valid(focus_details_dialog): focus_details_dialog.hide()
 	if is_instance_valid(focus_choice_popup):focus_choice_popup.hide()
@@ -1160,6 +1173,8 @@ func append_journal(speaker: String, text: String, update_latest: bool = true) -
 	latest_dialogue.tooltip_text = text
 
 func refresh_world(animate_changes: bool = false) -> void:
+	if is_instance_valid(private_main_visual):private_main_visual.before_world_change()
+	if is_instance_valid(private_main_visual):private_main_visual.after_world_change.call_deferred()
 	if has_node("SelectionMotion"): get_node("SelectionMotion").cancel()
 	if playtest_mode:
 		refresh_playtest_world(animate_changes)
@@ -1328,6 +1343,8 @@ func update_movement_preview() -> void:
 		route_preview_label.tooltip_text=route_preview_label.text
 
 func _apply_focus(reference:Dictionary)->void:
+	if is_instance_valid(private_main_visual):private_main_visual.before_world_change()
+	if is_instance_valid(private_main_visual):private_main_visual.after_world_change.call_deferred()
 	if playtest_mode:
 		var resolved_new: Dictionary = playtest.attention(reference)
 		if not resolved_new.ok: set_status("关注失效：" + str(resolved_new)); return
@@ -1911,6 +1928,7 @@ func _switch_mode_to(mode: String, replacement_v3:RefCounted=null) -> void:
 	runtime_ai.bind_adapter(_runtime_adapter())
 	actor_action_panel.reset_consent()
 	# Separate rendering parents prevent duplicate worlds, lights and input handlers.
+	if is_instance_valid(private_main_visual):private_main_visual.before_world_change()
 	viewport.remove_child(board); board.free()
 	if previous_v3_source!=null and (not generated_v3_mode or previous_v3_source!=playtest.source):V3RenderResidency.suspend(previous_v3_source)
 	board = next_board
@@ -2015,7 +2033,10 @@ func _create_scene_board(state: Dictionary) -> Node3D:
 	var descriptor: Dictionary=SceneAdapters.descriptor(state,scene_id)
 	if not descriptor.get("ok",false):
 		show_world_load_error(str(descriptor));return null
-	var script: Script=load(str(descriptor.script_path))
+	# Preserve the public scene/resolver descriptor; opt-in preparation only
+	# substitutes its exact Coast rendering factory in this private candidate.
+	var path:String=str(descriptor.script_path)
+	var script:Script=CoastBoard if path=="res://view/playable_build/board.gd" else load(path)
 	if script==null:show_world_load_error("已注册场景显示文件未能载入。");return null
 	var next: Node3D=script.new()
 	next.set_meta("active_scene_id",scene_id);next.set_meta("renderer_id",descriptor.renderer_id)
@@ -2030,6 +2051,7 @@ func _ensure_scene_board(state: Dictionary) -> Dictionary:
 	next.attention_ui_mode=true;viewport.add_child(next)
 	if not next.load_error.is_empty():
 		var error: String=next.load_error;viewport.remove_child(next);next.free();show_world_load_error(error);return {"ok":false,"changed":false}
+	if is_instance_valid(private_main_visual):private_main_visual.before_world_change()
 	viewport.remove_child(board);board.free();board=next
 	board.focus_candidates.connect(on_focus_candidates);board.hex_hovered.connect(on_hex_hovered)
 	selected_focus.clear();resolved_focus.clear();focus_choices.clear();selected=Vector2i(99,99)
@@ -2438,6 +2460,8 @@ func complete_requested_turn() -> void:
 	update_playtest_controls()
 
 func refresh_playtest_world(animate_changes: bool = false) -> void:
+	if is_instance_valid(private_main_visual):private_main_visual.before_world_change()
+	if is_instance_valid(private_main_visual):private_main_visual.after_world_change.call_deferred()
 	if has_node("SelectionMotion"): get_node("SelectionMotion").cancel()
 	var state: Dictionary = playtest.state_copy()
 	if not state.get("actors") is Dictionary or not state.actors.has("actor_player"):

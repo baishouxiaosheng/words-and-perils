@@ -1,0 +1,39 @@
+{
+  "schema": "wp_focused_gui_test_delta/v1",
+  "version": "20261009-cloud-v2",
+  "base_candidate": "candidates/guarded-focused-gui/20261009-cloud-v1",
+  "base_commit": "5a9f1504c19c4713ee7850876c803aed989ccfe5",
+  "publication_parent": "5a9f1504c19c4713ee7850876c803aed989ccfe5",
+  "change_scope": "Exactly line 18 of Test-FocusedGui.SourceOnly.ps1; no C# or catch/assertion changes",
+  "reason": "Construct undefined RunMode value via Enum.ToObject so C# CreationFlags receives 99 and can reject unknown_run_mode",
+  "official_reference": "https://learn.microsoft.com/en-us/dotnet/api/system.enum.toobject?view=net-9.0",
+  "files": [
+    {
+      "path": "Test-FocusedGui.SourceOnly.ps1",
+      "bytes": 5480,
+      "sha256": "4fae6c4ede96f228c9066f406d3331d2d8c8c9efd7a5793c2ad384e5aba7a382",
+      "base_sha256": "ce59c1209b7945d8b60ba7ddd7142cee9b65b474d7435c79ebc86cdc8041d8bb",
+      "changed_lines": [
+        18
+      ]
+    }
+  ],
+  "unchanged_candidate_csharp_sha256": "eb642e9b4092098614be6c9b5aff0becf96728a3a47bbe9f54dc12f13fb7ea4b",
+  "materialization": "Copy the pinned base v1 directory into a fresh local review directory and overlay this test file; all other files inherit v1 unchanged. Run the source-only test from that assembled directory.",
+  "static_checks": {
+    "utc": "2026-10-09T11:28:35.699494+00:00",
+    "pid": 8882,
+    "exactly_one_changed_line": true,
+    "unknown_run_mode_assertion_unchanged": true,
+    "catch_unchanged": true,
+    "similar_numeric_RunMode_casts_remaining": 0,
+    "powershell_files_scanned": 3,
+    "csharp_unchanged": true
+  },
+  "runtime_validation": "NOT_RUN; no local PowerShell/C# compiler available; fix not reproduced or compiled",
+  "compiled": false,
+  "deployed": false,
+  "engine_invocations": 0,
+  "graphical_task_dispatched": false,
+  "v1_modified": false
+}

@@ -1,0 +1,20 @@
+{
+  "task_id": "WP-GUI-GUARD-MANAGED-VERIFY-20261009-011",
+  "status": "blocked",
+  "result_commit": "d3330765b84dcfd2804cea7bac2d45a7b59a52d1",
+  "raw_result_sha256": "1727b8115745b06d555329f11d920044c2dfe35f9ca9a11e9c69335da01716d7",
+  "local_terminal_verified": true,
+  "previous_source_only_hosts": 0,
+  "previous_cleanup": {
+    "publication_pid": 51696,
+    "recorded_creation_utc": "2026-10-09T12:01:55.227044+00:00",
+    "publication_process_exited": true,
+    "lock_handle_disposed": true,
+    "shared_lock_free_verified": true,
+    "test_hosts_created": 0,
+    "compiler_readers_or_handles": "NOT_CREATED",
+    "engine_invocations": 0,
+    "unknown_processes_killed": false,
+    "utc": "2026-10-09T12:03:51.319867+00:00"
+  }
+}

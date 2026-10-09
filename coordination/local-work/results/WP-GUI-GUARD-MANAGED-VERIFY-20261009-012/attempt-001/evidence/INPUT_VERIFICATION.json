@@ -1,0 +1,45 @@
+{
+  "base_commit": "d3330765b84dcfd2804cea7bac2d45a7b59a52d1",
+  "intake_commit": "fa2aad27cda4e7e7215c2e6ffc61a90e03ddd932",
+  "schema_valid": true,
+  "files": [
+    {
+      "repository_path": "candidates/guarded-focused-gui/20261009-cloud-v1/WindowsGuard.FocusedGui.cs",
+      "git_blob_sha": "a02b844edf77ccebb59299d7f286983ffdd4cd75",
+      "sha256": "eb642e9b4092098614be6c9b5aff0becf96728a3a47bbe9f54dc12f13fb7ea4b",
+      "bytes": 38365,
+      "role": "Fixed candidate C# compiled and managed methods tested only; Guard.Run and all Win32 invocation methods forbidden",
+      "project_path": "WindowsGuard.FocusedGui.cs",
+      "actual_verified": true
+    },
+    {
+      "repository_path": "candidates/guarded-focused-gui/20261009-cloud-v1/baseline/WindowsGuard.cs",
+      "git_blob_sha": "82d752b48025245912fc59b594343b4acd048fee",
+      "sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+      "bytes": 28655,
+      "role": "Child copy of original v3 source compiled only for pure Evaluate; child copy never executed as guard. Separate unchanged installed trusted v3 parent guardian is explicitly permitted.",
+      "project_path": "baseline/WindowsGuard.cs",
+      "actual_verified": true
+    },
+    {
+      "repository_path": "candidates/guarded-focused-gui/20261009-cloud-v2/Test-FocusedGui.SourceOnly.ps1",
+      "git_blob_sha": "c083eb48bbeb0dc90fd80028de5d9f3bdf9e11a1",
+      "sha256": "4fae6c4ede96f228c9066f406d3331d2d8c8c9efd7a5793c2ad384e5aba7a382",
+      "bytes": 5480,
+      "role": "Corrected fixed source-only Add-Type and managed validation entry; no engine or Guard.Run",
+      "project_path": "Test-FocusedGui.SourceOnly.ps1",
+      "actual_verified": true
+    },
+    {
+      "repository_path": "candidates/guarded-focused-gui/20261009-cloud-v2/MANIFEST.json",
+      "git_blob_sha": "d7e2a8e95e6c61923214b60f35a7a1500d25c307",
+      "sha256": "fbb3c161b68acba5e3d544d01715cdfb391032fb5994dff94622fe8d06f1b078",
+      "bytes": 1825,
+      "role": "Read-only enum-fix source provenance; not authority or native adoption",
+      "project_path": "TEST_INPUT_MANIFEST.json",
+      "actual_verified": true
+    }
+  ],
+  "source_changes": 0,
+  "all_match": true
+}

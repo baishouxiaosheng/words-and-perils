@@ -1,0 +1,17 @@
+{
+  "pid": 66096,
+  "created_utc": "2026-10-09T12:32:14.231071+00:00",
+  "owner_run_id": "native-012-run-102e0a1a47b0",
+  "argv": [
+    "[EXISTING_OFFICIAL_PWSH]",
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\windows-guard-v3\\Invoke-WindowsGuard.ps1",
+    "-SpecPath",
+    "E:\\WordsAndPerils-Tasks\\candidate-20261008-ea04d75a\\evidence\\WP-GUI-GUARD-MANAGED-VERIFY-20261009-012\\run-102e0a1a47b0\\guarded-run\\SPEC.json"
+  ],
+  "fresh_PowerShell": true,
+  "guard_source_sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+  "engine_invocations": 0
+}

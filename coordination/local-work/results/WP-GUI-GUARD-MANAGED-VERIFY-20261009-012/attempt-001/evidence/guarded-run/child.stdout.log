@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "checks": 30,
+  "engine_invocations": 0,
+  "native_guard_run_calls": 0,
+  "win32_equivalence": "NOT_TESTED"
+}

@@ -1,0 +1,15 @@
+{
+  "repository_full_name": "baishouxiaosheng/words-and-perils",
+  "repo_id": 1403552519,
+  "owner_id": 128279531,
+  "branch": "main",
+  "existing_authenticated_permissions": {
+    "admin": true,
+    "maintain": true,
+    "pull": true,
+    "push": true,
+    "triage": true
+  },
+  "clone_url": "https://github.com/baishouxiaosheng/words-and-perils.git",
+  "source_authority": "Direct owner designated fixed channel; metadata authenticated freshly this heartbeat; authors are not identity."
+}

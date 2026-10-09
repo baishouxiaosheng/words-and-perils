@@ -1,0 +1,13 @@
+{
+  "task_id": "WP-GUI-GUARD-MANAGED-VERIFY-20261009-012",
+  "task_sha256": "aacd0ae952b07ece581193600691cb97ce9a1ebe3f80ab1c33c5915a1dce4c6c",
+  "intake_commit": "fa2aad27cda4e7e7215c2e6ffc61a90e03ddd932",
+  "status": "prepared_not_claimed",
+  "source_only_hosts": 0,
+  "game_runs": 0,
+  "current_scope": "source-only interface acceptance auxiliary; native guard compile/harness only",
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  }
+}

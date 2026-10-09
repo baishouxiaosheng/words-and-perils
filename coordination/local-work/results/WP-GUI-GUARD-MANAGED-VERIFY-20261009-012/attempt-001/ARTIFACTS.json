@@ -1,0 +1,268 @@
+{
+  "task_id": "WP-GUI-GUARD-MANAGED-VERIFY-20261009-012",
+  "task_sha256": "aacd0ae952b07ece581193600691cb97ce9a1ebe3f80ab1c33c5915a1dce4c6c",
+  "base_commit": "d3330765b84dcfd2804cea7bac2d45a7b59a52d1",
+  "actual_execution": {
+    "status": "reviewable",
+    "strict_pass": true,
+    "checks": [
+      {
+        "stage": "parent_host_exit_zero",
+        "status": "passed"
+      },
+      {
+        "stage": "original_v3_report",
+        "status": "passed"
+      },
+      {
+        "stage": "Started",
+        "status": "passed"
+      },
+      {
+        "stage": "WorkloadResumed",
+        "status": "passed"
+      },
+      {
+        "stage": "JobAssignedBeforeResume",
+        "status": "passed"
+      },
+      {
+        "stage": "KillOnCloseVerified",
+        "status": "passed"
+      },
+      {
+        "stage": "BreakawayDisabledVerified",
+        "status": "passed"
+      },
+      {
+        "stage": "JobEmptyAfterRun",
+        "status": "passed"
+      },
+      {
+        "stage": "AllRecordedHandlesExited",
+        "status": "passed"
+      },
+      {
+        "stage": "OutputReadersFinished",
+        "status": "passed"
+      },
+      {
+        "stage": "PhysicalMemoryWasActuallyRead",
+        "status": "passed"
+      },
+      {
+        "stage": "EngineStarted",
+        "status": "passed"
+      },
+      {
+        "stage": "EnvironmentInherited",
+        "status": "passed"
+      },
+      {
+        "stage": "SyntheticFault",
+        "status": "passed"
+      },
+      {
+        "stage": "OutputLimitExceeded",
+        "status": "passed"
+      },
+      {
+        "stage": "guard_and_root_exit_zero",
+        "status": "passed"
+      },
+      {
+        "stage": "Small_physical_job_budget",
+        "status": "passed"
+      },
+      {
+        "stage": "timeout_output_priority_affinity",
+        "status": "passed"
+      },
+      {
+        "stage": "all_samples_physical_real",
+        "status": "passed"
+      },
+      {
+        "stage": "diagnostics_clean",
+        "status": "passed"
+      },
+      {
+        "stage": "actual_managed_summary",
+        "status": "passed"
+      },
+      {
+        "stage": "hashes_before_after_unchanged",
+        "status": "passed"
+      },
+      {
+        "stage": "owned_harness_temp_removed",
+        "status": "passed"
+      }
+    ],
+    "blockers": [],
+    "managed": {
+      "status": "passed",
+      "checks": 30,
+      "engine_invocations": 0,
+      "native_guard_run_calls": 0,
+      "win32_equivalence": "NOT_TESTED"
+    },
+    "source_only_host_invocations": 1,
+    "original_parent_guardian_run_calls": 1,
+    "candidate_guard_run_calls": 0,
+    "child_guard_run_calls": 0,
+    "engine_invocations": 0,
+    "GUI": "NOT_RUN",
+    "win32_equivalence": "NOT_TESTED",
+    "host_pid": 66096,
+    "host_created_utc": "2026-10-09T12:32:14.231071+00:00",
+    "host_exit_code": 0,
+    "owned_temp_remaining": [],
+    "source_changes": 0,
+    "utc": "2026-10-09T12:32:17.838589+00:00"
+  },
+  "source_changes": 0,
+  "candidate_adopted": false,
+  "files": [
+    {
+      "path": "candidates/guarded-focused-gui-source-only/20261009-native-012/WindowsGuard.FocusedGui.cs",
+      "bytes": 38365,
+      "sha256": "eb642e9b4092098614be6c9b5aff0becf96728a3a47bbe9f54dc12f13fb7ea4b"
+    },
+    {
+      "path": "candidates/guarded-focused-gui-source-only/20261009-native-012/baseline/WindowsGuard.cs",
+      "bytes": 28655,
+      "sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957"
+    },
+    {
+      "path": "candidates/guarded-focused-gui-source-only/20261009-native-012/Test-FocusedGui.SourceOnly.ps1",
+      "bytes": 5480,
+      "sha256": "4fae6c4ede96f228c9066f406d3331d2d8c8c9efd7a5793c2ad384e5aba7a382"
+    },
+    {
+      "path": "candidates/guarded-focused-gui-source-only/20261009-native-012/TEST_INPUT_MANIFEST.json",
+      "bytes": 1825,
+      "sha256": "fbb3c161b68acba5e3d544d01715cdfb391032fb5994dff94622fe8d06f1b078"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/TASK.json",
+      "bytes": 14497,
+      "sha256": "aacd0ae952b07ece581193600691cb97ce9a1ebe3f80ab1c33c5915a1dce4c6c"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/INPUT_VERIFICATION.json",
+      "bytes": 2254,
+      "sha256": "3dbf09502faa21bf6235e23cbc50a022c2e2fe03111578dce52aeaa8a7abacc2"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/SOURCE_AUTHENTICATION.json",
+      "bytes": 491,
+      "sha256": "f5d6787c7d522745d606a1f9f383447af2f03d885650e1441ad1104fc1c8a0f5"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/PREDECESSOR_RECONCILIATION.json",
+      "bytes": 757,
+      "sha256": "4e0b0e522233543a109d186b99f0cceb8b7ee5a2416c352a819a40e965c9d7be"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/PREPARATION_CHECKPOINT.json",
+      "bytes": 476,
+      "sha256": "3e62821961adfeb64cac7eb93165880725a4bf91ee792a71c2fd148e3cd97cb5"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/LOCK_OWNER.json",
+      "bytes": 192,
+      "sha256": "4960a38aa488417741d52fc09dc84cec3ce695aff5b208c6f2bd1c235f6e16e3"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/GUARD_PINS.json",
+      "bytes": 758,
+      "sha256": "230fd53e35873bb031445600540f1ea2301ec7ea60e78f7cfc2df1b770d8c559"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/SOURCE_HASHES_BEFORE.json",
+      "bytes": 1634,
+      "sha256": "f9301bccfd177ce14324d062f1136f56fd3afe349662e73f400ca5990b2fcaf1"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/SOURCE_HASHES_AFTER.json",
+      "bytes": 1634,
+      "sha256": "f9301bccfd177ce14324d062f1136f56fd3afe349662e73f400ca5990b2fcaf1"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/EXECUTION_OUTCOME.json",
+      "bytes": 2592,
+      "sha256": "13cbcfcaa690bd1acf35a3dc71600361d1d1a2ac8948f48c9fbaa95186d09e9f"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/guarded-run/child.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/guarded-run/child.stdout.log",
+      "bytes": 150,
+      "sha256": "df0ff1502a7bb252dc2d3d26d3f597e5bd9a0809e950eb3b7255a68b59a612b8"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/guarded-run/DIAGNOSTICS.json",
+      "bytes": 72,
+      "sha256": "7600ba103343270ac7019d3b627e0390d108aa987ed9aaca40fe1d4f6021f145"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/guarded-run/GUARD_RESULT.json",
+      "bytes": 8871,
+      "sha256": "e4f4bea46d5c73b25cbffe5608fc4db7e694492f09152f68e415dd2deeef92dd"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/guarded-run/guardian.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/guarded-run/guardian.stdout.log",
+      "bytes": 236,
+      "sha256": "9cd215b26a3133fc9b8929c2879a3fa476f4146cde4f20a527c20735df6b9eaa"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/guarded-run/HOST_EXIT.json",
+      "bytes": 197,
+      "sha256": "85575ddefce70cc7e8c8c32b2ba8814cedef21fa6d8bfe61867fd0f8735f0675"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/guarded-run/HOST_START.json",
+      "bytes": 664,
+      "sha256": "69d2e17ad640df4d6e2b5e53f68f76aa54ba492931b6b3965661044a73c77410"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/guarded-run/INVOCATION_STARTED.json",
+      "bytes": 218,
+      "sha256": "a7a54bb6bf57029bd8715b11f5c2f9b514bfc799511c38e2d7f34dfc16c7a82c"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/guarded-run/SPEC.json",
+      "bytes": 856,
+      "sha256": "2992d7836f56c034220f2e1d555f228d0ef43c910fda282c9caecfe5a1f62363"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/gates/GATE-ack.json",
+      "bytes": 681,
+      "sha256": "7cc007fd27a0c39fb2fa575f5b8d126862fa9103b52cef17cb3c346fd1a3645a"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/gates/GATE-artifact_publication.json",
+      "bytes": 698,
+      "sha256": "5b41aa8a8c58815df9a07641c13682d5078e0f12351889025f27e2b6eac509cc"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/gates/GATE-before_guarded_child.json",
+      "bytes": 698,
+      "sha256": "6971d747f42dcf2e6fe53e692a1989a83d708a9af6296272a881ae62c9aa02c5"
+    },
+    {
+      "path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012/attempt-001/evidence/gates/GATE-preclaim.json",
+      "bytes": 687,
+      "sha256": "12c114dd4fa064638018af4b9aca8fc702972d1dbb3348f346bf92db14042fa9"
+    }
+  ]
+}

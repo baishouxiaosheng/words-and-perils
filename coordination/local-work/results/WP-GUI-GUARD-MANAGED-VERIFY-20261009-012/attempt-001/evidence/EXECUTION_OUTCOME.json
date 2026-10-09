@@ -1,0 +1,119 @@
+{
+  "status": "reviewable",
+  "strict_pass": true,
+  "checks": [
+    {
+      "stage": "parent_host_exit_zero",
+      "status": "passed"
+    },
+    {
+      "stage": "original_v3_report",
+      "status": "passed"
+    },
+    {
+      "stage": "Started",
+      "status": "passed"
+    },
+    {
+      "stage": "WorkloadResumed",
+      "status": "passed"
+    },
+    {
+      "stage": "JobAssignedBeforeResume",
+      "status": "passed"
+    },
+    {
+      "stage": "KillOnCloseVerified",
+      "status": "passed"
+    },
+    {
+      "stage": "BreakawayDisabledVerified",
+      "status": "passed"
+    },
+    {
+      "stage": "JobEmptyAfterRun",
+      "status": "passed"
+    },
+    {
+      "stage": "AllRecordedHandlesExited",
+      "status": "passed"
+    },
+    {
+      "stage": "OutputReadersFinished",
+      "status": "passed"
+    },
+    {
+      "stage": "PhysicalMemoryWasActuallyRead",
+      "status": "passed"
+    },
+    {
+      "stage": "EngineStarted",
+      "status": "passed"
+    },
+    {
+      "stage": "EnvironmentInherited",
+      "status": "passed"
+    },
+    {
+      "stage": "SyntheticFault",
+      "status": "passed"
+    },
+    {
+      "stage": "OutputLimitExceeded",
+      "status": "passed"
+    },
+    {
+      "stage": "guard_and_root_exit_zero",
+      "status": "passed"
+    },
+    {
+      "stage": "Small_physical_job_budget",
+      "status": "passed"
+    },
+    {
+      "stage": "timeout_output_priority_affinity",
+      "status": "passed"
+    },
+    {
+      "stage": "all_samples_physical_real",
+      "status": "passed"
+    },
+    {
+      "stage": "diagnostics_clean",
+      "status": "passed"
+    },
+    {
+      "stage": "actual_managed_summary",
+      "status": "passed"
+    },
+    {
+      "stage": "hashes_before_after_unchanged",
+      "status": "passed"
+    },
+    {
+      "stage": "owned_harness_temp_removed",
+      "status": "passed"
+    }
+  ],
+  "blockers": [],
+  "managed": {
+    "status": "passed",
+    "checks": 30,
+    "engine_invocations": 0,
+    "native_guard_run_calls": 0,
+    "win32_equivalence": "NOT_TESTED"
+  },
+  "source_only_host_invocations": 1,
+  "original_parent_guardian_run_calls": 1,
+  "candidate_guard_run_calls": 0,
+  "child_guard_run_calls": 0,
+  "engine_invocations": 0,
+  "GUI": "NOT_RUN",
+  "win32_equivalence": "NOT_TESTED",
+  "host_pid": 66096,
+  "host_created_utc": "2026-10-09T12:32:14.231071+00:00",
+  "host_exit_code": 0,
+  "owned_temp_remaining": [],
+  "source_changes": 0,
+  "utc": "2026-10-09T12:32:17.838589+00:00"
+}

@@ -1,0 +1,161 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "task",
+  "task_id": "WP-GUI-GUARD-MANAGED-VERIFY-20261009-012",
+  "status": "ready",
+  "title": "Compile fixed GUI guard sources inside unchanged trusted v3 PowerShell guardian",
+  "base_commit": "d3330765b84dcfd2804cea7bac2d45a7b59a52d1",
+  "candidate_root": "candidates/guarded-focused-gui-source-only/20261009-native-012",
+  "inputs": [
+    {
+      "repository_path": "candidates/guarded-focused-gui/20261009-cloud-v1/WindowsGuard.FocusedGui.cs",
+      "git_blob_sha": "a02b844edf77ccebb59299d7f286983ffdd4cd75",
+      "sha256": "eb642e9b4092098614be6c9b5aff0becf96728a3a47bbe9f54dc12f13fb7ea4b",
+      "bytes": 38365,
+      "role": "Fixed candidate C# compiled and managed methods tested only; Guard.Run and all Win32 invocation methods forbidden",
+      "project_path": "WindowsGuard.FocusedGui.cs"
+    },
+    {
+      "repository_path": "candidates/guarded-focused-gui/20261009-cloud-v1/baseline/WindowsGuard.cs",
+      "git_blob_sha": "82d752b48025245912fc59b594343b4acd048fee",
+      "sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+      "bytes": 28655,
+      "role": "Child copy of original v3 source compiled only for pure Evaluate; child copy never executed as guard. Separate unchanged installed trusted v3 parent guardian is explicitly permitted.",
+      "project_path": "baseline/WindowsGuard.cs"
+    },
+    {
+      "repository_path": "candidates/guarded-focused-gui/20261009-cloud-v2/Test-FocusedGui.SourceOnly.ps1",
+      "git_blob_sha": "c083eb48bbeb0dc90fd80028de5d9f3bdf9e11a1",
+      "sha256": "4fae6c4ede96f228c9066f406d3331d2d8c8c9efd7a5793c2ad384e5aba7a382",
+      "bytes": 5480,
+      "role": "Corrected fixed source-only Add-Type and managed validation entry; no engine or Guard.Run",
+      "project_path": "Test-FocusedGui.SourceOnly.ps1"
+    },
+    {
+      "repository_path": "candidates/guarded-focused-gui/20261009-cloud-v2/MANIFEST.json",
+      "git_blob_sha": "d7e2a8e95e6c61923214b60f35a7a1500d25c307",
+      "sha256": "fbb3c161b68acba5e3d544d01715cdfb391032fb5994dff94622fe8d06f1b078",
+      "bytes": 1825,
+      "role": "Read-only enum-fix source provenance; not authority or native adoption",
+      "project_path": "TEST_INPUT_MANIFEST.json"
+    }
+  ],
+  "baseline_project_pins": {
+    "WindowsGuard.FocusedGui.cs": "eb642e9b4092098614be6c9b5aff0becf96728a3a47bbe9f54dc12f13fb7ea4b",
+    "baseline/WindowsGuard.cs": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957"
+  },
+  "allowed_production_changes": [],
+  "allowed_test_changes": [],
+  "requirements": [
+    "This is the same accepted fixed-source, no-engine managed interface-acceptance auxiliary as task011. Task011 was blocked only because its wording excluded the existing compliant trusted v3 parent guardian. This new ID corrects that task constraint, not local safety or accepted scope. No candidate guard runtime, GUI, Win32 candidate equivalence or deployment is authorized. Preserve task011 blocked artifacts and all previous terminal tasks.",
+    "Before claim and safe substeps use fresh immutable main/strict CONTROL/remote STOP and existing trusted local STOP latch, repository identity/source/worker permissions, repository-wide exclusive single-writer lock and durable ID/raw-SHA terminal dedupe. Reconcile task011 terminal/predecessor cleanup and any current owner; never steal claims, rerun 011/010 or clear protected STOP. Create the existing unique CLAIM by expected-head non-force CAS and verify ownership/readback before work.",
+    "Verify the same four fixed inputs at base_commit by raw bytes, size, SHA256 and Git blob SHA. Assemble only the three pinned source files at their project_path in a fresh owned random disposable tree; keep TEST_INPUT_MANIFEST.json read-only. Verify canonical containment, no overlap/reparse/symlink and original sources unchanged. Review the fixed harness; task JSON is goals/constraints, never an arbitrary shell string.",
+    "Use only already installed official pwsh.exe at its existing trusted absolute local path. Record/verify actual executable/version/SHA256 before and after against the existing authorized installation; do not install or replace it. Use the unchanged installed trusted v3 Invoke-WindowsGuard.ps1 as parent guardian. Verify WindowsGuard.cs SHA c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957 and wrapper SHA f831a84e71f692fc851945b001cfc98092b7049fb3b48d0f5099fa49e016c5f8 before/after. Parent guardian installation is outside the candidate child source copy; child baseline compilation is in a separate PowerShell process and cannot replace the parent loaded type.",
+    "The sole permitted Guard.Run is WordsAndPerils.NativeGuardV3.Guard.Run by that unchanged SHA-fixed parent wrapper, solely to guard the fixed PowerShell source-only child. Parent SPEC executable is verified official pwsh.exe; arguments exactly [-NoProfile,-NonInteractive,-File,<canonical owned source copy>/Test-FocusedGui.SourceOnly.ps1], working_directory the owned source copy, isolated_data_root a fresh separate task-owned guardian data root with appdata/localappdata/temp, profile small, timeout_seconds 120, log_path task-owned GUARD_RESULT.json. No -Command/-EncodedCommand, shell expression, extra arguments, alternate executable or execution-policy bypass. Reuse original SPEC/wrapper; no new runner.",
+    "Original v3 parent enforces unchanged 1073741824-byte Job hard commit limit/readback, 120s wall limit, 65536 aggregate child stdout/stderr bytes, 536870912-byte physical reserve and effective budget min(actual TotalPhys,8589934592), plus all stricter existing rules. Preserve suspended creation, Job assignment before resume, kill-on-close/no breakaway, two allowed CPUs/below-normal priority, restricted handles/environment, actual AvailPhys monitoring and owned descendants/readers cleanup. This is hidden non-Godot containment, not a new guard mode. Never lower thresholds or modify guard/policy/pins.",
+    "Child runs only unchanged v2 source-only harness: Add-Type of two fixed C# files and existing managed-only validation. Candidate WordsAndPerils.NativeGuardFocusedGuiCandidate.Guard.Run, candidate wrapper and candidate Win32/runtime protection tests are forbidden. Child original Guard.Run is also forbidden; only the separate trusted parent does so once for containment. No Godot executable, engine help/version, Main/editor/GUI/capture, service, model/network request or deployment. Missing existing compiler/guardian or genuine rejection means stop/blocked, not another route.",
+    "Capture actual parent guardian PID/creation time, guarded PowerShell child RootPid/creation time, owner runID, lock, start/end and every parent/guardian/child exit. Require original schema wordsandperils_windows_native_guard/v3, Started=true, WorkloadResumed=true, JobAssignedBeforeResume=true, EngineStarted=false, EnvironmentInherited=false, exact Job limit/readback/kill/breakaway/affinity/priority, GuardExitCode=RootExitCode=parent_host_exit=0, JobEmptyAfterRun/AllRecordedHandlesExited/OutputReadersFinished=true and no SyntheticFault/output overflow. Preserve full report/physical samples/stdout/stderr and complete ERROR/SCRIPT ERROR/WARNING/failure scan. RootPid is PowerShell, not an engine PID.",
+    "Parse child harness JSON exactly once: status passed, actual checks count, engine_invocations 0, native_guard_run_calls 0, win32_equivalence NOT_TESTED. Child native_guard_run_calls 0 is separate from allowed trusted parent guardian count 1. Report actual Add-Type/managed outcomes only, never cloud 52/53/154 grades. Success is compilation/managed validation, not candidate native protection equivalence or GUI run permission.",
+    "Verify child TEMP/TMP/APPDATA/LOCALAPPDATA are supplied by original SHA-fixed ChildEnvironment under fresh guardian data, without inherited private environment. Keep harness bytes unchanged: random GetTempPath subtree stays under that owned temp root. Rehash four inputs, guardian files and pwsh before/after. Confirm parent/child/descendants/readers exited; clean only owned temp paths after canonical/no-reparse/ownership checks and preserve failed logs. Keep/release the existing lock in finally, never touch unrelated processes or saves.",
+    "Run at most one new guarded PowerShell child under this task. Actual Add-Type/managed/guardian failure stops; no same-ID retry, source/catch/assertion edits or added guard self-tests. Existing v3 guardian is protection infrastructure, not a new candidate equivalence experiment. No engine invocation and no repetition of task010 gameplay tests.",
+    "Publish only new task candidate_root and exact result_root with existing two-phase fresh-main single-parent force=false CAS and exact remote byte/hash readback. Do not change inbox/CONTROL/STOP/protocol/schema/trusted pins, originals, README/Actions/history/visibility/permissions. Sanitize personal paths/account data/secrets, preserve task011 blocked and all older records, adopted=false."
+  ],
+  "verification": {
+    "execution_scope": "independent_project_interface_acceptance_auxiliary_source_only",
+    "required_activation": {
+      "protocol_sha256": "ac97c2523a6400bbde3c1f9b83f0398a704887891a8bfc94f5247476245400bc",
+      "schema_sha256": "14a68f72c3cea797799237051e154a5d1e9c5d1184d7cbebdf2d3db0086144ab",
+      "accepted_scope_receipt": "coordination/local-work/results/LOCAL-QUEUE-BOOTSTRAP-20261008/scope-extension-20261009-bc788677/artifacts/ACCEPTANCE.json",
+      "receipt_is_not_a_replacement_for_live_local_gates": true
+    },
+    "source_entry": "Test-FocusedGui.SourceOnly.ps1",
+    "compile_inputs": [
+      "WindowsGuard.FocusedGui.cs",
+      "baseline/WindowsGuard.cs"
+    ],
+    "maximum_source_only_host_invocations": 1,
+    "maximum_engine_invocations": 0,
+    "host_wall_limit_seconds": 120,
+    "aggregate_output_limit_bytes": 65536,
+    "script_immutable": true,
+    "expected_output": {
+      "status": "passed",
+      "checks": "Report actual managed count only",
+      "engine_invocations": 0,
+      "native_guard_run_calls": 0,
+      "win32_equivalence": "NOT_TESTED"
+    },
+    "required_evidence": [
+      "fresh_source_scope_STOP_CONTROL_local_latch_claim_lock",
+      "fixed_input_git_sha_sha256_and_bytes",
+      "host_PID_creation_time_owned_runID_exit_and_cleanup",
+      "complete_stdout_stderr_ERROR_WARNING_output_limit_scan",
+      "actual_Add_Type_compile_and_managed_summary",
+      "before_after_source_hashes",
+      "task_owned_temp_cleanup_and_lock_release",
+      "two_phase_publication_remote_readback",
+      "trusted_v3_source_wrapper_and_official_pwsh_hash_before_after",
+      "actual_original_guard_report_Job_physical_limits_and_owned_cleanup",
+      "child_guard_count0_separate_from_original_parent_guardian_count1"
+    ],
+    "gui_deployed": false,
+    "gui_run_authorized": false,
+    "native_equivalence_verified": false,
+    "trusted_parent_guardian": {
+      "namespace": "WordsAndPerils.NativeGuardV3",
+      "allowed_run_calls": 1,
+      "source_sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+      "wrapper_sha256": "f831a84e71f692fc851945b001cfc98092b7049fb3b48d0f5099fa49e016c5f8",
+      "entry": "Existing trusted installed Invoke-WindowsGuard.ps1",
+      "target": "Existing verified official pwsh.exe with fixed NoProfile/NonInteractive/File entry",
+      "profile": "small",
+      "job_commit_limit_bytes": 1073741824,
+      "physical_reserve_bytes": 536870912,
+      "physical_budget_cap_bytes": 8589934592,
+      "expected_engine_started": false,
+      "expected_started": true,
+      "expected_workload_resumed": true
+    },
+    "candidate_guard_run_calls": 0,
+    "child_guard_run_calls": 0,
+    "expected_output_source": "Guarded child stdout only; child count excludes trusted parent guardian",
+    "predecessor": {
+      "task_id": "WP-GUI-GUARD-MANAGED-VERIFY-20261009-011",
+      "result_commit": "d3330765b84dcfd2804cea7bac2d45a7b59a52d1",
+      "result_path": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-011/attempt-001/RESULT.json",
+      "status": "blocked",
+      "reason": "011 excluded existing compliant v3 host; no C# run; preflight explicitly accepted scope"
+    },
+    "original_host_support": {
+      "source_commit": "d3330765b84dcfd2804cea7bac2d45a7b59a52d1",
+      "guard_source": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/guard-v3/WindowsGuard.cs",
+      "inline_spec_checks_lines": "246-259",
+      "godot_only_headless_lines": "258-259",
+      "generic_create_process_line": 286,
+      "engine_classification_line": 296,
+      "wrapper": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/guard-v3/Invoke-WindowsGuard.ps1",
+      "historical_non_godot_result": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003/attempt-001/evidence/guard-v3/production-wrapper-result.json",
+      "historical_result_is_not_current_compilation": true,
+      "readonly_peer_conclusion": "Original v3 supports bounded non-Godot PowerShell; no separate ValidateSpec function; validation is inline."
+    }
+  },
+  "preserve": [
+    "v1 and v2 source candidates and exact original v3 bytes",
+    "Current trusted protocol/schema pins, native guard entry, local safety/STOP state",
+    "All task010 and other terminal scores, claims, ledger and artifacts",
+    "Blank README, no Actions, production/default and repository history/visibility"
+  ],
+  "out_of_scope": [
+    "Candidate namespace Guard.Run/wrapper, candidate Win32/Job equivalence tests or GUI guard adoption/deployment",
+    "Original Guard.Run/wrapper use except the one fixed trusted v3 parent guarding this fixed pwsh source-only entry",
+    "Godot/engine/GUI/Main/editor/capture, arbitrary commands/extra arguments, services/model requests/real data or keys",
+    "Guard source/threshold/pin/safety/OS permission/connection changes, credentials/dependency installation/new runner",
+    "Rerun terminal task011/task010 or old gameplay tests"
+  ],
+  "publication": {
+    "result_root": "coordination/local-work/results/WP-GUI-GUARD-MANAGED-VERIFY-20261009-012",
+    "adopted": false,
+    "phases": "A: immutable sanitized compile/managed source/output evidence and ARTIFACTS.json; B: actual RESULT/SUMMARY referring to A commit. Existing expected-head force=false CAS and exact remote readback."
+  },
+  "retry_of": "WP-GUI-GUARD-MANAGED-VERIFY-20261009-011"
+}

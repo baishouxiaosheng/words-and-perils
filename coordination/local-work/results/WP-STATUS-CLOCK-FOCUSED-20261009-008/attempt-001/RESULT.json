@@ -1,0 +1,103 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "result",
+  "task_id": "WP-STATUS-CLOCK-FOCUSED-20261009-008",
+  "task_sha256": "1bb12d8c9ff6aaa508e6d0ed2bc81c6e39b35e50fcdb8bba1bd0f01a15c92ee1",
+  "attempt_id": "attempt-001",
+  "intake_commit": "718a308123b97589e716c98a43c37667f35597f5",
+  "status": "blocked",
+  "automation_enabled": true,
+  "summary": "Independent focused verification did not strictly pass. Consult actual stage exits, diagnostics and source-bound summaries; no failed-stage retry. Production edits0, no Main/UI visibility/adoption/composition; exact inputs and original formal host preserved.",
+  "source_hashes": {
+    "core/ai_gm_rebuilt/canonical.gd": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c",
+    "core/ai_gm_rebuilt/hooks.gd": "2afc8ba22cc4cb9a4df81ce8f8779193a652f8cd5ff49b2156f6899674ee84ec",
+    "core/status_foundation/canonical.gd": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c",
+    "core/status_foundation/catalog.gd": "8effb5d5e6094cdb0f5413a697ae3adb4e7d86429c31a7b93d751e71f6b62681",
+    "core/status_foundation/engine_bridge.gd": "06cce47760058a49e2dd994c91031ac93db7277d0b08f5c252af8d2ec8fafbc6",
+    "core/status_foundation/runtime.gd": "ee79b110e35b5141334daf55e7a2f80f6f4d3060a56d408bf0a08094260bb059",
+    "core/status_gameplay/source_profiles.gd": "53e1ca59b24fb0e020b2dc4a5200868fe927264e787234873484d077d8057483",
+    "data/catalog.json": "81712567dda2bb000b7cacefc9380c91bc271ea461c21758b1d2fa8074de4fde",
+    "main.gd": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f",
+    "view/actor_action_profile_v2/source.gd": "7681a03d232452533ef584719d5f3e6c1c39942332b303ef1c2a3e973385e665",
+    "view/actor_status_entry_v1/view_adapter.gd": "a9a825b9096b67424e7358d2dcca32b8e39411983f7ac9be0975ef7bc869968d",
+    "view/actor_status_profile_v1/projection.gd": "2decabf7c9fbe1b4c5400b502ce1e464112bb4eea489dfdcee3a5cf1c150d5e6",
+    "view/actor_status_profile_v1/public_status.gd": "335c0eb58165e4ebb01f8963a0292176eb2deaf354bfeb5c1876e0e5c8eeded1",
+    "view/actor_status_profile_v1/source.gd": "f4ca4ca0551f0b1665b58f4ee1071dbc7df5180f357de18710d55a596b88ac03",
+    "view/playable_build/player_details.gd": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+    "view/status_gameplay/details.gd": "2b1d377813660aa419ca4f2cb9026d591b9edadce853ef0fec57a1b3e98841b1",
+    "project.godot": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd"
+  },
+  "checks": [
+    {
+      "label": "candidate_static",
+      "exit_code": 0,
+      "pid": 31372,
+      "owned_process_exited": true,
+      "stdout_bytes": 2621,
+      "stderr_bytes": 0,
+      "script_sha256": "6e9427b85484248078e8589f995fe0dce61d008e5fb7eedd34e6cb216c54a4ce",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true,
+      "static_count": 24,
+      "preparation_status": "PASSED_STATIC_ONLY_NOT_GODOT_PARSE"
+    },
+    {
+      "label": "package_static",
+      "exit_code": 1,
+      "pid": 45112,
+      "owned_process_exited": true,
+      "stdout_bytes": 0,
+      "stderr_bytes": 1052,
+      "script_sha256": "cfe7351974a28bc19f1dc91b98a8223b7e4576cfc213cbcb4a41b644c4d6880f",
+      "engine_runs": 0,
+      "runtime_counts_not_inherited": true
+    },
+    {
+      "artifact_commit": "593d87e7a6abc08105a343cbe8bac0bee6712b6e",
+      "actual_remote_files_verified": 42,
+      "all_match": true
+    },
+    {
+      "formal_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e",
+      "all_16_original_inputs_and_formal_host_unchanged": true
+    },
+    {
+      "engine_runs": 0,
+      "runtime_assertions": null,
+      "Main_UI_visibility_verified": false
+    }
+  ],
+  "blockers": [
+    "Frozen test-package checker requires symlink creation privilege unavailable on this Windows host (WinError1314). Candidate static passed24; package checker exited1; later stages NOT_RUN. Do not retry the denied operation or change security settings."
+  ],
+  "context": {
+    "used_percent": null,
+    "compact": "unavailable"
+  },
+  "artifact_commit": "593d87e7a6abc08105a343cbe8bac0bee6712b6e",
+  "artifact_manifest_sha256": "4ed2a24ce046ff80624c7caf468285b6729a95af6cb349ef6d17fb039ae5b101",
+  "candidate_adopted": false,
+  "remaining_steps": [
+    "Any failed-stage retry requires a new authorized task ID; preserve immutable candidate/driver and fix the demonstrated failing stage only within a new explicitly authorized task."
+  ],
+  "worker_entry_evidence": {
+    "actual_native_heartbeat": true,
+    "scope_acceptance_result_commit": "c17af9c02c49ee250bf34547c5f37d8dd3e522b8",
+    "unique_claim_commit": "f2a0ab629c2eb5dd6e625af0a43d39e2f7351956",
+    "ack_commit": "c5d1002b75449583e399e647b117b37041ec2701"
+  },
+  "source_authentication_evidence": {
+    "repo_id": 1403552519,
+    "owner_id": 128279531,
+    "existing_authenticated_push_pull": true,
+    "trusted_local_and_root_new_pins_match": true
+  },
+  "safe_cleanup": {
+    "execution_handle_disposed": true,
+    "execution_to_publication_checkpoint_handoff": true,
+    "engines_started": 0,
+    "owned_engine_jobs_readers_handles_clean": true,
+    "unknown_processes_killed": false,
+    "copies_retained": true
+  }
+}

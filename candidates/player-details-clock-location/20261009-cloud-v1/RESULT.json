@@ -1,0 +1,69 @@
+{
+  "schema": "player-details-combined-source-validation/v1",
+  "task_id": "WP-PLAYER-DETAILS-COMBINED-20261009-cloud-v1",
+  "source_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+  "observed_main": "718a308123b97589e716c98a43c37667f35597f5",
+  "status": "PASSED_STATIC_AND_PREPARATION_ONLY",
+  "static_checks": 56,
+  "prepared_binding_files": 14,
+  "prepared_source_binding_sha256": "c78faaf7d628cab1c4454e923a27d31bbba456214b550351a087afbebd927884",
+  "godot_invocations": 0,
+  "godot_parse": "NOT_RUN",
+  "runtime": "NOT_RUN",
+  "main_ui_visibility": "NOT_RUN",
+  "single_item_runtime": "PENDING_FIXED_008_009_RECEIPTS",
+  "adopted": false,
+  "negative_composition_checks": [
+    {
+      "case": "drop_location",
+      "expected_rejection": true,
+      "assertion": "remove coordinate yields exact clock-only candidate"
+    },
+    {
+      "case": "drop_clock",
+      "expected_rejection": true,
+      "assertion": "combined preserves whole original clock function"
+    },
+    {
+      "case": "alter_passage_exclusion",
+      "expected_rejection": true,
+      "assertion": "remove coordinate yields exact clock-only candidate"
+    }
+  ],
+  "source_inputs_unchanged": true,
+  "runs": [
+    {
+      "stage": "static",
+      "owned_pid": 7690,
+      "exit_code": 0,
+      "reaped": true,
+      "stdout_sha256": "ce8f78ba240bf6ced5b2bf728ff25c0ef8007de598352873659bce2c7676c223",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "stage": "prepare",
+      "owned_pid": 7693,
+      "exit_code": 0,
+      "reaped": true,
+      "stdout_sha256": "42ed672f913845cd88371476b88ce12686e0fc457b5874cc418822f9b96d61dd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "artifact_sha256": {
+    "check_static.py": "d868d34a6d472fc98f70dda8e8d8e186e2cca60b4168dcb9af86ea95cc002723",
+    "USAGE.txt": "2a83aa496859b9977895cb73387f2aec09f948813469ff9145953aac6036193f",
+    "CHANGE.patch": "2d5a968b695634e7a0e1bee490830c9738acd62d0181a4a79be265bdc706248f",
+    "MANIFEST.json": "9e8a329439b70dca27f974c6ee263bc7706a0385aa0d7abb3d0ef499427668bf",
+    "focused-tests/TEST_MANIFEST.json": "f41f971d2c213cbbca7a548add2ba2b116204c9ee84884796d65f3e2e008961a",
+    "focused-tests/test_combined_player_details.gd": "8b12348f54733ca74b8ce1b469ae243945574d2ecce485c77f328c75034af037",
+    "focused-tests/INPUTS.json": "ee0223f132ff9d68602ebf18feb18dd19d8462756541ca52cc842b4bfa5ef68f",
+    "focused-tests/prepare.py": "cba4fe39180a2345de5c3983532c2e4fd9f04c3e889ed1683770cc945a82eb3d",
+    "inputs/clock_MANIFEST.json": "cae8b4799c77789485bbd4fd9e97d7a42e02d734e152ce2514bc497ef85602bf",
+    "inputs/location_MANIFEST.json": "be6ef3ed71815ca19a9f55d8a81a948af111578a7b645cb9a067b22e285d062b",
+    "inputs/clock_player_details.gd": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c",
+    "inputs/location_player_details.gd": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+    "overlay/view/playable_build/player_details.gd": "e4e20fc6fb269238d3a6116634b6593f92078c5dafbbd055b237eb123b49d883"
+  },
+  "publication": "Candidate publication is confirmed by the containing Git commit; this result claims no adoption or runtime execution.",
+  "native_runtime_evidence_transferred": false
+}

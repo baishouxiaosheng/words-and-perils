@@ -1,0 +1,133 @@
+{
+  "schema": "words-and-perils-player-details-combined-candidate/v1",
+  "task_id": "WP-PLAYER-DETAILS-COMBINED-20261009-cloud-v1",
+  "owner_role": "cloud_single_writer",
+  "source_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+  "observed_main": "718a308123b97589e716c98a43c37667f35597f5",
+  "formal_release_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+  "formal_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e",
+  "status": "SOURCE_CANDIDATE_NOT_PARSED_NOT_RUN_NOT_ADOPTED",
+  "adopted": false,
+  "single_item_runtime": "PENDING_FIXED_TASK_008_009_RESULTS",
+  "combined_runtime": "NOT_RUN",
+  "godot_parse": "NOT_RUN",
+  "main_ui_visibility": "NOT_RUN",
+  "scope": "Compose only the two fixed PlayerDetailsView display changes; no authoritative state, identity, static-focus, passage-edge, HUD or additional field logic changes",
+  "changed_files": [
+    {
+      "path": "view/playable_build/player_details.gd",
+      "before_bytes": 8199,
+      "before_sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+      "after_bytes": 9112,
+      "after_sha256": "e4e20fc6fb269238d3a6116634b6593f92078c5dafbbd055b237eb123b49d883",
+      "overlay_path": "overlay/view/playable_build/player_details.gd"
+    }
+  ],
+  "input_hashes": [
+    {
+      "path": "core/ai_gm_rebuilt/canonical.gd",
+      "bytes": 2814,
+      "sha256": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/hooks.gd",
+      "bytes": 3111,
+      "sha256": "2afc8ba22cc4cb9a4df81ce8f8779193a652f8cd5ff49b2156f6899674ee84ec"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/model_view.gd",
+      "bytes": 12807,
+      "sha256": "971508f8ccc88179a78c390323eae7b814572e4115b63254aabe2294a92a9f4c"
+    },
+    {
+      "path": "core/focus_contract.gd",
+      "bytes": 31447,
+      "sha256": "b8daf8124f80b8f474937caf25a3e446277636b28d08626d419d4da4336e9cd1"
+    },
+    {
+      "path": "core/status_foundation/canonical.gd",
+      "bytes": 2814,
+      "sha256": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c"
+    },
+    {
+      "path": "core/status_foundation/catalog.gd",
+      "bytes": 10981,
+      "sha256": "8effb5d5e6094cdb0f5413a697ae3adb4e7d86429c31a7b93d751e71f6b62681"
+    },
+    {
+      "path": "core/status_foundation/engine_bridge.gd",
+      "bytes": 10674,
+      "sha256": "06cce47760058a49e2dd994c91031ac93db7277d0b08f5c252af8d2ec8fafbc6"
+    },
+    {
+      "path": "core/status_foundation/runtime.gd",
+      "bytes": 23309,
+      "sha256": "ee79b110e35b5141334daf55e7a2f80f6f4d3060a56d408bf0a08094260bb059"
+    },
+    {
+      "path": "core/status_gameplay/source_profiles.gd",
+      "bytes": 2571,
+      "sha256": "53e1ca59b24fb0e020b2dc4a5200868fe927264e787234873484d077d8057483"
+    },
+    {
+      "path": "data/catalog.json",
+      "bytes": 218084,
+      "sha256": "81712567dda2bb000b7cacefc9380c91bc271ea461c21758b1d2fa8074de4fde"
+    },
+    {
+      "path": "main.gd",
+      "bytes": 203707,
+      "sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f"
+    },
+    {
+      "path": "view/actor_action_profile_v2/source.gd",
+      "bytes": 12173,
+      "sha256": "7681a03d232452533ef584719d5f3e6c1c39942332b303ef1c2a3e973385e665"
+    },
+    {
+      "path": "view/actor_status_entry_v1/view_adapter.gd",
+      "bytes": 28301,
+      "sha256": "a9a825b9096b67424e7358d2dcca32b8e39411983f7ac9be0975ef7bc869968d"
+    },
+    {
+      "path": "view/actor_status_profile_v1/projection.gd",
+      "bytes": 3231,
+      "sha256": "2decabf7c9fbe1b4c5400b502ce1e464112bb4eea489dfdcee3a5cf1c150d5e6"
+    },
+    {
+      "path": "view/actor_status_profile_v1/public_status.gd",
+      "bytes": 6400,
+      "sha256": "335c0eb58165e4ebb01f8963a0292176eb2deaf354bfeb5c1876e0e5c8eeded1"
+    },
+    {
+      "path": "view/actor_status_profile_v1/source.gd",
+      "bytes": 10327,
+      "sha256": "f4ca4ca0551f0b1665b58f4ee1071dbc7df5180f357de18710d55a596b88ac03"
+    },
+    {
+      "path": "view/playable_build/player_details.gd",
+      "bytes": 8199,
+      "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3"
+    },
+    {
+      "path": "view/status_gameplay/details.gd",
+      "bytes": 13184,
+      "sha256": "2b1d377813660aa419ca4f2cb9026d591b9edadce853ef0fec57a1b3e98841b1"
+    }
+  ],
+  "single_candidates": [
+    {
+      "path": "candidates/status-clock-display/20261009-cloud-v3",
+      "sha256": "8f6f69b236aa1701e43dc809433f68c0fe158ccbdccc1b46dcc4e3751e12f88c"
+    },
+    {
+      "path": "candidates/focus-location-display/20261009-cloud-v3",
+      "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5"
+    }
+  ],
+  "adoption_prerequisites": [
+    "actual_single_item_results_review",
+    "strict_combined_parse_and_formatter_runtime",
+    "later_authorized_Main_UI_integration_acceptance"
+  ]
+}

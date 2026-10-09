@@ -1,0 +1,28 @@
+UNADOPTED COMBINED PLAYER DETAILS SOURCE CANDIDATE
+
+Fixed source commit: c5b42ea26115e72047e2a715dcc2960d7642eb14.
+Only production change: overlay/view/playable_build/player_details.gd.
+CHANGE.patch applies to the exact 8199-byte formal PlayerDetailsView baseline.
+Both original candidates remain separately pinned under inputs/.
+
+Static check (Python/Git only):
+python check_static.py --restored-root EXACT_SOURCE_INPUT_ROOT
+
+Reuse existing offline unit preparation helper:
+python focused-tests/prepare.py --source-root EXACT_SOURCE_INPUT_ROOT --candidate-root THIS_CANDIDATE_ROOT --work-root EXISTING_DISPOSABLE_PARENT --name NEW_COMBINED_UNIT
+
+The prepared test entry is res://tests/focused/test_combined_player_details.gd.
+No engine is launched by either Python command. Native parsing and focused
+runtime require later authorization, actual guard admission and user isolation
+verification. Do not start Godot, even for help/version, during source-only work.
+
+Single-item tasks 008/009 have no result at the observed main head. Their eventual
+results must be reviewed independently. This combined source and authored test
+have no Godot parse/runtime or Main/UI acceptance. Later combination execution
+must bind the combined overlay, original comparison peers and complete prepared
+source_binding.json. Runtime counts must come from that actual run.
+
+Static focus retains its original location and early return; passage_edge keeps
+its dedicated support point; persistent and typed clocks retain original wording.
+Identity, authoritative state, raw packet, HUD and original captions are unchanged.
+These are source constraints and authored assertions, not a claimed GUI grade.

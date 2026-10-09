@@ -1,0 +1,42 @@
+{
+  "schema": "focused-formatter-test/v1",
+  "suite": "combined-player-details",
+  "status": "TEST_SOURCE_NOT_PARSED_NOT_RUN_NOT_ADOPTED",
+  "source_commit": "c5b42ea26115e72047e2a715dcc2960d7642eb14",
+  "test_entry": "test_combined_player_details.gd",
+  "production_changes": 0,
+  "combined_candidate": true,
+  "godot_parse": "NOT_RUN",
+  "unit_runtime": "NOT_RUN",
+  "main_ui_visibility": "NOT_RUN",
+  "adopted": false,
+  "package_files": [
+    {
+      "path": "INPUTS.json",
+      "bytes": 5335,
+      "sha256": "ee0223f132ff9d68602ebf18feb18dd19d8462756541ca52cc842b4bfa5ef68f"
+    },
+    {
+      "path": "prepare.py",
+      "bytes": 7364,
+      "sha256": "cba4fe39180a2345de5c3983532c2e4fd9f04c3e889ed1683770cc945a82eb3d"
+    },
+    {
+      "path": "test_combined_player_details.gd",
+      "bytes": 14785,
+      "sha256": "8b12348f54733ca74b8ce1b469ae243945574d2ecce485c77f328c75034af037"
+    }
+  ],
+  "coverage": [
+    "existing_clock_driver_cases",
+    "simultaneous_actor_coordinates_clocks",
+    "persistent_coordinate",
+    "nonactor_coordinate",
+    "invalid_hex_retains_clock",
+    "invalid_status_retains_coordinates",
+    "static_and_passage_unchanged",
+    "unchanged_source_identity"
+  ],
+  "single_item_runtime_results": "PENDING_FIXED_TASK_008_009",
+  "expected_checks": "Report actual bound runtime count; never inherit static or old results"
+}

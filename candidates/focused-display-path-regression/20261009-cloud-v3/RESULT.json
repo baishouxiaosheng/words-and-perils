@@ -1,0 +1,1210 @@
+{
+  "status": "PASSED_PATH_SEMANTICS_ONLY_NOT_NATIVE_WINDOWS_EXECUTION",
+  "count": 230,
+  "checks": [
+    {
+      "name": "clock exact one-expression-only helper code diff",
+      "passed": true
+    },
+    {
+      "name": "clock original strict byte equality and LF flags retained",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual PurePath separator semantics",
+      "passed": true
+    },
+    {
+      "name": "clock windows v3 strict allowlist one_allowed",
+      "passed": true
+    },
+    {
+      "name": "clock windows v2 observed allowlist behavior one_allowed",
+      "passed": true
+    },
+    {
+      "name": "clock windows v3 strict allowlist allowed_plus_directory",
+      "passed": true
+    },
+    {
+      "name": "clock windows v2 observed allowlist behavior allowed_plus_directory",
+      "passed": true
+    },
+    {
+      "name": "clock windows v3 strict allowlist empty",
+      "passed": true
+    },
+    {
+      "name": "clock windows v2 observed allowlist behavior empty",
+      "passed": true
+    },
+    {
+      "name": "clock windows v3 strict allowlist wrong_only",
+      "passed": true
+    },
+    {
+      "name": "clock windows v2 observed allowlist behavior wrong_only",
+      "passed": true
+    },
+    {
+      "name": "clock windows v3 strict allowlist extra_file",
+      "passed": true
+    },
+    {
+      "name": "clock windows v2 observed allowlist behavior extra_file",
+      "passed": true
+    },
+    {
+      "name": "clock windows v3 strict allowlist duplicate_file",
+      "passed": true
+    },
+    {
+      "name": "clock windows v2 observed allowlist behavior duplicate_file",
+      "passed": true
+    },
+    {
+      "name": "clock windows v3 strict allowlist case_mismatch",
+      "passed": true
+    },
+    {
+      "name": "clock windows v2 observed allowlist behavior case_mismatch",
+      "passed": true
+    },
+    {
+      "name": "clock windows v3 strict allowlist traversal",
+      "passed": true
+    },
+    {
+      "name": "clock windows v2 observed allowlist behavior traversal",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual PurePath separator semantics",
+      "passed": true
+    },
+    {
+      "name": "clock posix v3 strict allowlist one_allowed",
+      "passed": true
+    },
+    {
+      "name": "clock posix v2 observed allowlist behavior one_allowed",
+      "passed": true
+    },
+    {
+      "name": "clock posix v3 strict allowlist allowed_plus_directory",
+      "passed": true
+    },
+    {
+      "name": "clock posix v2 observed allowlist behavior allowed_plus_directory",
+      "passed": true
+    },
+    {
+      "name": "clock posix v3 strict allowlist empty",
+      "passed": true
+    },
+    {
+      "name": "clock posix v2 observed allowlist behavior empty",
+      "passed": true
+    },
+    {
+      "name": "clock posix v3 strict allowlist wrong_only",
+      "passed": true
+    },
+    {
+      "name": "clock posix v2 observed allowlist behavior wrong_only",
+      "passed": true
+    },
+    {
+      "name": "clock posix v3 strict allowlist extra_file",
+      "passed": true
+    },
+    {
+      "name": "clock posix v2 observed allowlist behavior extra_file",
+      "passed": true
+    },
+    {
+      "name": "clock posix v3 strict allowlist duplicate_file",
+      "passed": true
+    },
+    {
+      "name": "clock posix v2 observed allowlist behavior duplicate_file",
+      "passed": true
+    },
+    {
+      "name": "clock posix v3 strict allowlist case_mismatch",
+      "passed": true
+    },
+    {
+      "name": "clock posix v2 observed allowlist behavior case_mismatch",
+      "passed": true
+    },
+    {
+      "name": "clock posix v3 strict allowlist traversal",
+      "passed": true
+    },
+    {
+      "name": "clock posix v2 observed allowlist behavior traversal",
+      "passed": true
+    },
+    {
+      "name": "clock preparer already uses platform-independent repository path class",
+      "passed": true
+    },
+    {
+      "name": "clock actual preparer accepts exact POSIX path view/playable_build/player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "clock actual preparer accepts exact POSIX path tests/focused/source_binding.json",
+      "passed": true
+    },
+    {
+      "name": "clock actual preparer accepts exact POSIX path data/catalog.json",
+      "passed": true
+    },
+    {
+      "name": "clock actual preparer accepts exact POSIX path project.godot",
+      "passed": true
+    },
+    {
+      "name": "clock actual preparer retains unsafe/noncanonical rejection ''",
+      "passed": true
+    },
+    {
+      "name": "clock actual preparer retains unsafe/noncanonical rejection '.'",
+      "passed": true
+    },
+    {
+      "name": "clock actual preparer retains unsafe/noncanonical rejection '../escape'",
+      "passed": true
+    },
+    {
+      "name": "clock actual preparer retains unsafe/noncanonical rejection '/absolute'",
+      "passed": true
+    },
+    {
+      "name": "clock actual preparer retains unsafe/noncanonical rejection 'view/../escape'",
+      "passed": true
+    },
+    {
+      "name": "clock actual preparer retains unsafe/noncanonical rejection 'view//file.gd'",
+      "passed": true
+    },
+    {
+      "name": "clock actual preparer retains unsafe/noncanonical rejection 'view/./file.gd'",
+      "passed": true
+    },
+    {
+      "name": "clock actual preparer retains unsafe/noncanonical rejection 'view/file.gd/'",
+      "passed": true
+    },
+    {
+      "name": "clock actual preparer retains unsafe/noncanonical rejection 'view\\\\file.gd'",
+      "passed": true
+    },
+    {
+      "name": "clock actual preparer retains unsafe/noncanonical rejection 'E:\\\\outside\\\\file.gd'",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained CHANGE.patch",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained CHANGE.patch",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained INPUTS.json",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained INPUTS.json",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained PREPARATION_RECEIPT.json",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained PREPARATION_RECEIPT.json",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained README.txt",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained README.txt",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained STATIC_CHECKS.json",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained STATIC_CHECKS.json",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained USAGE.txt",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained USAGE.txt",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained check_static.py",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained check_static.py",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained core/ai_gm_rebuilt/canonical.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained core/ai_gm_rebuilt/canonical.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained core/ai_gm_rebuilt/hooks.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained core/ai_gm_rebuilt/hooks.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained core/status_foundation/canonical.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained core/status_foundation/canonical.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained core/status_foundation/catalog.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained core/status_foundation/catalog.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained core/status_foundation/engine_bridge.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained core/status_foundation/engine_bridge.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained core/status_foundation/runtime.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained core/status_foundation/runtime.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained core/status_gameplay/source_profiles.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained core/status_gameplay/source_profiles.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained data/catalog.json",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained data/catalog.json",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained main.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained main.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained overlay/view/playable_build/player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained overlay/view/playable_build/player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained prepare.py",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained prepare.py",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained project.godot",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained project.godot",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained test_clock_display.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained test_clock_display.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained tests/focused/baseline_player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained tests/focused/baseline_player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained tests/focused/candidate_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained tests/focused/candidate_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained tests/focused/source_binding.json",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained tests/focused/source_binding.json",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained tests/focused/test_clock_display.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained tests/focused/test_clock_display.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained view/actor_action_profile_v2/source.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained view/actor_action_profile_v2/source.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained view/actor_status_entry_v1/view_adapter.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained view/actor_status_entry_v1/view_adapter.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained view/actor_status_profile_v1/projection.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained view/actor_status_profile_v1/projection.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained view/actor_status_profile_v1/public_status.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained view/actor_status_profile_v1/public_status.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained view/actor_status_profile_v1/source.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained view/actor_status_profile_v1/source.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained view/playable_build/player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained view/playable_build/player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "clock windows actual pinned prepare path stays contained view/status_gameplay/details.gd",
+      "passed": true
+    },
+    {
+      "name": "clock posix actual pinned prepare path stays contained view/status_gameplay/details.gd",
+      "passed": true
+    },
+    {
+      "name": "clock native snapshot keys compared only before/after on same host",
+      "passed": true
+    },
+    {
+      "name": "focus exact one-expression-only helper code diff",
+      "passed": true
+    },
+    {
+      "name": "focus original strict byte equality and LF flags retained",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual PurePath separator semantics",
+      "passed": true
+    },
+    {
+      "name": "focus windows v3 strict allowlist one_allowed",
+      "passed": true
+    },
+    {
+      "name": "focus windows v2 observed allowlist behavior one_allowed",
+      "passed": true
+    },
+    {
+      "name": "focus windows v3 strict allowlist allowed_plus_directory",
+      "passed": true
+    },
+    {
+      "name": "focus windows v2 observed allowlist behavior allowed_plus_directory",
+      "passed": true
+    },
+    {
+      "name": "focus windows v3 strict allowlist empty",
+      "passed": true
+    },
+    {
+      "name": "focus windows v2 observed allowlist behavior empty",
+      "passed": true
+    },
+    {
+      "name": "focus windows v3 strict allowlist wrong_only",
+      "passed": true
+    },
+    {
+      "name": "focus windows v2 observed allowlist behavior wrong_only",
+      "passed": true
+    },
+    {
+      "name": "focus windows v3 strict allowlist extra_file",
+      "passed": true
+    },
+    {
+      "name": "focus windows v2 observed allowlist behavior extra_file",
+      "passed": true
+    },
+    {
+      "name": "focus windows v3 strict allowlist duplicate_file",
+      "passed": true
+    },
+    {
+      "name": "focus windows v2 observed allowlist behavior duplicate_file",
+      "passed": true
+    },
+    {
+      "name": "focus windows v3 strict allowlist case_mismatch",
+      "passed": true
+    },
+    {
+      "name": "focus windows v2 observed allowlist behavior case_mismatch",
+      "passed": true
+    },
+    {
+      "name": "focus windows v3 strict allowlist traversal",
+      "passed": true
+    },
+    {
+      "name": "focus windows v2 observed allowlist behavior traversal",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual PurePath separator semantics",
+      "passed": true
+    },
+    {
+      "name": "focus posix v3 strict allowlist one_allowed",
+      "passed": true
+    },
+    {
+      "name": "focus posix v2 observed allowlist behavior one_allowed",
+      "passed": true
+    },
+    {
+      "name": "focus posix v3 strict allowlist allowed_plus_directory",
+      "passed": true
+    },
+    {
+      "name": "focus posix v2 observed allowlist behavior allowed_plus_directory",
+      "passed": true
+    },
+    {
+      "name": "focus posix v3 strict allowlist empty",
+      "passed": true
+    },
+    {
+      "name": "focus posix v2 observed allowlist behavior empty",
+      "passed": true
+    },
+    {
+      "name": "focus posix v3 strict allowlist wrong_only",
+      "passed": true
+    },
+    {
+      "name": "focus posix v2 observed allowlist behavior wrong_only",
+      "passed": true
+    },
+    {
+      "name": "focus posix v3 strict allowlist extra_file",
+      "passed": true
+    },
+    {
+      "name": "focus posix v2 observed allowlist behavior extra_file",
+      "passed": true
+    },
+    {
+      "name": "focus posix v3 strict allowlist duplicate_file",
+      "passed": true
+    },
+    {
+      "name": "focus posix v2 observed allowlist behavior duplicate_file",
+      "passed": true
+    },
+    {
+      "name": "focus posix v3 strict allowlist case_mismatch",
+      "passed": true
+    },
+    {
+      "name": "focus posix v2 observed allowlist behavior case_mismatch",
+      "passed": true
+    },
+    {
+      "name": "focus posix v3 strict allowlist traversal",
+      "passed": true
+    },
+    {
+      "name": "focus posix v2 observed allowlist behavior traversal",
+      "passed": true
+    },
+    {
+      "name": "focus preparer already uses platform-independent repository path class",
+      "passed": true
+    },
+    {
+      "name": "focus actual preparer accepts exact POSIX path view/playable_build/player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "focus actual preparer accepts exact POSIX path tests/focused/source_binding.json",
+      "passed": true
+    },
+    {
+      "name": "focus actual preparer accepts exact POSIX path data/catalog.json",
+      "passed": true
+    },
+    {
+      "name": "focus actual preparer accepts exact POSIX path project.godot",
+      "passed": true
+    },
+    {
+      "name": "focus actual preparer retains unsafe/noncanonical rejection ''",
+      "passed": true
+    },
+    {
+      "name": "focus actual preparer retains unsafe/noncanonical rejection '.'",
+      "passed": true
+    },
+    {
+      "name": "focus actual preparer retains unsafe/noncanonical rejection '../escape'",
+      "passed": true
+    },
+    {
+      "name": "focus actual preparer retains unsafe/noncanonical rejection '/absolute'",
+      "passed": true
+    },
+    {
+      "name": "focus actual preparer retains unsafe/noncanonical rejection 'view/../escape'",
+      "passed": true
+    },
+    {
+      "name": "focus actual preparer retains unsafe/noncanonical rejection 'view//file.gd'",
+      "passed": true
+    },
+    {
+      "name": "focus actual preparer retains unsafe/noncanonical rejection 'view/./file.gd'",
+      "passed": true
+    },
+    {
+      "name": "focus actual preparer retains unsafe/noncanonical rejection 'view/file.gd/'",
+      "passed": true
+    },
+    {
+      "name": "focus actual preparer retains unsafe/noncanonical rejection 'view\\\\file.gd'",
+      "passed": true
+    },
+    {
+      "name": "focus actual preparer retains unsafe/noncanonical rejection 'E:\\\\outside\\\\file.gd'",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained CHANGE.patch",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained CHANGE.patch",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained INPUTS.json",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained INPUTS.json",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained MANIFEST.json",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained PREPARATION_RECEIPT.json",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained PREPARATION_RECEIPT.json",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained README.txt",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained README.txt",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained STATIC_CHECKS.json",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained STATIC_CHECKS.json",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained USAGE.txt",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained USAGE.txt",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained check_static.py",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained check_static.py",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained core/ai_gm_rebuilt/canonical.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained core/ai_gm_rebuilt/canonical.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained core/ai_gm_rebuilt/model_view.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained core/ai_gm_rebuilt/model_view.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained core/focus_contract.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained core/focus_contract.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained core/status_foundation/canonical.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained core/status_foundation/canonical.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained core/status_foundation/catalog.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained core/status_foundation/catalog.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained core/status_foundation/runtime.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained core/status_foundation/runtime.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained core/status_gameplay/source_profiles.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained core/status_gameplay/source_profiles.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained data/catalog.json",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained data/catalog.json",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained main.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained main.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained overlay/view/playable_build/player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained overlay/view/playable_build/player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained prepare.py",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained prepare.py",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained project.godot",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained project.godot",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained test_focus_location.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained test_focus_location.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained tests/focused/baseline_player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained tests/focused/baseline_player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained tests/focused/candidate_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained tests/focused/candidate_manifest.json",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained tests/focused/source_binding.json",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained tests/focused/source_binding.json",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained tests/focused/test_focus_location.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained tests/focused/test_focus_location.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained view/actor_action_profile_v2/source.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained view/actor_action_profile_v2/source.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained view/actor_status_entry_v1/view_adapter.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained view/actor_status_entry_v1/view_adapter.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained view/actor_status_profile_v1/projection.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained view/actor_status_profile_v1/projection.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained view/actor_status_profile_v1/source.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained view/actor_status_profile_v1/source.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained view/playable_build/player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained view/playable_build/player_details.gd",
+      "passed": true
+    },
+    {
+      "name": "focus windows actual pinned prepare path stays contained view/status_gameplay/details.gd",
+      "passed": true
+    },
+    {
+      "name": "focus posix actual pinned prepare path stays contained view/status_gameplay/details.gd",
+      "passed": true
+    },
+    {
+      "name": "focus native snapshot keys compared only before/after on same host",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "suite": "clock",
+      "flavor": "windows",
+      "case": "one_allowed",
+      "expected_allowed": true,
+      "v2_allowed": false,
+      "v3_allowed": true
+    },
+    {
+      "suite": "clock",
+      "flavor": "windows",
+      "case": "allowed_plus_directory",
+      "expected_allowed": true,
+      "v2_allowed": false,
+      "v3_allowed": true
+    },
+    {
+      "suite": "clock",
+      "flavor": "windows",
+      "case": "empty",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "clock",
+      "flavor": "windows",
+      "case": "wrong_only",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "clock",
+      "flavor": "windows",
+      "case": "extra_file",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "clock",
+      "flavor": "windows",
+      "case": "duplicate_file",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "clock",
+      "flavor": "windows",
+      "case": "case_mismatch",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "clock",
+      "flavor": "windows",
+      "case": "traversal",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "clock",
+      "flavor": "posix",
+      "case": "one_allowed",
+      "expected_allowed": true,
+      "v2_allowed": true,
+      "v3_allowed": true
+    },
+    {
+      "suite": "clock",
+      "flavor": "posix",
+      "case": "allowed_plus_directory",
+      "expected_allowed": true,
+      "v2_allowed": true,
+      "v3_allowed": true
+    },
+    {
+      "suite": "clock",
+      "flavor": "posix",
+      "case": "empty",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "clock",
+      "flavor": "posix",
+      "case": "wrong_only",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "clock",
+      "flavor": "posix",
+      "case": "extra_file",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "clock",
+      "flavor": "posix",
+      "case": "duplicate_file",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "clock",
+      "flavor": "posix",
+      "case": "case_mismatch",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "clock",
+      "flavor": "posix",
+      "case": "traversal",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "focus",
+      "flavor": "windows",
+      "case": "one_allowed",
+      "expected_allowed": true,
+      "v2_allowed": false,
+      "v3_allowed": true
+    },
+    {
+      "suite": "focus",
+      "flavor": "windows",
+      "case": "allowed_plus_directory",
+      "expected_allowed": true,
+      "v2_allowed": false,
+      "v3_allowed": true
+    },
+    {
+      "suite": "focus",
+      "flavor": "windows",
+      "case": "empty",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "focus",
+      "flavor": "windows",
+      "case": "wrong_only",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "focus",
+      "flavor": "windows",
+      "case": "extra_file",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "focus",
+      "flavor": "windows",
+      "case": "duplicate_file",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "focus",
+      "flavor": "windows",
+      "case": "case_mismatch",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "focus",
+      "flavor": "windows",
+      "case": "traversal",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "focus",
+      "flavor": "posix",
+      "case": "one_allowed",
+      "expected_allowed": true,
+      "v2_allowed": true,
+      "v3_allowed": true
+    },
+    {
+      "suite": "focus",
+      "flavor": "posix",
+      "case": "allowed_plus_directory",
+      "expected_allowed": true,
+      "v2_allowed": true,
+      "v3_allowed": true
+    },
+    {
+      "suite": "focus",
+      "flavor": "posix",
+      "case": "empty",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "focus",
+      "flavor": "posix",
+      "case": "wrong_only",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "focus",
+      "flavor": "posix",
+      "case": "extra_file",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "focus",
+      "flavor": "posix",
+      "case": "duplicate_file",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "focus",
+      "flavor": "posix",
+      "case": "case_mismatch",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    },
+    {
+      "suite": "focus",
+      "flavor": "posix",
+      "case": "traversal",
+      "expected_allowed": false,
+      "v2_allowed": false,
+      "v3_allowed": false
+    }
+  ],
+  "bindings": [
+    {
+      "suite": "clock",
+      "v2_helper_sha256": "5d23ae03bdd8c810a1179b1e6d8ecdd3dbf35539b28febda257a9fe29e9fa36e",
+      "v3_helper_sha256": "6e9427b85484248078e8589f995fe0dce61d008e5fb7eedd34e6cb216c54a4ce",
+      "prepare_sha256": "eeec76df1e38930227f1d3a33108ed18e4b6ee336456ec82bfec0f9ecd57495b",
+      "tests_check_static_sha256": "cfe7351974a28bc19f1dc91b98a8223b7e4576cfc213cbcb4a41b644c4d6880f"
+    },
+    {
+      "suite": "focus",
+      "v2_helper_sha256": "b47c30376779435610f32b53fb7d93b33eaceb9640aa1610c94a116e8a1e8747",
+      "v3_helper_sha256": "1bcba772c4bb7106c8b89b3a34c0d49ee3a687fd896f02a9698fc63ad163b4ef",
+      "prepare_sha256": "eeec76df1e38930227f1d3a33108ed18e4b6ee336456ec82bfec0f9ecd57495b",
+      "tests_check_static_sha256": "cfe7351974a28bc19f1dc91b98a8223b7e4576cfc213cbcb4a41b644c4d6880f"
+    }
+  ],
+  "godot_invocations": 0,
+  "preserved": [
+    "strict single-file list equality",
+    "strict production byte equality",
+    "LF Git flags",
+    "production patch/overlay",
+    "original driver and fixture",
+    "prepare and tests algorithms"
+  ],
+  "limits": "PureWindowsPath/PurePosixPath semantics plus actual extracted pinned expressions; not Windows filesystem, reparse, symlink privilege, Godot or GUI acceptance"
+}

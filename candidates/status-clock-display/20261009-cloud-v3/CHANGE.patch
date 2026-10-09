@@ -1,0 +1,24 @@
+--- a/view/playable_build/player_details.gd
++++ b/view/playable_build/player_details.gd
+@@ -12,7 +12,20 @@
+ 	return StatusDetails.status_lines(actor)
+ 
+ static func focus_status_lines(actor: Dictionary) -> Array[String]:
+-	return StatusDetails.focus_status_lines(actor)
++	var details: Variant = actor.get("status_details")
++	if not StatusDetails.valid_public_details(details):
++		return StatusDetails.focus_status_lines(actor)
++	# Wording-only copy: keep the frozen public packet and its clock untouched.
++	var display: Dictionary = details.duplicate(true)
++	var legacy_clock := false
++	for row in display.rows:
++		if row.duration.clock == "legacy_turn" and not row.duration.persistent:
++			row.duration.text = "剩余%d次已提交行动" % int(row.duration.remaining)
++			legacy_clock = true
++	var lines: Array[String] = StatusDetails.focus_status_lines({"status_details": display})
++	if legacy_clock:
++		lines.append("计时说明：之后每次行动提交成功时结算；自身和其他角色的行动均计入")
++	return lines
+ 
+ static func status_caption(actor: Dictionary) -> String:
+ 	return StatusDetails.status_caption(actor)

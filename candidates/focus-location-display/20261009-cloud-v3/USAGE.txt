@@ -1,0 +1,17 @@
+未解析、未运行、未采用的独立对象位置显示候选。
+
+正式 public-v30 的 FocusContract 已将有效焦点位置绑定为 focus.hex；ModelView 投影也保留它。通用对象详情却未显示该位置。此候选仅在通用详情中加入“选中地格：（q，r）”，读取已有焦点快照中的两个整数，不查询当前世界或重新推算对象中心。静态对象专用分支原有的位置行及提前返回保持原样；passage_edge 跳过新增通用行，保留原“操作落脚点”坐标和语义，避免重复显示。
+
+名称、类别、对象状态、能力说明与状态信息均沿用原格式器；不改变选中优先权、GM评估、上下文、协议、存档或identity。未合并任何计时、死亡、Raw、HUD、手动导入或动画候选。
+
+使用现有 tools/restore_v30.py 将正式v30恢复至已获准的可弃源码根，核 MANIFEST 的 before_sha256，再仅应用 overlay/view/playable_build/player_details.gd，或在项目根执行 git apply --check CHANGE.patch 后 git apply CHANGE.patch。两种方式择一。与同文件其他独立候选合并需另行复核。
+
+可见性证据仅覆盖 manifest 固定的 actor_status view_adapter/projection：原有玩家可见 actor/item/tile 过滤仍由上游负责。格式器只检查坐标形状，不扩大可见集合；未宣称其它模式全部通过隐私检查，也未进行运行可见性验收。
+
+轻量入口：python check_static.py --restored-root RESTORED_ROOT，仅核精确输入、单处插入、快照读取及patch实际回放，不运行Godot。
+
+待原生观察：选中不同位置的同名角色、地块、树、聚落；详情坐标应对应其当前焦点快照。对象移动或切换后的显示刷新、历史焦点、无选中及静态对象及passage无重复位置行均未作运行或视觉验收。
+
+v2仅修测试工具：临时Git回放的check/apply均使用命令级 -c core.autocrlf=false -c core.eol=lf，不改全局Git设置。严格字节相等仍是通过条件；失败在新的持久可弃诊断目录保存before/expected/actual/patch和DIAGNOSIS，自动删除回放目录前已保存。可传 --replay-evidence-root EXISTING_OWNED_PARENT；调用者归档该子目录，失败不原样重跑。
+
+v3 仅将回放文件清单的相对路径转为 as_posix()，与仓库 manifest 路径同一表达；仍要求清单精确等于唯一许可文件，拒绝额外/错误/缺失文件。v2 LF 参数、精确字节断言和 task-owned 失败证据保留不变。006/007 冻结，不在本版本重试或派发新 ready。

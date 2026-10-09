@@ -139,6 +139,9 @@ var middle_row: HBoxContainer
 var tools_menu: MenuButton
 var intent_expand_button: Button
 var journal_open := false
+var ui_presenter:Node
+var history_motion:Node
+var popup_motion:Node
 var compact_layout := false
 var intent_expanded := false
 var actor_action_mode:=false
@@ -220,7 +223,7 @@ var stamina_bar: ProgressBar
 var health_text: Label
 var stamina_text: Label
 var advanced_scroll: ScrollContainer
-var advanced_dialog: AcceptDialog
+var advanced_dialog
 var advanced_menu: PopupMenu
 var adventure_menu: PopupMenu
 var display_menu: PopupMenu
@@ -272,6 +275,9 @@ func _ready() -> void:
 	private_main_visual=PrivateMainVisual.new();private_main_visual.name="PrivateMainVisualBridge";add_child(private_main_visual)
 	add_child(preload("res://view/tabletop_interaction/wasd_camera_pan.gd").new(self))
 	add_child(preload("res://view/tabletop_interaction/selection_motion.gd").new(self))
+	ui_presenter=preload("res://view/ui_motion/presenter.gd").new();ui_presenter.name="UIPresenter";add_child(ui_presenter);ui_presenter.bind(self)
+	history_motion=ui_presenter;popup_motion=ui_presenter
+	for popup:Window in [tools_menu.get_popup(),adventure_menu,advanced_menu,display_menu,focus_choice_popup,advanced_dialog,runtime_connection_panel.settings_dialog,playtest_reset_dialog,scene_test_confirm_dialog,inventory_dialog,focus_details_dialog,effects_dialog,world_dialog,help_dialog,import_dialog,demo_confirm_dialog,restart_confirm_dialog,journal_drawer,v3_setup_dialog,npc_notes_dialog]:popup_motion.watch(popup)
 	add_child(preload("res://view/tabletop_interaction/offline_move_demo.gd").new(self))
 	# Default startup replaces this initial legacy board before the first frame.
 	# Build its terrain only when requested, or if the coast cannot be opened.
@@ -508,6 +514,9 @@ func build_ui() -> void:
 	advanced_menu.add_item("行动状态测试 · 以当前地图新开",ACTOR_STATUS_ENTRY_NEW)
 	advanced_menu.add_item("继续行动状态测试（独立存档）",ACTOR_STATUS_ENTRY_CONTINUE)
 	advanced_menu.add_item("新场景往返测试（会重置）",25); advanced_menu.add_item("演出测试",4); advanced_menu.add_item("已记录回合",5); advanced_menu.id_pressed.connect(on_tool_selected)
+	advanced_menu.add_separator("界面预设示例")
+	for example_id:int in preload("res://view/ui_motion/examples.gd").WINDOWS:
+		advanced_menu.add_item(preload("res://view/ui_motion/examples.gd").WINDOWS[example_id].title,example_id)
 	display_menu=PopupMenu.new(); display_menu.name="Display"; menu.add_child(display_menu)
 	display_menu.add_check_item("全屏  ·  F11",22)
 	display_menu.add_radio_check_item("低负载 · 无抗锯齿",6)
@@ -598,7 +607,7 @@ func build_ui() -> void:
 	dialogue_restore_button.name="RestoreDialogue"; add_child(dialogue_restore_button); dialogue_restore_button.hide()
 
 	# Low-frequency transport, regressions and numerical traces live off the map.
-	advanced_dialog=AcceptDialog.new(); advanced_dialog.name="AdvancedTools"; advanced_dialog.title="连接与高级"; advanced_dialog.ok_button_text="返回冒险"; advanced_dialog.size=Vector2i(760,650); add_child(advanced_dialog)
+	advanced_dialog=preload("res://view/ui_motion/modal_window.gd").new(); advanced_dialog.configure(&"large",{"preferred":Vector2(800,660)}); advanced_dialog.name="AdvancedTools"; advanced_dialog.title="连接与高级"; advanced_dialog.ok_button_text="返回冒险"; advanced_dialog.size=Vector2i(760,650); add_child(advanced_dialog)
 	advanced_scroll=ScrollContainer.new(); advanced_scroll.custom_minimum_size=Vector2(700,540); advanced_scroll.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED; advanced_dialog.add_child(advanced_scroll)
 	var advanced_col:=VBoxContainer.new(); advanced_col.size_flags_horizontal=Control.SIZE_EXPAND_FILL; advanced_col.add_theme_constant_override("separation",14); advanced_scroll.add_child(advanced_col)
 	relay_note=label("当前为离线模式，尚未连接 AI。
@@ -725,7 +734,7 @@ func toggle_overview() -> void:
 func set_map_dialogue_hidden(hidden: bool) -> void:
 	dialogue_hidden_for_map=hidden
 	action_panel.visible=not hidden
-	journal_panel.visible=journal_open and not hidden
+	# History visibility is committed by the motion seam after responsive layout.
 	dialogue_restore_button.visible=hidden
 	apply_responsive_layout()
 
@@ -735,10 +744,12 @@ func toggle_fullscreen() -> void:
 	display_menu.set_item_checked(display_menu.get_item_index(22),get_window().mode==Window.MODE_FULLSCREEN)
 
 func show_advanced() -> void:
-	advanced_dialog.popup_centered(Vector2i(mini(800,get_viewport_rect().size.x-64),mini(660,get_viewport_rect().size.y-64)))
+	if is_instance_valid(popup_motion):popup_motion.prepare_reopen(advanced_dialog)
+	advanced_dialog.popup_centered(advanced_dialog.adapted_extent(get_viewport_rect().size))
 	advanced_scroll.scroll_vertical=0
 
 func show_ai_connection() -> void:
+	if is_instance_valid(popup_motion):popup_motion.prepare_reopen(runtime_connection_panel.settings_dialog)
 	runtime_connection_panel.open_settings()
 
 func close_tool_menus() -> void:
@@ -749,6 +760,8 @@ func close_tool_menus() -> void:
 	if is_instance_valid(tools_menu): tools_menu.get_popup().hide()
 
 func on_tool_selected(id: int) -> void:
+	if preload("res://view/ui_motion/examples.gd").WINDOWS.has(id):
+		close_tool_menus();preload("res://view/ui_motion/examples.gd").show_window(self,ui_presenter,id);return
 	if id!=PRIVATE_VISUAL_MENU_ID and is_instance_valid(private_main_visual):private_main_visual.before_world_change()
 	if id!=PRIVATE_VISUAL_MENU_ID and is_instance_valid(private_main_visual):private_main_visual.after_world_change.call_deferred()
 	close_tool_menus()
@@ -811,7 +824,6 @@ func toggle_journal() -> void:
 		journal_open=true
 	else:
 		journal_open = not journal_open
-	journal_panel.visible = journal_open
 	update_journal_toggle()
 	apply_responsive_layout()
 
@@ -819,8 +831,10 @@ func apply_responsive_layout() -> void:
 	if not is_instance_valid(action_panel): return
 	preload("res://view/fullscreen_hud/readability.gd").configure(self)
 	preload("res://view/ui_typography/style.gd").prepare_scene(self)
+	if is_instance_valid(history_motion):history_motion.before_layout()
 	preload("res://view/fullscreen_hud/responsive_layout.gd").apply(self)
 	preload("res://view/ui_typography/style.gd").finish_layout(self)
+	if is_instance_valid(history_motion):history_motion.after_layout()
 	update_journal_toggle()
 	_update_feedback_safe_rect()
 
@@ -2554,7 +2568,7 @@ func _input(event: InputEvent) -> void:
 		if world_dialog.visible:
 			world_dialog.hide(); get_viewport().set_input_as_handled(); return
 		if is_instance_valid(board) and board.has_method("_cancel_committed_camera"):board._cancel_committed_camera()
-		if advanced_dialog.visible: advanced_dialog.hide()
+		if advanced_dialog.visible: advanced_dialog.request_motion_close()
 		elif journal_open: toggle_journal()
 		elif intent_expanded: toggle_intent()
 		elif get_window().mode == Window.MODE_FULLSCREEN: toggle_fullscreen()

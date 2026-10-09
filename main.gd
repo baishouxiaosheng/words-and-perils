@@ -580,7 +580,7 @@ func build_ui() -> void:
 	goal.text_changed.connect(invalidate_sample_draft)
 	goal.text_set.connect(invalidate_sample_draft)
 	goal.lines_edited_from.connect(func(_from: int, _to: int): invalidate_sample_draft())
-	submit_button=button("结束\n回合",end_turn,true); submit_button.name="EndTurn"; style_round_button(submit_button,true); submit_button.custom_minimum_size=Vector2(88,88); submit_button.tooltip_text="提交你的意图；取得有效裁定后，完成一次回合"; input_row.add_child(submit_button)
+	submit_button=button("提交\n意图",end_turn,true); submit_button.name="EndTurn"; style_round_button(submit_button,true); submit_button.custom_minimum_size=Vector2(88,88); submit_button.tooltip_text="提交你的意图；取得有效裁定后，完成一次回合"; input_row.add_child(submit_button)
 	var footer:=HBoxContainer.new(); turn_footer=footer; footer.add_theme_constant_override("separation",12); speech_col.add_child(footer)
 	phase_label=label("等待你的行动",14,Color("4e7153")); footer.add_child(phase_label)
 	next_step_label=label("",14,MUTED); next_step_label.size_flags_horizontal=Control.SIZE_EXPAND_FILL; next_step_label.text_overrun_behavior=TextServer.OVERRUN_TRIM_ELLIPSIS; next_step_label.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT; footer.add_child(next_step_label)
@@ -2396,7 +2396,7 @@ func update_playtest_controls() -> void:
 	submit_button.visible = true
 	var runtime_pending: bool=_runtime_supported() and is_instance_valid(runtime_ai) and runtime_ai.busy() and phase!="idle"
 	submit_button.disabled = phase == "awaiting_assessment" or end_turn_busy or runtime_pending
-	submit_button.text = "等待\n裁定" if phase == "awaiting_assessment" else ("完成\n回合" if pending else "结束\n回合")
+	submit_button.text = "等待\n裁定" if phase == "awaiting_assessment" else ("完成\n回合" if pending else "提交\n意图")
 	cancel_button.visible = pending
 	cancel_button.disabled = not playtest.can_cancel()
 	cancel_button.text = "取消等待" if playtest.can_cancel() else "结果已锁定，不能取消"

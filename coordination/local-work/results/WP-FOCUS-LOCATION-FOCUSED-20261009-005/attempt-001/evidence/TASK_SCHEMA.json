@@ -1,0 +1,288 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/baishouxiaosheng/words-and-perils/blob/main/coordination/local-work/TASK_SCHEMA.json",
+  "title": "Bounded Words and Perils queue task and report records",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/task"
+    },
+    {
+      "$ref": "#/$defs/report"
+    }
+  ],
+  "$defs": {
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "protocol",
+        "kind",
+        "task_id",
+        "status",
+        "title",
+        "base_commit",
+        "candidate_root",
+        "inputs",
+        "baseline_project_pins",
+        "allowed_production_changes",
+        "allowed_test_changes",
+        "requirements",
+        "verification",
+        "preserve",
+        "out_of_scope",
+        "publication"
+      ],
+      "properties": {
+        "protocol": {
+          "const": "words-and-perils-local-work/v1"
+        },
+        "kind": {
+          "const": "task"
+        },
+        "task_id": {
+          "type": "string",
+          "pattern": "^[A-Z0-9][A-Z0-9-]{5,79}$"
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "ready"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "base_commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "candidate_root": {
+          "type": "string",
+          "pattern": "^candidates/[a-z0-9][a-z0-9_/-]*[a-z0-9]$"
+        },
+        "inputs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "repository_path",
+              "git_blob_sha",
+              "sha256",
+              "bytes",
+              "role"
+            ],
+            "properties": {
+              "repository_path": {
+                "type": "string",
+                "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*(?:^|/)\\.git(?:/|$))(?!.*[\\\\:\\x00-\\x1f\\x7f]).+$"
+              },
+              "git_blob_sha": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{40}$"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "role": {
+                "type": "string"
+              },
+              "project_path": {
+                "type": "string",
+                "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*(?:^|/)\\.git(?:/|$))(?!.*[\\\\:\\x00-\\x1f\\x7f]).+$"
+              }
+            }
+          }
+        },
+        "baseline_project_pins": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "allowed_production_changes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*(?:^|/)\\.git(?:/|$))(?!.*[\\\\:\\x00-\\x1f\\x7f]).+$"
+          }
+        },
+        "allowed_test_changes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*(?:^|/)\\.git(?:/|$))(?!.*[\\\\:\\x00-\\x1f\\x7f]).+$"
+          }
+        },
+        "requirements": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "verification": {
+          "type": "object"
+        },
+        "preserve": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "out_of_scope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "publication": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "result_root",
+            "adopted",
+            "phases"
+          ],
+          "properties": {
+            "result_root": {
+              "type": "string",
+              "pattern": "^coordination/local-work/results/[A-Z0-9][A-Z0-9-]{5,79}$"
+            },
+            "adopted": {
+              "const": false
+            },
+            "phases": {
+              "type": "string"
+            }
+          }
+        },
+        "supersedes": {
+          "type": "string"
+        },
+        "retry_of": {
+          "type": "string"
+        }
+      }
+    },
+    "report": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "protocol",
+        "kind",
+        "task_id",
+        "task_sha256",
+        "attempt_id",
+        "intake_commit",
+        "status",
+        "automation_enabled",
+        "summary",
+        "source_hashes",
+        "checks",
+        "blockers",
+        "context"
+      ],
+      "properties": {
+        "protocol": {
+          "const": "words-and-perils-local-work/v1"
+        },
+        "kind": {
+          "enum": [
+            "ack",
+            "checkpoint",
+            "result"
+          ]
+        },
+        "task_id": {
+          "type": "string"
+        },
+        "task_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "attempt_id": {
+          "type": "string",
+          "pattern": "^attempt-[0-9]{3}$"
+        },
+        "intake_commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "status": {
+          "enum": [
+            "acknowledged",
+            "running",
+            "checkpointed",
+            "blocked",
+            "stopped",
+            "failed",
+            "reviewable"
+          ]
+        },
+        "automation_enabled": {
+          "type": "boolean"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "source_hashes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "blockers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "context": {
+          "type": "object"
+        },
+        "artifact_commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "artifact_manifest_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "candidate_adopted": {
+          "const": false
+        },
+        "remaining_steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "worker_entry_evidence": {
+          "type": "object"
+        },
+        "source_authentication_evidence": {
+          "type": "object"
+        },
+        "safe_cleanup": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

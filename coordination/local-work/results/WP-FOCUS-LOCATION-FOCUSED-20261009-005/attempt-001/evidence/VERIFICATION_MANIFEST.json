@@ -1,0 +1,29 @@
+{
+  "task_id": "WP-FOCUS-LOCATION-FOCUSED-20261009-005",
+  "source_hashes": {
+    "core/ai_gm_rebuilt/canonical.gd": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c",
+    "core/ai_gm_rebuilt/model_view.gd": "971508f8ccc88179a78c390323eae7b814572e4115b63254aabe2294a92a9f4c",
+    "core/focus_contract.gd": "b8daf8124f80b8f474937caf25a3e446277636b28d08626d419d4da4336e9cd1",
+    "core/status_foundation/canonical.gd": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c",
+    "core/status_foundation/catalog.gd": "8effb5d5e6094cdb0f5413a697ae3adb4e7d86429c31a7b93d751e71f6b62681",
+    "core/status_foundation/runtime.gd": "ee79b110e35b5141334daf55e7a2f80f6f4d3060a56d408bf0a08094260bb059",
+    "core/status_gameplay/source_profiles.gd": "53e1ca59b24fb0e020b2dc4a5200868fe927264e787234873484d077d8057483",
+    "data/catalog.json": "81712567dda2bb000b7cacefc9380c91bc271ea461c21758b1d2fa8074de4fde",
+    "main.gd": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f",
+    "view/actor_action_profile_v2/source.gd": "7681a03d232452533ef584719d5f3e6c1c39942332b303ef1c2a3e973385e665",
+    "view/actor_status_entry_v1/view_adapter.gd": "a9a825b9096b67424e7358d2dcca32b8e39411983f7ac9be0975ef7bc869968d",
+    "view/actor_status_profile_v1/projection.gd": "2decabf7c9fbe1b4c5400b502ce1e464112bb4eea489dfdcee3a5cf1c150d5e6",
+    "view/actor_status_profile_v1/source.gd": "f4ca4ca0551f0b1665b58f4ee1071dbc7df5180f357de18710d55a596b88ac03",
+    "view/playable_build/player_details.gd": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+    "view/status_gameplay/details.gd": "2b1d377813660aa419ca4f2cb9026d591b9edadce853ef0fec57a1b3e98841b1",
+    "project.godot": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd"
+  },
+  "candidate_sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+  "driver_sha256": "87c99370865600ebc48e616c2b9f17fa9e62bf267277085462aba48f6a8be4da",
+  "production_changes": [],
+  "host_variant": "FORMATTER_UNIT_HOST",
+  "actual_engine_invocations": 0,
+  "new_wrappers_generated": false,
+  "status": "failed",
+  "adopted": false
+}

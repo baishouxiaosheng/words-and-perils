@@ -1,0 +1,22 @@
+{
+  "static_result": "FAILED",
+  "failed_assertion": "actual patch replay equals overlay",
+  "engine_runs": 0,
+  "later_stages": "NOT_RUN",
+  "same_task_retry": false,
+  "source_original_sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3",
+  "candidate_sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5",
+  "patch_sha256": "fd5ecc575d4c1f332b8f9d1d34ad9b34e77c323324ba61e9a2a6726cd8582f3e",
+  "source_CRLF_count": 0,
+  "candidate_CRLF_count": 0,
+  "patch_CRLF_count": 0,
+  "readonly_in_memory_patch_hunk_reconstruction_matches_candidate": true,
+  "readonly_in_memory_reconstruction_is_not_replacement_for_failed_git_runtime": true,
+  "git_newline_config_stdout": "file:C:/Program Files/Git/etc/gitconfig\tcore.autocrlf true\n",
+  "git_newline_config_stderr": "",
+  "git_newline_config_exit": 0,
+  "failure_family": "frozen_git_patch_replay_byte_mismatch",
+  "separate_items_observed_with_same_failed_boundary": 2,
+  "stop_unchanged_attempts": true,
+  "reason_inference": "Git working-tree line conversion is suspected from core.autocrlf=true and identical pure hunks. The failed checker removed temporary replay bytes; exact produced bytes unavailable. No settings or test changes and no rerun."
+}

@@ -1,0 +1,11 @@
+{
+  "failure": "One preserved TLS UNEXPECTED_EOF_WHILE_READING during PHASE_A raw readback",
+  "artifact_push_succeeded": true,
+  "cached_actual_returns_verified": 5,
+  "missing_only_readonly_recovered": 24,
+  "all_29_actual_bytes_verified": true,
+  "no_reupload_or_test_retry": true,
+  "fresh_all_admission_gates_rechecked": true,
+  "no_new_task_this_round": true,
+  "utc": "2026-10-09T12:35:25.434332+00:00"
+}

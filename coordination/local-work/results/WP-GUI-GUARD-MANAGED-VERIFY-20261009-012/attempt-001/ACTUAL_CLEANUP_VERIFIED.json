@@ -1,0 +1,28 @@
+{
+  "original_execution_worker_exited": true,
+  "execution_lock_disposed": true,
+  "parent_guardian_pid": 66096,
+  "parent_guardian_created_utc": "2026-10-09T12:32:14.231071+00:00",
+  "parent_guardian_exited": true,
+  "parent_guardian_exit_code": 0,
+  "owned_guarded_processes": [
+    {
+      "pid": 68048,
+      "creation_utc": "2026-10-09T12:32:15.9290516Z",
+      "guard_exited": true,
+      "matching_instance_gone": true
+    },
+    {
+      "pid": 67856,
+      "creation_utc": "2026-10-09T12:32:16.4868071Z",
+      "guard_exited": true,
+      "matching_instance_gone": true
+    }
+  ],
+  "job_empty": true,
+  "output_readers_finished": true,
+  "source_leases_disposed": true,
+  "owned_temp_empty": true,
+  "unknown_processes_killed": false,
+  "publication_lock": "Reacquired by same task for result only; released in finally"
+}

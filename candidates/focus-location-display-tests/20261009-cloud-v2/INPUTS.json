@@ -1,0 +1,133 @@
+{
+  "schema": "focused-formatter-inputs/v1",
+  "suite": "focus-location",
+  "candidate_commit": "e584e8cd3c50fe9c6342235f55ee6522acc5db22",
+  "candidate_prefix": "candidates/focus-location-display/20261009-cloud-v2/",
+  "formal_release_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+  "formal_source_map_sha256": "34d1bfad7676d26d994eb4e8e06130a76cc05cb729b8b336842c571a7b85270e",
+  "candidate_files": [
+    {
+      "path": "CHANGE.patch",
+      "bytes": 718,
+      "sha256": "fd5ecc575d4c1f332b8f9d1d34ad9b34e77c323324ba61e9a2a6726cd8582f3e"
+    },
+    {
+      "path": "MANIFEST.json",
+      "bytes": 3234,
+      "sha256": "f65b10eef2d01df82ab1e1644a3d59745b580d3ac96e83b75c9c26fa944decf5"
+    },
+    {
+      "path": "STATIC_CHECKS.json",
+      "bytes": 2199,
+      "sha256": "e2b11da0ccf3be064683035ed95379702ffb57645f9cb7ad68bb24b0748d4109"
+    },
+    {
+      "path": "USAGE.txt",
+      "bytes": 2276,
+      "sha256": "d07e3a21abf28252adcca3220b938829a755ea567dc5239b42d872693141c868"
+    },
+    {
+      "path": "check_static.py",
+      "bytes": 6143,
+      "sha256": "b47c30376779435610f32b53fb7d93b33eaceb9640aa1610c94a116e8a1e8747"
+    },
+    {
+      "path": "overlay/view/playable_build/player_details.gd",
+      "bytes": 8409,
+      "sha256": "28ef19c291e3a9d7a0468dcb21024e155cbb91c9c625e3078e56513c7daeaba5"
+    }
+  ],
+  "source_inputs": [
+    {
+      "path": "core/ai_gm_rebuilt/canonical.gd",
+      "bytes": 2814,
+      "sha256": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c"
+    },
+    {
+      "path": "core/ai_gm_rebuilt/model_view.gd",
+      "bytes": 12807,
+      "sha256": "971508f8ccc88179a78c390323eae7b814572e4115b63254aabe2294a92a9f4c"
+    },
+    {
+      "path": "core/focus_contract.gd",
+      "bytes": 31447,
+      "sha256": "b8daf8124f80b8f474937caf25a3e446277636b28d08626d419d4da4336e9cd1"
+    },
+    {
+      "path": "core/status_foundation/canonical.gd",
+      "bytes": 2814,
+      "sha256": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c"
+    },
+    {
+      "path": "core/status_foundation/catalog.gd",
+      "bytes": 10981,
+      "sha256": "8effb5d5e6094cdb0f5413a697ae3adb4e7d86429c31a7b93d751e71f6b62681"
+    },
+    {
+      "path": "core/status_foundation/runtime.gd",
+      "bytes": 23309,
+      "sha256": "ee79b110e35b5141334daf55e7a2f80f6f4d3060a56d408bf0a08094260bb059"
+    },
+    {
+      "path": "core/status_gameplay/source_profiles.gd",
+      "bytes": 2571,
+      "sha256": "53e1ca59b24fb0e020b2dc4a5200868fe927264e787234873484d077d8057483"
+    },
+    {
+      "path": "data/catalog.json",
+      "bytes": 218084,
+      "sha256": "81712567dda2bb000b7cacefc9380c91bc271ea461c21758b1d2fa8074de4fde"
+    },
+    {
+      "path": "main.gd",
+      "bytes": 203707,
+      "sha256": "05ebbe56e88d2ac7e774527419a60fbfabbb819dd1b52a14748728c38939072f"
+    },
+    {
+      "path": "view/actor_action_profile_v2/source.gd",
+      "bytes": 12173,
+      "sha256": "7681a03d232452533ef584719d5f3e6c1c39942332b303ef1c2a3e973385e665"
+    },
+    {
+      "path": "view/actor_status_entry_v1/view_adapter.gd",
+      "bytes": 28301,
+      "sha256": "a9a825b9096b67424e7358d2dcca32b8e39411983f7ac9be0975ef7bc869968d"
+    },
+    {
+      "path": "view/actor_status_profile_v1/projection.gd",
+      "bytes": 3231,
+      "sha256": "2decabf7c9fbe1b4c5400b502ce1e464112bb4eea489dfdcee3a5cf1c150d5e6"
+    },
+    {
+      "path": "view/actor_status_profile_v1/source.gd",
+      "bytes": 10327,
+      "sha256": "f4ca4ca0551f0b1665b58f4ee1071dbc7df5180f357de18710d55a596b88ac03"
+    },
+    {
+      "path": "view/playable_build/player_details.gd",
+      "bytes": 8199,
+      "sha256": "4685bcc7e6d740e86efb45f294089be6291cc98c122e768523a9a3539854aad3"
+    },
+    {
+      "path": "view/status_gameplay/details.gd",
+      "bytes": 13184,
+      "sha256": "2b1d377813660aa419ca4f2cb9026d591b9edadce853ef0fec57a1b3e98841b1"
+    }
+  ],
+  "host_dependency_paths": [
+    "view/playable_build/player_details.gd",
+    "view/status_gameplay/details.gd",
+    "core/status_gameplay/source_profiles.gd",
+    "core/status_foundation/runtime.gd",
+    "core/status_foundation/canonical.gd",
+    "core/status_foundation/catalog.gd",
+    "core/ai_gm_rebuilt/canonical.gd",
+    "data/catalog.json"
+  ],
+  "overlay_path": "overlay/view/playable_build/player_details.gd",
+  "changed_path": "view/playable_build/player_details.gd",
+  "baseline_peer_path": "tests/focused/baseline_player_details.gd",
+  "test_entry": "test_focus_location.gd",
+  "prepared_test_path": "tests/focused/test_focus_location.gd",
+  "project_kind": "isolated_formatter_unit_only_no_world_no_Main"
+}

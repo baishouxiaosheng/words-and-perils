@@ -1,0 +1,208 @@
+{
+  "protocol": "words-and-perils-local-work/v1",
+  "kind": "task",
+  "task_id": "WP-RAW-READBACK-VERIFY-20261009-003",
+  "status": "ready",
+  "title": "Verify frozen Raw readback candidate in the independent public-v30 host",
+  "base_commit": "332a1f5f7025792d34e181f3e79690205498f5ab",
+  "candidate_root": "candidates/t03-raw-readback-verification/20261009-local-003",
+  "inputs": [
+    {
+      "repository_path": "candidates/t03-raw-readback/20261008-dot-v1/MANIFEST.json",
+      "git_blob_sha": "f71787496939840a44a97964bc153e9ee221a7e7",
+      "sha256": "e786f801e7e0aab59ba21c77c229a4db01acbe795d30756d2fd0e3d74d76115e",
+      "bytes": 4989,
+      "role": "Frozen published Raw readback candidate provenance; not a runtime pass."
+    },
+    {
+      "repository_path": "candidates/t03-raw-readback/20261008-dot-v1/RAW_READBACK.patch",
+      "git_blob_sha": "8880fcc10c6b7b0c34c08701daacbae178fd026c",
+      "sha256": "98440b251f3273324f15790ff5c5614614793caf81b75c97e719391f7abebcde",
+      "bytes": 1862,
+      "role": "Frozen published Raw readback candidate provenance; not a runtime pass."
+    },
+    {
+      "repository_path": "candidates/t03-raw-readback/20261008-dot-v1/STATIC_CHECK_RECEIPT.json",
+      "git_blob_sha": "641125105ae9cc868a9df7ba539f2c794f0e8b4d",
+      "sha256": "7e70e0a0b304b70214d2c4cbe6547abdc32e473d28480582fd8e2a6e325298d5",
+      "bytes": 4779,
+      "role": "Frozen published Raw readback candidate provenance; not a runtime pass."
+    },
+    {
+      "repository_path": "candidates/t03-raw-readback/20261008-dot-v1/SUMMARY.txt",
+      "git_blob_sha": "760e8ed0d2947c7e5ffd1c301dacb0ff59a569fc",
+      "sha256": "13343d1581cec9f287631dba0fab4539784e8460220f0c726b4f17df5d23f272",
+      "bytes": 4888,
+      "role": "Frozen published Raw readback candidate provenance; not a runtime pass."
+    },
+    {
+      "repository_path": "candidates/t03-raw-readback/20261008-dot-v1/overlay/core/ai_gm_rebuilt/engine.gd",
+      "git_blob_sha": "1f90b1d99b8bd57123876f952ddfc333c340aa7a",
+      "sha256": "f609fbf0bf717568c2429578bf4cde3eecf9a7aa806546c1d75c8dabdb0a4ef5",
+      "bytes": 52068,
+      "role": "Exact immutable production candidate for test-copy materialization only.",
+      "project_path": "core/ai_gm_rebuilt/engine.gd"
+    },
+    {
+      "repository_path": "candidates/t03-raw-readback/20261008-dot-v1/overlay/tests/t03_raw_readback/io_probe.gd",
+      "git_blob_sha": "91cce8a386e594f6c6fe63addafff31694a7bc2c",
+      "sha256": "973daa46c3360a06bc1b667a89c15929ddd1ec7f820ea097f12d798f18e0e609",
+      "bytes": 3359,
+      "role": "Exact immutable original 21-case suite source; do not replace its algorithm or assertions.",
+      "project_path": "tests/t03_raw_readback/io_probe.gd"
+    },
+    {
+      "repository_path": "candidates/t03-raw-readback/20261008-dot-v1/overlay/tests/t03_raw_readback/test_save_file.gd",
+      "git_blob_sha": "dd9d46942dab4c61cbc96ed48a28dfc06e148f52",
+      "sha256": "6f2f6fadf6bd171e601c89819cb77530ab7c761c714c37fe64d51abf72103492",
+      "bytes": 10710,
+      "role": "Exact immutable original 21-case suite source; do not replace its algorithm or assertions.",
+      "project_path": "tests/t03_raw_readback/test_save_file.gd"
+    },
+    {
+      "repository_path": "candidates/t03-raw-readback/20261008-dot-v1/verify_static.py",
+      "git_blob_sha": "f6e91a1b0727456e20232847202c920ad90f415f",
+      "sha256": "0f86b5ff9d02aea1ffe99de94a9c8ccdbf3bb76338ff566551d39b679bad59c3",
+      "bytes": 7683,
+      "role": "Immutable original static verifier provenance; its old project pin must not be suppressed or represented as matched by the public-v30 host variant."
+    },
+    {
+      "repository_path": "project.godot",
+      "git_blob_sha": "ccdc3ce8f922b6a5af5299bac3526e2fc7c0c23e",
+      "sha256": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd",
+      "bytes": 808,
+      "role": "Formal public-v30 test-host project configuration, explicitly distinct from the frozen Raw manifest project pin.",
+      "project_path": "project.godot"
+    },
+    {
+      "repository_path": "distribution_manifest.json",
+      "git_blob_sha": "1544dcc4b608a63bfc8fe8fe0875d7019a37183e",
+      "sha256": "7ec9feaa531147819801a907688d6483c0accfe7fe23d57fffa6dc2f07dc2075",
+      "bytes": 207017,
+      "role": "Formal public-v30 host source/resource map; reconstruct or reuse only a validated disposable host at the pinned formal release."
+    }
+  ],
+  "baseline_project_pins": {
+    "project.godot": "34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd",
+    "core/ai_gm_rebuilt/engine.gd": "f609fbf0bf717568c2429578bf4cde3eecf9a7aa806546c1d75c8dabdb0a4ef5",
+    "core/ai_gm_rebuilt/canonical.gd": "d1d6e42d0794669d8a40f7878b5f1e47fe960212fbec3c59776093aa77ea6c1c",
+    "tests/experimental/ai_gm_rebuilt/story_fixture.gd": "e187f474d35e5110c2e840c389c35c208fa83e3d81663efccca075826dfd9520",
+    "view/generated_natural_coast_basic/authority_inputs.gd": "23c4872180595c05398dc69909c8d7a4adbf2cbcb7f584f36bac0254c8822669",
+    "view/ai_gm_playtest/adapter.gd": "a0d2149c309c7cbcf002b915bd8084bd9735c4c91ea97da4b78774f23ce7ba76",
+    "view/playable_build/adapter.gd": "d7a49926e11846735492c24d790e9c1b6c677b2df841231510667ae79387ad5e",
+    "core/ai_gm_rebuilt/traversal_policy.gd": "255c243618b0adf6fc8048c0a747746ca70e87d973a8aab518be5ce00cd546d4",
+    "tests/t03_raw_readback/io_probe.gd": "973daa46c3360a06bc1b667a89c15929ddd1ec7f820ea097f12d798f18e0e609",
+    "tests/t03_raw_readback/test_save_file.gd": "6f2f6fadf6bd171e601c89819cb77530ab7c761c714c37fe64d51abf72103492"
+  },
+  "allowed_production_changes": [],
+  "allowed_test_changes": [
+    "tests/t03_raw_readback_runtime/parse_entry.gd",
+    "tests/t03_raw_readback_runtime/run_entry.gd"
+  ],
+  "requirements": [
+    "This is an independent, test-only Raw task within the existing bounded local Git queue. Follow the unchanged trusted protocol/schema, source-authentication, native worker, STOP/CONTROL, repository-wide local lock, durable ledger, unique remote claim/CAS/readback and deduplication gates. Reconcile predecessor terminal records with actual local release; never steal a lock/claim or rerun task 001/002. No direct desktop route or new persistent access is authorized by this task.",
+    "All eight Raw candidate inputs are frozen to publication-metadata commit 8928d7012cb9c7cf42e1cb41f2717143299ebac9. Verify every raw byte count, SHA256 and Git blob before use; preserve the final manifest e786f801e7e0aab59ba21c77c229a4db01acbe795d30756d2fd0e3d74d76115e and all original source/test/provenance bytes. Verify project.godot and distribution_manifest.json against formal release e8ec5db0341f8b4a8aaa0a933e5968c33440c9da.",
+    "Use a fresh disposable Windows public-v30 source/resource copy reconstructed or validated against the pinned formal release and its source map for each engine invocation. Apply only the three immutable Raw overlay inputs as test-copy materialization. Do not edit production source, compose a Natural candidate, launch the formal project or modify the originals.",
+    "Record BASELINE_VARIANT_PUBLIC_V30 explicitly: the execution host uses project.godot SHA256 34343acc9519c5479f0c0e86028fa7ed47bf207147d43a804c71ab504358c1fd; the unchanged Raw manifest retains historical project pin 0b35574f45a5b50307636bb3eee790a9c99be785ce3dc30c2b44e1c666dc0038. This accepted host variant is not a claim of complete original-manifest matching or a transferred static/runtime grade. The original Engine base 3d41f2fc4e52459d5df01732fbacc9e849f0e4a9260094220426001ef236002d and the five read-only dependency pins must actually match before overlay.",
+    "Use only the existing previously established Godot binary and unchanged SHA-verified Windows v3 guard. Record actual executable SHA256/version and guard source/wrapper hashes. Do not install/replace an engine, adjust the guard, enlarge budgets, weaken output/exit/diagnostic requirements or run foreground/editor/Main/UI/autoload/live-model/player-data paths.",
+    "Run serial headless Small jobs only: 1GiB Job commit limit, 120s wall limit, 64KiB aggregate output limit, 512MiB physical reserve, global budget min(actual physical memory,8GiB), and all stricter existing policy. Create a fresh isolated data directory per invocation and validate both OS.get_user_data_dir() and globalized user:// containment before any inherited test body. Keep existing path-isolation/guard instrumentation additive and contained in the two allowed entry wrappers; hash each generated wrapper before execution.",
+    "First run one guarded candidate parse check loading the exact production Engine, canonical dependency, fixture, probe and original test entry without starting test bodies. Only after strict parse acceptance run the original hash-bound tests/t03_raw_readback/test_save_file.gd once via an additive isolation entry. Preserve its exact method extraction and backend-identifier substitution, all fixtures, assertions, return/error/close/rename checks and tolerances. Do not invent a replacement test framework, extra acceptance gate or patched suite.",
+    "The new suite must actually report all 21 unique prepared case names, each passed, actual assertion count, no failures, exact Engine f609fbf0bf717568c2429578bf4cde3eecf9a7aa806546c1d75c8dabdb0a4ef5 and save-method 30cc3607de346361a8073dc689e8d957281f33cbebe7a79683a4c23f5e44bcc7. Report 17 source-bound in-memory fault cases, 1 unready/no-I/O case and 3 native happy/open-failure cases separately. Retain actual raw stdout/stderr and independent guard/engine/host exit evidence. The earlier Raw 10 cases/57 assertions belong to other source and cannot count here.",
+    "After every invocation verify the Job is empty, readers finished, recorded owned handles/processes and host exited/disposed, and before/after source maps unchanged apart from the explicitly materialized overlays and additive wrappers. Preserve owned isolated artifacts for evidence; clean only task-owned contained paths after proving no live process, symlink or reparse escape. Do not kill global processes, touch actual saves or delete another owner data.",
+    "Report actual successful, failed, unrun or INCONCLUSIVE checks. Any insufficient isolation, guard, parse, suite, output, source-map, ownership or cleanup evidence is not a runtime pass. Use the existing schema top-level blocked/failed/stopped/reviewable status with INCONCLUSIVE as a check outcome when execution is insufficient. Preserve failures rather than retrying the same task or correcting assertions. A follow-up retry or source fix needs a new task ID.",
+    "Publish only this new verification candidate root and exact new-task results using the existing two-phase local-writer publication/CAS/remote-readback procedure. Preserve the frozen Raw candidate, both predecessor claims/results, formal v30 and v28 references, root README/protocol/schema/control/inbox, authentication and repository history/visibility. Report existing actual automation/context state without treating historical worker readiness as a live laptop lock or authorization check."
+  ],
+  "verification": {
+    "execution_scope": "independent_raw_test_only",
+    "candidate_input_commit": "8928d7012cb9c7cf42e1cb41f2717143299ebac9",
+    "host_release_commit": "e8ec5db0341f8b4a8aaa0a933e5968c33440c9da",
+    "baseline_variant": "BASELINE_VARIANT_PUBLIC_V30",
+    "execution_order": [
+      "current_authorized_queue_and_predecessor_safe_reconciliation",
+      "verify_current_STOP_CONTROL_and_unique_claim",
+      "validate_public_v30_host_and_frozen_Raw_inputs",
+      "guarded_candidate_parse",
+      "guarded_original_21_case_suite",
+      "source_map_and_owned_cleanup",
+      "two_phase_results_publication"
+    ],
+    "parse_entry": "tests/t03_raw_readback_runtime/parse_entry.gd",
+    "suite_entry": "tests/t03_raw_readback/test_save_file.gd",
+    "isolation_entry": "tests/t03_raw_readback_runtime/run_entry.gd",
+    "maximum_engine_invocations": 2,
+    "expected_cases": 21,
+    "source_bound_memory_fault_cases": 17,
+    "unready_no_io_cases": 1,
+    "native_happy_or_open_failure_cases": 3,
+    "expected_case_names": [
+      "short write returns false with no reported error",
+      "short write returns false with write error",
+      "reported write error despite stored true",
+      "temporary open failure",
+      "rename failure after successful readback",
+      "successful source-bound write",
+      "late flush loss with stored true and stale OK",
+      "late close loss with stored true and stale OK",
+      "readback open failure",
+      "staging truncated before readback",
+      "readback length query reports error",
+      "short read with stale OK",
+      "reported read error despite full bytes",
+      "same length content corruption",
+      "length grows during verification",
+      "bounded multi chunk UTF8 success",
+      "tiny canonical object success",
+      "invalid Engine refuses before any I/O",
+      "native canonical save and load roundtrip",
+      "native repeated pending save",
+      "native temporary open failure preserves destination and state"
+    ],
+    "engine_sha256": "f609fbf0bf717568c2429578bf4cde3eecf9a7aa806546c1d75c8dabdb0a4ef5",
+    "save_method_sha256": "30cc3607de346361a8073dc689e8d957281f33cbebe7a79683a4c23f5e44bcc7",
+    "guard_provenance": {
+      "guard_source_sha256": "c2add699950e8985f88dc581a76a9eda36549c9c14ff0ada2fe6f4012c53c957",
+      "guard_wrapper_sha256": "f831a84e71f692fc851945b001cfc98092b7049fb3b48d0f5099fa49e016c5f8"
+    },
+    "required_evidence": [
+      "intake_task_hash_and_claim_ownership",
+      "actual_existing_engine_hash_and_version",
+      "guard_source_and_wrapper_hashes",
+      "per_run_admission_and_isolation_receipts",
+      "per_run_source_map_before_and_after",
+      "generated_entry_hashes",
+      "raw_stdout_and_stderr",
+      "actual_host_guard_engine_exit_codes",
+      "actual_suite_case_names_assertions_and_failure_array",
+      "per_run_Job_readers_handles_processes_host_cleanup",
+      "artifact_manifest_commit_and_remote_raw_byte_readback"
+    ],
+    "strict_runtime_pass": "Both parse and suite strictly pass the unchanged guard; all 21 unique cases actually pass; zero failures; required source/isolation/cleanup evidence is complete. Preserve raw diagnostics independently. No inherited grades.",
+    "insufficient_runtime_outcome": "INCONCLUSIVE; report blocked for unmet execution/evidence prerequisites, failed for actual parse/suite/guard failure, stopped for current STOP, and reviewable only after complete strict acceptance.",
+    "source_binary_binding": "not_established; official tag source is rationale only, not observed target binary provenance",
+    "memory_statement": "Job commit measurements are not physical RSS; whole-save memory and performance remain unmeasured",
+    "pending_inputs": []
+  },
+  "preserve": [
+    "Frozen Raw source, tests, manifest and static receipt",
+    "Formal public-v30 and separate v28 distribution references",
+    "Original Raw10/57 historical evidence attribution",
+    "Unchanged strict identity checks and no old-save migration",
+    "Actual failed/unrun evidence, source maps, guard results and owned cleanup receipts",
+    "Blank README and unchanged protocol/schema/control/source-trust strategy"
+  ],
+  "out_of_scope": [
+    "Production edits, formal adoption or Raw/Natural composition",
+    "HUD/Main/manual/status candidates, GUI/editor/FPS/full-game or live-model runs",
+    "Real player saves, credentials, personal data, new services/access or direct desktop execution",
+    "New guard/tolerance/budget changes or replacement suite/framework",
+    "Native disk failure, native flush/close-loss reproduction, failed native rename preservation, power-loss/fsync/crash durability",
+    "Shared temporary-path concurrency, all-writer locking and TOCTOU/CAS repairs",
+    "Engine replacement, official source-to-installed-binary binding or memory/performance claims",
+    "Changing queue control/protocol/schema/trust, old inbox tasks/results/claims, README, repository access/history/visibility"
+  ],
+  "publication": {
+    "result_root": "coordination/local-work/results/WP-RAW-READBACK-VERIFY-20261009-003",
+    "adopted": false,
+    "phases": "A: local writer publishes only the new verification candidate tests/evidence plus ARTIFACTS.json by main-head CAS, then verifies remote raw bytes. B: publish schema-valid result/summary referencing phase-A commit and artifact-manifest SHA256, then verify remote readback. Never claim a self commit or update formal adoption."
+  }
+}

@@ -12,6 +12,7 @@ const SHADERS:={
 }
 ## One seamless noise tile; the water shader reads every wave and swell pattern from it.
 const WATER_NOISE:=preload("water_noise.tres")
+const WAVE_MARKS:=preload("wave_marks.png")
 var snapshots:Array=[]
 var light_snapshots:Array=[]
 var proxies:Array=[]
@@ -76,7 +77,9 @@ func styled_material(plan:Dictionary)->ShaderMaterial:
 	if kind in ["ground","vegetation","mountain","water"]:
 		result.shader=SHADERS[kind]
 		if kind=="ground":result.set_shader_parameter("canopy_contact_strength",0.0)
-		if kind=="water":result.set_shader_parameter("water_noise",WATER_NOISE)
+		if kind=="water":
+			result.set_shader_parameter("water_noise",WATER_NOISE)
+			result.set_shader_parameter("wave_marks",WAVE_MARKS)
 		return result
 	var back:bool=kind=="city" or (source is StandardMaterial3D and source.cull_mode==BaseMaterial3D.CULL_BACK)
 	result.shader=SHADERS.rigid_back if back else SHADERS.rigid

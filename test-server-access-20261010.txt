@@ -1,3 +1,0 @@
-Temporary server access validation file.
-Created only to verify authorized GitHub branch write, remote read-back, and deletion.
-Contains no credentials, private data, or project changes.

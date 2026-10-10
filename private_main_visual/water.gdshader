@@ -3,52 +3,24 @@ render_mode cull_disabled, ambient_light_disabled, specular_disabled;
 #include "palette.gdshaderinc"
 uniform float shore_bands=1.0;
 uniform float river_surface=0.0;
-uniform bool ripple_antialiasing=true;
 uniform float wave_speed=.07;
+// One seamless noise tile (water_noise.tres). Every swell and foam pattern is
+// a few mipmapped reads of it at different scales; nothing is simulated.
+uniform sampler2D water_noise : hint_default_black, filter_linear_mipmap, repeat_enable;
 varying vec3 wp;
 varying vec3 wn;
-// Integral of one periodic narrow stripe. Its duty matches the old sinusoidal
-// highlight's average (0.04886327), avoiding brighter/wider distant water.
-float ripple_integral(float cycle){
- const float duty=0.04886327;
- return floor(cycle)*duty+clamp(fract(cycle)-(.5-duty*.5),0.0,duty);
+float tile(vec2 p){return texture(water_noise,p).r;}
+// Swell height for the open-water bands: a slow warp, a broad layer and a finer
+// one drifting the other way.
+float swell(vec2 s, float t){
+ float warp=texture(water_noise,s*.05+t*vec2(.020,.007)).r;
+ return texture(water_noise,s*.11+vec2(warp*.35,0.0)+t*vec2(.012,.004)).r*.65+texture(water_noise,s*.23+vec2(.37,.11)-t*vec2(.010,.006)).r*.35;
 }
-float filtered_ripple(float phase){
- float original=smoothstep(.975,1.0,sin(phase));
- // Differentiate continuous phase BEFORE fract, so seams do not create spikes.
- float cycle=phase/6.28318530718+.25;
- float footprint=max(fwidth(cycle),.00001);
- float coverage=clamp((ripple_integral(cycle+footprint*.5)-ripple_integral(cycle-footprint*.5))/footprint,0.0,1.0);
- // Keep the original profile when resolved; integrate only subpixel detail.
- float resolved=mix(original,coverage,smoothstep(.01,.04,footprint));
- return mix(resolved,.04886327,smoothstep(.5,1.0,footprint));
-}
-float wave_hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
-// Smooth value noise for the wave fields.
-float wave_noise(vec2 p){
- vec2 i=floor(p),f=fract(p);f=f*f*(3.0-2.0*f);
- return mix(mix(wave_hash(i),wave_hash(i+vec2(1,0)),f.x),mix(wave_hash(i+vec2(0,1)),wave_hash(i+vec2(1,1)),f.x),f.y);
-}
-// One shore wave: a crest forms about .30 offshore (the fixed coast's shore
-// distance is only meaningful up to .45), rolls in on the shore-distance field,
-// steepens and breaks into a whitewater trail on its seaward side, then
-// dissolves into the swash. Driven only by the mesh's own shore distance, so any
-// generated coast gets it.
-// g is the world-space slope of the shore distance; widths are scaled by it so
-// bands keep their world width where the interpolated field creases.
-float wave_crest(float d, float aa, float g, float travel){
- float at=mix(.30,.02,travel);
- float w=mix(.006,.016,travel)*g;
- float crest=1.0-smoothstep(w-aa,w+aa,abs(d-at));
- float breaking=smoothstep(.5,.85,travel);
- float trail=breaking*(1.0-smoothstep(at,at+(.01+.03*breaking)*g,d))*smoothstep(at-w-aa,at,d)*.3;
- return max(crest,trail)*smoothstep(0.0,.2,travel)*(1.0-smoothstep(.8,1.0,travel));
-}
-// Darker swell face just seaward of a crest, for a little relief.
-float wave_trough(float d, float g, float travel){
- float at=mix(.30,.02,travel);
- return smoothstep(0.0,.02*g,d-at)*(1.0-smoothstep(.02*g,.06*g,d-at))*smoothstep(0.0,.2,travel)*(1.0-smoothstep(.6,.9,travel));
-}
+// A threshold with a pixel-wide edge.
+float edge(float x, float at){float w=max(fwidth(x),.001);return smoothstep(at-w,at+w,x);}
+// Foam where a shape outweighs noise: its ends and borders dissolve into lace
+// instead of stopping on a cut.
+float foam(float shape, float noise){return edge(shape-noise,0.0);}
 void vertex(){mat3 Nw=transpose(inverse(mat3(MODEL_MATRIX)));wp=(MODEL_MATRIX*vec4(VERTEX,1)).xyz;wn=normalize(Nw*NORMAL);MODELVIEW_NORMAL_MATRIX=mat3(VIEW_MATRIX)*Nw;}
 void fragment(){
  float depth=max(UV.x,0.0);float d=UV2.x;float ocean=COLOR.r;
@@ -58,49 +30,63 @@ void fragment(){
  vec3 shallow=vec3(.392,.788,.792);
  vec3 c=mix(deep,shallow,shallows);
  float cliff=smoothstep(.26,.65,UV2.y);float broken=smoothstep(.40,.77,.5+.5*sin(wp.x*4.7-wp.z*3.3));
- float foam=(1.0-smoothstep(.018,.06,d))*cliff*ocean*broken*shore_bands*(1.0-river_surface);
- c=mix(c,vec3(.84,.95,.89),foam*.58);
- // Shore waves on the open sea only: two staggered sets and a swash line that
- // runs up and draws back with them. Each set's arrival time is offset by a
- // smooth world-space noise, so fronts reach the shore out of step and at an
- // angle; every wave draws its own dash pattern (a new noise offset each cycle,
- // switched while the crest is invisible), so crests come in broken pieces. Skipped beyond the surf zone (and on the .45 plateau where
- // the shore distance is clamped); fades once a crest is about a pixel wide
- // (overview zoom), so it never shimmers.
- // Derivative is taken before the branch; it is undefined inside divergent flow.
- float wave_aa=max(fwidth(d),.002);
- vec2 sx=dFdx(wp.xz),sy=dFdy(wp.xz);float det=sx.x*sy.y-sx.y*sy.x;
- vec2 grad=abs(det)>1e-9 ? vec2(dFdx(d)*sy.y-dFdy(d)*sx.y,dFdy(d)*sx.x-dFdx(d)*sy.x)/det : vec2(1.0,0.0);
- float wave_g=clamp(length(grad),.25,1.2);
- if(d<.43 && ocean*(1.0-river_surface)*shore_bands>.01){
-  float aa=wave_aa;
-  float visible=1.0-smoothstep(.025,.06,aa);
-   float t=TIME*wave_speed;
-  vec2 q=wp.xz;
-  float ta=t+wave_noise(q*.55)*1.6;
-  float tb=t+.5+wave_noise(q*.55+vec2(17.3,5.1))*1.6;
-  float set_a=smoothstep(.3,.6,wave_noise(q*.3+vec2(3.1,9.4)))*smoothstep(.38,.58,wave_noise(q*2.4+floor(ta)*vec2(7.31,3.17)));
-  float set_b=smoothstep(.3,.6,wave_noise(q*.3+vec2(-6.2,1.7)))*smoothstep(.38,.58,wave_noise(q*2.4+floor(tb)*vec2(5.13,8.71)+vec2(40.0)));
-  // A slight wobble keeps fronts off the straight triangle-interpolated contours.
-  float dw=d+.016*(wave_noise(q*3.1)-.5)*smoothstep(0.0,.06,d);
-  float g=wave_g;
-  float crest=max(wave_crest(dw,aa,g,fract(ta))*set_a,wave_crest(dw,aa,g,fract(tb))*set_b);
-  float trough=max(wave_trough(dw,g,fract(ta))*set_a,wave_trough(dw,g,fract(tb))*set_b);
-  // Each landing crest pushes the swash up fast; it draws back slowly.
-  float landed=fract(ta*2.0);
-  float run=.008+.022*smoothstep(0.0,.08,landed)*(1.0-smoothstep(.08,.6,landed));
-  float swash=run+.008*(wave_noise(q*1.9+vec2(0.0,t))-.5);
-  float lap=(1.0-smoothstep(swash-aa,swash+aa,d))*(.5+.5*(1.0-smoothstep(0.0,swash,d)))*(.35+.65*wave_noise(q*1.3+vec2(9.0,2.0)));
-  float m=ocean*(1.0-river_surface)*shore_bands*visible*(1.0-smoothstep(.30,.36,d));
-  c*=1.0-.05*trough*m;
-  c=mix(c,vec3(.90,.97,.94),max(crest,lap*.7)*m*.8);
+ float cliff_foam=(1.0-smoothstep(.018,.06,d))*cliff*ocean*broken*shore_bands*(1.0-river_surface);
+ c=mix(c,vec3(.84,.95,.89),cliff_foam*.58);
+ float t=TIME*wave_speed;
+ vec2 q=wp.xz;
+ float pixel=length(fwidth(q));
+ float sea=ocean*(1.0-river_surface);
+
+ // Open water, cel-shaded: a swell height (two drifting layers of the tile,
+ // stretched along one swell direction) is differentiated across the swell and
+ // split into bands, so troughs facing away from the light read as dark blocks
+ // and the crests facing it as a light band edged with white. Bands fade before
+ // the mipmapped tile blurs toward its mean, so a wide view stays calm.
+ vec2 s=vec2(dot(q,vec2(.83,.56)),dot(q,vec2(-.56,.83)))*vec2(.36,1.0);
+ vec2 across=vec2(0.0,.22);
+ float h0=swell(s-across,t);float h1=swell(s,t);float h2=swell(s+across,t);
+ float lit=h2-h0;
+ float offshore=sea*smoothstep(.04,.22,d);
+ float dark=edge(-lit,.06)*offshore*(1.0-smoothstep(.15,.35,pixel));
+ float light=edge(lit,.04)*offshore*(1.0-smoothstep(.10,.25,pixel));
+ float white=edge(lit+.06*h1,.21)*offshore*(1.0-smoothstep(.05,.10,pixel));
+ c=mix(c,c*vec3(.80,.89,.98),dark*.45);
+ c=mix(c,mix(c,vec3(.50,.86,.88),.38),light);
+ c=mix(c,vec3(.86,.96,.96),white*.75);
+
+ // Surf on the open sea: two staggered sets roll in on the shore-distance
+ // field (world units; the fixed coast's field stops at .45, so the surf zone
+ // ends by .42). Each place has its own arrival time (low-frequency noise),
+ // each wave a new foam pattern (offset per cycle, switched while it is
+ // invisible), and a slow along-shore field decides how much of a crest
+ // survives, so fronts arrive out of step and in pieces. A breaking crest drags
+ // a widening foam trail; the landing wave pushes a lacy sheet up the beach
+ // that thins as it draws back. Faded once a band is under a pixel wide.
+ float aa=max(fwidth(d),.002);
+ float surf=sea*shore_bands*(1.0-smoothstep(.03,.07,aa))*(1.0-smoothstep(.34,.42,d));
+ float spray=0.0;float face=0.0;
+ for(int k=0;k<2;k++){
+  vec2 o=k==0 ? vec2(0.0) : vec2(17.3,5.1);
+  float ta=t+.5*float(k)+tile(q*.09+o)*1.6;
+  float travel=fract(ta);
+  float at=mix(.40,.02,travel);
+  float breaking=smoothstep(.40,.80,travel);
+  float half_w=mix(.012,.040,travel);
+  float band=1.0-smoothstep(0.0,half_w,abs(d-at));
+  float trail=breaking*smoothstep(at+.04+.10*breaking,at,d)*step(at,d)*.75;
+  float shape=max(band,trail)*smoothstep(0.0,.2,travel)*(1.0-smoothstep(.85,1.0,travel));
+  float survive=.5+.6*smoothstep(.3,.65,tile(q*.05+o+vec2(3.1,9.4)));
+  spray=max(spray,foam(shape*survive,.9*tile(q*.9+o+floor(ta)*vec2(.31,.17))));
+  face=max(face,smoothstep(at+.14,at+.02,d)*step(at,d)*smoothstep(.1,.5,travel)*(1.0-.6*breaking));
+  float landed=fract(ta+.12);
+  float run=.02+.09*smoothstep(0.0,.08,landed)*(1.0-smoothstep(.08,.65,landed));
+  float sheet=clamp(1.0-d/run,0.0,1.0)*1.15;
+  spray=max(spray,foam(sheet,.75*tile(q*1.3+o+vec2(t*.4,0.0))));
+  float remnant=(1.0-smoothstep(0.0,.14,d))*(1.0-smoothstep(.1,.9,landed))*.7;
+  spray=max(spray,.6*foam(remnant,tile(q*1.9+o+floor(ta)*vec2(.23,.41))));
  }
- // Static sparse graphic ripples. No SSR/refraction or per-frame water simulation.
- float phase=wp.x*7.1+wp.z*10.3;
- float stripe=filtered_ripple(phase);
- if(!ripple_antialiasing)stripe=smoothstep(.975,1.0,sin(phase));
- float ripple_patch=smoothstep(.35,.75,.5+.5*sin(wp.x*1.1-wp.z*.81));
- c=mix(c,c+vec3(.045,.055,.035),stripe*ripple_patch*.40);
+ c=mix(c,vec3(.40,.84,.82),face*.28*surf);
+ c=mix(c,vec3(.93,.98,.97),spray*.9*surf);
  palette_lit=c;palette_shade=shade_endpoint(c);
  form_mask=1.0-smoothstep(.20,.30,dot(normalize(wn),normalize(vec3(-.55,.74,.39))));
  ALBEDO=vec3(1.0);ROUGHNESS=1.0;

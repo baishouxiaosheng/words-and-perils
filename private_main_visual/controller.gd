@@ -34,17 +34,20 @@ func _exit_tree()->void:uninstall()
 ## ready, so retry briefly instead of failing on the first, still-empty board.
 func enable_by_default(main:Node,attempts:int=40)->void:
 	host=main
-	if desired_enabled or attempts<=0 or not is_inside_tree():return
+	if desired_enabled or not is_inside_tree():return
+	if attempts<=0:_cover(false);return
+	_cover(true)
 	if not main.world_build_busy and not main.generated_start_busy and is_instance_valid(main.board) and main.board.is_inside_tree():
 		var view=main.board.get("world_view")
 		if is_instance_valid(view) and is_instance_valid(view.get("clear_daylight_profile")):
 			if toggle(main):
 				if is_instance_valid(main.display_menu):main.display_menu.set_item_checked(main.display_menu.get_item_index(main.PRIVATE_VISUAL_MENU_ID),true)
-				return
+				_cover(false);return
 			print("PALETTE_SHADOW startup not ready: ",last_error)
 	get_tree().create_timer(.1).timeout.connect(enable_by_default.bind(main,attempts-1))
 func before_world_change()->void:
 	source_revision+=1;uninstall();requested=false
+	if desired_enabled:_cover(true)
 	if is_instance_valid(host) and is_instance_valid(host.display_menu):
 		var index:int=host.display_menu.get_item_index(host.PRIVATE_VISUAL_MENU_ID)
 		if index>=0:host.display_menu.set_item_checked(index,false)
@@ -59,10 +62,29 @@ func _resume_after_source_change(revision:int)->void:
 		waiting_for_source_ready=true;return
 	waiting_for_source_ready=false
 	var accepted:bool=enable(host)
+	_cover(false)
 	if is_instance_valid(host.display_menu):host.display_menu.set_item_checked(host.display_menu.get_item_index(host.PRIVATE_VISUAL_MENU_ID),accepted)
 	if not accepted:
 		desired_enabled=false
 		host.set_status("本次场景表现重新登记未通过，实验显示已关闭；可从菜单重新启用。")
+## While the palette layer is wanted but not yet installed, the board still
+## renders with its original materials, lights and shadows. Hide the world
+## view for that gap and fade it in once the styled layer is in place (or the
+## install gave up, or a few seconds passed without either).
+var cover_tween:Tween
+var cover_serial:=0
+func _cover(on:bool)->void:
+	if not is_instance_valid(host) or not is_instance_valid(host.get("board_container")):return
+	var view:CanvasItem=host.board_container
+	if cover_tween!=null and cover_tween.is_valid():cover_tween.kill()
+	cover_serial+=1
+	if on:
+		view.modulate.a=0.0
+		var serial:=cover_serial
+		get_tree().create_timer(6.0).timeout.connect(func():if cover_serial==serial:_cover(false))
+		return
+	if view.modulate.a>=1.0:return
+	cover_tween=create_tween();cover_tween.tween_property(view,"modulate:a",1.0,.25)
 func _mark_bounds_dirty()->void:
 	if requested:bounds_dirty=true
 func _process(_delta:float)->void:

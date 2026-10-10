@@ -2,6 +2,7 @@ extends RefCounted
 ## Explicit, bounded material transaction for the actual scene inventory.
 ## The audit happens for all mesh surfaces before any scene-state write.
 const Audit:=preload("material_audit.gd")
+const FormFrame:=preload("form_frame.gd")
 const RECEIVER:=1<<18
 const CASTER:=1<<19
 const SHADERS:={
@@ -163,6 +164,7 @@ func install(root:Node3D,mountain_shadow_meshes:Dictionary={},required_roles:Arr
 			if steps==test_interrupt_after_steps:return cancel_install("Test-only interrupted commit; original snapshots restored")
 			continue
 		row.node.material_override=row.styled
+		_frame(row)
 		var casts:bool=row.kind not in ["ground","water","mountain","settlement_road"] and not _tiny_detail(row)
 		row.node.layers=RECEIVER|(CASTER if casts else 0)
 		row.node.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_ON if casts else GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
@@ -175,6 +177,14 @@ func install(root:Node3D,mountain_shadow_meshes:Dictionary={},required_roles:Arr
 	if steps==test_interrupt_after_steps:return cancel_install("Test-only interrupted commit; original snapshots restored")
 	sun.look_at(sun.global_position-Vector3(-.55,.74,.39).normalized(),Vector3.UP)
 	last_error="";return true
+
+## Model-relative light frame for the lit/shade grades. Roads are flat ribbons
+## and ground/water have no model of their own, so they keep the face key only.
+func _frame(row:Dictionary)->void:
+	if row.kind=="mountain":FormFrame.apply_height(row.node);return
+	if row.kind in ["ground","water","settlement_road"]:return
+	var threshold:=.285 if row.kind=="vegetation" else .39 if row.kind in ["city","settlement_solid"] else .25
+	FormFrame.apply(row.node,threshold)
 
 ## Small settlement trim and shrubs (about 0.13 tall) cast only speckle-sized,
 ## detached shadows; they still receive shadows but do not cast.

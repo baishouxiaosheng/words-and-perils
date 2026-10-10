@@ -14,13 +14,17 @@ vec3 shade_endpoint(vec3 base) { return saturated(base,1.30)*vec3(.62,.66,.76); 
 // Inside the lit band, faces near the terminator stay deeper and richer while
 // faces turned to the sun go paler and less saturated, so the lit side is a
 // gradient instead of one flat saturated colour.
-vec3 face_lit(vec3 base, vec3 n) {
+vec3 lit_tint(vec3 base, vec3 n) {
     float top=smoothstep(.55,.85,n.y);
-    vec3 c=base*mix(vec3(.90,.92,.97),vec3(1.02,1.01,.97),top);
-    float sunward=smoothstep(.40,.95,dot(n,normalize(vec3(-.55,.74,.39))));
-    c=mix(saturated(c,1.04)*.95,saturated(c,.76)*1.03+vec3(.035,.030,.018),sunward);
+    return base*mix(vec3(.90,.92,.97),vec3(1.02,1.01,.97),top);
+}
+float sun_key(vec3 n) { return smoothstep(.40,.95,dot(n,normalize(vec3(-.55,.74,.39)))); }
+// t=0 at the terminator (deeper, richer), t=1 at the sun end (paler).
+vec3 lit_grade(vec3 c, float t) {
+    c=mix(saturated(c,1.04)*.95,saturated(c,.76)*1.03+vec3(.035,.030,.018),t);
     return clamp(c,vec3(0.0),vec3(1.0));
 }
+vec3 face_lit(vec3 base, vec3 n) { return lit_grade(lit_tint(base,n),sun_key(n)); }
 // Aerial gradient for the lit side only: the upper (farther) part of the screen
 // is a little paler and cooler. Shade and the edge band are untouched.
 vec3 lit_air(vec3 lit, vec2 screen_uv) {
@@ -32,6 +36,15 @@ vec3 lit_air(vec3 lit, vec2 screen_uv) {
 vec3 face_shade(vec3 base, vec3 n) {
     float up=smoothstep(-.2,.8,n.y);
     return shade_endpoint(base)*mix(vec3(.86,.86,.94),vec3(1.04,1.04,1.08),up);
+}
+// g=-1 is the core shadow next to the terminator (deepest, most saturated);
+// g=+1 is the far side lifted and cooled by sky bounce; g=0 leaves shade as is.
+// The grade depends only on where the pixel sits on its model, so any number of
+// overlapping shadows on one pixel still produce one colour.
+vec3 shade_grade(vec3 shade, float g) {
+    vec3 c=g<0.0 ? mix(shade,saturated(shade,1.16)*.90,-g)
+                 : mix(shade,saturated(shade,.88)*1.08+vec3(.010,.014,.032),g);
+    return clamp(c,vec3(0.0),vec3(1.0));
 }
 // Banded highlight in the lit region only. Metal gets a broad tinted glint and
 // matte surfaces get none, so the two read differently without PBR haze.

@@ -1,6 +1,7 @@
 shader_type spatial;
 render_mode cull_disabled, ambient_light_disabled, specular_disabled;
 #include "palette.gdshaderinc"
+#include "form_frame.gdshaderinc"
 varying vec3 wn;
 varying float local_height;
 varying flat float source_excluded;
@@ -11,7 +12,7 @@ void vertex() {
 	if(zero_basis){
 		// CPU admission has proved this exact source row belongs to the original
 		// river/shore exclusion registry. No custom inverse executes for it.
-		wn=vec3(0.0,1.0,0.0);local_height=0.0;
+		wn=vec3(0.0,1.0,0.0);local_height=0.0;form_u=0.0;form_size=0.0;
 		MODELVIEW_NORMAL_MATRIX=mat3(1.0);NORMAL=vec3(0.0,1.0,0.0);VERTEX=vec3(0.0);
 	}else{
     // MODEL_MATRIX includes each MultiMesh instance's nonuniform scale.
@@ -20,6 +21,7 @@ void vertex() {
     wn=normalize(Nw*NORMAL);
     MODELVIEW_NORMAL_MATRIX=mat3(VIEW_MATRIX)*Nw;
     local_height=VERTEX.y;
+    vec2 frame=form_coordinate(MODEL_MATRIX,VERTEX);form_u=frame.x;form_size=frame.y;
 	}
 }
 void fragment() {
@@ -31,8 +33,10 @@ void fragment() {
     float variation=clamp(source.g/.52,.82,1.12);
     palette_lit=mix(vec3(.56,.36,.24)*variation,crown*variation,leaf);
     palette_lit*=mix(.86,1.0,smoothstep(.18,.90,local_height));
-    palette_shade=face_shade(palette_lit,normalize(wn));
-    palette_lit=lit_air(face_lit(palette_lit,normalize(wn)),SCREEN_UV);
+    vec3 n=normalize(wn);
+    vec2 grade=form_grades(sun_key(n));
+    palette_shade=shade_grade(face_shade(palette_lit,n),grade.y);
+    palette_lit=lit_air(lit_grade(lit_tint(palette_lit,n),grade.x),SCREEN_UV);
     form_mask=1.0-smoothstep(.23,.34,dot(normalize(wn),normalize(vec3(-.55,.74,.39))));
     ALBEDO=vec3(1.0);
     ROUGHNESS=1.0;

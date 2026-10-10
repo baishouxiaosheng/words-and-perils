@@ -1,6 +1,7 @@
 shader_type spatial;
 render_mode cull_disabled, ambient_light_disabled, specular_disabled;
 #include "palette.gdshaderinc"
+#include "form_frame.gdshaderinc"
 uniform vec4 base_color : source_color = vec4(1.0);
 // 0: registered token/prop base color; 1: authored settlement display colors;
 // 2: registered city glTF linear COLOR_0 with the exact existing trim lift.
@@ -20,6 +21,7 @@ void vertex(){
     mat3 Nw=transpose(inverse(mat3(MODEL_MATRIX)));
     wn=normalize(Nw*local_normal);
     MODELVIEW_NORMAL_MATRIX=mat3(VIEW_MATRIX)*Nw;
+    vec2 frame=form_coordinate(MODEL_MATRIX,VERTEX);form_u=frame.x;form_size=frame.y;
 }
 void fragment(){
     vec3 c=OUTPUT_IS_SRGB ? base_color.rgb : encode(base_color.rgb);
@@ -32,7 +34,9 @@ void fragment(){
     }
     vec3 n=normalize(wn);
     c*=mix(1.0,.80,metallic);
-    palette_lit=lit_air(face_lit(c,n),SCREEN_UV);palette_shade=face_shade(c,n);
+    vec2 grade=form_grades(sun_key(n));
+    palette_lit=lit_air(lit_grade(lit_tint(c,n),grade.x),SCREEN_UV);
+    palette_shade=shade_grade(face_shade(c,n),grade.y);
     form_mask=1.0-smoothstep(form_low,form_high,dot(normalize(wn),normalize(vec3(-.55,.74,.39))));
     ALBEDO=vec3(1.0);ROUGHNESS=1.0;
 }

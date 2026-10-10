@@ -51,7 +51,7 @@ void fragment(){
  base=mix(base,vec3(.64,.62,.40),wet*.55);
  float key=dot(n,normalize(vec3(-.55,.74,.39)));
  float lit=smoothstep(.34,.44,key);
- palette_lit=face_lit(base,n);
+ palette_lit=lit_air(face_lit(base,n),SCREEN_UV);
  palette_shade=face_shade(base,n);
  form_mask=1.0-lit;
  ALBEDO=vec3(1.0);ROUGHNESS=1.0;

@@ -32,7 +32,7 @@ void fragment(){
     }
     vec3 n=normalize(wn);
     c*=mix(1.0,.80,metallic);
-    palette_lit=face_lit(c,n);palette_shade=face_shade(c,n);
+    palette_lit=lit_air(face_lit(c,n),SCREEN_UV);palette_shade=face_shade(c,n);
     form_mask=1.0-smoothstep(form_low,form_high,dot(normalize(wn),normalize(vec3(-.55,.74,.39))));
     ALBEDO=vec3(1.0);ROUGHNESS=1.0;
 }

@@ -32,7 +32,7 @@ void fragment() {
     palette_lit=mix(vec3(.56,.36,.24)*variation,crown*variation,leaf);
     palette_lit*=mix(.86,1.0,smoothstep(.18,.90,local_height));
     palette_shade=face_shade(palette_lit,normalize(wn));
-    palette_lit=face_lit(palette_lit,normalize(wn));
+    palette_lit=lit_air(face_lit(palette_lit,normalize(wn)),SCREEN_UV);
     form_mask=1.0-smoothstep(.23,.34,dot(normalize(wn),normalize(vec3(-.55,.74,.39))));
     ALBEDO=vec3(1.0);
     ROUGHNESS=1.0;

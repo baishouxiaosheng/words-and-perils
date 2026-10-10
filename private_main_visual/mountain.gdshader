@@ -24,7 +24,7 @@ void fragment() {
     float j=1.0-smoothstep(.05-gw,.05+gw,g);
     vec3 n=normalize(wn);
     // The grass foot belongs to the ground plane, so it takes the ground top tone.
-    palette_lit=mix(face_lit(rock,n),face_lit(foot,vec3(0.0,1.0,0.0)),j);
+    palette_lit=lit_air(mix(face_lit(rock,n),face_lit(foot,vec3(0.0,1.0,0.0)),j),SCREEN_UV);
     // Warm stone in light, violet-blue in shade: two clear paints, not grey on grey.
     vec3 rock_shade=vec3(.56,.55,.68)*mix(.92,1.04,COLOR.r)*mix(.90,1.05,smoothstep(-.2,.8,n.y));
     palette_shade=mix(rock_shade,face_shade(foot,vec3(0.0,1.0,0.0)),j);

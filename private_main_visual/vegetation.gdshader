@@ -5,13 +5,28 @@ render_mode cull_disabled, ambient_light_disabled, specular_disabled;
 varying vec3 wn;
 varying float local_height;
 varying flat float source_excluded;
+// Camera position and pixels per world unit at unit depth (negative: an
+// orthographic view, that many pixels per unit everywhere); zero keeps every
+// plant. Plants only a few pixels tall thin out one by one, each keeping a
+// fixed hash of its position, so a widening view loses specks gradually and
+// the main and shadow passes drop the same plants.
+instance uniform vec4 view_thin=vec4(0.0);
+float plant_hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
 void vertex() {
 	mat3 world_basis=mat3(MODEL_MATRIX);
 	bool zero_basis=dot(world_basis[0],world_basis[0])==0.0 && dot(world_basis[1],world_basis[1])==0.0 && dot(world_basis[2],world_basis[2])==0.0;
-	source_excluded=zero_basis ? 1.0 : 0.0;
-	if(zero_basis){
+	bool thinned=false;
+	if(!zero_basis && view_thin.w!=0.0){
+		vec3 origin=MODEL_MATRIX[3].xyz;
+		float tall=length(world_basis[1]);
+		float pixels=view_thin.w>0.0 ? tall*view_thin.w/max(distance(origin,view_thin.xyz),.01) : -tall*view_thin.w;
+		thinned=plant_hash(origin.xz)>=smoothstep(5.0,12.0,pixels);
+	}
+	source_excluded=zero_basis||thinned ? 1.0 : 0.0;
+	if(zero_basis||thinned){
 		// CPU admission has proved this exact source row belongs to the original
-		// river/shore exclusion registry. No custom inverse executes for it.
+		// river/shore exclusion registry, or the plant is thinned at this view.
+		// No custom inverse executes for it.
 		wn=vec3(0.0,1.0,0.0);local_height=0.0;form_u=0.0;form_size=0.0;
 		MODELVIEW_NORMAL_MATRIX=mat3(1.0);NORMAL=vec3(0.0,1.0,0.0);VERTEX=vec3(0.0);
 	}else{

@@ -24,10 +24,22 @@ var _height_queue: Array = []
 var _height_count := -1
 var _shadow_reach := NAN
 var _shadow_split := .3
+var _far_depth := 0.0
+var _board_box := AABB()
+var _veil: MeshInstance3D
+var _sky: Environment
 
 ## 0 at the closest view, 1 at the widest.
 static func view_lift(size: float) -> float:
 	return clampf(log(maxf(size, .01) / VIEW_MIN) / log(VIEW_MAX / VIEW_MIN), 0.0, 1.0)
+
+## The base places the whole-map camera directly without _update_camera, so the
+## depth of field and atmosphere of the previous view are cleared here.
+func set_scope(name_: String) -> void:
+	super.set_scope(name_)
+	if overview:
+		camera.attributes = null
+		_update_atmosphere()
 
 func orbit(dx: float, dy: float) -> void:
 	if overview: scope_name = "free"; overview = false; camera.size = 12
@@ -38,6 +50,7 @@ func _update_camera() -> void:
 		camera.projection = Camera3D.PROJECTION_ORTHOGONAL
 		camera.attributes = null
 		super._update_camera()
+		_update_atmosphere()
 		return
 	camera.projection = Camera3D.PROJECTION_PERSPECTIVE
 	camera.fov = lerpf(FOV_NEAR, FOV_FAR, view_lift(camera.size))
@@ -48,6 +61,7 @@ func _update_camera() -> void:
 	pitch = chosen
 	_update_shadow_range()
 	_update_focus()
+	_update_atmosphere()
 
 ## Lowest pitch at or above the chosen one whose sightline from the target to
 ## the camera stays above ground and mountains.
@@ -82,6 +96,10 @@ func _height_grid() -> Dictionary:
 		var meshes: Array = content_root.find_children("*", "MeshInstance3D", true, false).filter(_terrain_scale)
 		if meshes.size() != _height_count:
 			_height_count = meshes.size(); _heights = {}; _height_queue = meshes
+			_board_box = AABB()
+			for instance: MeshInstance3D in meshes:
+				var box := instance.global_transform * instance.mesh.get_aabb()
+				_board_box = box if _board_box.size == Vector3.ZERO else _board_box.merge(box)
 	return _heights
 func _add_heights(instance: MeshInstance3D) -> void:
 	var xf := instance.global_transform
@@ -130,6 +148,7 @@ func _update_shadow_range() -> void:
 	var forward := -camera.global_basis.z
 	var depth := 0.0
 	for point in _footprint(): depth = maxf(depth, (point - camera.global_position).dot(forward))
+	_far_depth = depth
 	_shadow_reach = clampf(depth * 1.08, 24.0, 400.0)
 	_shadow_split = clampf((distance + camera.size * .5) / _shadow_reach, .15, .7)
 func _process(_delta: float) -> void:
@@ -167,6 +186,42 @@ func _update_focus() -> void:
 	_attributes.dof_blur_near_transition = focus * .35
 	_attributes.dof_blur_amount = .11 * strength
 	camera.attributes = _attributes
+
+## Far-view atmosphere, all continuous in the view lift: haze rises from the
+## target's depth to the far edge of the visible ground, and a mist band inside
+## the board's hexagonal outline (measured from the terrain extent) hides the
+## stepped map edge. Both fade toward the sky colour so they never show as a
+## band against the background.
+func _update_atmosphere() -> void:
+	if not is_inside_tree(): return
+	if _veil == null:
+		var material := ShaderMaterial.new()
+		material.shader = preload("atmosphere.gdshader")
+		material.render_priority = Material.RENDER_PRIORITY_MIN
+		var quad := QuadMesh.new()
+		_veil = MeshInstance3D.new()
+		_veil.name = "FarViewAtmosphere"
+		_veil.mesh = quad
+		_veil.material_override = material
+		_veil.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+		_veil.custom_aabb = AABB(Vector3.ONE * -1e5, Vector3.ONE * 2e5)
+		# Outside the board, so the palette audit of the board's surfaces never sees it.
+		get_viewport().add_child.call_deferred(_veil)
+		tree_exiting.connect(_veil.queue_free)
+	if _sky == null:
+		for node: WorldEnvironment in find_children("*", "WorldEnvironment", true, false): _sky = node.environment
+	var material: ShaderMaterial = _veil.material_override
+	var t := 1.0 if overview else view_lift(camera.size)
+	if _sky: material.set_shader_parameter("haze_color", _sky.background_color)
+	material.set_shader_parameter("haze_amount", 0.0 if overview else .5 * smoothstep(.15, 1.0, t))
+	material.set_shader_parameter("haze_depth", Vector2(distance, maxf(_far_depth, distance + 1.0)))
+	if _board_box.size != Vector3.ZERO:
+		var centre := _board_box.get_center()
+		var half := Vector2(_board_box.size.x, _board_box.size.z) * .5
+		var corners_on_x := half.x >= half.y
+		var apothem := minf(half.y, half.x * .8660254) if corners_on_x else minf(half.x, half.y * .8660254)
+		material.set_shader_parameter("board", Vector4(centre.x, centre.z, apothem, 1.0 if corners_on_x else 0.0))
+		material.set_shader_parameter("edge_mist", lerpf(1.5, 7.0, t))
 
 ## Canopy detail is chosen in a circle around the target sized from
 ## camera.size; a perspective view reaches farther up the screen than down, so

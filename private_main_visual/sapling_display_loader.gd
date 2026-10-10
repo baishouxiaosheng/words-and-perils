@@ -34,3 +34,43 @@ func load_cache(base: Dictionary, variant: String = "v1") -> bool:
 		group.count = rows.size()
 		group.active_count = rows.size()
 	return true
+
+## A perspective view picks tree detail per group from the visible height at
+## that group's depth instead of one zoom threshold, so widening the view
+## trades full trees for crowns from the far edge inward. Groups switch with a
+## little hysteresis so a slow lift never flickers. Orthographic views keep the
+## single threshold. Every styled group also gets the view for plant thinning.
+const VEGETATION := preload("res://private_main_visual/vegetation.gdshader")
+const LOD_HEIGHT := 22.0
+const LOD_BAND := .75
+var _low_groups: Dictionary = {}
+
+func update_lod(camera: Camera3D, target: Vector3, overview: bool, enabled: bool) -> void:
+	super.update_lod(camera, target, overview, enabled)
+	var viewport_height := camera.get_viewport().get_visible_rect().size.y
+	var perspective := camera.projection == Camera3D.PROJECTION_PERSPECTIVE and not overview
+	var height_per_depth := 2.0 * tan(deg_to_rad(camera.fov) * .5)
+	var eye := camera.global_position
+	var thin := Vector4(eye.x, eye.y, eye.z, viewport_height / height_per_depth if perspective else -viewport_height / maxf(camera.size, .01))
+	if perspective:
+		var forward := -camera.global_basis.z
+		var low_count := 0
+		var shown := 0
+		visible_triangles = 0
+		for i in range(groups.size()):
+			var group: Dictionary = groups[i]
+			if not (group.near.visible or group.far.visible): continue
+			shown += 1
+			var height: float = (group.center - eye).dot(forward) * height_per_depth
+			var low: bool = height >= LOD_HEIGHT - (LOD_BAND if _low_groups.has(i) else -LOD_BAND)
+			if low: _low_groups[i] = true; low_count += 1
+			else: _low_groups.erase(i)
+			group.near.visible = not low; group.far.visible = low
+			if enabled: visible_triangles += int(group.active_count) * (7 if low else int(group.near_triangles))
+		lod_mode = "FAR_ALL_SOURCE_CROWNS_7_TRIANGLES" if low_count == shown else "NEAR_FULL_TREE_GEOMETRY" if low_count == 0 else "DEPTH_BANDED_NEAR_AND_FAR"
+	else:
+		_low_groups.clear()
+	for group: Dictionary in groups:
+		for node: MultiMeshInstance3D in [group.near, group.far]:
+			if node.visible and node.material_override is ShaderMaterial and node.material_override.shader == VEGETATION:
+				node.set_instance_shader_parameter("view_thin", thin)

@@ -1,8 +1,8 @@
 extends Node
 ## Presentation-only WASD camera translation. No action or actor-state writes.
 ## Main installs this after build_ui(); existing board input stays untouched.
-## Q/E lift the character view up/down perpendicular to the ground; lifting an
-## orthographic view widens it, never below the board's default view size.
+## Q/E lift the character view; lifting widens the view (camera.size), never
+## below the board's MIN_VIEW_SIZE (DEFAULT_VIEW_SIZE on boards without one).
 const PAN_SPEED := 6.0 # World units per second, independent of camera zoom; board.pan_speed overrides.
 const PAN_KEYS := [KEY_W, KEY_A, KEY_S, KEY_D, KEY_Q, KEY_E]
 const LIFT_RATE := 1.1 # View size e-folds per second while Q/E is held.
@@ -169,7 +169,8 @@ static func lift_view(board: Node3D, camera: Camera3D, direction: int, delta: fl
 	var rig: Node3D = board.get("world_view")
 	if not is_instance_valid(rig) or bool(rig.get("overview")): return false
 	if board.has_method("_cancel_committed_camera"): board.call("_cancel_committed_camera")
-	var floor_size = board.get_script().get_script_constant_map().get("DEFAULT_VIEW_SIZE") if board.get_script() else null
+	var constants: Dictionary = board.get_script().get_script_constant_map() if board.get_script() else {}
+	var floor_size = constants.get("MIN_VIEW_SIZE", constants.get("DEFAULT_VIEW_SIZE"))
 	var lowest := minf(float(floor_size) if floor_size != null else camera.size, camera.size)
 	camera.size = clampf(camera.size * exp(direction * LIFT_RATE * delta), lowest, maxf(LIFT_MAX, camera.size))
 	rig.call("_update_camera")

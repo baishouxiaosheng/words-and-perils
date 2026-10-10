@@ -8,7 +8,7 @@ const Tokens = preload("res://view/chess_tokens.gd")
 const Batcher = preload("res://view/static_batcher.gd")
 const Presentation = preload("res://view/action_presentation.gd")
 const CommittedEffects = preload("res://view/playable_build/committed_effect_router.gd")
-const CommittedCamera = preload("res://view/playable_build/committed_camera.gd")
+const CommittedCamera = preload("res://private_main_visual/committed_camera.gd")
 const RoutePreview = preload("res://view/playable_build/route_preview.gd")
 const Lamp = preload("res://view/playable_build/lighthouse_marker.gd")
 const SettlementView = preload("res://view/playable_build/settlement_view.gd")
@@ -47,10 +47,13 @@ var marker: MeshInstance3D
 var dragging := false
 var panning := false
 ## Character view: the wheel sets WASD speed (world units per second), Q/E lift
-## the view no lower than DEFAULT_VIEW_SIZE, a middle click returns to the
-## player, and a middle drag is a temporary look that eases back on release.
-const DEFAULT_VIEW_SIZE := 6.0
+## the view between MIN_VIEW_SIZE and the world view's VIEW_MAX, a middle click
+## returns to the player at DEFAULT_VIEW_SIZE, and a middle drag is a temporary
+## look that eases back on release.
+const MIN_VIEW_SIZE := 6.0
+const DEFAULT_VIEW_SIZE := 8.0
 var pan_speed := 6.0
+var _focus_selected := false
 var _middle_travel := 0.0
 var _pan_return := Vector3.ZERO
 var _pan_tween: Tween
@@ -201,7 +204,7 @@ func focus_player() -> void:
 	_cancel_committed_camera(false)
 	if world_state.is_empty() or not is_instance_valid(camera): return
 	world_view.overview = false; world_view.scope_name = "adventure"; world_view.target = _position(world_state.actors.actor_player.hex)+Vector3(0,0.45,0)
-	world_view.distance = 12; world_view.pitch = 0.72; world_view.yaw = 0.2; camera.size = DEFAULT_VIEW_SIZE; camera.projection = Camera3D.PROJECTION_ORTHOGONAL; world_view._update_camera()
+	world_view.distance = 12; world_view.pitch = 0.72; world_view.yaw = 0.2; camera.size = DEFAULT_VIEW_SIZE; world_view._update_camera()
 func reset_camera() -> void:
 	_cancel_committed_camera()
 	if is_instance_valid(camera): world_view.set_scope("whole")
@@ -209,6 +212,7 @@ func _resize_camera() -> void:
 	_cancel_committed_camera(false)
 	if is_instance_valid(camera) and world_view.overview: world_view.set_scope("whole")
 func select_attention(reference: Dictionary) -> void:
+	_focus_selected = not reference.is_empty()
 	if reference.get("hex") is Array: selected_hex = Vector2i(reference.hex[0],reference.hex[1])
 	selected_actor_id = reference.id if reference.get("kind") == "actor" else ""
 	presentation.select_actor(selected_actor_id)
@@ -216,6 +220,7 @@ func select_attention(reference: Dictionary) -> void:
 	if is_instance_valid(entity_selection): entity_selection.select(reference)
 	draw_overlay()
 func clear_actor_selection() -> void:
+	_focus_selected = false
 	selected_actor_id = ""
 	if is_instance_valid(presentation): presentation.select_actor("")
 	if is_instance_valid(attention_glow): attention_glow.clear()
@@ -332,7 +337,21 @@ func _process(delta: float) -> void:
 			contact_shadows[id].position = display_ground+Vector3(0,.013,0)
 			contact_shadows[id].transparency = clampf((track.node.position.y-display_ground.y)*0.5,0,0.7)
 	_update_names()
+	_update_depth_focus()
 	if is_instance_valid(lighthouse) and lighthouse.title!=null: lighthouse.title.visible=not world_view.overview
+## Depth of field focuses on the selected object, else on the player.
+func _update_depth_focus() -> void:
+	if world_view.overview or world_state.is_empty(): return
+	var point := Vector3(NAN, 0, 0)
+	if token_nodes.has(selected_actor_id): point = token_nodes[selected_actor_id].global_position
+	elif is_instance_valid(entity_selection) and entity_selection.glyph.visible: point = entity_selection.glyph.global_position
+	elif is_instance_valid(entity_selection) and entity_selection.outline.visible: point = entity_selection.outline.global_position
+	elif _focus_selected and is_instance_valid(marker) and marker.visible: point = marker.global_position
+	elif token_nodes.has("actor_player"): point = token_nodes["actor_player"].global_position
+	var previous: Vector3 = world_view.focus_point
+	if is_nan(point.x) == is_nan(previous.x) and (is_nan(point.x) or point.distance_squared_to(previous) < .0025): return
+	world_view.focus_point = point
+	world_view._update_focus()
 func _update_names() -> void:
 	if not is_instance_valid(camera): return
 	var scale_per_world := get_viewport().get_visible_rect().size.y / maxf(0.01,camera.size)

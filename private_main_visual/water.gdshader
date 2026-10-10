@@ -4,6 +4,7 @@ render_mode cull_disabled, ambient_light_disabled, specular_disabled;
 uniform float shore_bands=1.0;
 uniform float river_surface=0.0;
 uniform bool ripple_antialiasing=true;
+uniform float wave_speed=.16;
 varying vec3 wp;
 varying vec3 wn;
 // Integral of one periodic narrow stripe. Its duty matches the old sinusoidal
@@ -22,6 +23,15 @@ float filtered_ripple(float phase){
  float resolved=mix(original,coverage,smoothstep(.01,.04,footprint));
  return mix(resolved,.04886327,smoothstep(.5,1.0,footprint));
 }
+// One shore wave: a thin foam crest born about .26 offshore that rolls in on the
+// shore-distance field, widens as it shoals and fades out before it lands.
+// Driven only by the mesh's own shore distance, so any generated coast gets it.
+float wave_crest(float d, float aa, float travel){
+ float at=mix(.26,.015,travel);
+ float w=mix(.006,.016,travel);
+ float line=1.0-smoothstep(w-aa,w+aa,abs(d-at));
+ return line*smoothstep(0.0,.2,travel)*(1.0-smoothstep(.7,1.0,travel));
+}
 void vertex(){mat3 Nw=transpose(inverse(mat3(MODEL_MATRIX)));wp=(MODEL_MATRIX*vec4(VERTEX,1)).xyz;wn=normalize(Nw*NORMAL);MODELVIEW_NORMAL_MATRIX=mat3(VIEW_MATRIX)*Nw;}
 void fragment(){
  float depth=max(UV.x,0.0);float d=UV2.x;float ocean=COLOR.r;
@@ -33,6 +43,24 @@ void fragment(){
  float cliff=smoothstep(.26,.65,UV2.y);float broken=smoothstep(.40,.77,.5+.5*sin(wp.x*4.7-wp.z*3.3));
  float foam=(1.0-smoothstep(.018,.06,d))*cliff*ocean*broken*shore_bands*(1.0-river_surface);
  c=mix(c,vec3(.84,.95,.89),foam*.58);
+ // Shore waves on the open sea only. Two staggered crests plus a lapping line;
+ // a cheap world-space field breaks them along the coast. Skipped offshore and
+ // faded out once a crest is under about a pixel (overview zoom), so it never
+ // shimmers and costs nothing on deep water.
+ // Derivative is taken before the branch; it is undefined inside divergent flow.
+ float wave_aa=max(fwidth(d),.0012);
+ if(d<.32 && ocean*(1.0-river_surface)*shore_bands>.01){
+  float aa=wave_aa;
+  float visible=1.0-smoothstep(.006,.02,aa);
+  float t=TIME*wave_speed;
+  float along=wp.x*3.1+wp.z*2.2+sin(wp.z*1.4-wp.x*.9)*2.4;
+  float crest=wave_crest(d,aa,fract(t))*smoothstep(.40,.70,.5+.5*sin(along));
+  crest=max(crest,wave_crest(d,aa,fract(t+.5))*smoothstep(.40,.70,.5+.5*sin(along+2.6)));
+  float lap_at=.010+.008*(.5+.5*sin(TIME*1.1+(wp.x-wp.z)*.9));
+  float lap=1.0-smoothstep(lap_at-aa,lap_at+aa,d);
+  float wave=max(crest,lap*.8)*visible*ocean*(1.0-river_surface)*shore_bands;
+  c=mix(c,vec3(.90,.97,.94),wave*.85);
+ }
  // Static sparse graphic ripples. No SSR/refraction or per-frame water simulation.
  float phase=wp.x*7.1+wp.z*10.3;
  float stripe=filtered_ripple(phase);

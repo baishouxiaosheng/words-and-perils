@@ -46,6 +46,14 @@ var attention_glow:Node
 var marker: MeshInstance3D
 var dragging := false
 var panning := false
+## Character view: the wheel sets WASD speed (world units per second), Q/E lift
+## the view no lower than DEFAULT_VIEW_SIZE, a middle click returns to the
+## player, and a middle drag is a temporary look that eases back on release.
+const DEFAULT_VIEW_SIZE := 6.0
+var pan_speed := 6.0
+var _middle_travel := 0.0
+var _pan_return := Vector3.ZERO
+var _pan_tween: Tween
 var hover_elapsed := 0.0
 var pending_hover := Vector2.ZERO
 var hover_dirty := false
@@ -193,7 +201,7 @@ func focus_player() -> void:
 	_cancel_committed_camera(false)
 	if world_state.is_empty() or not is_instance_valid(camera): return
 	world_view.overview = false; world_view.scope_name = "adventure"; world_view.target = _position(world_state.actors.actor_player.hex)+Vector3(0,0.45,0)
-	world_view.distance = 12; world_view.pitch = 0.72; world_view.yaw = 0.2; camera.size = 6.0; camera.projection = Camera3D.PROJECTION_ORTHOGONAL; world_view._update_camera()
+	world_view.distance = 12; world_view.pitch = 0.72; world_view.yaw = 0.2; camera.size = DEFAULT_VIEW_SIZE; camera.projection = Camera3D.PROJECTION_ORTHOGONAL; world_view._update_camera()
 func reset_camera() -> void:
 	_cancel_committed_camera()
 	if is_instance_valid(camera): world_view.set_scope("whole")
@@ -250,9 +258,11 @@ func _input(event: InputEvent) -> void:
 	# Always release first, even when a HUD control has taken the pointer.
 	if event is InputEventMouseButton and not event.pressed:
 		if event.button_index == MOUSE_BUTTON_RIGHT: dragging = false
-		if event.button_index == MOUSE_BUTTON_MIDDLE: panning = false
+		if event.button_index == MOUSE_BUTTON_MIDDLE and panning: panning = false; _end_middle_gesture(true)
 	if not InputGuard.permits(event, InputGuard.context_for(self)):
-		if event is InputEventMouse: dragging = false; panning = false
+		if event is InputEventMouse:
+			dragging = false
+			if panning: panning = false; _end_middle_gesture(false)
 		return
 	if not is_instance_valid(camera): return
 	if event is InputEventKey and event.pressed and event.keycode==KEY_ESCAPE:_cancel_committed_camera()
@@ -261,12 +271,13 @@ func _input(event: InputEvent) -> void:
 		# A release outside this SubViewport may never reach _input. The next
 		# motion's button mask is authoritative for this presentation gesture.
 		dragging = dragging and InputGuard.button_held(event, MOUSE_BUTTON_RIGHT)
-		panning = panning and InputGuard.button_held(event, MOUSE_BUTTON_MIDDLE)
+		if panning and not InputGuard.button_held(event, MOUSE_BUTTON_MIDDLE): panning = false; _end_middle_gesture(false)
 		if dragging:
 			_cancel_committed_camera()
 			world_view.orbit(event.relative.x*0.007,event.relative.y*0.004); return
 		if panning:
 			_cancel_committed_camera()
+			_middle_travel += event.relative.length()
 			world_view.pan(event.relative.x,event.relative.y); return
 		if get_viewport().get_visible_rect().has_point(event.position):
 			pending_hover = event.position
@@ -274,16 +285,32 @@ func _input(event: InputEvent) -> void:
 		hover_dirty = false
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_RIGHT: dragging = event.pressed
-		if event.button_index == MOUSE_BUTTON_MIDDLE: panning = event.pressed
+		if event.button_index == MOUSE_BUTTON_MIDDLE and event.pressed:
+			panning = true; _middle_travel = 0.0; _pan_return = world_view.target
+			if _pan_tween: _pan_tween.kill()
 		if not event.pressed: return
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			var candidates := pick_focus(event.position)
 			if not candidates.is_empty(): focus_candidates.emit(candidates,event.position)
-		elif event.button_index == MOUSE_BUTTON_WHEEL_UP: world_view.zoom(-1)
-		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN: world_view.zoom(1)
+		elif event.button_index in [MOUSE_BUTTON_WHEEL_UP, MOUSE_BUTTON_WHEEL_DOWN]:
+			var up: bool = event.button_index == MOUSE_BUTTON_WHEEL_UP
+			if world_view.overview: world_view.zoom(-1 if up else 1)
+			else: pan_speed = clampf(pan_speed*(1.25 if up else 0.8), 1.5, 48.0)
 func _notification(what: int) -> void:
 	if what in [NOTIFICATION_WM_WINDOW_FOCUS_OUT, NOTIFICATION_APPLICATION_FOCUS_OUT]:
-		dragging = false; panning = false
+		dragging = false
+		if panning: panning = false; _end_middle_gesture(false)
+func _end_middle_gesture(released: bool) -> void:
+	# Under a few pixels of travel the press was a click: back to the player.
+	if _middle_travel < 6.0:
+		if released: focus_player()
+		return
+	var from: Vector3 = world_view.target
+	if _pan_tween: _pan_tween.kill()
+	_pan_tween = create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	_pan_tween.tween_method(_ease_pan.bind(from), 0.0, 1.0, 0.28)
+func _ease_pan(t: float, from: Vector3) -> void:
+	world_view.target = from.lerp(_pan_return, t); world_view._update_camera()
 
 func _process(delta: float) -> void:
 	if is_instance_valid(entity_selection) and not entity_selection.ready_catalog:
